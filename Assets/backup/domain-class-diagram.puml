@@ -1,0 +1,292 @@
+@startuml
+scale 0.75
+skinparam classAttributeIconSize 0
+skinparam monochrome false
+skinparam roundcorner 4
+skinparam shadowing false
+skinparam packageStyle rectangle
+skinparam defaultFontName "Segoe UI"
+skinparam defaultFontSize 12
+
+skinparam class {
+    BackgroundColor White
+    ArrowColor #1E293B
+    BorderColor #1E293B
+    BorderThickness 1.2
+    HeaderBackgroundColor #F1F5F9
+}
+
+title <size:18><b>RentiCar Platform - Complete Domain-Driven Design Class Diagram (UML 2.5)</b></size>\n<size:12>Full Object-Oriented Architecture across all 5 Bounded Contexts</size>
+
+package "Shared Kernel & Audit Layer" {
+  abstract class "AuditableAbstractAggregateRoot<T>" as AuditBase <<Abstract Base>> {
+    - id: Long
+    - createdAt: Date
+    - updatedAt: Date
+    + getId(): Long
+    + getCreatedAt(): Date
+    + getUpdatedAt(): Date
+  }
+}
+
+package "Identity & Access Management (IAM)" as pkg_iam {
+  class User <<Aggregate Root>> {
+    - username: String
+    - password: PasswordHash
+    - fullName: String
+    - email: EmailAddress
+    - phone: String
+    - roles: Set<Role>
+    + updatePassword(newPassword): void
+    + updateProfile(name, phone): void
+    + addRole(role): void
+    + hasRole(name): boolean
+  }
+
+  class Role <<Entity>> {
+    - name: Roles
+    + getStringName(): String
+    + getName(): Roles
+  }
+
+  enum Roles <<Enumeration>> {
+    ROLE_RENTER
+    ROLE_OWNER
+  }
+
+  interface UserRepository <<Spring Data JPA>> {
+    + findByUsername(username: String): Optional<User>
+    + existsByUsername(username: String): boolean
+  }
+
+  class UserCommandService <<Application Service>> {
+    - userRepository: UserRepository
+    - hashingService: HashingService
+    - tokenService: TokenService
+    + handle(signUpCommand: SignUpCommand): User
+    + handle(updateProfileCommand: UpdateProfileCommand): void
+  }
+
+  class AuthenticationController <<REST Controller>> {
+    - userCommandService: UserCommandService
+    + signIn(signInResource: SignInResource): ResponseEntity
+    + signUp(signUpResource: SignUpResource): ResponseEntity
+  }
+}
+
+package "Listings & Fleet Management" as pkg_listings {
+  class Vehicle <<Aggregate Root>> {
+    - brand: String
+    - model: String
+    - year: Integer
+    - dailyPrice: BigDecimal
+    - status: VehicleStatus
+    - imageUrl: String
+    - ownerId: Long
+    + updatePrice(newPrice: BigDecimal): void
+    + updateStatus(status: VehicleStatus): void
+    + isAvailable(): boolean
+    + lockForRental(): void
+  }
+
+  enum VehicleStatus <<Enumeration>> {
+    AVAILABLE
+    RENTED
+    MAINTENANCE
+  }
+
+  interface VehicleRepository <<Spring Data JPA>> {
+    + findByStatus(status: VehicleStatus): List<Vehicle>
+    + findByOwnerId(ownerId: Long): List<Vehicle>
+  }
+
+  class VehicleCommandService <<Application Service>> {
+    - vehicleRepository: VehicleRepository
+    + handle(createVehicleCommand: CreateVehicleCommand): Vehicle
+    + handle(updateStatusCommand: UpdateVehicleStatusCommand): void
+  }
+
+  class ListingsContextFacade <<ACL Facade>> {
+    - vehicleRepository: VehicleRepository
+    + getVehicleById(id: Long): VehicleDto
+    + verifyAvailability(id: Long): boolean
+  }
+
+  class VehiclesController <<REST Controller>> {
+    - vehicleCommandService: VehicleCommandService
+    + createVehicle(resource: CreateVehicleResource): ResponseEntity
+    + getAllVehicles(): ResponseEntity
+  }
+}
+
+package "Booking & Digital Contracts" as pkg_booking {
+  class Booking <<Aggregate Root>> {
+    - renterId: Long
+    - ownerId: Long
+    - vehicleId: Long
+    - startDate: LocalDate
+    - endDate: LocalDate
+    - totalPrice: BigDecimal
+    - status: BookingStatus
+    + confirm(): void
+    + reject(): void
+    + cancel(): void
+    + complete(): void
+    + calculateTotalPrice(dailyRate: BigDecimal): BigDecimal
+  }
+
+  enum BookingStatus <<Enumeration>> {
+    PENDING
+    CONFIRMED
+    REJECTED
+    CANCELLED
+    COMPLETED
+  }
+
+  interface BookingRepository <<Spring Data JPA>> {
+    + findByRenterId(renterId: Long): List<Booking>
+    + findByOwnerId(ownerId: Long): List<Booking>
+  }
+
+  class BookingCommandService <<Application Service>> {
+    - bookingRepository: BookingRepository
+    - listingsFacade: ListingsContextFacade
+    + handle(createBookingCommand: CreateBookingCommand): Booking
+    + handle(confirmBookingCommand: ConfirmBookingCommand): void
+  }
+
+  class BookingContextFacade <<ACL Facade>> {
+    - bookingRepository: BookingRepository
+    + hasCompletedBooking(renterId: Long, vehicleId: Long): boolean
+    + getActiveBooking(vehicleId: Long): BookingDto
+  }
+
+  class BookingsController <<REST Controller>> {
+    - bookingCommandService: BookingCommandService
+    + createBooking(resource: CreateBookingResource): ResponseEntity
+    + confirmBooking(id: Long): ResponseEntity
+  }
+}
+
+package "IoT Monitoring & Telemetry" as pkg_iot {
+  class Telemetry <<Aggregate Root>> {
+    - vehicleId: Long
+    - latitude: Double
+    - longitude: Double
+    - speed: Double
+    - fuelLevel: Double
+    - odometer: Double
+    - recordedAt: Instant
+    + updateCoordinates(lat: Double, lng: Double): void
+    + updateSpeed(spd: Double): void
+    + isSpeedAlert(): boolean
+    + isLowFuelAlert(): boolean
+  }
+
+  interface TelemetryRepository <<Spring Data JPA>> {
+    + findTopByVehicleIdOrderByRecordedAtDesc(id: Long): Optional<Telemetry>
+  }
+
+  class TelemetrySimulatorService <<Application Service>> {
+    - telemetryRepository: TelemetryRepository
+    - openRouteService: OpenRouteServiceApiClient
+    + simulateTrip(vehicleId: Long): void
+    + getRoute(start: LatLng, end: LatLng): RouteDto
+  }
+
+  class TelemetryController <<REST Controller>> {
+    - telemetrySimulatorService: TelemetrySimulatorService
+    + getLatestTelemetry(vehicleId: Long): ResponseEntity
+    + getRoute(points: List<LatLng>): ResponseEntity
+  }
+}
+
+package "Reviews & Reputation" as pkg_reviews {
+  class Review <<Aggregate Root>> {
+    - vehicleId: Long
+    - renterId: Long
+    - rating: Integer
+    - comment: String
+    - reviewDate: Instant
+    + updateReview(rating: Integer, comment: String): void
+    + validateRating(): boolean
+  }
+
+  interface ReviewRepository <<Spring Data JPA>> {
+    + findByVehicleId(vehicleId: Long): List<Review>
+    + countByVehicleId(vehicleId: Long): Long
+  }
+
+  class ReviewCommandService <<Application Service>> {
+    - reviewRepository: ReviewRepository
+    - bookingFacade: BookingContextFacade
+    + handle(createReviewCommand: CreateReviewCommand): Review
+    + computeAverageRating(vehicleId: Long): Double
+  }
+
+  class ReviewsController <<REST Controller>> {
+    - reviewCommandService: ReviewCommandService
+    + createReview(resource: CreateReviewResource): ResponseEntity
+    + getReviewsByVehicle(vehicleId: Long): ResponseEntity
+  }
+}
+
+' Stacking layout:
+' Top row: Shared Kernel
+' Upper row: IAM and Listings
+' Lower row: Booking, IoT, Reviews
+AuditBase -[hidden]down-> pkg_iam
+AuditBase -[hidden]down-> pkg_listings
+
+pkg_iam -[hidden]right-> pkg_listings
+pkg_iam -[hidden]down-> pkg_booking
+pkg_listings -[hidden]down-> pkg_iot
+
+pkg_booking -[hidden]right-> pkg_iot
+pkg_iot -[hidden]right-> pkg_reviews
+
+' Inheritance from Shared Audit Base
+AuditBase <|-- User
+AuditBase <|-- Vehicle
+AuditBase <|-- Booking
+AuditBase <|-- Telemetry
+AuditBase <|-- Review
+
+' IAM Internal Relations
+User "1" *-- "*" Role : roles
+Role --> Roles : name
+UserCommandService --> UserRepository : persists
+AuthenticationController --> UserCommandService : dispatches
+
+' Listings Internal Relations
+Vehicle --> VehicleStatus : status
+VehicleCommandService --> VehicleRepository : persists
+ListingsContextFacade --> VehicleRepository : queries
+VehiclesController --> VehicleCommandService : dispatches
+
+' Booking Internal Relations
+Booking --> BookingStatus : status
+BookingCommandService --> BookingRepository : persists
+BookingContextFacade --> BookingRepository : queries
+BookingsController --> BookingCommandService : dispatches
+
+' IoT Internal Relations
+TelemetrySimulatorService --> TelemetryRepository : persists
+TelemetryController --> TelemetrySimulatorService : dispatches
+
+' Reviews Internal Relations
+ReviewCommandService --> ReviewRepository : persists
+ReviewsController --> ReviewCommandService : dispatches
+
+' Cross-domain Domain Relations
+User "1" --> "0..*" Vehicle : owns >
+Vehicle "1" --> "0..*" Booking : reserved in >
+User "1" --> "0..*" Booking : rents >
+Vehicle "1" --> "0..*" Telemetry : monitored by >
+Vehicle "1" --> "0..*" Review : reviewed in >
+
+' Cross-domain ACL Dependencies
+BookingCommandService ..> ListingsContextFacade : <<locks vehicle availability>>
+ReviewCommandService ..> BookingContextFacade : <<verifies completed booking>>
+
+@enduml

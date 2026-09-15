@@ -1,0 +1,105 @@
+@startuml
+skinparam linetype ortho
+skinparam roundcorner 5
+skinparam shadowing false
+skinparam dpi 300
+skinparam defaultFontName "Segoe UI"
+skinparam defaultFontSize 12
+
+hide circle
+
+skinparam entity {
+    BackgroundColor #FFFFFF
+    BorderColor #1E293B
+    BorderThickness 1.5
+    ArrowColor #2563EB
+    ArrowThickness 1.3
+    HeaderBackgroundColor #1E3A8A
+    HeaderFontColor #FFFFFF
+    HeaderFontStyle bold
+    HeaderFontSize 13
+}
+
+entity "users" as users {
+  * id : BIGINT <<PK, auto_increment>>
+  --
+  * name : VARCHAR(150)
+  * email : VARCHAR(100) <<UK>>
+  * password : VARCHAR(255)
+  * created_at : TIMESTAMP
+  * updated_at : TIMESTAMP
+}
+
+entity "roles" as roles {
+  * id : BIGINT <<PK, auto_increment>>
+  --
+  * name : VARCHAR(30) <<UK>>
+}
+
+entity "user_roles" as user_roles {
+  * user_id : BIGINT <<PK, FK>>
+  * role_id : BIGINT <<PK, FK>>
+}
+
+entity "vehicles" as vehicles {
+  * id : BIGINT <<PK, auto_increment>>
+  --
+  * owner_id : BIGINT <<FK>>
+  * brand : VARCHAR(80)
+  * model : VARCHAR(80)
+  * year : INT
+  * price_per_day : DOUBLE
+  * status : VARCHAR(25)
+  image : LONGBLOB
+  * created_at : TIMESTAMP
+  * updated_at : TIMESTAMP
+}
+
+entity "bookings" as bookings {
+  * id : BIGINT <<PK, auto_increment>>
+  --
+  * vehicle_id : BIGINT <<FK>>
+  * renter_id : BIGINT <<FK>>
+  * owner_id : BIGINT <<FK>>
+  * start_date : DATETIME
+  * end_date : DATETIME
+  * total_price : DOUBLE
+  * booking_status : VARCHAR(25)
+  * created_at : TIMESTAMP
+  * updated_at : TIMESTAMP
+}
+
+entity "telemetry" as telemetry {
+  * id : BIGINT <<PK, auto_increment>>
+  --
+  * vehicle_id : BIGINT <<FK>>
+  * latitude : DOUBLE
+  * longitude : DOUBLE
+  * speed : DOUBLE
+  * fuel_level : DOUBLE
+  * created_at : TIMESTAMP
+}
+
+entity "reviews" as reviews {
+  * id : BIGINT <<PK, auto_increment>>
+  --
+  * vehicle_id : BIGINT <<FK>>
+  * renter_id : BIGINT <<FK>>
+  * rating : INT
+  comment : VARCHAR(500)
+  * created_at : TIMESTAMP
+}
+
+' Clean Crow's Foot Relationships without labels
+users ||--|{ user_roles
+roles ||--|{ user_roles
+
+users ||--o{ vehicles
+users ||--o{ bookings
+vehicles ||--o{ bookings
+
+vehicles ||--o{ telemetry
+
+vehicles ||--o{ reviews
+users ||--o{ reviews
+@enduml
