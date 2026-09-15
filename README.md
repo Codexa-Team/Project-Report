@@ -62,7 +62,7 @@ U202313403 - Via Luna, Bruce
 
 |  URL del repositorio del reporte  |
 | :-----------------------------------: |
-| nose |
+| https://github.com/Codexa-Team/Project-Report |
 
 **AV1:**
 
@@ -178,6 +178,43 @@ El curso contribuye al cumplimiento del Student Outcome ABET:
 **Criterio:**  La capacidad de reconocer responsabilidades éticas y
 profesionales en situaciones de ingeniería y hacer juicios informados, que debenc considerar el impacto de las soluciones de ingeniería en contextos globales, económicos, ambientales y sociales.
 
+<div align="center">
+
+<table>
+    <thead>
+        <tr>
+            <th>Criterio específico</th>
+            <th>Acciones realizadas</th>
+            <th>Conclusiones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Reconoce responsabilidad ética y
+profesional en situaciones de ingeniería de
+software.</td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>Emite juicios informados considerando
+el impacto de las soluciones de ingeniería de
+software en contextos globales, económicos,
+ambientales y sociales..
+</td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+<div style="break-after: page;"></div>
+
 ## Part I: As-Is Software Project
 
 # Capítulo I: Introducción
@@ -211,8 +248,8 @@ Convertirnos en la plataforma líder de alquiler de vehículos en el Perú y exp
     <tr>
         <td><b>Nombre:</b> Bruce Via Luna <br>
             <b>Carrera:</b> Ingenieria de Software <br>
-        <b>Descripcion:</b>  
-        <td></td>
+        <b>Descripcion:</b> Soy Bruce Via Luna de codigo u202313403, entusiasta sobre el control y manejo de bases de datos con conocimientos en C# y C++
+        <td><img src="Assets/photos/fotobruce.jpeg" alt="Foto Bruce"></td>
     </tr>
     <tr>
         <td><b>Nombre:</b> - Cesar Alejando Linares Bernable <br>
@@ -704,7 +741,140 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
 
 ### 2.2.2. Registro de entrevistas
 
+
+*Entrevistas a arrendadores de vehiculos*
+---
+<br>
+
+<table align="center">
+  <tr>
+    <th colspan="2" style="text-align:center">Entrevista 1</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Oriana Caceres</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>35 años</td>
+  </tr>
+  <tr>
+    <td><strong>Distrito</strong></td>
+    <td>Cercado de Lima</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>0:16-5:01</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+      
+  `https://youtu.be/B3n8FB8qZX8`
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+      Resumen: <br>
+      Oriana, contadora graduada, reside en el distrito de Cercado de Lima, habla sobre como el tener un auto que no usa mucho le sirve para tener un ingreso adicional al alquilarlo para servicios de uber, le gustaria una alternativa donde su auto sea separado de la identidad del conductor para mejor reputacion y seguridad.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br>
+      <img src="Assets/interviews/captura-diseño.png" alt="Segmento 1 entrevista 1 " width="1000"><br>
+    </td>
+  </tr>
+</table>
+
+<table align="center">
+  <tr>
+    <th colspan="2" style="text-align:center">Entrevista 1</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Margot Arnable</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>45 años</td>
+  </tr>
+  <tr>
+    <td><strong>Distrito</strong></td>
+    <td>San Martin de Porres</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>0:31-8:34</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+      
+  `https://youtu.be/B3n8FB8qZX8`
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+      Resumen: <br>
+      Margot, obstreta, reside en el distrito de San Martin de Porres, 
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br>
+      <img src="Assets/interviews/captura-diseño-2-1.png" alt="Segmento 1 entrevista 1 " width="1000"><br>
+    </td>
+  </tr>
+</table>
+
+*Entrevistas a arrendatarios de vehiculos*
+---
+<table align="center">
+  <tr>
+    <th colspan="2" style="text-align:center">Entrevista 1</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Sebastian Altamirano</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>22 años</td>
+  </tr>
+  <tr>
+    <td><strong>Distrito</strong></td>
+    <td>Cercado de Lima</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>0:10-7:41</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+      
+  `https://youtu.be/UtvLuMLGYto`
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+      Resumen: <br>
+      Sebastian, estudiante universitario con licencia de conducir, reside en el distrito de Cercado de Lima, habla sobre como se le suelen pedir permisos de mas para poder alquilar un auto ademas de que le es complicado reservar para fechas muy concurridas por lo que le gustaria poder alquilar por modelo y para fechas exactas.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br>
+      <img src="Assets/interviews/captura-diseño-2.png" alt="Segmento 2 entrevista 1 " width="1000"><br>
+    </td>
+  </tr>
+</table>
+
+
+
 ### 2.2.3. Análisis de entrevistas
+
 
 ## 2.3. Needfinding
 ### 2.3.1. User Personas
@@ -1583,11 +1753,25 @@ El uso de GitHub + Vercel permitió una configuración de despliegue **sencilla,
 |
 ### 5.2.2. Implemented Landing Page Evidence
 
-|||
+Ingresamos a la organizacion de Codexa-Team y buscamos el repositorio de la Landing Page:
+
+[Foto]
+
+Nos dirijimos a la sección de pages en configuración, configuramos la rama a desplegar y guardamos en save. Luego de unos minutos de seleccionar "Save", se generará un enlace donde se podrá visualizar nuestra landing page desplegada:
+
+
+|  URL de la Landing Page  |
+| :-----------------------------------: |
+|  |
 
 ### 5.2.3. Implemented Frontend-Web Application Evidence
 
-||||
+Explicaremos y detalalremos el despliegue de la aplicación Front-end en:
+
+
+|  URL del Frontend  |
+| :-----------------------------------: |
+|  |
 
 ### 5.2.4. Acuerdo de Servicio - SaaS
 
@@ -1595,11 +1779,19 @@ El uso de GitHub + Vercel permitió una configuración de despliegue **sencilla,
 
 ### 5.2.5. Implemented Native-Mobile Application Evidence
 
+Dentro e esta entrega la implementacion de una aplicacion movil nativa no llega a estar dentro de lo requerido por lo que sera guardado hasta el siguiente sprint
 
-||||
+
 ### 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
 
-||||
+Se usara swagger para la vista y acceso a los endpoints desarrollados para los bounde context, cada uno con operaciones CRUD y metodos de proteccion para evitar inyecciones en el codigo.
+
+El despliegue de este se hara dentro de la aplicacion web de Render la cual almacenara el backend de nuestro servicio
+
+
+|  URL del Backend  |
+| :-----------------------------------: |
+|  |
 
 ### 5.2.7. RESTful API documentation
 
