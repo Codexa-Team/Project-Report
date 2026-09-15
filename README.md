@@ -32,7 +32,7 @@ u202314354 - Solís Campos, Estefano Sebastian
 <br><br>
 U202311086 - Landa Ortiz, Sergio Javier
 <br><br>
-U20231D400 - Angeles Rojas, Sheila
+U20231D400 - Angeles Rojas, Sheila Jasmin
 <br><br>
 U202019409 - Linares Bernable, Cesar Alejandro
 <br><br>
@@ -56,7 +56,7 @@ U202313403 - Via Luna, Bruce
 
 - Bruce Via Luna
 - Cesar Alejando Linares Bernable
-- Sheila Angeles Rojas
+- Sheila Jasmin Angeles Rojas
 - Estefano Sebastian Solis Campos
 - Sergio Javier Landa Ortiz
 
@@ -270,8 +270,8 @@ Convertirnos en la plataforma líder de alquiler de vehículos en el Perú y exp
         <td></td>
     </tr>
     <tr>
-        <td><b>Nombre:</b> Sheila Angeles Rojas <br>
-            <b>Carrera:</b>  <br>
+        <td><b>Nombre:</b> Sheila Jasmin Angeles Rojas <br>
+            <b>Carrera:</b> Ingenierìa de software <br>
         <b>Descripcion:</b> 
         <td></td>
     </tr>
