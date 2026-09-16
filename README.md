@@ -272,8 +272,8 @@ Convertirnos en la plataforma líder de alquiler de vehículos en el Perú y exp
     <tr>
         <td><b>Nombre:</b> Sheila Jasmin Angeles Rojas <br>
             <b>Carrera:</b> Ingenierìa de software <br>
-        <b>Descripcion:</b> 
-        <td></td>
+        <b>Descripcion:</b> Soy Sheila Angeles, soy estudiante de la carrera de Ingeniería de Software. Me caracterizo por ser una persona responsable, organizada y comprometida con cada tarea que se me asigna 
+    <td><img src="Assets/photos/ME.png" alt="Foto"></td>
     </tr>
    <table>
 
