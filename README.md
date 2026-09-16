@@ -1410,16 +1410,16 @@ Link del Figma: https://www.figma.com/design/PChWJ99signLAO8NcRCRrY/Landing-Rent
 
 ### 4.3.3. Landing Page Wireframe (MOVIL) 
 
-<img src="assets/photos/MOVIL_W.png" alt="Buttons" width="500"><br>
-<img src="assets/photos/MOVIL_W1.png" alt="Buttons" width="500"><br>
-<img src="assets/photos/MOVIL_W2.png" alt="Buttons" width="500"><br>
+<img src="Assets/photos/MOVIL_W.png" alt="Buttons" width="500"><br>
+<img src="Assets/photos/MOVIL_W1.png" alt="Buttons" width="500"><br>
+<img src="Assets/photos/MOVIL_W2.png" alt="Buttons" width="500"><br>
 
 Link del Figma: https://www.figma.com/design/l0LFaLS4ss0q10lzrFVtQK/Landing-Page-Androi?node-id=2461-182&t=pYAuwdTIyfYky3Zu-1
 
-### 4.3.3. Landing Page Mock-up  (MOVIL)
+### 4.3.4. Landing Page Mock-up  (MOVIL)
 
-<img src="assets/photos/MOVIL_M.png" alt="Buttons" width="500"><br>
-<img src="assets/photos/MOVIL_M1.png" alt="Buttons" width="500"><br>
+<img src="Assets/photos/MOVIL_M.png" alt="Buttons" width="500"><br>
+<img src="Assets/photos/MOVIL_M1.png" alt="Buttons" width="500"><br>
 
 Link del Figma: https://www.figma.com/design/l0LFaLS4ss0q10lzrFVtQK/Landing-Page-Androi?node-id=1046-41&t=pYAuwdTIyfYky3Zu-1
 
