@@ -743,7 +743,7 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
   </tr>
   <tr>
     <td><strong>Entrevistado</strong></td>
-    <td>Margot Arnable</td>
+    <td>Margot Bernable</td>
   </tr>
   <tr>
     <td><strong>Edad</strong></td>
@@ -751,7 +751,7 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
   </tr>
   <tr>
     <td><strong>Distrito</strong></td>
-    <td>San Martin de Porres</td>
+    <td>San Martín de Porres</td>
   </tr>
   <tr>
     <td><strong>Timing</strong></td>
@@ -761,14 +761,14 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
     <td><strong>URL</strong></td>
     <td>
       
-  `https://youtu.be/B3n8FB8qZX8`
+  `https://youtu.be/7LyhIITgNnU`
 
   </td>
   </tr>
   <tr>
     <td colspan="2" style="text-align:justify">
       Resumen: <br>
-      Margot, obstreta, reside en el distrito de San Martin de Porres, relata que dispone de un automóvil que no utiliza con frecuencia y evalúa ponerlo en alquiler para generar ingresos complementarios; sin embargo, manifiesta preocupación por la seguridad de su vehículo y la confiabilidad del conductor, destacando la necesidad de una plataforma que valide rigurosamente a los usuarios, ofrezca garantías claras y proporcione telemetría en tiempo real.
+      Margot Bernable de la Cruz, obstreta de 45 años que reside en el distrito de San Martín de Porres, habla sobre cómo suele alquilar autos económicos o medianos según el uso, y menciona que le piden DNI, licencia de conducir, tarjeta de crédito y voucher, además de restricciones de edad y experiencia para conductores adicionales. Le gustaría una plataforma con más reseñas de arrendadores y detalles del interior del vehículo para alquilar con mayor confianza y seguridad.
     </td>
   </tr>
   <tr>
