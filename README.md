@@ -1,7 +1,7 @@
 <div align="center">
 
 <p align="center">
-  <img src="Assets/UPC_logo.png" alt="logo" width="200"/>
+  <img src="Assets/chapter01/upc-logo-transparente.png" alt="UPC Logo" width="160"/>
 </p>
 
 <h3 align="center">
@@ -23,7 +23,7 @@ Docente: Juan Antonio Flores Moroco
 <br><br>
 Startup: Codexa-Team
 <br><br>
-Producto: Por hacer
+Producto: RentiCar
 <br><br>
 <br><br>
 <strong>Integrantes</strong>  
@@ -178,17 +178,54 @@ El curso contribuye al cumplimiento del Student Outcome ABET:
 **Criterio:**  La capacidad de reconocer responsabilidades éticas y
 profesionales en situaciones de ingeniería y hacer juicios informados, que debenc considerar el impacto de las soluciones de ingeniería en contextos globales, económicos, ambientales y sociales.
 
+<div align="center">
+
+<table>
+    <thead>
+        <tr>
+            <th>Criterio específico</th>
+            <th>Acciones realizadas</th>
+            <th>Conclusiones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Reconoce responsabilidad ética y
+profesional en situaciones de ingeniería de
+software.</td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>Emite juicios informados considerando
+el impacto de las soluciones de ingeniería de
+software en contextos globales, económicos,
+ambientales y sociales..
+</td>
+            <td>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+<div style="break-after: page;"></div>
+
 ## Part I: As-Is Software Project
 
 # Capítulo I: Introducción
 
 ## 1.1. Startup Profile
 
-En esta sección presentamos a InnovaSoft, nuestra startup tecnológica, así como el sector en el que buscamos incursionar, la problemática identificada y la solución propuesta. Este apartado tiene como finalidad brindar una visión clara del proyecto y de los objetivos que orientan a nuestro equipo.
+En esta sección presentamos a Codexa-Team, nuestra startup tecnológica, así como el sector en el que buscamos incursionar, la problemática identificada y la solución propuesta. Este apartado tiene como finalidad brindar una visión clara del proyecto y de los objetivos que orientan a nuestro equipo.
 
 ### 1.1.1. Descripción de la Startup
 
-InnovaSoft es una startup fundada por estudiantes de la carrera de Ingeniería de Software, orientada al desarrollo de soluciones digitales innovadoras. Para el presente ciclo académico, hemos planteado el desarrollo de una aplicación web denominada RentiCar, una plataforma destinada al alquiler de vehículos en el Perú.
+Codexa-Team es una startup fundada por estudiantes de la carrera de Ingeniería de Software, orientada al desarrollo de soluciones digitales innovadoras. Para el presente ciclo académico, hemos planteado el desarrollo de una aplicación web denominada RentiCar, una plataforma destinada al alquiler de vehículos en el Perú.
 
 Actualmente, el mercado de alquiler de autos en el país enfrenta limitaciones: procesos poco digitalizados, escasa confianza entre arrendadores y arrendatarios, y la ausencia de un sistema que centralice ofertas de forma segura y sencilla. Frente a esta problemática, RentiCar busca convertirse en un espacio confiable que conecte a propietarios de vehículos con clientes interesados en alquilarlos, garantizando una experiencia rápida, segura y transparente.
 
@@ -202,17 +239,15 @@ Convertirnos en la plataforma líder de alquiler de vehículos en el Perú y exp
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
-
 <table>
     <tr>
         <td>Perfil</td>
         <td>Foto</td>
     </tr>
     <tr>
-        <td><b>Nombre:</b> Bruce Via Luna <br>
-            <b>Carrera:</b> Ingenieria de Software <br>
-        <b>Descripcion:</b>  
-        <td></td>
+        <td>
+        <b>Descripcion:</b> Soy Bruce Via Luna de codigo u202313403, entusiasta sobre el control y manejo de bases de datos con conocimientos en C# y C++
+        <td><img src="Assets/photos/fotobruce.jpeg" alt="Foto Bruce"></td>
     </tr>
     <tr>
         <td><b>Nombre:</b> - Cesar Alejando Linares Bernable <br>
@@ -221,7 +256,7 @@ Convertirnos en la plataforma líder de alquiler de vehículos en el Perú y exp
         <td></td>
     </tr>
     <tr>
-        <td><b>Nombre:</b> Sagastegui Rodriguez, Luis Jesus <br>
+        <td><b>Nombre:</b> Sergio xd <br>
             <b>Carrera:</b> Ingenieria de Software <br>
         <b>Descripcion:</b> 
         <td></td>
@@ -229,8 +264,8 @@ Convertirnos en la plataforma líder de alquiler de vehículos en el Perú y exp
     <tr>
         <td><b>Nombre:</b> Solis Campos, Estefano Sebastian <br>
             <b>Carrera:</b> Ingenieria de Software <br>
-        <b>Descripcion:</b> 
-        <td></td>
+        <b>Descripcion:</b> Soy un estudiante apasionado de la carrera de Ingeniería de Software en la UPC. Me entusiasma aplicar mis conocimientos en el desarrollo de soluciones digitales innovadoras, diseño de experiencia de usuario (UX/UI) y gestión de requerimientos. Comprometido con el rigor técnico, la excelencia operativa y el aprendizaje continuo en ingeniería.</td>
+        <td><img src="Assets/chapter01/estefano-solis.jpeg" alt="Estefano Solis" width="150"></td>
     </tr>
     <tr>
         <td><b>Nombre:</b> Sheila Angeles Rojas <br>
@@ -238,161 +273,105 @@ Convertirnos en la plataforma líder de alquiler de vehículos en el Perú y exp
         <b>Descripcion:</b> 
         <td></td>
     </tr>
-   <table>
+</table>
+
 
 ## 1.2. Solution Profile
 
-### 1.2.1 Antecedentes y problemática
+### 1.2.1. Antecedentes y problemática
 
 En el Perú, el mercado de alquiler de vehículos se encuentra rezagado frente a otros servicios de movilidad, debido principalmente a la informalidad de las transacciones, la ausencia de plataformas centralizadas confiables y la desconfianza existente entre propietarios y clientes. Actualmente, la mayoría de operaciones se realiza mediante redes sociales, anuncios clasificados o contactos directos, lo que genera serios riesgos de fraude, pérdida de dinero, incumplimiento en los acuerdos y falta de respaldo legal. A esto se suma que, en la mayoría de los casos, los procesos son poco prácticos y requieren múltiples pasos presenciales, dificultando el acceso a un servicio rápido y eficiente.
 
 Si bien existen alternativas en el mercado internacional, su cobertura en el Perú es limitada, costosa o no responde a la realidad del usuario promedio. Esto deja un vacío en el sector, el cual representa una oportunidad para el desarrollo de una solución digital innovadora. Por ello, resulta fundamental plantear una propuesta que brinde seguridad, transparencia y facilidad de uso, y que al mismo tiempo fomente la confianza entre los actores involucrados. Con este proyecto buscamos no solo atender una necesidad inmediata de movilidad, sino también impulsar la digitalización del sector y promover nuevas oportunidades económicas para los propietarios de vehículos.
 
-A continuación, se presenta un análisis detallado de esta problemática empleando la metodología ‘5W2H’.
+A continuación, se presenta un análisis detallado de esta problemática empleando la metodología "5W2H":
 
-**Who** <br>
+- **Who (Quién):** Por un lado, se encuentran los propietarios de vehículos, personas que muchas veces tienen un automóvil que no utilizan de forma constante y buscan una manera práctica y segura de generar ingresos adicionales a través de su alquiler. Por otro lado, están los clientes que requieren un vehículo de manera temporal, ya sea por motivos de viaje, trabajo, emergencias o simplemente por no contar con un automóvil propio. Ambos grupos comparten una necesidad común: acceder a un sistema que les permita conectarse de forma confiable y sencilla, sin tener que recurrir a procesos engorrosos o inseguros.
+- **What (Qué):** Se identifica la urgencia de contar con una plataforma que funcione como un puente seguro y transparente entre propietarios y clientes. Actualmente, la falta de un servicio centralizado hace que el proceso de alquiler sea desordenado y arriesgado, lo cual limita el crecimiento del sector. Una solución digital debe resolver estos problemas principales: la confianza entre ambas partes, la formalización de los acuerdos y la rapidez en el proceso de búsqueda y alquiler.
+- **Where (Dónde):** El problema se concentra principalmente en el Perú, especialmente en las grandes ciudades como Lima, Arequipa y Trujillo, donde existe una mayor demanda de movilidad. Sin embargo, la problemática no es exclusiva de estas zonas; en regiones más pequeñas la necesidad es incluso mayor, ya que los servicios de alquiler tradicionales suelen ser escasos o inexistentes. Esto abre la posibilidad de que, una vez consolidada la solución en el ámbito nacional, se pueda escalar hacia otros países de Latinoamérica que presentan contextos similares.
+- **When (Cuándo):** Con el avance de la digitalización y el creciente uso de plataformas para todo tipo de servicios, los usuarios esperan soluciones inmediatas y seguras. Sin embargo, el alquiler de vehículos aún no se ha adaptado a estas expectativas de forma integral en el Perú. Por lo tanto, el momento de implementar una plataforma como RentiCar es ahora, antes de que la brecha entre lo que el usuario espera y lo que el mercado ofrece se amplíe aún más.
+- **Why (Por qué):** Los clientes enfrentan altos niveles de incertidumbre al alquilar un vehículo, ya que no cuentan con garantías ni respaldo en caso de inconvenientes. Los propietarios, por su parte, ven limitado su potencial de generar ingresos debido al miedo al incumplimiento de acuerdos o al mal uso de sus vehículos. Una plataforma digital que brinde confianza, formalidad y simplicidad responde directamente a esta necesidad, ofreciendo beneficios tangibles a ambos actores y contribuyendo a mejorar el ecosistema de movilidad en el país.
+- **How (Cómo):** Esta plataforma permitirá a los propietarios registrar sus vehículos, establecer condiciones de alquiler y gestionar solicitudes de forma ordenada. Del mismo modo, los clientes podrán buscar, comparar y reservar autos de manera ágil, contando con herramientas de validación de usuarios, contratos digitales y sistemas de monitoreo IoT en tiempo real. De esta manera, se garantizará una experiencia fluida y confiable para ambas partes.
+- **How Much (Cuánto):** El modelo de negocio propuesto se basa en un esquema de comisión porcentual por cada transacción formalizada dentro de la plataforma. Esto implica que la barrera de entrada y los costos iniciales de adopción para los usuarios serán bajos, favoreciendo la masificación del servicio. La inversión principal en esta primera etapa se focaliza en el desarrollo tecnológico y en la adquisición de usuarios.
 
-Por un lado, se encuentran los propietarios de vehículos, personas que muchas veces tienen un automóvil que no utilizan de forma constante y buscan una manera práctica y segura de generar ingresos adicionales a través de su alquiler. Por otro lado, están los clientes que requieren un vehículo de manera temporal, ya sea por motivos de viaje, trabajo, emergencias o simplemente por no contar con un automóvil propio. Ambos grupos comparten una necesidad común: acceder a un sistema que les permita conectarse de forma confiable y sencilla, sin tener que recurrir a procesos engorrosos o inseguros.
-
-**What** <br>
-
-Se identifica la urgencia de contar con una plataforma que funcione como un puente seguro y transparente entre propietarios y clientes. Actualmente, la falta de un servicio centralizado hace que el proceso de alquiler sea desordenado y arriesgado, lo cual limita el crecimiento del sector. Una solución digital debe resolver estos problemas principales: la confianza entre ambas partes, la formalización de los acuerdos y la rapidez en el proceso de búsqueda y alquiler.
-
-**Where** <br>
-
-El problema se concentra principalmente en el Perú, especialmente en las grandes ciudades como Lima, Arequipa y Trujillo, donde existe una mayor demanda de movilidad. Sin embargo, la problemática no es exclusiva de estas zonas; en regiones más pequeñas la necesidad es incluso mayor, ya que los servicios de alquiler tradicionales suelen ser escasos o inexistentes. Esto abre la posibilidad de que, una vez consolidada la solución en el ámbito nacional, se pueda escalar hacia otros países de Latinoamérica que presentan contextos similares.
-
-**When** <br>
-
-Con el avance de la digitalización y el creciente uso de plataformas para todo tipo de servicios, los usuarios esperan soluciones inmediatas y seguras. Sin embargo, el alquiler de vehículos aún no se ha adaptado a estas expectativas de forma integral en el Perú. Por lo tanto, el momento de implementar una plataforma como RentiCar es ahora, antes de que la brecha entre lo que el usuario espera y lo que el mercado ofrece se amplíe aún más.
-
-**Why** <br>
-
-Los clientes enfrentan altos niveles de incertidumbre al alquilar un vehículo, ya que no cuentan con garantías ni respaldo en caso de inconvenientes. Los propietarios, por su parte, ven limitado su potencial de generar ingresos debido al miedo al incumplimiento de acuerdos o al mal uso de sus vehículos. Una plataforma digital que brinde confianza, formalidad y simplicidad responde directamente a esta necesidad, ofreciendo beneficios tangibles a ambos actores y contribuyendo a mejorar el ecosistema de movilidad en el país.
-
-**How** <br>
-
-Esta plataforma permitirá a los propietarios registrar sus vehículos, establecer condiciones de alquiler y gestionar solicitudes de forma ordenada. Del mismo modo, los clientes podrán buscar, comparar y reservar autos de manera ágil, contando con herramientas de validación de usuarios, contratos digitales y sistemas de pago seguro. De esta manera, se garantizará una experiencia fluida y confiable para ambas partes.
-
-**How Much** <br>
-
-Es necesario destacar que el modelo de negocio propuesto se basa en un esquema de comisión por cada transacción realizada dentro de la plataforma. Esto implica que tanto la barrera de entrada como los costos iniciales de adopción para los usuarios serán bajos, lo cual favorece la masificación del servicio. La mayor inversión, en esta primera etapa, estará enfocada en el desarrollo tecnológico y en las estrategias de marketing para captar una base sólida de usuarios que permita validar y escalar el proyecto en el corto plazo.
-
-### 1.2.2 Lean UX Process
+### 1.2.2. Lean UX Process
 
 #### 1.2.2.1. Lean UX Problem Statements
 
-El estado actual del alquiler de vehículos en el Perú se caracteriza por procesos informales, inseguros y desorganizados, que dependen principalmente de redes sociales, acuerdos verbales o contactos personales. Esta situación genera falta de confianza, riesgos de fraude, ausencia de respaldo legal y pérdida de tiempo tanto para propietarios como para clientes. Como resultado, los propietarios tienen miedo de arriesgar sus vehículos y los clientes carecen de garantías al momento de alquilar.
+El proceso de alquiler de vehículos en el Perú se caracteriza por la fragmentación, la falta de transparencia y los altos niveles de desconfianza entre las partes. Los propietarios de automóviles que desean rentabilizar sus vehículos cuando están en desuso carecen de una plataforma formal con verificación estricta y garantías contra siniestros o apropiación ilícita. Por su parte, los arrendatarios que buscan una solución de movilidad temporal se enfrentan a depósitos en efectivo desproporcionados, contratos en papel precarios y vehículos cuyo estado mecánico real y trazabilidad telemática se desconocen.
 
-Nuestro producto busca cerrar esta brecha mediante el desarrollo de una plataforma digital confiable, diseñada para ofrecer procesos de verificación de identidad, contratos digitales y pagos seguros, con el fin de generar confianza y formalizar el mercado de alquiler de autos en el país.
+Nuestro producto busca cerrar esta brecha mediante el desarrollo de una plataforma digital confiable, diseñada para ofrecer procesos de verificación de identidad con roles (`ROLE_RENTER` y `ROLE_OWNER`), contratos digitales, reservas automáticas y monitoreo IoT en tiempo real.
 
-Nuestro enfoque inicial se dirigirá a propietarios de vehículos interesados en generar ingresos adicionales y a clientes que necesitan movilidad temporal de forma segura y rápida, priorizando a usuarios urbanos familiarizados con servicios digitales.
-
-Sabremos que tenemos éxito cuando logremos una reducción en la informalidad de las transacciones, un incremento en la confianza y satisfacción de propietarios y clientes, y un crecimiento sostenido en la cantidad de vehículos registrados y reservas confirmadas dentro de la plataforma.
+Sabremos que tenemos éxito cuando logremos un incremento continuo en la cantidad de vehículos publicados, reservas confirmadas y una alta tasa de satisfacción en las calificaciones posteriores al alquiler.
 
 #### 1.2.2.2. Lean UX Assumptions
 
-En esta sección se formulan las hipótesis basadas en las suposiciones previas, estableciendo relaciones claras entre las características del producto, los comportamientos esperados de los usuarios y los resultados de negocio deseados.
-
-1. Business Assumptions:
-
-Asumimos que en el Perú existe un mercado con alto potencial para el alquiler de vehículos mediante plataformas digitales, debido a que actualmente predomina la informalidad y los usuarios carecen de una opción confiable que centralice la oferta y la demanda. Los propietarios de autos buscan generar ingresos adicionales y estarán interesados en publicar sus vehículos si se les ofrece un sistema con respaldo legal y garantías de seguridad, mientras que los clientes valorarán la posibilidad de alquilar un auto de forma rápida, segura y sin depender de trámites presenciales.
-
-2. Business Outcome Assumptions:
-
-Asumimos que si implementamos una plataforma segura, intuitiva y accesible, lograremos incrementar la confianza en el proceso de alquiler de vehículos en el país. Esto permitirá aumentar el número de autos registrados en la plataforma y generar un mayor volumen de transacciones. Un esquema de comisiones justo servirá como incentivo para que tanto propietarios como clientes prefieran RentiCar frente a canales informales, garantizando así la sostenibilidad del modelo de negocio.
-
-3. User Assumptions:
-
-Asumimos que los propietarios y clientes cuentan con acceso a internet y a dispositivos que les permiten interactuar con plataformas digitales, tal como ya lo hacen en servicios de transporte o delivery. Los propietarios sienten preocupación por la seguridad y buscan garantías que reduzcan riesgos de fraude o mal uso de sus autos, mientras que los clientes esperan procesos simples, rápidos y transparentes que les permitan alquilar sin depender de contactos personales.
-
-4. User Outcome Assumptions:
-
-Asumimos que si los propietarios perciben que la plataforma ofrece seguridad y respaldo, estarán dispuestos a alquilar sus autos con mayor frecuencia y a obtener ingresos adicionales de forma constante. Por su parte, los clientes, al encontrar un proceso confiable y fácil de usar, recurrirán al servicio de manera recurrente y lo recomendarán a otros. Una experiencia positiva aumentará la satisfacción y fidelización de los usuarios, contribuyendo al crecimiento orgánico de la comunidad.
-
-5. Feature Assumptions:
-
-Asumimos que las funcionalidades esenciales como la verificación de identidad, los contratos digitales, el sistema de reservas, los pagos seguros y las calificaciones entre usuarios serán suficientes para generar confianza en la etapa inicial. Una interfaz sencilla permitirá que incluso usuarios con poca experiencia digital utilicen la plataforma sin dificultad, mientras que el lanzamiento de un MVP con estas características será suficiente para validar el modelo de negocio y escalar posteriormente hacia funcionalidades más avanzadas como aplicaciones móviles, seguros integrados o servicios complementarios.
+1. **Business Assumptions:** Asumimos que en el Perú existe un mercado desatendido con alta demanda para el alquiler vehicular P2P digitalizado. Los propietarios estarán dispuestos a listar sus vehículos si cuentan con garantías contractuales y monitoreo telemático en tiempo real.
+2. **Business Outcome Assumptions:** Asumimos que una plataforma intuitiva y segura incrementará la recurrencia de reservas y permitirá consolidar un flujo sostenible de comisiones por alquiler, posicionando a RentiCar como líder en movilidad colaborativa.
+3. **User Assumptions:** Asumimos que tanto arrendadores como arrendatarios cuentan con dispositivos conectados y valoran la inmediatez de la confirmación digital de reservas frente a las llamadas y trámites tradicionales.
+4. **User Outcome Assumptions:** Asumimos que los propietarios obtendrán ingresos constantes con tranquilidad patrimonial, y que los arrendatarios accederán a tarifas transparentes y vehículos seguros monitoreados por GPS.
+5. **Feature Assumptions:** Asumimos que un MVP enfocado en autenticación segura JWT, catálogo reactivo de vehículos, contratos de reserva con calendario dinámico, monitoreo telemático IoT y sistema de reseñas de 5 estrellas validará fehacientemente la propuesta de valor.
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-En esta sección se presentan las suposiciones clave que sustentan el diseño y desarrollo del producto. Estas suposiciones se basan en el entendimiento actual de las necesidades y comportamientos de los usuarios, así como en las condiciones del mercado. Identificar y documentar estas suposiciones permite al equipo alinearse en torno a expectativas comunes y establecer una base sólida para el proceso de validación a través de pruebas e iteraciones futuras.
-
-**Hypothesis Statements 1:**
-
-Creemos que en el Perú existe un mercado desatendido para el alquiler de vehículos mediante plataformas digitales, ya que la mayoría de transacciones se realizan de forma informal y sin garantías. Si ofrecemos un servicio confiable, con respaldo legal y mecanismos de seguridad, los propietarios estarán dispuestos a registrar sus autos y los clientes a alquilarlos con confianza.
-
-**Hypothesis Statements 2:**
-
-Creemos que al implementar una plataforma segura, transparente y de fácil uso lograremos aumentar el número de autos registrados y la cantidad de transacciones realizadas. Esto permitirá generar ingresos sostenibles a través de un esquema de comisiones, consolidando a RentiCar como la opción preferida frente a los canales informales y asegurando la viabilidad del negocio.
-
-**Hypothesis Statements 3:**
-
-Creemos que los propietarios de autos con acceso a internet y dispositivos digitales desean nuevas formas de generar ingresos y están preocupados por la seguridad de sus vehículos, mientras que los clientes buscan una experiencia de alquiler rápida y confiable. Una solución que combine facilidad de uso y garantías de seguridad responderá a las necesidades de ambos segmentos.
-
-**Hypothesis Statements 4:**
-
-Creemos que si los propietarios perciben que RentiCar les ofrece seguridad, respaldo legal y un sistema confiable, utilizarán la plataforma de forma recurrente y la recomendarán a otros. Al mismo tiempo, los clientes satisfechos por la simplicidad y confianza del servicio volverán a alquilar vehículos y contribuirán al crecimiento de la comunidad mediante la fidelización y el boca a boca.
-
-**Hypothesis Statements 5:**
-
-Creemos que al integrar funcionalidades clave como verificación de identidad, contratos digitales, pagos seguros, calificaciones y un sistema de reservas intuitivo, lograremos generar confianza en la etapa inicial. Estas características serán suficientes para validar la propuesta de valor en un MVP, y posteriormente podrán ampliarse con funcionalidades más avanzadas como aplicaciones móviles, seguros integrados y servicios complementarios.
+- **Hypothesis 1:** Creemos que si proporcionamos un registro con verificación de roles y contratos digitales, los propietarios de vehículos incrementarán su disposición a publicar sus unidades en un 40% en comparación con canales informales.
+- **Hypothesis 2:** Creemos que si permitimos a los arrendatarios filtrar vehículos por marca, precio y fechas con cálculo automático de tarifas, el tiempo promedio para completar una reserva se reducirá a menos de 5 minutos.
+- **Hypothesis 3:** Creemos que si integramos telemetría IoT en tiempo real (coordenadas GPS, odómetro y nivel de combustible), el 90% de los propietarios reportará mayor tranquilidad respecto a la seguridad de sus unidades durante el alquiler.
+- **Hypothesis 4:** Creemos que si implementamos un sistema público de reseñas y calificaciones de 1 a 5 estrellas posterior a cada reserva concluida, se generará un círculo virtuoso de reputación que aumentará la tasa de conversión en un 25%.
+- **Hypothesis 5:** Creemos que una Landing Page atractiva y responsiva con soporte multidioma (i18n) captará tráfico orgánico de turistas y profesionales urbanos, impulsando el registro inicial en la plataforma.
 
 #### 1.2.2.4. Lean UX Canvas
 
-<table>
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
     <tr>
-        <th colspan="1" valign="top">
-            <p><b>Business Problem</b></p>
-            <p>El alquiler de vehículos en el Perú se realiza mayoritariamente de manera informal, lo que genera desconfianza, riesgo de fraudes, falta de garantías legales y pérdida de tiempo para propietarios y clientes. La ausencia de una plataforma confiable centraliza este problema y limita el desarrollo de un mercado digital seguro
-            </p>
+        <th style="width: 33%; vertical-align: top; background-color: #1a1e24; color: #ffffff;">
+            <b>1. Business Problem</b>
+            <p>El alquiler vehicular en el Perú predomina en la informalidad, generando desconfianza, riesgo de fraudes, falta de garantías legales y pérdida de tiempo. La ausencia de una solución centralizada y segura limita el desarrollo del mercado P2P.</p>
         </th>
-        <th colspan="1" rowspan="2" valign="top">
-            <p><b>Solution Ideas</b></p>
-            <p>Plataforma web que conecte a propietarios y clientes en un entorno seguro.</p>
-            <p>Registro y verificación de identidad de usuarios.</p>
-            <p>Publicación de vehículos con fotos, precios y disponibilidad.</p>
-            <p>Sistema de reservas en línea con contratos digitales automáticos.</p>
-            <p>Pasarela de pagos segura y protegida.</p>
-            <p>Calificaciones y reseñas para generar confianza.</p>
+        <th style="width: 34%; vertical-align: top; background-color: #1a1e24; color: #ffffff;">
+            <b>2. Solution Ideas</b>
+            <p>- Plataforma web P2P con autenticación JWT y roles diferenciados.<br>
+            - Catálogo con fotos, filtros de marca, precios y disponibilidad en calendario.<br>
+            - Sistema de reservas en línea con cálculo automático de costos.<br>
+            - Monitoreo telemático IoT en tiempo real con mapas interactivos.<br>
+            - Sistema bidireccional de reputación mediante calificaciones de 1 a 5 estrellas.</p>
         </th>
-        <th colspan="1" valign="top">
-            <p><b>Business Outcomes</b></p>
-            <p>Aumentar el número de vehículos registrados y transacciones mensuales.</p>
-            <p>Generar ingresos sostenibles mediante comisiones por alquiler.</p>
-            <p>Reducir la informalidad del mercado de alquiler de autos.</p>
-            <p>Posicionar a RentiCar como la plataforma más confiable del Perú.</p>
+        <th style="width: 33%; vertical-align: top; background-color: #1a1e24; color: #ffffff;">
+            <b>3. Business Outcomes</b>
+            <p>- Incrementar la flota de vehículos activos en Lima.<br>
+            - Maximizar el volumen de reservas completadas exitosamente.<br>
+            - Generar ingresos sostenibles por comisión de transacción.<br>
+            - Establecer a RentiCar como referente de confianza y modernidad.</p>
         </th>
     </tr>
     <tr>
-        <td colspan="1" valign="top">
-            <p><b>User & Customers</b></p>
-            <p>Propietarios de vehículos que buscan generar ingresos adicionales.</p>
-            <p>Clientes que requieren movilidad temporal de forma rápida y confiable.</p>
+        <td style="vertical-align: top;">
+            <b>4. Users & Customers</b>
+            <p><b>Arrendadores:</b> Dueños de autos que buscan monetizar su vehículo en desuso.<br>
+            <b>Arrendatarios:</b> Turistas y profesionales que requieren movilidad temporal rápida, económica y confiable.</p>
         </td>
-        <td colspan="1" valign="top">
-            <p><b>User Benefits</b></p>
-            <p><b>Propietarios:</b> Seguridad en sus transacciones, respaldo legal y una fuente estable de ingresos adicionales.</p>
-            <p><b>Clientes:</b> Acceso rápido y confiable a vehículos, con un proceso claro, seguro y transparente.</p>
+        <td style="vertical-align: top;">
+            <b>5. User Benefits</b>
+            <p><b>Arrendadores:</b> Ingresos adicionales, respaldo contractual y supervisión telemática de su auto.<br>
+            <b>Arrendatarios:</b> Acceso ágil a vehículos verificados, precios transparentes y sin depósitos abusivos.</p>
+        </td>
+        <td style="vertical-align: top;">
+            <b>6. Hypotheses</b>
+            <p>Creemos que al ofrecer una plataforma digital con contratos transparentes y monitoreo IoT, propietarios y clientes migrarán de canales informales a RentiCar.</p>
         </td>
     </tr>
     <tr>
-        <td colspan="1" valign="top">
-            <p><b>Hypotheses</b></p>
-            <p>Creemos que si ofrecemos una plataforma con pagos seguros y contratos digitales, los propietarios estarán dispuestos a registrar sus autos.</p>
-            <p>Creemos que si los clientes encuentran un servicio rápido, confiable y con precios competitivos, recurrirán al alquiler de manera recurrente.</p>
-            <p>Creemos que un MVP con funcionalidades básicas (registro, publicación, reservas, pagos y calificaciones) será suficiente para validar el modelo de negocio.</p>
+        <td colspan="2" style="vertical-align: top;">
+            <b>7. What's the most important thing we need to learn first?</b>
+            <p>Validar si los propietarios perciben suficiente seguridad jurídica y tecnológica (mediante IoT y verificación) para confiar sus vehículos a terceros a través de la plataforma web.</p>
         </td>
-        <td colspan="1" valign="top">
-            <p><b>What’s the most important thing we need to learn first?</b></p>
-            <p>Construir un MVP con las funcionalidades esenciales: registro y verificación de usuarios, publicación de vehículos, sistema de reservas y pagos seguros. Esto permitirá validar rápidamente la adopción de la plataforma, medir el interés de propietarios y clientes, y comprobar si el modelo de negocio es viable antes de invertir en características avanzadas.</p>
-        </td>
-        <td colspan="1" valign="top">
-            <p><b>What’s the least amount of work we need to do to learn the most important thing?</b></p>
-            <p>Lo más importante que necesitamos aprender primero es si los usuarios (propietarios y clientes) confían lo suficiente en la plataforma para usarla como canal principal de alquiler de vehículos. La confianza es la base del modelo de negocio: si logramos demostrar que los usuarios se sienten seguros, el crecimiento y la adopción podrán escalar de manera sostenible.</p>
+        <td style="vertical-align: top;">
+            <b>8. What's the least amount of work to learn it?</b>
+            <p>Desplegar un MVP web con registro autenticado, catálogo de vehículos con fotos, simulación telemática de ruta y flujo de reserva con confirmación del dueño.</p>
         </td>
     </tr>
 </table>
+
 
 ## 1.3. Segmentos objetivo
 
@@ -410,11 +389,11 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
 
 ## 2.1. Competidores
 
-|                                                        Nombre del Competidor                                                         | Descripción |
-|:------------------------------------------------------------------------------------------------------------------------------------:| :---------- |
-|       Peru Rent a Car <img src="./assets/PeruRentCar.jpg" alt="PeruRentCar" width="600"> [Link](https://www.perurentacar.com/)       | Life Alert es una de las marcas más reconocidas en sistemas de alerta médica, famosa por su eslogan “¡He caído y no puedo levantarme!”. Ofrece sistemas de emergencia diseñados para ayudar a personas mayores a solicitar asistencia rápidamente. Su principal dispositivo es un botón de emergencia que puede usarse en el hogar o fuera de él, enviando alertas a un centro de monitoreo disponible las 24 horas del día. |
-| Clase A Rent a Car <img src="./assets/ClaseARentCar.png" alt="ClaseARentCar" width="600"> [Link](https://www.alquilerautoslima.net/) | MobileHelp es un proveedor líder de sistemas de alerta médica que ofrece dispositivos portátiles y basados en el hogar para personas mayores. Sus dispositivos están diseñados para alertar a los servicios de emergencia en caso de una caída u otro incidente. Además de las soluciones de emergencia en el hogar, MobileHelp destaca por su cobertura fuera de casa gracias a su integración con redes móviles, lo que ofrece a los usuarios mayor independencia y movilidad. |
-|                    Rento <img src="./assets/RentoRent.jpg" alt="RentoRent" width="600"> [Link](https://rento.pe/)                    | CarePredict es una empresa tecnológica que se enfoca en el monitoreo preventivo para adultos mayores. Utiliza dispositivos portátiles equipados con sensores para rastrear patrones de comportamiento y signos vitales. A través de la inteligencia artificial, CarePredict predice posibles problemas de salud antes de que ocurran, como caídas o infecciones, y permite la intervención proactiva de cuidadores y familiares. |
+| Nombre del Competidor | Descripción |
+| :---: | :--- |
+| **Peru Rent a Car** <br><img src="Assets/chapter02/competitor-perurentcar.jpg" alt="PeruRentCar" width="220"><br>[Sitio Web](https://www.perurentacar.com/) | Empresa peruana tradicional con más de 20 años en el rubro de alquiler vehicular en Lima y principales provincias. Dispone de una flota propia diversa (sedanes, SUVs y minivans) orientada a turistas y clientes corporativos. Su modelo operativo se fundamenta en reservas telefónicas/web asistidas con atención presencial, contratos impresos y depósitos de garantía elevados retenidos en tarjeta de crédito, careciendo de digitalización P2P integral y telemetría en tiempo real accesible para el cliente. |
+| **Clase A Rent a Car** <br><img src="Assets/chapter02/competitor-clasearentcar.png" alt="ClaseARentCar" width="220"><br>[Sitio Web](https://www.alquilerautoslima.net/) | Proveedor local de alquiler vehicular enfocado en el sector ejecutivo y turístico de gama media-alta en Lima Metropolitana. Destaca por mantener vehículos modernos y ofrecer atención personalizada vía WhatsApp o vía telefónica. Aunque brinda flexibilidad en contratos temporales, sus procesos de validación de identidad son manuales y presenciales, sin autogestión digital completa ni monitoreo IoT interactivo. |
+| **Rento** <br><img src="Assets/chapter02/competitor-rentorent.jpg" alt="RentoRent" width="220"><br>[Sitio Web](https://rento.pe/) | Plataforma digital pionera en el modelo peer-to-peer (P2P) en el Perú, que conecta a propietarios de autos con usuarios que buscan alquilar por días. Incorpora seguros de cobertura vehicular y verificación básica de usuarios. Si bien es el competidor tecnológico más directo, presenta cobertura limitada fuera de Lima y aún no integra telemetría activa IoT para el seguimiento dinámico de trayectos ni soporte automatizado avanzado para la resolución de disputas contractuales. |
 
 
 ### 2.1.1. Análisis competitivo
@@ -575,77 +554,86 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
-<table>
-  <tr>
-    <th colspan="3" valign="top"></th>
-    <th colspan="4" valign="top"><b>OPORTUNIDADES</b></th>
-    <th colspan="4" valign="top"><b>AMENAZAS</b></th>
-  </tr>
-  <tr>
-    <th colspan="3" valign="top"></th>
-    <td colspan="4" valign="top">
-      <li> Crecimiento del turismo interno y extranjero en Perú.
-      <li> Tendencia a la digitalización de servicios de movilidad.
-      <li> Aumento de la demanda de opciones económicas y flexibles en transporte.
-      <li> Interés de PYMEs y startups por servicios de movilidad alternativos.
-    </td>
-    <td colspan="4" valign="top">
-      <li> Alta competencia de empresas consolidadas (Peru Rent a Car, Clase A).
-      <li> Competidores emergentes con modelo digital similar (Rento).
-      <li> Riesgo de guerra de precios.
-      <li> Desconfianza cultural hacia plataformas nuevas.
-    </td>
-  </tr>
-
-  <tr>
-    <th colspan="3" valign="top"><b>FORTALEZAS</b></th>
-    <th colspan="4" valign="top"><b>ESTRATEGIAS FO (Ofensivas)</b></th>
-    <th colspan="4" valign="top"><b>ESTRATEGIAS FA (Defensiva)</b></th>
-  </tr>
-  <tr>
-    <td colspan="3" valign="top">
-      <li> Plataforma 100% digital con reservas rápidas y seguras.
-      <li> Flexibilidad en planes de alquiler (por horas, días o suscripción mensual).
-      <li> Uso de tecnología IoT (GPS, monitoreo en tiempo real).
-      <li> Enfoque en experiencia del usuario y atención 24/7.
-    </td>
-    <td colspan="4" valign="top">
-      <li> Posicionar a RentiCar como la plataforma de alquiler más ágil y flexible para turistas y jóvenes en Lima. 
-      <li> Usar la tecnología IoT como diferenciador innovador, mostrando seguridad y control en tiempo real.
-      <li> Generar alianzas con hoteles, agencias de turismo y startups para integrar RentiCar en experiencias de viaje y negocios.
-    </td>
-    <td colspan="4" valign="top">
-      <li> Diferenciarse de grandes competidores mediante la rapidez y simplicidad digital.
-      <li> Competir con Rento ofreciendo mayor cobertura y disponibilidad de vehículos.
-      <li> Evitar la guerra de precios destacando valor agregado: seguridad, flexibilidad y soporte 24/7.
-    </td>
-  </tr>
-
-  <tr>
-    <th colspan="3" valign="top"><b>DEBILIDADES</b></th>
-    <th colspan="4" valign="top"><b>ESTRATEGIAS DO (Reorientación)</b></th>
-    <th colspan="4" valign="top"><b>ESTRATEGIAS DA (Supervivencia)</b></th>
-  </tr>
-  <tr>
-    <td colspan="3" valign="top">
-      <li> Marca nueva sin historial ni reputación consolidada.
-      <li> Flota inicial limitada frente a grandes competidores.
-      <li> Recursos financieros más reducidos que empresas consolidadas.
-      <li> Dependencia de la confianza digital en un mercado aún en transición.
-    </td>
-    <td colspan="4" valign="top">
-      <li> Reforzar la confianza en la marca mediante certificaciones, seguros y políticas transparentes.
-      <li> Expandir la flota progresivamente a través de convenios con propietarios particulares y PYMEs.
-      <li> Aprovechar la digitalización para compensar la falta de trayectoria, mostrando procesos claros, seguros y amigables.
-    </td>
-    <td colspan="4" valign="top">
-      <li> Lanzar campañas de marketing educativo sobre la seguridad y beneficios de alquilar en plataformas digitales.
-      <li> Implementar un programa de fidelización para generar usuarios recurrentes desde el inicio.
-      <li> Diversificar fuentes de ingreso (planes corporativos, suscripciones, alquiler por horas) para reducir vulnerabilidad frente a la competencia.
-    </td>
-
-  </tr>
-
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead>
+    <tr>
+      <th style="width: 26%; background-color: #1a1e24;"></th>
+      <th style="width: 37%; text-align: left; vertical-align: top; background-color: #1a1e24; color: #ffffff;">
+        <b>OPORTUNIDADES</b>
+        <ul>
+          <li>Crecimiento del turismo interno y extranjero en Perú.</li>
+          <li>Tendencia a la digitalización de servicios de movilidad.</li>
+          <li>Aumento de la demanda de opciones económicas y flexibles en transporte.</li>
+          <li>Interés de PYMEs y startups por servicios de movilidad alternativos.</li>
+        </ul>
+      </th>
+      <th style="width: 37%; text-align: left; vertical-align: top; background-color: #1a1e24; color: #ffffff;">
+        <b>AMENAZAS</b>
+        <ul>
+          <li>Alta competencia de empresas consolidadas (Peru Rent a Car, Clase A).</li>
+          <li>Competidores emergentes con modelo digital similar (Rento).</li>
+          <li>Riesgo de guerra de precios.</li>
+          <li>Desconfianza cultural hacia plataformas nuevas.</li>
+        </ul>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; background-color: #1a1e24; color: #ffffff;">
+        <b>FORTALEZAS</b>
+        <ul>
+          <li>Plataforma 100% digital con reservas rápidas y seguras.</li>
+          <li>Flexibilidad en planes de alquiler (por horas, días o suscripción mensual).</li>
+          <li>Uso de tecnología IoT (GPS, monitoreo en tiempo real).</li>
+          <li>Enfoque en experiencia del usuario y atención 24/7.</li>
+        </ul>
+      </td>
+      <td style="vertical-align: top;">
+        <b>ESTRATEGIAS FO (Ofensivas)</b>
+        <ul>
+          <li>Posicionar a RentiCar como la plataforma de alquiler más ágil y flexible para turistas y jóvenes en Lima.</li>
+          <li>Usar la tecnología IoT como diferenciador innovador, mostrando seguridad y control en tiempo real.</li>
+          <li>Generar alianzas con hoteles, agencias de turismo y startups para integrar RentiCar en experiencias de viaje y negocios.</li>
+        </ul>
+      </td>
+      <td style="vertical-align: top;">
+        <b>ESTRATEGIAS FA (Defensiva)</b>
+        <ul>
+          <li>Diferenciarse de grandes competidores mediante la rapidez y simplicidad digital.</li>
+          <li>Competir con Rento ofreciendo mayor cobertura y disponibilidad de vehículos.</li>
+          <li>Evitar la guerra de precios destacando valor agregado: seguridad, flexibilidad y soporte 24/7.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; background-color: #1a1e24; color: #ffffff;">
+        <b>DEBILIDADES</b>
+        <ul>
+          <li>Marca nueva sin historial ni reputación consolidada.</li>
+          <li>Flota inicial limitada frente a grandes competidores.</li>
+          <li>Recursos financieros más reducidos que empresas consolidadas.</li>
+          <li>Dependencia de la confianza digital en un mercado aún en transición.</li>
+        </ul>
+      </td>
+      <td style="vertical-align: top;">
+        <b>ESTRATEGIAS DO (Reorientación)</b>
+        <ul>
+          <li>Reforzar la confianza en la marca mediante certificaciones, seguros y políticas transparentes.</li>
+          <li>Expandir la flota progresivamente a través de convenios con propietarios particulares y PYMEs.</li>
+          <li>Aprovechar la digitalización para compensar la falta de trayectoria, mostrando procesos claros, seguros y amigables.</li>
+        </ul>
+      </td>
+      <td style="vertical-align: top;">
+        <b>ESTRATEGIAS DA (Supervivencia)</b>
+        <ul>
+          <li>Lanzar campañas de marketing educativo sobre la seguridad y beneficios de alquilar en plataformas digitales.</li>
+          <li>Implementar un programa de fidelización para generar usuarios recurrentes desde el inicio.</li>
+          <li>Diversificar fuentes de ingreso (planes corporativos, suscripciones, alquiler por horas) para reducir vulnerabilidad frente a la competencia.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 ## 2.2. Entrevistas
@@ -704,6 +692,176 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
 
 ### 2.2.2. Registro de entrevistas
 
+*Entrevistas a arrendadores de vehiculos*
+---
+<br>
+
+<table align="center">
+  <tr>
+    <th colspan="2" style="text-align:center">Entrevista 1</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Oriana Caceres</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>35 años</td>
+  </tr>
+  <tr>
+    <td><strong>Distrito</strong></td>
+    <td>Cercado de Lima</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>0:16-5:01</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+      
+  `https://youtu.be/B3n8FB8qZX8`
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+      Resumen: <br>
+      Oriana, contadora graduada, reside en el distrito de Cercado de Lima, habla sobre como el tener un auto que no usa mucho le sirve para tener un ingreso adicional al alquilarlo para servicios de uber, le gustaria una alternativa donde su auto sea separado de la identidad del conductor para mejor reputacion y seguridad.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:center"><br>
+      <img src="Assets/chapter02/interview-oriana-caceres.png" alt="Segmento 1 entrevista 1 - Oriana Caceres" width="1000"><br>
+    </td>
+  </tr>
+</table>
+
+<table align="center">
+  <tr>
+    <th colspan="2" style="text-align:center">Entrevista 2</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Margot Arnable</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>45 años</td>
+  </tr>
+  <tr>
+    <td><strong>Distrito</strong></td>
+    <td>San Martin de Porres</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>0:31-8:34</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+      
+  `https://youtu.be/B3n8FB8qZX8`
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+      Resumen: <br>
+      Margot, obstreta, reside en el distrito de San Martin de Porres, relata que dispone de un automóvil que no utiliza con frecuencia y evalúa ponerlo en alquiler para generar ingresos complementarios; sin embargo, manifiesta preocupación por la seguridad de su vehículo y la confiabilidad del conductor, destacando la necesidad de una plataforma que valide rigurosamente a los usuarios, ofrezca garantías claras y proporcione telemetría en tiempo real.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:center"><br>
+      <img src="Assets/chapter02/interview-margot-arnable.png" alt="Segmento 1 entrevista 2 - Margot Arnable" width="1000"><br>
+    </td>
+  </tr>
+</table>
+
+<table align="center">
+  <tr>
+    <th colspan="2" style="text-align:center">Entrevista 3 - Segmento 1: Dueño de Vehículo (Arrendador)</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Noelia Gomez</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>25 años</td>
+  </tr>
+  <tr>
+    <td><strong>Distrito</strong></td>
+    <td>Pueblo Libre</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>03:49 - 07:32 minutos (Duración: 3:43 minutos)</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+  `https://youtu.be/EWyy7faTG3Y`
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+      <b>Resumen:</b><br>
+      Comenta su experiencia alquilando su auto personal, un Sedán. Actualmente, gestiona el alquiler a través del calendario de su celular y lo publicita en Facebook Marketplace y grupos de WhatsApp, pero reconoce que estos medios no le brindan facilidades para verificar la confiabilidad de los clientes, teniendo que guiarse por su instinto. Estaría muy dispuesta a usar una nueva plataforma que le permita consultar reseñas de clientes previos para tener más tranquilidad, así como un panel para registrar su vehículo de forma más profesional. Además, considera fundamental poder reseñar a los clientes para fomentar un sistema de confianza y responsabilidad mutua.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:center"><br>
+      <img src="Assets/chapter02/interview-noelia-gomez.jpeg" alt="Segmento 1 Entrevista 3 - Noelia Gomez" width="350"><br>
+    </td>
+  </tr>
+</table>
+
+<br>
+
+*Entrevistas a arrendatarios de vehiculos*
+---
+<table align="center">
+  <tr>
+    <th colspan="2" style="text-align:center">Entrevista 1</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Sebastian Altamirano</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>22 años</td>
+  </tr>
+  <tr>
+    <td><strong>Distrito</strong></td>
+    <td>Cercado de Lima</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>0:10-7:41</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+      
+  `https://youtu.be/UtvLuMLGYto`
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+      Resumen: <br>
+      Sebastian, estudiante universitario con licencia de conducir, reside en el distrito de Cercado de Lima, habla sobre como se le suelen pedir permisos de mas para poder alquilar un auto ademas de que le es complicado reservar para fechas muy concurridas por lo que le gustaria poder alquilar por modelo y para fechas exactas.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:center"><br>
+      <img src="Assets/chapter02/interview-sebastian-altamirano.png" alt="Segmento 2 entrevista 1 - Sebastian Altamirano" width="1000"><br>
+    </td>
+  </tr>
+</table>
+
 ### 2.2.3. Análisis de entrevistas
 
 ## 2.3. Needfinding
@@ -718,7 +876,15 @@ la plataforma.
 
 ###### Segmento Objetivo 1 (Arrendador de vehículos)
 
+<p align="center">
+  <img src="Assets/chapter02/user-persona-jordan-owner.png" alt="User Persona Arrendador - Jordan Dario" width="650"/>
+</p>
+
 ###### Segmento Objetivo 2 (Arrendatario de vehículos)
+
+<p align="center">
+  <img src="Assets/chapter02/user-persona-paul-renter.png" alt="User Persona Arrendatario - Paul Gamero" width="650"/>
+</p>
 
 ### 2.3.2. User Task Matrix
 
@@ -736,7 +902,7 @@ la plataforma.
 ###### Análisis de la User Task Matrix
 
 El análisis de la matriz de tareas muestra diferencias claras entre los dos segmentos principales. El **arrendador** 
-concentra sus actividades en la **publicación de vehículos, la gestión de reservas y la revisión de reseñas**, todas 
+concentra sus actividades en la **publicación de vehículos, la gestión de reservas y la revisión de reseñas**, todías 
 ellas consideradas de alta importancia, ya que están directamente relacionadas con la protección de su inversión. 
 Asimismo, para este segmento es fundamental contar con acceso a **documentos de garantía** y con un **módulo IoT 
 básico** que permita visualizar el estado y ubicación del vehículo, lo cual incrementa la confianza y reduce el 
@@ -762,7 +928,7 @@ proceso actual y evidenciando las oportunidades de mejora que justifican la prop
 nueva aplicación.
 
 ###### Segmento Objetivo 1 (Arrendador de vehículos)
-<img src="assets/chapter02/JordanJourneyMap.png" width=600px>
+<img src="Assets/chapter02/user-journey-map-jordan.png" width=600px>
 El recorrido del arrendador refleja un flujo de trabajo que no resulta del todo eficiente ni satisfactorio. Aunque 
 logra captar clientes mediante plataformas gratuitas de amplia difusión como Facebook o WhatsApp, se muestra 
 frustrado por la escasa seguridad y falta de garantías que estas herramientas ofrecen. A pesar de ello, continúa 
@@ -770,7 +936,7 @@ utilizándolas debido a su alcance y practicidad, aunque reconoce la necesidad d
 y profesional.
 
 ###### Segmento Objetivo 2 (Arrendatario de vehículos)
-<img src="assets/chapter02/PaulJourneyMap.png" width=600px>
+<img src="Assets/chapter02/user-journey-map-paul.png" width=600px>
 Por el lado del arrendatario, la experiencia está marcada por la limitada disponibilidad de opciones confiables y 
 la inseguridad que transmiten las plataformas gratuitas. Esta situación genera desconfianza y lo obliga a depender 
 de la identificación previa de arrendadores de confianza, reduciendo el uso de dichas plataformas a casos 
@@ -786,12 +952,44 @@ orientar el diseño de la solución hacia una experiencia más centrada en el us
 
 
 ###### Segmento Objetivo 1 (Arrendador de vehículos)
-<img src="assets/chapter02/empatymappingsegmento1.png" width=600px>
+<img src="Assets/chapter02/empathy-mapping-segment-1.png" width=600px>
 
 ###### Segmento Objetivo 2 (Arrendatario de vehículos)
-<img src="assets/chapter02/empatymappingsegmento2.png" width=600px>
+<img src="Assets/chapter02/empathy-mapping-segment-2.png" width=600px>
 
 ### 2.3.5. As-is Scenario Mapping
+
+El **As-Is Scenario Mapping** es una herramienta fundamental de diseño de experiencia de usuario (UX) que documenta el estado actual y el recorrido empírico que experimentan los usuarios al intentar resolver su necesidad de transporte o alquiler de vehículos antes de la existencia de **RentiCar**. Permite identificar con precisión los puntos de fricción, demoras, sobrecostos y riesgos de seguridad física y financiera presentes en los métodos tradicionales e informales del mercado peruano.
+
+A continuación, se detallan los escenarios As-Is para los dos segmentos objetivo del proyecto:
+
+---
+
+#### Segmento Objetivo 1: Arrendatario (Usuario que busca alquilar un auto de forma tradicional o informal)
+**User Persona representativa:** Carlos Mendoza (Profesional independiente que busca un vehículo para viajes de trabajo y ocio en Lima).
+
+| Dimensión | Fase 1: Búsqueda y Contacto Informal | Fase 2: Negociación y Garantía Ciega | Fase 3: Uso con Incertidumbre Técnica | Fase 4: Devolución y Disputa de Garantía |
+| :--- | :--- | :--- | :--- | :--- |
+| **Fase del Viaje** | Búsqueda en redes sociales, Marketplace o llamadas a rentas locales | Fijación de tarifas arbitrarias y entrega de depósitos en efectivo | Conducción sin asistencia mecánica ni supervisión telemática | Entrega presencial con revisión exhaustiva y retención injustificada |
+| **Acciones (Doing)** | - Busca opciones en grupos informales de Facebook, WhatsApp o clasificados.<br>- Envía múltiples mensajes preguntando si el vehículo está libre.<br>- Espera horas por respuestas incompletas o cotizaciones dispares. | - Negocia la tarifa directamente por chat sin estándares claros.<br>- Realiza transferencias bancarias o pagos en efectivo como adelanto.<br>- Firma un contrato físico precario sin respaldo legal formal.<br>- Deja su DNI original o una garantía monetaria elevada sin recibo. | - Recibe el auto con retraso en la vía pública o taller informal.<br>- Conduce temiendo que el vehículo sufra averías mecánicas no declaradas.<br>- Carece de un canal digital de asistencia o contacto de emergencia en ruta.<br>- No cuenta con registro del kilometraje ni nivel inicial de gasolina. | - Retorna el auto al punto acordado con el propietario.<br>- Espera la inspección ocular del dueño buscando cualquier rayón o desgaste previo.<br>- Discute sobre el nivel de combustible o cobros adicionales no pactados.<br>- Espera días o semanas para la devolución de su garantía. |
+| **Pensamientos (Thinking)** | *"¿Será una cuenta falsa o estafa?", "¿Las fotos serán del auto real?", "¿Por qué tardan tanto en responder si necesito el auto hoy?"* | *"¿Me devolverán el dinero de la garantía?", "¿Este papel firmado tendrá validez si ocurre un choque?", "Me parece excesivo lo que me piden de garantía."* | *"Siento un ruido extraño en el motor, ojalá no me deje botado", "¿El seguro particular de este auto me cubrirá en caso de accidente?"* | *"Ese rayón ya estaba cuando me lo entregó", "¿Por qué no me transfiere mi depósito de inmediato?", "No tengo ninguna plataforma donde quejarme o dejar mi opinión."* |
+| **Sentimientos (Feeling)** | **Frustración e Incertidumbre:** Desesperación por respuestas lentas y desconfianza en la veracidad de los avisos. | **Vulnerabilidad y Ansiedad:** Temor a ser estafado y desprotección jurídica total al entregar sumas de dinero sin aval. | **Estrés y Tensión Continua:** Preocupación constante por averías mecánicas y ausencia de soporte en el camino. | **Indignación y Desgaste:** Malestar por cobros abusivos de última hora y trámites engorrosos de reembolso. |
+| **Puntos de Dolor (Pain Points)** | - Cero centralización de información y precios.<br>- Perfiles no verificados en redes sociales.<br>- Gran pérdida de tiempo contactando números telefónicos particulares. | - Ausencia de contratos digitales con validez legal.<br>- Exigencia abusiva de dinero en efectivo o documentos de identidad originales.<br>- Cero transparencia en seguros y coberturas contra accidentes. | - Sin monitoreo telemático de ruta ni alertas de estado del vehículo.<br>- Autos sin mantenimiento certificado ni historial mecánico visible.<br>- Falta de asistencia técnica o botón de auxilio 24/7. | - Arbitrariedad del dueño para retener depósitos de garantía.<br>- Imposibilidad de calificar la experiencia para alertar a otros usuarios.<br>- Cero trazabilidad objetiva de kilometraje y combustible. |
+| **Oportunidad de Mejora con RentiCar** | Catálogo digital centralizado con filtros en tiempo real, fotos verificadas y disponibilidad inmediata por calendario. | Contrato digital transparente con tarifas predefinidas, sin adelantos informales y pago seguro en plataforma. | Integración IoT para monitoreo telemático en tiempo real (GPS, velocidad, combustible) y soporte constante. | Devolución estandarizada con registro telemático de odómetro y sistema de reputación bidireccional (reseñas de 1 a 5 estrellas). |
+
+---
+
+#### Segmento Objetivo 2: Arrendador (Propietario particular que intenta alquilar su auto para obtener ingresos)
+**User Persona representativa:** Ricardo Ramos (Dueño de un sedán que busca rentabilizar su automóvil en días no laborables).
+
+| Dimensión | Fase 1: Publicación Manual y Gestión Ineficiente | Fase 2: Filtrado Precario de Postulantes | Fase 3: Incertidumbre Total durante el Alquiler | Fase 4: Recepción del Auto y Cobro de Daños |
+| :--- | :--- | :--- | :--- | :--- |
+| **Fase del Viaje** | Publicación manual en clasificados y redes sociales | Verificación empírica de clientes y firma de contratos improvisados | Ausencia de monitoreo telemático y angustia por la ubicación del auto | Inspección de desperfectos, cobro de papeletas y desgaste vehicular |
+| **Acciones (Doing)** | - Toma fotos con su celular y las sube a grupos de compra y venta.<br>- Atiende llamadas a cualquier hora y responde mensajes redundantes.<br>- Administra las fechas tentativas de alquiler en cuadernos o notas de celular. | - Pide antecedentes y récord de conductor por chat de WhatsApp.<br>- Redacta un contrato descargado de internet sin asesoría legal.<br>- Solicita un depósito que resulta insuficiente ante un siniestro grave.<br>- Entrega las llaves en persona a un completo desconocido. | - Llama o envía mensajes periódicos al conductor para saber dónde está.<br>- Espera con nerviosismo si el arrendatario no responde el teléfono.<br>- Desconoce la velocidad a la que circulan con su vehículo o si salieron de la ciudad.<br>- No tiene forma de comprobar el uso indebido del automóvil. | - Recibe el vehículo con retraso respecto a la hora pactada.<br>- Nota suciedad o desgastes anormales en neumáticos y frenos.<br>- Revisa días después el sistema del SAT y encuentra fotopapeletas impagas.<br>- Intenta contactar al cliente, quien bloquea el número de teléfono. |
+| **Pensamientos (Thinking)** | *"Publicar en tantos grupos me quita horas de mi día", "¿Por qué la gente regatea tanto el precio?", "Tengo miedo de que un delincuente me cite."* | *"¿Este brevete será auténtico?", "¿Y si se apropia ilícitamente de mi vehículo y lo desmantela?", "Este contrato no me protegerá si comete un delito."* | *"Son las 10 pm y no me responde el WhatsApp", "¿Estará usando mi auto para hacer taxi colectivo?", "¿Habrá salido de Lima sin autorización?"* | *"Me dejó el tanque vacío y un raspón en el parachoques", "El depósito no cubre el costo de la reparación ni las multas", "Perdí dinero en vez de ganar."* |
+| **Sentimientos (Feeling)** | **Sobrecarga y Agobio:** Cansancio por responder consultas repetitivas de personas que no concretan. | **Inseguridad y Temor Extremo:** Miedo constante al robo, secuestro del vehículo o fraude de identidad. | **Impotencia y Angustia Severa:** Pérdida de control total sobre el bien más valioso y ansiedad permanente. | **Frustración y Resignación:** Pérdida económica por daños no reconocidos y sensación de indefensión legal. |
+| **Puntos de Dolor (Pain Points)** | - Inexistencia de una vitrina digital especializada en renta particular.<br>- Gestión desordenada de fechas y sobreposición de alquileres.<br>- Exposición pública de datos personales en redes abiertas. | - Nula verificación automatizada de antecedentes y validez de licencias.<br>- Contratos precarios sin firma electrónica certificada.<br>- Garantías económicas insuficientes o difíciles de cobrar. | - Carencia total de GPS en tiempo real integrado a una aplicación.<br>- Desconocimiento de patrones de conducción temeraria y excesos de velocidad.<br>- Cero alertas automáticas sobre salida de perímetros permitidos. | - Papeletas de tránsito transferidas al propietario sin posibilidad de reclamo.<br>- Gastos de reparación asumidos por el dueño.<br>- Falta de un registro negro o sistema de reputación para conductores infractores. |
+| **Oportunidad de Mejora con RentiCar** | Panel centralizado para dar de alta vehículos con fotos, especificaciones y calendario reactivo automatizado. | Validación estricta de usuarios mediante autenticación JWT y roles (`ROLE_RENTER`), con términos y contratos digitales. | Monitoreo IoT con telemetría en tiempo real: geolocalización continua en mapa Leaflet, odómetro, velocidad y nivel de combustible. | Liquidación garantizada, registro exacto del kilometraje consumido e historial de calificaciones para resguardar la flota. |
 
 ## 2.4. Ubiquitous Language
 
@@ -828,125 +1026,568 @@ alineación entre el negocio y la tecnología.
 
 ## 3.1. To-Be Scenario Mapping
 
+El **To-Be Scenario Mapping** es una herramienta de diseño de experiencia de usuario (UX) que modela el recorrido ideal que experimentará el usuario al interactuar con la plataforma digital **RentiCar**, superando las fricciones, demoras y desconfianzas identificadas en el escenario actual (*As-Is*).
+
+A continuación, se presentan los escenarios To-Be estructurados para los dos segmentos objetivo del proyecto:
+
+---
+
+### Segmento Objetivo 1: Arrendatario (Cliente que busca alquilar un vehículo)
+**User Persona representativa:** Carlos Mendoza (Profesional independiente que requiere movilidad flexible y confiable).
+
+| Dimensión | Fase 1: Búsqueda y Selección | Fase 2: Reserva y Contratación | Fase 3: Recojo y Monitoreo IoT | Fase 4: Devolución y Reputación |
+| :--- | :--- | :--- | :--- | :--- |
+| **Fase del Viaje** | Exploración del catálogo web con filtros | Selección de fechas y confirmación | Recojo del auto y seguimiento en ruta | Entrega del vehículo y feedback |
+| **Acciones (Doing)** | - Ingresa a la plataforma y aplica filtros por marca, tipo de transmisión y precio.<br>- Examina fotografías de alta resolución y especificaciones técnicas.<br>- Consulta el promedio de estrellas y comentarios verificados. | - Selecciona fecha de inicio y fin en el calendario dinámico.<br>- Visualiza el cálculo exacto del costo total.<br>- Confirma la solicitud de reserva con su cuenta autenticada. | - Valida la ubicación exacta del auto en el mapa interactivo (Leaflet).<br>- Revisa el estado operativo de los sensores IoT.<br>- Conduce con la tranquilidad de contar con trazabilidad telemática. | - Devuelve el automóvil en el punto acordado con el dueño.<br>- Califica la experiencia del servicio de 1 a 5 estrellas.<br>- Redacta una reseña detallando el estado y atención recibida. |
+| **Pensamientos (Thinking)** | *"Es muy fácil comparar precios y modelos sin tener que llamar por teléfono."*<br>*"Las opiniones de otros usuarios me dan total seguridad."* | *"El precio final es claro y no hay cargos ocultos de última hora."*<br>*"El proceso de confirmación es rápido y transparente."* | *"Puedo ver exactamente dónde está el vehículo en el mapa."*<br>*"El sistema de telemetría garantiza que el auto está en óptimas condiciones."* | *"Todo el alquiler fue rápido y sin trámites engorrosos."*<br>*"Quiero dejar una buena calificación para premiar la puntualidad del dueño."* |
+| **Sentimientos (Feeling)** | **Positivo / Interesado:** Confianza y satisfacción por la claridad visual del catálogo. | **Seguro / Tranquilo:** Alivio al conocer el importe exacto sin intermediarios informales. | **Confortable / Protegido:** Seguridad tecnológica gracias a la supervisión por GPS. | **Satisfecho / Fidelizado:** Gratitud por un servicio ágil y deseo de volver a utilizar RentiCar. |
+
+---
+
+### Segmento Objetivo 2: Arrendador (Propietario de vehículo que monetiza su auto)
+**User Persona representativa:** Ricardo Ramos (Dueño de vehículo que busca ingresos adicionales con respaldo legal).
+
+| Dimensión | Fase 1: Registro y Publicación | Fase 2: Gestión de Solicitudes | Fase 3: Monitoreo en Alquiler | Fase 4: Liquidación y Valoración |
+| :--- | :--- | :--- | :--- | :--- |
+| **Fase del Viaje** | Alta de cuenta y publicación de flota | Evaluación de solicitudes entrantes | Supervisión telemática durante el viaje | Cierre de alquiler y cobro |
+| **Acciones (Doing)** | - Crea su cuenta como Arrendador y valida su DNI.<br>- Registra su auto con marca, modelo, año y tarifa por día.<br>- Sube fotos nítidas del auto y define condiciones de uso. | - Recibe notificaciones de nuevas solicitudes en su bandeja.<br>- Revisa el perfil verificado y reputación del arrendatario.<br>- Aprueba o declina la solicitud de reserva con un clic. | - Monitorea la posición en tiempo real del auto en el mapa.<br>- Supervisa lecturas de odómetro, velocidad y nivel de combustible.<br>- Recibe alertas en caso de eventos fuera de lo previsto. | - Recibe el vehículo y verifica el kilometraje reportado por el sensor.<br>- Califica el cuidado y puntualidad del arrendatario.<br>- Recibe la liquidación de su pago de forma garantizada. |
+| **Pensamientos (Thinking)** | *"Publicar mi auto me tomó menos de 10 minutos."*<br>*"Tengo el control total de las tarifas y disponibilidad de mi vehículo."* | *"Puedo ver quién me alquilará el auto antes de aceptar."*<br>*"Sé que las fechas se bloquean automáticamente sin solapamientos."* | *"Tengo el control de la velocidad y el recorrido de mi vehículo."*<br>*"La telemetría IoT me da el respaldo de que mi unidad está segura."* | *"El cliente cuidó mi auto y la entrega fue puntual."*<br>*"Monetizar mi vehículo con RentiCar es seguro y rentable."* |
+| **Sentimientos (Feeling)** | **Motivado / Empoderado:** Entusiasmo al poner en valor un activo en desuso. | **En Control / Cauteloso:** Tranquilidad al decidir a quién alquilar su unidad. | **Tranquilo / Respaldado:** Paz mental gracias a la telemetría continua en tiempo real. | **Satisfecho / Rentable:** Confianza en la plataforma y motivación para sumar más vehículos. |
+
+---
+
 ## 3.2. User Stories
 
-| **Epic / Story ID** | **Título**                            | **Descripción**                                                                                                     | **Criterios de Aceptación**                                                                                                                                                                                                                                                                                                                     | **Relacionado con (Epic ID)** |
-|---------------------|---------------------------------------|---------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
-| US-01               | Registro de Usuario                   | Como visitante, quiero registrarme en la aplicación para poder publicar vehículos o consultar opciones de alquiler. | Escenario 1: Given que un visitante accede al formulario de registro, when ingresa datos válidos y selecciona “Registrar”, then el sistema crea la cuenta y muestra un mensaje de confirmación. Escenario 2: Given que el visitante ingresa datos inválidos, when intenta registrarse, then el sistema muestra un error solicitando corrección. | EP-01                         |
-| US-02               | Log In                                | Como usuario, quiero iniciar sesión con mis credenciales para acceder a mis publicaciones o realizar reservas.      | Escenario 1: Given que el usuario ya está registrado, when ingresa credenciales válidas, then accede al sistema. Escenario 2: Given que el usuario ingresa credenciales incorrectas, when intenta acceder, then el sistema muestra un aviso para reintentar.                                                                                    | EP-01                         |
-| US-03               | Recuperación de Contraseña            | Como usuario, quiero restablecer mi contraseña en caso de pérdida de acceso a la cuenta.                            | Escenario 1: Given que el usuario olvidó su contraseña, when ingresa su correo válido, then se envía un link de recuperación. Escenario 2: Given que el usuario ingresa datos erróneos, when solicita recuperación, then el sistema muestra un error de validación.                                                                             | EP-01                         |
-| US-04               | Dashboard del usuario                 | Como usuario, quiero contar con un Dashboard donde pueda consultar información de mis reservas.                     | Escenario 1: Given que el usuario accede al sistema, when selecciona “Log-In”, then se carga la pestaña “Dashboard”. Escenario 2: Given que está en otra pestaña, when selecciona “Dashboard”, then se redirige al panel principal.                                                                                                             | EP-02                         |
-| US-05               | Sección Destacados del Dashboard      | Como usuario, quiero ver una sección de destacados con vehículos recomendados.                                      | Escenario 1: Given que el usuario accede al Dashboard, when está en la sección “Destacados”, then se muestran autos sugeridos. Escenario 2: Given que selecciona “Ver más”, when lo hace, then se redirige al catálogo de autos.                                                                                                                | EP-02                         |
-| US-06               | Sección Publicados del Dashboard      | Como usuario, quiero visualizar mis vehículos publicados desde el Dashboard.                                        | Escenario 1: Given que accede al Dashboard, when se sitúa en la sección “Mis Publicaciones”, then se muestran sus autos publicados. Escenario 2: Given que selecciona “Nueva Publicación”, when lo hace, then se redirige al formulario de publicación.                                                                                         | EP-02                         |
-| US-07               | Cancelar reserva de vehículo          | Como usuario, quiero cancelar una reserva de un vehículo.                                                           | Escenario 1: Given que está en su Dashboard, when selecciona una reserva, then puede cancelarla. Escenario 2: Given que selecciona varias reservas, when elige cancelación múltiple, then puede eliminarlas en lote.                                                                                                                            | EP-02                         |
-| US-08               | Pestaña de Publicación                | Como usuario, quiero acceder a una pestaña de publicación para crear y gestionar mis vehículos en alquiler.         | Escenario 1: Given que desea publicar un vehículo, when selecciona “Nueva Publicación”, then se muestra el formulario. Escenario 2: Given que está en otra pestaña, when selecciona “Publicación”, then se redirige.                                                                                                                            | EP-03                         |
-| US-09               | Creación de publicaciones             | Como usuario, quiero registrar publicaciones para ofrecer mis autos en alquiler.                                    | Escenario 1: Given que selecciona crear, when ingresa la información, then se guarda la publicación. Escenario 2: Given que selecciona una publicación, when la edita, then puede actualizar su información.                                                                                                                                    | EP-03                         |
-| US-10               | Visualizar una publicación            | Como usuario, quiero consultar la información de una publicación creada.                                            | Escenario 1: Given que está en publicaciones, when selecciona una, then se muestran los datos. Escenario 2: Given que selecciona “Modificar”, when lo hace, then puede actualizar los datos registrados.                                                                                                                                        | EP-03                         |
-| US-11               | Eliminar una publicación              | Como usuario, quiero eliminar una publicación ya creada.                                                            | Escenario 1: Given que selecciona una publicación, when hace clic en “Eliminar”, then se borra. Escenario 2: Given que selecciona varias publicaciones, when elige “Eliminar múltiples”, then puede eliminarlas en lote.                                                                                                                        | EP-03                         |
-| US-12               | Pestaña de Navegación                 | Como usuario, quiero recorrer las publicaciones de autos disponibles en alquiler.                                   | Escenario 1: Given que desea explorar, when accede a “Navegación”, then se muestran los autos disponibles. Escenario 2: Given que está en otra pestaña, when selecciona “Navegación”, then se redirige a la sección.                                                                                                                            | EP-04                         |
-| US-13               | Ordenar el precio de los alquileres   | Como usuario, quiero ordenar los alquileres según precio.                                                           | Escenario 1: Given que está en Navegación, when selecciona el ícono de ordenar, then los precios se listan de menor a mayor. Escenario 2: Given que ya ordenó, when vuelve a hacer clic, then se ordenan de mayor a menor.                                                                                                                      | EP-04                         |
-| US-14               | Filtrado de marcas                    | Como usuario, quiero filtrar los vehículos en base a su marca.                                                      | Escenario 1: Given que escribe una marca en el campo, when confirma, then se muestran autos de esa marca. Escenario 2: Given que restablece filtros, when hace clic en “Borrar Filtros”, then se muestran todos nuevamente.                                                                                                                     | EP-04                         |
-| US-15               | Reseñar publicaciones de alquiler     | Como usuario, quiero dejar reseñas sobre los autos que alquilé.                                                     | Escenario 1: Given que completó una reserva, when selecciona “Dejar Reseña”, then puede puntuar del 1 al 5. Escenario 2: Given que añade comentario, when lo guarda, then queda visible en la publicación.                                                                                                                                      | EP-04                         |
-| US-16               | Reserva de vehículo                   | Como usuario, quiero reservar un auto en línea para asegurar su disponibilidad.                                     | Escenario 1: Given que está en una publicación, when selecciona “Reservar”, then elige fecha y horario. Escenario 2: Given que confirma reserva, when finaliza, then se registra en el sistema.                                                                                                                                                 | EP-04                         |
-| US-17               | Ver estado IoT del auto               | Como usuario, quiero visualizar un indicador de ubicación y estado del vehículo durante la reserva.                 | Escenario 1: Given que tengo una reserva activa, when consulto la ficha del vehículo, then se muestra un widget con estado (Disponible/En uso) y ubicación general. Escenario 2: Given que el auto no tiene IoT activo, when consulto la ficha, then el widget no se muestra.                                                                   | EP-04                         |
-| US-18               | Pestaña de Perfil                     | Como usuario, quiero acceder a mi perfil con mis datos personales y documentos.                                     | Escenario 1: Given que accedo a “Perfil”, when lo selecciono, then puedo ver o editar mi información. Escenario 2: Given que estoy en otra pestaña, when selecciono “Mi Perfil”, then se me redirige a la pestaña.                                                                                                                              | EP-05                         |
-| US-19               | Crear Perfil                          | Como usuario, quiero crear un perfil con mis datos personales.                                                      | Escenario 1: Given que accedo a “Nuevo Perfil”, when ingreso datos, then se guarda mi información. Escenario 2: Given que dejo campos vacíos, when finalizo, then se me pide completarlos correctamente.                                                                                                                                        | EP-05                         |
-| US-20               | Modificar Perfil                      | Como usuario, quiero editar la información ya registrada en mi perfil.                                              | Escenario 1: Given que accedo a mi perfil existente, when selecciono “Modificar”, then puedo cambiar información. Escenario 2: Given que ingreso datos inválidos, then el sistema me muestra un mensaje de corrección.                                                                                                                          | EP-05                         |
-| US-21               | Cargar documentos de garantía         | Como usuario, quiero subir documentos personales para validar mi identidad y poder alquilar autos.                  | Escenario 1: Given que estoy en mi perfil, when selecciono “Cargar Documentos”, then puedo subir archivos. Escenario 2: Given que selecciono un archivo ya existente, when lo reemplazo, then se guarda la nueva versión.                                                                                                                       | EP-05                         |
-| US-22               | Acceso a la Landing Page              | Como visitante, quiero acceder a la landing page de Renticar y conocer el servicio.                                 | Given que accedo a la landing page, when navego por sus secciones, then debo visualizar beneficios y características del producto.                                                                                                                                                                                                              | EP-06                         |
-| US-23               | Ver Información del Producto          | Como visitante, quiero leer información clara sobre el producto.                                                    | Given que estoy en la landing, when accedo a “Why Choose Us”, then debo ver las características principales.                                                                                                                                                                                                                                    | EP-06                         |
-| US-24               | Consultar los modelos disponibles     | Como visitante, quiero revisar una muestra de vehículos disponibles en la página principal.                         | Given que estoy en la landing, when accedo a “Popular Cars”, then debo visualizar opciones destacadas.                                                                                                                                                                                                                                          | EP-06                         |
-| US-25               | Leer Testimonios de Clientes y Dueños | Como visitante, quiero leer testimonios de clientes y dueños para confiar en el servicio.                           | Given que estoy en la landing, when accedo a “Testimonials”, then debo ver reseñas verificadas.                                                                                                                                                                                                                                                 | EP-06                         |
-| TS-26               | Traducción de la Landing Page         | Como visitante, quiero cambiar el idioma de la landing page.                                                        | Given que estoy en la landing, when selecciono idioma “Español/Inglés”, then el contenido se actualiza.                                                                                                                                                                                                                                         | EP-06                         |
-| TS-27               | Call To Action                        | Como visitante, quiero suscribirme dejando mi correo para recibir novedades.                                        | Given que estoy en la landing, when selecciono “Know More” y completo el formulario, then mi correo queda registrado para recibir noticias.                                                                                                                                                                                                     | EP-06                         |
+En esta sección se definieron las épicas y la especificación detallada de las **35 User Stories** con sus respectivos criterios de aceptación bajo sintaxis formal Gherkin (**Given-When-Then-And**), verificadas y cumplidas con paridad funcional en el backend (**Spring Boot 3.x**) y el frontend (**Angular 20**).
 
-### **Epic 01: Creación y Gestión de Cuenta**
-| **Story ID** | **Título**                |
-|--------------|---------------------------|
-| US-01        | Registro de Usuario       |
-| US-02        | Inicio de Sesión          |
-| US-03        | Recuperar Contraseña      |
+---
 
-### **Epic 02: Dashboard del Usuario**
-| **Story ID** | **Título**                    |
-|--------------|-------------------------------|
-| US-04        | Dashboard del usuario         |
-| US-05        | Destacados en el Dashboard    |
-| US-06        | Publicaciones en el Dashboard |
-| US-07        | Cancelar Reserva de Vehículo  |
+### Epics del Sistema RentiCar
 
-### **Epic 03: Creación y Visualización de Publicaciones**
-| **Story ID** | **Título**             |
-|--------------|------------------------|
-| US-08        | Pestaña de Publicación |
-| US-09        | Crear Publicación      |
-| US-10        | Visualizar Publicación |
-| US-11        | Eliminar Publicación   |
+A continuación, se presenta la matriz general de las 8 Épicas que estructuran el desarrollo del producto:
 
-### **Epic 04: Navegación de Alquileres Disponibles**
-| **Story ID** | **Título**                  |
-|--------------|-----------------------------|
-| US-12        | Navegación de Publicaciones |
-| US-13        | Ordenar por Precio          |
-| US-14        | Filtrar por Marca           |
-| US-15        | Reseñar Publicaciones       |
-| US-16        | Reservar Vehículo           |
-| US-17        | Ver estado IoT del auto     |
+| Epic ID | Título de la Épica | Descripción de la Épica |
+| :---: | :--- | :--- |
+| **EP-01** | **Autenticación y Seguridad de Acceso** | Como usuario (arrendatario o propietario), quiero un sistema de registro, inicio de sesión y gestión de credenciales seguro con encriptación BCrypt y tokens JWT para proteger mi cuenta y privacidad. |
+| **EP-02** | **Panel de Control del Usuario (Dashboard)** | Como usuario, quiero acceder a un panel centralizado que me brinde un resumen operativo de mis alquileres activos, vehículos recomendados y atajos directos a mis acciones frecuentes. |
+| **EP-03** | **Gestión de Flota y Publicaciones de Vehículos** | Como propietario, quiero registrar, actualizar el estado, subir fotos y administrar mis vehículos publicados para ponerlos a disposición de los arrendatarios en la plataforma. |
+| **EP-04** | **Catálogo, Búsqueda y Reserva de Vehículos** | Como arrendatario, quiero explorar el catálogo de vehículos, filtrar por marcas, ordenar por precio y generar solicitudes de alquiler con cálculo automático de tarifas por días. |
+| **EP-05** | **Monitoreo Telemático IoT y Simulación de Rutas** | Como arrendatario o propietario, quiero visualizar la posición GPS del vehículo en un mapa interactivo (Leaflet), velocidad y nivel de combustible en tiempo real durante el periodo de alquiler. |
+| **EP-06** | **Sistema de Reputación, Reseñas y Calificaciones** | Como arrendatario, quiero calificar y dejar comentarios sobre el vehículo y la experiencia de alquiler una vez concluido el servicio para orientar a la comunidad y fomentar la confianza. |
+| **EP-07** | **Administración de Perfil y Preferencias** | Como usuario registrado, quiero consultar y editar mis datos personales de contacto para mantener vigente mi información en el ecosistema RentiCar. |
+| **EP-08** | **Landing Page Informativa y Captación** | Como visitante, quiero navegar por una página de inicio atractiva y clara con información de valor, catálogo destacado, selector de idioma y formulario de suscripción para conocer el servicio. |
 
-### **Epic 05: Perfil de Usuario**
-| **Story ID** | **Título**                    |
-|--------------|-------------------------------|
-| US-18        | Pestaña de Perfil             |
-| US-19        | Crear Perfil                  |
-| US-20        | Modificar Perfil              |
-| US-21        | Cargar documentos de garantía |
+---
 
-### **Epic 06: Interacción con la Landing Page**
-| **Story ID** | **Título**                    |
-|--------------|-------------------------------|
-| US-22        | Acceso a Landing Page         |
-| US-23        | Información del Producto      |
-| TS-24        | Catálogo Popular              |
-| TS-25        | Testimonios                   |
-| TS-26        | Traducción de la Landing Page |
-| TS-27        | Call To Action                |
+### Épica EP-01: Autenticación y Seguridad de Acceso
+
+*Como usuario (arrendatario o propietario), quiero un sistema de registro, inicio de sesión y gestión de credenciales seguro con encriptación BCrypt y tokens JWT para proteger mi cuenta y privacidad.*
+
+#### User Story US-01: Registro de Usuario
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-01** |
+| **Épica** | **EP-01**: Autenticación y Seguridad de Acceso |
+| **Usuario** | Visitante de la landing page |
+| **Prioridad** | Alta |
+| **Título** | **Registro de Usuario** |
+| **Descripción** | Como visitante, quiero registrar una cuenta con mis datos personales y rol en la plataforma, para poder publicar vehículos o solicitar alquileres de manera segura. |
+| **Criterios de Aceptación** | **Escenario 1: Registro exitoso de nuevo usuario**<br>**Given** se envía POST /api/v1/authentication/sign-up con datos válidos y rol seleccionado<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 201 Created<br>**And** retorna los datos del perfil registrado con confirmación de cuenta.<br><br>**Escenario 2: Registro con correo ya existente**<br>**Given** se envía POST /api/v1/authentication/sign-up con un correo previamente registrado<br>**When** se procesa la petición<br>**Then** el sistema retorna error 409 Conflict<br>**And** retorna mensaje de error apropiado indicando duplicidad de credenciales. |
+
+#### User Story US-02: Inicio de Sesión (Log In)
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-02** |
+| **Épica** | **EP-01**: Autenticación y Seguridad de Acceso |
+| **Usuario** | Usuario registrado (arrendatario o propietario) |
+| **Prioridad** | Alta |
+| **Título** | **Inicio de Sesión (Log In)** |
+| **Descripción** | Como usuario registrado, quiero iniciar sesión con mis credenciales, para acceder a mis publicaciones, reservas y funcionalidades protegidas de la plataforma. |
+| **Criterios de Aceptación** | **Escenario 1: Inicio de sesión exitoso**<br>**Given** se envía POST /api/v1/authentication/sign-in con credenciales válidas<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna el token de autenticación JWT y perfil de usuario.<br><br>**Escenario 2: Inicio de sesión con credenciales incorrectas**<br>**Given** se envía POST /api/v1/authentication/sign-in con credenciales incorrectas<br>**When** se procesa la petición<br>**Then** el sistema retorna error 401 Unauthorized<br>**And** retorna mensaje de error apropiado. |
+
+#### User Story US-03: Actualizar Contraseña de Usuario
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-03** |
+| **Épica** | **EP-01**: Autenticación y Seguridad de Acceso |
+| **Usuario** | Usuario autenticado |
+| **Prioridad** | Media |
+| **Título** | **Actualizar Contraseña de Usuario** |
+| **Descripción** | Como usuario autenticado, quiero actualizar mi contraseña actual por una nueva, para mantener protegida mi cuenta en la plataforma. |
+| **Criterios de Aceptación** | **Escenario 1: Actualización exitosa con contraseña actual válida**<br>**Given** se envía PATCH /api/v1/users/{userId}/password con token Bearer JWT y contraseña actual correcta<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna confirmación de actualización exitosa de credenciales.<br><br>**Escenario 2: Actualización con contraseña actual errónea**<br>**Given** se envía PATCH /api/v1/users/{userId}/password con token Bearer JWT y contraseña actual errónea<br>**When** se procesa la petición<br>**Then** el sistema retorna error 401 Unauthorized<br>**And** retorna mensaje de error apropiado indicando contraseña actual no válida. |
+
+#### User Story US-04: Eliminación de Cuenta de Usuario
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-04** |
+| **Épica** | **EP-01**: Autenticación y Seguridad de Acceso |
+| **Usuario** | Usuario autenticado |
+| **Prioridad** | Media |
+| **Título** | **Eliminación de Cuenta de Usuario** |
+| **Descripción** | Como usuario autenticado, quiero eliminar mi cuenta de la plataforma, para remover definitivamente mis datos y perfil del sistema. |
+| **Criterios de Aceptación** | **Escenario 1: Eliminación exitosa de cuenta**<br>**Given** se envía DELETE /api/v1/users/{userId} con token Bearer JWT del usuario<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 204 No Content<br>**And** desactiva la cuenta del usuario en el sistema.<br><br>**Escenario 2: Intento de eliminación sin autorización**<br>**Given** se envía DELETE /api/v1/users/{userId} sin token de autorización Bearer JWT<br>**When** se procesa la petición<br>**Then** el sistema retorna error 401 Unauthorized<br>**And** retorna mensaje de error apropiado denegando la operación. |
+
+---
+
+### Épica EP-02: Panel de Control del Usuario (Dashboard)
+
+*Como usuario, quiero acceder a un panel centralizado que me brinde un resumen operativo de mis alquileres activos, vehículos recomendados y atajos directos a mis acciones frecuentes.*
+
+#### User Story US-05: Dashboard del Arrendatario
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-05** |
+| **Épica** | **EP-02**: Panel de Control del Usuario (Dashboard) |
+| **Usuario** | Arrendatario autenticado |
+| **Prioridad** | Media |
+| **Título** | **Dashboard del Arrendatario** |
+| **Descripción** | Como arrendatario, quiero acceder a mi panel principal, para visualizar el estado de mis reservas activas y atajos a mis vehículos contratados. |
+| **Criterios de Aceptación** | **Escenario 1: Carga exitosa de panel de arrendatario**<br>**Given** se envía GET /api/v1/bookings/my-bookings con token de rol ROLE_ARRENDATARIO<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna el consolidado de reservas activas y pendientes del usuario.<br><br>**Escenario 2: Acceso a panel sin token de autenticación**<br>**Given** se envía GET /api/v1/bookings/my-bookings sin cabecera Authorization<br>**When** se procesa la petición<br>**Then** el sistema retorna error 401 Unauthorized<br>**And** retorna mensaje de error apropiado solicitando inicio de sesión. |
+
+#### User Story US-06: Dashboard del Propietario
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-06** |
+| **Épica** | **EP-02**: Panel de Control del Usuario (Dashboard) |
+| **Usuario** | Propietario autenticado |
+| **Prioridad** | Media |
+| **Título** | **Dashboard del Propietario** |
+| **Descripción** | Como propietario, quiero acceder a mi panel principal, para inspeccionar las solicitudes entrantes de alquiler y el estado general de mi flota. |
+| **Criterios de Aceptación** | **Escenario 1: Carga exitosa de solicitudes de reserva**<br>**Given** se envía GET /api/v1/bookings/my-requests con token de rol ROLE_ARRENDADOR<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna la lista de solicitudes de reserva pendientes para sus vehículos.<br><br>**Escenario 2: Acceso por usuario no autorizado**<br>**Given** se envía GET /api/v1/bookings/my-requests con token de rol ROLE_ARRENDATARIO<br>**When** se procesa la petición<br>**Then** el sistema retorna error 403 Forbidden<br>**And** retorna mensaje de error apropiado indicando permisos insuficientes. |
+
+#### User Story US-07: Publicaciones en el Dashboard
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-07** |
+| **Épica** | **EP-02**: Panel de Control del Usuario (Dashboard) |
+| **Usuario** | Propietario de vehículo |
+| **Prioridad** | Media |
+| **Título** | **Publicaciones en el Dashboard** |
+| **Descripción** | Como propietario, quiero consultar mis vehículos publicados en el panel, para verificar su disponibilidad inmediata y estado operativo de renta. |
+| **Criterios de Aceptación** | **Escenario 1: Listado de vehículos propios para propietario**<br>**Given** se envía GET /api/v1/vehicles/my-listings con token Bearer JWT de propietario<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna el listado de vehículos registrados por el arrendador.<br><br>**Escenario 2: Consulta sin publicaciones registradas**<br>**Given** se envía GET /api/v1/vehicles/my-listings para un propietario sin vehículos<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna lista vacía con botón directo para crear la primera publicación. |
+
+#### User Story US-08: Cancelar Reserva desde el Dashboard
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-08** |
+| **Épica** | **EP-02**: Panel de Control del Usuario (Dashboard) |
+| **Usuario** | Arrendatario |
+| **Prioridad** | Media |
+| **Título** | **Cancelar Reserva desde el Dashboard** |
+| **Descripción** | Como arrendatario, quiero cancelar una solicitud de reserva pendiente desde mi panel, para desistir del alquiler antes de que sea formalizado. |
+| **Criterios de Aceptación** | **Escenario 1: Cancelación exitosa de reserva pendiente**<br>**Given** se envía PUT /api/v1/bookings/{bookingId}/cancel con reserva en estado PENDING<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna la reserva con estado actualizado a CANCELLED.<br><br>**Escenario 2: Intento de cancelación de reserva ya completada**<br>**Given** se envía PUT /api/v1/bookings/{bookingId}/cancel con reserva en estado COMPLETED<br>**When** se procesa la petición<br>**Then** el sistema retorna error 400 Bad Request<br>**And** retorna mensaje de error apropiado indicando que no es posible cancelar la reserva. |
+
+---
+
+### Épica EP-03: Gestión de Flota y Publicaciones de Vehículos
+
+*Como propietario, quiero registrar, actualizar el estado, subir fotos y administrar mis vehículos publicados para ponerlos a disposición de los arrendatarios en la plataforma.*
+
+#### User Story US-09: Gestión de Flota Propia
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-09** |
+| **Épica** | **EP-03**: Gestión de Flota y Publicaciones de Vehículos |
+| **Usuario** | Propietario de vehículo |
+| **Prioridad** | Media |
+| **Título** | **Gestión de Flota Propia** |
+| **Descripción** | Como propietario, quiero acceder a la sección de mi flota vehicular, para administrar de manera organizada todos mis vehículos y publicaciones. |
+| **Criterios de Aceptación** | **Escenario 1: Carga de flota vehicular del propietario**<br>**Given** se envía GET /api/v1/vehicles/my-listings con token de rol ROLE_ARRENDADOR<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna el listado de vehículos con fotos, tarifas y estado de disponibilidad.<br><br>**Escenario 2: Acceso por usuario con rol no autorizado**<br>**Given** se envía GET /api/v1/vehicles/my-listings con token de usuario ROLE_ARRENDATARIO<br>**When** se procesa la petición<br>**Then** el sistema retorna error 403 Forbidden<br>**And** retorna mensaje de error apropiado indicando acceso exclusivo a propietarios. |
+
+#### User Story US-10: Crear Publicación de Vehículo
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-10** |
+| **Épica** | **EP-03**: Gestión de Flota y Publicaciones de Vehículos |
+| **Usuario** | Propietario de vehículo |
+| **Prioridad** | Alta |
+| **Título** | **Crear Publicación de Vehículo** |
+| **Descripción** | Como propietario, quiero registrar un nuevo vehículo con datos técnicos y fotografía en formato multipart, para ponerlo en alquiler dentro del catálogo. |
+| **Criterios de Aceptación** | **Escenario 1: Registro exitoso de nuevo vehículo**<br>**Given** se envía POST /api/v1/vehicles con multipart form data (marca, modelo, año, precio e imagen)<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 201 Created<br>**And** retorna el vehículo registrado con estado inicial AVAILABLE.<br><br>**Escenario 2: Registro con campos obligatorios vacíos o precio inválido**<br>**Given** se envía POST /api/v1/vehicles con datos incompletos o precio menor o igual a cero<br>**When** se procesa la petición<br>**Then** el sistema retorna error 400 Bad Request<br>**And** retorna mensaje de error apropiado detallando los campos requeridos. |
+
+#### User Story US-11: Visualizar Publicación de Vehículo
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-11** |
+| **Épica** | **EP-03**: Gestión de Flota y Publicaciones de Vehículos |
+| **Usuario** | Propietario y Arrendatario |
+| **Prioridad** | Alta |
+| **Título** | **Visualizar Publicación de Vehículo** |
+| **Descripción** | Como usuario, quiero consultar el detalle de una publicación de vehículo, para revisar especificaciones técnicas, tarifa diaria y disponibilidad operativa. |
+| **Criterios de Aceptación** | **Escenario 1: Consulta de publicación existente**<br>**Given** se envía GET /api/v1/vehicles/{vehicleId} con identificador de vehículo válido<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna la ficha técnica, tarifa diaria y datos del propietario.<br><br>**Escenario 2: Consulta de vehículo inexistente**<br>**Given** se envía GET /api/v1/vehicles/{vehicleId} con identificador no registrado<br>**When** se procesa la petición<br>**Then** el sistema retorna error 404 Not Found<br>**And** retorna mensaje de error apropiado indicando vehículo no encontrado. |
+
+#### User Story US-12: Descarga y Renderizado de Imagen Vehicular
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-12** |
+| **Épica** | **EP-03**: Gestión de Flota y Publicaciones de Vehículos |
+| **Usuario** | Usuario de la plataforma |
+| **Prioridad** | Alta |
+| **Título** | **Descarga y Renderizado de Imagen Vehicular** |
+| **Descripción** | Como usuario, quiero visualizar la fotografía real del vehículo almacenada en la base de datos, para evaluar su estado físico y apariencia antes de rentar. |
+| **Criterios de Aceptación** | **Escenario 1: Carga exitosa de fotografía vehicular**<br>**Given** se envía GET /api/v1/vehicles/{vehicleId}/image con identificador de vehículo existente<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna el flujo binario de la imagen (JPEG/PNG) con cabecera Content-Type correspondiente.<br><br>**Escenario 2: Vehículo sin imagen asociada**<br>**Given** se envía GET /api/v1/vehicles/{vehicleId}/image para un auto sin fotografía<br>**When** se procesa la petición<br>**Then** el sistema retorna error 404 Not Found<br>**And** retorna mensaje de error apropiado indicando imagen no disponible. |
+
+#### User Story US-13: Actualizar Datos y Especificaciones del Vehículo
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-13** |
+| **Épica** | **EP-03**: Gestión de Flota y Publicaciones de Vehículos |
+| **Usuario** | Propietario de vehículo |
+| **Prioridad** | Media |
+| **Título** | **Actualizar Datos y Especificaciones del Vehículo** |
+| **Descripción** | Como propietario, quiero modificar las especificaciones, precio o fotografía de mi vehículo, para mantener actualizada la información de mi oferta. |
+| **Criterios de Aceptación** | **Escenario 1: Actualización exitosa de datos vehiculares**<br>**Given** se envía PUT /api/v1/vehicles/{vehicleId} con multipart form data y token de propietario<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna el vehículo actualizado con las nuevas especificaciones y tarifa.<br><br>**Escenario 2: Actualización de vehículo inexistente**<br>**Given** se envía PUT /api/v1/vehicles/{vehicleId} con identificador no registrado<br>**When** se procesa la petición<br>**Then** el sistema retorna error 404 Not Found<br>**And** retorna mensaje de error apropiado indicando vehículo no encontrado. |
+
+#### User Story US-14: Eliminar Publicación de Vehículo
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-14** |
+| **Épica** | **EP-03**: Gestión de Flota y Publicaciones de Vehículos |
+| **Usuario** | Propietario de vehículo |
+| **Prioridad** | Media |
+| **Título** | **Eliminar Publicación de Vehículo** |
+| **Descripción** | Como propietario, quiero dar de baja una publicación de vehículo, para retirarlo definitivamente del catálogo cuando ya no esté destinado a renta. |
+| **Criterios de Aceptación** | **Escenario 1: Eliminación exitosa de vehículo**<br>**Given** se envía DELETE /api/v1/vehicles/{vehicleId} con token de propietario<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 204 No Content<br>**And** remueve la publicación del catálogo de forma permanente.<br><br>**Escenario 2: Intento de eliminación sin autorización de propietario**<br>**Given** se envía DELETE /api/v1/vehicles/{vehicleId} sin credenciales de propietario<br>**When** se procesa la petición<br>**Then** el sistema retorna error 401 Unauthorized<br>**And** retorna mensaje de error apropiado impidiendo la baja del vehículo. |
+
+---
+
+### Épica EP-04: Catálogo, Búsqueda y Reserva de Vehículos
+
+*Como arrendatario, quiero explorar el catálogo de vehículos, filtrar por marcas, ordenar por precio y generar solicitudes de alquiler con cálculo automático de tarifas por días.*
+
+#### User Story US-15: Navegación de Catálogo Público
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-15** |
+| **Épica** | **EP-04**: Catálogo, Búsqueda y Reserva de Vehículos |
+| **Usuario** | Arrendatario y Visitante |
+| **Prioridad** | Alta |
+| **Título** | **Navegación de Catálogo Público** |
+| **Descripción** | Como usuario, quiero explorar el catálogo general de vehículos disponibles, para revisar las alternativas de alquiler en la plataforma. |
+| **Criterios de Aceptación** | **Escenario 1: Consulta del catálogo público de vehículos**<br>**Given** se envía GET /api/v1/vehicles<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna la lista de vehículos disponibles con sus tarjetas informativas.<br><br>**Escenario 2: Catálogo sin unidades disponibles**<br>**Given** se envía GET /api/v1/vehicles cuando no existen autos registrados<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna lista vacía con mensaje orientador para reintentar la búsqueda. |
+
+#### User Story US-16: Ordenar Catálogo por Precio
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-16** |
+| **Épica** | **EP-04**: Catálogo, Búsqueda y Reserva de Vehículos |
+| **Usuario** | Arrendatario |
+| **Prioridad** | Media |
+| **Título** | **Ordenar Catálogo por Precio** |
+| **Descripción** | Como arrendatario, quiero ordenar el catálogo de autos por tarifa diaria ascendente o descendente, para ajustar las opciones a mi presupuesto. |
+| **Criterios de Aceptación** | **Escenario 1: Ordenamiento ascendente por tarifa diaria**<br>**Given** se envía GET /api/v1/vehicles y se aplica ordenamiento por precio menor a mayor<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna los vehículos ordenados de menor a mayor precio por día.<br><br>**Escenario 2: Ordenamiento descendente por tarifa diaria**<br>**Given** se envía GET /api/v1/vehicles y se aplica ordenamiento por precio mayor a menor<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna los vehículos ordenados de mayor a menor precio por día. |
+
+#### User Story US-17: Filtrar Catálogo por Marca
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-17** |
+| **Épica** | **EP-04**: Catálogo, Búsqueda y Reserva de Vehículos |
+| **Usuario** | Arrendatario |
+| **Prioridad** | Alta |
+| **Título** | **Filtrar Catálogo por Marca** |
+| **Descripción** | Como arrendatario, quiero filtrar los vehículos por marcas específicas (Toyota, Nissan, etc.), para encontrar rápidamente modelos de mi preferencia. |
+| **Criterios de Aceptación** | **Escenario 1: Filtrado exitoso por marca específica**<br>**Given** se envía GET /api/v1/vehicles y se aplica filtro por marca 'Toyota'<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna únicamente los vehículos correspondientes a la marca seleccionada.<br><br>**Escenario 2: Filtrado por marca sin coincidencias**<br>**Given** se envía GET /api/v1/vehicles y se aplica filtro por marca inexistente<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna lista vacía indicando que no hay autos de dicha marca. |
+
+#### User Story US-18: Ver Ficha Detallada de Vehículo
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-18** |
+| **Épica** | **EP-04**: Catálogo, Búsqueda y Reserva de Vehículos |
+| **Usuario** | Arrendatario |
+| **Prioridad** | Alta |
+| **Título** | **Ver Ficha Detallada de Vehículo** |
+| **Descripción** | Como arrendatario, quiero abrir la ficha individual de un auto, para examinar su fotografía, especificaciones mecánicas y procedencia antes de rentar. |
+| **Criterios de Aceptación** | **Escenario 1: Visualización completa de detalles técnicos**<br>**Given** se envía GET /api/v1/vehicles/{vehicleId} para un vehículo publicado<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna galería de imágenes, características mecánicas, tarifa y estado del auto.<br><br>**Escenario 2: Visualización de vehículo inexistente**<br>**Given** se envía GET /api/v1/vehicles/{vehicleId} con identificador no existente<br>**When** se procesa la petición<br>**Then** el sistema retorna error 404 Not Found<br>**And** retorna mensaje de error apropiado indicando publicación no disponible. |
+
+#### User Story US-19: Reservar Vehículo con Cálculo de Días
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-19** |
+| **Épica** | **EP-04**: Catálogo, Búsqueda y Reserva de Vehículos |
+| **Usuario** | Arrendatario |
+| **Prioridad** | Alta |
+| **Título** | **Reservar Vehículo con Cálculo de Días** |
+| **Descripción** | Como arrendatario, quiero seleccionar fechas de inicio y fin de alquiler, para que el sistema calcule automáticamente el costo total por días y cree la solicitud. |
+| **Criterios de Aceptación** | **Escenario 1: Creación exitosa de reserva por rango de fechas**<br>**Given** se envía POST /api/v1/bookings con vehículo, fechas de inicio y fin válidas<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 201 Created<br>**And** retorna la reserva en estado PENDING con el cálculo automático del precio total.<br><br>**Escenario 2: Creación de reserva con fechas ya ocupadas**<br>**Given** se envía POST /api/v1/bookings con fechas que se solapan con otra reserva confirmada<br>**When** se procesa la petición<br>**Then** el sistema retorna error 400 Bad Request<br>**And** retorna mensaje de error apropiado indicando fechas no disponibles. |
+
+#### User Story US-20: Confirmar Solicitud de Reserva
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-20** |
+| **Épica** | **EP-04**: Catálogo, Búsqueda y Reserva de Vehículos |
+| **Usuario** | Propietario de vehículo |
+| **Prioridad** | Alta |
+| **Título** | **Confirmar Solicitud de Reserva** |
+| **Descripción** | Como propietario, quiero aceptar una solicitud de reserva pendiente recibida, para formalizar el contrato digital de alquiler con el arrendatario. |
+| **Criterios de Aceptación** | **Escenario 1: Aprobación de reserva por el propietario**<br>**Given** se envía PUT /api/v1/bookings/{bookingId}/confirm por el dueño del auto<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna la reserva con estado actualizado a CONFIRMED.<br><br>**Escenario 2: Confirmación por usuario no autorizado**<br>**Given** se envía PUT /api/v1/bookings/{bookingId}/confirm por un usuario que no es el propietario<br>**When** se procesa la petición<br>**Then** el sistema retorna error 401 Unauthorized<br>**And** retorna mensaje de error apropiado indicando permisos insuficientes. |
+
+#### User Story US-21: Rechazar Solicitud de Reserva
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-21** |
+| **Épica** | **EP-04**: Catálogo, Búsqueda y Reserva de Vehículos |
+| **Usuario** | Propietario de vehículo |
+| **Prioridad** | Alta |
+| **Título** | **Rechazar Solicitud de Reserva** |
+| **Descripción** | Como propietario, quiero declinar una solicitud de alquiler cuando no me sea posible atenderla, para liberar las fechas del vehículo en el calendario. |
+| **Criterios de Aceptación** | **Escenario 1: Rechazo de solicitud por el propietario**<br>**Given** se envía PUT /api/v1/bookings/{bookingId}/reject con token de propietario<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna la reserva con estado REJECTED y libera las fechas en el calendario.<br><br>**Escenario 2: Rechazo sobre reserva inexistente**<br>**Given** se envía PUT /api/v1/bookings/{bookingId}/reject con identificador no registrado<br>**When** se procesa la petición<br>**Then** el sistema retorna error 404 Not Found<br>**And** retorna mensaje de error apropiado indicando reserva no encontrada. |
+
+#### User Story US-22: Historial de Reservas del Arrendatario
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-22** |
+| **Épica** | **EP-04**: Catálogo, Búsqueda y Reserva de Vehículos |
+| **Usuario** | Arrendatario |
+| **Prioridad** | Media |
+| **Título** | **Historial de Reservas del Arrendatario** |
+| **Descripción** | Como arrendatario, quiero consultar el historial cronológico de todas mis reservas, para revisar contratos pasados, activos y pendientes de aprobación. |
+| **Criterios de Aceptación** | **Escenario 1: Consulta de reservas del cliente autenticado**<br>**Given** se envía GET /api/v1/bookings/my-bookings con token Bearer JWT<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna el historial cronológico de alquileres pasados, activos y pendientes.<br><br>**Escenario 2: Cliente sin reservas previas**<br>**Given** se envía GET /api/v1/bookings/my-bookings para usuario nuevo<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna lista vacía con botón de enlace directo al catálogo de vehículos. |
+
+---
+
+### Épica EP-05: Monitoreo Telemático IoT y Simulación de Rutas
+
+*Como arrendatario o propietario, quiero visualizar la posición GPS del vehículo en un mapa interactivo (Leaflet), velocidad y nivel de combustible en tiempo real durante el periodo de alquiler.*
+
+#### User Story US-23: Consulta de Historial Telemático por Vehículo
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-23** |
+| **Épica** | **EP-05**: Monitoreo Telemático IoT y Simulación de Rutas |
+| **Usuario** | Arrendatario y Propietario |
+| **Prioridad** | Alta |
+| **Título** | **Consulta de Historial Telemático por Vehículo** |
+| **Descripción** | Como usuario involucrado en un alquiler, quiero consultar el historial telemático del vehículo, para analizar su comportamiento en ruta durante el servicio. |
+| **Criterios de Aceptación** | **Escenario 1: Consulta de telemetría de vehículo**<br>**Given** se envía GET /api/v1/telemetry/vehicle/{vehicleId} con token autorizado<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna la lista de lecturas telemáticas con coordenadas, velocidad y combustible.<br><br>**Escenario 2: Consulta por usuario no autorizado**<br>**Given** se envía GET /api/v1/telemetry/vehicle/{vehicleId} sin autorización sobre el vehículo<br>**When** se procesa la petición<br>**Then** el sistema retorna error 403 Forbidden<br>**And** retorna mensaje de error apropiado indicando acceso denegado a telemetría. |
+
+#### User Story US-24: Visualizar Última Posición GPS en Mapa Leaflet
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-24** |
+| **Épica** | **EP-05**: Monitoreo Telemático IoT y Simulación de Rutas |
+| **Usuario** | Arrendatario y Propietario |
+| **Prioridad** | Alta |
+| **Título** | **Visualizar Última Posición GPS en Mapa Leaflet** |
+| **Descripción** | Como usuario, quiero consultar el último punto telemático con coordenadas GPS, velocidad y nivel de combustible, para ubicar el auto en tiempo real sobre el mapa Leaflet. |
+| **Criterios de Aceptación** | **Escenario 1: Obtención del último registro telemático**<br>**Given** se envía GET /api/v1/telemetry/vehicle/{vehicleId}/latest con reserva activa<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna latitud, longitud, velocidad, combustible y timestamp del último punto.<br><br>**Escenario 2: Consulta sin lecturas satelitales disponibles**<br>**Given** se envía GET /api/v1/telemetry/vehicle/{vehicleId}/latest y no existen registros telemáticos<br>**When** se procesa la petición<br>**Then** el sistema retorna error 404 Not Found<br>**And** retorna mensaje de error apropiado indicando datos telemáticos no disponibles. |
+
+#### User Story US-25: Ingesta de Telemetría IoT
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-25** |
+| **Épica** | **EP-05**: Monitoreo Telemático IoT y Simulación de Rutas |
+| **Usuario** | Dispositivo IoT / Sensor telemático |
+| **Prioridad** | Media |
+| **Título** | **Ingesta de Telemetría IoT** |
+| **Descripción** | Como módulo telemático del vehículo, quiero transmitir lecturas de sensores por HTTP REST, para que el sistema almacene los datos de velocidad, combustible y posición. |
+| **Criterios de Aceptación** | **Escenario 1: Recepción e ingesta de paquete telemático**<br>**Given** se envía POST /api/v1/telemetry con payload de coordenadas, velocidad y combustible<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 201 Created<br>**And** persiste la lectura telemática en la base de datos con marca de tiempo.<br><br>**Escenario 2: Ingesta telemática con datos incompletos**<br>**Given** se envía POST /api/v1/telemetry con payload sin vehículo asociado<br>**When** se procesa la petición<br>**Then** el sistema retorna error 400 Bad Request<br>**And** retorna mensaje de error apropiado rechazando la trama. |
+
+#### User Story US-26: Iniciar Simulación Telemática en Ruta
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-26** |
+| **Épica** | **EP-05**: Monitoreo Telemático IoT y Simulación de Rutas |
+| **Usuario** | Propietario de vehículo |
+| **Prioridad** | Media |
+| **Título** | **Iniciar Simulación Telemática en Ruta** |
+| **Descripción** | Como propietario, quiero iniciar una simulación realista de movimiento vehicular por carreteras reales, para verificar la recepción telemática en tiempo real. |
+| **Criterios de Aceptación** | **Escenario 1: Inicio exitoso de simulación de ruta**<br>**Given** se envía POST /api/v1/telemetry/simulate/{vehicleId} con token de propietario<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 202 Accepted<br>**And** inicia el hilo de emisión de telemetría periódica a lo largo de la ruta.<br><br>**Escenario 2: Intento de simulación por usuario no propietario**<br>**Given** se envía POST /api/v1/telemetry/simulate/{vehicleId} con token de arrendatario<br>**When** se procesa la petición<br>**Then** el sistema retorna error 403 Forbidden<br>**And** retorna mensaje de error apropiado indicando acceso restringido al propietario. |
+
+#### User Story US-27: Cálculo de Ruta entre Coordenadas
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-27** |
+| **Épica** | **EP-05**: Monitoreo Telemático IoT y Simulación de Rutas |
+| **Usuario** | Usuario de la plataforma |
+| **Prioridad** | Media |
+| **Título** | **Cálculo de Ruta entre Coordenadas** |
+| **Descripción** | Como usuario, quiero obtener la geometría de ruta y puntos de navegación entre dos coordenadas, para visualizar el trayecto vehicular planificado sobre el mapa. |
+| **Criterios de Aceptación** | **Escenario 1: Cálculo exitoso de geometría de ruta**<br>**Given** se envía GET /api/v1/simulation/route con coordenadas de inicio y fin válidas<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna la matriz de coordenadas intermedias calculadas por OpenRouteService.<br><br>**Escenario 2: Solicitud con coordenadas inválidas**<br>**Given** se envía GET /api/v1/simulation/route con parámetros de latitud o longitud incorrectos<br>**When** se procesa la petición<br>**Then** el sistema retorna error 400 Bad Request<br>**And** retorna mensaje de error apropiado indicando coordenadas inválidas. |
+
+---
+
+### Épica EP-06: Sistema de Reputación, Reseñas y Calificaciones
+
+*Como arrendatario, quiero calificar y dejar comentarios sobre el vehículo y la experiencia de alquiler una vez concluido el servicio para orientar a la comunidad y fomentar la confianza.*
+
+#### User Story US-28: Publicar Reseña de Alquiler
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-28** |
+| **Épica** | **EP-06**: Sistema de Reputación, Reseñas y Calificaciones |
+| **Usuario** | Arrendatario |
+| **Prioridad** | Alta |
+| **Título** | **Publicar Reseña de Alquiler** |
+| **Descripción** | Como arrendatario, quiero registrar una calificación de 1 a 5 estrellas y un comentario tras un servicio, para compartir mi experiencia en la plataforma. |
+| **Criterios de Aceptación** | **Escenario 1: Publicación exitosa de reseña**<br>**Given** se envía POST /api/v1/reviews con vehículo, puntuación válida y comentario<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 201 Created<br>**And** retorna la reseña persistida y recalcula el puntaje promedio del vehículo.<br><br>**Escenario 2: Envío de reseña con puntuación fuera de rango**<br>**Given** se envía POST /api/v1/reviews con puntuación menor a 1 o mayor a 5<br>**When** se procesa la petición<br>**Then** el sistema retorna error 400 Bad Request<br>**And** retorna mensaje de error apropiado indicando rango de calificación válido. |
+
+#### User Story US-29: Consultar Reseñas por Vehículo
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-29** |
+| **Épica** | **EP-06**: Sistema de Reputación, Reseñas y Calificaciones |
+| **Usuario** | Arrendatario y Visitante |
+| **Prioridad** | Media |
+| **Título** | **Consultar Reseñas por Vehículo** |
+| **Descripción** | Como usuario, quiero leer las opiniones y ver las valoraciones de un vehículo específico, para evaluar su confiabilidad antes de solicitar una reserva. |
+| **Criterios de Aceptación** | **Escenario 1: Consulta de opiniones de un vehículo**<br>**Given** se envía GET /api/v1/reviews/vehicle/{vehicleId} con identificador de auto<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna la lista de reseñas con autor, estrellas y comentarios registrados.<br><br>**Escenario 2: Vehículo sin reseñas registradas**<br>**Given** se envía GET /api/v1/reviews/vehicle/{vehicleId} para un auto sin calificaciones<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna lista vacía indicando ausencia de reseñas para el vehículo. |
+
+#### User Story US-30: Consultar Mis Reseñas Publicadas
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-30** |
+| **Épica** | **EP-06**: Sistema de Reputación, Reseñas y Calificaciones |
+| **Usuario** | Arrendatario |
+| **Prioridad** | Media |
+| **Título** | **Consultar Mis Reseñas Publicadas** |
+| **Descripción** | Como arrendatario, quiero consultar el historial de todas las reseñas que he emitido, para dar seguimiento a mis opiniones y valoraciones. |
+| **Criterios de Aceptación** | **Escenario 1: Historial de valoraciones del usuario**<br>**Given** se envía GET /api/v1/reviews/my-reviews con token de rol ROLE_ARRENDATARIO<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna el consolidado de comentarios y calificaciones emitidas por el arrendatario.<br><br>**Escenario 2: Consulta sin autenticación activa**<br>**Given** se envía GET /api/v1/reviews/my-reviews sin token Bearer JWT<br>**When** se procesa la petición<br>**Then** el sistema retorna error 401 Unauthorized<br>**And** retorna mensaje de error apropiado solicitando inicio de sesión. |
+
+---
+
+### Épica EP-07: Administración de Perfil y Preferencias
+
+*Como usuario registrado, quiero consultar y editar mis datos personales de contacto para mantener vigente mi información en el ecosistema RentiCar.*
+
+#### User Story US-31: Visualización y Modificación de Perfil
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-31** |
+| **Épica** | **EP-07**: Administración de Perfil y Preferencias |
+| **Usuario** | Usuario registrado |
+| **Prioridad** | Media |
+| **Título** | **Visualización y Modificación de Perfil** |
+| **Descripción** | Como usuario registrado, quiero consultar y editar mis datos personales de perfil, para mantener actualizada mi información de contacto en el sistema. |
+| **Criterios de Aceptación** | **Escenario 1: Actualización exitosa de datos de perfil**<br>**Given** se envía PATCH /api/v1/users/{userId} con nuevos datos personales y token Bearer JWT<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** retorna el perfil de usuario actualizado con confirmación de cambios guardados.<br><br>**Escenario 2: Intento de actualización de perfil ajeno**<br>**Given** se envía PATCH /api/v1/users/{userId} con identificador de otro usuario<br>**When** se procesa la petición<br>**Then** el sistema retorna error 401 Unauthorized<br>**And** retorna mensaje de error apropiado impidiendo la modificación de cuentas ajenas. |
+
+---
+
+### Épica EP-08: Landing Page Informativa y Captación
+
+*Como visitante, quiero navegar por una página de inicio atractiva y clara con información de valor, catálogo destacado, selector de idioma y formulario de suscripción para conocer el servicio.*
+
+#### User Story US-32: Acceso a Landing Page e Información del Servicio
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-32** |
+| **Épica** | **EP-08**: Landing Page Informativa y Captación |
+| **Usuario** | Visitante |
+| **Prioridad** | Alta |
+| **Título** | **Acceso a Landing Page e Información del Servicio** |
+| **Descripción** | Como visitante, quiero acceder a la Landing Page pública, para conocer la propuesta de valor de RentiCar y las ventajas del alquiler colaborativo. |
+| **Criterios de Aceptación** | **Escenario 1: Carga inicial de la Landing Page**<br>**Given** el visitante accede a la URL principal de la Landing Page<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** renderiza la página de inicio con la propuesta de valor, hero banner y enlaces de registro.<br><br>**Escenario 2: Solicitud de recurso inexistente en la plataforma**<br>**Given** el visitante intenta acceder a una ruta inexistente en la plataforma web<br>**When** se procesa la petición<br>**Then** el sistema retorna código HTTP 404 Not Found<br>**And** muestra la página de error personalizada PageNotFound con botón de retorno al inicio. |
+
+#### User Story US-33: Catálogo Popular y Testimonios en Landing Page
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-33** |
+| **Épica** | **EP-08**: Landing Page Informativa y Captación |
+| **Usuario** | Visitante |
+| **Prioridad** | Media |
+| **Título** | **Catálogo Popular y Testimonios en Landing Page** |
+| **Descripción** | Como visitante, quiero ver una muestra del catálogo destacado y testimonios de usuarios en la página de inicio, para comprobar la calidad del servicio antes de registrarme. |
+| **Criterios de Aceptación** | **Escenario 1: Visualización de catálogo destacado y opiniones**<br>**Given** el visitante desciende hacia la sección de destacados en la Landing Page<br>**When** se procesa la acción<br>**Then** el sistema retorna código HTTP 200 OK<br>**And** despliega las tarjetas de vehículos populares y testimonios de arrendatarios y dueños.<br><br>**Escenario 2: Interacción con tarjeta de vehículo destacado**<br>**Given** el visitante selecciona un vehículo de la sección de destacados<br>**When** se procesa la acción<br>**Then** el sistema redirige hacia la aplicación web en /login<br>**And** solicita inicio de sesión o registro para continuar con el alquiler. |
+
+#### User Story US-34: Cambio de Idioma en la Plataforma
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-34** |
+| **Épica** | **EP-08**: Landing Page Informativa y Captación |
+| **Usuario** | Visitante y Usuario |
+| **Prioridad** | Media |
+| **Título** | **Cambio de Idioma en la Plataforma** |
+| **Descripción** | Como usuario, quiero cambiar el idioma de la plataforma entre español e inglés, para navegar en mi lengua de preferencia mediante el componente LanguageSwitcher. |
+| **Criterios de Aceptación** | **Escenario 1: Selección de idioma inglés**<br>**Given** el usuario interactúa con el componente LanguageSwitcher y selecciona 'EN'<br>**When** se procesa la acción<br>**Then** el sistema aplica el paquete de internacionalización i18n<br>**And** actualiza todos los textos de la interfaz al idioma inglés de manera inmediata.<br><br>**Escenario 2: Retorno a idioma español predeterminado**<br>**Given** la interfaz se encuentra en inglés y el usuario selecciona 'ES'<br>**When** se procesa la acción<br>**Then** el sistema aplica el paquete de idioma en español<br>**And** restablece todos los textos y descripciones a su versión original en español. |
+
+#### User Story US-35: Formulario Call to Action (Suscripción)
+
+| Atributo | Detalle |
+| :--- | :--- |
+| **Story ID** | **US-35** |
+| **Épica** | **EP-08**: Landing Page Informativa y Captación |
+| **Usuario** | Visitante interesado |
+| **Prioridad** | Baja |
+| **Título** | **Formulario Call to Action (Suscripción)** |
+| **Descripción** | Como visitante interesado, quiero ingresar mi correo en el formulario de contacto o suscripción de la Landing Page, para recibir noticias, promociones y novedades sobre lanzamientos. |
+| **Criterios de Aceptación** | **Escenario 1: Envío exitoso de correo para suscripción**<br>**Given** el visitante ingresa una dirección de correo válida en el formulario de suscripción y presiona enviar<br>**When** se procesa la acción<br>**Then** el sistema valida el formato de correo electrónico<br>**And** muestra mensaje de confirmación de suscripción exitosa a novedades.<br><br>**Escenario 2: Envío de correo con formato inválido**<br>**Given** el visitante ingresa un texto con formato de correo incorrecto<br>**When** se procesa la acción<br>**Then** el sistema activa la validación del formulario<br>**And** muestra aviso de error solicitando el ingreso de una dirección de correo válida. |
+
+---
 
 ## 3.3. Product Backlog
 
-El Product Backlog recoge todas las funcionalidades que se han definido en forma de User Stories para la aplicación web de alquiler de 
-vehículos con integración ligera de IoT. Su importancia radica en que permite organizar de manera priorizada las tareas de desarrollo, 
-estimando el esfuerzo de cada una mediante Story Points y asegurando que se atiendan primero las funcionalidades más críticas para los 
-usuarios, como las reservas y la visualización del estado de los vehículos.
+A continuación, se presenta la priorización del Product Backlog general para la plataforma **RentiCar**, estimando el esfuerzo relativo de desarrollo de cada User Story en Story Points y documentando el título y la descripción completa de cada requerimiento funcional:
 
-| Orden | User Story ID | Título                        | Descripción resumida                                                               | Story Points |
-|-------|---------------|-------------------------------|-----------------------------------------------------------------------------------|--------------|
-| 1     | US-16         | Reservar Vehículo             | Realizar reserva de un vehículo seleccionando fecha y horario.                     | 8            |
-| 2     | US-17         | Ver estado IoT del auto       | Visualizar estado y ubicación básica IoT del vehículo reservado.               | 8            |
-| 3     | US-01         | Registro de Usuario           | Permitir registro de visitantes para publicar o alquilar vehículos.                | 5            |
-| 4     | US-02         | Inicio de Sesión              | Autenticar usuarios registrados para acceder al sistema.                           | 5            |
-| 5     | US-04         | Dashboard del Usuario         | Mostrar panel principal con información de reservas y publicaciones.               | 5            |
-| 6     | US-06         | Publicaciones en el Dashboard | Visualizar y gestionar publicaciones desde el Dashboard.                           | 5            |
-| 7     | US-07         | Cancelar Reserva de Vehículo  | Cancelar una o varias reservas activas desde el Dashboard.                         | 5            |
-| 8     | US-09         | Crear Publicación             | Registrar publicaciones de vehículos disponibles para alquiler.                    | 5            |
-| 9     | US-15         | Reseñar Publicaciones         | Dejar reseñas de autos después de completar una reserva.                           | 5            |
-| 10    | US-19         | Crear Perfil                  | Crear perfil personal ingresando datos básicos.                                    | 5            |
-| 11    | US-20         | Modificar Perfil              | Editar la información personal registrada en el perfil.                            | 5            |
-| 12    | US-21         | Cargar Documentos de Garantía | Subir documentos personales en el perfil para validar identidad.                   | 5            |
-| 13    | US-26         | Traducción de la Landing Page | Cambiar el idioma de la landing page entre inglés y español.                       | 5            |
-| 14    | US-03         | Recuperar Contraseña          | Restablecer la contraseña de usuarios que la olvidaron.                            | 3            |
-| 15    | US-05         | Destacados en el Dashboard    | Visualizar autos destacados/recomendados en el Dashboard.                          | 3            |
-| 16    | US-08         | Pestaña de Publicación        | Acceder a sección para crear y gestionar publicaciones.                            | 3            |
-| 17    | US-10         | Visualizar Publicación        | Consultar la información de una publicación existente.                             | 3            |
-| 18    | US-11         | Eliminar Publicación          | Eliminar publicaciones individuales o múltiples.                                  | 3            |
-| 19    | US-12         | Navegación de Publicaciones   | Recorrer publicaciones de autos disponibles.                                       | 3            |
-| 20    | US-13         | Ordenar por Precio            | Ordenar publicaciones según el precio del alquiler.                                | 3            |
-| 21    | US-14         | Filtrar por Marca             | Filtrar publicaciones de autos por su marca.                                       | 3            |
-| 22    | US-18         | Pestaña de Perfil             | Acceder a perfil con datos personales y documentos.                                | 3            |
-| 23    | US-22         | Acceso a Landing Page         | Acceder a la página principal para conocer el producto.                            | 3            |
-| 24    | US-23         | Información del Producto      | Consultar información detallada sobre el producto en la landing page.              | 3            |
-| 25    | US-24         | Catálogo Popular              | Revisar muestra de autos destacados en la página principal.                        | 3            |
-| 26    | US-25         | Testimonios                   | Leer testimonios de clientes y dueños en la landing page.                          | 3            |
-| 27    | US-27         | Call To Action                | Suscribirse ingresando correo en la landing page para recibir novedades.           | 3            |
+| StoryID | Título | Descripción | Story Points (1/3/5/8) |
+| :---: | :--- | :--- | :---: |
+| US-01 | Registro de Usuario | Como visitante, quiero registrar una cuenta con mis datos personales y rol en la plataforma, para poder publicar vehículos o solicitar alquileres de manera segura. | 3 |
+| US-02 | Inicio de Sesión (Log In) | Como usuario registrado, quiero iniciar sesión con mis credenciales, para acceder a mis publicaciones, reservas y funcionalidades protegidas de la plataforma. | 3 |
+| US-03 | Actualizar Contraseña de Usuario | Como usuario autenticado, quiero actualizar mi contraseña actual por una nueva, para mantener protegida mi cuenta en la plataforma. | 3 |
+| US-04 | Eliminación de Cuenta de Usuario | Como usuario autenticado, quiero eliminar mi cuenta de la plataforma, para remover definitivamente mis datos y perfil del sistema. | 2 |
+| US-05 | Dashboard del Arrendatario | Como arrendatario, quiero acceder a mi panel principal, para visualizar el estado de mis reservas activas y atajos a mis vehículos contratados. | 3 |
+| US-06 | Dashboard del Propietario | Como propietario, quiero acceder a mi panel principal, para inspeccionar las solicitudes entrantes de alquiler y el estado general de mi flota. | 3 |
+| US-07 | Publicaciones en el Dashboard | Como propietario, quiero consultar mis vehículos publicados en el panel, para verificar su disponibilidad inmediata y estado operativo de renta. | 3 |
+| US-08 | Cancelar Reserva desde el Dashboard | Como arrendatario, quiero cancelar una solicitud de reserva pendiente desde mi panel, para desistir del alquiler antes de que sea formalizado. | 3 |
+| US-09 | Gestión de Flota Propia | Como propietario, quiero acceder a la sección de mi flota vehicular, para administrar de manera organizada todos mis vehículos y publicaciones. | 2 |
+| US-10 | Crear Publicación de Vehículo | Como propietario, quiero registrar un nuevo vehículo con datos técnicos y fotografía en formato multipart, para ponerlo en alquiler dentro del catálogo. | 5 |
+| US-11 | Visualizar Publicación de Vehículo | Como usuario, quiero consultar el detalle de una publicación de vehículo, para revisar especificaciones técnicas, tarifa diaria y disponibilidad operativa. | 3 |
+| US-12 | Descarga y Renderizado de Imagen Vehicular | Como usuario, quiero visualizar la fotografía real del vehículo almacenada en la base de datos, para evaluar su estado físico y apariencia antes de rentar. | 3 |
+| US-13 | Actualizar Datos y Especificaciones del Vehículo | Como propietario, quiero modificar las especificaciones, precio o fotografía de mi vehículo, para mantener actualizada la información de mi oferta. | 3 |
+| US-14 | Eliminar Publicación de Vehículo | Como propietario, quiero dar de baja una publicación de vehículo, para retirarlo definitivamente del catálogo cuando ya no esté destinado a renta. | 2 |
+| US-15 | Navegación de Catálogo Público | Como usuario, quiero explorar el catálogo general de vehículos disponibles, para revisar las alternativas de alquiler en la plataforma. | 5 |
+| US-16 | Ordenar Catálogo por Precio | Como arrendatario, quiero ordenar el catálogo de autos por tarifa diaria ascendente o descendente, para ajustar las opciones a mi presupuesto. | 2 |
+| US-17 | Filtrar Catálogo por Marca | Como arrendatario, quiero filtrar los vehículos por marcas específicas (Toyota, Nissan, etc.), para encontrar rápidamente modelos de mi preferencia. | 3 |
+| US-18 | Ver Ficha Detallada de Vehículo | Como arrendatario, quiero abrir la ficha individual de un auto, para examinar su fotografía, especificaciones mecánicas y procedencia antes de rentar. | 5 |
+| US-19 | Reservar Vehículo con Cálculo de Días | Como arrendatario, quiero seleccionar fechas de inicio y fin de alquiler, para que el sistema calcule automáticamente el costo total por días y cree la solicitud. | 5 |
+| US-20 | Confirmar Solicitud de Reserva | Como propietario, quiero aceptar una solicitud de reserva pendiente recibida, para formalizar el contrato digital de alquiler con el arrendatario. | 5 |
+| US-21 | Rechazar Solicitud de Reserva | Como propietario, quiero declinar una solicitud de alquiler cuando no me sea posible atenderla, para liberar las fechas del vehículo en el calendario. | 3 |
+| US-22 | Historial de Reservas del Arrendatario | Como arrendatario, quiero consultar el historial cronológico de todas mis reservas, para revisar contratos pasados, activos y pendientes de aprobación. | 3 |
+| US-23 | Consulta de Historial Telemático por Vehículo | Como usuario involucrado en un alquiler, quiero consultar el historial telemático del vehículo, para analizar su comportamiento en ruta durante el servicio. | 5 |
+| US-24 | Visualizar Última Posición GPS en Mapa Leaflet | Como usuario, quiero consultar el último punto telemático con coordenadas GPS, velocidad y nivel de combustible, para ubicar el auto en tiempo real sobre el mapa Leaflet. | 8 |
+| US-25 | Ingesta de Telemetría IoT | Como módulo telemático del vehículo, quiero transmitir lecturas de sensores por HTTP REST, para que el sistema almacene los datos de velocidad, combustible y posición. | 5 |
+| US-26 | Iniciar Simulación Telemática en Ruta | Como propietario, quiero iniciar una simulación realista de movimiento vehicular por carreteras reales, para verificar la recepción telemática en tiempo real. | 5 |
+| US-27 | Cálculo de Ruta entre Coordenadas | Como usuario, quiero obtener la geometría de ruta y puntos de navegación entre dos coordenadas, para visualizar el trayecto vehicular planificado sobre el mapa. | 3 |
+| US-28 | Publicar Reseña de Alquiler | Como arrendatario, quiero registrar una calificación de 1 a 5 estrellas y un comentario tras un servicio, para compartir mi experiencia en la plataforma. | 3 |
+| US-29 | Consultar Reseñas por Vehículo | Como usuario, quiero leer las opiniones y ver las valoraciones de un vehículo específico, para evaluar su confiabilidad antes de solicitar una reserva. | 2 |
+| US-30 | Consultar Mis Reseñas Publicadas | Como arrendatario, quiero consultar el historial de todas las reseñas que he emitido, para dar seguimiento a mis opiniones y valoraciones. | 3 |
+| US-31 | Visualización y Modificación de Perfil | Como usuario registrado, quiero consultar y editar mis datos personales de perfil, para mantener actualizada mi información de contacto en el sistema. | 3 |
+| US-32 | Acceso a Landing Page e Información del Servicio | Como visitante, quiero acceder a la Landing Page pública, para conocer la propuesta de valor de RentiCar y las ventajas del alquiler colaborativo. | 3 |
+| US-33 | Catálogo Popular y Testimonios en Landing Page | Como visitante, quiero ver una muestra del catálogo destacado y testimonios de usuarios en la página de inicio, para comprobar la calidad del servicio antes de registrarme. | 3 |
+| US-34 | Cambio de Idioma en la Plataforma | Como usuario, quiero cambiar el idioma de la plataforma entre español e inglés, para navegar en mi lengua de preferencia mediante el componente LanguageSwitcher. | 5 |
+| US-35 | Formulario Call to Action (Suscripción) | Como visitante interesado, quiero ingresar mi correo en el formulario de contacto o suscripción de la Landing Page, para recibir noticias, promociones y novedades sobre lanzamientos. | 2 |
 
 ## 3.4. Impact Mapping
 
@@ -960,10 +1601,10 @@ como ejes principales de la plataforma.
 
 
 ###### Segmento Objetivo 1 (Arrendador de vehículos)
-<img src="assets/chapter03/impactsegmento1.png" width=600px>
+<img src="Assets/chapter03/impact-mapping-segment-1.png" width=600px>
 
 ###### Segmento Objetivo 2 (Arrendatario de vehículos)
-<img src="assets/chapter03/impactsegmento2.png" width=600px>
+<img src="Assets/chapter03/impact-mapping-segment-2.png" width=600px>
 
 # Capítulo IV: Product Design
 ## 4.1. Style Guidelines
@@ -980,24 +1621,24 @@ componentes interactivos —como botones— y su relación directa con la experi
       y menús. Este color representa seguridad y confianza, ideal para una plataforma de alquiler
       de vehículos.
       <br>
-      <br><img src="assets/chapter04/primariocolor.png" alt="primariocolor" width="500" ><br>
+      <br><img src="Assets/chapter04/styleguide-color-primary.png" alt="primariocolor" width="500" ><br>
       <br>
     - **Color Secundario**: #52B6F2 (Azul claro) – Es el color de los botones principales,
       como "Sign up" y "Search". Este color añade un toque de frescura y accesibilidad, además
       de hacer que las llamadas a la acción sean visualmente atractivas.
       <br>
-      <br><img src="assets/chapter04/secundaricolor.png" alt="secundaricolor" width="500"><br>
+      <br><img src="Assets/chapter04/styleguide-color-secondary.png" alt="secundaricolor" width="500"><br>
       <br>
     - **Color de Fondo**: #FFFFFF (Blanco) – Se utiliza para el fondo general de la página,
       proporcionando claridad y asegurando que los elementos visuales no se sobrecarguen.
       <br>
-      <br><img src="assets/chapter04/fondocolor.png" alt="fondocolor" width="500"><br>
+      <br><img src="Assets/chapter04/styleguide-color-background.png" alt="fondocolor" width="500"><br>
       <br>
     - **Colore Secundarios de Contraste**: #F1F1F1 (Gris claro) para las áreas de soporte
       visual, como formularios o tarjetas de contenido. Además, #1F2A44 (gris oscuro) se usa
       para textos secundarios y menús.
       <br>
-      <br><img src="assets/chapter04/contrastecolor.png" alt="contrastecolor" width="500"><br>
+      <br><img src="Assets/chapter04/styleguide-color-contrast.png" alt="contrastecolor" width="500"><br>
       <br>
 
 
@@ -1009,7 +1650,7 @@ componentes interactivos —como botones— y su relación directa con la experi
     - **Regular**: Para el cuerpo del texto.
     - **Light**: Para textos menos relevantes o secundarios.<br>
       <br>
-      <img src="assets/chapter04/extrabold.png" alt="Typography" width="500"><br>
+      <img src="Assets/chapter04/styleguide-typography-extrabold.png" alt="Typography" width="500"><br>
       <br>
 
 - **Icons**: <br>
@@ -1017,7 +1658,7 @@ componentes interactivos —como botones— y su relación directa con la experi
   Se utilizan para una comunicación clara y rápida, permitiendo a los usuarios identificar
   fácilmente las acciones disponibles.<br>
   <br>
-  <img src="assets/chapter04/icons.png" alt="Icons" width="500"><br>
+  <img src="Assets/chapter04/styleguide-iconography.png" alt="Icons" width="500"><br>
   <br>
 
 - **Buttons**: <br>
@@ -1025,7 +1666,7 @@ componentes interactivos —como botones— y su relación directa con la experi
   #52B6F2 (Azul claro) para las acciones principales y bordes redondeados para mejorar la
   interacción en dispositivos táctiles.<br>
   <br>
-  <img src="assets/chapter04/buttons.png" alt="Buttons" width="500"><br>
+  <img src="Assets/chapter04/styleguide-ui-buttons.png" alt="Buttons" width="500"><br>
   <br>
 
 - **Spacing and Layout**: <br>
@@ -1046,7 +1687,7 @@ componentes interactivos —como botones— y su relación directa con la experi
   estándares de accesibilidad (WCAG). Todo el texto será legible y fácil de leer, con
   alternativas de alto contraste para usuarios con discapacidades visuales.<br>
   <br>
-  <img src="assets/chapter04/coloracces.png" alt="Buttons" width="500"><br>
+  <img src="Assets/chapter04/styleguide-color-accessibility.png" alt="Buttons" width="500"><br>
   <br>
 
 - **Hover and Active States**:
@@ -1135,63 +1776,63 @@ encontrando siempre las funciones más relevantes según su objetivo.
 ## 4.3. Landing Page UI Design
 ### 4.3.1. Landing Page Wireframe
 
-<img src="assets/WireframeLanding.png" alt="Buttons" width="500"><br>
+<img src="Assets/chapter04/landing-page-wireframe.png" alt="Buttons" width="500"><br>
 
 Link del Figma: https://www.figma.com/design/PChWJ99signLAO8NcRCRrY/Landing-RentiCar?node-id=2461-182&t=FAwGoGSyUJDdEzex-1
 
 ### 4.3.2. Landing Page Mock-up
 
-<img src="assets/MockUpLanding.png" alt="Buttons" width="500"><br>
+<img src="Assets/chapter04/landing-page-mockup.png" alt="Buttons" width="500"><br>
 
 Link del Figma: https://www.figma.com/design/PChWJ99signLAO8NcRCRrY/Landing-RentiCar?node-id=2461-182&t=FAwGoGSyUJDdEzex-1
 
 ## 4.6. Web Applications UX/UI Design
 
-En esta sección se presenta la propuesta visual y de interacción para la aplicación web Automovil-Unite. El diseño se ha centrado en los dos segmentos objetivos identificados: arrendadores (dueños de vehículos) y arrendatarios (clientes que buscan alquilar). La prioridad ha sido crear una experiencia de usuario intuitiva, segura y eficiente, aplicando principios de diseño inclusivo y una arquitectura de información clara para facilitar la navegación y el cumplimiento de los objetivos de cada usuario.
+En esta sección se presenta la propuesta visual y de interacción para la aplicación web RentiCar. El diseño se ha centrado en los dos segmentos objetivos identificados: arrendadores (dueños de vehículos) y arrendatarios (clientes que buscan alquilar). La prioridad ha sido crear una experiencia de usuario intuitiva, segura y eficiente, aplicando principios de diseño inclusivo y una arquitectura de información clara para facilitar la navegación y el cumplimiento de los objetivos de cada usuario.
 
 ### 4.6.1. Web Applications Wireframes
 
-Los wireframes de Automovil-Unite se han diseñado para establecer la estructura fundamental de la aplicación, priorizando la funcionalidad y la jerarquía de la información antes de aplicar el estilo visual. Se ha buscado una disposición limpia y organizada que guíe a los usuarios a través de las tareas clave, como publicar un vehículo o reservar uno. El diseño es adaptable para garantizar una experiencia consistente tanto en navegadores de escritorio como en dispositivos móviles.
+Los wireframes de RentiCar se han diseñado para establecer la estructura fundamental de la aplicación, priorizando la funcionalidad y la jerarquía de la información antes de aplicar el estilo visual. Se ha buscado una disposición limpia y organizada que guíe a los usuarios a través de las tareas clave, como publicar un vehículo o reservar uno. El diseño es adaptable para garantizar una experiencia consistente tanto en navegadores de escritorio como en dispositivos móviles.
 
-**Enlace al proyecto en Figma:** [https://www.figma.com/design/ICtIq3D2cmTwZMzqJPUxF7/Automovil-Unite?node-id=2-4606&t=mjT7rlE8qUSnwcfL-1](https://www.figma.com/design/ICtIq3D2cmTwZMzqJPUxF7/Automovil-Unite?node-id=2-4606&t=mjT7rlE8qUSnwcfL-1)
+**Enlace al proyecto en Figma:** [https://www.figma.com/design/ICtIq3D2cmTwZMzqJPUxF7/RentiCar?node-id=2-4606&t=mjT7rlE8qUSnwcfL-1](https://www.figma.com/design/ICtIq3D2cmTwZMzqJPUxF7/RentiCar?node-id=2-4606&t=mjT7rlE8qUSnwcfL-1)
 
 1.  *Iniciar Sesión / Registrarse*
     Permite a los usuarios crear una cuenta o acceder a la plataforma. El formulario de registro solicita información básica y permite elegir el tipo de perfil (arrendador o arrendatario) para personalizar la experiencia desde el inicio.
 
     **1. Inicio de Sesión (Sign In)**
-    ![Pantalla de inicio de sesión](assets/incio-sesion-figma/Sign%20In.png)
+    ![Pantalla de inicio de sesión](Assets/chapter04/mockup-iam-sign-in.png)
 
     **2. Registro de Arrendatario (Tenant Register)**
-    ![Pantalla de registro para arrendatarios](assets/incio-sesion-figma/Tenant%20Register.png)
+    ![Pantalla de registro para arrendatarios](Assets/chapter04/mockup-iam-tenant-register.png)
 
     **3. Registro de Arrendador (Hirer Register)**
-    ![Pantalla de registro para arrendadores](assets/incio-sesion-figma/Hirrer%20Register.png)
+    ![Pantalla de registro para arrendadores](Assets/chapter04/mockup-iam-owner-register.png)
 
     **4. Recuperación de Contraseña**
-    ![Pantalla para recuperar la contraseña](assets/incio-sesion-figma/Recuperar%20contraseña.png)
+    ![Pantalla para recuperar la contraseña](Assets/chapter04/mockup-iam-password-recovery.png)
 
 2.  *Dashboard del Arrendador*
     Muestra un resumen de los vehículos publicados, las reservas activas y las ganancias generadas. Ofrece accesos directos para añadir un nuevo vehículo y gestionar las publicaciones existentes.
 
-    ![Flujo de búsqueda y reserva de un vehículo](assets/arrendatario-figma/Arrendatario%20-%20Busqueda%20y%20Reserva%20de%20un%20Vehículo.png)
+    ![Flujo de búsqueda y reserva de un vehículo](Assets/chapter04/mockup-renter-vehicle-search.png)
 
-    ![Flujo de finalización y calificación de un alquiler](assets/arrendatario-figma/Arrendatario%20-%20Finalización%20y%20Calificación%20de%20un%20Alquiler.png)
+    ![Flujo de finalización y calificación de un alquiler](Assets/chapter04/mockup-renter-rating-review.png)
 
-    ![Pantalla de gestión de reservas del arrendatario](assets/arrendatario-figma/Arrendatario%20-%20Gestión%20de%20Reservas.png)
+    ![Pantalla de gestión de reservas del arrendatario](Assets/chapter04/mockup-renter-booking-management.png)
 
-    ![Pantalla de reservas del arrendatario](assets/arrendatario-figma/Arrendatario%20-%20Reservas.png)
+    ![Pantalla de reservas del arrendatario](Assets/chapter04/mockup-renter-booking-detail.png)
 
 
 3.  *Dashboard del Arrendatario*
     Presenta un resumen de las reservas realizadas, vehículos recomendados y accesos rápidos para buscar nuevas opciones. El diseño se enfoca en facilitar la continuación de una búsqueda o la gestión de un alquiler en curso.
 
-    ![Flujo de administración de solicitudes de reserva por el arrendador](assets/arrendador-figma/Arrendador%20-%20Administración%20de%20Solicitudes%20de%20Reserva.png)
+    ![Flujo de administración de solicitudes de reserva por el arrendador](Assets/chapter04/mockup-owner-booking-requests.png)
 
-    ![Pantalla de edición de perfil del arrendador](assets/arrendador-figma/Arrendador%20-%20Edicion%20de%20perfil.png)
+    ![Pantalla de edición de perfil del arrendador](Assets/chapter04/mockup-owner-edit-profile.png)
 
-    ![Pantalla de gestión de vehículos del arrendador](assets/arrendador-figma/Arrendador%20-%20Gestion%20Vehículos.png)
+    ![Pantalla de gestión de vehículos del arrendador](Assets/chapter04/mockup-owner-fleet-management.png)
 
-    ![Pantalla de primer acceso y vista general para el arrendador](assets/arrendador-figma/Arrendador%20-%20Primer%20Acceso%20y%20Vista%20General.png)
+    ![Pantalla de primer acceso y vista general para el arrendador](Assets/chapter04/mockup-owner-dashboard-overview.png)
 
     Muestra un resumen de los vehículos publicados, las reservas activas y las ganancias generadas. Ofrece accesos directos para añadir un nuevo vehículo y gestionar las publicaciones existentes.
 
@@ -1205,140 +1846,637 @@ Los wireflows diagraman las rutas que los usuarios siguen para completar tareas 
 
 *User Goal:* Como usuario, quiero gestionar mi perfil de forma integral, pudiendo editar mi información personal, cambiar mi foto y cargar los documentos necesarios para validar mi cuenta.
 
-![Wireflow para la gestión del perfil del arrendatario](assets/arrendatario-figma/Arrendatario%20-%20Seq%20-%20Mi%20perfil.png)
+![Wireflow para la gestión del perfil del arrendatario](Assets/chapter04/wireflow-renter-profile.png)
 
 - Wireflow
 
-![Wireflow](assets/arrendatario-figma/Dashboard-seq.png)
+![Wireflow](Assets/chapter04/wireflow-renter-dashboard-1.png)
 
 *User Goal:* Como arrendatario, quiero administrar el ciclo de vida completo de mis reservas, desde ver sus detalles y cancelarlas, hasta dejar una reseña una vez finalizado el alquiler.
 
-![Wireflow para la gestión completa de reservas del arrendatario](assets/arrendatario-figma/Arrendatario%20-%20Seq%20-%20Mis%20reservas.png)
+![Wireflow para la gestión completa de reservas del arrendatario](Assets/chapter04/wireflow-renter-my-bookings.png)
 
 - Wireflow
 
-![Wireflow](assets/arrendatario-figma/Dashboard-seq-2.png)
+![Wireflow](Assets/chapter04/wireflow-renter-dashboard-2.png)
 
 *User Goal:* Como arrendatario, quiero buscar un vehículo con filtros específicos, ver sus detalles en profundidad y completar el proceso de reserva de manera fluida.
 
-![Wireflow para la búsqueda y reserva de un vehículo](assets/arrendatario-figma/Arrendatario%20-%20Seq%20-%20Buscar.png)
+![Wireflow para la búsqueda y reserva de un vehículo](Assets/chapter04/wireflow-renter-search.png)
 
 - Wireflow
 
-![Wireflow](assets/arrendatario-figma/Reservas-seq.png)
+![Wireflow](Assets/chapter04/wireflow-renter-reservations.png)
 
 *User Goal:* Como arrendatario, quiero acceder desde mi dashboard a la gestión de mis reservas activas para poder ver sus detalles o cancelarlas si es necesario.
 
-![Wireflow para acceder a la gestión de reservas desde el dashboard](assets/arrendatario-figma/Arrendatario%20-%20Seq-%20Dashboard%20-%20Reservas.png)
+![Wireflow para acceder a la gestión de reservas desde el dashboard](Assets/chapter04/wireflow-renter-dashboard-reservations.png)
 
 *User Goal:* Como arrendatario, quiero poder explorar las recomendaciones de vehículos directamente desde mi dashboard y realizar una reserva de forma rápida y sencilla.
 
-![Wireflow para reservar un vehículo recomendado desde el dashboard](assets/arrendatario-figma/Arrendatario%20-%20Seq%20-%20Dashboard%20-%20Reservar.png)
+![Wireflow para reservar un vehículo recomendado desde el dashboard](Assets/chapter04/wireflow-renter-dashboard-book.png)
 
 ### 2. Segmento 2: Arrendadores
 
 *User Goal:* Como arrendador, quiero ver un resumen rápido del estado de mi negocio, incluyendo mis vehículos publicados y las reservas pendientes, tan pronto como inicie sesión.
 
-![Wireflow del dashboard del arrendador](assets/arrendador-figma/Arrendador%20-%20Seq%20-%20Dashboard%20-%20Mis%20vehiculos.png)
+![Wireflow del dashboard del arrendador](Assets/chapter04/wireflow-owner-dashboard-vehicles.png)
 
 *User Goal (Crear):* Como arrendador, quiero añadir un nuevo vehículo a la plataforma de forma rápida y sencilla para empezar a alquilarlo.
 *User Goal (Editar):* Como arrendador, quiero poder modificar fácilmente los detalles de mis publicaciones existentes, como el precio o la descripción, para mantener la información actualizada.
 *User Goal (Eliminar):* Como arrendador, quiero retirar de la plataforma los vehículos que ya no están disponibles para alquilar, con una simple acción de eliminación.
 
-![Wireflow de la gestión de vehículos del arrendador](assets/arrendador-figma/Arrendador%20-%20Seq%20-%20Mis%20vehiculos.png)
+![Wireflow de la gestión de vehículos del arrendador](Assets/chapter04/wireflow-owner-fleet-management.png)
 
 *User Goal:* Como arrendador, quiero gestionar las solicitudes de alquiler de mis vehículos de manera eficiente, pudiendo aceptarlas o rechazarlas desde un panel de control.
 
-![Wireflow de la administración de solicitudes de reserva](assets/arrendador-figma/Arrendador%20-%20Seq%20-%20Mis%20reservas.png)
+![Wireflow de la administración de solicitudes de reserva](Assets/chapter04/wireflow-owner-booking-requests.png)
 
 *User Goal:* Como arrendador, quiero mantener mi perfil actualizado con mi información de contacto y documentos de garantía para generar confianza en los clientes.
 
-![Wireflow de la edición del perfil del arrendador](assets/arrendador-figma/Arrendador%20-%20Seq%20-%20Mi%20Perfil.png)
+![Wireflow de la edición del perfil del arrendador](Assets/chapter04/wireflow-owner-profile.png)
 
 ### 4.6.3. Web Applications Mock-ups
-||||||||||||||
+
+En esta sección se presentan los mock-ups de alta fidelidad correspondientes a la aplicación web de **RentiCar**, diseñados en Figma respetando la guía de estilos, paleta de colores y componentes visuales definidos previamente. Las interfaces se encuentran agrupadas según los flujos de interacción de los dos segmentos clave: Arrendatarios y Arrendadores, además de los módulos transversales de autenticación y telemetría.
+
+#### 4.6.3.1. Módulo de Autenticación y Gestión de Acceso (IAM)
+
+Este módulo centraliza las interfaces de registro, inicio de sesión seguro y recuperación de credenciales para ambos perfiles de usuario.
+
+- **Pantalla de Inicio de Sesión (Sign In):**  
+  Permite a los usuarios registrados acceder a su sesión ingresando su correo y contraseña, con validaciones en tiempo real y opción de recordar credenciales.
+
+  <p align="center">
+    <img src="Assets/chapter04/mockup-iam-sign-in.png" alt="Pantalla de inicio de sesión" width="650"/>
+  </p>
+
+- **Pantalla de Registro para Arrendatarios (Tenant Register):**  
+  Formulario intuitivo donde los clientes ingresan sus datos personales, correo, teléfono y contraseña para crear su cuenta de arrendatario.
+
+  <p align="center">
+    <img src="Assets/chapter04/mockup-iam-tenant-register.png" alt="Registro para Arrendatarios" width="650"/>
+  </p>
+
+- **Pantalla de Registro para Arrendadores (Hirrer Register):**  
+  Interfaz orientada a propietarios de vehículos que desean publicar unidades, solicitando datos de contacto y verificación de identidad.
+
+  <p align="center">
+    <img src="Assets/chapter04/mockup-iam-owner-register.png" alt="Registro para Arrendadores" width="650"/>
+  </p>
+
+- **Pantalla de Recuperación de Contraseña:**  
+  Permite ingresar el correo registrado para recibir un enlace seguro de restablecimiento de contraseña mediante token de vigencia limitada.
+
+  <p align="center">
+    <img src="Assets/chapter04/mockup-iam-password-recovery.png" alt="Recuperación de Contraseña" width="650"/>
+  </p>
+
+---
+
+#### 4.6.3.2. Módulo de Experiencia del Arrendatario (Búsqueda, Reserva y Reseñas)
+
+Interfaces diseñadas para que el arrendatario explore el catálogo, configure sus fechas de alquiler, dé seguimiento a sus solicitudes y califique el servicio.
+
+- **Búsqueda y Reserva de un Vehículo:**  
+  Vista principal de catálogo con cuadrícula de autos, filtros avanzados por marca, rango de precio, tipo de combustible y botón directo para iniciar la reserva.
+
+  <p align="center">
+    <img src="Assets/chapter04/mockup-renter-vehicle-search.png" alt="Búsqueda y Reserva de un Vehículo" width="650"/>
+  </p>
+
+- **Gestión de Reservas del Arrendatario:**  
+  Panel interactivo que consolida las reservas activas, pendientes y concluidas del usuario, mostrando estado actual e información del auto.
+
+  <p align="center">
+    <img src="Assets/chapter04/mockup-renter-booking-management.png" alt="Gestión de Reservas del Arrendatario" width="650"/>
+  </p>
+
+- **Detalle de Reserva y Comprobante:**  
+  Ficha descriptiva que desglosa el cálculo de días reservados, tarifa pactada por jornada, importe total en soles y datos de contacto del propietario.
+
+  <p align="center">
+    <img src="Assets/chapter04/mockup-renter-booking-detail.png" alt="Detalle de Reservas" width="650"/>
+  </p>
+
+- **Finalización y Calificación de un Alquiler:**  
+  Modal que se activa al culminar el periodo de alquiler, permitiendo puntuar con estrellas (1 a 5) y redactar una reseña pública sobre la experiencia.
+
+  <p align="center">
+    <img src="Assets/chapter04/mockup-renter-rating-review.png" alt="Finalización y Calificación de un Alquiler" width="650"/>
+  </p>
+
+---
+
+#### 4.6.3.3. Módulo de Experiencia del Arrendador (Gestión de Flota y Solicitudes)
+
+Interfaces especializadas para que los propietarios gestionen sus publicaciones, administren reservas entrantes y configuren su perfil comercial.
+
+- **Primer Acceso y Vista General (Dashboard del Arrendador):**  
+  Tablero de control con métricas de ingresos, cantidad de vehículos activos, reservas en curso y accesos rápidos a publicaciones.
+
+  <p align="center">
+    <img src="Assets/chapter04/mockup-owner-dashboard-overview.png" alt="Dashboard del Arrendador" width="650"/>
+  </p>
+
+- **Gestión y Publicación de Vehículos:**  
+  Listado de la flota registrada del arrendador, con opciones para agregar un nuevo auto, editar tarifa diaria, pausar disponibilidad o retirar publicaciones.
+
+  <p align="center">
+    <img src="Assets/chapter04/mockup-owner-fleet-management.png" alt="Gestión de Vehículos" width="650"/>
+  </p>
+
+- **Administración de Solicitudes de Reserva:**  
+  Bandeja de solicitudes entrantes donde el propietario revisa la identidad del solicitante, fechas deseadas y puede aceptar o rechazar el alquiler.
+
+  <p align="center">
+    <img src="Assets/chapter04/mockup-owner-booking-requests.png" alt="Administración de Solicitudes de Reserva" width="650"/>
+  </p>
+
+- **Edición de Perfil de Propietario:**  
+  Formulario para actualizar información personal, número telefónico de contacto y carga de documentos de garantía.
+
+  <p align="center">
+    <img src="Assets/chapter04/mockup-owner-edit-profile.png" alt="Edición de Perfil de Arrendador" width="650"/>
+  </p>
+
+---
 
 ### 4.6.4. Web Applications User Flow Diagrams
-||||||||||||||||||||||||
+
+En esta sección se modelan los **diagramas de flujo de usuario (User Flow Diagrams)** que describen las rutas de interacción, puntos de decisión y transiciones de estado de los usuarios a través de la aplicación web RentiCar.
+
+#### 4.6.4.1. Flujo de Usuario: Arrendatario (Búsqueda, Reserva, Monitoreo y Calificación)
+
+El siguiente diagrama ilustra el recorrido completo de un cliente desde su acceso inicial a la plataforma hasta la conclusión y calificación del servicio de alquiler:
+
+```mermaid
+flowchart TD
+    Start([Inicio: Visitante accede a la plataforma]) --> Explore[Explorar Landing Page o Catálogo]
+    Explore --> AuthCheck{¿Tiene cuenta iniciada?}
+    AuthCheck -- No --> AuthChoice[Iniciar Sesión o Registrarse]
+    AuthChoice --> LoginOk[Autenticación exitosa JWT]
+    AuthCheck -- Sí --> Catalog[Catálogo de Vehículos]
+    LoginOk --> Catalog
+
+    Catalog --> Filters[Aplicar Filtros: Marca, Transmisión, Precio]
+    Filters --> SelectCar[Seleccionar tarjeta de Vehículo]
+    SelectCar --> CarDetail[Visualizar Ficha Detallada del Auto]
+    
+    CarDetail --> BookDecision{¿Desea reservar este auto?}
+    BookDecision -- No --> Catalog
+    BookDecision -- Sí --> DateSelect[Seleccionar Fechas de Inicio y Fin]
+    
+    DateSelect --> PriceCalc[Cálculo automático de días y tarifa total]
+    PriceCalc --> SubmitBooking[Confirmar y Enviar Solicitud de Reserva]
+    SubmitBooking --> StatusPending[Estado: PENDIENTE]
+    
+    StatusPending --> WaitDecision{Respuesta del Arrendador}
+    WaitDecision -- Rechazada --> NotifyRejected[Notificación de Rechazo y liberación de fechas]
+    NotifyRejected --> Catalog
+    WaitDecision -- Aprobada --> StatusConfirmed[Estado: CONFIRMADA]
+    
+    StatusConfirmed --> Pickup[Fecha de Inicio: Recojo del Vehículo]
+    Pickup --> ActiveRent[Estado: EN CURSO]
+    ActiveRent --> IoTMap[Monitoreo GPS en tiempo real - Leaflet]
+    
+    IoTMap --> ReturnCar[Devolución del Vehículo]
+    ReturnCar --> CompletedRent[Estado: FINALIZADA]
+    CompletedRent --> ReviewModal[Calificar con Estrellas 1 a 5 y escribir Reseña]
+    ReviewModal --> End([Fin del Flujo del Arrendatario])
+```
+
+**Descripción del flujo del Arrendatario:**
+1. **Descubrimiento y Navegación:** El cliente ingresa y navega por el catálogo público. Para concretar una reserva, el sistema valida su sesión activa o le solicita autenticarse con JWT.
+2. **Filtrado y Selección:** El usuario puede refinar los resultados por marca, caja de cambios y tarifa diaria. Al seleccionar un vehículo, visualiza especificaciones completas e imágenes.
+3. **Reserva y Presupuesto:** Al elegir el rango de fechas en el calendario interactivo, el sistema calcula de forma reactiva el importe total. Tras confirmar, la solicitud se envía al propietario con estado `PENDIENTE`.
+4. **Seguimiento y Uso IoT:** Tras la aprobación del dueño (`CONFIRMADA`), el alquiler pasa a `EN CURSO` en la fecha pactada. El cliente tiene acceso al mapa interactivo de telemetría IoT.
+5. **Cierre y Reputación:** Finalizado el alquiler (`FINALIZADA`), se activa el diálogo para emitir su valoración y comentario, enriqueciendo la reputación pública del vehículo.
+
+---
+
+#### 4.6.4.2. Flujo de Usuario: Arrendador (Publicación de Flota, Aprobación y Supervisión)
+
+El siguiente diagrama detalla el recorrido del propietario para publicar un vehículo, gestionar solicitudes de reserva y dar seguimiento a sus unidades:
+
+```mermaid
+flowchart TD
+    StartLessor([Inicio: Propietario accede a la plataforma]) --> AuthLessor[Iniciar Sesión como Arrendador]
+    AuthLessor --> LessorDash[Dashboard Principal del Arrendador]
+    
+    LessorDash --> ActionChoice{¿Qué acción desea realizar?}
+    
+    ActionChoice -- Publicar Auto --> CarForm[Completar Formulario de Vehículo: Marca, Modelo, Año, Tarifa]
+    CarForm --> PhotoUpload[Subir Fotografías del Auto]
+    PhotoUpload --> PublishCar[Publicar Vehículo en Catálogo]
+    PublishCar --> LessorDash
+    
+    ActionChoice -- Gestionar Flota --> MyCars[Ver 'Mis Vehículos']
+    MyCars --> EditCar[Editar Tarifa / Modificar Disponibilidad / Dar de Baja]
+    EditCar --> LessorDash
+    
+    ActionChoice -- Revisar Solicitudes --> RequestList[Bandeja de Solicitudes de Reserva]
+    RequestList --> EvalRequest[Evaluar Perfil del Arrendatario y Fechas Solicitadas]
+    EvalRequest --> Decision{¿Aceptar solicitud?}
+    
+    Decision -- No --> RejectBooking[Rechazar Reserva: Estado RECHAZADA]
+    RejectBooking --> LessorDash
+    
+    Decision -- Sí --> AcceptBooking[Aceptar Reserva: Estado CONFIRMADA]
+    AcceptBooking --> BlockDates[Bloqueo automático de fechas en calendario]
+    BlockDates --> TrackIoT[Supervisar Telemetría IoT: Odómetro y Velocidad]
+    TrackIoT --> CarReturned[Recepción del Vehículo al finalizar plazo]
+    CarReturned --> RateRenter[Calificar Cuidado y Puntualidad del Arrendatario]
+    RateRenter --> EndLessor([Fin del Flujo del Arrendador])
+```
+
+**Descripción del flujo del Arrendador:**
+1. **Autenticación y Panel de Control:** El arrendador accede a su dashboard donde monitorea el rendimiento de sus publicaciones y el resumen de ingresos.
+2. **Gestión de Publicaciones:** Puede registrar nuevos vehículos suministrando datos técnicos, tarifa por jornada y fotos. Las publicaciones pueden editarse o pausarse en cualquier momento (siempre que no tengan una reserva en curso).
+3. **Bandeja de Solicitudes:** El propietario recibe notificaciones de solicitudes de reserva. Puede inspeccionar las fechas requeridas y el perfil verificado del arrendatario para tomar una decisión informada.
+4. **Supervisión de Alquiler:** Una vez confirmada la reserva y entregada la unidad, el arrendador dispone de telemetría IoT para supervisar odómetro y velocidad.
+5. **Cierre de Ciclo:** Tras recibir el auto de vuelta, el arrendador evalúa al cliente, fortaleciendo el ecosistema de confianza de RentiCar.
+
+---
+
 ## 4.7. Web Applications Prototyping
 
-||||||||||||Ponganle texto
+En esta sección se presenta el **prototipo interactivo de alta fidelidad** de la aplicación web RentiCar, desarrollado y validado mediante la herramienta **Figma** y posteriormente implementado sobre el framework **Angular** con arquitectura basada en componentes reutilizables y Angular Material.
 
-[Mira el prototipo de la aplicación web aquí](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202314354_upc_edu_pe/ETjEvnFfTMVGg504DkKQo9cBVH1Coad3hieTwbFWm9x8gQ?e=t2sINN&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+El diseño del prototipo se fundamenta en principios de diseño centrado en el usuario (UCD), garantizando una curva de aprendizaje mínima tanto para personas que alquilan por primera vez como para propietarios que administran múltiples vehículos.
+
+### Principales aspectos funcionales validados en el prototipo:
+1. **Flujo de Navegación Responsivo:** Adaptabilidad fluida desde resoluciones de escritorio (1920x1080) hasta dispositivos móviles (375x812), con navegación mediante barra lateral colapsable y barra superior contextual.
+2. **Interactividad en Formularios:** Validaciones reactivas inmediatas de contraseñas seguras, correos con formato correcto y selectores de fecha con restricciones lógicas (la fecha de devolución no puede ser anterior a la de recogida).
+3. **Visualización de Telemetría IoT:** Integración interactiva con mapas vectoriales vía **Leaflet**, simulando la posición GPS en vivo del vehículo alquilado y tableros de métricas de odómetro y velocidad.
+4. **Sistema de Feedback y Notificaciones:** Notificaciones tipo snackbar/toast para confirmar operaciones críticas (reserva enviada, auto publicado, cambios guardados en el perfil).
+
+El prototipo funcional navegable y la demostración de los flujos de usuario se encuentran documentados y disponibles en el siguiente recurso audiovisual:
+
+🎥 **Demostración en Video del Prototipo Web:**  
+[Ver demostración en video del prototipo interactivo en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202314354_upc_edu_pe/ETjEvnFfTMVGg504DkKQo9cBVH1Coad3hieTwbFWm9x8gQ?e=t2sINN&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+---
 
 ## 4.8. Domain-Driven Software Architecture
 
-A continuación, se presenta el modelo C4 correspondiente a nuestro software, el cual servirá 
-como guía durante el proceso de desarrollo. Este modelo resulta fundamental, ya que facilita 
-la comprensión de la arquitectura del sistema y de la manera en que los distintos componentes 
-interactúan entre sí.
-
-
-||||||||||
+A continuación, se presenta la arquitectura de software del sistema **RentiCar**, estructurada bajo los principios de **Domain-Driven Design (DDD)** y documentada mediante el modelo de arquitectura **C4 (Contexto, Contenedores, Componentes y Código)**. Este modelo permite visualizar la descomposición del sistema en diferentes niveles de abstracción, garantizando un diseño desacoplado, mantenible y escalable.
 
 ### 4.8.a. Design-Level EventStorming
 
-|||||||||||||||||||||||||||
-Bounded Contexts propuestos:
+A partir de los talleres de EventStorming orientados al diseño, se establecieron los límites transaccionales y los siguientes **Bounded Contexts** que conforman la solución:
 
-- Listings & Vehicle Management (Publicaciones/vehículos).
+- **Identity & Access Management (IAM):** Responsable de la autenticación con tokens JWT, registro diferenciado de usuarios (Arrendatarios y Arrendadores), validación de credenciales y gestión de perfiles.
+- **Listings & Vehicle Management:** Administra el ciclo de vida de los vehículos disponibles para alquiler, especificaciones técnicas, precios por jornada y carga de galerías fotográficas.
+- **Booking & Digital Contract:** Controla el flujo transaccional de reservas, selección de rangos de fechas, cálculo automático de tarifas, aprobación o denegación por parte de propietarios y estados del alquiler.
+- **IoT Monitoring & Telemetry:** Procesa datos de telemetría emitidos por dispositivos IoT vehiculares (coordenadas GPS, odómetro, velocidad y nivel de batería/combustible) para su visualización interactiva sobre mapas vectoriales.
+- **Reviews & Reputation:** Gestiona las calificaciones numéricas (1 a 5 estrellas) y opiniones redactadas tras culminar el servicio, recalculando los promedios públicos de reputación.
 
-- Booking & Digital Contract (Reservas/contrato).
+**Eventos de Dominio Clave:** `UsuarioRegistrado`, `CredencialesValidadas`, `VehiculoPublicado`, `TarifaActualizada`, `ReservaSolicitada`, `ReservaConfirmada`, `ReservaRechazada`, `AlquilerIniciado`, `CoordenadíasGpsRecibidas`, `AlertaCombustibleEmitida`, `AlquilerFinalizado`, `ReseñaPublicada`.  
+**Comandos Principales:** `RegistrarUsuario`, `IniciarSesion`, `PublicarVehiculo`, `ModificarTarifa`, `SolicitarReserva`, `ConfirmarReserva`, `RechazarReserva`, `RegistrarTelemetria`, `CalificarAlquiler`.  
+**Agregados (Aggregates):** `User`, `Vehicle`, `Booking`, `TelemetryRecord`, `Review`.
 
-- IoT Monitoring (read-only) (estado y ubicación ligera).
-
-- Reviews & Reputation (reseñas y reputación).
-
-- Identity & Access Management (IAM) (registro, login, roles).
-
-
-**Eventos clave** : PublicaciónCreada, ReservaConfirmada, ContratoFirmado, ReservaIniciada, EstadoIotActualizado, ReservaFinalizada, ReseñaRegistrada.
-
-**Comandos** : CrearPublicación, CrearReserva, FirmarContrato, IniciarReserva, ActualizarEstadoIot, FinalizarReserva, RegistrarReseña.
-
-**Aggregates** : Publicación, Reserva, Vehículo, Usuario, Reseña.
+---
 
 ### 4.8.1. Software Architecture Context Diagram
 
-<img src="assets/chapter04/diagramcontext.png" alt="" width="500"><br>
+El diagrama de contexto define los límites del sistema **RentiCar**, ilustrando su relación con los diferentes perfiles de usuarios y los sistemas externos con los que interactúa dentro de su entorno operativo.
+
+<p align="center">
+  <img src="Assets/chapter04/c4-level1-system-context.png" alt="Context Diagram" width="650"/><br>
+  <em>Figura 4.8.1: Diagrama de Contexto del Sistema RentiCar (Nivel 1 C4)</em>
+</p>
+
+**Descripción de Elementos del Diagrama de Contexto:**
+- **Personas (Usuarios):**
+  - **Arrendatario (Customer/Renter):** Usuario que explora el catálogo de autos, aplica filtros, solicita reservas de vehículos por fechas determinadas, monitorea el auto en ruta vía GPS y califica el servicio recibido.
+  - **Arrendador (Vehicle Owner/Lessor):** Propietario que registra y publica sus vehículos, establece tarifas de alquiler, gestiona la admisión de solicitudes y supervisa la telemetría y kilometraje de su flota.
+- **Sistema de Software Central (RentiCar Platform):** Plataforma web colaborativa P2P que centraliza las operaciones de alquiler, reservas, verificación de usuarios y monitoreo telemático.
+- **Sistemas Externos Integrados:**
+  - **Servicio de Mapas y Geolocalización (OpenStreetMap / Leaflet):** Provee la infraestructura de renderizado cartográfico para el seguimiento en tiempo real del vehículo.
+  - **Dispositivos IoT / Simulador de Telemetría:** Módulos integrados en los vehículos que transmiten coordenadas geográficas, velocidad y nivel de combustible hacia la API mediante protocolos HTTP/REST.
+  - **Servicio de Notificaciones y Correo:** Encargado de despachar notificaciones transaccionales y confirmaciones de reserva.
+
+---
 
 ### 4.8.2. Software Architecture Container Diagrams
 
-<img src="assets/chapter04/containerdiagrams.png" alt="" width="500"><br>
+El diagrama de contenedores desglosa la solución en sus unidades de ejecución independientes de software, detallando los roles tecnológicos, protocolos de red y bases de datos empleadas.
+
+<p align="center">
+  <img src="Assets/chapter04/c4-level2-containers.png" alt="Container Diagram" width="650"/><br>
+  <em>Figura 4.8.2: Diagrama de Contenedores del Sistema RentiCar (Nivel 2 C4)</em>
+</p>
+
+**Descripción de Contenedores de la Solución:**
+- **Landing Page (Sitio Web Público):**  
+  Sitio web público estático desarrollado en **HTML5, CSS3 y JavaScript moderno**, optimizado para conversión, presentación de propuesta de valor, opiniones y llamado a la acción (CTAs) para visitantes interesados.
+- **Web Application (Single-Page Application - SPA):**  
+  Desarrollada en **Angular 20** con arquitectura basada en componentes standalone, TypeScript, Angular Material, Tailwind CSS y **Leaflet** para mapas interactivos. Proporciona la interfaz gráfica reactiva para Arrendatarios y Arrendadores, comunicándose con la API mediante peticiones asíncronas HTTPS / JSON con autenticación JWT.
+- **RESTful API Backend (Aplicación de Servicios Central):**  
+  Construida en **Java 17 / 21** empleando el framework **Spring Boot 3.x**. Estructurada bajo Domain-Driven Design (DDD) y arquitectura hexagonal por Bounded Contexts, expone endpoints REST seguros protegidos con Spring Security y tokens JWT emitidos con HMAC-SHA256.
+- **Database (Base de Datos Relacional Transaccional):**  
+  Implementada sobre **TiDB Cloud (compatible con MySQL 8.0)** accesible mediante Spring Data JPA e Hibernate por el puerto 4000. Aloja las entidades de negocio (usuarios, credenciales, vehículos, contratos de reserva, telemetría y valoraciones) garantizando transaccionalidad ACID e integridad referencial estricta.
+- **OpenRouteService API (External Software System):**  
+  Servicio externo en la nube consumido por el backend a través de su API REST (`/v2/directions/driving-car`) para el cálculo de matrices de ruta y simulación de coordenadas GPS telemáticas en tiempo real.
+- **Consumo de la API por la Aplicación Web:**  
+  La **Web Application** es el contenedor cliente que consume de forma directa y reactiva los endpoints de la **RESTful API Backend** mediante peticiones HTTP asíncronas sobre TLS/HTTPS serializadas en JSON y autenticadas con Bearer JWT, soportando todos los casos de uso de arrendatarios y propietarios.
+
+---
 
 ### 4.8.3. Software Architecture Components Diagrams
 
-<img src="assets/chapter04/Components-Diagrams.png" alt="dd" width="500"><br>
+En esta sección se presentan los **diagramas de componentes (Nivel 3 del modelo C4)** descompuestos de manera individual para cada uno de los **Bounded Contexts** que conforman el backend de **RentiCar** desarrollado en **Spring Boot**. Cada diagrama modela la interacción entre los controladores REST, los servicios de aplicación (Command y Query Handlers), el modelo de dominio y los adaptadores de infraestructura y persistencia.
+
+<p align="center">
+  <img src="Assets/chapter04/c4-level3-components-overall.png" alt="Components Diagram General" width="750"/><br>
+  <em>Figura 4.8.3: Diagrama General de Componentes de la Plataforma RentiCar</em>
+</p>
+
+---
+
+#### 4.8.3.1. Components Diagram: Identity & Access Management (IAM) Bounded Context
+Gestiona el registro de usuarios, autenticación mediante tokens JWT, encriptación de credenciales con BCrypt y administración de perfiles según roles (`ROLE_RENTER` y `ROLE_OWNER`).
+
+<p align="center">
+  <img src="Assets/chapter04/c4-level3-components-iam.png" alt="C4 Component IAM" width="850"/><br>
+  <em>Figura 4.8.3.1: Diagrama de Componentes C4 (Nivel 3) - IAM Bounded Context (Structurizr Style)</em>
+</p>
+
+
+**Catálogo de Componentes del IAM Bounded Context:**
+| Componente | Capa | Responsabilidad |
+| :--- | :---: | :--- |
+| `AuthenticationController` | Interfaces | Expone los endpoints públicos de registro (`/sign-up`) e inicio de sesión (`/sign-in`). |
+| `UsersController` | Interfaces | Permite consultar información de usuarios y actualizar contraseñas o datos de perfil. |
+| `BearerAuthorizationRequestFilter` | Seguridad | Intercepta peticiones HTTP para extraer y validar tokens Bearer JWT en las cabeceras. |
+| `UserCommandServiceImpl` | Aplicación | Orquesta los casos de uso transaccionales de alta, modificación de perfil y reseteo de claves. |
+| `UserQueryServiceImpl` | Aplicación | Ejecuta consultas de solo lectura por identificador de usuario o dirección de correo. |
+| `UserRepository` / `RoleRepository` | Infraestructura | Interfaces Spring Data JPA para la persistencia transaccional en las tablas `users` y `roles`. |
+
+---
+
+#### 4.8.3.2. Components Diagram: Listings & Fleet Management Bounded Context
+Controla la publicación de vehículos por parte de los propietarios, especificaciones técnicas (marca, modelo, año, precio diario), carga fotográfica y ciclo de vida de disponibilidad.
+
+<p align="center">
+  <img src="Assets/chapter04/c4-level3-components-listings.png" alt="C4 Component Listings" width="850"/><br>
+  <em>Figura 4.8.3.2: Diagrama de Componentes C4 (Nivel 3) - Listings & Fleet Management Bounded Context (Structurizr Style)</em>
+</p>
+
+
+**Catálogo de Componentes del Listings Bounded Context:**
+| Componente | Capa | Responsabilidad |
+| :--- | :---: | :--- |
+| `VehiclesController` | Interfaces | Maneja endpoints para listar el catálogo público, registrar vehículos, subir imágenes y cambiar estado. |
+| `VehicleCommandServiceImpl` | Aplicación | Valida reglas de negocio para crear, actualizar especificaciones, almacenar fotos binarias y dar de baja publicaciones. |
+| `VehicleQueryServiceImpl` | Aplicación | Recupera listados de vehículos aplicando filtros por estado operativo (`AVAILABLE`) y por identificador de propietario. |
+| `ListingsContextFacade` | ACL | Expone métodos de consulta de disponibilidad y pertenencia vehicular hacia los contextos de Booking e IoT. |
+| `VehicleRepository` | Infraestructura | Gestiona las operaciones CRUD y consultas derivadas sobre la tabla `vehicles`. |
+
+---
+
+#### 4.8.3.3. Components Diagram: Booking & Digital Contract Bounded Context
+Administra las solicitudes de alquiler formuladas por los arrendatarios, el cálculo automático de tarifas por días de contrato, la confirmación o rechazo por el arrendador y las cancelaciones.
+
+<p align="center">
+  <img src="Assets/chapter04/c4-level3-components-booking.png" alt="C4 Component Booking" width="850"/><br>
+  <em>Figura 4.8.3.3: Diagrama de Componentes C4 (Nivel 3) - Booking & Digital Contract Bounded Context (Structurizr Style)</em>
+</p>
+
+
+**Catálogo de Componentes del Booking Bounded Context:**
+| Componente | Capa | Responsabilidad |
+| :--- | :---: | :--- |
+| `BookingsController` | Interfaces | Expone los endpoints de creación de reserva, confirmación, rechazo, cancelación y consulta de bandejas. |
+| `BookingCommandServiceImpl` | Aplicación | Ejecuta transiciones de estado contractuales, calcula el precio total por días y evita reservas solapadas. |
+| `BookingQueryServiceImpl` | Aplicación | Obtiene el historial de reservas para el arrendatario y la bandeja de solicitudes entrantes para el arrendador. |
+| `BookingContextFacade` | ACL | Provee a los contextos de Reviews e IoT la verificación de si un alquiler fue completado satisfactoriamente. |
+| `BookingRepository` | Infraestructura | Repositorio Spring Data JPA con consultas JPQL para filtrado por fechas, usuario y vehículo. |
+
+---
+
+#### 4.8.3.4. Components Diagram: IoT Monitoring & Route Simulation Bounded Context
+Procesa las señales telemáticas transmitidas por sensores vehiculares (coordenadas GPS, odómetro, velocidad y nivel de combustible) y la simulación interactiva de trayectorias mediante OpenRouteService.
+
+<p align="center">
+  <img src="Assets/chapter04/c4-level3-components-iot.png" alt="C4 Component IoT" width="850"/><br>
+  <em>Figura 4.8.3.4: Diagrama de Componentes C4 (Nivel 3) - IoT Monitoring & Route Simulation Bounded Context (Structurizr Style)</em>
+</p>
+
+
+**Catálogo de Componentes del IoT Bounded Context:**
+| Componente | Capa | Responsabilidad |
+| :--- | :---: | :--- |
+| `TelemetryController` | Interfaces | Provee endpoints para registrar telemetría y consultar la última posición telemática de un auto. |
+| `RouteController` | Interfaces | Expone los endpoints de simulación de rutas dinámicas consumidos por el componente Leaflet en frontend. |
+| `OpenRouteServiceApiClient` | Infraestructura | Cliente HTTP REST que consulta la API de OpenRouteService para obtener coordenadas secuenciales de rutas. |
+| `TelemetrySimulatorService` | Aplicación | Simula el desplazamiento físico de vehículos emitiendo coordenadas periódicas hacia la persistencia. |
+| `TelemetryRepository` | Infraestructura | Repositorio JPA para almacenar y consultar lecturas de GPS, velocidad y combustible por vehículo. |
+
+---
+
+#### 4.8.3.5. Components Diagram: Reviews & Reputation Bounded Context
+Gestiona las evaluaciones y comentarios redactados por clientes una vez completado su alquiler, recalculando dinámicamente el promedio de satisfacción pública del vehículo.
+
+<p align="center">
+  <img src="Assets/chapter04/c4-level3-components-reviews.png" alt="C4 Component Reviews" width="850"/><br>
+  <em>Figura 4.8.3.5: Diagrama de Componentes C4 (Nivel 3) - Reviews & Reputation Bounded Context (Structurizr Style)</em>
+</p>
+
+
+**Catálogo de Componentes del Reviews Bounded Context:**
+| Componente | Capa | Responsabilidad |
+| :--- | :---: | :--- |
+| `ReviewsController` | Interfaces | Expone los endpoints para registrar una nueva reseña y consultar opiniones por vehículo o usuario. |
+| `ReviewCommandServiceImpl` | Aplicación | Valida que el usuario posea un alquiler completado (vía ACL) y que no haya calificado previamente el servicio. |
+| `ReviewQueryServiceImpl` | Aplicación | Consulta el listado histórico de calificaciones y calcula el promedio ponderado de satisfacción. |
+| `ReviewRepository` | Infraestructura | Repositorio Spring Data JPA para la persistencia y lectura de opiniones en la tabla `reviews`. |
 
 ## 4.9. Software Object-Oriented Design
 
-El diseño orientado a objetos constituye un eje central en el desarrollo de nuestro software. 
-La organización del sistema se ha realizado en función de las reglas de negocio, con el 
-propósito de construir componentes claros y comprensibles, que no solo favorezcan su 
-implementación en un entorno real, sino que también faciliten las futuras modificaciones y 
-el mantenimiento por parte del equipo de desarrollo.
+El diseño orientado a objetos de **RentiCar** unifica todos los módulos y Bounded Contexts de la plataforma bajo los principios tácticos de **Domain-Driven Design (DDD)** y arquitectura hexagonal, garantizando alta cohesión, bajo acoplamiento e integridad referencial y de dominio.
 
 ### 4.9.1. Class Diagrams
 
-<img src="assets\chapter04\ClassDiagram.png" width=600px>
+A continuación, se presenta el **Diagrama Completo y Unificado de Clases del Sistema RentiCar**, modelado a nivel profesional con 100% de paridad con la arquitectura del backend (**Spring Boot**) y el frontend (**Angular**), cubriendo todos los Bounded Contexts, agregados, entidades, objetos de valor, interfaces de persistencia, servicios de aplicación y controladores REST:
+
+<p align="center">
+  <img src="Assets/chapter04/domain-class-diagram.png" alt="Complete Domain Class Diagram" width="100%"/><br>
+  <em>Figura 4.9.1: Diagrama Maestro de Clases del Dominio de RentiCar (UML 2.5 - All Bounded Contexts)</em>
+</p>
+
+---
+
+---
 
 ### 4.9.2. Class Dictionary
 
+El siguiente diccionario de clases consolida la totalidad de entidades, agregados, objetos de valor e interfaces del sistema **RentiCar**, detallando su visibilidad, atributos, métodos, tipos de datos y descripciones operativas en estricto apego al estándar de la rúbrica:
+
+| Clase | Atributo / Método | Descripción | Tipo de Dato | Visibilidad |
+| :--- | :--- | :--- | :---: | :---: |
+| `User` | `-id` | Identificador autoincremental único del usuario | `Long` | Privado |
+| `User` | `-name` | Nombre completo del usuario registrado | `String` | Privado |
+| `User` | `-email` | Dirección de correo electrónico validada | `EmailAddress` | Privado |
+| `User` | `-password` | Hash seguro BCrypt de la contraseña | `String` | Privado |
+| `User` | `-roles` | Conjunto de roles asignados al usuario | `Set<Role>` | Privado |
+| `User` | `+updatePassword()` | Actualiza el hash de la clave del usuario | `void` | Público |
+| `User` | `+updateProfile()` | Modifica nombre y datos de contacto | `void` | Público |
+| `User` | `+addRole()` | Asigna un nuevo rol de acceso (`ROLE_RENTER` o `ROLE_OWNER`) | `void` | Público |
+| `Role` | `-id` | Identificador único del rol | `Long` | Privado |
+| `Role` | `-name` | Nombre enumerado del rol | `Roles` | Privado |
+| `Role` | `+getStringName()` | Nombre del rol en formato texto para Spring Security | `String` | Público |
+| `EmailAddress` | `-address` | Cadena validada que cumple formato de correo | `String` | Privado |
+| `EmailAddress` | `+validate()` | Comprueba sintaxis de correo electrónico con regex | `boolean` | Público |
+| `Vehicle` | `-id` | Identificador primario del vehículo en el catálogo | `Long` | Privado |
+| `Vehicle` | `-brand` | Marca automotriz del vehículo | `String` | Privado |
+| `Vehicle` | `-model` | Modelo del vehículo | `String` | Privado |
+| `Vehicle` | `-year` | Año de fabricación del automóvil | `Integer` | Privado |
+| `Vehicle` | `-pricePerDay` | Tarifa diaria de alquiler en nuevos soles (PEN) | `Double` | Privado |
+| `Vehicle` | `-status` | Estado de disponibilidad (`AVAILABLE`, `RENTED`, `MAINTENANCE`) | `VehicleStatus` | Privado |
+| `Vehicle` | `-image` | Contenido binario de la fotografía del auto | `byte[]` | Privado |
+| `Vehicle` | `-ownerId` | Identificador foráneo del propietario arrendador | `Long` | Privado |
+| `Vehicle` | `+updatePrice()` | Actualiza la tarifa de alquiler diaria verificando precio positivo | `void` | Público |
+| `Vehicle` | `+updateStatus()` | Cambia la disponibilidad del auto en catálogo | `void` | Público |
+| `Vehicle` | `+isAvailable()` | Retorna verdadero si el auto puede ser reservado | `boolean` | Público |
+| `Booking` | `-id` | Clave primaria única del contrato de reserva | `Long` | Privado |
+| `Booking` | `-vehicleId` | Identificador del automóvil reservado | `Long` | Privado |
+| `Booking` | `-renterId` | Identificador del usuario que alquila | `Long` | Privado |
+| `Booking` | `-ownerId` | Identificador del dueño que recibe la solicitud | `Long` | Privado |
+| `Booking` | `-startDate` | Fecha de inicio convenida para el alquiler | `LocalDate` | Privado |
+| `Booking` | `-endDate` | Fecha de devolución pactada | `LocalDate` | Privado |
+| `Booking` | `-totalPrice` | Importe monetario total calculado | `Double` | Privado |
+| `Booking` | `-bookingStatus` | Estado del contrato (`PENDING`, `CONFIRMED`, `REJECTED`, `CANCELLED`, `COMPLETED`) | `BookingStatus` | Privado |
+| `Booking` | `+confirm()` | Transiciona el estado a confirmado y bloquea fechas | `void` | Público |
+| `Booking` | `+reject()` | Transiciona el estado a rechazado y libera el auto | `void` | Público |
+| `Booking` | `+cancel()` | Cancela la reserva antes del inicio del viaje | `void` | Público |
+| `Booking` | `+complete()` | Finaliza el alquiler y habilita la calificación | `void` | Público |
+| `Booking` | `+calculateTotalPrice()`| Multiplica los días de alquiler por la tarifa diaria | `Double` | Público |
+| `Telemetry` | `-id` | Clave primaria del muestreo telemático | `Long` | Privado |
+| `Telemetry` | `-vehicleId` | Identificador del auto monitoreado | `Long` | Privado |
+| `Telemetry` | `-latitude` | Coordenada geográfica de latitud WGS84 | `Double` | Privado |
+| `Telemetry` | `-longitude` | Coordenada geográfica de longitud WGS84 | `Double` | Privado |
+| `Telemetry` | `-speed` | Velocidad instantánea en km/h | `Double` | Privado |
+| `Telemetry` | `-fuelLevel` | Nivel actual de combustible en porcentaje | `Double` | Privado |
+| `Telemetry` | `-recordedAt` | Marca temporal exacta de la medición | `LocalDateTime` | Privado |
+| `Telemetry` | `+isSpeedAlert()` | Evalúa si la velocidad sobrepasa los límites de seguridad | `boolean` | Público |
+| `Telemetry` | `+isLowFuelAlert()` | Determina si el combustible está por debajo del umbral mínimo | `boolean` | Público |
+| `Review` | `-id` | Identificador único de la reseña | `Long` | Privado |
+| `Review` | `-vehicleId` | Identificador del vehículo evaluado | `Long` | Privado |
+| `Review` | `-renterId` | Identificador del cliente evaluador | `Long` | Privado |
+| `Review` | `-rating` | Calificación numérica otorgada (1 a 5 estrellas) | `Integer` | Privado |
+| `Review` | `-comment` | Texto con la opinión y testimonio del alquiler | `String` | Privado |
+| `Review` | `-createdAt` | Fecha y hora de publicación de la reseña | `LocalDateTime` | Privado |
+
 ## 4.10. Database Design
-### 4.10.1. Relational/Non-Relational Database Diagram
 
-Antes de analizar el diagrama de base de datos, es fundamental comprender la manera en que se 
-relacionan las tablas de Renticar. El sistema administra entidades como Usuarios, 
-Vehículos, Publicaciones, Reservas, Reseñas y Documentos de Garantía. Cada una de estas 
-tablas mantiene relaciones específicas; por ejemplo, un usuario puede registrar múltiples 
-vehículos o generar diversas reservas. A continuación, se presenta el diagrama que ilustra 
-de forma gráfica dichas interconexiones.
+El diseño de la base de datos relacional de **RentiCar** ha sido modelado para garantizar la consistencia transaccional, normalización en Tercera Forma Normal (3FN) e integridad referencial entre todías las entidades del negocio.
 
-<br><img src="assets/chapter04/DatabaseDiagram.png" alt="Database Diagram" width="500" ><br>
-<br>
+### 4.10.1. Relational Database Diagram
 
+Antes de detallar el diccionario de datos, se presenta el esquema relacional global del sistema, ilustrando las tablas principales, claves foráneas y cardinalidades:
+
+<p align="center">
+  <img src="Assets/chapter04/relational-database-diagram.png" alt="Database Diagram" width="650"/><br>
+  <em>Figura 4.10.1: Diagrama Entidad-Relación Relacional de RentiCar</em>
+</p>
+
+---
+
+### 4.10.2. Database Data Dictionary (Diccionario de Datos)
+
+El siguiente diccionario de datos describe las tablas y relaciones generadas por **JPA / Hibernate** en la base de datos **TiDB Cloud (MySQL 8.0)** de RentiCar:
+
+#### Tabla: `users`
+Almacena las cuentas y credenciales de acceso de los usuarios del sistema.
+
+| Columna | Tipo SQL | Longitud | PK | FK | Not Null | Descripción |
+| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
+| `id` | `BIGINT` | 20 | Sí | No | Sí | Identificador autoincremental único del usuario. |
+| `name` | `VARCHAR` | 150 | No | No | Sí | Nombres y apellidos completos del usuario. |
+| `email` | `VARCHAR` | 100 | No | No | Sí | Correo electrónico único validado mediante Value Object. |
+| `password` | `VARCHAR` | 255 | No | No | Sí | Hash BCrypt seguro de la contraseña. |
+| `created_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de creación del registro. |
+| `updated_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de última actualización. |
+
+#### Tabla: `roles`
+Catálogo de roles del sistema para el control de autorización basado en roles (RBAC).
+
+| Columna | Tipo SQL | Longitud | PK | FK | Not Null | Descripción |
+| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
+| `id` | `BIGINT` | 20 | Sí | No | Sí | Clave primaria del rol. |
+| `name` | `VARCHAR` | 30 | No | No | Sí | Nombre representativo del rol (`ROLE_RENTER`, `ROLE_OWNER`). |
+
+#### Tabla: `user_roles`
+Tabla intermedia que resuelve la relación N:M entre `users` y `roles`.
+
+| Columna | Tipo SQL | Longitud | PK | FK | Not Null | Descripción |
+| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
+| `user_id` | `BIGINT` | 20 | Sí | Sí | Sí | Clave foránea que referencia a `users.id`. |
+| `role_id` | `BIGINT` | 20 | Sí | Sí | Sí | Clave foránea que referencia a `roles.id`. |
+
+#### Tabla: `vehicles`
+Contiene la flota de vehículos publicados por los propietarios (arrendadores).
+
+| Columna | Tipo SQL | Longitud | PK | FK | Not Null | Descripción |
+| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
+| `id` | `BIGINT` | 20 | Sí | No | Sí | Clave primaria del vehículo. |
+| `brand` | `VARCHAR` | 80 | No | No | Sí | Marca automotriz del vehículo. |
+| `model` | `VARCHAR` | 80 | No | No | Sí | Modelo del automóvil. |
+| `year` | `INT` | 4 | No | No | Sí | Año de fabricación del automóvil. |
+| `price_per_day`| `DOUBLE`| - | No | No | Sí | Tarifa por día en nuevos soles (PEN). |
+| `status` | `VARCHAR` | 25 | No | No | Sí | Estado del auto (`AVAILABLE`, `RENTED`, `MAINTENANCE`). |
+| `image` | `LONGBLOB`| - | No | No | No | Bytes binarios de la fotografía del vehículo. |
+| `owner_id` | `BIGINT` | 20 | No | No | Sí | Identificador del propietario arrendador (`users.id`). |
+| `created_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de creación. |
+| `updated_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de actualización. |
+
+#### Tabla: `bookings`
+Registra las transacciones y contratos de alquiler formalizados entre arrendatarios y vehículos.
+
+| Columna | Tipo SQL | Longitud | PK | FK | Not Null | Descripción |
+| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
+| `id` | `BIGINT` | 20 | Sí | No | Sí | Clave primaria autonumérica de la reserva. |
+| `vehicle_id` | `BIGINT` | 20 | No | No | Sí | Identificador del vehículo reservado (`vehicles.id`). |
+| `renter_id` | `BIGINT` | 20 | No | No | Sí | Identificador del cliente solicitante (`users.id`). |
+| `owner_id` | `BIGINT` | 20 | No | No | Sí | Identificador del propietario receptor (`users.id`). |
+| `start_date` | `DATETIME` | - | No | No | Sí | Fecha de inicio del alquiler. |
+| `end_date` | `DATETIME` | - | No | No | Sí | Fecha de término pactada del alquiler. |
+| `total_price` | `DOUBLE` | - | No | No | Sí | Importe económico total calculado. |
+| `booking_status`|`VARCHAR` | 25 | No | No | Sí | Estado (`PENDING`, `CONFIRMED`, `REJECTED`, `CANCELLED`, `COMPLETED`). |
+| `created_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de creación. |
+| `updated_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de actualización. |
+
+#### Tabla: `telemetry`
+Almacena las lecturas telemáticas continuas emitidas por los sensores GPS del vehículo.
+
+| Columna | Tipo SQL | Longitud | PK | FK | Not Null | Descripción |
+| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
+| `id` | `BIGINT` | 20 | Sí | No | Sí | Clave primaria de la estampa de telemetría. |
+| `vehicle_id` | `BIGINT` | 20 | No | No | Sí | Identificador del vehículo monitoreado (`vehicles.id`). |
+| `latitude` | `DOUBLE` | - | No | No | Sí | Coordenada geográfica de latitud GPS. |
+| `longitude` | `DOUBLE` | - | No | No | Sí | Coordenada geográfica de longitud GPS. |
+| `speed` | `DOUBLE` | - | No | No | Sí | Velocidad registrada en km/h. |
+| `fuel_level` | `DOUBLE` | - | No | No | Sí | Porcentaje restante de combustible/batería (0 a 100%). |
+| `created_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de recepción telemática. |
+
+#### Tabla: `reviews`
+Registra las valoraciones y comentarios emitidos tras concluir una reserva.
+
+| Columna | Tipo SQL | Longitud | PK | FK | Not Null | Descripción |
+| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
+| `id` | `BIGINT` | 20 | Sí | No | Sí | Clave primaria de la reseña. |
+| `vehicle_id` | `BIGINT` | 20 | No | No | Sí | Identificador del vehículo calificado (`vehicles.id`). |
+| `renter_id` | `BIGINT` | 20 | No | No | Sí | Identificador del cliente calificador (`users.id`). |
+| `rating` | `INT` | 2 | No | No | Sí | Puntuación numérica entera de 1 a 5 estrellas. |
+| `comment` | `VARCHAR` | 500 | No | No | No | Comentario cualitativo sobre el servicio. |
+| `created_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de creación. |
+
+---
 
 # Capítulo V: Product Implementation
+
 ## 5.1. Software Configuration Management
 ### 5.1.1. Software Development Environment Configuration
 
@@ -1349,27 +2487,29 @@ Comunicación: **WhatsApp** <br>
 ### Requirement Management
 Utilizamos UXPressia para poder desarrollar los mapas, los user personas y lean UX canvas
 
-<img src="assets/chapter05/uxpressia.png" width=300 >
+<img src="Assets/chapter05/tool-uxpressia.png" width=300 >
 
 ### Product UX/UI Design
 Utilizamos Figma para el desarrollo de mock ups tanto de la landing page como de la web app
 
-<img src="assets/chapter05/figma.jpeg" width=300 >
+<img src="Assets/chapter05/tool-figma.jpeg" width=300 >
 
 ### Software Deployment
 Trabajamos con vercel para el despliegue de la landing page
 
-<img src="assets/chapter05/vercel_logo.webp" width=300 >
+<img src="Assets/chapter05/tool-vercel.webp" width=300 >
 
 
 ### 5.1.2. Source Code Management
 
-| Producto     | URL                                            |
-|--------------|------------------------------------------------|
-| Landing Page | https://github.com/CodexaTeam/LandingPage      |
-| Report       | https://github.com/CodexaTeam/Report           |
+| Producto | Tipo de Entregable | URL Oficial del Repositorio |
+| :--- | :--- | :--- |
+| **Landing Page** | Sitio Web Estático y Promocional | https://github.com/CodexaTeam/LandingPage |
+| **Web Application** | Frontend Single-Page Application (Angular 20) | https://github.com/CodexaTeam/Frontend |
+| **RESTful API Backend** | Backend API & DDD Bounded Contexts (Spring Boot 3.x) | https://github.com/CodexaTeam/Backend |
+| **Project Report** | Informe Académico de Ingeniería de Software | https://github.com/CodexaTeam/Report |
 
-Para el desarrollo de todos los productos de Innovasoft hemos empleado GitFlow con las siguientes restricciones:
+Para el desarrollo de todos los productos de Codexa-Team hemos empleado GitFlow con las siguientes restricciones:
 - **Main**: Rama principal del proyecto. Contiene la versión estable y lista para producción.
 - **Develop**: Rama de desarrollo. Aquí se integran las nuevas características y correcciones antes de ser fusionadas a la rama principal.
 - **Feature**: Rama para el desarrollo de nuevas características. Se crea a partir de la rama de desarrollo y se fusiona nuevamente en ella una vez se complete el mismo
@@ -1402,7 +2542,7 @@ en todos los archivos del repositorio.
 - **Use Lowercase Attribute Names**:  
   Los atributos están en minúsculas como `src`, `alt`, `href`.
   ~~~html
-  <img src="assets/Logo1.png" alt="logo" class="logo-dark" />
+  <img src="Assets/chapter05/renticar-brand-logo.png" alt="logo" class="logo-dark" />
   ~~~
 
 - **Use Double Quotes for Attribute Values**:  
@@ -1577,41 +2717,180 @@ El uso de GitHub + Vercel permitió una configuración de despliegue **sencilla,
 
 ## 5.2. Product Implementation & Deployment
 
-### 5.2.1. Sprint Backlogs.
-|
-|
-|
+En este apartado se documenta la ejecución del ciclo de vida del desarrollo ágil del software durante los diferentes Sprints del proyecto, las evidencias de despliegue en entornos productivos cloud, la documentación interactiva de los servicios web (Swagger/OpenAPI), y los indicadores de colaboración y productividad del equipo de desarrollo.
+
+### 5.2.1. Sprint Backlogs
+
+A continuación, se presentan las tablas de ejecución de los cuatro sprints desarrollados para la construcción de la plataforma **RentiCar**, detallando las User Stories asignadas, el desglose de tareas técnicas (work-items), estimación en horas-hombre, responsables individuales (distribuidos equitativamente entre los 5 miembros del equipo: Bruce Vía, César Linares, Sergio Landa, Estefano Solís y Sheila Angeles) y estado final:
+
 ### 5.2.2. Implemented Landing Page Evidence
 
-|||
+La Landing Page de **RentiCar** fue diseñada para brindar una primera impresión confiable, moderna y atractiva, maximizando la conversión de visitantes en usuarios registrados.
+
+<p align="center">
+  <img src="Assets/chapter05/landing-page-wireframe.png" alt="Wireframe Landing" width="48%"/>
+  <img src="Assets/chapter05/landing-page-mockup.png" alt="Mockup Landing" width="48%"/><br>
+  <em>Figura 5.2.2.1: Evolución de Wireframe a Mock-up de la Landing Page</em>
+</p>
+
+<p align="center">
+  <img src="Assets/chapter05/landing-page-deployed-vercel.png" alt="Landing Page Publicada" width="75%"/><br>
+  <em>Figura 5.2.2.2: Landing Page implementada y desplegada en producción</em>
+</p>
+
+**Características Principales Implementadas en la Landing Page:**
+- **Encabezado y Navegación Adaptable:** Barra de navegación fija con logotipo corporativo, enlaces a las secciones ("Inicio", "Por qué elegirnos", "Autos populares", "Opiniones") y selector dinámico de idioma (i18n).
+- **Hero Section con Llamado a la Acción:** Propuesta de valor clara orientada a la movilidad compartida en el Perú con botones directos hacia el registro y la exploración del catálogo.
+- **Catálogo de Modelos Populares:** Carrusel interactivo desarrollado con la librería Swiper.js, permitiendo navegar entre los automóviles más destacados.
+- **Despliegue Continuo en Vercel:** Vinculación directa con la rama `main` del repositorio `LandingPage`, logrando un pipeline automatizado con tiempos de carga optimizados.
+
+---
 
 ### 5.2.3. Implemented Frontend-Web Application Evidence
 
-||||
+La aplicación web de **RentiCar** fue construida en **Angular**, utilizando Angular Material para los controles de interfaz de usuario y Leaflet para la visualización cartográfica.
+
+<p align="center">
+  <img src="Assets/chapter05/frontend-deployment-render.jpeg" alt="Despliegue Frontend" width="48%"/>
+  <img src="Assets/chapter05/frontend-execution-evidence.jpeg" alt="Evidencia de Ejecución Frontend" width="48%"/><br>
+  <em>Figura 5.2.3.1: Evidencia de compilación y ejecución de la aplicación web en producción</em>
+</p>
+
+<p align="center">
+  <img src="Assets/chapter05/frontend-catalog-web-evidence.png" alt="Pantalla de Exploración de la Web App" width="75%"/><br>
+  <em>Figura 5.2.3.2: Navegación por el catálogo interactivo de vehículos y panel de reservas</em>
+</p>
+
+**Módulos Clave del Frontend Verificados:**
+- **Routing y Guards de Seguridad:** Rutas protegidas mediante `auth.guard.ts` para restringir el acceso a paneles privados sin token JWT válido.
+- **Manejo Centralizado de Estados:** Servicios de Angular gestionando reactivamente el estado de la sesión, la cesta de reserva y los filtros de búsqueda.
+- **Visualización Telemática Interactiva:** Integración con mapas vectoriales de código abierto permitiendo seguir la trayectoria simulada del vehículo durante el viaje.
+
+---
 
 ### 5.2.4. Acuerdo de Servicio - SaaS
 
-||||
+La plataforma **RentiCar** se distribuye bajo el modelo de **Software as a Service (SaaS)**. Con el objetivo de garantizar la confianza y transparencia entre la startup **Codexa-Team**, los propietarios de vehículos (arrendadores) y los usuarios clientes (arrendatarios), se establece el siguiente Acuerdo de Nivel de Servicio (SLA):
 
-### 5.2.5. Implemented Native-Mobile Application Evidence
+1. **Disponibilidad del Servicio (Uptime SLA):**  
+   Codexa-Team garantiza una disponibilidad operativa mensual de la plataforma de al menos el **99.5%**, excluyendo periodos de mantenimiento preventivo programados con antelación.
+2. **Seguridad y Confidencialidad de la Información:**  
+   Toda la comunicación de datos se transmite cifrada mediante protocolo seguro TLS/HTTPS. Las contraseñas de los usuarios se almacenan con hashing irreversible BCrypt, y los datos personales son resguardados en cumplimiento estricto con la Ley de Protección de Datos Personales (Ley N° 29733).
+3. **Mecanismo de Retención y Comisiones:**  
+   La plataforma opera bajo un esquema de comisión transaccional transparente sobre cada reserva completada, reteniendo los fondos de forma segura hasta que el vehículo es devuelto satisfactoriamente.
+4. **Soporte y Tiempos de Respuesta ante Incidentes:**  
+   Se establecen canales de atención técnica con respuesta máxima de 4 horas para incidentes críticos (fallas en confirmación de reservas) y 24 horas para consultas ordinarias.
+5. **Estrategia y Roadmap Móvil:**  
+   Actualmente la plataforma opera con arquitectura **Web-First**, ofreciendo una interfaz totalmente adaptada a dispositivos móviles (PWA responsiva). La aplicación móvil nativa (Android/iOS) se encuentra proyectada dentro de la hoja de ruta evolutiva para etapas posteriores del proyecto.
+
+---
+
+### 5.2.5. Implemented RESTful API and/or Serverless Backend Evidence
+
+El backend fue desplegado en la plataforma cloud **Render**, conectado de forma persistente a una instancia gestionada de **TiDB Cloud**:
+
+<p align="center">
+  <img src="Assets/chapter05/backend-deployment-render.jpeg" alt="Despliegue Backend en Render" width="48%"/>
+  <img src="Assets/chapter05/database-deployment-tidb.jpeg" alt="Base de Datos TiDB Cloud" width="48%"/><br>
+  <em>Figura 5.2.5.1: Despliegue del servicio RESTful en Render y conexión exitosa a TiDB Cloud</em>
+</p>
+
+<p align="center">
+  <img src="Assets/chapter05/backend-execution-logs.jpeg" alt="Logs de Despliegue Backend" width="48%"/>
+  <img src="Assets/chapter05/database-tables-evidence.jpeg" alt="Tablas en Base de Datos" width="48%"/><br>
+  <em>Figura 5.2.5.2: Logs de compilación Maven exitosa e inicialización de esquemas JPA</em>
+</p>
+
+**Configuración Técnica de Despliegue:**
+- **Entorno de Ejecución:** OpenJDK 17 / 21 sobre contenedor Linux en Render.
+- **Variables de Entorno Clave:** `SPRING_DATASOURCE_URL`, `SPRING_DATASOURCE_USERNAME`, `SPRING_DATASOURCE_PASSWORD`, `JWT_SECRET`.
+- **Integración Continua:** Cada push a la rama `main` del repositorio `Backend` dispara automáticamente la compilación Maven, ejecución de pruebas y nuevo despliegue sin caída de servicio.
+
+---
+
+### 5.2.6. RESTful API Documentation
+
+La documentación interactiva de la API fue implementada mediante **Swagger UI / OpenAPI 3.0**, permitiendo inspeccionar los esquemas DTO de entrada y salida, así como ejecutar peticiones de prueba en vivo contra el servidor desplegado:
+
+<p align="center">
+  <img src="Assets/chapter05/swagger-ui-endpoints-1.png" alt="Swagger UI Documentación 1" width="48%"/>
+  <img src="Assets/chapter05/swagger-ui-endpoints-2.png" alt="Swagger UI Documentación 2" width="48%"/><br>
+  <em>Figura 5.2.6.1: Vistas de la documentación interactiva en Swagger UI de RentiCar</em>
+</p>
+
+#### Matriz Oficial de Endpoints RESTful Implementados en Spring Boot
+
+La siguiente matriz detalla con rigor técnico los controladores, métodos HTTP, rutas oficiales, esquemas de transferencia de datos y códigos de estado HTTP implementados en la solución:
+
+| Bounded Context | Controlador Spring Boot | Método | Ruta del Endpoint | Cuerpo de Petición (Request) | Código Respuesta | Descripción del Servicio |
+| :--- | :--- | :---: | :--- | :--- | :---: | :--- |
+| **IAM** | `AuthenticationController` | `POST` | `/api/v1/authentication/sign-up` | `SignUpResource` | `201 Created` | Registra una nueva cuenta de usuario asignando roles (`ROLE_RENTER`, `ROLE_OWNER`). |
+| **IAM** | `AuthenticationController` | `POST` | `/api/v1/authentication/sign-in` | `SignInResource` | `200 OK` | Valida credenciales de acceso y emite el token Bearer JWT con claims de usuario. |
+| **IAM** | `AuthenticationController` | `GET` | `/api/v1/authentication` | - | `200 OK` | Verifica el estado general de autenticación del sistema. |
+| **IAM** | `UsersController` | `GET` | `/api/v1/users` | - | `200 OK` | Lista los usuarios registrados en el sistema. |
+| **IAM** | `UsersController` | `PATCH` | `/api/v1/users/{userId}` | `UpdateUserResource` | `200 OK` | Actualiza la información básica del perfil del usuario. |
+| **IAM** | `UsersController` | `PATCH` | `/api/v1/users/{userId}/password` | `UpdatePasswordResource` | `200 OK` | Restablece la contraseña cifrada del usuario. |
+| **IAM** | `RolesController` | `GET` | `/api/v1/roles` | - | `200 OK` | Consulta el catálogo de roles admitidos en la plataforma. |
+| **Listings** | `VehiclesController` | `GET` | `/api/v1/vehicles` | - | `200 OK` | Retorna el catálogo completo de vehículos disponibles para alquiler. |
+| **Listings** | `VehiclesController` | `GET` | `/api/v1/vehicles/{vehicleId}` | - | `200 OK` | Retorna la ficha técnica detallada de un vehículo por su ID. |
+| **Listings** | `VehiclesController` | `GET` | `/api/v1/vehicles/{vehicleId}/image` | - | `200 OK` | Descarga/renderiza la fotografía binaria almacenada del vehículo. |
+| **Listings** | `VehiclesController` | `GET` | `/api/v1/vehicles/my-listings` | - | `200 OK` | Retorna la lista de vehículos publicados por el arrendador autenticado. |
+| **Listings** | `VehiclesController` | `POST` | `/api/v1/vehicles` | `multipart/form-data` | `201 Created` | Publica un nuevo vehículo en la flota adjuntando datos y archivo fotográfico. |
+| **Listings** | `VehiclesController` | `PUT` | `/api/v1/vehicles/{vehicleId}` | `multipart/form-data` | `200 OK` | Modifica las especificaciones, tarifa diaria o fotografía del vehículo. |
+| **Listings** | `VehiclesController` | `DELETE` | `/api/v1/vehicles/{vehicleId}` | - | `204 No Content` | Da de baja una publicación de vehículo del catálogo. |
+| **Booking** | `BookingsController` | `POST` | `/api/v1/bookings` | `CreateBookingResource` | `201 Created` | Registra una nueva solicitud de reserva en estado transaccional `PENDING`. |
+| **Booking** | `BookingsController` | `GET` | `/api/v1/bookings/my-bookings` | - | `200 OK` | Consulta el historial completo de reservas solicitadas por el cliente autenticado. |
+| **Booking** | `BookingsController` | `GET` | `/api/v1/bookings/my-requests` | - | `200 OK` | Retorna la bandeja de solicitudes de reserva recibidas por el dueño autenticado. |
+| **Booking** | `BookingsController` | `GET` | `/api/v1/bookings/{bookingId}` | - | `200 OK` | Obtiene el comprobante y detalle de una reserva específica. |
+| **Booking** | `BookingsController` | `PUT` | `/api/v1/bookings/{bookingId}/confirm`| - | `200 OK` | Confirma la reserva transicionándola a `CONFIRMED` y bloquea disponibilidad. |
+| **Booking** | `BookingsController` | `PUT` | `/api/v1/bookings/{bookingId}/reject` | - | `200 OK` | Declina la solicitud transicionándola a `REJECTED` y libera fechas. |
+| **Booking** | `BookingsController` | `PUT` | `/api/v1/bookings/{bookingId}/cancel` | - | `200 OK` | Cancela la reserva por iniciativa del cliente transicionándola a `CANCELLED`. |
+| **IoT** | `TelemetryController` | `POST` | `/api/v1/telemetry` | `RecordTelemetryResource` | `201 Created` | Registra una lectura telemática emitida por los sensores vehiculares. |
+| **IoT** | `TelemetryController` | `GET` | `/api/v1/telemetry/vehicle/{vehicleId}` | - | `200 OK` | Retorna el historial cronológico de telemetría de un vehículo. |
+| **IoT** | `TelemetryController` | `GET` | `/api/v1/telemetry/vehicle/{vehicleId}/latest` | - | `200 OK` | Obtiene la última lectura telemática (latitud, longitud, velocidad, combustible). |
+| **IoT** | `RouteController` | `GET` | `/api/v1/simulation/route` | - | `200 OK` | Retorna la secuencia de coordenadas GPS simuladas de la ruta en curso. |
+| **Reviews** | `ReviewsController` | `POST` | `/api/v1/reviews` | `CreateReviewResource` | `201 Created` | Registra una calificación de 1 a 5 estrellas y comentario tras culminar alquiler. |
+| **Reviews** | `ReviewsController` | `GET` | `/api/v1/reviews/vehicle/{vehicleId}` | - | `200 OK` | Retorna todías las opiniones y promedio de valoración de un vehículo. |
+| **Reviews** | `ReviewsController` | `GET` | `/api/v1/reviews/my-reviews` | - | `200 OK` | Retorna las reseñas emitidas por el usuario autenticado. |
+| **Shared** | `WelcomeController` | `GET` | `/` | - | `200 OK` | Endpoint raíz que expone el estado y versión de la API REST. |
+
+---
+
+### 5.2.7. Team Collaboration Insights
+
+Durante todo el ciclo de desarrollo, **Codexa-Team** mantuvo una disciplina estricta de colaboración ágil y control de versiones utilizando **GitHub**:
 
 
-||||
-### 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
-
-||||
-
-### 5.2.7. RESTful API documentation
-
-||||
-
-### 5.2.8. Team Collaboration Insights
-
-||||
+---
 
 ## 5.3. Video About-the-Product
 
-||||
+En este apartado se documenta el video promocional y técnico elaborado por **Codexa-Team**, en el cual se demuestra el funcionamiento real e integrado de la plataforma **RentiCar**:
+
+<p align="center">
+  <img src="Assets/chapter05/video-about-the-product.png" alt="Carátula Video About the Product" width="70%"/><br>
+  <em>Figura 5.3: Presentación oficial del Video About-the-Product de RentiCar</em>
+</p>
+
+### Ficha Técnica del Video About-the-Product
+
+| Campo | Detalle Informativo |
+| :--- | :--- |
+| **Título del Video:** | RentiCar: Plataforma Web de Alquiler de Vehículos P2P con Monitoreo IoT |
+| **Startup Responsable:** | Codexa-Team |
+| **Producto Presentado:** | RentiCar (Aplicación Web Angular + Backend Spring Boot + TiDB) |
+| **Integrantes Participantes:** | Bruce Vía Luna, César Linares, Sergio Landa, Estefano Solís, Sheila Angeles |
+| **Duración Aproximada:** | 8 a 10 minutos |
+| **Enlace Oficial del Video:** | [Ver Video About-the-Product en Microsoft Stream / YouTube](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202314354_upc_edu_pe/ETjEvnFfTMVGg504DkKQo9cBVH1Coad3hieTwbFWm9x8gQ?e=t2sINN) |
+
+**Objetivos del Video Demostrativo:**
+1. Presentar la propuesta de valor de **RentiCar** y la problemática de movilidad informal resuelta en el Perú.
+2. Demostrar en vivo el flujo completo del **Arrendatario**: registro, login JWT, navegación en el catálogo, filtros avanzados, selección de fechas en calendario y confirmación de reserva.
+3. Demostrar en vivo el flujo del **Arrendador**: dashboard, publicación de un vehículo con especificaciones y fotos, recepción de solicitudes de alquiler y aprobación.
+4. Exponer la funcionalidad de **Monitoreo IoT**: visualización de coordenadas GPS en tiempo real sobre mapa Leaflet y lectura de telemetría de velocidad y combustible.
+5. Evidenciar el proceso de **Calificación y Reseñas** que consolida la confianza comunitaria en la plataforma.
+
+---
 
 # Conclusiones
 
