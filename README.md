@@ -830,7 +830,7 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
 
 <table align="center">
   <tr>
-    <th colspan="2" style="text-align:center">Entrevista 3 - Segmento 1: Dueño de Vehículo (Arrendador)</th>
+    <th colspan="2" style="text-align:center">Entrevista 3 </th>
   </tr>
   <tr>
     <td><strong>Entrevistado</strong></td>
