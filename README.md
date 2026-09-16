@@ -1,7 +1,7 @@
 <div align="center">
 
 <p align="center">
-  <img src="assets/chapter01/upc-logo-transparente.png" alt="UPC Logo" width="160"/>
+  <img src="Assets/chapter01/upc-logo-transparente.png" alt="UPC Logo" width="160"/>
 </p>
 
 <h3 align="center">
@@ -265,7 +265,7 @@ Convertirnos en la plataforma líder de alquiler de vehículos en el Perú y exp
         <td><b>Nombre:</b> Solis Campos, Estefano Sebastian <br>
             <b>Carrera:</b> Ingenieria de Software <br>
         <b>Descripcion:</b> Soy un estudiante apasionado de la carrera de Ingeniería de Software en la UPC. Me entusiasma aplicar mis conocimientos en el desarrollo de soluciones digitales innovadoras, diseño de experiencia de usuario (UX/UI) y gestión de requerimientos. Comprometido con el rigor técnico, la excelencia operativa y el aprendizaje continuo en ingeniería.</td>
-        <td><img src="assets/chapter01/estefano-solis.jpeg" alt="Estefano Solis" width="150"></td>
+        <td><img src="Assets/chapter01/estefano-solis.jpeg" alt="Estefano Solis" width="150"></td>
     </tr>
     <tr>
         <td><b>Nombre:</b> Sheila Angeles Rojas <br>
@@ -391,9 +391,9 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
 
 | Nombre del Competidor | Descripción |
 | :---: | :--- |
-| **Peru Rent a Car** <br><img src="assets/chapter02/competitor-perurentcar.jpg" alt="PeruRentCar" width="220"><br>[Sitio Web](https://www.perurentacar.com/) | Empresa peruana tradicional con más de 20 años en el rubro de alquiler vehicular en Lima y principales provincias. Dispone de una flota propia diversa (sedanes, SUVs y minivans) orientada a turistas y clientes corporativos. Su modelo operativo se fundamenta en reservas telefónicas/web asistidas con atención presencial, contratos impresos y depósitos de garantía elevados retenidos en tarjeta de crédito, careciendo de digitalización P2P integral y telemetría en tiempo real accesible para el cliente. |
-| **Clase A Rent a Car** <br><img src="assets/chapter02/competitor-clasearentcar.png" alt="ClaseARentCar" width="220"><br>[Sitio Web](https://www.alquilerautoslima.net/) | Proveedor local de alquiler vehicular enfocado en el sector ejecutivo y turístico de gama media-alta en Lima Metropolitana. Destaca por mantener vehículos modernos y ofrecer atención personalizada vía WhatsApp o vía telefónica. Aunque brinda flexibilidad en contratos temporales, sus procesos de validación de identidad son manuales y presenciales, sin autogestión digital completa ni monitoreo IoT interactivo. |
-| **Rento** <br><img src="assets/chapter02/competitor-rentorent.jpg" alt="RentoRent" width="220"><br>[Sitio Web](https://rento.pe/) | Plataforma digital pionera en el modelo peer-to-peer (P2P) en el Perú, que conecta a propietarios de autos con usuarios que buscan alquilar por días. Incorpora seguros de cobertura vehicular y verificación básica de usuarios. Si bien es el competidor tecnológico más directo, presenta cobertura limitada fuera de Lima y aún no integra telemetría activa IoT para el seguimiento dinámico de trayectos ni soporte automatizado avanzado para la resolución de disputas contractuales. |
+| **Peru Rent a Car** <br><img src="Assets/chapter02/competitor-perurentcar.jpg" alt="PeruRentCar" width="220"><br>[Sitio Web](https://www.perurentacar.com/) | Empresa peruana tradicional con más de 20 años en el rubro de alquiler vehicular en Lima y principales provincias. Dispone de una flota propia diversa (sedanes, SUVs y minivans) orientada a turistas y clientes corporativos. Su modelo operativo se fundamenta en reservas telefónicas/web asistidas con atención presencial, contratos impresos y depósitos de garantía elevados retenidos en tarjeta de crédito, careciendo de digitalización P2P integral y telemetría en tiempo real accesible para el cliente. |
+| **Clase A Rent a Car** <br><img src="Assets/chapter02/competitor-clasearentcar.png" alt="ClaseARentCar" width="220"><br>[Sitio Web](https://www.alquilerautoslima.net/) | Proveedor local de alquiler vehicular enfocado en el sector ejecutivo y turístico de gama media-alta en Lima Metropolitana. Destaca por mantener vehículos modernos y ofrecer atención personalizada vía WhatsApp o vía telefónica. Aunque brinda flexibilidad en contratos temporales, sus procesos de validación de identidad son manuales y presenciales, sin autogestión digital completa ni monitoreo IoT interactivo. |
+| **Rento** <br><img src="Assets/chapter02/competitor-rentorent.jpg" alt="RentoRent" width="220"><br>[Sitio Web](https://rento.pe/) | Plataforma digital pionera en el modelo peer-to-peer (P2P) en el Perú, que conecta a propietarios de autos con usuarios que buscan alquilar por días. Incorpora seguros de cobertura vehicular y verificación básica de usuarios. Si bien es el competidor tecnológico más directo, presenta cobertura limitada fuera de Lima y aún no integra telemetría activa IoT para el seguimiento dinámico de trayectos ni soporte automatizado avanzado para la resolución de disputas contractuales. |
 
 
 ### 2.1.1. Análisis competitivo
@@ -732,7 +732,7 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
   </tr>
   <tr>
     <td colspan="2" style="text-align:center"><br>
-      <img src="assets/chapter02/interview-oriana-caceres.png" alt="Segmento 1 entrevista 1 - Oriana Caceres" width="1000"><br>
+      <img src="Assets/chapter02/interview-oriana-caceres.png" alt="Segmento 1 entrevista 1 - Oriana Caceres" width="1000"><br>
     </td>
   </tr>
 </table>
@@ -773,7 +773,7 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
   </tr>
   <tr>
     <td colspan="2" style="text-align:center"><br>
-      <img src="assets/chapter02/interview-margot-arnable.png" alt="Segmento 1 entrevista 2 - Margot Arnable" width="1000"><br>
+      <img src="Assets/chapter02/interview-margot-arnable.png" alt="Segmento 1 entrevista 2 - Margot Arnable" width="1000"><br>
     </td>
   </tr>
 </table>
@@ -812,7 +812,7 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
   </tr>
   <tr>
     <td colspan="2" style="text-align:center"><br>
-      <img src="assets/chapter02/interview-noelia-gomez.jpeg" alt="Segmento 1 Entrevista 3 - Noelia Gomez" width="350"><br>
+      <img src="Assets/chapter02/interview-noelia-gomez.jpeg" alt="Segmento 1 Entrevista 3 - Noelia Gomez" width="350"><br>
     </td>
   </tr>
 </table>
@@ -857,7 +857,7 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
   </tr>
   <tr>
     <td colspan="2" style="text-align:center"><br>
-      <img src="assets/chapter02/interview-sebastian-altamirano.png" alt="Segmento 2 entrevista 1 - Sebastian Altamirano" width="1000"><br>
+      <img src="Assets/chapter02/interview-sebastian-altamirano.png" alt="Segmento 2 entrevista 1 - Sebastian Altamirano" width="1000"><br>
     </td>
   </tr>
 </table>
@@ -877,13 +877,13 @@ la plataforma.
 ###### Segmento Objetivo 1 (Arrendador de vehículos)
 
 <p align="center">
-  <img src="assets/chapter02/user-persona-jordan-owner.png" alt="User Persona Arrendador - Jordan Dario" width="650"/>
+  <img src="Assets/chapter02/user-persona-jordan-owner.png" alt="User Persona Arrendador - Jordan Dario" width="650"/>
 </p>
 
 ###### Segmento Objetivo 2 (Arrendatario de vehículos)
 
 <p align="center">
-  <img src="assets/chapter02/user-persona-paul-renter.png" alt="User Persona Arrendatario - Paul Gamero" width="650"/>
+  <img src="Assets/chapter02/user-persona-paul-renter.png" alt="User Persona Arrendatario - Paul Gamero" width="650"/>
 </p>
 
 ### 2.3.2. User Task Matrix
@@ -928,7 +928,7 @@ proceso actual y evidenciando las oportunidades de mejora que justifican la prop
 nueva aplicación.
 
 ###### Segmento Objetivo 1 (Arrendador de vehículos)
-<img src="assets/chapter02/user-journey-map-jordan.png" width=600px>
+<img src="Assets/chapter02/user-journey-map-jordan.png" width=600px>
 El recorrido del arrendador refleja un flujo de trabajo que no resulta del todo eficiente ni satisfactorio. Aunque 
 logra captar clientes mediante plataformas gratuitas de amplia difusión como Facebook o WhatsApp, se muestra 
 frustrado por la escasa seguridad y falta de garantías que estas herramientas ofrecen. A pesar de ello, continúa 
@@ -936,7 +936,7 @@ utilizándolas debido a su alcance y practicidad, aunque reconoce la necesidad d
 y profesional.
 
 ###### Segmento Objetivo 2 (Arrendatario de vehículos)
-<img src="assets/chapter02/user-journey-map-paul.png" width=600px>
+<img src="Assets/chapter02/user-journey-map-paul.png" width=600px>
 Por el lado del arrendatario, la experiencia está marcada por la limitada disponibilidad de opciones confiables y 
 la inseguridad que transmiten las plataformas gratuitas. Esta situación genera desconfianza y lo obliga a depender 
 de la identificación previa de arrendadores de confianza, reduciendo el uso de dichas plataformas a casos 
@@ -952,10 +952,10 @@ orientar el diseño de la solución hacia una experiencia más centrada en el us
 
 
 ###### Segmento Objetivo 1 (Arrendador de vehículos)
-<img src="assets/chapter02/empathy-mapping-segment-1.png" width=600px>
+<img src="Assets/chapter02/empathy-mapping-segment-1.png" width=600px>
 
 ###### Segmento Objetivo 2 (Arrendatario de vehículos)
-<img src="assets/chapter02/empathy-mapping-segment-2.png" width=600px>
+<img src="Assets/chapter02/empathy-mapping-segment-2.png" width=600px>
 
 ### 2.3.5. As-is Scenario Mapping
 
@@ -1601,10 +1601,10 @@ como ejes principales de la plataforma.
 
 
 ###### Segmento Objetivo 1 (Arrendador de vehículos)
-<img src="assets/chapter03/impact-mapping-segment-1.png" width=600px>
+<img src="Assets/chapter03/impact-mapping-segment-1.png" width=600px>
 
 ###### Segmento Objetivo 2 (Arrendatario de vehículos)
-<img src="assets/chapter03/impact-mapping-segment-2.png" width=600px>
+<img src="Assets/chapter03/impact-mapping-segment-2.png" width=600px>
 
 # Capítulo IV: Product Design
 ## 4.1. Style Guidelines
@@ -1621,24 +1621,24 @@ componentes interactivos —como botones— y su relación directa con la experi
       y menús. Este color representa seguridad y confianza, ideal para una plataforma de alquiler
       de vehículos.
       <br>
-      <br><img src="assets/chapter04/styleguide-color-primary.png" alt="primariocolor" width="500" ><br>
+      <br><img src="Assets/chapter04/styleguide-color-primary.png" alt="primariocolor" width="500" ><br>
       <br>
     - **Color Secundario**: #52B6F2 (Azul claro) – Es el color de los botones principales,
       como "Sign up" y "Search". Este color añade un toque de frescura y accesibilidad, además
       de hacer que las llamadas a la acción sean visualmente atractivas.
       <br>
-      <br><img src="assets/chapter04/styleguide-color-secondary.png" alt="secundaricolor" width="500"><br>
+      <br><img src="Assets/chapter04/styleguide-color-secondary.png" alt="secundaricolor" width="500"><br>
       <br>
     - **Color de Fondo**: #FFFFFF (Blanco) – Se utiliza para el fondo general de la página,
       proporcionando claridad y asegurando que los elementos visuales no se sobrecarguen.
       <br>
-      <br><img src="assets/chapter04/styleguide-color-background.png" alt="fondocolor" width="500"><br>
+      <br><img src="Assets/chapter04/styleguide-color-background.png" alt="fondocolor" width="500"><br>
       <br>
     - **Colore Secundarios de Contraste**: #F1F1F1 (Gris claro) para las áreas de soporte
       visual, como formularios o tarjetas de contenido. Además, #1F2A44 (gris oscuro) se usa
       para textos secundarios y menús.
       <br>
-      <br><img src="assets/chapter04/styleguide-color-contrast.png" alt="contrastecolor" width="500"><br>
+      <br><img src="Assets/chapter04/styleguide-color-contrast.png" alt="contrastecolor" width="500"><br>
       <br>
 
 
@@ -1650,7 +1650,7 @@ componentes interactivos —como botones— y su relación directa con la experi
     - **Regular**: Para el cuerpo del texto.
     - **Light**: Para textos menos relevantes o secundarios.<br>
       <br>
-      <img src="assets/chapter04/styleguide-typography-extrabold.png" alt="Typography" width="500"><br>
+      <img src="Assets/chapter04/styleguide-typography-extrabold.png" alt="Typography" width="500"><br>
       <br>
 
 - **Icons**: <br>
@@ -1658,7 +1658,7 @@ componentes interactivos —como botones— y su relación directa con la experi
   Se utilizan para una comunicación clara y rápida, permitiendo a los usuarios identificar
   fácilmente las acciones disponibles.<br>
   <br>
-  <img src="assets/chapter04/styleguide-iconography.png" alt="Icons" width="500"><br>
+  <img src="Assets/chapter04/styleguide-iconography.png" alt="Icons" width="500"><br>
   <br>
 
 - **Buttons**: <br>
@@ -1666,7 +1666,7 @@ componentes interactivos —como botones— y su relación directa con la experi
   #52B6F2 (Azul claro) para las acciones principales y bordes redondeados para mejorar la
   interacción en dispositivos táctiles.<br>
   <br>
-  <img src="assets/chapter04/styleguide-ui-buttons.png" alt="Buttons" width="500"><br>
+  <img src="Assets/chapter04/styleguide-ui-buttons.png" alt="Buttons" width="500"><br>
   <br>
 
 - **Spacing and Layout**: <br>
@@ -1687,7 +1687,7 @@ componentes interactivos —como botones— y su relación directa con la experi
   estándares de accesibilidad (WCAG). Todo el texto será legible y fácil de leer, con
   alternativas de alto contraste para usuarios con discapacidades visuales.<br>
   <br>
-  <img src="assets/chapter04/styleguide-color-accessibility.png" alt="Buttons" width="500"><br>
+  <img src="Assets/chapter04/styleguide-color-accessibility.png" alt="Buttons" width="500"><br>
   <br>
 
 - **Hover and Active States**:
@@ -1776,13 +1776,13 @@ encontrando siempre las funciones más relevantes según su objetivo.
 ## 4.3. Landing Page UI Design
 ### 4.3.1. Landing Page Wireframe
 
-<img src="assets/chapter04/landing-page-wireframe.png" alt="Buttons" width="500"><br>
+<img src="Assets/chapter04/landing-page-wireframe.png" alt="Buttons" width="500"><br>
 
 Link del Figma: https://www.figma.com/design/PChWJ99signLAO8NcRCRrY/Landing-RentiCar?node-id=2461-182&t=FAwGoGSyUJDdEzex-1
 
 ### 4.3.2. Landing Page Mock-up
 
-<img src="assets/chapter04/landing-page-mockup.png" alt="Buttons" width="500"><br>
+<img src="Assets/chapter04/landing-page-mockup.png" alt="Buttons" width="500"><br>
 
 Link del Figma: https://www.figma.com/design/PChWJ99signLAO8NcRCRrY/Landing-RentiCar?node-id=2461-182&t=FAwGoGSyUJDdEzex-1
 
@@ -1800,39 +1800,39 @@ Los wireframes de RentiCar se han diseñado para establecer la estructura fundam
     Permite a los usuarios crear una cuenta o acceder a la plataforma. El formulario de registro solicita información básica y permite elegir el tipo de perfil (arrendador o arrendatario) para personalizar la experiencia desde el inicio.
 
     **1. Inicio de Sesión (Sign In)**
-    ![Pantalla de inicio de sesión](assets/chapter04/mockup-iam-sign-in.png)
+    ![Pantalla de inicio de sesión](Assets/chapter04/mockup-iam-sign-in.png)
 
     **2. Registro de Arrendatario (Tenant Register)**
-    ![Pantalla de registro para arrendatarios](assets/chapter04/mockup-iam-tenant-register.png)
+    ![Pantalla de registro para arrendatarios](Assets/chapter04/mockup-iam-tenant-register.png)
 
     **3. Registro de Arrendador (Hirer Register)**
-    ![Pantalla de registro para arrendadores](assets/chapter04/mockup-iam-owner-register.png)
+    ![Pantalla de registro para arrendadores](Assets/chapter04/mockup-iam-owner-register.png)
 
     **4. Recuperación de Contraseña**
-    ![Pantalla para recuperar la contraseña](assets/chapter04/mockup-iam-password-recovery.png)
+    ![Pantalla para recuperar la contraseña](Assets/chapter04/mockup-iam-password-recovery.png)
 
 2.  *Dashboard del Arrendador*
     Muestra un resumen de los vehículos publicados, las reservas activas y las ganancias generadas. Ofrece accesos directos para añadir un nuevo vehículo y gestionar las publicaciones existentes.
 
-    ![Flujo de búsqueda y reserva de un vehículo](assets/chapter04/mockup-renter-vehicle-search.png)
+    ![Flujo de búsqueda y reserva de un vehículo](Assets/chapter04/mockup-renter-vehicle-search.png)
 
-    ![Flujo de finalización y calificación de un alquiler](assets/chapter04/mockup-renter-rating-review.png)
+    ![Flujo de finalización y calificación de un alquiler](Assets/chapter04/mockup-renter-rating-review.png)
 
-    ![Pantalla de gestión de reservas del arrendatario](assets/chapter04/mockup-renter-booking-management.png)
+    ![Pantalla de gestión de reservas del arrendatario](Assets/chapter04/mockup-renter-booking-management.png)
 
-    ![Pantalla de reservas del arrendatario](assets/chapter04/mockup-renter-booking-detail.png)
+    ![Pantalla de reservas del arrendatario](Assets/chapter04/mockup-renter-booking-detail.png)
 
 
 3.  *Dashboard del Arrendatario*
     Presenta un resumen de las reservas realizadas, vehículos recomendados y accesos rápidos para buscar nuevas opciones. El diseño se enfoca en facilitar la continuación de una búsqueda o la gestión de un alquiler en curso.
 
-    ![Flujo de administración de solicitudes de reserva por el arrendador](assets/chapter04/mockup-owner-booking-requests.png)
+    ![Flujo de administración de solicitudes de reserva por el arrendador](Assets/chapter04/mockup-owner-booking-requests.png)
 
-    ![Pantalla de edición de perfil del arrendador](assets/chapter04/mockup-owner-edit-profile.png)
+    ![Pantalla de edición de perfil del arrendador](Assets/chapter04/mockup-owner-edit-profile.png)
 
-    ![Pantalla de gestión de vehículos del arrendador](assets/chapter04/mockup-owner-fleet-management.png)
+    ![Pantalla de gestión de vehículos del arrendador](Assets/chapter04/mockup-owner-fleet-management.png)
 
-    ![Pantalla de primer acceso y vista general para el arrendador](assets/chapter04/mockup-owner-dashboard-overview.png)
+    ![Pantalla de primer acceso y vista general para el arrendador](Assets/chapter04/mockup-owner-dashboard-overview.png)
 
     Muestra un resumen de los vehículos publicados, las reservas activas y las ganancias generadas. Ofrece accesos directos para añadir un nuevo vehículo y gestionar las publicaciones existentes.
 
@@ -1846,55 +1846,55 @@ Los wireflows diagraman las rutas que los usuarios siguen para completar tareas 
 
 *User Goal:* Como usuario, quiero gestionar mi perfil de forma integral, pudiendo editar mi información personal, cambiar mi foto y cargar los documentos necesarios para validar mi cuenta.
 
-![Wireflow para la gestión del perfil del arrendatario](assets/chapter04/wireflow-renter-profile.png)
+![Wireflow para la gestión del perfil del arrendatario](Assets/chapter04/wireflow-renter-profile.png)
 
 - Wireflow
 
-![Wireflow](assets/chapter04/wireflow-renter-dashboard-1.png)
+![Wireflow](Assets/chapter04/wireflow-renter-dashboard-1.png)
 
 *User Goal:* Como arrendatario, quiero administrar el ciclo de vida completo de mis reservas, desde ver sus detalles y cancelarlas, hasta dejar una reseña una vez finalizado el alquiler.
 
-![Wireflow para la gestión completa de reservas del arrendatario](assets/chapter04/wireflow-renter-my-bookings.png)
+![Wireflow para la gestión completa de reservas del arrendatario](Assets/chapter04/wireflow-renter-my-bookings.png)
 
 - Wireflow
 
-![Wireflow](assets/chapter04/wireflow-renter-dashboard-2.png)
+![Wireflow](Assets/chapter04/wireflow-renter-dashboard-2.png)
 
 *User Goal:* Como arrendatario, quiero buscar un vehículo con filtros específicos, ver sus detalles en profundidad y completar el proceso de reserva de manera fluida.
 
-![Wireflow para la búsqueda y reserva de un vehículo](assets/chapter04/wireflow-renter-search.png)
+![Wireflow para la búsqueda y reserva de un vehículo](Assets/chapter04/wireflow-renter-search.png)
 
 - Wireflow
 
-![Wireflow](assets/chapter04/wireflow-renter-reservations.png)
+![Wireflow](Assets/chapter04/wireflow-renter-reservations.png)
 
 *User Goal:* Como arrendatario, quiero acceder desde mi dashboard a la gestión de mis reservas activas para poder ver sus detalles o cancelarlas si es necesario.
 
-![Wireflow para acceder a la gestión de reservas desde el dashboard](assets/chapter04/wireflow-renter-dashboard-reservations.png)
+![Wireflow para acceder a la gestión de reservas desde el dashboard](Assets/chapter04/wireflow-renter-dashboard-reservations.png)
 
 *User Goal:* Como arrendatario, quiero poder explorar las recomendaciones de vehículos directamente desde mi dashboard y realizar una reserva de forma rápida y sencilla.
 
-![Wireflow para reservar un vehículo recomendado desde el dashboard](assets/chapter04/wireflow-renter-dashboard-book.png)
+![Wireflow para reservar un vehículo recomendado desde el dashboard](Assets/chapter04/wireflow-renter-dashboard-book.png)
 
 ### 2. Segmento 2: Arrendadores
 
 *User Goal:* Como arrendador, quiero ver un resumen rápido del estado de mi negocio, incluyendo mis vehículos publicados y las reservas pendientes, tan pronto como inicie sesión.
 
-![Wireflow del dashboard del arrendador](assets/chapter04/wireflow-owner-dashboard-vehicles.png)
+![Wireflow del dashboard del arrendador](Assets/chapter04/wireflow-owner-dashboard-vehicles.png)
 
 *User Goal (Crear):* Como arrendador, quiero añadir un nuevo vehículo a la plataforma de forma rápida y sencilla para empezar a alquilarlo.
 *User Goal (Editar):* Como arrendador, quiero poder modificar fácilmente los detalles de mis publicaciones existentes, como el precio o la descripción, para mantener la información actualizada.
 *User Goal (Eliminar):* Como arrendador, quiero retirar de la plataforma los vehículos que ya no están disponibles para alquilar, con una simple acción de eliminación.
 
-![Wireflow de la gestión de vehículos del arrendador](assets/chapter04/wireflow-owner-fleet-management.png)
+![Wireflow de la gestión de vehículos del arrendador](Assets/chapter04/wireflow-owner-fleet-management.png)
 
 *User Goal:* Como arrendador, quiero gestionar las solicitudes de alquiler de mis vehículos de manera eficiente, pudiendo aceptarlas o rechazarlas desde un panel de control.
 
-![Wireflow de la administración de solicitudes de reserva](assets/chapter04/wireflow-owner-booking-requests.png)
+![Wireflow de la administración de solicitudes de reserva](Assets/chapter04/wireflow-owner-booking-requests.png)
 
 *User Goal:* Como arrendador, quiero mantener mi perfil actualizado con mi información de contacto y documentos de garantía para generar confianza en los clientes.
 
-![Wireflow de la edición del perfil del arrendador](assets/chapter04/wireflow-owner-profile.png)
+![Wireflow de la edición del perfil del arrendador](Assets/chapter04/wireflow-owner-profile.png)
 
 ### 4.6.3. Web Applications Mock-ups
 
@@ -1908,28 +1908,28 @@ Este módulo centraliza las interfaces de registro, inicio de sesión seguro y r
   Permite a los usuarios registrados acceder a su sesión ingresando su correo y contraseña, con validaciones en tiempo real y opción de recordar credenciales.
 
   <p align="center">
-    <img src="assets/chapter04/mockup-iam-sign-in.png" alt="Pantalla de inicio de sesión" width="650"/>
+    <img src="Assets/chapter04/mockup-iam-sign-in.png" alt="Pantalla de inicio de sesión" width="650"/>
   </p>
 
 - **Pantalla de Registro para Arrendatarios (Tenant Register):**  
   Formulario intuitivo donde los clientes ingresan sus datos personales, correo, teléfono y contraseña para crear su cuenta de arrendatario.
 
   <p align="center">
-    <img src="assets/chapter04/mockup-iam-tenant-register.png" alt="Registro para Arrendatarios" width="650"/>
+    <img src="Assets/chapter04/mockup-iam-tenant-register.png" alt="Registro para Arrendatarios" width="650"/>
   </p>
 
 - **Pantalla de Registro para Arrendadores (Hirrer Register):**  
   Interfaz orientada a propietarios de vehículos que desean publicar unidades, solicitando datos de contacto y verificación de identidad.
 
   <p align="center">
-    <img src="assets/chapter04/mockup-iam-owner-register.png" alt="Registro para Arrendadores" width="650"/>
+    <img src="Assets/chapter04/mockup-iam-owner-register.png" alt="Registro para Arrendadores" width="650"/>
   </p>
 
 - **Pantalla de Recuperación de Contraseña:**  
   Permite ingresar el correo registrado para recibir un enlace seguro de restablecimiento de contraseña mediante token de vigencia limitada.
 
   <p align="center">
-    <img src="assets/chapter04/mockup-iam-password-recovery.png" alt="Recuperación de Contraseña" width="650"/>
+    <img src="Assets/chapter04/mockup-iam-password-recovery.png" alt="Recuperación de Contraseña" width="650"/>
   </p>
 
 ---
@@ -1942,28 +1942,28 @@ Interfaces diseñadas para que el arrendatario explore el catálogo, configure s
   Vista principal de catálogo con cuadrícula de autos, filtros avanzados por marca, rango de precio, tipo de combustible y botón directo para iniciar la reserva.
 
   <p align="center">
-    <img src="assets/chapter04/mockup-renter-vehicle-search.png" alt="Búsqueda y Reserva de un Vehículo" width="650"/>
+    <img src="Assets/chapter04/mockup-renter-vehicle-search.png" alt="Búsqueda y Reserva de un Vehículo" width="650"/>
   </p>
 
 - **Gestión de Reservas del Arrendatario:**  
   Panel interactivo que consolida las reservas activas, pendientes y concluidas del usuario, mostrando estado actual e información del auto.
 
   <p align="center">
-    <img src="assets/chapter04/mockup-renter-booking-management.png" alt="Gestión de Reservas del Arrendatario" width="650"/>
+    <img src="Assets/chapter04/mockup-renter-booking-management.png" alt="Gestión de Reservas del Arrendatario" width="650"/>
   </p>
 
 - **Detalle de Reserva y Comprobante:**  
   Ficha descriptiva que desglosa el cálculo de días reservados, tarifa pactada por jornada, importe total en soles y datos de contacto del propietario.
 
   <p align="center">
-    <img src="assets/chapter04/mockup-renter-booking-detail.png" alt="Detalle de Reservas" width="650"/>
+    <img src="Assets/chapter04/mockup-renter-booking-detail.png" alt="Detalle de Reservas" width="650"/>
   </p>
 
 - **Finalización y Calificación de un Alquiler:**  
   Modal que se activa al culminar el periodo de alquiler, permitiendo puntuar con estrellas (1 a 5) y redactar una reseña pública sobre la experiencia.
 
   <p align="center">
-    <img src="assets/chapter04/mockup-renter-rating-review.png" alt="Finalización y Calificación de un Alquiler" width="650"/>
+    <img src="Assets/chapter04/mockup-renter-rating-review.png" alt="Finalización y Calificación de un Alquiler" width="650"/>
   </p>
 
 ---
@@ -1976,28 +1976,28 @@ Interfaces especializadas para que los propietarios gestionen sus publicaciones,
   Tablero de control con métricas de ingresos, cantidad de vehículos activos, reservas en curso y accesos rápidos a publicaciones.
 
   <p align="center">
-    <img src="assets/chapter04/mockup-owner-dashboard-overview.png" alt="Dashboard del Arrendador" width="650"/>
+    <img src="Assets/chapter04/mockup-owner-dashboard-overview.png" alt="Dashboard del Arrendador" width="650"/>
   </p>
 
 - **Gestión y Publicación de Vehículos:**  
   Listado de la flota registrada del arrendador, con opciones para agregar un nuevo auto, editar tarifa diaria, pausar disponibilidad o retirar publicaciones.
 
   <p align="center">
-    <img src="assets/chapter04/mockup-owner-fleet-management.png" alt="Gestión de Vehículos" width="650"/>
+    <img src="Assets/chapter04/mockup-owner-fleet-management.png" alt="Gestión de Vehículos" width="650"/>
   </p>
 
 - **Administración de Solicitudes de Reserva:**  
   Bandeja de solicitudes entrantes donde el propietario revisa la identidad del solicitante, fechas deseadas y puede aceptar o rechazar el alquiler.
 
   <p align="center">
-    <img src="assets/chapter04/mockup-owner-booking-requests.png" alt="Administración de Solicitudes de Reserva" width="650"/>
+    <img src="Assets/chapter04/mockup-owner-booking-requests.png" alt="Administración de Solicitudes de Reserva" width="650"/>
   </p>
 
 - **Edición de Perfil de Propietario:**  
   Formulario para actualizar información personal, número telefónico de contacto y carga de documentos de garantía.
 
   <p align="center">
-    <img src="assets/chapter04/mockup-owner-edit-profile.png" alt="Edición de Perfil de Arrendador" width="650"/>
+    <img src="Assets/chapter04/mockup-owner-edit-profile.png" alt="Edición de Perfil de Arrendador" width="650"/>
   </p>
 
 ---
@@ -2143,7 +2143,7 @@ A partir de los talleres de EventStorming orientados al diseño, se estableciero
 El diagrama de contexto define los límites del sistema **RentiCar**, ilustrando su relación con los diferentes perfiles de usuarios y los sistemas externos con los que interactúa dentro de su entorno operativo.
 
 <p align="center">
-  <img src="assets/chapter04/c4-level1-system-context.png" alt="Context Diagram" width="650"/><br>
+  <img src="Assets/chapter04/c4-level1-system-context.png" alt="Context Diagram" width="650"/><br>
   <em>Figura 4.8.1: Diagrama de Contexto del Sistema RentiCar (Nivel 1 C4)</em>
 </p>
 
@@ -2164,7 +2164,7 @@ El diagrama de contexto define los límites del sistema **RentiCar**, ilustrando
 El diagrama de contenedores desglosa la solución en sus unidades de ejecución independientes de software, detallando los roles tecnológicos, protocolos de red y bases de datos empleadas.
 
 <p align="center">
-  <img src="assets/chapter04/c4-level2-containers.png" alt="Container Diagram" width="650"/><br>
+  <img src="Assets/chapter04/c4-level2-containers.png" alt="Container Diagram" width="650"/><br>
   <em>Figura 4.8.2: Diagrama de Contenedores del Sistema RentiCar (Nivel 2 C4)</em>
 </p>
 
@@ -2189,7 +2189,7 @@ El diagrama de contenedores desglosa la solución en sus unidades de ejecución 
 En esta sección se presentan los **diagramas de componentes (Nivel 3 del modelo C4)** descompuestos de manera individual para cada uno de los **Bounded Contexts** que conforman el backend de **RentiCar** desarrollado en **Spring Boot**. Cada diagrama modela la interacción entre los controladores REST, los servicios de aplicación (Command y Query Handlers), el modelo de dominio y los adaptadores de infraestructura y persistencia.
 
 <p align="center">
-  <img src="assets/chapter04/c4-level3-components-overall.png" alt="Components Diagram General" width="750"/><br>
+  <img src="Assets/chapter04/c4-level3-components-overall.png" alt="Components Diagram General" width="750"/><br>
   <em>Figura 4.8.3: Diagrama General de Componentes de la Plataforma RentiCar</em>
 </p>
 
@@ -2199,7 +2199,7 @@ En esta sección se presentan los **diagramas de componentes (Nivel 3 del modelo
 Gestiona el registro de usuarios, autenticación mediante tokens JWT, encriptación de credenciales con BCrypt y administración de perfiles según roles (`ROLE_RENTER` y `ROLE_OWNER`).
 
 <p align="center">
-  <img src="assets/chapter04/c4-level3-components-iam.png" alt="C4 Component IAM" width="850"/><br>
+  <img src="Assets/chapter04/c4-level3-components-iam.png" alt="C4 Component IAM" width="850"/><br>
   <em>Figura 4.8.3.1: Diagrama de Componentes C4 (Nivel 3) - IAM Bounded Context (Structurizr Style)</em>
 </p>
 
@@ -2220,7 +2220,7 @@ Gestiona el registro de usuarios, autenticación mediante tokens JWT, encriptaci
 Controla la publicación de vehículos por parte de los propietarios, especificaciones técnicas (marca, modelo, año, precio diario), carga fotográfica y ciclo de vida de disponibilidad.
 
 <p align="center">
-  <img src="assets/chapter04/c4-level3-components-listings.png" alt="C4 Component Listings" width="850"/><br>
+  <img src="Assets/chapter04/c4-level3-components-listings.png" alt="C4 Component Listings" width="850"/><br>
   <em>Figura 4.8.3.2: Diagrama de Componentes C4 (Nivel 3) - Listings & Fleet Management Bounded Context (Structurizr Style)</em>
 </p>
 
@@ -2240,7 +2240,7 @@ Controla la publicación de vehículos por parte de los propietarios, especifica
 Administra las solicitudes de alquiler formuladas por los arrendatarios, el cálculo automático de tarifas por días de contrato, la confirmación o rechazo por el arrendador y las cancelaciones.
 
 <p align="center">
-  <img src="assets/chapter04/c4-level3-components-booking.png" alt="C4 Component Booking" width="850"/><br>
+  <img src="Assets/chapter04/c4-level3-components-booking.png" alt="C4 Component Booking" width="850"/><br>
   <em>Figura 4.8.3.3: Diagrama de Componentes C4 (Nivel 3) - Booking & Digital Contract Bounded Context (Structurizr Style)</em>
 </p>
 
@@ -2260,7 +2260,7 @@ Administra las solicitudes de alquiler formuladas por los arrendatarios, el cál
 Procesa las señales telemáticas transmitidas por sensores vehiculares (coordenadas GPS, odómetro, velocidad y nivel de combustible) y la simulación interactiva de trayectorias mediante OpenRouteService.
 
 <p align="center">
-  <img src="assets/chapter04/c4-level3-components-iot.png" alt="C4 Component IoT" width="850"/><br>
+  <img src="Assets/chapter04/c4-level3-components-iot.png" alt="C4 Component IoT" width="850"/><br>
   <em>Figura 4.8.3.4: Diagrama de Componentes C4 (Nivel 3) - IoT Monitoring & Route Simulation Bounded Context (Structurizr Style)</em>
 </p>
 
@@ -2280,7 +2280,7 @@ Procesa las señales telemáticas transmitidas por sensores vehiculares (coorden
 Gestiona las evaluaciones y comentarios redactados por clientes una vez completado su alquiler, recalculando dinámicamente el promedio de satisfacción pública del vehículo.
 
 <p align="center">
-  <img src="assets/chapter04/c4-level3-components-reviews.png" alt="C4 Component Reviews" width="850"/><br>
+  <img src="Assets/chapter04/c4-level3-components-reviews.png" alt="C4 Component Reviews" width="850"/><br>
   <em>Figura 4.8.3.5: Diagrama de Componentes C4 (Nivel 3) - Reviews & Reputation Bounded Context (Structurizr Style)</em>
 </p>
 
@@ -2302,7 +2302,7 @@ El diseño orientado a objetos de **RentiCar** unifica todos los módulos y Boun
 A continuación, se presenta el **Diagrama Completo y Unificado de Clases del Sistema RentiCar**, modelado a nivel profesional con 100% de paridad con la arquitectura del backend (**Spring Boot**) y el frontend (**Angular**), cubriendo todos los Bounded Contexts, agregados, entidades, objetos de valor, interfaces de persistencia, servicios de aplicación y controladores REST:
 
 <p align="center">
-  <img src="assets/chapter04/domain-class-diagram.png" alt="Complete Domain Class Diagram" width="100%"/><br>
+  <img src="Assets/chapter04/domain-class-diagram.png" alt="Complete Domain Class Diagram" width="100%"/><br>
   <em>Figura 4.9.1: Diagrama Maestro de Clases del Dominio de RentiCar (UML 2.5 - All Bounded Contexts)</em>
 </p>
 
@@ -2378,7 +2378,7 @@ El diseño de la base de datos relacional de **RentiCar** ha sido modelado para 
 Antes de detallar el diccionario de datos, se presenta el esquema relacional global del sistema, ilustrando las tablas principales, claves foráneas y cardinalidades:
 
 <p align="center">
-  <img src="assets/chapter04/relational-database-diagram.png" alt="Database Diagram" width="650"/><br>
+  <img src="Assets/chapter04/relational-database-diagram.png" alt="Database Diagram" width="650"/><br>
   <em>Figura 4.10.1: Diagrama Entidad-Relación Relacional de RentiCar</em>
 </p>
 
@@ -2487,17 +2487,17 @@ Comunicación: **WhatsApp** <br>
 ### Requirement Management
 Utilizamos UXPressia para poder desarrollar los mapas, los user personas y lean UX canvas
 
-<img src="assets/chapter05/tool-uxpressia.png" width=300 >
+<img src="Assets/chapter05/tool-uxpressia.png" width=300 >
 
 ### Product UX/UI Design
 Utilizamos Figma para el desarrollo de mock ups tanto de la landing page como de la web app
 
-<img src="assets/chapter05/tool-figma.jpeg" width=300 >
+<img src="Assets/chapter05/tool-figma.jpeg" width=300 >
 
 ### Software Deployment
 Trabajamos con vercel para el despliegue de la landing page
 
-<img src="assets/chapter05/tool-vercel.webp" width=300 >
+<img src="Assets/chapter05/tool-vercel.webp" width=300 >
 
 
 ### 5.1.2. Source Code Management
@@ -2542,7 +2542,7 @@ en todos los archivos del repositorio.
 - **Use Lowercase Attribute Names**:  
   Los atributos están en minúsculas como `src`, `alt`, `href`.
   ~~~html
-  <img src="assets/chapter05/renticar-brand-logo.png" alt="logo" class="logo-dark" />
+  <img src="Assets/chapter05/renticar-brand-logo.png" alt="logo" class="logo-dark" />
   ~~~
 
 - **Use Double Quotes for Attribute Values**:  
@@ -2728,13 +2728,13 @@ A continuación, se presentan las tablas de ejecución de los cuatro sprints des
 La Landing Page de **RentiCar** fue diseñada para brindar una primera impresión confiable, moderna y atractiva, maximizando la conversión de visitantes en usuarios registrados.
 
 <p align="center">
-  <img src="assets/chapter05/landing-page-wireframe.png" alt="Wireframe Landing" width="48%"/>
-  <img src="assets/chapter05/landing-page-mockup.png" alt="Mockup Landing" width="48%"/><br>
+  <img src="Assets/chapter05/landing-page-wireframe.png" alt="Wireframe Landing" width="48%"/>
+  <img src="Assets/chapter05/landing-page-mockup.png" alt="Mockup Landing" width="48%"/><br>
   <em>Figura 5.2.2.1: Evolución de Wireframe a Mock-up de la Landing Page</em>
 </p>
 
 <p align="center">
-  <img src="assets/chapter05/landing-page-deployed-vercel.png" alt="Landing Page Publicada" width="75%"/><br>
+  <img src="Assets/chapter05/landing-page-deployed-vercel.png" alt="Landing Page Publicada" width="75%"/><br>
   <em>Figura 5.2.2.2: Landing Page implementada y desplegada en producción</em>
 </p>
 
@@ -2751,13 +2751,13 @@ La Landing Page de **RentiCar** fue diseñada para brindar una primera impresió
 La aplicación web de **RentiCar** fue construida en **Angular**, utilizando Angular Material para los controles de interfaz de usuario y Leaflet para la visualización cartográfica.
 
 <p align="center">
-  <img src="assets/chapter05/frontend-deployment-render.jpeg" alt="Despliegue Frontend" width="48%"/>
-  <img src="assets/chapter05/frontend-execution-evidence.jpeg" alt="Evidencia de Ejecución Frontend" width="48%"/><br>
+  <img src="Assets/chapter05/frontend-deployment-render.jpeg" alt="Despliegue Frontend" width="48%"/>
+  <img src="Assets/chapter05/frontend-execution-evidence.jpeg" alt="Evidencia de Ejecución Frontend" width="48%"/><br>
   <em>Figura 5.2.3.1: Evidencia de compilación y ejecución de la aplicación web en producción</em>
 </p>
 
 <p align="center">
-  <img src="assets/chapter05/frontend-catalog-web-evidence.png" alt="Pantalla de Exploración de la Web App" width="75%"/><br>
+  <img src="Assets/chapter05/frontend-catalog-web-evidence.png" alt="Pantalla de Exploración de la Web App" width="75%"/><br>
   <em>Figura 5.2.3.2: Navegación por el catálogo interactivo de vehículos y panel de reservas</em>
 </p>
 
@@ -2790,14 +2790,14 @@ La plataforma **RentiCar** se distribuye bajo el modelo de **Software as a Servi
 El backend fue desplegado en la plataforma cloud **Render**, conectado de forma persistente a una instancia gestionada de **TiDB Cloud**:
 
 <p align="center">
-  <img src="assets/chapter05/backend-deployment-render.jpeg" alt="Despliegue Backend en Render" width="48%"/>
-  <img src="assets/chapter05/database-deployment-tidb.jpeg" alt="Base de Datos TiDB Cloud" width="48%"/><br>
+  <img src="Assets/chapter05/backend-deployment-render.jpeg" alt="Despliegue Backend en Render" width="48%"/>
+  <img src="Assets/chapter05/database-deployment-tidb.jpeg" alt="Base de Datos TiDB Cloud" width="48%"/><br>
   <em>Figura 5.2.5.1: Despliegue del servicio RESTful en Render y conexión exitosa a TiDB Cloud</em>
 </p>
 
 <p align="center">
-  <img src="assets/chapter05/backend-execution-logs.jpeg" alt="Logs de Despliegue Backend" width="48%"/>
-  <img src="assets/chapter05/database-tables-evidence.jpeg" alt="Tablas en Base de Datos" width="48%"/><br>
+  <img src="Assets/chapter05/backend-execution-logs.jpeg" alt="Logs de Despliegue Backend" width="48%"/>
+  <img src="Assets/chapter05/database-tables-evidence.jpeg" alt="Tablas en Base de Datos" width="48%"/><br>
   <em>Figura 5.2.5.2: Logs de compilación Maven exitosa e inicialización de esquemas JPA</em>
 </p>
 
@@ -2813,8 +2813,8 @@ El backend fue desplegado en la plataforma cloud **Render**, conectado de forma 
 La documentación interactiva de la API fue implementada mediante **Swagger UI / OpenAPI 3.0**, permitiendo inspeccionar los esquemas DTO de entrada y salida, así como ejecutar peticiones de prueba en vivo contra el servidor desplegado:
 
 <p align="center">
-  <img src="assets/chapter05/swagger-ui-endpoints-1.png" alt="Swagger UI Documentación 1" width="48%"/>
-  <img src="assets/chapter05/swagger-ui-endpoints-2.png" alt="Swagger UI Documentación 2" width="48%"/><br>
+  <img src="Assets/chapter05/swagger-ui-endpoints-1.png" alt="Swagger UI Documentación 1" width="48%"/>
+  <img src="Assets/chapter05/swagger-ui-endpoints-2.png" alt="Swagger UI Documentación 2" width="48%"/><br>
   <em>Figura 5.2.6.1: Vistas de la documentación interactiva en Swagger UI de RentiCar</em>
 </p>
 
@@ -2868,7 +2868,7 @@ Durante todo el ciclo de desarrollo, **Codexa-Team** mantuvo una disciplina estr
 En este apartado se documenta el video promocional y técnico elaborado por **Codexa-Team**, en el cual se demuestra el funcionamiento real e integrado de la plataforma **RentiCar**:
 
 <p align="center">
-  <img src="assets/chapter05/video-about-the-product.png" alt="Carátula Video About the Product" width="70%"/><br>
+  <img src="Assets/chapter05/video-about-the-product.png" alt="Carátula Video About the Product" width="70%"/><br>
   <em>Figura 5.3: Presentación oficial del Video About-the-Product de RentiCar</em>
 </p>
 
