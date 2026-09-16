@@ -1332,6 +1332,9 @@ componentes interactivos —como botones— y su relación directa con la experi
 #### 4.1.3.1. iOS Mobile Style Guidelines
 
 #### 4.1.3.2. Android Mobile Style Guidelines
+* **Tipografía:** Mantenimiento de la fuente **Poppins** para títulos (Bold) y cuerpos de texto (Regular/Light), alineándose con los principios de Material Design.
+* **Sistema de Colores:** Aplicación de la paleta institucional (`#003F70` y `#52B6F2`) integrando tarjetas (*cards*) y elevaciones sutiles para diferenciar los modelos de vehículos y los paneles.
+* **Navegación e Interacción:** Implementación de barras de navegación inferior estándar y animaciones de respuesta táctil nativas de Android.
 
 ## 4.2. Information Architecture
 
@@ -1393,7 +1396,7 @@ Este esquema garantiza que los usuarios puedan moverse de manera intuitiva por e
 encontrando siempre las funciones más relevantes según su objetivo.
 
 ## 4.3. Landing Page UI Design
-### 4.3.1. Landing Page Wireframe
+### 4.3.1. Landing Page Wireframe 
 
 <img src="assets/WireframeLanding.png" alt="Buttons" width="500"><br>
 
@@ -1404,6 +1407,21 @@ Link del Figma: https://www.figma.com/design/PChWJ99signLAO8NcRCRrY/Landing-Rent
 <img src="assets/MockUpLanding.png" alt="Buttons" width="500"><br>
 
 Link del Figma: https://www.figma.com/design/PChWJ99signLAO8NcRCRrY/Landing-RentiCar?node-id=2461-182&t=FAwGoGSyUJDdEzex-1
+
+### 4.3.3. Landing Page Wireframe (MOVIL) 
+
+<img src="assets/photos/MOVIL_W.png" alt="Buttons" width="500"><br>
+<img src="assets/photos/MOVIL_W1.png" alt="Buttons" width="500"><br>
+<img src="assets/photos/MOVIL_W2.png" alt="Buttons" width="500"><br>
+
+Link del Figma: https://www.figma.com/design/l0LFaLS4ss0q10lzrFVtQK/Landing-Page-Androi?node-id=2461-182&t=pYAuwdTIyfYky3Zu-1
+
+### 4.3.3. Landing Page Mock-up  (MOVIL)
+
+<img src="assets/photos/MOVIL_M.png" alt="Buttons" width="500"><br>
+<img src="assets/photos/MOVIL_M1.png" alt="Buttons" width="500"><br>
+
+Link del Figma: https://www.figma.com/design/l0LFaLS4ss0q10lzrFVtQK/Landing-Page-Androi?node-id=1046-41&t=pYAuwdTIyfYky3Zu-1
 
 ## 4.6. Web Applications UX/UI Design
 
