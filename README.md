@@ -32,7 +32,7 @@ u202314354 - Solís Campos, Estefano Sebastian
 <br><br>
 U202311086 - Landa Ortiz, Sergio Javier
 <br><br>
-U20231D400 - Angeles Rojas, Sheila
+U20231D400 - Angeles Rojas, Sheila Jasmin
 <br><br>
 U202019409 - Linares Bernable, Cesar Alejandro
 <br><br>
@@ -56,13 +56,11 @@ U202313403 - Via Luna, Bruce
 
 - Bruce Via Luna
 - Cesar Alejando Linares Bernable
-- Sheila Angeles Rojas
+- Sheila Jasmin Angeles Rojas
 - Estefano Sebastian Solis Campos
 - Sergio Javier Landa Ortiz
 
-|  URL del repositorio del reporte  |
-| :-----------------------------------: |
-| nose |
+| https://github.com/Codexa-Team/Project-Report |
 
 **AV1:**
 
@@ -245,9 +243,10 @@ Convertirnos en la plataforma líder de alquiler de vehículos en el Perú y exp
         <td>Foto</td>
     </tr>
     <tr>
-        <td>
-        <b>Descripcion:</b> Soy Bruce Via Luna de codigo u202313403, entusiasta sobre el control y manejo de bases de datos con conocimientos en C# y C++
-        <td><img src="Assets/photos/fotobruce.jpeg" alt="Foto Bruce"></td>
+        <td><b>Nombre:</b> Bruce Via Luna <br>
+            <b>Carrera:</b> Ingeniería de Software <br>
+            <b>Descripcion:</b> Soy Bruce Via Luna de código u202313403, entusiasta sobre el control y manejo de bases de datos con conocimientos en C# y C++.</td>
+        <td><img src="Assets/photos/fotobruce.jpeg" alt="Foto Bruce" width="150"></td>
     </tr>
     <tr>
         <td><b>Nombre:</b> - Cesar Alejando Linares Bernable <br>
@@ -268,10 +267,10 @@ Convertirnos en la plataforma líder de alquiler de vehículos en el Perú y exp
         <td><img src="Assets/chapter01/estefano-solis.jpeg" alt="Estefano Solis" width="150"></td>
     </tr>
     <tr>
-        <td><b>Nombre:</b> Sheila Angeles Rojas <br>
-            <b>Carrera:</b>  <br>
-        <b>Descripcion:</b> 
-        <td></td>
+        <td><b>Nombre:</b> Sheila Jasmin Angeles Rojas <br>
+            <b>Carrera:</b> Ingeniería de Software <br>
+            <b>Descripcion:</b> Soy Sheila Angeles, estudiante de la carrera de Ingeniería de Software. Me caracterizo por ser una persona responsable, organizada y comprometida con cada tarea que se me asigna.</td>
+        <td><img src="Assets/photos/ME.png" alt="Foto Sheila" width="150"></td>
     </tr>
 </table>
 
@@ -780,7 +779,7 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
 
 <table align="center">
   <tr>
-    <th colspan="2" style="text-align:center">Entrevista 3 - Segmento 1: Dueño de Vehículo (Arrendador)</th>
+    <th colspan="2" style="text-align:center">Entrevista 3</th>
   </tr>
   <tr>
     <td><strong>Entrevistado</strong></td>
@@ -862,8 +861,102 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
   </tr>
 </table>
 
+<table align="center">
+  <tr>
+    <th colspan="2" style="text-align:center">Entrevista 2</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Gino Ábalos Carranza</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>20 años</td>
+  </tr>
+  <tr>
+    <td><strong>Distrito</strong></td>
+    <td>Chorrillos</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>0:15 - 3:23</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+      
+  `https://youtu.be/sIelvvtnsms`
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+      Resumen: <br>
+      Gino Ábalos Carranza, arquitecto de 20 años residente en Chorrillos, suele alquilar vehículos sedán para movilizarse y busca sus opciones principalmente en Facebook; aunque señala que actualmente solo le solicitan DNI para el trámite, considera que dicha red social carece de especialización para el servicio, por lo que expresa un total interés en migrar a una plataforma dedicada que integre un sistema de reseñas sobre los arrendadores y le permita agendar reservas para fechas concretas.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:center"><br>
+      <img src="Assets/photos/entrevista4.png" alt="Segmento 2 Entrevista 2 - Gino Ábalos Carranza" width="1000"><br>
+    </td>
+  </tr>
+</table>
+
+<table align="center">
+  <tr>
+    <th colspan="2" style="text-align:center">Entrevista 3</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Alessandro Egavil</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>25 años</td>
+  </tr>
+  <tr>
+    <td><strong>Distrito</strong></td>
+    <td>San Miguel</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>0:12 - 3:45</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+      
+  `https://youtu.be/1D09YFbTE2s`
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+      Resumen: <br>
+      Alessandro, un joven de 25 años residente en San Miguel, se encuentra constantemente en la búsqueda de carros para alquilar, ya sea para realizar viajes cortos de fin de semana o salidas familiares. Aunque suele buscar opciones en Google o redes sociales, este proceso le resulta frustrante por la desconfianza y el riesgo que le genera dejar un depósito de garantía a desconocidos sin referencias. Por ello, está buscando una alternativa más segura y usaría sin dudar una plataforma o aplicación que le permita leer reseñas y calificaciones de los dueños de los vehículos antes de decidirse por un alquiler.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:center"><br>
+      <img src="Assets/chapter02/interview-alessandro-egavil.png" alt="Segmento 2 Entrevista 3 - Alessandro Egavil" width="1000"><br>
+    </td>
+  </tr>
+</table>
+
 ### 2.2.3. Análisis de entrevistas
 
+El análisis del primer segmento revela una marcada necesidad de transición desde la informalidad digital hacia una plataforma especializada. Un aspecto central es la alta motivación económica derivada de la subutilización de sus vehículos, los cuales pasan la mayor parte del tiempo estacionados y buscan ser monetizados como ingresos pasivos por perfiles profesionales. No obstante, los propietarios dependen actualmente de métodos rudimentarios e informales, tales como Facebook Marketplace, grupos de WhatsApp y calendarios personales, viéndose obligados a guiarse únicamente por su instinto ante la absoluta ausencia de filtros de verificación y control previos. Esto genera una profunda exposición al riesgo, impulsando una fuerte exigencia por contar con herramientas profesionales de gestión, tales como un panel centralizado de control, sistemas de reseñas bidireccionales para fomentar la responsabilidad mutua y la necesidad de resguardar su seguridad frente a incidentes externos.
+
+Por otro lado, el análisis del segundo segmento expone las deficiencias críticas que experimentan los conductores al buscar vehículos en el mercado actual. Al recurrir a redes sociales y canales informales, se enfrentan a una dualidad frustrante: procesos excesivamente laxos que apenas solicitan un documento de identidad y generan desconfianza general, o bien permisos innecesarios que entorpecen la experiencia. Asimismo, los entrevistados (como Sebastián, Gino y Alessandro) coinciden en las severas complicaciones para asegurar reservas en fechas de alta demanda o temporadas concurridas debido a la falta de estandarización en la oferta. En particular, un punto crítico de fricción destacado por los arrendatarios radica en el elevado riesgo percibido al entregar depósitos de garantía a desconocidos sin garantías ni referencias comprobables. Por ello, existe un marcado consenso e interés en migrar hacia una solución digital especializada que les permita filtrar vehículos por modelos específicos, agendar con precisión para fechas exactas, gestionar depósitos con respaldo y consultar reseñas y calificaciones previas sobre los arrendadores para asegurar una experiencia transparente y confiable.
+
+Al contrastar ambos segmentos, se evidencia que tanto arrendadores como arrendatarios comparten el mismo dolor raíz: operan en un ecosistema altamente informal, inseguro y carente de trazabilidad. Mientras que el propietario busca mitigar el riesgo de daños y validar estrictamente la identidad del conductor, el arrendatario exige certidumbre, agilidad y transparencia en los precios, depósitos y disponibilidad de los modelos. En consecuencia, la oportunidad de valor se centra en consolidar una plataforma unificada que actúe como un filtro de confianza bidireccional. Mediante la integración de módulos de verificación estricta de identidad, reputación basada en calificaciones mutuas y un dashboard especializado de gestión, es posible resolver las fricciones de ambos lados del mercado, transformando un proceso basado en la intuición en una experiencia profesional, segura y escalable.
+
+De acuerdo con las entrevistas y su respectivo análisis, a continuación se presenta un gráfico que resume los principales puntos de dolor y lo que busca cada segmento:
+
+<p align="center">
+  <img src="Assets/interviews/GRAFICO.png" alt="Puntos de dolor y necesidades identificadas en las entrevistas" width="1000"/><br>
+  <em>Figura 2.2.3: Síntesis de dolores, necesidades y propuesta de valor de los segmentos entrevistados</em>
+</p>
 ## 2.3. Needfinding
 ### 2.3.1. User Personas
 
@@ -1709,10 +1802,29 @@ componentes interactivos —como botones— y su relación directa con la experi
   facilita el mantenimiento y la escalabilidad del código.
 
 ### 4.1.3. Mobile Style Guidelines
+Para la versión móvil de la plataforma, los lineamientos de diseño se adaptan a las características de interacción propias de los dispositivos móviles. 
+Se mantiene la identidad visual definida para el producto, conservando la paleta de colores, tipografía, iconografía y componentes principales, pero 
+ajustando la distribución y dimensiones de los elementos para facilitar su visualización e interacción mediante pantallas táctiles.
 
 #### 4.1.3.1. iOS Mobile Style Guidelines
 
 #### 4.1.3.2. Android Mobile Style Guidelines
+El diseño para Android mantiene los lineamientos visuales establecidos para la plataforma y adapta la distribución de los
+componentes a las características de interacción de dispositivos Android.
+
+- **Landing Page en versión Wireframe para Android**:
+
+  <img src="Assets/photos/MOVIL_W11.png" alt="Buttons" width="500"><br>
+  <img src="Assets/photos/MOVIL_W0.png" alt="Buttons" width="500"><br>
+
+  Link del Figma: https://www.figma.com/design/l0LFaLS4ss0q10lzrFVtQK/Landing-Page-Androi?node-id=2461-182&t=pYAuwdTIyfYky3Zu-1
+  
+- **Landing Page en versión Mock-Ups para Android**:
+
+  <img src="Assets/photos/MOVIL_M.png" alt="Buttons" width="500"><br>
+  <img src="Assets/photos/MOVIL_M1.png" alt="Buttons" width="500"><br>
+
+  Link del Figma: https://www.figma.com/design/l0LFaLS4ss0q10lzrFVtQK/Landing-Page-Androi?node-id=1046-41&t=pYAuwdTIyfYky3Zu-1
 
 ## 4.2. Information Architecture
 
@@ -1774,7 +1886,7 @@ Este esquema garantiza que los usuarios puedan moverse de manera intuitiva por e
 encontrando siempre las funciones más relevantes según su objetivo.
 
 ## 4.3. Landing Page UI Design
-### 4.3.1. Landing Page Wireframe
+### 4.3.1. Landing Page Wireframe 
 
 <img src="Assets/chapter04/landing-page-wireframe.png" alt="Buttons" width="500"><br>
 
