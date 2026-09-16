@@ -1338,13 +1338,11 @@ ajustando la distribución y dimensiones de los elementos para facilitar su visu
   a 20pt. Soporta de forma nativa los gestos del sistema, permitiendo al usuario deslizar desde el borde izquierdo hacia la derecha .
 - **Navegación e Interfaz Dinámica por Rol:**
   * **Navigation Bar y Large Titles:** Encabezado superior con títulos principales en tipografía Poppins ExtraBold alineados a la izquierda. El título
-    cambia dinámicamente según la sección seleccionada en la Tab Bar ("Resumen", "Publicados", "Reservas", "Perfil"). Al realizar scroll vertical,
-    el título colapsa suavemente al centro de la barra superior en versión reducida.
-  * **Adaptabilidad de las 4 Pestañas Principales (Tab Bar):**
+    cambia dinámicamente según la sección seleccionada en la Tab Bar ("Resumen", "Publicados", "Reservas", "Perfil"). 
+  * **Adaptabilidad de las 4 Pestañas Principales:**
      **Resumen:** Muestra un panel personalizado según el perfil activo. Para el Arrendador, consolida métricas de ingresos y estado del negocio;
        para el Arrendatario, despliega accesos rápidos a la búsqueda y sugerencias sobre otros vehiculos.
-  * **Tab Bar Inferior :** Barra inferior traslúcida con acabado de desenfoque de fondo (Translucent Blur / Glassmorphism). Los cuatro accesos incorporan
-     simbología nativa, resaltando la pestaña activa en azul primario (#003F70) .
+  * **Tab Bar Inferior : Los cuatro accesos incorporan simbología nativa, resaltando la pestaña activa en azul primario (#003F70) .
   * **Acción Principal:** La acción prioritaria de publicación (para Arrendador) o reserva (para Arrendatario) se integra como un botón principal fijo en la zona
     inferior sobre el área segura, con bordes redondeados de 12pt y altura de 50pt.
 - **Interacción y Accesibilidad:**
