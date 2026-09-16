@@ -1328,13 +1328,29 @@ componentes interactivos —como botones— y su relación directa con la experi
   facilita el mantenimiento y la escalabilidad del código.
 
 ### 4.1.3. Mobile Style Guidelines
+Para la versión móvil de la plataforma, los lineamientos de diseño se adaptan a las características de interacción propias de los dispositivos móviles. 
+Se mantiene la identidad visual definida para el producto, conservando la paleta de colores, tipografía, iconografía y componentes principales, pero 
+ajustando la distribución y dimensiones de los elementos para facilitar su visualización e interacción mediante pantallas táctiles.
 
 #### 4.1.3.1. iOS Mobile Style Guidelines
 
 #### 4.1.3.2. Android Mobile Style Guidelines
-* **Tipografía:** Mantenimiento de la fuente **Poppins** para títulos (Bold) y cuerpos de texto (Regular/Light), alineándose con los principios de Material Design.
-* **Sistema de Colores:** Aplicación de la paleta institucional (`#003F70` y `#52B6F2`) integrando tarjetas (*cards*) y elevaciones sutiles para diferenciar los modelos de vehículos y los paneles.
-* **Navegación e Interacción:** Implementación de barras de navegación inferior estándar y animaciones de respuesta táctil nativas de Android.
+El diseño para Android mantiene los lineamientos visuales establecidos para la plataforma y adapta la distribución de los
+componentes a las características de interacción de dispositivos Android.
+
+- **Landing Page en versión Wireframe para Android**:
+
+  <img src="Assets/photos/MOVIL_W11.png" alt="Buttons" width="500"><br>
+  <img src="Assets/photos/MOVIL_W0.png" alt="Buttons" width="500"><br>
+
+  Link del Figma: https://www.figma.com/design/l0LFaLS4ss0q10lzrFVtQK/Landing-Page-Androi?node-id=2461-182&t=pYAuwdTIyfYky3Zu-1
+  
+- **Landing Page en versión Mock-Ups para Android**:
+
+  <img src="Assets/photos/MOVIL_M.png" alt="Buttons" width="500"><br>
+  <img src="Assets/photos/MOVIL_M1.png" alt="Buttons" width="500"><br>
+
+  Link del Figma: https://www.figma.com/design/l0LFaLS4ss0q10lzrFVtQK/Landing-Page-Androi?node-id=1046-41&t=pYAuwdTIyfYky3Zu-1
 
 ## 4.2. Information Architecture
 
@@ -1407,20 +1423,6 @@ Link del Figma: https://www.figma.com/design/PChWJ99signLAO8NcRCRrY/Landing-Rent
 <img src="assets/MockUpLanding.png" alt="Buttons" width="500"><br>
 
 Link del Figma: https://www.figma.com/design/PChWJ99signLAO8NcRCRrY/Landing-RentiCar?node-id=2461-182&t=FAwGoGSyUJDdEzex-1
-
-### 4.3.3. Landing Page Wireframe (MOVIL) 
-
-<img src="Assets/photos/MOVIL_W11.png" alt="Buttons" width="500"><br>
-<img src="Assets/photos/MOVIL_W0.png" alt="Buttons" width="500"><br>
-
-Link del Figma: https://www.figma.com/design/l0LFaLS4ss0q10lzrFVtQK/Landing-Page-Androi?node-id=2461-182&t=pYAuwdTIyfYky3Zu-1
-
-### 4.3.4. Landing Page Mock-up  (MOVIL)
-
-<img src="Assets/photos/MOVIL_M.png" alt="Buttons" width="500"><br>
-<img src="Assets/photos/MOVIL_M1.png" alt="Buttons" width="500"><br>
-
-Link del Figma: https://www.figma.com/design/l0LFaLS4ss0q10lzrFVtQK/Landing-Page-Androi?node-id=1046-41&t=pYAuwdTIyfYky3Zu-1
 
 ## 4.6. Web Applications UX/UI Design
 
