@@ -719,7 +719,7 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
     <td><strong>URL</strong></td>
     <td>
       
-  `https://youtu.be/B3n8FB8qZX8`
+  <a href="https://youtu.be/B3n8FB8qZX8" target="_blank">https://youtu.be/B3n8FB8qZX8</a>
 
   </td>
   </tr>
@@ -760,7 +760,7 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
     <td><strong>URL</strong></td>
     <td>
       
-  `https://youtu.be/7LyhIITgNnU`
+  <a href="https://youtu.be/7LyhIITgNnU" target="_blank">https://youtu.be/7LyhIITgNnU</a>
 
   </td>
   </tr>
@@ -800,7 +800,7 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
   <tr>
     <td><strong>URL</strong></td>
     <td>
-  `https://youtu.be/EWyy7faTG3Y`
+  <a href="https://youtu.be/EWyy7faTG3Y" target="_blank">https://youtu.be/EWyy7faTG3Y</a>
   </td>
   </tr>
   <tr>
@@ -844,7 +844,7 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
     <td><strong>URL</strong></td>
     <td>
       
-  `https://youtu.be/UtvLuMLGYto`
+  <a href="https://youtu.be/UtvLuMLGYto" target="_blank">https://youtu.be/UtvLuMLGYto</a>
 
   </td>
   </tr>
@@ -885,7 +885,7 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
     <td><strong>URL</strong></td>
     <td>
       
-  `https://youtu.be/sIelvvtnsms`
+  <a href="https://youtu.be/sIelvvtnsms" target="_blank">https://youtu.be/sIelvvtnsms</a>
 
   </td>
   </tr>
@@ -926,7 +926,7 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
     <td><strong>URL</strong></td>
     <td>
       
-  `https://youtu.be/1D09YFbTE2s`
+  <a href="https://youtu.be/1D09YFbTE2s" target="_blank">https://youtu.be/1D09YFbTE2s</a>
 
   </td>
   </tr>
@@ -2993,7 +2993,7 @@ En este apartado se documenta el video promocional y técnico elaborado por **Co
 | **Producto Presentado:** | RentiCar (Aplicación Web Angular + Backend Spring Boot + TiDB) |
 | **Integrantes Participantes:** | Bruce Vía Luna, César Linares, Sergio Landa, Estefano Solís, Sheila Angeles |
 | **Duración Aproximada:** | 8 a 10 minutos |
-| **Enlace Oficial del Video:** | [Ver Video About-the-Product en Microsoft Stream / YouTube](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202314354_upc_edu_pe/ETjEvnFfTMVGg504DkKQo9cBVH1Coad3hieTwbFWm9x8gQ?e=t2sINN) |
+| **Enlace Oficial del Video:** | [Ver Video About-the-Product en YouTube (https://youtu.be/t_m6u7wnkCs)](https://youtu.be/t_m6u7wnkCs) |
 
 **Objetivos del Video Demostrativo:**
 1. Presentar la propuesta de valor de **RentiCar** y la problemática de movilidad informal resuelta en el Perú.
