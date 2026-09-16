@@ -871,6 +871,47 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
   </tr>
 </table>
 
+<table align="center">
+  <tr>
+    <th colspan="2" style="text-align:center">Entrevista 2</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td> Yinno Ovalo Carranza</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>20 años</td>
+  </tr>
+  <tr>
+    <td><strong>Distrito</strong></td>
+    <td> Chorrillos</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td> 0:15 - 3:23 </td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+      
+  `https://youtu.be/sIelvvtnsms`
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+      Resumen: <br>
+     Gino Ábalos Carranza, arquitecto de 20 años residente en Chorrillos, suele alquilar vehículos sedán para movilizarse y busca sus opciones principalmente en Facebook; aunque señala que actualmente solo le solicitan   
+      DNI para el trámite, considera que dicha red social carece de especialización para el servicio, por lo que expresa un total interés en migrar a una plataforma dedicada que integre un sistema de reseñas sobre los          arrendadores y le permita agendar reservas para fechas concretas.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br>
+      <img src="Assets/interviews/captura-diseño-3.png" alt="Segmento 2 entrevista 2" width="1000"><br>
+    </td>
+  </tr>
+</table>
 
 
 ### 2.2.3. Análisis de entrevistas
