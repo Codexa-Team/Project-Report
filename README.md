@@ -1333,10 +1333,44 @@ Se mantiene la identidad visual definida para el producto, conservando la paleta
 ajustando la distribución y dimensiones de los elementos para facilitar su visualización e interacción mediante pantallas táctiles.
 
 #### 4.1.3.1. iOS Mobile Style Guidelines
-
+- **Layout y Retícula Base:**
+  La arquitectura visual sigue un flujo vertical continuo sobre una retícula modular de 8pt, complementada con márgenes de seguridad laterales de 16pt
+  a 20pt. Soporta de forma nativa los gestos del sistema, permitiendo al usuario deslizar desde el borde izquierdo hacia la derecha .
+- **Navegación e Interfaz Dinámica por Rol:**
+  * **Navigation Bar y Large Titles:** Encabezado superior con títulos principales en tipografía Poppins ExtraBold alineados a la izquierda. El título
+    cambia dinámicamente según la sección seleccionada en la Tab Bar ("Resumen", "Publicados", "Reservas", "Perfil"). Al realizar scroll vertical,
+    el título colapsa suavemente al centro de la barra superior en versión reducida.
+  * **Adaptabilidad de las 4 Pestañas Principales (Tab Bar):**
+     **Resumen:** Muestra un panel personalizado según el perfil activo. Para el Arrendador, consolida métricas de ingresos y estado del negocio;
+       para el Arrendatario, despliega accesos rápidos a la búsqueda y sugerencias sobre otros vehiculos.
+  * **Tab Bar Inferior :** Barra inferior traslúcida con acabado de desenfoque de fondo (Translucent Blur / Glassmorphism). Los cuatro accesos incorporan
+     simbología nativa, resaltando la pestaña activa en azul primario (#003F70) .
+  * **Acción Principal:** La acción prioritaria de publicación (para Arrendador) o reserva (para Arrendatario) se integra como un botón principal fijo en la zona
+    inferior sobre el área segura, con bordes redondeados de 12pt y altura de 50pt.
+- **Interacción y Accesibilidad:**
+  * **Respuesta de Opacidad y Háptica:** Disminución leve en la opacidad del componente al ser presionado, combinada con vibración de respuesta táctil
+     mediante el motor háptico al confirmar acciones o alternar vistas.
+  * **Áreas de Toque:** Superficie de contacto interactiva mínima de 44×44 pt para todos los componentes de la interfaz.
+     
 #### 4.1.3.2. Android Mobile Style Guidelines
-El diseño para Android mantiene los lineamientos visuales establecidos para la plataforma y adapta la distribución de los
-componentes a las características de interacción de dispositivos Android.
+- **Layout y Retícula Base:** 
+  La interfaz se distribuye en una estructura de columna única vertical adaptativa, organizada estrictamente sobre una retícula base de 8dp. Se establecen
+  márgenes laterales fijos de 16dp con respecto a los bordes de la pantalla para evitar colisiones táctiles y garantizar una lectura fluida. El espaciado
+  entre componentes internos se mantiene en múltiplos de 8dp (8dp, 16dp y 24dp) para preservar la simetría y proporción visual.
+- **Navegación e Interfaz:**
+  * **Top App Bar:** Encabezado superior situado sobre fondo blanco (#FFFFFF) que presenta el título del módulo activo en tipografía Poppins SemiBold alineado
+    a la izquierda. Incorpora un selector de rol dinámico en formato de tarjeta pequeña (Arrendador / Arrendatario) e íconos de acceso rápido para
+    notificaciones y perfil.
+  * **NavigationBar (Inferior):** Barra de navegación fija en la parte inferior sobre fondo blanco (#FFFFFF). Se divide en cuatro secciones principales: Resumen,
+     Publicados, Reservados y Perfil. La sección activa se destaca mediante un indicador visual en forma de cápsula u óvalo de color azul claro (#52B6F2)
+    acompañado de un ícono de estilo relleno, mientras que los elementos inactivos se muestran en línea fina sin fondo.
+  * **Floating Action Button (FAB):** Botón flotante destacado de 56×56 dp con bordes suavizados de 16dp de radio en color azul claro (#52B6F2) situado en la
+    esquina inferior derecha. En la sección de vehículos publicados, este componente ejecuta la acción rápida de "Publicar nuevo vehículo".
+- **Interacción y Accesibilidad:**
+  * **Efecto Ripple (Onda):** Toda interacción táctil sobre tarjetas, botones o componentes desplegables activa una animación de onda circular difusa que se
+     expande desde el punto exacto de contacto con el dedo, brindando retroalimentación visual inmediata.
+  * **Áreas de Toque:** Se garantiza un área de toque o interacción mínima de 48×48 dp para todos los elementos interactivos, evitando pulsaciones accidentales y
+     asegurando la accesibilidad en pantallas táctiles de cualquier tamaño.
 
 - **Landing Page en versión Wireframe para Android**:
 
