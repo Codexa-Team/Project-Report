@@ -1411,7 +1411,7 @@ Link del Figma: https://www.figma.com/design/PChWJ99signLAO8NcRCRrY/Landing-Rent
 ### 4.3.3. Landing Page Wireframe (MOVIL) 
 
 <img src="Assets/photos/MOVIL_W11.png" alt="Buttons" width="500"><br>
-<img src="Assets/photos/MOVIL_W21.png" alt="Buttons" width="500"><br>
+<img src="Assets/photos/MOVIL_W.png" alt="Buttons" width="500"><br>
 
 Link del Figma: https://www.figma.com/design/l0LFaLS4ss0q10lzrFVtQK/Landing-Page-Androi?node-id=2461-182&t=pYAuwdTIyfYky3Zu-1
 
