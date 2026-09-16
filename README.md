@@ -789,7 +789,7 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
 
 <table align="center">
   <tr>
-    <th colspan="2" style="text-align:center">Entrevista 1</th>
+    <th colspan="2" style="text-align:center">Entrevista 2</th>
   </tr>
   <tr>
     <td><strong>Entrevistado</strong></td>
@@ -827,6 +827,47 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
     </td>
   </tr>
 </table>
+
+<table align="center">
+  <tr>
+    <th colspan="2" style="text-align:center">Entrevista 3 - Segmento 1: Dueño de Vehículo (Arrendador)</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Noelia Gomez</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>25 años</td>
+  </tr>
+  <tr>
+    <td><strong>Distrito</strong></td>
+    <td>Pueblo Libre</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>03:49 - 07:32 minutos (Duración: 3:43 minutos)</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+  `https://youtu.be/EWyy7faTG3Y`
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+      <b>Resumen:</b><br>
+      Comenta su experiencia alquilando su auto personal, un Sedán. Actualmente, gestiona el alquiler a través del calendario de su celular y lo publicita en Facebook Marketplace y grupos de WhatsApp, pero reconoce que estos medios no le brindan facilidades para verificar la confiabilidad de los clientes, teniendo que guiarse por su instinto. Estaría muy dispuesta a usar una nueva plataforma que le permita consultar reseñas de clientes previos para tener más tranquilidad, así como un panel para registrar su vehículo de forma más profesional. Además, considera fundamental poder reseñar a los clientes para fomentar un sistema de confianza y responsabilidad mutua.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:center"><br>
+      <img src="assets/interviews/interview-noelia-gomez.jpeg" alt="Segmento 1 Entrevista 3 - Noelia Gomez" width="350"><br>
+    </td>
+  </tr>
+</table>
+
+<br>
 
 *Entrevistas a arrendatarios de vehiculos*
 ---
