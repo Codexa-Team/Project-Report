@@ -956,8 +956,16 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
 
 
 ### 2.2.3. Análisis de entrevistas
+El análisis del primer segmento revela una marcada necesidad de transición desde la informalidad digital hacia una plataforma especializada. Un aspecto central es la alta motivación económica derivada de la subutilización de sus vehículos, los cuales pasan la mayor parte del tiempo estacionados y buscan ser monetizados como ingresos pasivos por perfiles profesionales. No obstante, los propietarios dependen actualmente de métodos rudimentarios e informales ,tales como Facebook Marketplace, grupos de WhatsApp y calendarios personales, viéndose obligados a guiarse únicamente por su instinto ante la absoluta ausencia de filtros de verificación y control previos. Esto genera una profunda exposición al riesgo, impulsando una fuerte exigencia por contar con herramientas profesionales de gestión, tales como un panel centralizado de control, sistemas de reseñas bidireccionales para fomentar la responsabilidad mutua y la necesidad de resguardar su seguridad frente a incidentes externos.
 
+Por otro lado, el análisis del segundo segmento expone las deficiencias críticas que experimentan los conductores al buscar vehículos en el mercado actual. Al recurrir a redes sociales y canales informales, se enfrentan a una dualidad frustrante: procesos excesivamente laxos que apenas solicitan un documento de identidad y generan desconfianza general, o bien permisos innecesarios que entorpecen la experiencia. Asimismo, ambos perfiles coinciden en las severas complicaciones para asegurar reservas en fechas de alta demanda o temporadas concurridas debido a la falta de estandarización en la oferta. Esto genera un claro interés por migrar hacia una solución digital especializada que les permita filtrar vehículos por modelos específicos, agendar con precisión para fechas exactas y consultar reseñas previas sobre los arrendadores para asegurar una experiencia transparente y confiable.
 
+Al contrastar ambos segmentos, se evidencia que tanto arrendadores como arrendatarios comparten el mismo dolor raíz, operan en un ecosistema altamente informal, inseguro y carente de trazabilidad. Mientras que el propietario busca mitigar el riesgo de daños y validar estrictamente la identidad del conductor, el arrendatario exige certidumbre, agilidad y transparencia en los precios y disponibilidad de los modelos. En consecuencia, la oportunidad de valor se centra en consolidar una plataforma unificada que actúe como un filtro de confianza bidireccional. Mediante la integración de módulos de verificación estricta de identidad, reputación basada en calificaciones mutuas y un dashboard especializado de gestión, es posible resolver las fricciones de ambos lados del mercado, transformando un proceso basado en la intuición en una experiencia profesional, segura y escalable.
+
+De acuerdo con las entrevistas y su respectivo análisis, a continuación se presenta un gráfico que resume los principales puntos de dolor y lo que busca cada segmento:
+<br>
+      <img src="Assets/photos/entrevista4.png" alt="entrevista4" width="1000"><br>
+      
 ## 2.3. Needfinding
 ### 2.3.1. User Personas
 
