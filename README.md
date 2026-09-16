@@ -964,7 +964,7 @@ Al contrastar ambos segmentos, se evidencia que tanto arrendadores como arrendat
 
 De acuerdo con las entrevistas y su respectivo análisis, a continuación se presenta un gráfico que resume los principales puntos de dolor y lo que busca cada segmento:
 <br>
-      <img src="Assets/photos/entrevista4.png" alt="entrevista4" width="1000"><br>
+      <img src="Assets/interviews/GRAFICO.png" alt="entrevista4" width="1000"><br>
       
 ## 2.3. Needfinding
 ### 2.3.1. User Personas
