@@ -908,7 +908,7 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
   </tr>
   <tr>
     <td colspan="2"><br>
-      <img src="Assets/interviews/entrevista4.png" alt="entrevista4" width="1000"><br>
+      <img src="Assets/photos/entrevista4.png" alt="entrevista4" width="1000"><br>
     </td>
   </tr>
 </table>
