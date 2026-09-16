@@ -862,7 +862,7 @@ Personas que necesitan un vehículo de manera temporal que tengan edad entre 25 
   </tr>
   <tr>
     <td colspan="2" style="text-align:center"><br>
-      <img src="assets/interviews/interview-noelia-gomez.jpeg" alt="Segmento 1 Entrevista 3 - Noelia Gomez" width="350"><br>
+      <img src="Assets/interviews/interview-noelia-gomez.jpeg" alt="Segmento 1 Entrevista 3 - Noelia Gomez" width="350"><br>
     </td>
   </tr>
 </table>
