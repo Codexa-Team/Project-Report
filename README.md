@@ -1342,7 +1342,7 @@ ajustando la distribución y dimensiones de los elementos para facilitar su visu
   * **Adaptabilidad de las 4 Pestañas Principales:**
      **Resumen:** Muestra un panel personalizado según el perfil activo. Para el Arrendador, consolida métricas de ingresos y estado del negocio;
        para el Arrendatario, despliega accesos rápidos a la búsqueda y sugerencias sobre otros vehiculos.
-  * **Tab Bar Inferior : Los cuatro accesos incorporan simbología nativa, resaltando la pestaña activa en azul primario (#003F70) .
+  * Tab Bar Inferior : Los cuatro accesos incorporan simbología nativa, resaltando la pestaña activa en azul primario (#003F70) .
   * **Acción Principal:** La acción prioritaria de publicación (para Arrendador) o reserva (para Arrendatario) se integra como un botón principal fijo en la zona
     inferior sobre el área segura, con bordes redondeados de 12pt y altura de 50pt.
 - **Interacción y Accesibilidad:**
@@ -1362,7 +1362,7 @@ ajustando la distribución y dimensiones de los elementos para facilitar su visu
   * **NavigationBar (Inferior):** Barra de navegación fija en la parte inferior sobre fondo blanco (#FFFFFF). Se divide en cuatro secciones principales: Resumen,
      Publicados, Reservados y Perfil. La sección activa se destaca mediante un indicador visual en forma de cápsula u óvalo de color azul claro (#52B6F2)
     acompañado de un ícono de estilo relleno, mientras que los elementos inactivos se muestran en línea fina sin fondo.
-  * **Floating Action Button (FAB):** Botón flotante destacado de 56×56 dp con bordes suavizados de 16dp de radio en color azul claro (#52B6F2) situado en la
+  * **Floating Action Button:** Botón flotante destacado de 56×56 dp con bordes suavizados de 16dp de radio en color azul claro (#52B6F2) situado en la
     esquina inferior derecha. En la sección de vehículos publicados, este componente ejecuta la acción rápida de "Publicar nuevo vehículo".
 - **Interacción y Accesibilidad:**
   * **Efecto Ripple (Onda):** Toda interacción táctil sobre tarjetas, botones o componentes desplegables activa una animación de onda circular difusa que se
