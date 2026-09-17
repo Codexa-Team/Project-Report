@@ -1840,39 +1840,23 @@ ajustando la distribución y dimensiones de los elementos para facilitar su visu
      
 #### 4.1.3.2. Android Mobile Style Guidelines
 - **Layout y Retícula Base:** 
-  La interfaz se distribuye en una estructura de columna única vertical adaptativa para el perfil de Arrendador (canvas Android Compact de 360×800 dp), organizada
-  estrictamente sobre una retícula base de 8dp. Se establecen márgenes laterales fijos de 16dp para evitar colisiones táctiles, manteniendo los espaciados internos
+  La interfaz se distribuye en una estructura de columna única vertical adaptativa para el perfil de Arrendador o Arrendatario, organizada estrictamente sobre una
+   retícula base de 8dp. Se establecen márgenes laterales fijos de 16dp para evitar colisiones táctiles, manteniendo los espaciados internos
    en múltiplos de 8dp (8dp, 16dp y 24dp) para asegurar simetría visual.
 - **Navegación e Interfaz Dinámica por Rol:**
-  * **Top App Bar:** Encabezado superior sobre fondo blanco (#FFFFFF) que despliega el saludo personalizado ("Hola, Marcelo 👋") junto al avatar de perfil en la
+  * **Top App Bar:** Encabezado superior sobre fondo blanco (#FFFFFF) que despliega el saludo personalizado junto al avatar de perfil en la
      esquina superior derecha, seguido del título de sección en tipografía Poppins ExtraBold alineado a la izquierda.
-  * **Estructura del Resumen:** Organiza visualmente las secciones clave del negocio mediante un carrusel de desplazamiento horizontal para "Reservas Activas"
-    (tarjetas con bordes redondeados de 16dp y botón "Ver más") y una lista vertical única para "Nuestras recomendaciones" con tarjetas de detalle técnico, tarifa
-    diaria y botón de acción directa.
+  * **Estructura del Resumen:** Organiza visualmente las secciones clave del negocio mediante un carrusel de desplazamiento horizontal.
   * **NavigationBar (Inferior):** Barra de navegación fija en la parte inferior sobre fondo blanco (#FFFFFF) a una altura de 80dp. Se divide en cuatro accesos: Resumen,
      Publicados, Reservas y Perfil. La pestaña activa se resalta mediante un indicador visual en forma de cápsula u óvalo de color azul claro (#52B6F2) con el ícono en estilo
      relleno (Filled) en azul primario (#003F70), mientras que las pestañas inactivas se muestran en línea fina sobre gris neutro.
   * **Extended Floating Action Button :** Botón flotante principal posicionado en la zona inferior sobre el área segura de la pantalla. Presenta un formato de
-    cápsula alargada con bordes redondeados de 16dp en azul primario (#003F70), integrando el ícono "+" y el texto explícito "+ Reservar Vehículo" para la acción prioritaria del módulo.
+    cápsula alargada con bordes redondeados de 16dp en azul primario (#003F70), integrando el ícono "+" y el texto explícito que depende del perfil del usuario para la acción prioritaria del módulo.
 - **Interacción y Accesibilidad:**
   * **Efecto Ripple (Onda):** Toda interacción táctil sobre botones, tarjetas o elementos de navegación activa una animación de onda circular difusa que se expande desde el punto de
      contacto, ofreciendo retroalimentación visual inmediata.
   * **Áreas de Toque:** Cumplimiento estricto de una superficie de contacto interactiva mínima de 48×48 dp para todos los componentes navegables, garantizando la accesibilidad táctil en
     el dispositivo.
-
-- **Landing Page en versión Wireframe para Android**:
-
-  <img src="assets/photos/movil_w11.png" alt="Buttons" width="500"><br>
-  <img src="assets/photos/movil_w0.png" alt="Buttons" width="500"><br>
-
-  Link del Figma: https://www.figma.com/design/l0LFaLS4ss0q10lzrFVtQK/Landing-Page-Androi?node-id=2461-182&t=pYAuwdTIyfYky3Zu-1
-  
-- **Landing Page en versión Mock-Ups para Android**:
-
-  <img src="assets/photos/movil_m.png" alt="Buttons" width="500"><br>
-  <img src="assets/photos/movil_m1.png" alt="Buttons" width="500"><br>
-
-  Link del Figma: https://www.figma.com/design/l0LFaLS4ss0q10lzrFVtQK/Landing-Page-Androi?node-id=1046-41&t=pYAuwdTIyfYky3Zu-1
 
 ## 4.2. Information Architecture
 
