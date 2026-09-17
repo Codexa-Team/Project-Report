@@ -2679,42 +2679,45 @@ El siguiente diccionario de clases consolida la totalidad de entidades, agregado
 
 ## 4.10. Database Design
 
-El diseño de la base de datos relacional de **RentiCar** ha sido modelado para garantizar la consistencia transaccional, normalización en Tercera Forma Normal (3FN) e integridad referencial entre todías las entidades del negocio.
+El diseño de la base de datos relacional de **RentiCar** ha sido modelado para garantizar la consistencia transaccional, normalización en Tercera Forma Normal (3FN) e integridad referencial entre todas las entidades del negocio, alineándose directamente con las entidades y agregados definidos en el diseño orientado a objetos del dominio.
 
 ### 4.10.1. Relational Database Diagram
 
-Antes de detallar el diccionario de datos, se presenta el esquema relacional global del sistema, ilustrando las tablas principales, claves foráneas y cardinalidades:
+A continuación se presenta el esquema relacional global del sistema **RentiCar**, detallando las tablas principales, claves primarias autoincrementales, claves foráneas, restricciones de unicidad y cardinalidades:
 
 <p align="center">
-  <img src="assets/chapter04/relational-database-diagram.png" alt="Database Diagram" width="650"/><br>
-  <em>Figura 4.10.1: Diagrama Entidad-Relación Relacional de RentiCar</em>
+  <img src="assets/chapter04/relational-database-diagram.png" alt="Database Diagram" width="850"/><br>
+  <em>Figura 4.10.1: Diagrama Entidad-Relación Relacional de RentiCar</em><br>
+  <a href="assets/chapter04/relational-database-diagram.png" target="_blank">Ver diagrama relacional de base de datos en alta resolución</a>
 </p>
 
 ---
 
 ### 4.10.2. Database Data Dictionary (Diccionario de Datos)
 
-El siguiente diccionario de datos describe las tablas y relaciones generadas por **JPA / Hibernate** en la base de datos **TiDB Cloud (MySQL 8.0)** de RentiCar:
+El siguiente diccionario de datos describe detalladamente las tablas, atributos, tipos de datos, restricciones y relaciones gestionadas por **JPA / Hibernate** en la base de datos **TiDB Cloud (MySQL 8.0)** de RentiCar:
 
 #### Tabla: `users`
-Almacena las cuentas y credenciales de acceso de los usuarios del sistema.
+Almacena las cuentas y credenciales de acceso de los usuarios de la plataforma (arrendadores y arrendatarios).
 
 | Columna | Tipo SQL | Longitud | PK | FK | Not Null | Descripción |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
 | `id` | `BIGINT` | 20 | Sí | No | Sí | Identificador autoincremental único del usuario. |
-| `name` | `VARCHAR` | 150 | No | No | Sí | Nombres y apellidos completos del usuario. |
-| `email` | `VARCHAR` | 100 | No | No | Sí | Correo electrónico único validado mediante Value Object. |
-| `password` | `VARCHAR` | 255 | No | No | Sí | Hash BCrypt seguro de la contraseña. |
+| `username` | `VARCHAR` | 50 | No | No | Sí | Nombre de usuario o credencial única de acceso (Unique Key). |
+| `email` | `VARCHAR` | 100 | No | No | Sí | Correo electrónico verificado del usuario (Unique Key). |
+| `password` | `VARCHAR` | 255 | No | No | Sí | Hash BCrypt seguro de la contraseña para autenticación. |
+| `full_name` | `VARCHAR` | 150 | No | No | Sí | Nombres y apellidos completos del titular de la cuenta. |
+| `phone` | `VARCHAR` | 25 | No | No | No | Número telefónico de contacto del usuario. |
 | `created_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de creación del registro. |
 | `updated_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de última actualización. |
 
 #### Tabla: `roles`
-Catálogo de roles del sistema para el control de autorización basado en roles (RBAC).
+Catálogo maestro de roles del sistema para el control de autorización basado en roles (RBAC).
 
 | Columna | Tipo SQL | Longitud | PK | FK | Not Null | Descripción |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| `id` | `BIGINT` | 20 | Sí | No | Sí | Clave primaria del rol. |
-| `name` | `VARCHAR` | 30 | No | No | Sí | Nombre representativo del rol (`ROLE_RENTER`, `ROLE_OWNER`). |
+| `id` | `BIGINT` | 20 | Sí | No | Sí | Clave primaria autoincremental del rol. |
+| `name` | `VARCHAR` | 30 | No | No | Sí | Nombre representativo del rol (`ROLE_RENTER`, `ROLE_OWNER`) (Unique Key). |
 
 #### Tabla: `user_roles`
 Tabla intermedia que resuelve la relación N:M entre `users` y `roles`.
@@ -2725,61 +2728,65 @@ Tabla intermedia que resuelve la relación N:M entre `users` y `roles`.
 | `role_id` | `BIGINT` | 20 | Sí | Sí | Sí | Clave foránea que referencia a `roles.id`. |
 
 #### Tabla: `vehicles`
-Contiene la flota de vehículos publicados por los propietarios (arrendadores).
+Contiene el catálogo de vehículos publicados por los propietarios (arrendadores) en la plataforma.
 
 | Columna | Tipo SQL | Longitud | PK | FK | Not Null | Descripción |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| `id` | `BIGINT` | 20 | Sí | No | Sí | Clave primaria del vehículo. |
-| `brand` | `VARCHAR` | 80 | No | No | Sí | Marca automotriz del vehículo. |
-| `model` | `VARCHAR` | 80 | No | No | Sí | Modelo del automóvil. |
-| `year` | `INT` | 4 | No | No | Sí | Año de fabricación del automóvil. |
-| `price_per_day`| `DOUBLE`| - | No | No | Sí | Tarifa por día en nuevos soles (PEN). |
-| `status` | `VARCHAR` | 25 | No | No | Sí | Estado del auto (`AVAILABLE`, `RENTED`, `MAINTENANCE`). |
-| `image` | `LONGBLOB`| - | No | No | No | Bytes binarios de la fotografía del vehículo. |
-| `owner_id` | `BIGINT` | 20 | No | No | Sí | Identificador del propietario arrendador (`users.id`). |
-| `created_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de creación. |
-| `updated_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de actualización. |
+| `id` | `BIGINT` | 20 | Sí | No | Sí | Clave primaria autoincremental del vehículo. |
+| `owner_id` | `BIGINT` | 20 | No | Sí | Sí | Clave foránea del propietario arrendador (`users.id`). |
+| `brand` | `VARCHAR` | 80 | No | No | Sí | Marca o fabricante de la unidad vehicular. |
+| `model` | `VARCHAR` | 80 | No | No | Sí | Modelo específico del automóvil. |
+| `year` | `INT` | 4 | No | No | Sí | Año de fabricación del vehículo. |
+| `daily_price` | `DECIMAL(10,2)` | 10,2 | No | No | Sí | Tarifa de alquiler diaria en nuevos soles (PEN). |
+| `status` | `VARCHAR` | 25 | No | No | Sí | Estado operativo de la unidad (`AVAILABLE`, `RENTED`, `MAINTENANCE`). |
+| `image_url` | `VARCHAR` | 500 | No | No | No | URL pública de la fotografía del vehículo en almacenamiento en la nube. |
+| `created_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de creación del registro. |
+| `updated_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de última actualización. |
 
 #### Tabla: `bookings`
 Registra las transacciones y contratos de alquiler formalizados entre arrendatarios y vehículos.
 
 | Columna | Tipo SQL | Longitud | PK | FK | Not Null | Descripción |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| `id` | `BIGINT` | 20 | Sí | No | Sí | Clave primaria autonumérica de la reserva. |
-| `vehicle_id` | `BIGINT` | 20 | No | No | Sí | Identificador del vehículo reservado (`vehicles.id`). |
-| `renter_id` | `BIGINT` | 20 | No | No | Sí | Identificador del cliente solicitante (`users.id`). |
-| `owner_id` | `BIGINT` | 20 | No | No | Sí | Identificador del propietario receptor (`users.id`). |
-| `start_date` | `DATETIME` | - | No | No | Sí | Fecha de inicio del alquiler. |
-| `end_date` | `DATETIME` | - | No | No | Sí | Fecha de término pactada del alquiler. |
-| `total_price` | `DOUBLE` | - | No | No | Sí | Importe económico total calculado. |
-| `booking_status`|`VARCHAR` | 25 | No | No | Sí | Estado (`PENDING`, `CONFIRMED`, `REJECTED`, `CANCELLED`, `COMPLETED`). |
-| `created_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de creación. |
-| `updated_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de actualización. |
+| `id` | `BIGINT` | 20 | Sí | No | Sí | Clave primaria autoincremental de la reserva. |
+| `vehicle_id` | `BIGINT` | 20 | No | Sí | Sí | Clave foránea que referencia al vehículo reservado (`vehicles.id`). |
+| `renter_id` | `BIGINT` | 20 | No | Sí | Sí | Clave foránea del arrendatario cliente (`users.id`). |
+| `owner_id` | `BIGINT` | 20 | No | Sí | Sí | Clave foránea del arrendador propietario (`users.id`). |
+| `start_date` | `DATE` | - | No | No | Sí | Fecha pactada de inicio del servicio de alquiler. |
+| `end_date` | `DATE` | - | No | No | Sí | Fecha pactada de culminación del servicio de alquiler. |
+| `total_price` | `DECIMAL(10,2)` | 10,2 | No | No | Sí | Importe económico total liquidado por los días de alquiler. |
+| `status` | `VARCHAR` | 25 | No | No | Sí | Estado del ciclo transaccional (`PENDING`, `CONFIRMED`, `REJECTED`, `CANCELLED`, `COMPLETED`). |
+| `created_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de creación de la reserva. |
+| `updated_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de confirmación o actualización de estado. |
 
 #### Tabla: `telemetry`
-Almacena las lecturas telemáticas continuas emitidas por los sensores GPS del vehículo.
+Almacena las capturas continuas de telemetría emitidas por los dispositivos IoT vehiculares.
 
 | Columna | Tipo SQL | Longitud | PK | FK | Not Null | Descripción |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| `id` | `BIGINT` | 20 | Sí | No | Sí | Clave primaria de la estampa de telemetría. |
-| `vehicle_id` | `BIGINT` | 20 | No | No | Sí | Identificador del vehículo monitoreado (`vehicles.id`). |
+| `id` | `BIGINT` | 20 | Sí | No | Sí | Clave primaria autoincremental de la lectura telemática. |
+| `vehicle_id` | `BIGINT` | 20 | No | Sí | Sí | Clave foránea del vehículo monitoreado (`vehicles.id`). |
 | `latitude` | `DOUBLE` | - | No | No | Sí | Coordenada geográfica de latitud GPS. |
 | `longitude` | `DOUBLE` | - | No | No | Sí | Coordenada geográfica de longitud GPS. |
-| `speed` | `DOUBLE` | - | No | No | Sí | Velocidad registrada en km/h. |
-| `fuel_level` | `DOUBLE` | - | No | No | Sí | Porcentaje restante de combustible/batería (0 a 100%). |
-| `created_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de recepción telemática. |
+| `speed` | `DOUBLE` | - | No | No | Sí | Velocidad instantánea de desplazamiento en km/h. |
+| `fuel_level` | `DOUBLE` | - | No | No | Sí | Nivel residual de combustible o carga eléctrica (0 a 100%). |
+| `odometer` | `DOUBLE` | - | No | No | Sí | Kilometraje total acumulado reportado por el odómetro del auto. |
+| `recorded_at` | `TIMESTAMP` | - | No | No | Sí | Marca temporal de captura en el sensor IoT vehicular. |
+| `created_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de recepción y persistencia en el backend. |
+| `updated_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de última actualización del registro. |
 
 #### Tabla: `reviews`
-Registra las valoraciones y comentarios emitidos tras concluir una reserva.
+Registra las valoraciones y comentarios emitidos tras concluir satisfactoriamente una reserva.
 
 | Columna | Tipo SQL | Longitud | PK | FK | Not Null | Descripción |
 | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| `id` | `BIGINT` | 20 | Sí | No | Sí | Clave primaria de la reseña. |
-| `vehicle_id` | `BIGINT` | 20 | No | No | Sí | Identificador del vehículo calificado (`vehicles.id`). |
-| `renter_id` | `BIGINT` | 20 | No | No | Sí | Identificador del cliente calificador (`users.id`). |
-| `rating` | `INT` | 2 | No | No | Sí | Puntuación numérica entera de 1 a 5 estrellas. |
-| `comment` | `VARCHAR` | 500 | No | No | No | Comentario cualitativo sobre el servicio. |
-| `created_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de creación. |
+| `id` | `BIGINT` | 20 | Sí | No | Sí | Clave primaria autoincremental de la reseña. |
+| `vehicle_id` | `BIGINT` | 20 | No | Sí | Sí | Clave foránea del vehículo calificado (`vehicles.id`). |
+| `renter_id` | `BIGINT` | 20 | No | Sí | Sí | Clave foránea del cliente arrendatario calificador (`users.id`). |
+| `rating` | `INT` | 2 | No | No | Sí | Puntuación numérica entera de satisfacción (1 a 5 estrellas). |
+| `comment` | `VARCHAR` | 500 | No | No | No | Comentario cualitativo sobre la experiencia de uso del vehículo. |
+| `created_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de registro de la valoración. |
+| `updated_at` | `TIMESTAMP` | - | No | No | Sí | Estampa de auditoría de última actualización de la reseña. |
 
 ---
 
