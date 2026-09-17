@@ -966,6 +966,11 @@ De acuerdo con las entrevistas y su respectivo análisis, a continuación se pre
 <br>
       <img src="Assets/interviews/GRAFICO.png" alt="entrevista4" width="1000"><br>
       
+Ambos segmentos recurren a canales digitales, pero los arrendadores tienen una fuerte dependencia de redes sociales y canales informales, mientras que los arrendatarios combinan redes sociales con plataformas especializadas.
+<br>
+      <img src="Assets/interviews/comunicacion.png" alt="entrevista4" width="1000"><br>
+
+
 ## 2.3. Needfinding
 ### 2.3.1. User Personas
 
