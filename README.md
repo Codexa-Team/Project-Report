@@ -307,13 +307,13 @@ Convertirnos en la plataforma líder de alquiler de vehículos en el Perú y exp
         <td><b>Nombre:</b> - Cesar Alejando Linares Bernable <br>
             <b>Carrera:</b> Ingenieria de Software <br>
         <b>Descripcion: </b>  Soy Cesar Alejandro Linares Bernable, estudiante de la carrera de Ingeniería de Software en la UPC, sede San Miguel, tengo 23 años y estoy cursando el séptimo ciclo académico. Me considero una persona adaptativa, perseverante y comprometida con lo que me propongo. En este proyecto tengo como objetivo buscar múltiples soluciones que beneficien a todo el grupo, por experiencia propia suelo trabajar de manera colaborativa y eficaz.
-        <td><img src="assets/photos/Foto-Cesar.jpeg" alt="Estefano Solis" width="150"></td>
+        <td><img src="assets/photos/Foto-Cesar.jpeg" alt="Foto Cesar" width="150"></td>
     </tr>
     <tr>
         <td><b>Nombre:</b> Landa Ortiz, Sergio Javier <br>
             <b>Carrera:</b> Ingenieria de Software <br>
         <b>Descripcion:</b> Soy un estudiante de software, cursando actualmente el 8vo ciclo, la carrera me interesa mucho ya que siempre aprendo cosas nuevas cada dia, las tecnologias son tantas que nunca te aburres, me considero una persona responsable y me gusta trabajar en equipo
-        <td><img src="assets/photos/fotosergio.jpeg" alt="Foto Bruce" width="150"></td>
+        <td><img src="assets/photos/fotosergio.jpeg" alt="Foto Sergio" width="150"></td>
     </tr>
     <tr>
         <td><b>Nombre:</b> Solis Campos, Estefano Sebastian <br>
@@ -1137,6 +1137,18 @@ https://miro.com/app/board/uXjVHmc36as=/
 
 <img src="assets/chapter02/Asis 1erSegmento.png" width=600px>
 
+<p align="center"><em>Figura 2.3.5.1: Mapeo de Escenarios As-Is para Arrendatario de Vehículos</em></p>
+
+| Dimensión | Fase 1: Búsqueda y Contacto Informal | Fase 2: Negociación y Garantía Ciega | Fase 3: Uso con Incertidumbre Técnica | Fase 4: Devolución y Disputa de Garantía |
+| :--- | :--- | :--- | :--- | :--- |
+| **Fase del Viaje** | Búsqueda en redes sociales y clasificados online | Negociación directa por chat y entrega de dinero | Conducción sin monitoreo telemático | Devolución del auto y reclamo de garantía |
+| **Acciones (Doing)** | - Revisa publicaciones en Facebook Marketplace y grupos.<br>- Pregunta por tarifas diarias y disponibilidad por WhatsApp.<br>- Compara fotos precarias de vehículos sin certificar. | - Acuerda un precio informal sin contrato homologado.<br>- Transfiere garantía económica a una cuenta bancaria personal.<br>- Entrega copia de su DNI y firma un pagaré improvisado. | - Conduce el automóvil con temor a desperfectos mecánicos.<br>- Reporta ruidos o fallas sin recibir asistencia inmediata.<br>- Desconoce el estado real de los fluidos y combustible. | - Entrega el vehículo al dueño en la vía pública.<br>- Espera la devolución íntegra de su depósito de garantía.<br>- Enfrenta reclamos por rayones o desgastes no atribuibles a su uso. |
+| **Pensamientos (Thinking)** | *"¿Será una cuenta falsa o estafa?", "¿Las fotos serán del auto real?", "¿Por qué tardan tanto en responder si necesito el auto hoy?"* | *"¿Me devolverán el dinero de la garantía?", "¿Este papel firmado tendrá validez si ocurre un choque?", "Me parece excesivo lo que me piden de garantía."* | *"Siento un ruido extraño en el motor, ojalá no me deje botado", "¿El seguro particular de este auto me cubrirá en caso de accidente?"* | *"Ese rayón ya estaba cuando me lo entregó", "¿Por qué no me transfiere mi depósito de inmediato?", "No tengo ninguna plataforma donde quejarme o dejar mi opinión."* |
+| **Sentimientos (Feeling)** | **Frustración e Incertidumbre:** Desesperación por respuestas lentas y desconfianza en la veracidad de los avisos. | **Vulnerabilidad y Ansiedad:** Temor a ser estafado y desprotección jurídica total al entregar sumas de dinero sin aval. | **Estrés y Tensión Continua:** Preocupación constante por averías mecánicas y ausencia de soporte en el camino. | **Indignación y Desgaste:** Malestar por cobros abusivos de última hora y trámites engorrosos de reembolso. |
+| **Puntos de Dolor (Pain Points)** | - Cero centralización de información y precios.<br>- Perfiles no verificados en redes sociales.<br>- Gran pérdida de tiempo contactando números telefónicos particulares. | - Ausencia de contratos digitales con validez legal.<br>- Exigencia abusiva de dinero en efectivo o documentos de identidad originales.<br>- Cero transparencia en seguros y coberturas contra accidentes. | - Sin monitoreo telemático de ruta ni alertas de estado del vehículo.<br>- Autos sin mantenimiento certificado ni historial mecánico visible.<br>- Falta de asistencia técnica o botón de auxilio 24/7. | - Arbitrariedad del dueño para retener depósitos de garantía.<br>- Imposibilidad de calificar la experiencia para alertar a otros usuarios.<br>- Cero trazabilidad objetiva de kilometraje y combustible. |
+| **Oportunidad de Mejora con RentiCar** | Catálogo digital centralizado con filtros en tiempo real, fotos verificadas y disponibilidad inmediata por calendario. | Contrato digital transparente con tarifas predefinidas, sin adelantos informales y pago seguro en plataforma. | Integración IoT para monitoreo telemático en tiempo real (GPS, velocidad, combustible) y soporte constante. | Devolución estandarizada con registro telemático de odómetro y sistema de reputación bidireccional (reseñas de 1 a 5 estrellas). |
+
+
 ---
 
 #### Segmento Objetivo 2: Arrendador (Propietario particular que intenta alquilar su auto para obtener ingresos)
@@ -1145,6 +1157,18 @@ https://miro.com/app/board/uXjVHmc36as=/
 Link del Miro: https://miro.com/app/board/uXjVHmc36as=/
 
 <img src="assets/chapter02/Asis 2doSegmento.png" width=600px>
+
+<p align="center"><em>Figura 2.3.5.2: Mapeo de Escenarios As-Is para Arrendador de Vehículos</em></p>
+
+| Dimensión | Fase 1: Publicación Manual y Gestión Ineficiente | Fase 2: Filtrado Precario de Postulantes | Fase 3: Incertidumbre Total durante el Alquiler | Fase 4: Recepción del Auto y Cobro de Daños |
+| :--- | :--- | :--- | :--- | :--- |
+| **Fase del Viaje** | Publicación manual en clasificados y redes sociales | Verificación empírica de clientes y firma de contratos improvisados | Ausencia de monitoreo telemático y angustia por la ubicación del auto | Inspección de desperfectos, cobro de papeletas y desgaste vehicular |
+| **Acciones (Doing)** | - Toma fotos con su celular y las sube a grupos de compra y venta.<br>- Atiende llamadas a cualquier hora y responde mensajes redundantes.<br>- Administra las fechas tentativas de alquiler en cuadernos o notas de celular. | - Pide antecedentes y récord de conductor por chat de WhatsApp.<br>- Redacta un contrato descargado de internet sin asesoría legal.<br>- Solicita un depósito que resulta insuficiente ante un siniestro grave.<br>- Entrega las llaves en persona a un completo desconocido. | - Llama o envía mensajes periódicos al conductor para saber dónde está.<br>- Espera con nerviosismo si el arrendatario no responde el teléfono.<br>- Desconoce la velocidad a la que circulan con su vehículo o si salieron de la ciudad.<br>- No tiene forma de comprobar el uso indebido del automóvil. | - Recibe el vehículo con retraso respecto a la hora pactada.<br>- Nota suciedad o desgastes anormales en neumáticos y frenos.<br>- Revisa días después el sistema del SAT y encuentra fotopapeletas impagas.<br>- Intenta contactar al cliente, quien bloquea el número de teléfono. |
+| **Pensamientos (Thinking)** | *"Publicar en tantos grupos me quita horas de mi día", "¿Por qué la gente regatea tanto el precio?", "Tengo miedo de que un delincuente me cite."* | *"¿Este brevete será auténtico?", "¿Y si se apropia ilícitamente de mi vehículo y lo desmantela?", "Este contrato no me protegerá si comete un delito."* | *"Son las 10 pm y no me responde el WhatsApp", "¿Estará usando mi auto para hacer taxi colectivo?", "¿Habrá salido de Lima sin autorización?"* | *"Me dejó el tanque vacío y un raspón en el parachoques", "El depósito no cubre el costo de la reparación ni las multas", "Perdí dinero en vez de ganar."* |
+| **Sentimientos (Feeling)** | **Sobrecarga y Agobio:** Cansancio por responder consultas repetitivas de personas que no concretan. | **Inseguridad y Temor Extremo:** Miedo constante al robo, secuestro del vehículo o fraude de identidad. | **Impotencia y Angustia Severa:** Pérdida de control total sobre el bien más valioso y ansiedad permanente. | **Frustración y Resignación:** Pérdida económica por daños no reconocidos y sensación de indefensión legal. |
+| **Puntos de Dolor (Pain Points)** | - Inexistencia de una vitrina digital especializada en renta particular.<br>- Gestión desordenada de fechas y sobreposición de alquileres.<br>- Exposición pública de datos personales en redes abiertas. | - Nula verificación automatizada de antecedentes y validez de licencias.<br>- Contratos precarios sin firma electrónica certificada.<br>- Garantías económicas insuficientes o difíciles de cobrar. | - Carencia total de GPS en tiempo real integrado a una aplicación.<br>- Desconocimiento de patrones de conducción temeraria y excesos de velocidad.<br>- Cero alertas automáticas sobre salida de perímetros permitidos. | - Papeletas de tránsito transferidas al propietario sin posibilidad de reclamo.<br>- Gastos de reparación asumidos por el dueño.<br>- Falta de un registro negro o sistema de reputación para conductores infractores. |
+| **Oportunidad de Mejora con RentiCar** | Panel centralizado para dar de alta vehículos con fotos, especificaciones y calendario reactivo automatizado. | Validación estricta de usuarios mediante autenticación JWT y roles (`ROLE_RENTER`), con términos y contratos digitales. | Monitoreo IoT con telemetría en tiempo real: geolocalización continua en mapa Leaflet, odómetro, velocidad y nivel de combustible. | Liquidación garantizada, registro exacto del kilometraje consumido e historial de calificaciones para resguardar la flota. |
+
 
 ## 2.4. Ubiquitous Language
 
@@ -1195,6 +1219,16 @@ https://miro.com/app/board/uXjVHmc36as=/
 
 <img src="assets/chapter03/Tobe 1erSegmento.png" width=600px>
 
+<p align="center"><em>Figura 3.1.1: Mapeo de Escenarios To-Be para Arrendatario en RentiCar</em></p>
+
+| Dimensión | Fase 1: Búsqueda y Selección | Fase 2: Reserva y Contratación | Fase 3: Recojo y Monitoreo IoT | Fase 4: Devolución y Reputación |
+| :--- | :--- | :--- | :--- | :--- |
+| **Fase del Viaje** | Exploración del catálogo web con filtros | Selección de fechas y confirmación | Recojo del auto y seguimiento en ruta | Entrega del vehículo y feedback |
+| **Acciones (Doing)** | - Ingresa a la plataforma y aplica filtros por marca, tipo de transmisión y precio.<br>- Examina fotografías de alta resolución y especificaciones técnicas.<br>- Consulta el promedio de estrellas y comentarios verificados. | - Selecciona fecha de inicio y fin en el calendario dinámico.<br>- Visualiza el cálculo exacto del costo total.<br>- Confirma la solicitud de reserva con su cuenta autenticada. | - Valida la ubicación exacta del auto en el mapa interactivo (Leaflet).<br>- Revisa el estado operativo de los sensores IoT.<br>- Conduce con la tranquilidad de contar con trazabilidad telemática. | - Devuelve el automóvil en el punto acordado con el dueño.<br>- Califica la experiencia del servicio de 1 a 5 estrellas.<br>- Redacta una reseña detallando el estado y atención recibida. |
+| **Pensamientos (Thinking)** | *"Es muy fácil comparar precios y modelos sin tener que llamar por teléfono."*<br>*"Las opiniones de otros usuarios me dan total seguridad."* | *"El precio final es claro y no hay cargos ocultos de última hora."*<br>*"El proceso de confirmación es rápido y transparente."* | *"Puedo ver exactamente dónde está el vehículo en el mapa."*<br>*"El sistema de telemetría garantiza que el auto está en óptimas condiciones."* | *"Todo el alquiler fue rápido y sin trámites engorrosos."*<br>*"Quiero dejar una buena calificación para premiar la puntualidad del dueño."* |
+| **Sentimientos (Feeling)** | **Positivo / Interesado:** Confianza y satisfacción por la claridad visual del catálogo. | **Seguro / Tranquilo:** Alivio al conocer el importe exacto sin intermediarios informales. | **Confortable / Protegido:** Seguridad tecnológica gracias a la supervisión por GPS. | **Satisfecho / Fidelizado:** Gratitud por un servicio ágil y deseo de volver a utilizar RentiCar. |
+
+
 ---
 
 ### Segmento Objetivo 2: Arrendador (Propietario de vehículo que monetiza su auto)
@@ -1203,6 +1237,16 @@ https://miro.com/app/board/uXjVHmc36as=/
 Link del Miro: https://miro.com/app/board/uXjVHmc36as=/
 
 <img src="assets/chapter03/Tobe 2doSegmento.png" width=600px>
+
+<p align="center"><em>Figura 3.1.2: Mapeo de Escenarios To-Be para Arrendador en RentiCar</em></p>
+
+| Dimensión | Fase 1: Registro y Publicación | Fase 2: Gestión de Solicitudes | Fase 3: Monitoreo en Alquiler | Fase 4: Liquidación y Valoración |
+| :--- | :--- | :--- | :--- | :--- |
+| **Fase del Viaje** | Alta de cuenta y publicación de flota | Evaluación de solicitudes entrantes | Supervisión telemática durante el viaje | Cierre de alquiler y cobro |
+| **Acciones (Doing)** | - Crea su cuenta como Arrendador y valida su DNI.<br>- Registra su auto con marca, modelo, año y tarifa por día.<br>- Sube fotos nítidas del auto y define condiciones de uso. | - Recibe notificaciones de nuevas solicitudes en su bandeja.<br>- Revisa el perfil verificado y reputación del arrendatario.<br>- Aprueba o declina la solicitud de reserva con un clic. | - Monitorea la posición en tiempo real del auto en el mapa.<br>- Supervisa lecturas de odómetro, velocidad y nivel de combustible.<br>- Recibe alertas en caso de eventos fuera de lo previsto. | - Recibe el vehículo y verifica el kilometraje reportado por el sensor.<br>- Califica el cuidado y puntualidad del arrendatario.<br>- Recibe la liquidación de su pago de forma garantizada. |
+| **Pensamientos (Thinking)** | *"Publicar mi auto me tomó menos de 10 minutos."*<br>*"Tengo el control total de las tarifas y disponibilidad de mi vehículo."* | *"Puedo ver quién me alquilará el auto antes de aceptar."*<br>*"Sé que las fechas se bloquean automáticamente sin solapamientos."* | *"Tengo el control de la velocidad y el recorrido de mi vehículo."*<br>*"La telemetría IoT me da el respaldo de que mi unidad está segura."* | *"El cliente cuidó mi auto y la entrega fue puntual."*<br>*"Monetizar mi vehículo con RentiCar es seguro y rentable."* |
+| **Sentimientos (Feeling)** | **Motivado / Empoderado:** Entusiasmo al poner en valor un activo en desuso. | **En Control / Cauteloso:** Tranquilidad al decidir a quién alquilar su unidad. | **Tranquilo / Respaldado:** Paz mental gracias a la telemetría continua en tiempo real. | **Satisfecho / Rentable:** Confianza en la plataforma y motivación para sumar más vehículos. |
+
 
 
 ---
@@ -1884,8 +1928,8 @@ ajustando la distribución y dimensiones de los elementos para facilitar su visu
     
     <div
        style="display: flex; gap: 64px; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
-  <img src="assets/photos/Arrendador iOs.png"  alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
-  <img src="assets/photos/Arrendatario iOs.png" alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
+  <img src="assets/photos/Arrendador iOs.png"  alt="Diseño Móvil iOS - Arrendador" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
+  <img src="assets/photos/Arrendatario iOs.png" alt="Diseño Móvil iOS - Arrendatario" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
 
   Link del Figma: https://www.figma.com/design/ZYZ81d4uAuktz4Xr7l7MVJ/Dise%C3%B1o-Movil-Pantalla?node-id=2-4606&t=O9RoGjXSUGKxsjO3-1
 </div>
@@ -1913,8 +1957,8 @@ ajustando la distribución y dimensiones de los elementos para facilitar su visu
 
     <div
        style="display: flex; gap: 64px; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
-  <img src="assets/photos/Arrendador Androi.png"  alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
-  <img src="assets/photos/Arrendatario Androi.png" alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
+  <img src="assets/photos/Arrendador Androi.png"  alt="Diseño Móvil Android - Arrendador" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
+  <img src="assets/photos/Arrendatario Androi.png" alt="Diseño Móvil Android - Arrendatario" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
 
   Link del Figma: https://www.figma.com/design/ZYZ81d4uAuktz4Xr7l7MVJ/Dise%C3%B1o-Movil-Pantalla?node-id=2-4606&t=O9RoGjXSUGKxsjO3-1
 </div>
@@ -2327,6 +2371,21 @@ El prototipo funcional navegable y la demostración de los flujos de usuario se 
 
 A continuación, se presenta la arquitectura de software del sistema **RentiCar**, estructurada bajo los principios de **Domain-Driven Design (DDD)** y documentada mediante el modelo de arquitectura **C4 (Contexto, Contenedores, Componentes y Código)**. Este modelo permite visualizar la descomposición del sistema en diferentes niveles de abstracción, garantizando un diseño desacoplado, mantenible y escalable.
 
+### 4.8.a. Design-Level EventStorming
+
+A partir de los talleres de EventStorming orientados al diseño, se establecieron los límites transaccionales y los siguientes **Bounded Contexts** que conforman la solución:
+
+- **Identity & Access Management (IAM):** Responsable de la autenticación con tokens JWT, registro diferenciado de usuarios (Arrendatarios y Arrendadores), validación de credenciales y gestión de perfiles.
+- **Listings & Vehicle Management:** Administra el ciclo de vida de los vehículos disponibles para alquiler, especificaciones técnicas, precios por jornada y carga de galerías fotográficas.
+- **Booking & Digital Contract:** Controla el flujo transaccional de reservas, selección de rangos de fechas, cálculo automático de tarifas, aprobación o denegación por parte de propietarios y estados del alquiler.
+- **IoT Monitoring & Telemetry:** Procesa datos de telemetría emitidos por dispositivos IoT vehiculares (coordenadas GPS, odómetro, velocidad y nivel de batería/combustible) para su visualización interactiva sobre mapas vectoriales.
+- **Reviews & Reputation:** Gestiona las calificaciones numéricas (1 a 5 estrellas) y opiniones redactadas tras culminar el servicio, recalculando los promedios públicos de reputación.
+
+**Eventos de Dominio Clave:** `UsuarioRegistrado`, `CredencialesValidadas`, `VehiculoPublicado`, `TarifaActualizada`, `ReservaSolicitada`, `ReservaConfirmada`, `ReservaRechazada`, `AlquilerIniciado`, `CoordenadíasGpsRecibidas`, `AlertaCombustibleEmitida`, `AlquilerFinalizado`, `ReseñaPublicada`.  
+**Comandos Principales:** `RegistrarUsuario`, `IniciarSesion`, `PublicarVehiculo`, `ModificarTarifa`, `SolicitarReserva`, `ConfirmarReserva`, `RechazarReserva`, `RegistrarTelemetria`, `CalificarAlquiler`.  
+**Agregados (Aggregates):** `User`, `Vehicle`, `Booking`, `TelemetryRecord`, `Review`.
+
+---
 
 ### 4.8.1. Software Architecture Context Diagram
 
@@ -2695,7 +2754,7 @@ Trabajamos con Github Pages para el despliegue de la Landing Page
 | Producto | Tipo de Entregable | URL Oficial del Repositorio |
 | :--- | :--- | :--- |
 | **Landing Page** | Sitio Web Estático y Promocional | https://github.com/Codexa-Team/Landing-Page |
-| **Web Application** | Frontend Single-Page Application (Angular 20) | https://github.com/Codexa-Team/Front-End|
+| **Web Application** | Frontend Single-Page Application (Angular 20) | [https://github.com/Codexa-Team/Front-End](https://github.com/Codexa-Team/Front-End) |
 | **RESTful API Backend** | Backend API & DDD Bounded Contexts (Spring Boot 3.x) | https://github.com/Codexa-Team/Backend |
 | **Project Report** | Informe Académico de Ingeniería de Software | https://github.com/Codexa-Team/Project-Report |
 
@@ -2952,7 +3011,7 @@ La Landing Page de **RentiCar** fue diseñada para brindar una primera impresió
 
 |Enlace a la Landing Page Desplegada|
 |-|
-|https://codexa-team.github.io/Landing-Page/|
+| [https://codexa-team.github.io/Landing-Page/](https://codexa-team.github.io/Landing-Page/) |
 
 ---
 
@@ -2978,7 +3037,7 @@ La aplicación web de **RentiCar** fue construida en **Angular**, utilizando Ang
 
 |Enlace al Frontend Desplegado|
 |-|
-|https://front-end-open-source.onrender.com/|
+| [https://front-end-open-source.onrender.com/](https://front-end-open-source.onrender.com/) |
 
 ---
 
@@ -3021,7 +3080,7 @@ El backend fue desplegado en la plataforma cloud **Render**, conectado de forma 
 
 |Enlace al Backend Desplegado|
 |-|
-|https://back-end-open-source.onrender.com/|
+| [https://back-end-open-source.onrender.com/](https://back-end-open-source.onrender.com/) |
 
 ---
 
@@ -3109,7 +3168,7 @@ Durante todo el ciclo de desarrollo, **Codexa-Team** mantuvo una disciplina estr
 
 **Collaboration Landing Page:**
 
-<img src="assets/sprint1/commits-landing.png" alt="Carátula Video About the Product" /><br>
+<img src="assets/sprint1/commits-landing.png" alt="Historial de Commits en Landing Page" /><br>
 ---
 
 ## 5.3. Video About-the-Product
