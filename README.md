@@ -206,9 +206,24 @@ software.</td>
             <br>
             TB1: Analice e identifique los usuarios objetivos para proporcionarles una solucion basada en la ingenieria de software, redacte y registre entrevistas con ellos para identificar sus necesidades.
             </br>
+             <br></br>
+                        Sheyla Rojas:
+            <br>
+            TB1: Durante el desarrollo del proyecto, participé en la realización de la entrevista y en el análisis de la información obtenida, considerando las necesidades y características de los usuarios. Por otro lado, apoyé  en el diseño de la versión móvil de la aplicación, procurando que la información presentada fuera clara, accesible y adecuada para los usuarios.
+            </br>
+            <br></br>
+                        Cesar Linares:
+            <br>
+            TB1: Realizar entrevistas a usuarios reales para identificar problemas antes de definir funcionalidades.
+            </br>
+            <br></br>
+                        Sergio Landa:
+            <br>
+            TB1: Participe activamente en el proyecto, realizando entrevistas y los analisis de las entrevistas a nuestros usuarios, y recaudando la informacion necesaria en necesidades y caracteristicas para optar por mejoras considerables en el proyecto.
+            </br>
             </td>
             <td>
-            TB1:
+            TB1:El equipo se centró en la investigación de usuarios mediante múltiples entrevistas para identificar problemas y necesidades antes de definir las funcionalidades clave. Con esta base, propusieron soluciones de software y diseñaron una interfaz móvil accesible y clara. Paralelamente, aseguraron los aspectos técnicos y legales del proyecto documentando la gestión y seguridad de cuentas, redactando el Acuerdo de Servicio SaaS para la privacidad de datos y garantizando la correcta citación de todos los recursos utilizados.
             </td>
         </tr>
         <tr>
@@ -227,9 +242,24 @@ ambientales y sociales.
             <br>
             TB1: Realice las entrevistas identificando necesidades y situaciones para el planteamiento de una solucion tomando en cuenta aspectos globales y economicos de ambos espectros.
             </br>
+            <br></br>
+                        Sheyla Rojas:
+            <br>
+            TB1: Durante las entrevistas, identifiqué que la falta de una aplicación centralizada para reservar y publicar vehículos genera pérdida de tiempo y mayores costos para los usuarios. Para mitigar este impacto social y económico, adapté el diseño web a dispositivos móviles (iOS y Android). Basándome en la información recopilada, diseñé una interfaz sencilla y accesible que facilita el acceso al servicio, garantizando una experiencia eficiente que resuelve las necesidades detectadas.
+            </br>
+            <br></br>
+                        Cesar Linares:
+            <br>
+            TB1: Realizó una entrevista del segmento 2 (arrendatario de vehículo) y añadió más información para el análisis de las entrevistas.
+            </br>
+            <br></br>
+                        Sergio Landa:
+            <br>
+            TB1: Realice una entrevista para ofrecer mayor cobertura de informacion al proyecto, realice cambios importantes para darle un nuevo enfoque a nuestra landing page, y el as is- to be, que nos ayudara a tomar escenarios posibles para tener mas en claro nuestra proyeccion de proyecto.
+            </br>
             </td>
             <td>
-            TB1:
+            TB1:A partir de las entrevistas, el equipo identificó la necesidad de una plataforma centralizada de alquiler de vehículos y documentó el impacto socioeconómico y ambiental del proyecto. Con esta base estratégica, diseñaron una solución digital accesible y escalable —optimizando la landing page y la interfaz móvil— para garantizar transacciones seguras, fomentar la confianza y mejorar la experiencia de los usuarios.
             </td>
         </tr>
     </tbody>
