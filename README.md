@@ -2317,7 +2317,7 @@ El diseño del prototipo se fundamenta en principios de diseño centrado en el u
 
 El prototipo funcional navegable y la demostración de los flujos de usuario se encuentran documentados y disponibles en el siguiente recurso audiovisual:
 
-🎥 **Demostración en Video del Prototipo Web:**  
+**Demostración en Video del Prototipo Web:**  
 [Ver demostración en video del prototipo interactivo en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202314354_upc_edu_pe/ETjEvnFfTMVGg504DkKQo9cBVH1Coad3hieTwbFWm9x8gQ?e=t2sINN&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 ---
@@ -2508,7 +2508,7 @@ A continuación, se presenta el **Diagrama Completo y Unificado de Clases del Si
 <p align="center">
   <img src="assets/chapter04/domain-class-diagram.png" alt="Complete Domain Class Diagram" width="100%"/><br>
   <em>Figura 4.9.1: Diagrama Maestro de Clases del Dominio de RentiCar (UML 2.5 - All Bounded Contexts)</em><br>
-  <a href="assets/chapter04/domain-class-diagram.png" target="_blank">🔍 Ver diagrama de clases en resolución completa (4096px)</a>
+  <a href="assets/chapter04/domain-class-diagram.png" target="_blank">Ver diagrama de clases en resolución completa (4096px)</a>
 </p>
 
 ---
