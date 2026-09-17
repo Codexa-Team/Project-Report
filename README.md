@@ -2548,6 +2548,7 @@ En el backend (**Java / Spring Boot 3.x**) se aplica una arquitectura moderna ba
 | `Service --> Repository` | **Asociación Dirigida** | El servicio de aplicación utiliza el repositorio JPA para persistencia y consultas. |
 | `Repository ..> Entity` | **Dependencia (`<<manages>>`)** | El repositorio administra el ciclo de vida de la entidad correspondiente al Aggregate Root. |
 | `CommandService ..> Facade` | **Dependencia de Integración (ACL)** | Comunicación desacoplada entre Bounded Contexts a través de contratos de interfaz. |
+| `Service --> ExternalClient` | **Delegación de Infraestructura** | Conexión directa hacia el cliente HTTP de integración con servicios web externos (OpenRouteService). |
 
 ---
 
@@ -2653,6 +2654,10 @@ El siguiente diccionario de clases consolida la totalidad de entidades, agregado
 | **IoT** | `TelemetryQueryService` | `+handle(GetLatestTelemetryQuery)` | Retorna el estado telemático más reciente de un auto | `Optional<Telemetry>` | Público |
 | **IoT** | `TelemetryQueryService` | `+handle(GetTelemetryByVehicleIdQuery)` | Retorna el historial de telemetría de un vehículo | `List<Telemetry>` | Público |
 | **IoT** | `RouteQueryService` | `+handle(GetRouteQuery)` | Consulta la geometría de ruta a OpenRouteServiceApiClient | `RouteResponse` | Público |
+| **IoT** | `OpenRouteServiceApiClient` | `-apiKey` | Clave de autenticación para consumir la API de OpenRouteService | `String` | Privado |
+| **IoT** | `OpenRouteServiceApiClient` | `-restTemplate` | Cliente HTTP de Spring para llamadas REST externas | `RestTemplate` | Privado |
+| **IoT** | `OpenRouteServiceApiClient` | `+getRouteCoordinates()` | Resuelve la polilínea vial de coordenadas entre dos puntos geográficos | `List<double[]>` | Público |
+| **IoT** | `OpenRouteServiceApiClient` | `+getCompleteRoute()` | Resuelve la ruta completa con distancia métrica y duración estimada | `RouteResponse` | Público |
 | **IoT** | `TelemetryController` | `+recordTelemetry()` | Endpoint REST `POST /api/v1/telemetry` | `ResponseEntity` | Público |
 | **IoT** | `TelemetryController` | `+getLatestTelemetry()` | Endpoint REST `GET /api/v1/telemetry/vehicle/{vehicleId}/latest` | `ResponseEntity` | Público |
 | **IoT** | `RouteController` | `+getRoute()` | Endpoint REST `GET /api/v1/simulation/route` | `ResponseEntity` | Público |

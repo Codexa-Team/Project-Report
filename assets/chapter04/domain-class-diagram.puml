@@ -236,6 +236,13 @@ package "IoT Monitoring & Telemetry" as pkg_iot {
     + handle(query: GetRouteQuery): RouteResponse
   }
 
+  class OpenRouteServiceApiClient <<Infrastructure Service>> {
+    - apiKey: String
+    - restTemplate: RestTemplate
+    + getRouteCoordinates(startLat: Double, startLng: Double, endLat: Double, endLng: Double): List<double[]>
+    + getCompleteRoute(startLat: Double, startLng: Double, endLat: Double, endLng: Double): RouteResponse
+  }
+
   class TelemetryController <<REST Controller>> {
     - telemetryCommandService: TelemetryCommandService
     - telemetryQueryService: TelemetryQueryService
@@ -337,6 +344,7 @@ TelemetryRepository ..> Telemetry : <<manages>>
 TelemetryController --> TelemetryCommandService : dispatches
 TelemetryController --> TelemetryQueryService : dispatches
 RouteController --> RouteQueryService : dispatches
+RouteQueryService --> OpenRouteServiceApiClient : delegates
 
 ' =======================================================
 ' RELACIONES INTERNAS (REVIEWS)
