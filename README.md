@@ -1838,8 +1838,8 @@ ajustando la distribución y dimensiones de los elementos para facilitar su visu
      mediante el motor háptico al confirmar acciones o alternar vistas.
   * **Áreas de Toque:** Superficie de contacto interactiva mínima de 44×44 pt para todos los componentes de la interfaz.
     
-<div
-  style="display: flex; gap: 64px; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
+    <div
+       style="display: flex; gap: 64px; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
   <img src="assets/photos/Arrendador iOs.png"  alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
   <img src="assets/photos/Arrendatario iOs.png" alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
 
