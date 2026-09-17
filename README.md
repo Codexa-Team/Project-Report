@@ -49,6 +49,9 @@ U202313403 - Via Luna, Bruce
 | Versión | Fecha | Autor  | Descripción de modificación   |              
 | ------- |-----|-----------|---------------------------|
 | 1.0  | 10/09/2026 | Bruce Via Luna  | Creacion del documento|
+| 1.1  | 13/09/2026 | Todos los intengrantes  | Registro de entrevisas|
+| 1.2  | 14/09/2026 | Todos los intengrantes  | Creacion y pulimiento de Diagramas|
+| 1.3  | 15/09/2026 | Todos los intengrantes  | Documentacion de despliegues|
 
 ## Project Report Collaboration Insights
 
@@ -60,7 +63,9 @@ U202313403 - Via Luna, Bruce
 - Estefano Sebastian Solis Campos
 - Sergio Javier Landa Ortiz
 
-| https://github.com/Codexa-Team/Project-Report |
+| URL del repositorio del reporte |
+|-|
+|https://github.com/Codexa-Team/Project-Report |
 
 **AV1:**
 
@@ -192,19 +197,39 @@ profesionales en situaciones de ingeniería y hacer juicios informados, que debe
 profesional en situaciones de ingeniería de
 software.</td>
             <td>
+            Estefano Solis:
+            <br>
+            TB1: Documenté en el informe la gestión y seguridad de cuentas en RentiCar (diferenciación de roles entre arrendador y arrendatario, autenticación y contraseñas protegidas), redacté el Acuerdo de Servicio SaaS sobre la privacidad y uso responsable de la información de los usuarios, y aseguré el citado correcto de las herramientas, imágenes y recursos externos documentados.
+            </br>
+            <br></br>
+                        Bruce Via:
+            <br>
+            TB1: Analice e identifique los usuarios objetivos para proporcionarles una solucion basada en la ingenieria de software, redacte y registre entrevistas con ellos para identificar sus necesidades.
+            </br>
             </td>
             <td>
+            TB1:
             </td>
         </tr>
         <tr>
             <td>Emite juicios informados considerando
 el impacto de las soluciones de ingeniería de
 software en contextos globales, económicos,
-ambientales y sociales..
+ambientales y sociales.
 </td>
             <td>
+            Estefano Solis:
+            <br>
+            TB1: Analicé y documenté en el informe el impacto de RentiCar: en lo económico (permitir ingresos a propietarios con autos poco usados y precios justos a arrendatarios), en lo social (fomentar la confianza mutua con calificaciones y reseñas para evitar tratos informales en redes sociales), en lo ambiental (promover la movilidad compartida aprovechando autos ya existentes) y en lo global (plantear un modelo digital escalable a otras ciudades).
+            </br>
+            <br></br>
+            Bruce Via:
+            <br>
+            TB1: Realice las entrevistas identificando necesidades y situaciones para el planteamiento de una solucion tomando en cuenta aspectos globales y economicos de ambos espectros.
+            </br>
             </td>
             <td>
+            TB1:
             </td>
         </tr>
     </tbody>
@@ -251,14 +276,14 @@ Convertirnos en la plataforma líder de alquiler de vehículos en el Perú y exp
     <tr>
         <td><b>Nombre:</b> - Cesar Alejando Linares Bernable <br>
             <b>Carrera:</b> Ingenieria de Software <br>
-        <b>Descripcion:</b>  
-        <td></td>
+        <b>Descripcion: </b>  Soy Cesar Alejandro Linares Bernable, estudiante de la carrera de Ingeniería de Software en la UPC, sede San Miguel, tengo 23 años y estoy cursando el séptimo ciclo académico. Me considero una persona adaptativa, perseverante y comprometida con lo que me propongo. En este proyecto tengo como objetivo buscar múltiples soluciones que beneficien a todo el grupo, por experiencia propia suelo trabajar de manera colaborativa y eficaz.
+        <td><img src="assets/photos/Foto-Cesar.jpeg" alt="Estefano Solis" width="150"></td>
     </tr>
     <tr>
-        <td><b>Nombre:</b> Sergio xd <br>
+        <td><b>Nombre:</b> Landa Ortiz, Sergio Javier <br>
             <b>Carrera:</b> Ingenieria de Software <br>
-        <b>Descripcion:</b> 
-        <td></td>
+        <b>Descripcion:</b> Soy un estudiante de software, cursando actualmente el 8vo ciclo, la carrera me interesa mucho ya que siempre aprendo cosas nuevas cada dia, las tecnologias son tantas que nunca te aburres, me considero una persona responsable y me gusta trabajar en equipo
+        <td><img src="assets/photos/fotosergio.jpeg" alt="Foto Bruce" width="150"></td>
     </tr>
     <tr>
         <td><b>Nombre:</b> Solis Campos, Estefano Sebastian <br>
@@ -971,7 +996,9 @@ El celular es el principal dispositivo para ambos segmentos, lo cual justifica y
   <img src="assets/interviews/dispositivo.png" alt="Dispositivos principales de acceso identificados en las entrevistas" width="1000"/><br>
   <em>Figura 2.2.3.3: Preferencia de dispositivos de uso identificada en las entrevistas</em>
 </p>
+
 ## 2.3. Needfinding
+
 ### 2.3.1. User Personas
 
 Los User Personas son representaciones ficticias pero fundamentadas en los hallazgos de las entrevistas realizadas a 
@@ -1658,43 +1685,43 @@ A continuación, se presenta la matriz general de las 8 Épicas que estructuran 
 
 A continuación, se presenta la priorización del Product Backlog general para la plataforma **RentiCar**, estimando el esfuerzo relativo de desarrollo de cada User Story en Story Points y documentando el título y la descripción completa de cada requerimiento funcional:
 
-| StoryID | Título | Descripción | Story Points (1/3/5/8) |
-| :---: | :--- | :--- | :---: |
-| US-01 | Registro de Usuario | Como visitante, quiero registrar una cuenta con mis datos personales y rol en la plataforma, para poder publicar vehículos o solicitar alquileres de manera segura. | 3 |
-| US-02 | Inicio de Sesión (Log In) | Como usuario registrado, quiero iniciar sesión con mis credenciales, para acceder a mis publicaciones, reservas y funcionalidades protegidas de la plataforma. | 3 |
-| US-03 | Actualizar Contraseña de Usuario | Como usuario autenticado, quiero actualizar mi contraseña actual por una nueva, para mantener protegida mi cuenta en la plataforma. | 3 |
-| US-04 | Eliminación de Cuenta de Usuario | Como usuario autenticado, quiero eliminar mi cuenta de la plataforma, para remover definitivamente mis datos y perfil del sistema. | 2 |
-| US-05 | Dashboard del Arrendatario | Como arrendatario, quiero acceder a mi panel principal, para visualizar el estado de mis reservas activas y atajos a mis vehículos contratados. | 3 |
-| US-06 | Dashboard del Propietario | Como propietario, quiero acceder a mi panel principal, para inspeccionar las solicitudes entrantes de alquiler y el estado general de mi flota. | 3 |
-| US-07 | Publicaciones en el Dashboard | Como propietario, quiero consultar mis vehículos publicados en el panel, para verificar su disponibilidad inmediata y estado operativo de renta. | 3 |
-| US-08 | Cancelar Reserva desde el Dashboard | Como arrendatario, quiero cancelar una solicitud de reserva pendiente desde mi panel, para desistir del alquiler antes de que sea formalizado. | 3 |
-| US-09 | Gestión de Flota Propia | Como propietario, quiero acceder a la sección de mi flota vehicular, para administrar de manera organizada todos mis vehículos y publicaciones. | 2 |
-| US-10 | Crear Publicación de Vehículo | Como propietario, quiero registrar un nuevo vehículo con datos técnicos y fotografía en formato multipart, para ponerlo en alquiler dentro del catálogo. | 5 |
-| US-11 | Visualizar Publicación de Vehículo | Como usuario, quiero consultar el detalle de una publicación de vehículo, para revisar especificaciones técnicas, tarifa diaria y disponibilidad operativa. | 3 |
-| US-12 | Descarga y Renderizado de Imagen Vehicular | Como usuario, quiero visualizar la fotografía real del vehículo almacenada en la base de datos, para evaluar su estado físico y apariencia antes de rentar. | 3 |
-| US-13 | Actualizar Datos y Especificaciones del Vehículo | Como propietario, quiero modificar las especificaciones, precio o fotografía de mi vehículo, para mantener actualizada la información de mi oferta. | 3 |
-| US-14 | Eliminar Publicación de Vehículo | Como propietario, quiero dar de baja una publicación de vehículo, para retirarlo definitivamente del catálogo cuando ya no esté destinado a renta. | 2 |
-| US-15 | Navegación de Catálogo Público | Como usuario, quiero explorar el catálogo general de vehículos disponibles, para revisar las alternativas de alquiler en la plataforma. | 5 |
-| US-16 | Ordenar Catálogo por Precio | Como arrendatario, quiero ordenar el catálogo de autos por tarifa diaria ascendente o descendente, para ajustar las opciones a mi presupuesto. | 2 |
-| US-17 | Filtrar Catálogo por Marca | Como arrendatario, quiero filtrar los vehículos por marcas específicas (Toyota, Nissan, etc.), para encontrar rápidamente modelos de mi preferencia. | 3 |
-| US-18 | Ver Ficha Detallada de Vehículo | Como arrendatario, quiero abrir la ficha individual de un auto, para examinar su fotografía, especificaciones mecánicas y procedencia antes de rentar. | 5 |
-| US-19 | Reservar Vehículo con Cálculo de Días | Como arrendatario, quiero seleccionar fechas de inicio y fin de alquiler, para que el sistema calcule automáticamente el costo total por días y cree la solicitud. | 5 |
-| US-20 | Confirmar Solicitud de Reserva | Como propietario, quiero aceptar una solicitud de reserva pendiente recibida, para formalizar el contrato digital de alquiler con el arrendatario. | 5 |
-| US-21 | Rechazar Solicitud de Reserva | Como propietario, quiero declinar una solicitud de alquiler cuando no me sea posible atenderla, para liberar las fechas del vehículo en el calendario. | 3 |
-| US-22 | Historial de Reservas del Arrendatario | Como arrendatario, quiero consultar el historial cronológico de todas mis reservas, para revisar contratos pasados, activos y pendientes de aprobación. | 3 |
-| US-23 | Consulta de Historial Telemático por Vehículo | Como usuario involucrado en un alquiler, quiero consultar el historial telemático del vehículo, para analizar su comportamiento en ruta durante el servicio. | 5 |
-| US-24 | Visualizar Última Posición GPS en Mapa Leaflet | Como usuario, quiero consultar el último punto telemático con coordenadas GPS, velocidad y nivel de combustible, para ubicar el auto en tiempo real sobre el mapa Leaflet. | 8 |
-| US-25 | Ingesta de Telemetría IoT | Como módulo telemático del vehículo, quiero transmitir lecturas de sensores por HTTP REST, para que el sistema almacene los datos de velocidad, combustible y posición. | 5 |
-| US-26 | Iniciar Simulación Telemática en Ruta | Como propietario, quiero iniciar una simulación realista de movimiento vehicular por carreteras reales, para verificar la recepción telemática en tiempo real. | 5 |
-| US-27 | Cálculo de Ruta entre Coordenadas | Como usuario, quiero obtener la geometría de ruta y puntos de navegación entre dos coordenadas, para visualizar el trayecto vehicular planificado sobre el mapa. | 3 |
-| US-28 | Publicar Reseña de Alquiler | Como arrendatario, quiero registrar una calificación de 1 a 5 estrellas y un comentario tras un servicio, para compartir mi experiencia en la plataforma. | 3 |
-| US-29 | Consultar Reseñas por Vehículo | Como usuario, quiero leer las opiniones y ver las valoraciones de un vehículo específico, para evaluar su confiabilidad antes de solicitar una reserva. | 2 |
-| US-30 | Consultar Mis Reseñas Publicadas | Como arrendatario, quiero consultar el historial de todas las reseñas que he emitido, para dar seguimiento a mis opiniones y valoraciones. | 3 |
-| US-31 | Visualización y Modificación de Perfil | Como usuario registrado, quiero consultar y editar mis datos personales de perfil, para mantener actualizada mi información de contacto en el sistema. | 3 |
-| US-32 | Acceso a Landing Page e Información del Servicio | Como visitante, quiero acceder a la Landing Page pública, para conocer la propuesta de valor de RentiCar y las ventajas del alquiler colaborativo. | 3 |
-| US-33 | Catálogo Popular y Testimonios en Landing Page | Como visitante, quiero ver una muestra del catálogo destacado y testimonios de usuarios en la página de inicio, para comprobar la calidad del servicio antes de registrarme. | 3 |
-| US-34 | Cambio de Idioma en la Plataforma | Como usuario, quiero cambiar el idioma de la plataforma entre español e inglés, para navegar en mi lengua de preferencia mediante el componente LanguageSwitcher. | 5 |
-| US-35 | Formulario Call to Action (Suscripción) | Como visitante interesado, quiero ingresar mi correo en el formulario de contacto o suscripción de la Landing Page, para recibir noticias, promociones y novedades sobre lanzamientos. | 2 |
+|# Orden| StoryID | Título | Descripción | Story Points (1/3/5/8) |
+| :---: | :--- |:--- | :--- | :---: |
+|1| US-01 | Registro de Usuario | Como visitante, quiero registrar una cuenta con mis datos personales y rol en la plataforma, para poder publicar vehículos o solicitar alquileres de manera segura. | 3 |
+|2| US-02 | Inicio de Sesión (Log In) | Como usuario registrado, quiero iniciar sesión con mis credenciales, para acceder a mis publicaciones, reservas y funcionalidades protegidas de la plataforma. | 3 |
+|3| US-03 | Actualizar Contraseña de Usuario | Como usuario autenticado, quiero actualizar mi contraseña actual por una nueva, para mantener protegida mi cuenta en la plataforma. | 3 |
+|4| US-04 | Eliminación de Cuenta de Usuario | Como usuario autenticado, quiero eliminar mi cuenta de la plataforma, para remover definitivamente mis datos y perfil del sistema. | 2 |
+|5| US-05 | Dashboard del Arrendatario | Como arrendatario, quiero acceder a mi panel principal, para visualizar el estado de mis reservas activas y atajos a mis vehículos contratados. | 3 |
+|6| US-06 | Dashboard del Propietario | Como propietario, quiero acceder a mi panel principal, para inspeccionar las solicitudes entrantes de alquiler y el estado general de mi flota. | 3 |
+|7| US-07 | Publicaciones en el Dashboard | Como propietario, quiero consultar mis vehículos publicados en el panel, para verificar su disponibilidad inmediata y estado operativo de renta. | 3 |
+|8| US-08 | Cancelar Reserva desde el Dashboard | Como arrendatario, quiero cancelar una solicitud de reserva pendiente desde mi panel, para desistir del alquiler antes de que sea formalizado. | 3 |
+|9| US-09 | Gestión de Flota Propia | Como propietario, quiero acceder a la sección de mi flota vehicular, para administrar de manera organizada todos mis vehículos y publicaciones. | 2 |
+|10| US-10 | Crear Publicación de Vehículo | Como propietario, quiero registrar un nuevo vehículo con datos técnicos y fotografía en formato multipart, para ponerlo en alquiler dentro del catálogo. | 5 |
+|11| US-11 | Visualizar Publicación de Vehículo | Como usuario, quiero consultar el detalle de una publicación de vehículo, para revisar especificaciones técnicas, tarifa diaria y disponibilidad operativa. | 3 |
+|12| US-12 | Descarga y Renderizado de Imagen Vehicular | Como usuario, quiero visualizar la fotografía real del vehículo almacenada en la base de datos, para evaluar su estado físico y apariencia antes de rentar. | 3 |
+|13| US-13 | Actualizar Datos y Especificaciones del Vehículo | Como propietario, quiero modificar las especificaciones, precio o fotografía de mi vehículo, para mantener actualizada la información de mi oferta. | 3 |
+|14| US-14 | Eliminar Publicación de Vehículo | Como propietario, quiero dar de baja una publicación de vehículo, para retirarlo definitivamente del catálogo cuando ya no esté destinado a renta. | 2 |
+|15| US-15 | Navegación de Catálogo Público | Como usuario, quiero explorar el catálogo general de vehículos disponibles, para revisar las alternativas de alquiler en la plataforma. | 5 |
+|16| US-16 | Ordenar Catálogo por Precio | Como arrendatario, quiero ordenar el catálogo de autos por tarifa diaria ascendente o descendente, para ajustar las opciones a mi presupuesto. | 2 |
+|17| US-17 | Filtrar Catálogo por Marca | Como arrendatario, quiero filtrar los vehículos por marcas específicas (Toyota, Nissan, etc.), para encontrar rápidamente modelos de mi preferencia. | 3 |
+|18| US-18 | Ver Ficha Detallada de Vehículo | Como arrendatario, quiero abrir la ficha individual de un auto, para examinar su fotografía, especificaciones mecánicas y procedencia antes de rentar. | 5 |
+|19| US-19 | Reservar Vehículo con Cálculo de Días | Como arrendatario, quiero seleccionar fechas de inicio y fin de alquiler, para que el sistema calcule automáticamente el costo total por días y cree la solicitud. | 5 |
+|20| US-20 | Confirmar Solicitud de Reserva | Como propietario, quiero aceptar una solicitud de reserva pendiente recibida, para formalizar el contrato digital de alquiler con el arrendatario. | 5 |
+|21| US-21 | Rechazar Solicitud de Reserva | Como propietario, quiero declinar una solicitud de alquiler cuando no me sea posible atenderla, para liberar las fechas del vehículo en el calendario. | 3 |
+|22| US-22 | Historial de Reservas del Arrendatario | Como arrendatario, quiero consultar el historial cronológico de todas mis reservas, para revisar contratos pasados, activos y pendientes de aprobación. | 3 |
+|23| US-23 | Consulta de Historial Telemático por Vehículo | Como usuario involucrado en un alquiler, quiero consultar el historial telemático del vehículo, para analizar su comportamiento en ruta durante el servicio. | 5 |
+|24| US-24 | Visualizar Última Posición GPS en Mapa Leaflet | Como usuario, quiero consultar el último punto telemático con coordenadas GPS, velocidad y nivel de combustible, para ubicar el auto en tiempo real sobre el mapa Leaflet. | 8 |
+|25| US-25 | Ingesta de Telemetría IoT | Como módulo telemático del vehículo, quiero transmitir lecturas de sensores por HTTP REST, para que el sistema almacene los datos de velocidad, combustible y posición. | 5 |
+|26| US-26 | Iniciar Simulación Telemática en Ruta | Como propietario, quiero iniciar una simulación realista de movimiento vehicular por carreteras reales, para verificar la recepción telemática en tiempo real. | 5 |
+|27| US-27 | Cálculo de Ruta entre Coordenadas | Como usuario, quiero obtener la geometría de ruta y puntos de navegación entre dos coordenadas, para visualizar el trayecto vehicular planificado sobre el mapa. | 3 |
+|28| US-28 | Publicar Reseña de Alquiler | Como arrendatario, quiero registrar una calificación de 1 a 5 estrellas y un comentario tras un servicio, para compartir mi experiencia en la plataforma. | 3 |
+|29| US-29 | Consultar Reseñas por Vehículo | Como usuario, quiero leer las opiniones y ver las valoraciones de un vehículo específico, para evaluar su confiabilidad antes de solicitar una reserva. | 2 |
+|30| US-30 | Consultar Mis Reseñas Publicadas | Como arrendatario, quiero consultar el historial de todas las reseñas que he emitido, para dar seguimiento a mis opiniones y valoraciones. | 3 |
+|31| US-31 | Visualización y Modificación de Perfil | Como usuario registrado, quiero consultar y editar mis datos personales de perfil, para mantener actualizada mi información de contacto en el sistema. | 3 |
+|32| US-32 | Acceso a Landing Page e Información del Servicio | Como visitante, quiero acceder a la Landing Page pública, para conocer la propuesta de valor de RentiCar y las ventajas del alquiler colaborativo. | 3 |
+|33| US-33 | Catálogo Popular y Testimonios en Landing Page | Como visitante, quiero ver una muestra del catálogo destacado y testimonios de usuarios en la página de inicio, para comprobar la calidad del servicio antes de registrarme. | 3 |
+|34| US-34 | Cambio de Idioma en la Plataforma | Como usuario, quiero cambiar el idioma de la plataforma entre español e inglés, para navegar en mi lengua de preferencia mediante el componente LanguageSwitcher. | 5 |
+|35| US-35 | Formulario Call to Action (Suscripción) | Como visitante interesado, quiero ingresar mi correo en el formulario de contacto o suscripción de la Landing Page, para recibir noticias, promociones y novedades sobre lanzamientos. | 2 |
 
 ## 3.4. Impact Mapping
 
@@ -2280,21 +2307,6 @@ El prototipo funcional navegable y la demostración de los flujos de usuario se 
 
 A continuación, se presenta la arquitectura de software del sistema **RentiCar**, estructurada bajo los principios de **Domain-Driven Design (DDD)** y documentada mediante el modelo de arquitectura **C4 (Contexto, Contenedores, Componentes y Código)**. Este modelo permite visualizar la descomposición del sistema en diferentes niveles de abstracción, garantizando un diseño desacoplado, mantenible y escalable.
 
-### 4.8.a. Design-Level EventStorming
-
-A partir de los talleres de EventStorming orientados al diseño, se establecieron los límites transaccionales y los siguientes **Bounded Contexts** que conforman la solución:
-
-- **Identity & Access Management (IAM):** Responsable de la autenticación con tokens JWT, registro diferenciado de usuarios (Arrendatarios y Arrendadores), validación de credenciales y gestión de perfiles.
-- **Listings & Vehicle Management:** Administra el ciclo de vida de los vehículos disponibles para alquiler, especificaciones técnicas, precios por jornada y carga de galerías fotográficas.
-- **Booking & Digital Contract:** Controla el flujo transaccional de reservas, selección de rangos de fechas, cálculo automático de tarifas, aprobación o denegación por parte de propietarios y estados del alquiler.
-- **IoT Monitoring & Telemetry:** Procesa datos de telemetría emitidos por dispositivos IoT vehiculares (coordenadas GPS, odómetro, velocidad y nivel de batería/combustible) para su visualización interactiva sobre mapas vectoriales.
-- **Reviews & Reputation:** Gestiona las calificaciones numéricas (1 a 5 estrellas) y opiniones redactadas tras culminar el servicio, recalculando los promedios públicos de reputación.
-
-**Eventos de Dominio Clave:** `UsuarioRegistrado`, `CredencialesValidadas`, `VehiculoPublicado`, `TarifaActualizada`, `ReservaSolicitada`, `ReservaConfirmada`, `ReservaRechazada`, `AlquilerIniciado`, `CoordenadíasGpsRecibidas`, `AlertaCombustibleEmitida`, `AlquilerFinalizado`, `ReseñaPublicada`.  
-**Comandos Principales:** `RegistrarUsuario`, `IniciarSesion`, `PublicarVehiculo`, `ModificarTarifa`, `SolicitarReserva`, `ConfirmarReserva`, `RechazarReserva`, `RegistrarTelemetria`, `CalificarAlquiler`.  
-**Agregados (Aggregates):** `User`, `Vehicle`, `Booking`, `TelemetryRecord`, `Review`.
-
----
 
 ### 4.8.1. Software Architecture Context Diagram
 
@@ -2653,19 +2665,19 @@ Utilizamos Figma para el desarrollo de mock ups tanto de la landing page como de
 <img src="assets/chapter05/tool-figma.jpeg" width=300 >
 
 ### Software Deployment
-Trabajamos con vercel para el despliegue de la landing page
+Trabajamos con Github Pages para el despliegue de la Landing Page
 
-<img src="assets/chapter05/tool-vercel.webp" width=300 >
+<img src="assets/chapter05/github.png" width=300 >
 
 
 ### 5.1.2. Source Code Management
 
 | Producto | Tipo de Entregable | URL Oficial del Repositorio |
 | :--- | :--- | :--- |
-| **Landing Page** | Sitio Web Estático y Promocional | https://github.com/CodexaTeam/LandingPage |
-| **Web Application** | Frontend Single-Page Application (Angular 20) | https://github.com/CodexaTeam/Frontend |
-| **RESTful API Backend** | Backend API & DDD Bounded Contexts (Spring Boot 3.x) | https://github.com/CodexaTeam/Backend |
-| **Project Report** | Informe Académico de Ingeniería de Software | https://github.com/CodexaTeam/Report |
+| **Landing Page** | Sitio Web Estático y Promocional | https://github.com/Codexa-Team/Landing-Page |
+| **Web Application** | Frontend Single-Page Application (Angular 20) | https://github.com/Codexa-Team/Front-End|
+| **RESTful API Backend** | Backend API & DDD Bounded Contexts (Spring Boot 3.x) | https://github.com/Codexa-Team/Backend |
+| **Project Report** | Informe Académico de Ingeniería de Software | https://github.com/Codexa-Team/Project-Report |
 
 Para el desarrollo de todos los productos de Codexa-Team hemos empleado GitFlow con las siguientes restricciones:
 - **Main**: Rama principal del proyecto. Contiene la versión estable y lista para producción.
@@ -2881,6 +2893,22 @@ En este apartado se documenta la ejecución del ciclo de vida del desarrollo ág
 
 A continuación, se presentan las tablas de ejecución de los cuatro sprints desarrollados para la construcción de la plataforma **RentiCar**, detallando las User Stories asignadas, el desglose de tareas técnicas (work-items), estimación en horas-hombre, responsables individuales (distribuidos equitativamente entre los 5 miembros del equipo: Bruce Vía, César Linares, Sergio Landa, Estefano Solís y Sheila Angeles) y estado final:
 
+| Sprint # | Sprint1 |||||||
+|----------|---------|-|-|-|-|-|-|
+| **User Story** | | **Work-Item/task** |  |  | |   |  |
+| **ID** | **Title** | **Id** | **Title** | **Description** | **Estimation(Hrs)** | **Assigned To**   | **Status** |
+| **US-01** | Registro de Usuario | T001 | Creacion de usuario | Crea un perfil para el registro del usuario| 4 | Bruce Via | Done |
+|   | | T002 | Seleccion de rol | Al crear el usuario este tiene la capacidad de elegir el rol que desea y acceder a las funcionalidades adecuadas | 5 | Estefano Solis | Done |
+| **US-07** | Publicaciones en el Dashboard | T0011 | Ver Publicaciones disponibles | Toda publicacion publicada se mostrara en el dashboard correspondiendte con acceso a dicha publciacion | 4 | Sergio Landa | Done |
+|   | | T0012 | Separar publicaciones por roles   | Separa las secciones exclusivas para los roles especificos | 5 | Cesar Linares | Done |
+|   | | T0013 | Separacion de dashboard   | Muestra un dashboard diferente para cada rol con sus publciaciones respectivas | 4 | Sheila Angeles | Done |
+| **US-20** | Confirmar Solicitud de Reserva | T011 | Reservar correctamente un vehiculo | Al momento de realizar la rerva y se cumplan los requisitos se confirma y se inicia el proceso | 7 | Estefano Solis | Done |
+| **US-26** | Iniciar Simulación Telemática en Ruta | T021 | Visualizar la simulacion | Ver la ubicacion de auto en un mapa| 8 | Sheila Angeles | Done |
+|   | | T022 | Visualizar simulacion   | Muestra al auto moviendose por el mapa de Lima | 8 | Bruce Via | Done |
+| **TS-01**      | Conectar con Base de Datos | T1 | Conectar y sincronizar tablas  | Vincular el backend a una base de datos en la nuve  | 4 | Sergio Landa | Done  |
+| **TS-02**      | Configuración del Pipeline de Seguridad | T11 | Creacion de Token JWT  | Crear un token JWT al inciar sesion  | 1 | Cesar Linares | Done  |
+|   | | T12 | Validacion de Token   | Bloquear acceso a funcionales de saltar el token JWT | 4 | Bruce Via | Done |
+
 ### 5.2.2. Implemented Landing Page Evidence
 
 La Landing Page de **RentiCar** fue diseñada para brindar una primera impresión confiable, moderna y atractiva, maximizando la conversión de visitantes en usuarios registrados.
@@ -2901,6 +2929,10 @@ La Landing Page de **RentiCar** fue diseñada para brindar una primera impresió
 - **Hero Section con Llamado a la Acción:** Propuesta de valor clara orientada a la movilidad compartida en el Perú con botones directos hacia el registro y la exploración del catálogo.
 - **Catálogo de Modelos Populares:** Carrusel interactivo desarrollado con la librería Swiper.js, permitiendo navegar entre los automóviles más destacados.
 - **Despliegue Continuo en Vercel:** Vinculación directa con la rama `main` del repositorio `LandingPage`, logrando un pipeline automatizado con tiempos de carga optimizados.
+
+|Enlace a la Landing Page Desplegada|
+|-|
+|https://codexa-team.github.io/Landing-Page/|
 
 ---
 
@@ -2924,6 +2956,10 @@ La aplicación web de **RentiCar** fue construida en **Angular**, utilizando Ang
 - **Manejo Centralizado de Estados:** Servicios de Angular gestionando reactivamente el estado de la sesión, la cesta de reserva y los filtros de búsqueda.
 - **Visualización Telemática Interactiva:** Integración con mapas vectoriales de código abierto permitiendo seguir la trayectoria simulada del vehículo durante el viaje.
 
+|Enlace al Frontend Desplegado|
+|-|
+|https://front-end-open-source.onrender.com/|
+
 ---
 
 ### 5.2.4. Acuerdo de Servicio - SaaS
@@ -2938,8 +2974,7 @@ La plataforma **RentiCar** se distribuye bajo el modelo de **Software as a Servi
    La plataforma opera bajo un esquema de comisión transaccional transparente sobre cada reserva completada, reteniendo los fondos de forma segura hasta que el vehículo es devuelto satisfactoriamente.
 4. **Soporte y Tiempos de Respuesta ante Incidentes:**  
    Se establecen canales de atención técnica con respuesta máxima de 4 horas para incidentes críticos (fallas en confirmación de reservas) y 24 horas para consultas ordinarias.
-5. **Estrategia y Roadmap Móvil:**  
-   Actualmente la plataforma opera con arquitectura **Web-First**, ofreciendo una interfaz totalmente adaptada a dispositivos móviles (PWA responsiva). La aplicación móvil nativa (Android/iOS) se encuentra proyectada dentro de la hoja de ruta evolutiva para etapas posteriores del proyecto.
+
 
 ---
 
@@ -2964,6 +2999,10 @@ El backend fue desplegado en la plataforma cloud **Render**, conectado de forma 
 - **Variables de Entorno Clave:** `SPRING_DATASOURCE_URL`, `SPRING_DATASOURCE_USERNAME`, `SPRING_DATASOURCE_PASSWORD`, `JWT_SECRET`.
 - **Integración Continua:** Cada push a la rama `main` del repositorio `Backend` dispara automáticamente la compilación Maven, ejecución de pruebas y nuevo despliegue sin caída de servicio.
 
+|Enlace al Backend Desplegado|
+|-|
+|https://back-end-open-source.onrender.com/|
+
 ---
 
 ### 5.2.6. RESTful API Documentation
@@ -2980,37 +3019,67 @@ La documentación interactiva de la API fue implementada mediante **Swagger UI /
 
 La siguiente matriz detalla con rigor técnico los controladores, métodos HTTP, rutas oficiales, esquemas de transferencia de datos y códigos de estado HTTP implementados en la solución:
 
-| Bounded Context | Controlador Spring Boot | Método | Ruta del Endpoint | Cuerpo de Petición (Request) | Código Respuesta | Descripción del Servicio |
-| :--- | :--- | :---: | :--- | :--- | :---: | :--- |
-| **IAM** | `AuthenticationController` | `POST` | `/api/v1/authentication/sign-up` | `SignUpResource` | `201 Created` | Registra una nueva cuenta de usuario asignando roles (`ROLE_RENTER`, `ROLE_OWNER`). |
-| **IAM** | `AuthenticationController` | `POST` | `/api/v1/authentication/sign-in` | `SignInResource` | `200 OK` | Valida credenciales de acceso y emite el token Bearer JWT con claims de usuario. |
-| **IAM** | `AuthenticationController` | `GET` | `/api/v1/authentication` | - | `200 OK` | Verifica el estado general de autenticación del sistema. |
-| **IAM** | `UsersController` | `GET` | `/api/v1/users` | - | `200 OK` | Lista los usuarios registrados en el sistema. |
-| **IAM** | `UsersController` | `PATCH` | `/api/v1/users/{userId}` | `UpdateUserResource` | `200 OK` | Actualiza la información básica del perfil del usuario. |
-| **IAM** | `UsersController` | `PATCH` | `/api/v1/users/{userId}/password` | `UpdatePasswordResource` | `200 OK` | Restablece la contraseña cifrada del usuario. |
-| **IAM** | `RolesController` | `GET` | `/api/v1/roles` | - | `200 OK` | Consulta el catálogo de roles admitidos en la plataforma. |
-| **Listings** | `VehiclesController` | `GET` | `/api/v1/vehicles` | - | `200 OK` | Retorna el catálogo completo de vehículos disponibles para alquiler. |
-| **Listings** | `VehiclesController` | `GET` | `/api/v1/vehicles/{vehicleId}` | - | `200 OK` | Retorna la ficha técnica detallada de un vehículo por su ID. |
-| **Listings** | `VehiclesController` | `GET` | `/api/v1/vehicles/{vehicleId}/image` | - | `200 OK` | Descarga/renderiza la fotografía binaria almacenada del vehículo. |
-| **Listings** | `VehiclesController` | `GET` | `/api/v1/vehicles/my-listings` | - | `200 OK` | Retorna la lista de vehículos publicados por el arrendador autenticado. |
-| **Listings** | `VehiclesController` | `POST` | `/api/v1/vehicles` | `multipart/form-data` | `201 Created` | Publica un nuevo vehículo en la flota adjuntando datos y archivo fotográfico. |
-| **Listings** | `VehiclesController` | `PUT` | `/api/v1/vehicles/{vehicleId}` | `multipart/form-data` | `200 OK` | Modifica las especificaciones, tarifa diaria o fotografía del vehículo. |
-| **Listings** | `VehiclesController` | `DELETE` | `/api/v1/vehicles/{vehicleId}` | - | `204 No Content` | Da de baja una publicación de vehículo del catálogo. |
-| **Booking** | `BookingsController` | `POST` | `/api/v1/bookings` | `CreateBookingResource` | `201 Created` | Registra una nueva solicitud de reserva en estado transaccional `PENDING`. |
-| **Booking** | `BookingsController` | `GET` | `/api/v1/bookings/my-bookings` | - | `200 OK` | Consulta el historial completo de reservas solicitadas por el cliente autenticado. |
-| **Booking** | `BookingsController` | `GET` | `/api/v1/bookings/my-requests` | - | `200 OK` | Retorna la bandeja de solicitudes de reserva recibidas por el dueño autenticado. |
-| **Booking** | `BookingsController` | `GET` | `/api/v1/bookings/{bookingId}` | - | `200 OK` | Obtiene el comprobante y detalle de una reserva específica. |
-| **Booking** | `BookingsController` | `PUT` | `/api/v1/bookings/{bookingId}/confirm`| - | `200 OK` | Confirma la reserva transicionándola a `CONFIRMED` y bloquea disponibilidad. |
-| **Booking** | `BookingsController` | `PUT` | `/api/v1/bookings/{bookingId}/reject` | - | `200 OK` | Declina la solicitud transicionándola a `REJECTED` y libera fechas. |
-| **Booking** | `BookingsController` | `PUT` | `/api/v1/bookings/{bookingId}/cancel` | - | `200 OK` | Cancela la reserva por iniciativa del cliente transicionándola a `CANCELLED`. |
-| **IoT** | `TelemetryController` | `POST` | `/api/v1/telemetry` | `RecordTelemetryResource` | `201 Created` | Registra una lectura telemática emitida por los sensores vehiculares. |
-| **IoT** | `TelemetryController` | `GET` | `/api/v1/telemetry/vehicle/{vehicleId}` | - | `200 OK` | Retorna el historial cronológico de telemetría de un vehículo. |
-| **IoT** | `TelemetryController` | `GET` | `/api/v1/telemetry/vehicle/{vehicleId}/latest` | - | `200 OK` | Obtiene la última lectura telemática (latitud, longitud, velocidad, combustible). |
-| **IoT** | `RouteController` | `GET` | `/api/v1/simulation/route` | - | `200 OK` | Retorna la secuencia de coordenadas GPS simuladas de la ruta en curso. |
-| **Reviews** | `ReviewsController` | `POST` | `/api/v1/reviews` | `CreateReviewResource` | `201 Created` | Registra una calificación de 1 a 5 estrellas y comentario tras culminar alquiler. |
-| **Reviews** | `ReviewsController` | `GET` | `/api/v1/reviews/vehicle/{vehicleId}` | - | `200 OK` | Retorna todías las opiniones y promedio de valoración de un vehículo. |
-| **Reviews** | `ReviewsController` | `GET` | `/api/v1/reviews/my-reviews` | - | `200 OK` | Retorna las reseñas emitidas por el usuario autenticado. |
-| **Shared** | `WelcomeController` | `GET` | `/` | - | `200 OK` | Endpoint raíz que expone el estado y versión de la API REST. |
+**Bounded Context IAM**
+
+Bounded Context el servicio de identificacion y registro e usuarios
+
+| Bounded Context | Método | Ruta del Endpoint |  Descripción del Servicio |
+| :--- | :---: | :--- | :--- | 
+| **IAM**  | `POST` | `/api/v1/authentication/sign-up` | Registra una nueva cuenta de usuario asignando roles (`ROLE_RENTER`, `ROLE_OWNER`). |
+| **IAM**  | `POST` | `/api/v1/authentication/sign-in` | Valida credenciales de acceso y emite el token Bearer JWT con claims de usuario. |
+| **IAM**  | `GET` | `/api/v1/authentication`  | Verifica el estado general de autenticación del sistema. |
+| **IAM**  | `GET` | `/api/v1/users`  | Lista los usuarios registrados en el sistema. |
+| **IAM**  | `PATCH` | `/api/v1/users/{userId}`  | Actualiza la información básica del perfil del usuario. |
+| **IAM**  | `PATCH` | `/api/v1/users/{userId}/password`  | Restablece la contraseña cifrada del usuario. |
+| **IAM**  | `GET` | `/api/v1/roles`  | Consulta el catálogo de roles admitidos en la plataforma. |
+
+**Bounded Context Listing**
+
+
+| Bounded Context | Método | Ruta del Endpoint |  Descripción del Servicio |
+| :--- | :---: | :--- | :--- | 
+| **Listings**  | `GET` | `/api/v1/vehicles` | Retorna el catálogo completo de vehículos disponibles para alquiler. |
+| **Listings**  | `GET` | `/api/v1/vehicles/{vehicleId}`  | Retorna la ficha técnica detallada de un vehículo por su ID. |
+| **Listings**  | `GET` | `/api/v1/vehicles/{vehicleId}/image`  | Descarga/renderiza la fotografía binaria almacenada del vehículo. |
+| **Listings**  | `GET` | `/api/v1/vehicles/my-listings`  | Retorna la lista de vehículos publicados por el arrendador autenticado. |
+| **Listings**  | `POST` | `/api/v1/vehicles`  | Publica un nuevo vehículo en la flota adjuntando datos y archivo fotográfico. |
+| **Listings**  | `PUT` | `/api/v1/vehicles/{vehicleId}`  | Modifica las especificaciones, tarifa diaria o fotografía del vehículo. |
+| **Listings**  | `DELETE` | `/api/v1/vehicles/{vehicleId}`  | Da de baja una publicación de vehículo del catálogo. |
+
+**Bounded Context Booking**
+
+| Bounded Context | Método | Ruta del Endpoint |  Descripción del Servicio |
+| :--- | :---: | :--- | :--- | 
+| **Booking**  | `POST` | `/api/v1/bookings`  | Registra una nueva solicitud de reserva en estado transaccional `PENDING`. |
+| **Booking**  | `GET` | `/api/v1/bookings/my-bookings`  | Consulta el historial completo de reservas solicitadas por el cliente autenticado. |
+| **Booking**  | `GET` | `/api/v1/bookings/my-requests`  | Retorna la bandeja de solicitudes de reserva recibidas por el dueño autenticado. |
+| **Booking**  | `GET` | `/api/v1/bookings/{bookingId}`  | Obtiene el comprobante y detalle de una reserva específica. |
+| **Booking**  | `PUT` | `/api/v1/bookings/{bookingId}/confirm` | Confirma la reserva transicionándola a `CONFIRMED` y bloquea disponibilidad. |
+| **Booking**  | `PUT` | `/api/v1/bookings/{bookingId}/reject`  | Declina la solicitud transicionándola a `REJECTED` y libera fechas. |
+| **Booking**  | `PUT` | `/api/v1/bookings/{bookingId}/cancel`  | Cancela la reserva por iniciativa del cliente transicionándola a `CANCELLED`. |
+
+**Bounded Context IoT**
+
+| Bounded Context | Método | Ruta del Endpoint |  Descripción del Servicio |
+| :--- | :---: | :--- | :--- | 
+| **IoT**  | `POST` | `/api/v1/telemetry`  | Registra una lectura telemática emitida por los sensores vehiculares. |
+| **IoT**  | `GET` | `/api/v1/telemetry/vehicle/{vehicleId}`  | Retorna el historial cronológico de telemetría de un vehículo. |
+| **IoT**  | `GET` | `/api/v1/telemetry/vehicle/{vehicleId}/latest`  | Obtiene la última lectura telemática (latitud, longitud, velocidad, combustible). |
+| **IoT**  | `GET` | `/api/v1/simulation/route`  | Retorna la secuencia de coordenadas GPS simuladas de la ruta en curso. |
+
+**Bounded Context Reviews**
+
+| Bounded Context | Método | Ruta del Endpoint |  Descripción del Servicio |
+| :--- | :---: | :--- | :--- | 
+| **Reviews** | `POST` | `/api/v1/reviews`  | Registra una calificación de 1 a 5 estrellas y comentario tras culminar alquiler. |
+| **Reviews** | `GET` | `/api/v1/reviews/vehicle/{vehicleId}`| Retorna todías las opiniones y promedio de valoración de un vehículo. |
+| **Reviews** | `GET` | `/api/v1/reviews/my-reviews`  | Retorna las reseñas emitidas por el usuario autenticado. |
+
+**Bounded Context Shared**
+
+| Bounded Context | Método | Ruta del Endpoint |  Descripción del Servicio |
+| :--- | :---: | :--- | :--- | 
+| **Shared**  | `GET` | `/`  | Endpoint raíz que expone el estado y versión de la API REST. |
 
 ---
 
@@ -3018,7 +3087,9 @@ La siguiente matriz detalla con rigor técnico los controladores, métodos HTTP,
 
 Durante todo el ciclo de desarrollo, **Codexa-Team** mantuvo una disciplina estricta de colaboración ágil y control de versiones utilizando **GitHub**:
 
+**Collaboration Landing Page:**
 
+<img src="assets/sprint1/commits-landing.png" alt="Carátula Video About the Product" /><br>
 ---
 
 ## 5.3. Video About-the-Product
@@ -3034,11 +3105,11 @@ En este apartado se documenta el video promocional y técnico elaborado por **Co
 
 | Campo | Detalle Informativo |
 | :--- | :--- |
-| **Título del Video:** | RentiCar: Plataforma Web de Alquiler de Vehículos P2P con Monitoreo IoT |
+| **Título del Video:** | About The Product |
 | **Startup Responsable:** | Codexa-Team |
 | **Producto Presentado:** | RentiCar (Aplicación Web Angular + Backend Spring Boot + TiDB) |
 | **Integrantes Participantes:** | Bruce Vía Luna, César Linares, Sergio Landa, Estefano Solís, Sheila Angeles |
-| **Duración Aproximada:** | 8 a 10 minutos |
+| **Duración Aproximada:** | 9:27 minutos |
 | **Enlace Oficial del Video:** | [Ver Video About-the-Product en YouTube (https://youtu.be/t_m6u7wnkCs)](https://youtu.be/t_m6u7wnkCs) |
 
 **Objetivos del Video Demostrativo:**
@@ -3052,11 +3123,27 @@ En este apartado se documenta el video promocional y técnico elaborado por **Co
 
 # Conclusiones
 
-||||
+El desarrollo del proyecto Renticar permitió aplicar de manera integral los conceptos de ingeniería de software y las metodologías orientadas al diseño centrado en el usuario, integrando prácticas modernas como Event Storming, Impact Mapping y User Personas. A través del análisis de entrevistas se identificaron claramente las necesidades de los dos segmentos objetivos, arrendadores y arrendatarios, evidenciando que ambos valoran la seguridad, la transparencia y la confianza como elementos determinantes en la experiencia de alquiler de vehículos.
+
+La incorporación de un componente IoT ligero representa un diferenciador importante frente a soluciones tradicionales, al brindar información básica sobre el estado y ubicación de los vehículos durante la reserva. De esta forma, se refuerza la confiabilidad del sistema y se atienden los puntos de dolor detectados en el análisis de los flujos actuales. Asimismo, la definición de una arquitectura basada en dominios bajo el modelo C4 (Context, Container, Component) asegura la escalabilidad y mantenibilidad del sistema, alineando la solución tecnológica con los objetivos de negocio.
 
 # Bibliografía
 
-||||
+- Cohn, M. (2004). User Stories Applied: For Agile Software Development. Addison-Wesley Professional.
+- Evans, E. (2004). Domain-Driven Design: Tackling Complexity in the Heart of Software. Addison-Wesley.
+- Adzic, G. (2012). Impact Mapping: Making a Big Impact with Software Products and Projects. Provoking Thoughts.
+- Fowler, M. (2004). Patterns of Enterprise Application Architecture. Addison-Wesley.
+- Stickdorn, M., Hormess, M., Lawrence, A., & Schneider, J. (2018). This is Service Design Doing: Applying Service Design Thinking in the Real World. O’Reilly Media.
+- Gamma, E., Helm, R., Johnson, R., & Vlissides, J. (1994). Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley.
 
 # Anexos
-|||
+
+- [Enlace a la organizacion](https://github.com/Codexa-Team)
+- [Enlace al repositorio del Frontend](https://github.com/Codexa-Team/Front-End)
+- [Enlace del Frontend Desplegado](https://front-end-open-source.onrender.com/)
+- [Enlace al repositorio del Backend](https://github.com/Codexa-Team/Backend)
+- [Enlace del Backend Desplegado](https://back-end-open-source.onrender.com/)
+- [Enlace al repositorio de la landing Page](https://github.com/Codexa-Team/Landing-Page)
+- [Enlace de la Landing Page Desplegada](https://codexa-team.github.io/Landing-Page/)
+- [Enlace de al repositorio del Reporte](https://github.com/Codexa-Team/Project-Report)
+- [Enlace de al Canva de presentacion](https://canva.link/pftw7s6f3f9ou60)
