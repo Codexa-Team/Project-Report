@@ -1837,10 +1837,16 @@ ajustando la distribución y dimensiones de los elementos para facilitar su visu
   * **Respuesta de Opacidad y Háptica:** Disminución leve en la opacidad del componente al ser presionado, combinada con vibración de respuesta táctil
      mediante el motor háptico al confirmar acciones o alternar vistas.
   * **Áreas de Toque:** Superficie de contacto interactiva mínima de 44×44 pt para todos los componentes de la interfaz.
-<div style="display: flex; gap: 64px; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
+    
+<div
+  style="display: flex; gap: 64px; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
   <img src="assets/photos/Arrendador iOs.png"  alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
   <img src="assets/photos/Arrendatario iOs.png" alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
+
+  Link del Figma: https://www.figma.com/design/ZYZ81d4uAuktz4Xr7l7MVJ/Dise%C3%B1o-Movil-Pantalla?node-id=2-4606&t=O9RoGjXSUGKxsjO3-1
 </div>
+
+
 #### 4.1.3.2. Android Mobile Style Guidelines
 - **Layout y Retícula Base:** 
   La interfaz se distribuye en una estructura de columna única vertical adaptativa para el perfil de Arrendador o Arrendatario, organizada estrictamente sobre una
@@ -1860,6 +1866,14 @@ ajustando la distribución y dimensiones de los elementos para facilitar su visu
      contacto, ofreciendo retroalimentación visual inmediata.
   * **Áreas de Toque:** Cumplimiento estricto de una superficie de contacto interactiva mínima de 48×48 dp para todos los componentes navegables, garantizando la accesibilidad táctil en
     el dispositivo.
+
+    <div
+       style="display: flex; gap: 64px; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
+  <img src="assets/photos/Arrendador Androi.png"  alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
+  <img src="assets/photos/Arrendatario Androi.png" alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
+
+  Link del Figma: https://www.figma.com/design/ZYZ81d4uAuktz4Xr7l7MVJ/Dise%C3%B1o-Movil-Pantalla?node-id=2-4606&t=O9RoGjXSUGKxsjO3-1
+</div>
 
 ## 4.2. Information Architecture
 
