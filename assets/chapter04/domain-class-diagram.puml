@@ -1,0 +1,359 @@
+@startuml
+scale 0.75
+skinparam classAttributeIconSize 0
+skinparam monochrome false
+skinparam roundcorner 4
+skinparam shadowing false
+skinparam packageStyle rectangle
+skinparam defaultFontName "Segoe UI"
+skinparam defaultFontSize 11
+skinparam linetype ortho
+
+skinparam class {
+    BackgroundColor White
+    ArrowColor #1E293B
+    BorderColor #1E293B
+    BorderThickness 1.1
+    HeaderBackgroundColor #F1F5F9
+}
+
+title <size:18><b>RentiCar Platform - Domain-Driven Design Class Diagram (UML 2.5)</b></size>\n<size:12>Alineado a la Arquitectura Backend CQRS y Bounded Contexts Reales</size>
+
+' =======================================================
+' SHARED KERNEL
+' =======================================================
+package "Shared Kernel" as pkg_shared {
+  abstract class "AuditableAbstractAggregateRoot<T>" as AuditBase <<Abstract Base>> {
+    - id: Long
+    - createdAt: Date
+    - updatedAt: Date
+    + getId(): Long
+    + getCreatedAt(): Date
+    + getUpdatedAt(): Date
+  }
+}
+
+' =======================================================
+' IAM CONTEXT
+' =======================================================
+package "Identity & Access Management (IAM)" as pkg_iam {
+  class User <<Aggregate Root>> {
+    - username: String
+    - password: PasswordHash
+    - fullName: String
+    - email: EmailAddress
+    - phone: String
+    - roles: Set<Role>
+    + updatePassword(newPassword): void
+    + updateProfile(name, phone): void
+    + addRole(role: Role): void
+  }
+
+  class Role <<Entity>> {
+    - name: Roles
+    + getStringName(): String
+  }
+
+  enum Roles <<Enumeration>> {
+    ROLE_RENTER
+    ROLE_OWNER
+  }
+
+  interface UserRepository <<Spring Data JPA>> {
+    + findByUsername(username: String): Optional<User>
+    + existsByUsername(username: String): boolean
+  }
+
+  class UserCommandService <<Application Service>> {
+    - userRepository: UserRepository
+    - hashingService: HashingService
+    - tokenService: TokenService
+    + handle(command: SignUpCommand): User
+    + handle(command: SignInCommand): Optional<AuthenticatedUser>
+  }
+
+  class UserQueryService <<Application Service>> {
+    - userRepository: UserRepository
+    + handle(query: GetUserByIdQuery): Optional<User>
+    + handle(query: GetAllUsersQuery): List<User>
+  }
+
+  class AuthenticationController <<REST Controller>> {
+    - userCommandService: UserCommandService
+    + signIn(resource: SignInResource): ResponseEntity
+    + signUp(resource: SignUpResource): ResponseEntity
+  }
+}
+
+' =======================================================
+' LISTINGS CONTEXT
+' =======================================================
+package "Listings & Fleet Management" as pkg_listings {
+  class Vehicle <<Aggregate Root>> {
+    - brand: String
+    - model: String
+    - year: Integer
+    - dailyPrice: BigDecimal
+    - status: VehicleStatus
+    - imageUrl: String
+    - ownerId: Long
+    + updatePrice(newPrice: BigDecimal): void
+    + updateStatus(status: VehicleStatus): void
+    + isAvailable(): boolean
+  }
+
+  enum VehicleStatus <<Enumeration>> {
+    AVAILABLE
+    RENTED
+    MAINTENANCE
+  }
+
+  interface VehicleRepository <<Spring Data JPA>> {
+    + findByStatus(status: VehicleStatus): List<Vehicle>
+    + findByOwnerId(ownerId: Long): List<Vehicle>
+  }
+
+  class VehicleCommandService <<Application Service>> {
+    - vehicleRepository: VehicleRepository
+    - externalIamService: ExternalIamService
+    + handle(command: CreateVehicleCommand): Optional<Vehicle>
+    + handle(command: UpdateVehicleStatusCommand): Optional<Vehicle>
+  }
+
+  class VehicleQueryService <<Application Service>> {
+    - vehicleRepository: VehicleRepository
+    + handle(query: GetAllVehiclesQuery): List<Vehicle>
+    + handle(query: GetVehicleByIdQuery): Optional<Vehicle>
+  }
+
+  class ListingsContextFacade <<Inbound ACL Facade>> {
+    - vehicleRepository: VehicleRepository
+    + getVehicleById(id: Long): Optional<VehicleDto>
+    + verifyAvailability(id: Long): boolean
+  }
+
+  class VehiclesController <<REST Controller>> {
+    - vehicleCommandService: VehicleCommandService
+    - vehicleQueryService: VehicleQueryService
+    + createVehicle(resource: CreateVehicleResource): ResponseEntity
+    + getAllVehicles(): ResponseEntity
+    + getVehicleById(id: Long): ResponseEntity
+  }
+}
+
+' =======================================================
+' BOOKING CONTEXT
+' =======================================================
+package "Booking & Digital Contracts" as pkg_booking {
+  class Booking <<Aggregate Root>> {
+    - renterId: Long
+    - ownerId: Long
+    - vehicleId: Long
+    - startDate: LocalDate
+    - endDate: LocalDate
+    - totalPrice: BigDecimal
+    - status: BookingStatus
+    + confirm(): void
+    + reject(): void
+    + cancel(): void
+    + calculateTotalPrice(dailyPrice: BigDecimal): BigDecimal
+  }
+
+  enum BookingStatus <<Enumeration>> {
+    PENDING
+    CONFIRMED
+    REJECTED
+    CANCELLED
+    COMPLETED
+  }
+
+  interface BookingRepository <<Spring Data JPA>> {
+    + findByRenterId(renterId: Long): List<Booking>
+    + findByOwnerId(ownerId: Long): List<Booking>
+  }
+
+  class BookingCommandService <<Application Service>> {
+    - bookingRepository: BookingRepository
+    - externalListingsService: ExternalListingsService
+    + handle(command: CreateBookingCommand): Optional<Booking>
+    + handle(command: ConfirmBookingCommand): Optional<Booking>
+  }
+
+  class BookingQueryService <<Application Service>> {
+    - bookingRepository: BookingRepository
+    + handle(query: GetBookingByIdQuery): Optional<Booking>
+    + handle(query: GetBookingsByRenterIdQuery): List<Booking>
+  }
+
+  class BookingContextFacade <<Inbound ACL Facade>> {
+    - bookingRepository: BookingRepository
+    + hasCompletedBooking(renterId: Long, vehicleId: Long): boolean
+    + getActiveBooking(vehicleId: Long): Optional<BookingDto>
+  }
+
+  class BookingsController <<REST Controller>> {
+    - bookingCommandService: BookingCommandService
+    - bookingQueryService: BookingQueryService
+    + createBooking(resource: CreateBookingResource): ResponseEntity
+    + confirmBooking(id: Long): ResponseEntity
+  }
+}
+
+' =======================================================
+' IOT & TELEMETRY CONTEXT
+' =======================================================
+package "IoT Monitoring & Telemetry" as pkg_iot {
+  class Telemetry <<Aggregate Root>> {
+    - vehicleId: Long
+    - latitude: Double
+    - longitude: Double
+    - speed: Double
+    - fuelLevel: Double
+    - odometer: Double
+    - recordedAt: Instant
+    + isSpeedAlert(): boolean
+    + isLowFuelAlert(): boolean
+  }
+
+  interface TelemetryRepository <<Spring Data JPA>> {
+    + findTopByVehicleIdOrderByRecordedAtDesc(id: Long): Optional<Telemetry>
+    + findByVehicleId(vehicleId: Long): List<Telemetry>
+  }
+
+  class TelemetryCommandService <<Application Service>> {
+    - telemetryRepository: TelemetryRepository
+    + handle(command: RecordTelemetryCommand): Optional<Telemetry>
+  }
+
+  class TelemetryQueryService <<Application Service>> {
+    - telemetryRepository: TelemetryRepository
+    + handle(query: GetLatestTelemetryQuery): Optional<Telemetry>
+    + handle(query: GetTelemetryByVehicleIdQuery): List<Telemetry>
+  }
+
+  class RouteQueryService <<Application Service>> {
+    - openRouteServiceClient: OpenRouteServiceApiClient
+    + handle(query: GetRouteQuery): RouteResponse
+  }
+
+  class TelemetryController <<REST Controller>> {
+    - telemetryCommandService: TelemetryCommandService
+    - telemetryQueryService: TelemetryQueryService
+    + recordTelemetry(resource: RecordTelemetryResource): ResponseEntity
+    + getLatestTelemetry(vehicleId: Long): ResponseEntity
+  }
+
+  class RouteController <<REST Controller>> {
+    - routeQueryService: RouteQueryService
+    + getRoute(start: LatLng, end: LatLng): ResponseEntity
+  }
+}
+
+' =======================================================
+' REVIEWS CONTEXT
+' =======================================================
+package "Reviews & Reputation" as pkg_reviews {
+  class Review <<Aggregate Root>> {
+    - vehicleId: Long
+    - renterId: Long
+    - rating: Integer
+    - comment: String
+    - reviewDate: Instant
+    + validateRating(): boolean
+  }
+
+  interface ReviewRepository <<Spring Data JPA>> {
+    + findByVehicleId(vehicleId: Long): List<Review>
+    + countByVehicleId(vehicleId: Long): Long
+  }
+
+  class ReviewCommandService <<Application Service>> {
+    - reviewRepository: ReviewRepository
+    - bookingFacade: BookingContextFacade
+    + handle(command: CreateReviewCommand): Optional<Review>
+  }
+
+  class ReviewQueryService <<Application Service>> {
+    - reviewRepository: ReviewRepository
+    + handle(query: GetReviewsByVehicleIdQuery): List<Review>
+    + computeAverageRating(vehicleId: Long): Double
+  }
+
+  class ReviewsController <<REST Controller>> {
+    - reviewCommandService: ReviewCommandService
+    - reviewQueryService: ReviewQueryService
+    + createReview(resource: CreateReviewResource): ResponseEntity
+    + getReviewsByVehicle(vehicleId: Long): ResponseEntity
+  }
+}
+
+' =======================================================
+' HERENCIA DE SHARED BASE
+' =======================================================
+AuditBase <|-- User
+AuditBase <|-- Vehicle
+AuditBase <|-- Booking
+AuditBase <|-- Telemetry
+AuditBase <|-- Review
+
+' =======================================================
+' RELACIONES INTERNAS (IAM)
+' =======================================================
+User "1" *-- "*" Role : roles
+Role --> Roles : name
+UserCommandService --> UserRepository : persists
+UserQueryService --> UserRepository : queries
+UserRepository ..> User : <<manages>>
+AuthenticationController --> UserCommandService : dispatches
+
+' =======================================================
+' RELACIONES INTERNAS (LISTINGS)
+' =======================================================
+Vehicle --> VehicleStatus : status
+VehicleCommandService --> VehicleRepository : persists
+VehicleQueryService --> VehicleRepository : queries
+VehicleRepository ..> Vehicle : <<manages>>
+ListingsContextFacade --> VehicleRepository : queries
+VehiclesController --> VehicleCommandService : dispatches
+VehiclesController --> VehicleQueryService : dispatches
+
+' =======================================================
+' RELACIONES INTERNAS (BOOKING)
+' =======================================================
+Booking --> BookingStatus : status
+BookingCommandService --> BookingRepository : persists
+BookingQueryService --> BookingRepository : queries
+BookingRepository ..> Booking : <<manages>>
+BookingContextFacade --> BookingRepository : queries
+BookingsController --> BookingCommandService : dispatches
+BookingsController --> BookingQueryService : dispatches
+
+' =======================================================
+' RELACIONES INTERNAS (IOT)
+' =======================================================
+TelemetryCommandService --> TelemetryRepository : persists
+TelemetryQueryService --> TelemetryRepository : queries
+TelemetryRepository ..> Telemetry : <<manages>>
+TelemetryController --> TelemetryCommandService : dispatches
+TelemetryController --> TelemetryQueryService : dispatches
+RouteController --> RouteQueryService : dispatches
+
+' =======================================================
+' RELACIONES INTERNAS (REVIEWS)
+' =======================================================
+ReviewCommandService --> ReviewRepository : persists
+ReviewQueryService --> ReviewRepository : queries
+ReviewRepository ..> Review : <<manages>>
+ReviewsController --> ReviewCommandService : dispatches
+ReviewsController --> ReviewQueryService : dispatches
+
+' =======================================================
+' INTEGRACIÓN ENTRE CONTEXTOS (ACL / Facades)
+' =======================================================
+' Booking consulta Listings vía Facade
+BookingCommandService ..> ListingsContextFacade : <<verifies vehicle & price>>
+
+' Reviews consulta Booking vía Facade
+ReviewCommandService ..> BookingContextFacade : <<verifies completed booking>>
+
+@enduml

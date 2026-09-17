@@ -1137,18 +1137,6 @@ https://miro.com/app/board/uXjVHmc36as=/
 
 <img src="assets/chapter02/Asis 1erSegmento.png" width=600px>
 
-<p align="center"><em>Figura 2.3.5.1: Mapeo de Escenarios As-Is para Arrendatario de Vehículos</em></p>
-
-| Dimensión | Fase 1: Búsqueda y Contacto Informal | Fase 2: Negociación y Garantía Ciega | Fase 3: Uso con Incertidumbre Técnica | Fase 4: Devolución y Disputa de Garantía |
-| :--- | :--- | :--- | :--- | :--- |
-| **Fase del Viaje** | Búsqueda en redes sociales y clasificados online | Negociación directa por chat y entrega de dinero | Conducción sin monitoreo telemático | Devolución del auto y reclamo de garantía |
-| **Acciones (Doing)** | - Revisa publicaciones en Facebook Marketplace y grupos.<br>- Pregunta por tarifas diarias y disponibilidad por WhatsApp.<br>- Compara fotos precarias de vehículos sin certificar. | - Acuerda un precio informal sin contrato homologado.<br>- Transfiere garantía económica a una cuenta bancaria personal.<br>- Entrega copia de su DNI y firma un pagaré improvisado. | - Conduce el automóvil con temor a desperfectos mecánicos.<br>- Reporta ruidos o fallas sin recibir asistencia inmediata.<br>- Desconoce el estado real de los fluidos y combustible. | - Entrega el vehículo al dueño en la vía pública.<br>- Espera la devolución íntegra de su depósito de garantía.<br>- Enfrenta reclamos por rayones o desgastes no atribuibles a su uso. |
-| **Pensamientos (Thinking)** | *"¿Será una cuenta falsa o estafa?", "¿Las fotos serán del auto real?", "¿Por qué tardan tanto en responder si necesito el auto hoy?"* | *"¿Me devolverán el dinero de la garantía?", "¿Este papel firmado tendrá validez si ocurre un choque?", "Me parece excesivo lo que me piden de garantía."* | *"Siento un ruido extraño en el motor, ojalá no me deje botado", "¿El seguro particular de este auto me cubrirá en caso de accidente?"* | *"Ese rayón ya estaba cuando me lo entregó", "¿Por qué no me transfiere mi depósito de inmediato?", "No tengo ninguna plataforma donde quejarme o dejar mi opinión."* |
-| **Sentimientos (Feeling)** | **Frustración e Incertidumbre:** Desesperación por respuestas lentas y desconfianza en la veracidad de los avisos. | **Vulnerabilidad y Ansiedad:** Temor a ser estafado y desprotección jurídica total al entregar sumas de dinero sin aval. | **Estrés y Tensión Continua:** Preocupación constante por averías mecánicas y ausencia de soporte en el camino. | **Indignación y Desgaste:** Malestar por cobros abusivos de última hora y trámites engorrosos de reembolso. |
-| **Puntos de Dolor (Pain Points)** | - Cero centralización de información y precios.<br>- Perfiles no verificados en redes sociales.<br>- Gran pérdida de tiempo contactando números telefónicos particulares. | - Ausencia de contratos digitales con validez legal.<br>- Exigencia abusiva de dinero en efectivo o documentos de identidad originales.<br>- Cero transparencia en seguros y coberturas contra accidentes. | - Sin monitoreo telemático de ruta ni alertas de estado del vehículo.<br>- Autos sin mantenimiento certificado ni historial mecánico visible.<br>- Falta de asistencia técnica o botón de auxilio 24/7. | - Arbitrariedad del dueño para retener depósitos de garantía.<br>- Imposibilidad de calificar la experiencia para alertar a otros usuarios.<br>- Cero trazabilidad objetiva de kilometraje y combustible. |
-| **Oportunidad de Mejora con RentiCar** | Catálogo digital centralizado con filtros en tiempo real, fotos verificadas y disponibilidad inmediata por calendario. | Contrato digital transparente con tarifas predefinidas, sin adelantos informales y pago seguro en plataforma. | Integración IoT para monitoreo telemático en tiempo real (GPS, velocidad, combustible) y soporte constante. | Devolución estandarizada con registro telemático de odómetro y sistema de reputación bidireccional (reseñas de 1 a 5 estrellas). |
-
-
 ---
 
 #### Segmento Objetivo 2: Arrendador (Propietario particular que intenta alquilar su auto para obtener ingresos)
@@ -1157,18 +1145,6 @@ https://miro.com/app/board/uXjVHmc36as=/
 Link del Miro: https://miro.com/app/board/uXjVHmc36as=/
 
 <img src="assets/chapter02/Asis 2doSegmento.png" width=600px>
-
-<p align="center"><em>Figura 2.3.5.2: Mapeo de Escenarios As-Is para Arrendador de Vehículos</em></p>
-
-| Dimensión | Fase 1: Publicación Manual y Gestión Ineficiente | Fase 2: Filtrado Precario de Postulantes | Fase 3: Incertidumbre Total durante el Alquiler | Fase 4: Recepción del Auto y Cobro de Daños |
-| :--- | :--- | :--- | :--- | :--- |
-| **Fase del Viaje** | Publicación manual en clasificados y redes sociales | Verificación empírica de clientes y firma de contratos improvisados | Ausencia de monitoreo telemático y angustia por la ubicación del auto | Inspección de desperfectos, cobro de papeletas y desgaste vehicular |
-| **Acciones (Doing)** | - Toma fotos con su celular y las sube a grupos de compra y venta.<br>- Atiende llamadas a cualquier hora y responde mensajes redundantes.<br>- Administra las fechas tentativas de alquiler en cuadernos o notas de celular. | - Pide antecedentes y récord de conductor por chat de WhatsApp.<br>- Redacta un contrato descargado de internet sin asesoría legal.<br>- Solicita un depósito que resulta insuficiente ante un siniestro grave.<br>- Entrega las llaves en persona a un completo desconocido. | - Llama o envía mensajes periódicos al conductor para saber dónde está.<br>- Espera con nerviosismo si el arrendatario no responde el teléfono.<br>- Desconoce la velocidad a la que circulan con su vehículo o si salieron de la ciudad.<br>- No tiene forma de comprobar el uso indebido del automóvil. | - Recibe el vehículo con retraso respecto a la hora pactada.<br>- Nota suciedad o desgastes anormales en neumáticos y frenos.<br>- Revisa días después el sistema del SAT y encuentra fotopapeletas impagas.<br>- Intenta contactar al cliente, quien bloquea el número de teléfono. |
-| **Pensamientos (Thinking)** | *"Publicar en tantos grupos me quita horas de mi día", "¿Por qué la gente regatea tanto el precio?", "Tengo miedo de que un delincuente me cite."* | *"¿Este brevete será auténtico?", "¿Y si se apropia ilícitamente de mi vehículo y lo desmantela?", "Este contrato no me protegerá si comete un delito."* | *"Son las 10 pm y no me responde el WhatsApp", "¿Estará usando mi auto para hacer taxi colectivo?", "¿Habrá salido de Lima sin autorización?"* | *"Me dejó el tanque vacío y un raspón en el parachoques", "El depósito no cubre el costo de la reparación ni las multas", "Perdí dinero en vez de ganar."* |
-| **Sentimientos (Feeling)** | **Sobrecarga y Agobio:** Cansancio por responder consultas repetitivas de personas que no concretan. | **Inseguridad y Temor Extremo:** Miedo constante al robo, secuestro del vehículo o fraude de identidad. | **Impotencia y Angustia Severa:** Pérdida de control total sobre el bien más valioso y ansiedad permanente. | **Frustración y Resignación:** Pérdida económica por daños no reconocidos y sensación de indefensión legal. |
-| **Puntos de Dolor (Pain Points)** | - Inexistencia de una vitrina digital especializada en renta particular.<br>- Gestión desordenada de fechas y sobreposición de alquileres.<br>- Exposición pública de datos personales en redes abiertas. | - Nula verificación automatizada de antecedentes y validez de licencias.<br>- Contratos precarios sin firma electrónica certificada.<br>- Garantías económicas insuficientes o difíciles de cobrar. | - Carencia total de GPS en tiempo real integrado a una aplicación.<br>- Desconocimiento de patrones de conducción temeraria y excesos de velocidad.<br>- Cero alertas automáticas sobre salida de perímetros permitidos. | - Papeletas de tránsito transferidas al propietario sin posibilidad de reclamo.<br>- Gastos de reparación asumidos por el dueño.<br>- Falta de un registro negro o sistema de reputación para conductores infractores. |
-| **Oportunidad de Mejora con RentiCar** | Panel centralizado para dar de alta vehículos con fotos, especificaciones y calendario reactivo automatizado. | Validación estricta de usuarios mediante autenticación JWT y roles (`ROLE_RENTER`), con términos y contratos digitales. | Monitoreo IoT con telemetría en tiempo real: geolocalización continua en mapa Leaflet, odómetro, velocidad y nivel de combustible. | Liquidación garantizada, registro exacto del kilometraje consumido e historial de calificaciones para resguardar la flota. |
-
 
 ## 2.4. Ubiquitous Language
 
@@ -1219,16 +1195,6 @@ https://miro.com/app/board/uXjVHmc36as=/
 
 <img src="assets/chapter03/Tobe 1erSegmento.png" width=600px>
 
-<p align="center"><em>Figura 3.1.1: Mapeo de Escenarios To-Be para Arrendatario en RentiCar</em></p>
-
-| Dimensión | Fase 1: Búsqueda y Selección | Fase 2: Reserva y Contratación | Fase 3: Recojo y Monitoreo IoT | Fase 4: Devolución y Reputación |
-| :--- | :--- | :--- | :--- | :--- |
-| **Fase del Viaje** | Exploración del catálogo web con filtros | Selección de fechas y confirmación | Recojo del auto y seguimiento en ruta | Entrega del vehículo y feedback |
-| **Acciones (Doing)** | - Ingresa a la plataforma y aplica filtros por marca, tipo de transmisión y precio.<br>- Examina fotografías de alta resolución y especificaciones técnicas.<br>- Consulta el promedio de estrellas y comentarios verificados. | - Selecciona fecha de inicio y fin en el calendario dinámico.<br>- Visualiza el cálculo exacto del costo total.<br>- Confirma la solicitud de reserva con su cuenta autenticada. | - Valida la ubicación exacta del auto en el mapa interactivo (Leaflet).<br>- Revisa el estado operativo de los sensores IoT.<br>- Conduce con la tranquilidad de contar con trazabilidad telemática. | - Devuelve el automóvil en el punto acordado con el dueño.<br>- Califica la experiencia del servicio de 1 a 5 estrellas.<br>- Redacta una reseña detallando el estado y atención recibida. |
-| **Pensamientos (Thinking)** | *"Es muy fácil comparar precios y modelos sin tener que llamar por teléfono."*<br>*"Las opiniones de otros usuarios me dan total seguridad."* | *"El precio final es claro y no hay cargos ocultos de última hora."*<br>*"El proceso de confirmación es rápido y transparente."* | *"Puedo ver exactamente dónde está el vehículo en el mapa."*<br>*"El sistema de telemetría garantiza que el auto está en óptimas condiciones."* | *"Todo el alquiler fue rápido y sin trámites engorrosos."*<br>*"Quiero dejar una buena calificación para premiar la puntualidad del dueño."* |
-| **Sentimientos (Feeling)** | **Positivo / Interesado:** Confianza y satisfacción por la claridad visual del catálogo. | **Seguro / Tranquilo:** Alivio al conocer el importe exacto sin intermediarios informales. | **Confortable / Protegido:** Seguridad tecnológica gracias a la supervisión por GPS. | **Satisfecho / Fidelizado:** Gratitud por un servicio ágil y deseo de volver a utilizar RentiCar. |
-
-
 ---
 
 ### Segmento Objetivo 2: Arrendador (Propietario de vehículo que monetiza su auto)
@@ -1237,17 +1203,6 @@ https://miro.com/app/board/uXjVHmc36as=/
 Link del Miro: https://miro.com/app/board/uXjVHmc36as=/
 
 <img src="assets/chapter03/Tobe 2doSegmento.png" width=600px>
-
-<p align="center"><em>Figura 3.1.2: Mapeo de Escenarios To-Be para Arrendador en RentiCar</em></p>
-
-| Dimensión | Fase 1: Registro y Publicación | Fase 2: Gestión de Solicitudes | Fase 3: Monitoreo en Alquiler | Fase 4: Liquidación y Valoración |
-| :--- | :--- | :--- | :--- | :--- |
-| **Fase del Viaje** | Alta de cuenta y publicación de flota | Evaluación de solicitudes entrantes | Supervisión telemática durante el viaje | Cierre de alquiler y cobro |
-| **Acciones (Doing)** | - Crea su cuenta como Arrendador y valida su DNI.<br>- Registra su auto con marca, modelo, año y tarifa por día.<br>- Sube fotos nítidas del auto y define condiciones de uso. | - Recibe notificaciones de nuevas solicitudes en su bandeja.<br>- Revisa el perfil verificado y reputación del arrendatario.<br>- Aprueba o declina la solicitud de reserva con un clic. | - Monitorea la posición en tiempo real del auto en el mapa.<br>- Supervisa lecturas de odómetro, velocidad y nivel de combustible.<br>- Recibe alertas en caso de eventos fuera de lo previsto. | - Recibe el vehículo y verifica el kilometraje reportado por el sensor.<br>- Califica el cuidado y puntualidad del arrendatario.<br>- Recibe la liquidación de su pago de forma garantizada. |
-| **Pensamientos (Thinking)** | *"Publicar mi auto me tomó menos de 10 minutos."*<br>*"Tengo el control total de las tarifas y disponibilidad de mi vehículo."* | *"Puedo ver quién me alquilará el auto antes de aceptar."*<br>*"Sé que las fechas se bloquean automáticamente sin solapamientos."* | *"Tengo el control de la velocidad y el recorrido de mi vehículo."*<br>*"La telemetría IoT me da el respaldo de que mi unidad está segura."* | *"El cliente cuidó mi auto y la entrega fue puntual."*<br>*"Monetizar mi vehículo con RentiCar es seguro y rentable."* |
-| **Sentimientos (Feeling)** | **Motivado / Empoderado:** Entusiasmo al poner en valor un activo en desuso. | **En Control / Cauteloso:** Tranquilidad al decidir a quién alquilar su unidad. | **Tranquilo / Respaldado:** Paz mental gracias a la telemetría continua en tiempo real. | **Satisfecho / Rentable:** Confianza en la plataforma y motivación para sumar más vehículos. |
-
-
 
 ---
 
@@ -2548,75 +2503,174 @@ El diseño orientado a objetos de **RentiCar** unifica todos los módulos y Boun
 
 ### 4.9.1. Class Diagrams
 
-A continuación, se presenta el **Diagrama Completo y Unificado de Clases del Sistema RentiCar**, modelado a nivel profesional con 100% de paridad con la arquitectura del backend (**Spring Boot**) y el frontend (**Angular**), cubriendo todos los Bounded Contexts, agregados, entidades, objetos de valor, interfaces de persistencia, servicios de aplicación y controladores REST:
+A continuación, se presenta el **Diagrama Completo y Unificado de Clases del Sistema RentiCar (UML 2.5)**, modelado a nivel profesional y alineado a la arquitectura backend real con separación estricta **CQRS (Command Query Responsibility Segregation)** y límites transaccionales definidos por Bounded Contexts:
 
 <p align="center">
   <img src="assets/chapter04/domain-class-diagram.png" alt="Complete Domain Class Diagram" width="100%"/><br>
-  <em>Figura 4.9.1: Diagrama Maestro de Clases del Dominio de RentiCar (UML 2.5 - All Bounded Contexts)</em>
+  <em>Figura 4.9.1: Diagrama Maestro de Clases del Dominio de RentiCar (UML 2.5 - All Bounded Contexts)</em><br>
+  <a href="assets/chapter04/domain-class-diagram.png" target="_blank">🔍 Ver diagrama de clases en resolución completa (4096px)</a>
 </p>
 
 ---
+
+#### Criterio y Principios Arquitectónicos Clave del Diagrama
+
+En el backend (**Java / Spring Boot 3.x**) se aplica una arquitectura moderna basada en **Domain-Driven Design (DDD)** y **CQRS (Command Query Responsibility Segregation)**:
+
+1. **Separación de Responsabilidad entre Comandos y Consultas (CQRS):**
+   - Las operaciones de **escritura/mutación** (crear, actualizar, eliminar, confirmar) son atendidas exclusivamente por los servicios `*CommandService`.
+   - Las operaciones de **lectura** (listar, buscar por ID, filtrar) son atendidas por los servicios `*QueryService`.
+   - Los controladores REST inyectan ambos servicios según los endpoints expuestos (ej. `VehiclesController` despacha a `VehicleCommandService` y a `VehicleQueryService`).
+
+2. **Límites de los Bounded Contexts y Referencias por ID:**
+   - En DDD, los agregados de diferentes contextos no mantienen referencias directas por punteros de memoria; se desacoplan utilizando **identificadores escalares** (`ownerId: Long`, `vehicleId: Long`, `renterId: Long`).
+   - Se eliminaron las asociaciones directas cruzadas entre agregados para preservar la autonomía transaccional y evitar dependencias cíclicas.
+
+3. **Capa Anticorrupción (ACL - Anti-Corruption Layer) mediante Facades:**
+   - La integración inter-contexto se realiza formalmente a través de interfaces de integración: **Inbound ACL Facades** (`ListingsContextFacade`, `BookingContextFacade`).
+   - Por ejemplo, `BookingCommandService` consulta la disponibilidad y tarifa del vehículo a través de `ListingsContextFacade`, y `ReviewCommandService` verifica la culminación del alquiler mediante `BookingContextFacade`.
+
+4. **Repositorios Vinculados a sus Aggregate Roots:**
+   - Todos los repositorios Spring Data JPA (`UserRepository`, `VehicleRepository`, `BookingRepository`, `TelemetryRepository`, `ReviewRepository`) expresan formalmente su dependencia de administración: `Repository ..> AggregateRoot : <<manages>>`.
+
+5. **Shared Kernel y Capa Base de Auditoría:**
+   - Todos los Aggregate Roots (`User`, `Vehicle`, `Booking`, `Telemetry`, `Review`) heredan de la clase base abstracta `AuditableAbstractAggregateRoot<T>`, asegurando los campos automáticos `id: Long`, `createdAt: Date` y `updatedAt: Date`.
+
+---
+
+#### Guía de Notación UML Utilizada (Para Sustentación)
+
+| Símbolo UML | Tipo de Relación | Justificación Técnica en el Proyecto |
+| :---: | :--- | :--- |
+| `AuditBase <|-- Vehicle` | **Herencia / Generalización** | `Vehicle` extiende de la clase abstracta base de auditoría del Shared Kernel. |
+| `User "1" *-- "*" Role` | **Composición** | Una entidad `Role` existe como parte del ciclo de vida del usuario dentro de IAM. |
+| `Controller --> Service` | **Asociación Dirigida** | Inyección de dependencias para el despacho de comandos y consultas. |
+| `Service --> Repository` | **Asociación Dirigida** | El servicio de aplicación utiliza el repositorio JPA para persistencia y consultas. |
+| `Repository ..> Entity` | **Dependencia (`<<manages>>`)** | El repositorio administra el ciclo de vida de la entidad correspondiente al Aggregate Root. |
+| `CommandService ..> Facade` | **Dependencia de Integración (ACL)** | Comunicación desacoplada entre Bounded Contexts a través de contratos de interfaz. |
+
+---
+
+#### Flujo de Datos para una Operación Típica (Ejemplo: Booking)
+
+1. El cliente envía un JSON al endpoint `POST /api/v1/bookings`.
+2. `BookingsController` transforma el recurso en `CreateBookingCommand` y lo despacha a `BookingCommandService`.
+3. `BookingCommandService` invoca `ListingsContextFacade.verifyAvailability(vehicleId)`.
+4. Si el vehículo está disponible, `BookingCommandService` instancia la entidad de dominio `Booking`, calcula el precio total y la envía a `BookingRepository.save()`.
+5. La reserva queda registrada en estado transaccional `PENDING` o `CONFIRMED`.
 
 ---
 
 ### 4.9.2. Class Dictionary
 
-El siguiente diccionario de clases consolida la totalidad de entidades, agregados, objetos de valor e interfaces del sistema **RentiCar**, detallando su visibilidad, atributos, métodos, tipos de datos y descripciones operativas en estricto apego al estándar de la rúbrica:
+El siguiente diccionario de clases consolida la totalidad de entidades, agregados, objetos de valor, repositorios, servicios de aplicación y controladores del sistema **RentiCar**, detallando su visibilidad, atributos, métodos, tipos de datos y descripciones operativas en estricto apego al estándar UML 2.5:
 
-| Clase | Atributo / Método | Descripción | Tipo de Dato | Visibilidad |
-| :--- | :--- | :--- | :---: | :---: |
-| `User` | `-id` | Identificador autoincremental único del usuario | `Long` | Privado |
-| `User` | `-name` | Nombre completo del usuario registrado | `String` | Privado |
-| `User` | `-email` | Dirección de correo electrónico validada | `EmailAddress` | Privado |
-| `User` | `-password` | Hash seguro BCrypt de la contraseña | `String` | Privado |
-| `User` | `-roles` | Conjunto de roles asignados al usuario | `Set<Role>` | Privado |
-| `User` | `+updatePassword()` | Actualiza el hash de la clave del usuario | `void` | Público |
-| `User` | `+updateProfile()` | Modifica nombre y datos de contacto | `void` | Público |
-| `User` | `+addRole()` | Asigna un nuevo rol de acceso (`ROLE_RENTER` o `ROLE_OWNER`) | `void` | Público |
-| `Role` | `-id` | Identificador único del rol | `Long` | Privado |
-| `Role` | `-name` | Nombre enumerado del rol | `Roles` | Privado |
-| `Role` | `+getStringName()` | Nombre del rol en formato texto para Spring Security | `String` | Público |
-| `EmailAddress` | `-address` | Cadena validada que cumple formato de correo | `String` | Privado |
-| `EmailAddress` | `+validate()` | Comprueba sintaxis de correo electrónico con regex | `boolean` | Público |
-| `Vehicle` | `-id` | Identificador primario del vehículo en el catálogo | `Long` | Privado |
-| `Vehicle` | `-brand` | Marca automotriz del vehículo | `String` | Privado |
-| `Vehicle` | `-model` | Modelo del vehículo | `String` | Privado |
-| `Vehicle` | `-year` | Año de fabricación del automóvil | `Integer` | Privado |
-| `Vehicle` | `-pricePerDay` | Tarifa diaria de alquiler en nuevos soles (PEN) | `Double` | Privado |
-| `Vehicle` | `-status` | Estado de disponibilidad (`AVAILABLE`, `RENTED`, `MAINTENANCE`) | `VehicleStatus` | Privado |
-| `Vehicle` | `-image` | Contenido binario de la fotografía del auto | `byte[]` | Privado |
-| `Vehicle` | `-ownerId` | Identificador foráneo del propietario arrendador | `Long` | Privado |
-| `Vehicle` | `+updatePrice()` | Actualiza la tarifa de alquiler diaria verificando precio positivo | `void` | Público |
-| `Vehicle` | `+updateStatus()` | Cambia la disponibilidad del auto en catálogo | `void` | Público |
-| `Vehicle` | `+isAvailable()` | Retorna verdadero si el auto puede ser reservado | `boolean` | Público |
-| `Booking` | `-id` | Clave primaria única del contrato de reserva | `Long` | Privado |
-| `Booking` | `-vehicleId` | Identificador del automóvil reservado | `Long` | Privado |
-| `Booking` | `-renterId` | Identificador del usuario que alquila | `Long` | Privado |
-| `Booking` | `-ownerId` | Identificador del dueño que recibe la solicitud | `Long` | Privado |
-| `Booking` | `-startDate` | Fecha de inicio convenida para el alquiler | `LocalDate` | Privado |
-| `Booking` | `-endDate` | Fecha de devolución pactada | `LocalDate` | Privado |
-| `Booking` | `-totalPrice` | Importe monetario total calculado | `Double` | Privado |
-| `Booking` | `-bookingStatus` | Estado del contrato (`PENDING`, `CONFIRMED`, `REJECTED`, `CANCELLED`, `COMPLETED`) | `BookingStatus` | Privado |
-| `Booking` | `+confirm()` | Transiciona el estado a confirmado y bloquea fechas | `void` | Público |
-| `Booking` | `+reject()` | Transiciona el estado a rechazado y libera el auto | `void` | Público |
-| `Booking` | `+cancel()` | Cancela la reserva antes del inicio del viaje | `void` | Público |
-| `Booking` | `+complete()` | Finaliza el alquiler y habilita la calificación | `void` | Público |
-| `Booking` | `+calculateTotalPrice()`| Multiplica los días de alquiler por la tarifa diaria | `Double` | Público |
-| `Telemetry` | `-id` | Clave primaria del muestreo telemático | `Long` | Privado |
-| `Telemetry` | `-vehicleId` | Identificador del auto monitoreado | `Long` | Privado |
-| `Telemetry` | `-latitude` | Coordenada geográfica de latitud WGS84 | `Double` | Privado |
-| `Telemetry` | `-longitude` | Coordenada geográfica de longitud WGS84 | `Double` | Privado |
-| `Telemetry` | `-speed` | Velocidad instantánea en km/h | `Double` | Privado |
-| `Telemetry` | `-fuelLevel` | Nivel actual de combustible en porcentaje | `Double` | Privado |
-| `Telemetry` | `-recordedAt` | Marca temporal exacta de la medición | `LocalDateTime` | Privado |
-| `Telemetry` | `+isSpeedAlert()` | Evalúa si la velocidad sobrepasa los límites de seguridad | `boolean` | Público |
-| `Telemetry` | `+isLowFuelAlert()` | Determina si el combustible está por debajo del umbral mínimo | `boolean` | Público |
-| `Review` | `-id` | Identificador único de la reseña | `Long` | Privado |
-| `Review` | `-vehicleId` | Identificador del vehículo evaluado | `Long` | Privado |
-| `Review` | `-renterId` | Identificador del cliente evaluador | `Long` | Privado |
-| `Review` | `-rating` | Calificación numérica otorgada (1 a 5 estrellas) | `Integer` | Privado |
-| `Review` | `-comment` | Texto con la opinión y testimonio del alquiler | `String` | Privado |
-| `Review` | `-createdAt` | Fecha y hora de publicación de la reseña | `LocalDateTime` | Privado |
+| Bounded Context | Clase / Componente | Atributo / Método | Descripción | Tipo de Dato | Visibilidad |
+| :--- | :--- | :--- | :--- | :---: | :---: |
+| **Shared Kernel** | `AuditableAbstractAggregateRoot<T>` | `-id` | Identificador único autoincremental de la entidad | `Long` | Privado |
+| **Shared Kernel** | `AuditableAbstractAggregateRoot<T>` | `-createdAt` | Marca temporal de creación del registro | `Date` | Privado |
+| **Shared Kernel** | `AuditableAbstractAggregateRoot<T>` | `-updatedAt` | Marca temporal de última modificación | `Date` | Privado |
+| **Shared Kernel** | `AuditableAbstractAggregateRoot<T>` | `+getId()` | Retorna la clave primaria del agregado | `Long` | Público |
+| **Shared Kernel** | `AuditableAbstractAggregateRoot<T>` | `+getCreatedAt()` | Retorna fecha de auditoría de creación | `Date` | Público |
+| **Shared Kernel** | `AuditableAbstractAggregateRoot<T>` | `+getUpdatedAt()` | Retorna fecha de auditoría de actualización | `Date` | Público |
+| **IAM** | `User` | `-username` | Nombre de usuario o credencial única de acceso | `String` | Privado |
+| **IAM** | `User` | `-password` | Contraseña cifrada con algoritmo BCrypt | `PasswordHash` | Privado |
+| **IAM** | `User` | `-fullName` | Nombres y apellidos completos del usuario | `String` | Privado |
+| **IAM** | `User` | `-email` | Dirección de correo electrónico verificada | `EmailAddress` | Privado |
+| **IAM** | `User` | `-phone` | Número de contacto telefónico | `String` | Privado |
+| **IAM** | `User` | `-roles` | Colección de roles de seguridad asociados al usuario | `Set<Role>` | Privado |
+| **IAM** | `User` | `+updatePassword()` | Modifica la clave cifrada de acceso | `void` | Público |
+| **IAM** | `User` | `+updateProfile()` | Actualiza nombre y número telefónico del perfil | `void` | Público |
+| **IAM** | `User` | `+addRole()` | Asigna un nuevo rol de acceso (`ROLE_RENTER` / `ROLE_OWNER`) | `void` | Público |
+| **IAM** | `Role` | `-name` | Nombre del rol en el sistema | `Roles` | Privado |
+| **IAM** | `Role` | `+getStringName()` | Retorna la representación en texto del rol para Spring Security | `String` | Público |
+| **IAM** | `Roles` | `ROLE_RENTER` | Valor constante: Perfil de cliente que busca alquilar vehículos | `enum` | Público |
+| **IAM** | `Roles` | `ROLE_OWNER` | Valor constante: Perfil de propietario que publica y renta autos | `enum` | Público |
+| **IAM** | `UserRepository` | `+findByUsername()` | Consulta un usuario por su nombre de cuenta | `Optional<User>` | Público |
+| **IAM** | `UserRepository` | `+existsByUsername()`| Verifica si ya existe una cuenta con el nombre indicado | `boolean` | Público |
+| **IAM** | `UserCommandService` | `+handle(SignUpCommand)` | Procesa el registro de una nueva cuenta y encripta contraseña | `User` | Público |
+| **IAM** | `UserCommandService` | `+handle(SignInCommand)` | Valida credenciales y genera sesión autenticada | `Optional<AuthenticatedUser>` | Público |
+| **IAM** | `UserQueryService` | `+handle(GetUserByIdQuery)` | Recupera el perfil de un usuario a partir de su ID | `Optional<User>` | Público |
+| **IAM** | `UserQueryService` | `+handle(GetAllUsersQuery)` | Lista la totalidad de usuarios registrados | `List<User>` | Público |
+| **IAM** | `AuthenticationController` | `+signIn()` | Endpoint REST `POST /api/v1/authentication/sign-in` | `ResponseEntity` | Público |
+| **IAM** | `AuthenticationController` | `+signUp()` | Endpoint REST `POST /api/v1/authentication/sign-up` | `ResponseEntity` | Público |
+| **Listings** | `Vehicle` | `-brand` | Marca del fabricante automotriz | `String` | Privado |
+| **Listings** | `Vehicle` | `-model` | Modelo de la unidad vehicular | `String` | Privado |
+| **Listings** | `Vehicle` | `-year` | Año de fabricación del automóvil | `Integer` | Privado |
+| **Listings** | `Vehicle` | `-dailyPrice` | Tarifa diaria de alquiler en PEN | `BigDecimal` | Privado |
+| **Listings** | `Vehicle` | `-status` | Estado de disponibilidad operativa de la unidad | `VehicleStatus` | Privado |
+| **Listings** | `Vehicle` | `-imageUrl` | Enlace o identificador de la fotografía vehicular | `String` | Privado |
+| **Listings** | `Vehicle` | `-ownerId` | Clave foránea escalar del propietario arrendador | `Long` | Privado |
+| **Listings** | `Vehicle` | `+updatePrice()` | Modifica la tarifa diaria validando importe mayor a cero | `void` | Público |
+| **Listings** | `Vehicle` | `+updateStatus()` | Modifica el estado del vehículo en el catálogo | `void` | Público |
+| **Listings** | `Vehicle` | `+isAvailable()` | Retorna verdadero si el automóvil está libre para reserva | `boolean` | Público |
+| **Listings** | `VehicleStatus` | `AVAILABLE, RENTED, MAINTENANCE` | Estados operativos admitidos para un vehículo en la flota | `enum` | Público |
+| **Listings** | `VehicleRepository` | `+findByStatus()` | Consulta vehículos filtrados por su estado operativo | `List<Vehicle>` | Público |
+| **Listings** | `VehicleRepository` | `+findByOwnerId()` | Consulta los vehículos pertenecientes a un propietario específico | `List<Vehicle>` | Público |
+| **Listings** | `VehicleCommandService` | `+handle(CreateVehicleCommand)` | Registra una nueva publicación de vehículo en el catálogo | `Optional<Vehicle>` | Público |
+| **Listings** | `VehicleCommandService` | `+handle(UpdateVehicleStatusCommand)` | Actualiza el estado de disponibilidad del vehículo | `Optional<Vehicle>` | Público |
+| **Listings** | `VehicleQueryService` | `+handle(GetAllVehiclesQuery)` | Retorna el catálogo completo de vehículos disponibles | `List<Vehicle>` | Público |
+| **Listings** | `VehicleQueryService` | `+handle(GetVehicleByIdQuery)` | Recupera la ficha técnica detallada de un vehículo por su ID | `Optional<Vehicle>` | Público |
+| **Listings** | `ListingsContextFacade` | `+getVehicleById()` | Fachada ACL para exponer datos de vehículo a otros contextos | `Optional<VehicleDto>` | Público |
+| **Listings** | `ListingsContextFacade` | `+verifyAvailability()` | Fachada ACL para validar si el auto puede ser reservado | `boolean` | Público |
+| **Listings** | `VehiclesController` | `+createVehicle()` | Endpoint REST `POST /api/v1/vehicles` | `ResponseEntity` | Público |
+| **Listings** | `VehiclesController` | `+getAllVehicles()` | Endpoint REST `GET /api/v1/vehicles` | `ResponseEntity` | Público |
+| **Listings** | `VehiclesController` | `+getVehicleById()` | Endpoint REST `GET /api/v1/vehicles/{vehicleId}` | `ResponseEntity` | Público |
+| **Booking** | `Booking` | `-renterId` | Identificador escalar del cliente solicitante | `Long` | Privado |
+| **Booking** | `Booking` | `-ownerId` | Identificador escalar del dueño del vehículo | `Long` | Privado |
+| **Booking** | `Booking` | `-vehicleId` | Identificador escalar del automóvil contratado | `Long` | Privado |
+| **Booking** | `Booking` | `-startDate` | Fecha de inicio del periodo de alquiler | `LocalDate` | Privado |
+| **Booking** | `Booking` | `-endDate` | Fecha de culminación del alquiler | `LocalDate` | Privado |
+| **Booking** | `Booking` | `-totalPrice` | Monto total liquidado por la reserva | `BigDecimal` | Privado |
+| **Booking** | `Booking` | `-status` | Estado del ciclo de vida de la reserva | `BookingStatus` | Privado |
+| **Booking** | `Booking` | `+confirm()` | Formaliza la reserva transicionándola a `CONFIRMED` | `void` | Público |
+| **Booking** | `Booking` | `+reject()` | Declina la solicitud transicionándola a `REJECTED` | `void` | Público |
+| **Booking** | `Booking` | `+cancel()` | Desiste del alquiler transicionándolo a `CANCELLED` | `void` | Público |
+| **Booking** | `Booking` | `+calculateTotalPrice()` | Multiplica la tarifa por día por la cantidad de días | `BigDecimal` | Público |
+| **Booking** | `BookingStatus` | `PENDING, CONFIRMED, REJECTED, CANCELLED, COMPLETED` | Estados transaccionales de la reserva digital | `enum` | Público |
+| **Booking** | `BookingRepository` | `+findByRenterId()` | Consulta reservas efectuadas por un arrendatario | `List<Booking>` | Público |
+| **Booking** | `BookingRepository` | `+findByOwnerId()` | Consulta reservas recibidas por un propietario | `List<Booking>` | Público |
+| **Booking** | `BookingCommandService` | `+handle(CreateBookingCommand)` | Orquesta la creación de reserva validando con ListingsFacade | `Optional<Booking>` | Público |
+| **Booking** | `BookingCommandService` | `+handle(ConfirmBookingCommand)` | Aprueba y confirma la reserva formalizando el contrato | `Optional<Booking>` | Público |
+| **Booking** | `BookingQueryService` | `+handle(GetBookingByIdQuery)` | Consulta los datos y estado de una reserva específica | `Optional<Booking>` | Público |
+| **Booking** | `BookingQueryService` | `+handle(GetBookingsByRenterIdQuery)` | Retorna el historial de reservas de un cliente | `List<Booking>` | Público |
+| **Booking** | `BookingContextFacade` | `+hasCompletedBooking()` | Fachada ACL: valida si un usuario completó un alquiler previo | `boolean` | Público |
+| **Booking** | `BookingContextFacade` | `+getActiveBooking()` | Fachada ACL: consulta la reserva en curso de un auto | `Optional<BookingDto>` | Público |
+| **Booking** | `BookingsController` | `+createBooking()` | Endpoint REST `POST /api/v1/bookings` | `ResponseEntity` | Público |
+| **Booking** | `BookingsController` | `+confirmBooking()` | Endpoint REST `PUT /api/v1/bookings/{bookingId}/confirm` | `ResponseEntity` | Público |
+| **IoT** | `Telemetry` | `-vehicleId` | Identificador escalar del vehículo monitoreado | `Long` | Privado |
+| **IoT** | `Telemetry` | `-latitude` | Coordenada geográfica de latitud GPS | `Double` | Privado |
+| **IoT** | `Telemetry` | `-longitude` | Coordenada geográfica de longitud GPS | `Double` | Privado |
+| **IoT** | `Telemetry` | `-speed` | Velocidad instantánea en km/h | `Double` | Privado |
+| **IoT** | `Telemetry` | `-fuelLevel` | Porcentaje de combustible restante (0 a 100%) | `Double` | Privado |
+| **IoT** | `Telemetry` | `-odometer` | Kilometraje total acumulado del automóvil | `Double` | Privado |
+| **IoT** | `Telemetry` | `-recordedAt` | Marca temporal exacta de la captura telemática | `Instant` | Privado |
+| **IoT** | `Telemetry` | `+isSpeedAlert()` | Evalúa si la velocidad supera el umbral seguro (>100 km/h) | `boolean` | Público |
+| **IoT** | `Telemetry` | `+isLowFuelAlert()` | Evalúa si el nivel de combustible es crítico (<15%) | `boolean` | Público |
+| **IoT** | `TelemetryRepository` | `+findTopByVehicleIdOrderByRecordedAtDesc()` | Obtiene la última lectura telemática registrada de un auto | `Optional<Telemetry>` | Público |
+| **IoT** | `TelemetryRepository` | `+findByVehicleId()` | Obtiene la serie histórica de lecturas telemáticas | `List<Telemetry>` | Público |
+| **IoT** | `TelemetryCommandService` | `+handle(RecordTelemetryCommand)` | Ingesta y persiste una nueva medición de sensores IoT | `Optional<Telemetry>` | Público |
+| **IoT** | `TelemetryQueryService` | `+handle(GetLatestTelemetryQuery)` | Retorna el estado telemático más reciente de un auto | `Optional<Telemetry>` | Público |
+| **IoT** | `TelemetryQueryService` | `+handle(GetTelemetryByVehicleIdQuery)` | Retorna el historial de telemetría de un vehículo | `List<Telemetry>` | Público |
+| **IoT** | `RouteQueryService` | `+handle(GetRouteQuery)` | Consulta la geometría de ruta a OpenRouteServiceApiClient | `RouteResponse` | Público |
+| **IoT** | `TelemetryController` | `+recordTelemetry()` | Endpoint REST `POST /api/v1/telemetry` | `ResponseEntity` | Público |
+| **IoT** | `TelemetryController` | `+getLatestTelemetry()` | Endpoint REST `GET /api/v1/telemetry/vehicle/{vehicleId}/latest` | `ResponseEntity` | Público |
+| **IoT** | `RouteController` | `+getRoute()` | Endpoint REST `GET /api/v1/simulation/route` | `ResponseEntity` | Público |
+| **Reviews** | `Review` | `-vehicleId` | Identificador escalar del automóvil evaluado | `Long` | Privado |
+| **Reviews** | `Review` | `-renterId` | Identificador escalar del arrendatario que emite la reseña | `Long` | Privado |
+| **Reviews** | `Review` | `-rating` | Calificación cuantitativa en estrellas (1 a 5) | `Integer` | Privado |
+| **Reviews** | `Review` | `-comment` | Comentario cualitativo sobre la experiencia de uso | `String` | Privado |
+| **Reviews** | `Review` | `-reviewDate` | Fecha y hora de emisión de la reseña | `Instant` | Privado |
+| **Reviews** | `Review` | `+validateRating()` | Valida que la puntuación se encuentre en el rango permitido | `boolean` | Público |
+| **Reviews** | `ReviewRepository` | `+findByVehicleId()` | Retorna todas las calificaciones y opiniones de un vehículo | `List<Review>` | Público |
+| **Reviews** | `ReviewRepository` | `+countByVehicleId()` | Cuenta el número total de reseñas emitidas para un auto | `Long` | Público |
+| **Reviews** | `ReviewCommandService` | `+handle(CreateReviewCommand)` | Registra reseña verificando culminación con BookingFacade | `Optional<Review>` | Público |
+| **Reviews** | `ReviewQueryService` | `+handle(GetReviewsByVehicleIdQuery)` | Consulta el listado de reseñas de un vehículo | `List<Review>` | Público |
+| **Reviews** | `ReviewQueryService` | `+computeAverageRating()` | Calcula el promedio de estrellas de un auto en el catálogo | `Double` | Público |
+| **Reviews** | `ReviewsController` | `+createReview()` | Endpoint REST `POST /api/v1/reviews` | `ResponseEntity` | Público |
+| **Reviews** | `ReviewsController` | `+getReviewsByVehicle()` | Endpoint REST `GET /api/v1/reviews/vehicle/{vehicleId}` | `ResponseEntity` | Público |
+
+---
 
 ## 4.10. Database Design
 
