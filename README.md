@@ -1853,14 +1853,12 @@ ajustando la distribución y dimensiones de los elementos para facilitar su visu
    retícula base de 8dp. Se establecen márgenes laterales fijos de 16dp para evitar colisiones táctiles, manteniendo los espaciados internos
    en múltiplos de 8dp (8dp, 16dp y 24dp) para asegurar simetría visual.
 - **Navegación e Interfaz Dinámica por Rol:**
-  * **Top App Bar:** Encabezado superior sobre fondo blanco (#FFFFFF) que despliega el saludo personalizado junto al avatar de perfil en la
-     esquina superior derecha, seguido del título de sección en tipografía Poppins ExtraBold alineado a la izquierda.
   * **Estructura del Resumen:** Organiza visualmente las secciones clave del negocio mediante un carrusel de desplazamiento horizontal.
-  * **NavigationBar (Inferior):** Barra de navegación fija en la parte inferior sobre fondo blanco (#FFFFFF) a una altura de 80dp. Se divide en cuatro accesos: Resumen,
-     Publicados, Reservas y Perfil. La pestaña activa se resalta mediante un indicador visual en forma de cápsula u óvalo de color azul claro (#52B6F2) con el ícono en estilo
-     relleno (Filled) en azul primario (#003F70), mientras que las pestañas inactivas se muestran en línea fina sobre gris neutro.
-  * **Extended Floating Action Button :** Botón flotante principal posicionado en la zona inferior sobre el área segura de la pantalla. Presenta un formato de
-    cápsula alargada con bordes redondeados de 16dp en azul primario (#003F70), integrando el ícono "+" y el texto explícito que depende del perfil del usuario para la acción prioritaria del módulo.
+  * **NavigationBar (Inferior):** Componente de navegación persistente ubicado en el borde inferior de la interfaz, con una altura fija de 80dp y fondo blanco (#FFFFFF). El componente se estructura
+     en cuatro destinos de navegación, definidos según el tipo de usuario: Resumen, Vehículos, Reservas y Perfil; o Resumen, Mis vehículos, Solicitudes y Perfil. La pestaña activa se resalta mediante
+     un indicador visual en forma de cápsula u óvalo de color azul claro (#52B6F2) sobre los iconos en estilo relleno (Filled) en azul primario (#003F70).
+  * **Extended Floating Action Button :** Botón flotante de acción primaria exclusivo para el usuario arrendador, ubicado sobre el área segura inferior. Presenta formato de cápsula con bordes redondeados
+    de 16dp, fondo azul primario #003F70, e integra el ícono “+” y el texto correspondiente a la acción principal del módulo (Publicar Vehiculo).
 - **Interacción y Accesibilidad:**
   * **Efecto Ripple (Onda):** Toda interacción táctil sobre botones, tarjetas o elementos de navegación activa una animación de onda circular difusa que se expande desde el punto de
      contacto, ofreciendo retroalimentación visual inmediata.
