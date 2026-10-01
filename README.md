@@ -1955,7 +1955,8 @@ o arrendatarios, priorizando accesos rápidos, navegación táctil y una present
 Los wireframes de la versión móvil de RentiCar se plantean como una guía estructural para definir la distribución de contenido, componentes y controles dentro de la interfaz. Se prioriza una navegación sencilla e intuitiva, considerando las 
 dimensiones de la pantalla y la interacción táctil para facilitar acciones como explorar vehículos, gestionar reservas y administrar publicaciones.
 
-**Enlace al proyecto en Figma:**
+**Enlace al proyecto en Figma:**https://www.figma.com/design/m6L2Nz1DxF5Nli3LwRZjiL/Dise%C3%B1o-Mobil-Androi?node-id=2-4606&t=rfjQ5UZIbrwkHYQx-1
+
 
 1.  *Iniciar Sesión / Registrarse*
     Pantallas destinadas al acceso y creación de cuentas en RentiCar. La interfaz mobile presenta formularios simplificados y adaptados a la interacción táctil, permitiendo seleccionar el tipo de usuario (arrendador o arrendatario) desde el
