@@ -1945,6 +1945,72 @@ Link del Figma: https://www.figma.com/design/PChWJ99signLAO8NcRCRrY/Landing-Rent
 
 Link del Figma: https://www.figma.com/design/PChWJ99signLAO8NcRCRrY/Landing-RentiCar?node-id=2461-182&t=FAwGoGSyUJDdEzex-1
 
+## 4.4. Mobile Applications UX/UI Design
+
+Esta sección define la propuesta de diseño para la experiencia móvil de RentiCar, enfocada en simplificar la interacción desde dispositivos de pantalla reducida. La interfaz organiza las funciones de acuerdo con las necesidades de arrendadores 
+o arrendatarios, priorizando accesos rápidos, navegación táctil y una presentación clara de la información para realizar las principales tareas de forma ágil.
+
+### 4.4.1. Mobile Applications Wireframes
+
+Los wireframes de la versión móvil de RentiCar se plantean como una guía estructural para definir la distribución de contenido, componentes y controles dentro de la interfaz. Se prioriza una navegación sencilla e intuitiva, considerando las 
+dimensiones de la pantalla y la interacción táctil para facilitar acciones como explorar vehículos, gestionar reservas y administrar publicaciones.
+
+**Enlace al proyecto en Figma:**
+
+1.  *Iniciar Sesión / Registrarse*
+    Pantallas destinadas al acceso y creación de cuentas en RentiCar. La interfaz mobile presenta formularios simplificados y adaptados a la interacción táctil, permitiendo seleccionar el tipo de usuario (arrendador o arrendatario) desde el
+     proceso de registro.
+
+    **1. Inicio de Sesión (Sign In)**
+  
+
+    **2. Registro de Arrendatario (Tenant Register)**
+
+
+    **3. Registro de Arrendador (Hirer Register)**
+
+
+    **4. Recuperación de Contraseña**
+ 
+
+2.  *Dashboard del arrendador*
+    La versión mobile del dashboard concentra en una sola vista las funciones más relevantes para el alquiler de sus vehículos. Permite continuar búsquedas, gestionar solicitudes y acceder rápidamente a la información de sus
+    alquileres mediante una distribución optimizada para pantallas reducidas.
+
+    **Resumen: Vista principal que muestra el estado general de los vehículos publicados, solicitudes y reservas activas.**
+  
+
+    **Mis vehículos: Permite consultar y administrar los vehículos registrados, incluyendo la gestión de sus publicaciones.**
+
+
+    **Solicitudes: Centraliza las solicitudes de reserva recibidas, facilitando su consulta y gestión.**
+
+
+    **Perfil: Permite visualizar y actualizar la información personal y los datos asociados a la cuenta del arrendador.**
+
+    Muestra un resumen de los vehículos publicados, las reservas activas y las ganancias generadas. Ofrece accesos directos para añadir un nuevo vehículo y gestionar las publicaciones existentes.
+
+4.  *Dashboard del Arrendatario*
+    Presenta un resumen de las reservas realizadas, vehículos recomendados y accesos rápidos para la búsqueda y alquiler de vehículos. El diseño se enfoca en facilitar la continuación de una búsqueda o la gestión de un alquiler en curso.
+
+    **Resumen: Vista principal que muestra recomendaciones, vehículos disponibles y el estado de las reservas activas.**
+  
+
+    **Vehículos: Permite explorar y consultar los vehículos disponibles, facilitando la búsqueda según las necesidades del arrendatario.**
+
+
+    **Reservas: Centraliza las reservas realizadas, permitiendo consultar su estado, detalles y gestionar los alquileres activos.**
+
+
+    **Perfil: Permite visualizar y actualizar la información personal y los datos asociados a la cuenta del arrendatario.**
+
+
+### 4.4.2. Mobile Applications Wireflow Diagrams
+
+### 4.4.3. Mobile Applications Mock-ups
+
+### 4.4.4. Mobile Applications User Flow Diagrams
+
 ## 4.6. Web Applications UX/UI Design
 
 En esta sección se presenta la propuesta visual y de interacción para la aplicación web RentiCar. El diseño se ha centrado en los dos segmentos objetivos identificados: arrendadores (dueños de vehículos) y arrendatarios (clientes que buscan alquilar). La prioridad ha sido crear una experiencia de usuario intuitiva, segura y eficiente, aplicando principios de diseño inclusivo y una arquitectura de información clara para facilitar la navegación y el cumplimiento de los objetivos de cada usuario.
