@@ -2318,6 +2318,103 @@ personal desde un dispositivo móvil.
 
 ---
 ### 4.4.4. Mobile Applications User Flow Diagrams
+En esta sección se modelan los **diagramas de flujo de usuario (User Flow Diagrams)** que describen las rutas de interacción, puntos de decisión y transiciones de 
+estado de los usuarios dentro de la aplicación mobile RentiCar. Los flujos mantienen la misma lógica funcional, adaptando la interacción a pantallas reducidas, 
+navegación táctil y accesos rápidos.
+
+#### 4.4.4.1. Flujo de Usuario: Arrendatario (Búsqueda, Reserva, Monitoreo y Calificación)
+
+El siguiente diagrama representa el recorrido del arrendatario dentro de la aplicación mobile, desde su acceso inicial hasta la finalización y
+calificación del servicio de alquiler:
+
+```mermaid
+flowchart TD
+    Start([Inicio: Visitante accede a la plataforma]) --> Explore[Explorar Landing Page o Catálogo]
+    Explore --> AuthCheck{¿Tiene cuenta iniciada?}
+    AuthCheck -- No --> AuthChoice[Iniciar Sesión o Registrarse]
+    AuthChoice --> LoginOk[Autenticación exitosa JWT]
+    AuthCheck -- Sí --> Catalog[Catálogo de Vehículos]
+    LoginOk --> Catalog
+
+    Catalog --> Filters[Aplicar Filtros: Marca, Transmisión, Precio]
+    Filters --> SelectCar[Seleccionar tarjeta de Vehículo]
+    SelectCar --> CarDetail[Visualizar Ficha Detallada del Auto]
+    
+    CarDetail --> BookDecision{¿Desea reservar este auto?}
+    BookDecision -- No --> Catalog
+    BookDecision -- Sí --> DateSelect[Seleccionar Fechas de Inicio y Fin]
+    
+    DateSelect --> PriceCalc[Cálculo automático de días y tarifa total]
+    PriceCalc --> SubmitBooking[Confirmar y Enviar Solicitud de Reserva]
+    SubmitBooking --> StatusPending[Estado: PENDIENTE]
+    
+    StatusPending --> WaitDecision{Respuesta del Arrendador}
+    WaitDecision -- Rechazada --> NotifyRejected[Notificación de Rechazo y liberación de fechas]
+    NotifyRejected --> Catalog
+    WaitDecision -- Aprobada --> StatusConfirmed[Estado: CONFIRMADA]
+    
+    StatusConfirmed --> Pickup[Fecha de Inicio: Recojo del Vehículo]
+    Pickup --> ActiveRent[Estado: EN CURSO]
+    ActiveRent --> IoTMap[Monitoreo GPS en tiempo real - Leaflet]
+    
+    IoTMap --> ReturnCar[Devolución del Vehículo]
+    ReturnCar --> CompletedRent[Estado: FINALIZADA]
+    CompletedRent --> ReviewModal[Calificar con Estrellas 1 a 5 y escribir Reseña]
+    ReviewModal --> End([Fin del Flujo del Arrendatario])
+```
+
+**Descripción del flujo del Arrendatario:**
+1. **Descubrimiento y Navegación:** El cliente ingresa y navega por el catálogo público. Para concretar una reserva, el sistema valida su sesión activa o le solicita autenticarse con JWT.
+2. **Filtrado y Selección:** El usuario puede refinar los resultados por marca, caja de cambios y tarifa diaria. Al seleccionar un vehículo, visualiza especificaciones completas e imágenes.
+3. **Reserva y Presupuesto:** Al elegir el rango de fechas en el calendario interactivo, el sistema calcula de forma reactiva el importe total. Tras confirmar, la solicitud se envía al propietario con estado `PENDIENTE`.
+4. **Seguimiento y Uso IoT:** Tras la aprobación del dueño (`CONFIRMADA`), el alquiler pasa a `EN CURSO` en la fecha pactada. El cliente tiene acceso al mapa interactivo de telemetría IoT.
+5. **Cierre y Reputación:** Finalizado el alquiler (`FINALIZADA`), se activa el diálogo para emitir su valoración y comentario, enriqueciendo la reputación pública del vehículo.
+
+---
+
+#### 4.4.4.2. Flujo de Usuario: Arrendador (Publicación de Flota, Aprobación y Supervisión)
+
+El siguiente diagrama representa el recorrido del arrendador dentro de la aplicación mobile para publicar vehículos, gestionar solicitudes de reserva y supervisar sus unidades:
+
+```mermaid
+flowchart TD
+    StartLessor([Inicio: Propietario accede a la plataforma]) --> AuthLessor[Iniciar Sesión como Arrendador]
+    AuthLessor --> LessorDash[Dashboard Principal del Arrendador]
+    
+    LessorDash --> ActionChoice{¿Qué acción desea realizar?}
+    
+    ActionChoice -- Publicar Auto --> CarForm[Completar Formulario de Vehículo: Marca, Modelo, Año, Tarifa]
+    CarForm --> PhotoUpload[Subir Fotografías del Auto]
+    PhotoUpload --> PublishCar[Publicar Vehículo en Catálogo]
+    PublishCar --> LessorDash
+    
+    ActionChoice -- Gestionar Flota --> MyCars[Ver 'Mis Vehículos']
+    MyCars --> EditCar[Editar Tarifa / Modificar Disponibilidad / Dar de Baja]
+    EditCar --> LessorDash
+    
+    ActionChoice -- Revisar Solicitudes --> RequestList[Bandeja de Solicitudes de Reserva]
+    RequestList --> EvalRequest[Evaluar Perfil del Arrendatario y Fechas Solicitadas]
+    EvalRequest --> Decision{¿Aceptar solicitud?}
+    
+    Decision -- No --> RejectBooking[Rechazar Reserva: Estado RECHAZADA]
+    RejectBooking --> LessorDash
+    
+    Decision -- Sí --> AcceptBooking[Aceptar Reserva: Estado CONFIRMADA]
+    AcceptBooking --> BlockDates[Bloqueo automático de fechas en calendario]
+    BlockDates --> TrackIoT[Supervisar Telemetría IoT: Odómetro y Velocidad]
+    TrackIoT --> CarReturned[Recepción del Vehículo al finalizar plazo]
+    CarReturned --> RateRenter[Calificar Cuidado y Puntualidad del Arrendatario]
+    RateRenter --> EndLessor([Fin del Flujo del Arrendador])
+```
+
+**Descripción del flujo del Arrendador:**
+1. **Autenticación y Panel de Control:** El arrendador accede a su dashboard donde monitorea el rendimiento de sus publicaciones y el resumen de ingresos.
+2. **Gestión de Publicaciones:** Puede registrar nuevos vehículos suministrando datos técnicos, tarifa por jornada y fotos. Las publicaciones pueden editarse o pausarse en cualquier momento (siempre que no tengan una reserva en curso).
+3. **Bandeja de Solicitudes:** El propietario recibe notificaciones de solicitudes de reserva. Puede inspeccionar las fechas requeridas y el perfil verificado del arrendatario para tomar una decisión informada.
+4. **Supervisión de Alquiler:** Una vez confirmada la reserva y entregada la unidad, el arrendador dispone de telemetría IoT para supervisar odómetro y velocidad.
+5. **Cierre de Ciclo:** Tras recibir el auto de vuelta, el arrendador evalúa al cliente, fortaleciendo el ecosistema de confianza de RentiCar.
+
+---
 
 ## 4.6. Web Applications UX/UI Design
 
