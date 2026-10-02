@@ -1955,7 +1955,7 @@ o arrendatarios, priorizando accesos rápidos, navegación táctil y una present
 Los wireframes de la versión móvil de RentiCar se plantean como una guía estructural para definir la distribución de contenido, componentes y controles dentro de la interfaz. Se prioriza una navegación sencilla e intuitiva, considerando las 
 dimensiones de la pantalla y la interacción táctil para facilitar acciones como explorar vehículos, gestionar reservas y administrar publicaciones.
 
-**Enlace al proyecto en Figma:**https://www.figma.com/design/m6L2Nz1DxF5Nli3LwRZjiL/Dise%C3%B1o-Mobil-Androi?node-id=2-4606&t=rfjQ5UZIbrwkHYQx-1
+**Enlace al proyecto en Figma:**https://www.figma.com/design/m6L2Nz1DxF5Nli3LwRZjiL/Mobile-Designed?node-id=2-4606&t=MqOCDWfq9lZUR8NZ-1
 
 
 ### 1. Iniciar Sesión / Registrarse
@@ -1988,37 +1988,87 @@ el proceso de registro.
   </tr>
 </table>
 
-3.  *Dashboard del arrendador*
-    La versión mobile del dashboard concentra en una sola vista las funciones más relevantes para el alquiler de sus vehículos. Permite continuar búsquedas, gestionar solicitudes y acceder rápidamente a la información de sus
-    alquileres mediante una distribución optimizada para pantallas reducidas.
+### 2. Dashboard del Arrendador
 
-    **Resumen: Vista principal que muestra el estado general de los vehículos publicados, solicitudes y reservas activas.**
-  
+La versión mobile del dashboard concentra en una sola vista las funciones más
+relevantes para el alquiler de sus vehículos. Permite gestionar vehículos,
+consultar solicitudes, revisar reservas y acceder rápidamente a la información
+de su cuenta mediante una distribución optimizada para pantallas reducidas.
 
-    **Mis vehículos: Permite consultar y administrar los vehículos registrados, incluyendo la gestión de sus publicaciones.**
+<table>
+  <tr>
+    <td align="center">
+      <strong>1. Resumen</strong><br><br>
+      Vista principal que muestra el estado general de los vehículos publicados,
+      solicitudes y reservas activas.<br><br>
+      <img src="assets/photos/resumen.png" width="300">
+    </td>
+    <td align="center">
+      <strong>2. Mis vehículos</strong><br><br>
+      Permite consultar y administrar los vehículos registrados, incluyendo la
+      gestión de sus publicaciones.<br><br>
+      <img src="assets/photos/vehiculos.png" width="300">
+    </td>
+  </tr>
 
+  <tr>
+    <td align="center">
+      <strong>3. Solicitudes</strong><br><br>
+      Centraliza las solicitudes de reserva recibidas, facilitando su consulta
+      y gestión.<br><br>
+      <img src="assets/photos/solicitudes.png" width="300">
+    </td>
+    <td align="center">
+      <strong>4. Perfil</strong><br><br>
+      Permite visualizar y actualizar la información personal y los datos
+      asociados a la cuenta del arrendador.<br><br>
+      <img src="assets/photos/perfilA.png" width="300">
+    </td>
+  </tr>
+</table>
 
-    **Solicitudes: Centraliza las solicitudes de reserva recibidas, facilitando su consulta y gestión.**
+El dashboard muestra un resumen de los vehículos publicados, las reservas
+activas y las ganancias generadas. Además, ofrece accesos directos para añadir
+un nuevo vehículo y gestionar las publicaciones existentes.
 
+### 3. Dashboard del Arrendatario
 
-    **Perfil: Permite visualizar y actualizar la información personal y los datos asociados a la cuenta del arrendador.**
+Presenta un resumen de las reservas realizadas, vehículos recomendados y
+accesos rápidos para la búsqueda y alquiler de vehículos. El diseño se
+enfoca en facilitar la continuación de una búsqueda o la gestión de un
+alquiler en curso.
 
-    Muestra un resumen de los vehículos publicados, las reservas activas y las ganancias generadas. Ofrece accesos directos para añadir un nuevo vehículo y gestionar las publicaciones existentes.
+<table>
+  <tr>
+    <td align="center">
+      <strong>1. Resumen</strong><br><br>
+      Vista principal que muestra recomendaciones, vehículos disponibles y
+      el estado de las reservas activas.<br><br>
+      <img src="assets/photos/resumenA.png" width="300">
+    </td>
+    <td align="center">
+      <strong>2. Vehículos</strong><br><br>
+      Permite explorar y consultar los vehículos disponibles, facilitando
+      la búsqueda según las necesidades del arrendatario.<br><br>
+      <img src="assets/photos/buscar.png" width="300">
+    </td>
+  </tr>
 
-4.  *Dashboard del Arrendatario*
-    Presenta un resumen de las reservas realizadas, vehículos recomendados y accesos rápidos para la búsqueda y alquiler de vehículos. El diseño se enfoca en facilitar la continuación de una búsqueda o la gestión de un alquiler en curso.
-
-    **Resumen: Vista principal que muestra recomendaciones, vehículos disponibles y el estado de las reservas activas.**
-  
-
-    **Vehículos: Permite explorar y consultar los vehículos disponibles, facilitando la búsqueda según las necesidades del arrendatario.**
-
-
-    **Reservas: Centraliza las reservas realizadas, permitiendo consultar su estado, detalles y gestionar los alquileres activos.**
-
-
-    **Perfil: Permite visualizar y actualizar la información personal y los datos asociados a la cuenta del arrendatario.**
-
+  <tr>
+    <td align="center">
+      <strong>3. Reservas</strong><br><br>
+      Centraliza las reservas realizadas, permitiendo consultar su estado,
+      detalles y gestionar los alquileres activos.<br><br>
+      <img src="assets/photos/reservas.png" width="300">
+    </td>
+    <td align="center">
+      <strong>4. Perfil</strong><br><br>
+      Permite visualizar y actualizar la información personal y los datos
+      asociados a la cuenta del arrendatario.<br><br>
+      <img src="assets/photos/perfilB.png" width="300">
+    </td>
+  </tr>
+</table>
 
 ### 4.4.2. Mobile Applications Wireflow Diagrams
 
