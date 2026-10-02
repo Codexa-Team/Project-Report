@@ -2070,8 +2070,90 @@ alquiler en curso.
   </tr>
 </table>
 
-### 4.4.2. Mobile Applications Wireflow Diagrams
+## 4.6.2. Mobile Applications Wireflow Diagrams
 
+Los wireflows representan las rutas que siguen los usuarios para completar
+las principales tareas dentro de la aplicación mobile. Aunque los flujos
+mantienen la misma lógica funcional, su diseño se adapta a pantallas
+reducidas, navegación táctil y accesos rápidos, buscando que cada proceso
+sea claro, sencillo y fluido.
+
+---
+
+### 1. Segmento 1: Arrendatarios
+
+*User Goal:* Como arrendatario, quiero gestionar mi perfil desde mi celular,
+pudiendo editar mi información personal, actualizar mi foto y cargar los
+documentos necesarios para validar mi cuenta.
+
+![Wireflow mobile para la gestión del perfil del arrendatario](assets/chapter04/wire1.png)
+
+- Wireflow
+
+![Wireflow mobile](assets/chapter04/wireflow-renter-dashboard-1.png)
+
+*User Goal:* Como arrendatario, quiero gestionar mis reservas desde el
+celular, pudiendo consultar sus detalles, cancelarlas y dejar una reseña
+cuando finalice el alquiler.
+
+![Wireflow mobile para la gestión de reservas del arrendatario](assets/chapter04/wire2.png)
+
+- Wireflow
+
+![Wireflow mobile](assets/chapter04/wireflow-renter-dashboard-2.png)
+
+*User Goal:* Como arrendatario, quiero buscar vehículos desde mi celular
+utilizando filtros, consultar sus características y completar una reserva
+de manera rápida y sencilla.
+
+![Wireflow mobile para la búsqueda y reserva de un vehículo](assets/chapter04/wire3.png)
+
+- Wireflow
+
+![Wireflow mobile](assets/chapter04/wireflow-renter-reservations.png)
+
+*User Goal:* Como arrendatario, quiero acceder rápidamente desde mi
+dashboard mobile a mis reservas activas para consultar sus detalles o
+cancelarlas cuando sea necesario.
+
+![Wireflow mobile para acceder a las reservas desde el dashboard](assets/chapter04/wire4.png)
+
+*User Goal:* Como arrendatario, quiero explorar vehículos recomendados
+desde mi dashboard mobile y realizar una reserva de forma rápida.
+
+![Wireflow mobile para reservar un vehículo recomendado](assets/chapter04/wire5.png)
+
+### 2. Segmento 2: Arrendadores
+
+*User Goal:* Como arrendador, quiero consultar desde mi celular un resumen
+de mi actividad, incluyendo mis vehículos publicados y las solicitudes de
+reserva pendientes.
+
+![Wireflow mobile del dashboard del arrendador](assets/chapter04/wireA.png)
+
+*User Goal (Crear):* Como arrendador, quiero registrar un nuevo vehículo
+desde mi celular de forma rápida y sencilla para comenzar a alquilarlo.
+
+*User Goal (Editar):* Como arrendador, quiero modificar desde mi celular
+los datos de mis vehículos publicados, como el precio o la descripción,
+para mantenerlos actualizados.
+
+*User Goal (Eliminar):* Como arrendador, quiero retirar fácilmente un
+vehículo que ya no se encuentre disponible para alquiler.
+
+![Wireflow mobile de la gestión de vehículos del arrendador](assets/chapter04/wireB.png)
+
+*User Goal:* Como arrendador, quiero gestionar desde mi celular las
+solicitudes de alquiler recibidas, pudiendo aceptarlas o rechazarlas de
+manera sencilla.
+
+![Wireflow mobile de la administración de solicitudes de reserva](assets/chapter04/wireC.png)
+
+*User Goal:* Como arrendador, quiero actualizar desde mi celular mi
+información de contacto y documentos de garantía para mantener mi perfil
+actualizado y brindar confianza a los clientes.
+
+![Wireflow mobile de la edición del perfil del arrendador](assets/chapter04/wireD.png)
 ### 4.4.3. Mobile Applications Mock-ups
 
 ### 4.4.4. Mobile Applications User Flow Diagrams
