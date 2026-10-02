@@ -2080,7 +2080,7 @@ sea claro, sencillo y fluido.
 
 ---
 
-### 1. Segmento 1: Arrendatarios
+### 1. Segmento 1: Arrendatario
 
 *User Goal:* Como arrendatario, quiero gestionar mi perfil desde mi celular,
 pudiendo editar mi información personal, actualizar mi foto y cargar los
@@ -2123,7 +2123,7 @@ desde mi dashboard mobile y realizar una reserva de forma rápida.
 
 ![Wireflow mobile para reservar un vehículo recomendado](assets/chapter04/wire5.png)
 
-### 2. Segmento 2: Arrendadores
+### 2. Segmento 2: Arrendador
 
 *User Goal:* Como arrendador, quiero consultar desde mi celular un resumen
 de mi actividad, incluyendo mis vehículos publicados y las solicitudes de
@@ -2145,7 +2145,7 @@ para mantenerlos actualizados.
 *User Goal (Eliminar):* Como arrendador, quiero retirar fácilmente un
 vehículo que ya no se encuentre disponible para alquiler.
 
-![Wireflow mobile de la gestión de vehículos del arrendador](assets/chapter04/wireCC.png)
+![Wireflow mobile de la gestión de vehículos del arrendador](assets/chapter04/wireF.png)
 
 *User Goal:* Como arrendador, quiero gestionar desde mi celular las
 solicitudes de alquiler recibidas, pudiendo aceptarlas o rechazarlas de
