@@ -1958,21 +1958,35 @@ dimensiones de la pantalla y la interacción táctil para facilitar acciones com
 **Enlace al proyecto en Figma:**https://www.figma.com/design/m6L2Nz1DxF5Nli3LwRZjiL/Dise%C3%B1o-Mobil-Androi?node-id=2-4606&t=rfjQ5UZIbrwkHYQx-1
 
 
-1.  *Iniciar Sesión / Registrarse*
-    Pantallas destinadas al acceso y creación de cuentas en RentiCar. La interfaz mobile presenta formularios simplificados y adaptados a la interacción táctil, permitiendo seleccionar el tipo de usuario (arrendador o arrendatario) desde el
-     proceso de registro.
+## 1. Iniciar Sesión / Registrarse
 
-    **1. Inicio de Sesión (Sign In)**
-  <img src="assets/photos/login.png" alt="Buttons" width="500"><br>
+Pantallas destinadas al acceso y creación de cuentas en RentiCar. La interfaz
+mobile presenta formularios simplificados y adaptados a la interacción táctil,
+permitiendo seleccionar el tipo de usuario (arrendador o arrendatario) durante
+el proceso de registro.
 
-    **2. Registro de Arrendatario (Tenant Register)**
- <img src="assets/photos/registerT.png" alt="Buttons" width="500"><br>
-
-    **3. Registro de Arrendador (Hirer Register)**
- <img src="assets/photos/registerH.png" alt="Buttons" width="500"><br>
-
-    **4. Recuperación de Contraseña**
-  <img src="assets/photos/password.png" alt="Buttons" width="500"><br>
+<table>
+  <tr>
+    <td align="center">
+      <strong>1. Inicio de Sesión</strong><br><br>
+      <img src="assets/photos/login.png" width="300">
+    </td>
+    <td align="center">
+      <strong>2. Registro de Arrendatario</strong><br><br>
+      <img src="assets/photos/registerT.png" width="300">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <strong>3. Registro de Arrendador</strong><br><br>
+      <img src="assets/photos/registerH.png" width="300">
+    </td>
+    <td align="center">
+      <strong>4. Recuperación de Contraseña</strong><br><br>
+      <img src="assets/photos/password.png" width="300">
+    </td>
+  </tr>
+</table>
 
 3.  *Dashboard del arrendador*
     La versión mobile del dashboard concentra en una sola vista las funciones más relevantes para el alquiler de sus vehículos. Permite continuar búsquedas, gestionar solicitudes y acceder rápidamente a la información de sus
