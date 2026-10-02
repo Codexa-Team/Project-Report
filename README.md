@@ -2232,7 +2232,7 @@ alquileres y actualizar la información de su perfil.
   permitiendo acceder rápidamente a las opciones de alquiler.
 
   <p align="center">
-    <img src="assets/chapter04/RESUMENA(1).png" alt="Resumen mobile del Arrendatario" width="350"/>
+    <img src="assets/chapter04/RA.png" alt="Resumen mobile del Arrendatario" width="350"/>
   </p>
 
 - **Búsqueda de Vehículos y Filtros:**  
@@ -2241,7 +2241,7 @@ alquileres y actualizar la información de su perfil.
   precio u otras preferencias del arrendatario.
 
   <p align="center">
-    <img src="assets/chapter04/BUSCAR(1).png" alt="Búsqueda y filtros de vehículos mobile" width="350"/>
+    <img src="assets/chapter04/B.png" alt="Búsqueda y filtros de vehículos mobile" width="350"/>
   </p>
 
 - **Gestión de Reservas:**  
@@ -2250,8 +2250,8 @@ alquileres y actualizar la información de su perfil.
   realizar modificaciones o acciones disponibles sobre ellas.
 
   <p align="center">
-    <img src="assets/chapter04/RESERVAS(1).png" alt="Gestión de reservas mobile" width="350"/>
-    <img src="assets/chapter04/RESERVAS1.png" alt="Modificación de reserva mobile" width="350"/>
+    <img src="assets/chapter04/R.png" alt="Gestión de reservas mobile" width="350"/>
+    <img src="assets/chapter04/R1.png" alt="Modificación de reserva mobile" width="350"/>
   </p>
 
 - **Perfil del Arrendatario:**  
@@ -2260,7 +2260,7 @@ alquileres y actualizar la información de su perfil.
   móvil.
 
   <p align="center">
-    <img src="assets/chapter04/PERFILA(1).png" alt="Perfil mobile del Arrendatario" width="350"/>
+    <img src="assets/chapter04/PA.png" alt="Perfil mobile del Arrendatario" width="350"/>
   </p>
 
 ---
@@ -2277,7 +2277,7 @@ personal desde un dispositivo móvil.
   principales funciones de gestión.
 
   <p align="center">
-    <img src="assets/chapter04/RESUMENB(1).png" alt="Dashboard mobile del Arrendador" width="350"/>
+    <img src="assets/chapter04/RB.png" alt="Dashboard mobile del Arrendador" width="350"/>
   </p>
 
 - **Gestión y Publicación de Vehículos:**  
@@ -2287,11 +2287,11 @@ personal desde un dispositivo móvil.
   las publicaciones existentes.
 
   <p align="center">
-    <img src="assets/chapter04/VEHICULOS(1).png" alt="Gestión mobile de Vehículos" width="350"/>
+    <img src="assets/chapter04/V.png" alt="Gestión mobile de Vehículos" width="350"/>
   </p>
 
   <p align="center">
-    <img src="assets/chapter04/VEHICULOS1.png" alt="Publicación mobile de un Vehículo" width="350"/>
+    <img src="assets/chapter04/V1.png" alt="Publicación mobile de un Vehículo" width="350"/>
   </p>
 
 - **Administración de Solicitudes de Reserva:**  
@@ -2300,11 +2300,11 @@ personal desde un dispositivo móvil.
   fechas solicitadas y gestionar cada solicitud aceptándola o rechazándola.
 
   <p align="center">
-    <img src="assets/chapter04/SOLICITUDES(1).png" alt="Administración mobile de Solicitudes de Reserva" width="350"/>
+    <img src="assets/chapter04/S.png" alt="Administración mobile de Solicitudes de Reserva" width="350"/>
   </p>
 
   <p align="center">
-    <img src="assets/chapter04/SOLICITUDES1.png" alt="Detalle mobile de Solicitud de Reserva" width="350"/>
+    <img src="assets/chapter04/S1.png" alt="Detalle mobile de Solicitud de Reserva" width="350"/>
   </p>
   
 - **Edición de Perfil de Propietario:**  
@@ -2313,7 +2313,7 @@ personal desde un dispositivo móvil.
   cuenta del arrendador.
 
   <p align="center">
-    <img src="assets/chapter04/PERFILB(1).png" alt="Edición mobile de Perfil de Arrendador" width="350"/>
+    <img src="assets/chapter04/PB.png" alt="Edición mobile de Perfil de Arrendador" width="350"/>
   </p>
 
 ---
