@@ -2044,7 +2044,7 @@ alquiler en curso.
       <strong>1. Resumen</strong><br><br>
       Vista principal que muestra recomendaciones, vehículos disponibles y
       el estado de las reservas activas.<br><br>
-      <img src="assets/photos/resumenA.png" width="300">
+      <img src="assets/photos/resumenB.png" width="300">
     </td>
     <td align="center">
       <strong>2. Vehículos</strong><br><br>
