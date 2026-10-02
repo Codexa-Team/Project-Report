@@ -1958,7 +1958,7 @@ dimensiones de la pantalla y la interacción táctil para facilitar acciones com
 **Enlace al proyecto en Figma:**https://www.figma.com/design/m6L2Nz1DxF5Nli3LwRZjiL/Dise%C3%B1o-Mobil-Androi?node-id=2-4606&t=rfjQ5UZIbrwkHYQx-1
 
 
-## 1. Iniciar Sesión / Registrarse
+### 1. Iniciar Sesión / Registrarse
 
 Pantallas destinadas al acceso y creación de cuentas en RentiCar. La interfaz
 mobile presenta formularios simplificados y adaptados a la interacción táctil,
