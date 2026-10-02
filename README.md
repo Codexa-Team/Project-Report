@@ -2129,19 +2129,23 @@ desde mi dashboard mobile y realizar una reserva de forma rápida.
 de mi actividad, incluyendo mis vehículos publicados y las solicitudes de
 reserva pendientes.
 
-![Wireflow mobile del dashboard del arrendador](assets/chapter04/wireA.png)
+![Wireflow mobile del dashboard del arrendador](assets/chapter04/wireAA.png)
 
 *User Goal (Crear):* Como arrendador, quiero registrar un nuevo vehículo
 desde mi celular de forma rápida y sencilla para comenzar a alquilarlo.
+
+![Wireflow mobile del dashboard del arrendador1](assets/chapter04/wireB.png)
 
 *User Goal (Editar):* Como arrendador, quiero modificar desde mi celular
 los datos de mis vehículos publicados, como el precio o la descripción,
 para mantenerlos actualizados.
 
+![Wireflow mobile del dashboard del arrendador](assets/chapter04/wireA.png)
+
 *User Goal (Eliminar):* Como arrendador, quiero retirar fácilmente un
 vehículo que ya no se encuentre disponible para alquiler.
 
-![Wireflow mobile de la gestión de vehículos del arrendador](assets/chapter04/wireB.png)
+![Wireflow mobile de la gestión de vehículos del arrendador](assets/chapter04/wireCC.png)
 
 *User Goal:* Como arrendador, quiero gestionar desde mi celular las
 solicitudes de alquiler recibidas, pudiendo aceptarlas o rechazarlas de
