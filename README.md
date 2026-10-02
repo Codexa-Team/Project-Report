@@ -1963,18 +1963,18 @@ dimensiones de la pantalla y la interacción táctil para facilitar acciones com
      proceso de registro.
 
     **1. Inicio de Sesión (Sign In)**
-  
+  <img src="assets/photos/login.png" alt="Buttons" width="500"><br>
 
     **2. Registro de Arrendatario (Tenant Register)**
-
+ <img src="assets/photos/registerT.png" alt="Buttons" width="500"><br>
 
     **3. Registro de Arrendador (Hirer Register)**
-
+ <img src="assets/photos/registerH.png" alt="Buttons" width="500"><br>
 
     **4. Recuperación de Contraseña**
- 
+  <img src="assets/photos/password.png" alt="Buttons" width="500"><br>
 
-2.  *Dashboard del arrendador*
+3.  *Dashboard del arrendador*
     La versión mobile del dashboard concentra en una sola vista las funciones más relevantes para el alquiler de sus vehículos. Permite continuar búsquedas, gestionar solicitudes y acceder rápidamente a la información de sus
     alquileres mediante una distribución optimizada para pantallas reducidas.
 
