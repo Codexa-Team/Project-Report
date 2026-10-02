@@ -2158,8 +2158,165 @@ información de contacto y documentos de garantía para mantener mi perfil
 actualizado y brindar confianza a los clientes.
 
 ![Wireflow mobile de la edición del perfil del arrendador](assets/chapter04/wireD.png)
-### 4.4.3. Mobile Applications Mock-ups
 
+### 4.6.3. Mobile Applications Mock-ups
+
+En esta sección se presentan los mock-ups de alta fidelidad correspondientes
+a la aplicación mobile de **RentiCar**, diseñados en Figma respetando la guía
+de estilos, paleta de colores y componentes visuales definidos previamente.
+Las interfaces mantienen las mismas funcionalidades de la aplicación web,
+pero se encuentran adaptadas a pantallas de menor tamaño y a la interacción
+táctil.
+
+Los mock-ups se encuentran agrupados según los principales flujos de
+interacción de los dos segmentos clave: Arrendatarios y Arrendadores, además
+de los módulos transversales de autenticación y gestión de acceso.
+
+---
+
+#### 4.6.3.1. Módulo de Autenticación y Gestión de Acceso (IAM)
+
+Este módulo centraliza las interfaces de registro, inicio de sesión seguro y
+recuperación de credenciales para ambos perfiles de usuario. En la versión
+mobile, los formularios se presentan de manera simplificada para facilitar
+la interacción mediante dispositivos táctiles.
+
+- **Pantalla de Inicio de Sesión (Sign In):**  
+  Permite a los usuarios registrados acceder a su cuenta ingresando su correo
+  y contraseña. La interfaz está optimizada para dispositivos móviles y
+  mantiene las opciones principales de acceso y validación.
+
+  <p align="center">
+    <img src="assets/chapter04/L1.png" alt="Pantalla mobile de inicio de sesión" width="350"/>
+  </p>
+
+- **Pantalla de Registro para Arrendatarios (Tenant Register):**  
+  Formulario adaptado a dispositivos móviles donde los clientes ingresan sus
+  datos personales, correo, teléfono y contraseña para crear su cuenta de
+  arrendatario.
+
+  <p align="center">
+    <img src="assets/chapter04/RT.png" alt="Registro mobile para Arrendatarios" width="350"/>
+  </p>
+
+- **Pantalla de Registro para Arrendadores (Hirer Register):**  
+  Interfaz orientada a propietarios de vehículos que desean publicar sus
+  unidades. El formulario se organiza verticalmente para facilitar el ingreso
+  de datos desde el dispositivo móvil.
+
+  <p align="center">
+    <img src="assets/chapter04/RH.png" alt="Registro mobile para Arrendadores" width="350"/>
+  </p>
+
+- **Pantalla de Recuperación de Contraseña:**  
+  Permite ingresar el correo registrado para iniciar el proceso de
+  recuperación de contraseña mediante una interfaz sencilla y adaptada a
+  pantallas reducidas.
+
+  <p align="center">
+    <img src="assets/chapter04/P1.png" alt="Recuperación mobile de contraseña" width="350"/>
+  </p>
+
+---
+
+#### 4.6.3.2. Módulo de Experiencia del Arrendatario (Resumen, Búsqueda, Reservas y Perfil)
+
+Interfaces diseñadas para que el arrendatario pueda gestionar las principales
+funciones de alquiler desde su dispositivo móvil. El módulo permite consultar
+el estado de sus reservas, explorar vehículos, aplicar filtros, gestionar sus
+alquileres y actualizar la información de su perfil.
+
+- **Resumen y Recomendaciones:**  
+  Vista principal del arrendatario que presenta un resumen de sus reservas
+  activas y recomendaciones de vehículos proporcionadas por el sistema,
+  permitiendo acceder rápidamente a las opciones de alquiler.
+
+  <p align="center">
+    <img src="assets/chapter04/RESUMENA.png" alt="Resumen mobile del Arrendatario" width="350"/>
+  </p>
+
+- **Búsqueda de Vehículos y Filtros:**  
+  Permite explorar los vehículos disponibles y utilizar filtros para
+  personalizar la búsqueda según características como tipo de vehículo,
+  precio u otras preferencias del arrendatario.
+
+  <p align="center">
+    <img src="assets/chapter04/BUSCAR.png" alt="Búsqueda y filtros de vehículos mobile" width="350"/>
+  </p>
+
+- **Gestión de Reservas:**  
+  Pantalla destinada a consultar las reservas realizadas y gestionar los
+  alquileres activos. Permite visualizar los detalles de cada reserva y
+  realizar modificaciones o acciones disponibles sobre ellas.
+
+  <p align="center">
+    <img src="assets/chapter04/RESERVAS.png" alt="Gestión de reservas mobile" width="350"/>
+    <img src="assets/chapter04/RESERVAS1.png" alt="Modificación de reserva mobile" width="350"/>
+  </p>
+
+- **Perfil del Arrendatario:**  
+  Permite visualizar y actualizar la información personal asociada a la
+  cuenta, facilitando la gestión del perfil directamente desde el dispositivo
+  móvil.
+
+  <p align="center">
+    <img src="assets/chapter04/PERFILA.png" alt="Perfil mobile del Arrendatario" width="350"/>
+  </p>
+
+---
+
+#### 4.6.3.3. Módulo de Experiencia del Arrendador (Gestión de Flota y Solicitudes)
+
+Interfaces especializadas para que los propietarios puedan administrar sus
+vehículos, gestionar solicitudes de alquiler y actualizar su información
+personal desde un dispositivo móvil.
+
+- **Primer Acceso y Vista General (Dashboard del Arrendador):**  
+  Dashboard mobile que presenta de manera resumida los ingresos, vehículos
+  activos y reservas en curso, además de proporcionar accesos rápidos a las
+  principales funciones de gestión.
+
+  <p align="center">
+    <img src="assets/chapter04/RESUMENAB.png" alt="Dashboard mobile del Arrendador" width="350"/>
+  </p>
+
+- **Gestión y Publicación de Vehículos:**  
+  Permite consultar la flota registrada y administrar las publicaciones de
+  los vehículos. Desde esta sección, el arrendador puede agregar nuevos
+  vehículos, modificar sus datos, actualizar su disponibilidad y gestionar
+  las publicaciones existentes.
+
+  <p align="center">
+    <img src="assets/chapter04/VEHICULOS.png" alt="Gestión mobile de Vehículos" width="350"/>
+  </p>
+
+  <p align="center">
+    <img src="assets/chapter04/VEHICULOS1.png" alt="Publicación mobile de un Vehículo" width="350"/>
+  </p>
+
+- **Administración de Solicitudes de Reserva:**  
+  Pantalla mobile que centraliza las solicitudes recibidas. El arrendador
+  puede consultar la información principal del arrendatario, revisar las
+  fechas solicitadas y gestionar cada solicitud aceptándola o rechazándola.
+
+  <p align="center">
+    <img src="assets/chapter04/SOLICITUDES.png" alt="Administración mobile de Solicitudes de Reserva" width="350"/>
+  </p>
+
+  <p align="center">
+    <img src="assets/chapter04/SOLICITUDES1.png" alt="Detalle mobile de Solicitud de Reserva" width="350"/>
+  </p>
+  
+- **Edición de Perfil de Propietario:**  
+  Formulario optimizado para dispositivos móviles que permite actualizar la
+  información personal, el número telefónico y los documentos asociados a la
+  cuenta del arrendador.
+
+  <p align="center">
+    <img src="assets/chapter04/PERFILB.png" alt="Edición mobile de Perfil de Arrendador" width="350"/>
+  </p>
+
+---
 ### 4.4.4. Mobile Applications User Flow Diagrams
 
 ## 4.6. Web Applications UX/UI Design
