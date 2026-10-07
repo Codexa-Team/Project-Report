@@ -1969,21 +1969,21 @@ el proceso de registro.
   <tr>
     <td align="center">
       <strong>1. Inicio de Sesión</strong><br><br>
-      <img src="assets/photos/login.png" width="300">
+      <img src="assets/photos/LOG.png" width="300">
     </td>
     <td align="center">
       <strong>2. Registro de Arrendatario</strong><br><br>
-      <img src="assets/photos/registerT.png" width="300">
+      <img src="assets/photos/RET.png" width="300">
     </td>
   </tr>
   <tr>
     <td align="center">
       <strong>3. Registro de Arrendador</strong><br><br>
-      <img src="assets/photos/registerH.png" width="300">
+      <img src="assets/photos/REH.png" width="300">
     </td>
     <td align="center">
       <strong>4. Recuperación de Contraseña</strong><br><br>
-      <img src="assets/photos/password.png" width="300">
+      <img src="assets/photos/PASS.png" width="300">
     </td>
   </tr>
 </table>
