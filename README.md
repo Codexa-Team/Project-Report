@@ -3727,6 +3727,8 @@ En este apartado se documenta el video promocional y técnico elaborado por **Co
 
 # Conclusiones
 
+aaaaa
+
 El desarrollo del proyecto Renticar permitió aplicar de manera integral los conceptos de ingeniería de software y las metodologías orientadas al diseño centrado en el usuario, integrando prácticas modernas como Event Storming, Impact Mapping y User Personas. A través del análisis de entrevistas se identificaron claramente las necesidades de los dos segmentos objetivos, arrendadores y arrendatarios, evidenciando que ambos valoran la seguridad, la transparencia y la confianza como elementos determinantes en la experiencia de alquiler de vehículos.
 
 La incorporación de un componente IoT ligero representa un diferenciador importante frente a soluciones tradicionales, al brindar información básica sobre el estado y ubicación de los vehículos durante la reserva. De esta forma, se refuerza la confiabilidad del sistema y se atienden los puntos de dolor detectados en el análisis de los flujos actuales. Asimismo, la definición de una arquitectura basada en dominios bajo el modelo C4 (Context, Container, Component) asegura la escalabilidad y mantenibilidad del sistema, alineando la solución tecnológica con los objetivos de negocio.
