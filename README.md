@@ -1900,14 +1900,12 @@ ajustando la distribución y dimensiones de los elementos para facilitar su visu
    retícula base de 8dp. Se establecen márgenes laterales fijos de 16dp para evitar colisiones táctiles, manteniendo los espaciados internos
    en múltiplos de 8dp (8dp, 16dp y 24dp) para asegurar simetría visual.
 - **Navegación e Interfaz Dinámica por Rol:**
-  * **Top App Bar:** Encabezado superior sobre fondo blanco (#FFFFFF) que despliega el saludo personalizado junto al avatar de perfil en la
-     esquina superior derecha, seguido del título de sección en tipografía Poppins ExtraBold alineado a la izquierda.
   * **Estructura del Resumen:** Organiza visualmente las secciones clave del negocio mediante un carrusel de desplazamiento horizontal.
-  * **NavigationBar (Inferior):** Barra de navegación fija en la parte inferior sobre fondo blanco (#FFFFFF) a una altura de 80dp. Se divide en cuatro accesos: Resumen,
-     Publicados, Reservas y Perfil. La pestaña activa se resalta mediante un indicador visual en forma de cápsula u óvalo de color azul claro (#52B6F2) con el ícono en estilo
-     relleno (Filled) en azul primario (#003F70), mientras que las pestañas inactivas se muestran en línea fina sobre gris neutro.
-  * **Extended Floating Action Button :** Botón flotante principal posicionado en la zona inferior sobre el área segura de la pantalla. Presenta un formato de
-    cápsula alargada con bordes redondeados de 16dp en azul primario (#003F70), integrando el ícono "+" y el texto explícito que depende del perfil del usuario para la acción prioritaria del módulo.
+  * **NavigationBar (Inferior):** Componente de navegación persistente ubicado en el borde inferior de la interfaz, con una altura fija de 80dp y fondo blanco (#FFFFFF). El componente se estructura
+     en cuatro destinos de navegación, definidos según el tipo de usuario: Resumen, Vehículos, Reservas y Perfil; o Resumen, Mis vehículos, Solicitudes y Perfil. La pestaña activa se resalta mediante
+     un indicador visual en forma de cápsula u óvalo de color azul claro (#52B6F2) sobre los iconos en estilo relleno (Filled) en azul primario (#003F70).
+  * **Extended Floating Action Button :** Botón flotante de acción primaria exclusivo para el usuario arrendador, ubicado sobre el área segura inferior. Presenta formato de cápsula con bordes redondeados
+    de 16dp, fondo azul primario #003F70, e integra el ícono “+” y el texto correspondiente a la acción principal del módulo (Publicar Vehiculo).
 - **Interacción y Accesibilidad:**
   * **Efecto Ripple (Onda):** Toda interacción táctil sobre botones, tarjetas o elementos de navegación activa una animación de onda circular difusa que se expande desde el punto de
      contacto, ofreciendo retroalimentación visual inmediata.
@@ -1993,6 +1991,477 @@ Link del Figma: https://www.figma.com/design/PChWJ99signLAO8NcRCRrY/Landing-Rent
 <img src="assets/chapter04/landing-page-mockup.png" alt="Buttons" width="500"><br>
 
 Link del Figma: https://www.figma.com/design/PChWJ99signLAO8NcRCRrY/Landing-RentiCar?node-id=2461-182&t=FAwGoGSyUJDdEzex-1
+
+## 4.4. Mobile Applications UX/UI Design
+
+Esta sección define la propuesta de diseño para la experiencia móvil de RentiCar, enfocada en simplificar la interacción desde dispositivos de pantalla reducida. La interfaz organiza las funciones de acuerdo con las necesidades de arrendadores 
+o arrendatarios, priorizando accesos rápidos, navegación táctil y una presentación clara de la información para realizar las principales tareas de forma ágil.
+
+### 4.4.1. Mobile Applications Wireframes
+
+Los wireframes de la versión móvil de RentiCar se plantean como una guía estructural para definir la distribución de contenido, componentes y controles dentro de la interfaz. Se prioriza una navegación sencilla e intuitiva, considerando las 
+dimensiones de la pantalla y la interacción táctil para facilitar acciones como explorar vehículos, gestionar reservas y administrar publicaciones.
+
+**Enlace al proyecto en Figma:**https://www.figma.com/design/m6L2Nz1DxF5Nli3LwRZjiL/Mobile-Designed?node-id=2-4606&t=MqOCDWfq9lZUR8NZ-1
+
+
+### 1. Iniciar Sesión / Registrarse
+
+Pantallas destinadas al acceso y creación de cuentas en RentiCar. La interfaz
+mobile presenta formularios simplificados y adaptados a la interacción táctil,
+permitiendo seleccionar el tipo de usuario (arrendador o arrendatario) durante
+el proceso de registro.
+
+<table>
+  <tr>
+    <td align="center">
+      <strong>1. Inicio de Sesión</strong><br><br>
+      <img src="assets/photos/login.png" width="300">
+    </td>
+    <td align="center">
+      <strong>2. Registro de Arrendatario</strong><br><br>
+      <img src="assets/photos/registerT.png" width="300">
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <strong>3. Registro de Arrendador</strong><br><br>
+      <img src="assets/photos/registerH.png" width="300">
+    </td>
+    <td align="center">
+      <strong>4. Recuperación de Contraseña</strong><br><br>
+      <img src="assets/photos/password.png" width="300">
+    </td>
+  </tr>
+</table>
+
+### 2. Dashboard del Arrendador
+
+La versión mobile del dashboard concentra en una sola vista las funciones más
+relevantes para el alquiler de sus vehículos. Permite gestionar vehículos,
+consultar solicitudes, revisar reservas y acceder rápidamente a la información
+de su cuenta mediante una distribución optimizada para pantallas reducidas.
+
+<table>
+  <tr>
+    <td align="center">
+      <strong>1. Resumen</strong><br><br>
+      Vista principal que muestra el estado general de los vehículos publicados,
+      solicitudes y reservas activas.<br><br>
+      <img src="assets/photos/resumen.png" width="300">
+    </td>
+    <td align="center">
+      <strong>2. Mis vehículos</strong><br><br>
+      Permite consultar y administrar los vehículos registrados, incluyendo la
+      gestión de sus publicaciones.<br><br>
+      <img src="assets/photos/vehiculos.png" width="300">
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <strong>3. Solicitudes</strong><br><br>
+      Centraliza las solicitudes de reserva recibidas, facilitando su consulta
+      y gestión.<br><br>
+      <img src="assets/photos/solicitudes.png" width="300">
+    </td>
+    <td align="center">
+      <strong>4. Perfil</strong><br><br>
+      Permite visualizar y actualizar la información personal y los datos
+      asociados a la cuenta del arrendador.<br><br>
+      <img src="assets/photos/perfilA.png" width="300">
+    </td>
+  </tr>
+</table>
+
+El dashboard muestra un resumen de los vehículos publicados, las reservas
+activas y las ganancias generadas. Además, ofrece accesos directos para añadir
+un nuevo vehículo y gestionar las publicaciones existentes.
+
+### 3. Dashboard del Arrendatario
+
+Presenta un resumen de las reservas realizadas, vehículos recomendados y
+accesos rápidos para la búsqueda y alquiler de vehículos. El diseño se
+enfoca en facilitar la continuación de una búsqueda o la gestión de un
+alquiler en curso.
+
+<table>
+  <tr>
+    <td align="center">
+      <strong>1. Resumen</strong><br><br>
+      Vista principal que muestra recomendaciones, vehículos disponibles y
+      el estado de las reservas activas.<br><br>
+      <img src="assets/photos/resumenB.png" width="300">
+    </td>
+    <td align="center">
+      <strong>2. Vehículos</strong><br><br>
+      Permite explorar y consultar los vehículos disponibles, facilitando
+      la búsqueda según las necesidades del arrendatario.<br><br>
+      <img src="assets/photos/buscar.png" width="300">
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center">
+      <strong>3. Reservas</strong><br><br>
+      Centraliza las reservas realizadas, permitiendo consultar su estado,
+      detalles y gestionar los alquileres activos.<br><br>
+      <img src="assets/photos/reservas.png" width="300">
+    </td>
+    <td align="center">
+      <strong>4. Perfil</strong><br><br>
+      Permite visualizar y actualizar la información personal y los datos
+      asociados a la cuenta del arrendatario.<br><br>
+      <img src="assets/photos/perfilB.png" width="300">
+    </td>
+  </tr>
+</table>
+
+## 4.6.2. Mobile Applications Wireflow Diagrams
+
+Los wireflows representan las rutas que siguen los usuarios para completar
+las principales tareas dentro de la aplicación mobile. Aunque los flujos
+mantienen la misma lógica funcional, su diseño se adapta a pantallas
+reducidas, navegación táctil y accesos rápidos, buscando que cada proceso
+sea claro, sencillo y fluido.
+
+---
+
+### 1. Segmento 1: Arrendatario
+
+*User Goal:* Como arrendatario, quiero gestionar mi perfil desde mi celular,
+pudiendo editar mi información personal, actualizar mi foto y cargar los
+documentos necesarios para validar mi cuenta.
+
+![Wireflow mobile para la gestión del perfil del arrendatario](assets/chapter04/wire1.png)
+
+- Wireflow
+
+![Wireflow mobile](assets/chapter04/wireflow-renter-dashboard-1.png)
+
+*User Goal:* Como arrendatario, quiero gestionar mis reservas desde el
+celular, pudiendo consultar sus detalles, cancelarlas y dejar una reseña
+cuando finalice el alquiler.
+
+![Wireflow mobile para la gestión de reservas del arrendatario](assets/chapter04/wire2.png)
+
+- Wireflow
+
+![Wireflow mobile](assets/chapter04/wireflow-renter-dashboard-2.png)
+
+*User Goal:* Como arrendatario, quiero buscar vehículos desde mi celular
+utilizando filtros, consultar sus características y completar una reserva
+de manera rápida y sencilla.
+
+![Wireflow mobile para la búsqueda y reserva de un vehículo](assets/chapter04/wire3.png)
+
+- Wireflow
+
+![Wireflow mobile](assets/chapter04/wireflow-renter-reservations.png)
+
+*User Goal:* Como arrendatario, quiero acceder rápidamente desde mi
+dashboard mobile a mis reservas activas para consultar sus detalles o
+cancelarlas cuando sea necesario.
+
+![Wireflow mobile para acceder a las reservas desde el dashboard](assets/chapter04/wire4.png)
+
+*User Goal:* Como arrendatario, quiero explorar vehículos recomendados
+desde mi dashboard mobile y realizar una reserva de forma rápida.
+
+![Wireflow mobile para reservar un vehículo recomendado](assets/chapter04/wire5.png)
+
+### 2. Segmento 2: Arrendador
+
+*User Goal:* Como arrendador, quiero consultar desde mi celular un resumen
+de mi actividad, incluyendo mis vehículos publicados y las solicitudes de
+reserva pendientes.
+
+![Wireflow mobile del dashboard del arrendador](assets/chapter04/wireAA.png)
+
+*User Goal (Crear):* Como arrendador, quiero registrar un nuevo vehículo
+desde mi celular de forma rápida y sencilla para comenzar a alquilarlo.
+
+![Wireflow mobile del dashboard del arrendador1](assets/chapter04/wireB.png)
+
+*User Goal (Editar):* Como arrendador, quiero modificar desde mi celular
+los datos de mis vehículos publicados, como el precio o la descripción,
+para mantenerlos actualizados.
+
+![Wireflow mobile del dashboard del arrendador](assets/chapter04/wireA.png)
+
+*User Goal (Eliminar):* Como arrendador, quiero retirar fácilmente un
+vehículo que ya no se encuentre disponible para alquiler.
+
+![Wireflow mobile de la gestión de vehículos del arrendador](assets/chapter04/wireF.png)
+
+*User Goal:* Como arrendador, quiero gestionar desde mi celular las
+solicitudes de alquiler recibidas, pudiendo aceptarlas o rechazarlas de
+manera sencilla.
+
+![Wireflow mobile de la administración de solicitudes de reserva](assets/chapter04/wireC.png)
+
+*User Goal:* Como arrendador, quiero actualizar desde mi celular mi
+información de contacto y documentos de garantía para mantener mi perfil
+actualizado y brindar confianza a los clientes.
+
+![Wireflow mobile de la edición del perfil del arrendador](assets/chapter04/wireD.png)
+
+### 4.6.3. Mobile Applications Mock-ups
+
+En esta sección se presentan los mock-ups de alta fidelidad correspondientes
+a la aplicación mobile de **RentiCar**, diseñados en Figma respetando la guía
+de estilos, paleta de colores y componentes visuales definidos previamente.
+Las interfaces mantienen las mismas funcionalidades de la aplicación web,
+pero se encuentran adaptadas a pantallas de menor tamaño y a la interacción
+táctil.
+
+Los mock-ups se encuentran agrupados según los principales flujos de
+interacción de los dos segmentos clave: Arrendatarios y Arrendadores, además
+de los módulos transversales de autenticación y gestión de acceso.
+
+---
+
+#### 4.6.3.1. Módulo de Autenticación y Gestión de Acceso (IAM)
+
+Este módulo centraliza las interfaces de registro, inicio de sesión seguro y
+recuperación de credenciales para ambos perfiles de usuario. En la versión
+mobile, los formularios se presentan de manera simplificada para facilitar
+la interacción mediante dispositivos táctiles.
+
+- **Pantalla de Inicio de Sesión (Sign In):**  
+  Permite a los usuarios registrados acceder a su cuenta ingresando su correo
+  y contraseña. La interfaz está optimizada para dispositivos móviles y
+  mantiene las opciones principales de acceso y validación.
+
+  <p align="center">
+    <img src="assets/chapter04/L3.png" alt="Pantalla mobile de inicio de sesión" width="350"/>
+  </p>
+
+- **Pantalla de Registro para Arrendatarios (Tenant Register):**  
+  Formulario adaptado a dispositivos móviles donde los clientes ingresan sus
+  datos personales, correo, teléfono y contraseña para crear su cuenta de
+  arrendatario.
+
+  <p align="center">
+    <img src="assets/chapter04/L2.png" alt="Registro mobile para Arrendatarios" width="350"/>
+  </p>
+
+- **Pantalla de Registro para Arrendadores (Hirer Register):**  
+  Interfaz orientada a propietarios de vehículos que desean publicar sus
+  unidades. El formulario se organiza verticalmente para facilitar el ingreso
+  de datos desde el dispositivo móvil.
+
+  <p align="center">
+    <img src="assets/chapter04/L11.png" alt="Registro mobile para Arrendadores" width="350"/>
+  </p>
+
+- **Pantalla de Recuperación de Contraseña:**  
+  Permite ingresar el correo registrado para iniciar el proceso de
+  recuperación de contraseña mediante una interfaz sencilla y adaptada a
+  pantallas reducidas.
+
+  <p align="center">
+    <img src="assets/chapter04/L4.png" alt="Recuperación mobile de contraseña" width="350"/>
+  </p>
+
+---
+
+#### 4.6.3.2. Módulo de Experiencia del Arrendatario (Resumen, Búsqueda, Reservas y Perfil)
+
+Interfaces diseñadas para que el arrendatario pueda gestionar las principales
+funciones de alquiler desde su dispositivo móvil. El módulo permite consultar
+el estado de sus reservas, explorar vehículos, aplicar filtros, gestionar sus
+alquileres y actualizar la información de su perfil.
+
+- **Resumen y Recomendaciones:**  
+  Vista principal del arrendatario que presenta un resumen de sus reservas
+  activas y recomendaciones de vehículos proporcionadas por el sistema,
+  permitiendo acceder rápidamente a las opciones de alquiler.
+
+  <p align="center">
+    <img src="assets/chapter04/RAI.png" alt="Resumen mobile del Arrendatario" width="350"/>
+  </p>
+
+- **Búsqueda de Vehículos y Filtros:**  
+  Permite explorar los vehículos disponibles y utilizar filtros para
+  personalizar la búsqueda según características como tipo de vehículo,
+  precio u otras preferencias del arrendatario.
+
+  <p align="center">
+    <img src="assets/chapter04/BI.png" alt="Búsqueda y filtros de vehículos mobile" width="350"/>
+  </p>
+
+- **Gestión de Reservas:**  
+  Pantalla destinada a consultar las reservas realizadas y gestionar los
+  alquileres activos. Permite visualizar los detalles de cada reserva y
+  realizar modificaciones o acciones disponibles sobre ellas.
+
+  <p align="center">
+    <img src="assets/chapter04/R11.png" alt="Gestión de reservas mobile" width="350"/>
+    <img src="assets/chapter04/R111.png" alt="Modificación de reserva mobile" width="350"/>
+  </p>
+
+- **Perfil del Arrendatario:**  
+  Permite visualizar y actualizar la información personal asociada a la
+  cuenta, facilitando la gestión del perfil directamente desde el dispositivo
+  móvil.
+
+  <p align="center">
+    <img src="assets/chapter04/PA1.png" alt="Perfil mobile del Arrendatario" width="350"/>
+  </p>
+
+---
+
+#### 4.6.3.3. Módulo de Experiencia del Arrendador (Gestión de Flota y Solicitudes)
+
+Interfaces especializadas para que los propietarios puedan administrar sus
+vehículos, gestionar solicitudes de alquiler y actualizar su información
+personal desde un dispositivo móvil.
+
+- **Primer Acceso y Vista General (Dashboard del Arrendador):**  
+  Dashboard mobile que presenta de manera resumida los ingresos, vehículos
+  activos y reservas en curso, además de proporcionar accesos rápidos a las
+  principales funciones de gestión.
+
+  <p align="center">
+    <img src="assets/chapter04/RB1.png" alt="Dashboard mobile del Arrendador" width="350"/>
+  </p>
+
+- **Gestión y Publicación de Vehículos:**  
+  Permite consultar la flota registrada y administrar las publicaciones de
+  los vehículos. Desde esta sección, el arrendador puede agregar nuevos
+  vehículos, modificar sus datos, actualizar su disponibilidad y gestionar
+  las publicaciones existentes.
+
+  <p align="center">
+    <img src="assets/chapter04/V11.png" alt="Gestión mobile de Vehículos" width="350"/>
+  </p>
+
+  <p align="center">
+    <img src="assets/chapter04/V111.png" alt="Publicación mobile de un Vehículo" width="350"/>
+  </p>
+
+- **Administración de Solicitudes de Reserva:**  
+  Pantalla mobile que centraliza las solicitudes recibidas. El arrendador
+  puede consultar la información principal del arrendatario, revisar las
+  fechas solicitadas y gestionar cada solicitud aceptándola o rechazándola.
+
+  <p align="center">
+    <img src="assets/chapter04/S11.png" alt="Administración mobile de Solicitudes de Reserva" width="350"/>
+  </p>
+
+  <p align="center">
+    <img src="assets/chapter04/S111.png" alt="Detalle mobile de Solicitud de Reserva" width="350"/>
+  </p>
+  
+- **Edición de Perfil de Propietario:**  
+  Formulario optimizado para dispositivos móviles que permite actualizar la
+  información personal, el número telefónico y los documentos asociados a la
+  cuenta del arrendador.
+
+  <p align="center">
+    <img src="assets/chapter04/PB1.png" alt="Edición mobile de Perfil de Arrendador" width="350"/>
+  </p>
+
+---
+### 4.4.4. Mobile Applications User Flow Diagrams
+En esta sección se modelan los **diagramas de flujo de usuario (User Flow Diagrams)** que describen las rutas de interacción, puntos de decisión y transiciones de 
+estado de los usuarios dentro de la aplicación mobile RentiCar. Los flujos mantienen la misma lógica funcional, adaptando la interacción a pantallas reducidas, 
+navegación táctil y accesos rápidos.
+
+#### 4.4.4.1. Flujo de Usuario: Arrendatario (Búsqueda, Reserva, Monitoreo y Calificación)
+
+El siguiente diagrama representa el recorrido del arrendatario dentro de la aplicación mobile, desde su acceso inicial hasta la finalización y
+calificación del servicio de alquiler:
+
+```mermaid
+flowchart TD
+    Start([Inicio: Visitante accede a la plataforma]) --> Explore[Explorar Landing Page o Catálogo]
+    Explore --> AuthCheck{¿Tiene cuenta iniciada?}
+    AuthCheck -- No --> AuthChoice[Iniciar Sesión o Registrarse]
+    AuthChoice --> LoginOk[Autenticación exitosa JWT]
+    AuthCheck -- Sí --> Catalog[Catálogo de Vehículos]
+    LoginOk --> Catalog
+
+    Catalog --> Filters[Aplicar Filtros: Marca, Transmisión, Precio]
+    Filters --> SelectCar[Seleccionar tarjeta de Vehículo]
+    SelectCar --> CarDetail[Visualizar Ficha Detallada del Auto]
+    
+    CarDetail --> BookDecision{¿Desea reservar este auto?}
+    BookDecision -- No --> Catalog
+    BookDecision -- Sí --> DateSelect[Seleccionar Fechas de Inicio y Fin]
+    
+    DateSelect --> PriceCalc[Cálculo automático de días y tarifa total]
+    PriceCalc --> SubmitBooking[Confirmar y Enviar Solicitud de Reserva]
+    SubmitBooking --> StatusPending[Estado: PENDIENTE]
+    
+    StatusPending --> WaitDecision{Respuesta del Arrendador}
+    WaitDecision -- Rechazada --> NotifyRejected[Notificación de Rechazo y liberación de fechas]
+    NotifyRejected --> Catalog
+    WaitDecision -- Aprobada --> StatusConfirmed[Estado: CONFIRMADA]
+    
+    StatusConfirmed --> Pickup[Fecha de Inicio: Recojo del Vehículo]
+    Pickup --> ActiveRent[Estado: EN CURSO]
+    ActiveRent --> IoTMap[Monitoreo GPS en tiempo real - Leaflet]
+    
+    IoTMap --> ReturnCar[Devolución del Vehículo]
+    ReturnCar --> CompletedRent[Estado: FINALIZADA]
+    CompletedRent --> ReviewModal[Calificar con Estrellas 1 a 5 y escribir Reseña]
+    ReviewModal --> End([Fin del Flujo del Arrendatario])
+```
+
+**Descripción del flujo del Arrendatario:**
+1. **Descubrimiento y Navegación:** El cliente ingresa y navega por el catálogo público. Para concretar una reserva, el sistema valida su sesión activa o le solicita autenticarse con JWT.
+2. **Filtrado y Selección:** El usuario puede refinar los resultados por marca, caja de cambios y tarifa diaria. Al seleccionar un vehículo, visualiza especificaciones completas e imágenes.
+3. **Reserva y Presupuesto:** Al elegir el rango de fechas en el calendario interactivo, el sistema calcula de forma reactiva el importe total. Tras confirmar, la solicitud se envía al propietario con estado `PENDIENTE`.
+4. **Seguimiento y Uso IoT:** Tras la aprobación del dueño (`CONFIRMADA`), el alquiler pasa a `EN CURSO` en la fecha pactada. El cliente tiene acceso al mapa interactivo de telemetría IoT.
+5. **Cierre y Reputación:** Finalizado el alquiler (`FINALIZADA`), se activa el diálogo para emitir su valoración y comentario, enriqueciendo la reputación pública del vehículo.
+
+---
+
+#### 4.4.4.2. Flujo de Usuario: Arrendador (Publicación de Flota, Aprobación y Supervisión)
+
+El siguiente diagrama representa el recorrido del arrendador dentro de la aplicación mobile para publicar vehículos, gestionar solicitudes de reserva y supervisar sus unidades:
+
+```mermaid
+flowchart TD
+    StartLessor([Inicio: Propietario accede a la plataforma]) --> AuthLessor[Iniciar Sesión como Arrendador]
+    AuthLessor --> LessorDash[Dashboard Principal del Arrendador]
+    
+    LessorDash --> ActionChoice{¿Qué acción desea realizar?}
+    
+    ActionChoice -- Publicar Auto --> CarForm[Completar Formulario de Vehículo: Marca, Modelo, Año, Tarifa]
+    CarForm --> PhotoUpload[Subir Fotografías del Auto]
+    PhotoUpload --> PublishCar[Publicar Vehículo en Catálogo]
+    PublishCar --> LessorDash
+    
+    ActionChoice -- Gestionar Flota --> MyCars[Ver 'Mis Vehículos']
+    MyCars --> EditCar[Editar Tarifa / Modificar Disponibilidad / Dar de Baja]
+    EditCar --> LessorDash
+    
+    ActionChoice -- Revisar Solicitudes --> RequestList[Bandeja de Solicitudes de Reserva]
+    RequestList --> EvalRequest[Evaluar Perfil del Arrendatario y Fechas Solicitadas]
+    EvalRequest --> Decision{¿Aceptar solicitud?}
+    
+    Decision -- No --> RejectBooking[Rechazar Reserva: Estado RECHAZADA]
+    RejectBooking --> LessorDash
+    
+    Decision -- Sí --> AcceptBooking[Aceptar Reserva: Estado CONFIRMADA]
+    AcceptBooking --> BlockDates[Bloqueo automático de fechas en calendario]
+    BlockDates --> TrackIoT[Supervisar Telemetría IoT: Odómetro y Velocidad]
+    TrackIoT --> CarReturned[Recepción del Vehículo al finalizar plazo]
+    CarReturned --> RateRenter[Calificar Cuidado y Puntualidad del Arrendatario]
+    RateRenter --> EndLessor([Fin del Flujo del Arrendador])
+```
+
+**Descripción del flujo del Arrendador:**
+1. **Autenticación y Panel de Control:** El arrendador accede a su dashboard donde monitorea el rendimiento de sus publicaciones y el resumen de ingresos.
+2. **Gestión de Publicaciones:** Puede registrar nuevos vehículos suministrando datos técnicos, tarifa por jornada y fotos. Las publicaciones pueden editarse o pausarse en cualquier momento (siempre que no tengan una reserva en curso).
+3. **Bandeja de Solicitudes:** El propietario recibe notificaciones de solicitudes de reserva. Puede inspeccionar las fechas requeridas y el perfil verificado del arrendatario para tomar una decisión informada.
+4. **Supervisión de Alquiler:** Una vez confirmada la reserva y entregada la unidad, el arrendador dispone de telemetría IoT para supervisar odómetro y velocidad.
+5. **Cierre de Ciclo:** Tras recibir el auto de vuelta, el arrendador evalúa al cliente, fortaleciendo el ecosistema de confianza de RentiCar.
+
+---
 
 ## 4.6. Web Applications UX/UI Design
 
