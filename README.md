@@ -3725,6 +3725,24 @@ En este apartado se documenta el video promocional y técnico elaborado por **Co
 
 ---
 
+# Capítulo VII: DevOps Practices
+
+## 7.1. Continuous Integration
+
+La Integración Continua (CI) es una práctica que consiste en unir automáticamente los cambios de código a una rama común de forma frecuente. Busca encontrar y resolver problemas de integración lo antes posible, para que el proyecto se mantenga estable y con buena calidad.
+
+### 7.1.1. Tools and Practices.
+
+Dentro de nuestro proceso, la Integración Continua se apoya en dos metodologías clave, BDD y TDD, que nos ayudan a asegurar que el código no solo cumpla con lo que el negocio necesita, sino también con los estándares técnicos exigidos.
+
+| Herramienta | Tipo | Descripción | Propósito en el Proceso |
+|---|---|---|---|
+| **JUnit 5** | Pruebas Unitarias (TDD) | *Framework* estándar de Java para escribir y ejecutar pruebas que validan el comportamiento de pequeñas unidades de código (métodos, clases). | Asegurar la **calidad interna y funcional** de los componentes del *backend* Java. |
+| **Mockito** | Simulaciones (TDD) | Librería de *mocking* que permite crear *mocks* de dependencias externas (bases de datos, servicios, etc.). | Facilitar las pruebas unitarias aislando la lógica de negocio para ejecutarlas de forma rápida y confiable. |
+| **Karate** | Pruebas de Integración y E2E (BDD) | *Framework* que combina la sintaxis BDD (Gherkin) con pruebas API/Web. Se usa en archivos .feature para validar la integración de *endpoints* y flujos de negocio. | Validar el comportamiento del **API REST** contra casos de uso definidos en lenguaje Gherkin. |
+| **Gherkin** | Metodología BDD | Lenguaje estructurado para describir el comportamiento del *software* en términos de negocio (utilizado a través de Karate). | Garantizar que el desarrollo esté **alineado con las necesidades del negocio** al escribir los escenarios de aceptación. |
+| **IntelliJ IDEA** | IDEs principales | Entornos de Desarrollo Integrado que, junto a *plugins* de BDD y Java, facilitan la escritura, depuración y ejecución local de las pruebas. | Aumentar la **productividad del desarrollador** y la ejecución inmediata de pruebas TDD/BDD. |
+
 # Conclusiones
 
 El desarrollo del proyecto Renticar permitió aplicar de manera integral los conceptos de ingeniería de software y las metodologías orientadas al diseño centrado en el usuario, integrando prácticas modernas como Event Storming, Impact Mapping y User Personas. A través del análisis de entrevistas se identificaron claramente las necesidades de los dos segmentos objetivos, arrendadores y arrendatarios, evidenciando que ambos valoran la seguridad, la transparencia y la confianza como elementos determinantes en la experiencia de alquiler de vehículos.
