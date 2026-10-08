@@ -1816,36 +1816,31 @@ componentes interactivos —como botones— y su relación directa con la experi
   facilita el mantenimiento y la escalabilidad del código.
 
 ### 4.1.3. Mobile Style Guidelines
-Para la versión móvil de la plataforma, los lineamientos de diseño se adaptan a las características de interacción propias de los dispositivos móviles. 
-Se mantiene la identidad visual definida para el producto, conservando la paleta de colores, tipografía, iconografía y componentes principales, pero 
-ajustando la distribución y dimensiones de los elementos para facilitar su visualización e interacción mediante pantallas táctiles.
+Para las versiones móviles de Renticar, los lineamientos de diseño mantienen una identidad visual entre iOS y Android, conservando la paleta cromática
+principal de las cuales solo se integro un ligero cambios(como el #2E4050 y #52B6F2). Asismismo, se sigue manteniendo la misma tipografía, la iconografía y los 
+componentes principales de la plataforma. La interfaz se adapta a las características de cada sistema operativo mediante ajustes en la distribución, las 
+dimensiones y los elementos de navegación, garantizando una experiencia consistente, intuitiva y accesible en dispositivos móviles.Todo ello con el objetivo 
+de facilitar la navegación y el uso de las funcionalidades tanto para arrendadores como para arrendatarios.
 
 #### 4.1.3.1. iOS Mobile Style Guidelines
 - **Layout y Retícula Base:**
   La arquitectura visual sigue un flujo vertical continuo sobre una retícula modular de 8pt, complementada con márgenes de seguridad laterales de 16pt
   a 20pt. Soporta de forma nativa los gestos del sistema, permitiendo al usuario deslizar desde el borde izquierdo hacia la derecha .
 - **Navegación e Interfaz Dinámica por Rol:**
-  * **Navigation Bar y Large Titles:** Encabezado superior con títulos principales en tipografía Poppins ExtraBold alineados a la izquierda. El título
-    cambia dinámicamente según la sección seleccionada en la Tab Bar ("Resumen", "Publicados", "Reservas", "Perfil"). 
+  * **Navigation Bar y Large Titles:** El encabezado superior presenta títulos alineados a la izquierda, utilizando la tipografía Poppins ExtraBold para
+     mantener la identidad visual de Renticar. El título cambia dinámicamente según la sección seleccionada en la barra de navegación inferior: Resumen,
+     Publicados o Mis vehículos, Reservas o Solicitudes, y Perfil, de acuerdo con el tipo de usuario.
   * **Adaptabilidad de las 4 Pestañas Principales:**
      **Resumen:** Muestra un panel personalizado según el perfil activo. Para el Arrendador, consolida métricas de ingresos y estado del negocio;
        para el Arrendatario, despliega accesos rápidos a la búsqueda y sugerencias sobre otros vehiculos.
-  * Tab Bar Inferior : Los cuatro accesos incorporan simbología nativa, resaltando la pestaña activa en azul primario (#003F70) .
+  * Tab Bar Inferior : a barra de navegación permanece fija en la parte inferior de la pantalla y contiene cuatro accesos principales. La pestaña seleccionada
+     se distingue mediante el color azul (#52B6F2) aplicado al icono y, cuando corresponda, a sus elementos de texto.
   * **Acción Principal:** La acción prioritaria de publicación (para Arrendador) o reserva (para Arrendatario) se integra como un botón principal fijo en la zona
     inferior sobre el área segura, con bordes redondeados de 12pt y altura de 50pt.
 - **Interacción y Accesibilidad:**
   * **Respuesta de Opacidad y Háptica:** Disminución leve en la opacidad del componente al ser presionado, combinada con vibración de respuesta táctil
      mediante el motor háptico al confirmar acciones o alternar vistas.
   * **Áreas de Toque:** Superficie de contacto interactiva mínima de 44×44 pt para todos los componentes de la interfaz.
-    
-    <div
-       style="display: flex; gap: 64px; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
-  <img src="assets/photos/Arrendador iOs.png"  alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
-  <img src="assets/photos/Arrendatario iOs.png" alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
-
-  Link del Figma: https://www.figma.com/design/ZYZ81d4uAuktz4Xr7l7MVJ/Dise%C3%B1o-Movil-Pantalla?node-id=2-4606&t=O9RoGjXSUGKxsjO3-1
-</div>
-
 
 #### 4.1.3.2. Android Mobile Style Guidelines
 - **Layout y Retícula Base:** 
@@ -1865,14 +1860,7 @@ ajustando la distribución y dimensiones de los elementos para facilitar su visu
   * **Áreas de Toque:** Cumplimiento estricto de una superficie de contacto interactiva mínima de 48×48 dp para todos los componentes navegables, garantizando la accesibilidad táctil en
     el dispositivo.
 
-    <div
-       style="display: flex; gap: 64px; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
-  <img src="assets/photos/Arrendador Androi.png"  alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
-  <img src="assets/photos/Arrendatario Androi.png" alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
-
-  Link del Figma: https://www.figma.com/design/ZYZ81d4uAuktz4Xr7l7MVJ/Dise%C3%B1o-Movil-Pantalla?node-id=2-4606&t=O9RoGjXSUGKxsjO3-1
-</div>
-
+  
 ## 4.2. Information Architecture
 
 La arquitectura de información define cómo se organiza, etiqueta, busca y navega en la 
