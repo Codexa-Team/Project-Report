@@ -2403,6 +2403,45 @@ flowchart TD
 5. **Cierre de Ciclo:** Tras recibir el auto de vuelta, el arrendador evalúa al cliente, fortaleciendo el ecosistema de confianza de RentiCar.
 
 ---
+## 4.5. Mobile Applications Prototyping
+En esta sección se presenta el prototipo interactivo de alta fidelidad de la aplicación móvil Renticar, desarrollado para los sistemas operativos iOS y Android. La propuesta busca ofrecer una experiencia de 
+usuario intuitiva, accesible y consistente, manteniendo una identidad visual común y adaptando determinados elementos de la interfaz a las convenciones de cada plataforma.
+El diseño se fundamenta en los principios del diseño centrado en el usuario (UCD), considerando las necesidades de los arrendatarios, quienes buscan y reservan vehículos, y de los arrendadores, responsables 
+de publicar y administrar sus unidades. Asimismo, se contemplan las características de interacción de cada sistema operativo, procurando mantener una estructura de navegación coherente, componentes reutilizables 
+y dimensiones táctiles adecuadas para facilitar el uso de la aplicación.
+
+* Principales aspectos funcionales y de diseño del prototipo* 
+**avegación adaptada a cada plataforma:** La aplicación incorpora cuatro secciones principales: Resumen, Vehículos o Mis vehículos, Reservas o Solicitudes y Perfil. La denominación y el contenido de estas
+  secciones varían según el rol del usuario.
+**Contenido personalizado según el rol del usuario:** La interfaz adapta la información y las acciones disponibles a las necesidades de cada perfil. En el caso de los arrendatarios, la pantalla de resumen prioriza
+  las reservas activas, las recomendaciones de vehículos y los accesos a la búsqueda. Para los arrendadores, presenta información sobre los vehículos publicados, la actividad del negocio y las opciones para
+  administrar sus unidades.
+**Consistencia visual y reutilización de componentes:** Ambas versiones comparten criterios de diseño para la tipografía, la iconografía, las tarjetas, los campos de formulario, los botones y la distribución de los
+  contenidos.
+**Priorización de las acciones principales:** Las acciones destacadas responden a las tareas más importantes de cada perfil. Para los arrendadores, se prioriza la publicación de vehículos mediante un botón visible que
+  incorpora el icono «+» y el texto «Publicar vehículo». Para los arrendatarios, se facilita el acceso a la consulta y reserva de vehículos mediante botones integrados en las tarjetas y en las pantallas correspondientes.
+   La ubicación de estos elementos considera la navegación y las áreas seguras de cada plataforma.
+**Interacción y accesibilidad táctil:** El prototipo contempla áreas táctiles mínimas de 44 × 44 pt para iOS y 48 × 48 dp para Android, con el propósito de facilitar la selección de los elementos interactivos.
+  
+### 4.5.1. Android Mobile Applications Prototyping
+El prototipo para iOS presenta una interfaz limpia y minimalista, orientada a facilitar la navegación y el acceso a las funcionalidades principales de Renticar. La estructura incorpora una barra de navegación inferior 
+fija con cuatro pestañas, cuyo estado activo se distingue mediante el color del icono (#52B6F2) y sus elementos asociados.
+Respecto a la interacción, se consideran áreas táctiles mínimas de 44 × 44 pt, cambios de opacidad como respuesta a las pulsaciones y retroalimentación háptica cuando resulte apropiado. Estas decisiones buscan 
+proporcionar una experiencia de uso clara y familiar para los usuarios de dispositivos Apple, sin comprometer la consistencia visual de la aplicación.
+
+🎥 **Demostración en Video del Prototipo Web:**  
+[Ver demostración en video del prototipo interactivo en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202314354_upc_edu_pe/ETjEvnFfTMVGg504DkKQo9cBVH1Coad3hieTwbFWm9x8gQ?e=t2sINN&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+
+### 4.5.2. iOS Mobile Applications Prototyping
+El prototipo para Android conserva la estructura funcional, la paleta cromática y los componentes principales de Renticar, adaptando su presentación a los patrones de interacción de esta plataforma. La barra de
+navegación inferior dispone de cuatro destinos principales sobre un fondo blanco y una altura aproximada de 80 dp. Para comunicar el estado seleccionado, se incorpora una cápsula de color azul claro (#52B6F2) detrás 
+del icono activo, mientras que el icono utiliza el azul oscuro (#003F70), reforzando el contraste y la continuidad con la identidad de la marca.
+La distribución de los elementos sigue una retícula de 8 dp, con márgenes laterales de 16 dp y espaciados internos de 8, 16 y 24 dp. Esta organización favorece la alineación de los componentes y mantiene una distribución visual ordenada.
+
+🎥 **Demostración en Video del Prototipo Web:**  
+[Ver demostración en video del prototipo interactivo en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202314354_upc_edu_pe/ETjEvnFfTMVGg504DkKQo9cBVH1Coad3hieTwbFWm9x8gQ?e=t2sINN&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
 
 ## 4.6. Web Applications UX/UI Design
 
