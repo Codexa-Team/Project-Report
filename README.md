@@ -1943,8 +1943,8 @@ o arrendatarios, priorizando accesos rápidos, navegación táctil y una present
 Los wireframes de la versión móvil de RentiCar se plantean como una guía estructural para definir la distribución de contenido, componentes y controles dentro de la interfaz. Se prioriza una navegación sencilla e intuitiva, considerando las 
 dimensiones de la pantalla y la interacción táctil para facilitar acciones como explorar vehículos, gestionar reservas y administrar publicaciones.
 
-**Enlace al proyecto en Figma:**https://www.figma.com/design/m6L2Nz1DxF5Nli3LwRZjiL/Mobile-Designed?node-id=2-4606&t=MqOCDWfq9lZUR8NZ-1
-
+**Enlace al proyecto en Figma:**[Wireframes](https://www.figma.com/design/m6L2Nz1DxF5Nli3LwRZjiL/Mobile-Designed?node-id=2-4606&t=MqOCDWfq9lZUR8NZ-1
+)
 
 ### 1. Iniciar Sesión / Registrarse
 
@@ -2066,8 +2066,7 @@ mantienen la misma lógica funcional, su diseño se adapta a pantallas
 reducidas, navegación táctil y accesos rápidos, buscando que cada proceso
 sea claro, sencillo y fluido.
 
-**Enlace al proyecto en Figma:**  
-[Wireflow](https://www.figma.com/design/m6L2Nz1DxF5Nli3LwRZjiL/Mobile-Designed?node-id=36-2&t=M2KzPpcOyy75QRki-1)
+**Enlace al proyecto en Figma:**[Wireflow](https://www.figma.com/design/m6L2Nz1DxF5Nli3LwRZjiL/Mobile-Designed?node-id=36-2&t=M2KzPpcOyy75QRki-1)
 
 ### 1. Segmento 1: Arrendatario
 
@@ -2161,8 +2160,7 @@ Los mock-ups se encuentran agrupados según los principales flujos de
 interacción de los dos segmentos clave: Arrendatarios y Arrendadores, además
 de los módulos transversales de autenticación y gestión de acceso.
 
-**Enlace al proyecto en Figma:**  
-[MockUps](https://www.figma.com/design/lhYyfSJ0He31Se5vDVpvvZ/Dise%C3%B1o-Mobil---Mock_Ups-?node-id=2-4606&t=gNlp1qJ0WckeOyAC-1)
+**Enlace al proyecto en Figma:**[MockUps](https://www.figma.com/design/lhYyfSJ0He31Se5vDVpvvZ/Dise%C3%B1o-Mobil---Mock_Ups-?node-id=2-4606&t=gNlp1qJ0WckeOyAC-1)
 
 
 #### 4.6.3.1. Módulo de Autenticación y Gestión de Acceso (IAM)
