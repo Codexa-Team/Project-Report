@@ -1863,21 +1863,25 @@ componentes interactivos —como botones— y su relación directa con la experi
   facilita el mantenimiento y la escalabilidad del código.
 
 ### 4.1.3. Mobile Style Guidelines
-Para la versión móvil de la plataforma, los lineamientos de diseño se adaptan a las características de interacción propias de los dispositivos móviles. 
-Se mantiene la identidad visual definida para el producto, conservando la paleta de colores, tipografía, iconografía y componentes principales, pero 
-ajustando la distribución y dimensiones de los elementos para facilitar su visualización e interacción mediante pantallas táctiles.
+Para las versiones móviles de Renticar, los lineamientos de diseño mantienen una identidad visual entre iOS y Android, conservando la paleta cromática
+principal de las cuales solo se integro un ligero cambios(como el #2E4050 y #52B6F2). Asismismo, se sigue manteniendo la misma tipografía, la iconografía y los 
+componentes principales de la plataforma. La interfaz se adapta a las características de cada sistema operativo mediante ajustes en la distribución, las 
+dimensiones y los elementos de navegación, garantizando una experiencia consistente, intuitiva y accesible en dispositivos móviles.Todo ello con el objetivo 
+de facilitar la navegación y el uso de las funcionalidades tanto para arrendadores como para arrendatarios.
 
 #### 4.1.3.1. iOS Mobile Style Guidelines
 - **Layout y Retícula Base:**
   La arquitectura visual sigue un flujo vertical continuo sobre una retícula modular de 8pt, complementada con márgenes de seguridad laterales de 16pt
   a 20pt. Soporta de forma nativa los gestos del sistema, permitiendo al usuario deslizar desde el borde izquierdo hacia la derecha .
 - **Navegación e Interfaz Dinámica por Rol:**
-  * **Navigation Bar y Large Titles:** Encabezado superior con títulos principales en tipografía Poppins ExtraBold alineados a la izquierda. El título
-    cambia dinámicamente según la sección seleccionada en la Tab Bar ("Resumen", "Publicados", "Reservas", "Perfil"). 
+  * **Navigation Bar y Large Titles:** El encabezado superior presenta títulos alineados a la izquierda, utilizando la tipografía Poppins ExtraBold para
+     mantener la identidad visual de Renticar. El título cambia dinámicamente según la sección seleccionada en la barra de navegación inferior: Resumen,
+     Publicados o Mis vehículos, Reservas o Solicitudes, y Perfil, de acuerdo con el tipo de usuario.
   * **Adaptabilidad de las 4 Pestañas Principales:**
      **Resumen:** Muestra un panel personalizado según el perfil activo. Para el Arrendador, consolida métricas de ingresos y estado del negocio;
        para el Arrendatario, despliega accesos rápidos a la búsqueda y sugerencias sobre otros vehiculos.
-  * Tab Bar Inferior : Los cuatro accesos incorporan simbología nativa, resaltando la pestaña activa en azul primario (#003F70) .
+  * Tab Bar Inferior : a barra de navegación permanece fija en la parte inferior de la pantalla y contiene cuatro accesos principales. La pestaña seleccionada
+     se distingue mediante el color azul (#52B6F2) aplicado al icono y, cuando corresponda, a sus elementos de texto.
   * **Acción Principal:** La acción prioritaria de publicación (para Arrendador) o reserva (para Arrendatario) se integra como un botón principal fijo en la zona
     inferior sobre el área segura, con bordes redondeados de 12pt y altura de 50pt.
 - **Interacción y Accesibilidad:**
@@ -1887,8 +1891,8 @@ ajustando la distribución y dimensiones de los elementos para facilitar su visu
     
     <div
        style="display: flex; gap: 64px; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
-  <img src="assets/photos/Arrendador iOs.png"  alt="Diseño Móvil iOS - Arrendador" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
-  <img src="assets/photos/Arrendatario iOs.png" alt="Diseño Móvil iOS - Arrendatario" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
+  <img src="assets/photos/Arrendador iOs.png"  alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
+  <img src="assets/photos/Arrendatario iOs.png" alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
 
   Link del Figma: https://www.figma.com/design/ZYZ81d4uAuktz4Xr7l7MVJ/Dise%C3%B1o-Movil-Pantalla?node-id=2-4606&t=O9RoGjXSUGKxsjO3-1
 </div>
@@ -1914,8 +1918,8 @@ ajustando la distribución y dimensiones de los elementos para facilitar su visu
 
     <div
        style="display: flex; gap: 64px; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
-  <img src="assets/photos/Arrendador Androi.png"  alt="Diseño Móvil Android - Arrendador" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
-  <img src="assets/photos/Arrendatario Androi.png" alt="Diseño Móvil Android - Arrendatario" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
+  <img src="assets/photos/Arrendador Androi.png"  alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
+  <img src="assets/photos/Arrendatario Androi.png" alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
 
   Link del Figma: https://www.figma.com/design/ZYZ81d4uAuktz4Xr7l7MVJ/Dise%C3%B1o-Movil-Pantalla?node-id=2-4606&t=O9RoGjXSUGKxsjO3-1
 </div>
@@ -2002,8 +2006,8 @@ o arrendatarios, priorizando accesos rápidos, navegación táctil y una present
 Los wireframes de la versión móvil de RentiCar se plantean como una guía estructural para definir la distribución de contenido, componentes y controles dentro de la interfaz. Se prioriza una navegación sencilla e intuitiva, considerando las 
 dimensiones de la pantalla y la interacción táctil para facilitar acciones como explorar vehículos, gestionar reservas y administrar publicaciones.
 
-**Enlace al proyecto en Figma:**https://www.figma.com/design/m6L2Nz1DxF5Nli3LwRZjiL/Mobile-Designed?node-id=2-4606&t=MqOCDWfq9lZUR8NZ-1
-
+**Enlace al proyecto en Figma:**[Wireframes](https://www.figma.com/design/m6L2Nz1DxF5Nli3LwRZjiL/Mobile-Designed?node-id=2-4606&t=MqOCDWfq9lZUR8NZ-1
+)
 
 ### 1. Iniciar Sesión / Registrarse
 
@@ -2016,21 +2020,21 @@ el proceso de registro.
   <tr>
     <td align="center">
       <strong>1. Inicio de Sesión</strong><br><br>
-      <img src="assets/photos/login.png" width="300">
+      <img src="assets/photos/LOG.png" width="300">
     </td>
     <td align="center">
       <strong>2. Registro de Arrendatario</strong><br><br>
-      <img src="assets/photos/registerT.png" width="300">
+      <img src="assets/photos/RET.png" width="300">
     </td>
   </tr>
   <tr>
     <td align="center">
       <strong>3. Registro de Arrendador</strong><br><br>
-      <img src="assets/photos/registerH.png" width="300">
+      <img src="assets/photos/REH.png" width="300">
     </td>
     <td align="center">
       <strong>4. Recuperación de Contraseña</strong><br><br>
-      <img src="assets/photos/password.png" width="300">
+      <img src="assets/photos/PASS.png" width="300">
     </td>
   </tr>
 </table>
@@ -2125,7 +2129,7 @@ mantienen la misma lógica funcional, su diseño se adapta a pantallas
 reducidas, navegación táctil y accesos rápidos, buscando que cada proceso
 sea claro, sencillo y fluido.
 
----
+**Enlace al proyecto en Figma:**[Wireflow](https://www.figma.com/design/m6L2Nz1DxF5Nli3LwRZjiL/Mobile-Designed?node-id=36-2&t=M2KzPpcOyy75QRki-1)
 
 ### 1. Segmento 1: Arrendatario
 
@@ -2219,7 +2223,8 @@ Los mock-ups se encuentran agrupados según los principales flujos de
 interacción de los dos segmentos clave: Arrendatarios y Arrendadores, además
 de los módulos transversales de autenticación y gestión de acceso.
 
----
+**Enlace al proyecto en Figma:**[MockUps](https://www.figma.com/design/lhYyfSJ0He31Se5vDVpvvZ/Dise%C3%B1o-Mobil---Mock_Ups-?node-id=2-4606&t=gNlp1qJ0WckeOyAC-1)
+
 
 #### 4.6.3.1. Módulo de Autenticación y Gestión de Acceso (IAM)
 
@@ -2462,6 +2467,45 @@ flowchart TD
 5. **Cierre de Ciclo:** Tras recibir el auto de vuelta, el arrendador evalúa al cliente, fortaleciendo el ecosistema de confianza de RentiCar.
 
 ---
+## 4.5. Mobile Applications Prototyping
+En esta sección se presenta el prototipo interactivo de alta fidelidad de la aplicación móvil Renticar, desarrollado para los sistemas operativos iOS y Android. La propuesta busca ofrecer una experiencia de 
+usuario intuitiva, accesible y consistente, manteniendo una identidad visual común y adaptando determinados elementos de la interfaz a las convenciones de cada plataforma.
+El diseño se fundamenta en los principios del diseño centrado en el usuario (UCD), considerando las necesidades de los arrendatarios, quienes buscan y reservan vehículos, y de los arrendadores, responsables 
+de publicar y administrar sus unidades. Asimismo, se contemplan las características de interacción de cada sistema operativo, procurando mantener una estructura de navegación coherente, componentes reutilizables 
+y dimensiones táctiles adecuadas para facilitar el uso de la aplicación.
+
+
+*Principales aspectos funcionales y de diseño del prototipo*
+
+- **Navegación adaptada a cada plataforma:** La aplicación incorpora cuatro secciones principales: Resumen, Vehículos o Mis vehículos, Reservas o Solicitudes y Perfil. La denominación y el contenido de estas secciones varían según el rol del usuario.
+
+- **Contenido personalizado según el rol del usuario:** La interfaz adapta la información y las acciones disponibles a las necesidades de cada perfil. En el caso de los arrendatarios, la pantalla de resumen prioriza las reservas activas, las recomendaciones de vehículos y los accesos a la búsqueda. Para los arrendadores, presenta información sobre los vehículos publicados, la actividad del negocio y las opciones para administrar sus unidades.
+
+- **Consistencia visual y reutilización de componentes:** Ambas versiones comparten criterios de diseño para la tipografía, la iconografía, las tarjetas, los campos de formulario, los botones y la distribución de los contenidos.
+
+- **Priorización de las acciones principales:** Las acciones destacadas responden a las tareas más importantes de cada perfil. Para los arrendadores, se prioriza la publicación de vehículos mediante un botón visible que incorpora el icono «+» y el texto «Publicar vehículo». Para los arrendatarios, se facilita el acceso a la consulta y reserva de vehículos mediante botones integrados en las tarjetas y en las pantallas correspondientes. La ubicación de estos elementos considera la navegación y las áreas seguras de cada plataforma.
+
+- **Interacción y accesibilidad táctil:** El prototipo contempla áreas táctiles mínimas de 44 × 44 pt para iOS y 48 × 48 dp para Android, con el propósito de facilitar la selección de los elementos interactivos.
+  
+### 4.5.1. Android Mobile Applications Prototyping
+El prototipo para iOS presenta una interfaz limpia y minimalista, orientada a facilitar la navegación y el acceso a las funcionalidades principales de Renticar. La estructura incorpora una barra de navegación inferior 
+fija con cuatro pestañas, cuyo estado activo se distingue mediante el color del icono (#52B6F2) y sus elementos asociados.
+Respecto a la interacción, se consideran áreas táctiles mínimas de 44 × 44 pt, cambios de opacidad como respuesta a las pulsaciones y retroalimentación háptica cuando resulte apropiado. Estas decisiones buscan 
+proporcionar una experiencia de uso clara y familiar para los usuarios de dispositivos Apple, sin comprometer la consistencia visual de la aplicación.
+
+🎥 **Demostración en Video del Prototipo Web:**  
+[Ver demostración en video del prototipo interactivo Androi ](https://1drv.ms/v/c/de25b6e902a88828/IQDKQxIbBfEBQ5Jya1Ih05OmAdHX48bCQRz-Ydb59GKWU7I)
+
+
+### 4.5.2. iOS Mobile Applications Prototyping
+El prototipo para Android conserva la estructura funcional, la paleta cromática y los componentes principales de Renticar, adaptando su presentación a los patrones de interacción de esta plataforma. La barra de
+navegación inferior dispone de cuatro destinos principales sobre un fondo blanco y una altura aproximada de 80 dp. Para comunicar el estado seleccionado, se incorpora una cápsula de color azul claro (#52B6F2) detrás 
+del icono activo, mientras que el icono utiliza el azul oscuro (#003F70), reforzando el contraste y la continuidad con la identidad de la marca.
+La distribución de los elementos sigue una retícula de 8 dp, con márgenes laterales de 16 dp y espaciados internos de 8, 16 y 24 dp. Esta organización favorece la alineación de los componentes y mantiene una distribución visual ordenada.
+
+🎥 **Demostración en Video del Prototipo Web:**  
+[Ver demostración en video del prototipo interactivo iOs ](https://1drv.ms/v/c/de25b6e902a88828/IQAnt8j2ygYoSq1T_nEB0x6XAbTFaS8HeRS5xrOHCq49TRI?e=jWkD0M)
+
 
 ## 4.6. Web Applications UX/UI Design
 
