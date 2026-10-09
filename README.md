@@ -2412,7 +2412,7 @@ de publicar y administrar sus unidades. Asimismo, se contemplan las característ
 y dimensiones táctiles adecuadas para facilitar el uso de la aplicación.
 
 
-Principales aspectos funcionales y de diseño del prototipo*
+*Principales aspectos funcionales y de diseño del prototipo*
 
 - **Navegación adaptada a cada plataforma:** La aplicación incorpora cuatro secciones principales: Resumen, Vehículos o Mis vehículos, Reservas o Solicitudes y Perfil. La denominación y el contenido de estas secciones varían según el rol del usuario.
 
