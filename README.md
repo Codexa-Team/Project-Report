@@ -192,7 +192,7 @@ El curso contribuye al cumplimiento del Student Outcome ABET:
 **ABET – EAC - Student Outcome 4**
 
 **Criterio:**  La capacidad de reconocer responsabilidades éticas y
-profesionales en situaciones de ingeniería y hacer juicios informados, que debenc considerar el impacto de las soluciones de ingeniería en contextos globales, económicos, ambientales y sociales.
+profesionales en situaciones de ingeniería y hacer juicios informados, que deben considerar el impacto de las soluciones de ingeniería en contextos globales, económicos, ambientales y sociales.
 
 <div align="center">
 
@@ -213,12 +213,14 @@ software.</td>
             Estefano Solis:
             <br>
             AV1: Documenté en el informe la gestión y seguridad de cuentas en RentiCar (diferenciación de roles entre arrendador y arrendatario, autenticación y contraseñas protegidas), redacté el Acuerdo de Servicio SaaS sobre la privacidad y uso responsable de la información de los usuarios, y aseguré el citado correcto de las herramientas, imágenes y recursos externos documentados.
+            <br>
+            TB1: Desarrollé e implementé pruebas unitarias (unit tests) para los servicios y componentes clave del backend, garantizando la fiabilidad de la lógica de negocio y estándares de calidad de software. Asimismo, apoyé en la verificación del pipeline de Integración Continua (CI) para asegurar ejecuciones automáticas correctas, y colaboré en la estructuración, redacción y consolidación técnica del informe del proyecto.
             </br>
             <br></br>
             Bruce Via:
             <br>
             AV1: Analice e identifique los usuarios objetivos para proporcionarles una solucion basada en la ingenieria de software, redacte y registre entrevistas con ellos para identificar sus necesidades.</br>
-            TB1: Realice en colaboracion con mis compañeros las diferentes pruebas unitarias y de integraciion, ademas de la declaracion de pruebas del tipo .feature y organice y designe las actividades de mi compañeros
+            TB1: Realice en colaboracion con mis compañeros las diferentes pruebas unitarias y de integracion, ademas de la declaracion de pruebas del tipo .feature y organice y designe las actividades de mi compañeros
             </br>
              <br></br>
             Sheyla Rojas:
@@ -234,14 +236,16 @@ software.</td>
             TB1: Identificó, definió y documentó las herramientas, tecnologías y prácticas empleadas en la implementación de la Integración Continua (CI), abarcando desde frameworks de pruebas unitarias y de integración hasta metodologías como TDD y BDD. Asimismo, determinó el propósito de cada una dentro del proceso de desarrollo, asegurando su alineación con los requisitos funcionales del negocio y con los criterios técnicos de calidad establecidos para el proyecto.
             </br>
             <br></br>
-                        Sergio Landa:
+            Sergio Landa:
             <br>
             AV1: Participe activamente en el proyecto, realizando entrevistas y los analisis de las entrevistas a nuestros usuarios, y recaudando la informacion necesaria en necesidades y caracteristicas para optar por mejoras considerables en el proyecto.</br>
             TB1: Diseñe, desarrolló y documente en su totalidad la aplicación móvil del proyecto, definiendo las herramientas, tecnologías y prácticas empleadas para su implementación, abarcando desde el diseño de la interfaz y experiencia de usuario (UI/UX) hasta la arquitectura móvil y la integración con servicios backend. Asimismo, determinó el propósito de cada componente dentro del proceso de desarrollo, asegurando su alineación con los requisitos funcionales del negocio y con los criterios técnicos de calidad, rendimiento y usabilidad establecidos
             </br>
             </td>
             <td>
-            AV1:El equipo se centró en la investigación de usuarios mediante múltiples entrevistas para identificar problemas y necesidades antes de definir las funcionalidades clave. Con esta base, propusieron soluciones de software y diseñaron una interfaz móvil accesible y clara. Paralelamente, aseguraron los aspectos técnicos y legales del proyecto documentando la gestión y seguridad de cuentas, redactando el Acuerdo de Servicio SaaS para la privacidad de datos y garantizando la correcta citación de todos los recursos utilizados.
+            AV1: El equipo se centró en la investigación de usuarios mediante múltiples entrevistas para identificar problemas y necesidades antes de definir las funcionalidades clave. Con esta base, propusieron soluciones de software y diseñaron una interfaz móvil accesible y clara. Paralelamente, aseguraron los aspectos técnicos y legales del proyecto documentando la gestión y seguridad de cuentas, redactando el Acuerdo de Servicio SaaS para la privacidad de datos y garantizando la correcta citación de todos los recursos utilizados.
+            <br><br>
+            TB1: En esta etapa, el equipo demostró un alto nivel de responsabilidad profesional y apego a los estándares de calidad de la industria mediante la adopción de metodologías de prueba formales (TDD con JUnit 5/Mockito y BDD con Karate/Gherkin). Se verificó exhaustivamente la estabilidad del backend y la correcta articulación de los bounded contexts, complementándolo con la automatización del pipeline de Integración Continua (CI con Jenkins) para asegurar compilaciones limpias y confiables. Asimismo, se garantizó la inclusión y accesibilidad en el diseño y desarrollo de la aplicación móvil nativa, manteniendo una documentación técnica transparente y rigurosa en el informe final.
             </td>
         </tr>
         <tr>
@@ -254,6 +258,8 @@ ambientales y sociales.
             Estefano Solis:
             <br>
             AV1: Analicé y documenté en el informe el impacto de RentiCar: en lo económico (permitir ingresos a propietarios con autos poco usados y precios justos a arrendatarios), en lo social (fomentar la confianza mutua con calificaciones y reseñas para evitar tratos informales en redes sociales), en lo ambiental (promover la movilidad compartida aprovechando autos ya existentes) y en lo global (plantear un modelo digital escalable a otras ciudades).
+            <br>
+            TB1: Evalué el impacto de la implementación de pruebas unitarias y el soporte en el pipeline de CI: en lo económico, reduciendo costos de mantenimiento mediante la detección temprana de incidencias; en lo social, garantizando una solución robusta y confiable para los usuarios; en lo ambiental, optimizando los recursos computacionales durante la integración; y en lo global, adhiriéndose a estándares de la industria del software. Además, documenté y sustenté estas consideraciones dentro del informe del proyecto.
             </br>
             <br></br>
             Bruce Via:
@@ -262,26 +268,28 @@ ambientales y sociales.
             TB1: Evalue las capacidades del backend para definir las diferentes pruebas basadas en sus funcionalidades, utilidad y aporte al proyecto dentro de su desarrollo como desarrollador DevOps
             </br>
             <br></br>
-                        Sheyla Rojas:
+            Sheyla Rojas:
             <br>
             AV1: Durante las entrevistas, identifiqué que la falta de una aplicación centralizada para reservar y publicar vehículos genera pérdida de tiempo y mayores costos para los usuarios. Para mitigar este impacto social y económico, adapté el diseño web a dispositivos móviles (iOS y Android). Basándome en la información recopilada, diseñé una interfaz sencilla y accesible que facilita el acceso al servicio, garantizando una experiencia eficiente que resuelve las necesidades detectadas.</br>
             TB1: Analize y diseñe una interfaz movil que cumpla con toda la infraestructura necesaria para que tenga un impacto socioeconomico positivo en los usuarios al momento de rentar o alquilar un carro. Por otro lado la definición  de la arquitectura del pipeline de CI demostró la eficiencia tècnica del proyecto
             </br>
             <br></br>
-                        Cesar Linares:
+            Cesar Linares:
             <br>
             AV1: Realizó una entrevista del segmento 2 (arrendatario de vehículo) y añadió más información para el análisis de las entrevistas.</br>
             TB1: Evalué cómo prácticas como la Integración Contínua, TDD y BDD generan impactos en distintos contextos: económicamente, al reducir costos de mantenimiento y aumentar la competitividad mediante entregas más rápidas; socialmente, al producir software más confiable, accesible y alineado con las necesidades del negocio; ambientalmente, al optimizar el uso de recursos computacionales y evitar reprocesos; y globalmente, al adoptar estándares internacionales que facilitan la colaboración distribuida y el cumplimiento normativo.
             </br>
             <br></br>
-                        Sergio Landa:
+            Sergio Landa:
             <br>
             AV1: Realice una entrevista para ofrecer mayor cobertura de informacion al proyecto, realice cambios importantes para darle un nuevo enfoque a nuestra landing page, y el as is- to be, que nos ayudara a tomar escenarios posibles para tener mas en claro nuestra proyeccion de proyecto.</br>
             TB1: Evalué cómo el desarrollo integral de la aplicación móvil genera impactos en distintos contextos: económicamente, al abrir un canal directo y eficiente que aumenta la competitividad y el alcance del negocio; socialmente, al proveer una solución tecnológica intuitiva, accesible y alineada con la necesidad de movilidad de los usuarios; ambientalmente, al fomentar la digitalización de servicios que reduce el uso de recursos físicos y papel; y globalmente, al adoptar estándares internacionales de diseño móvil (UI/UX) y desarrollo que facilitan su escalabilidad y futura distribución en tiendas de aplicaciones.
             </br>
             </td>
             <td>
-            AV1:A partir de las entrevistas, el equipo identificó la necesidad de una plataforma centralizada de alquiler de vehículos y documentó el impacto socioeconómico y ambiental del proyecto. Con esta base estratégica, diseñaron una solución digital accesible y escalable —optimizando la landing page y la interfaz móvil— para garantizar transacciones seguras, fomentar la confianza y mejorar la experiencia de los usuarios.
+            AV1: A partir de las entrevistas, el equipo identificó la necesidad de una plataforma centralizada de alquiler de vehículos y documentó el impacto socioeconómico y ambiental del proyecto. Con esta base estratégica, diseñaron una solución digital accesible y escalable —optimizando la landing page y la interfaz móvil— para garantizar transacciones seguras, fomentar la confianza y mejorar la experiencia de los usuarios.
+            <br><br>
+            TB1: El equipo analizó y sustentó el impacto multidimensional de las soluciones implementadas: en lo económico, la automatización del testing y la integración continua reducen costos operativos y fallos tempranos en producción, mientras que la solución móvil amplía la competitividad y alcance comercial del modelo P2P; en lo social, se entrega un producto accesible, confiable y seguro que fomenta la confianza ciudadana en la movilidad colaborativa; en lo ambiental, se optimizan los recursos computacionales del pipeline y se fomenta la digitalización de contratos para reducir el uso de papel; y en lo global, se adoptaron estándares y arquitecturas escalables que permiten la interoperabilidad y alineación con las mejores prácticas internacionales de ingeniería de software.
             </td>
         </tr>
     </tbody>
