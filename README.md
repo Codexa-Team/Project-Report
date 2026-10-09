@@ -1881,21 +1881,25 @@ componentes interactivos —como botones— y su relación directa con la experi
   facilita el mantenimiento y la escalabilidad del código.
 
 ### 4.1.3. Mobile Style Guidelines
-Para la versión móvil de la plataforma, los lineamientos de diseño se adaptan a las características de interacción propias de los dispositivos móviles. 
-Se mantiene la identidad visual definida para el producto, conservando la paleta de colores, tipografía, iconografía y componentes principales, pero 
-ajustando la distribución y dimensiones de los elementos para facilitar su visualización e interacción mediante pantallas táctiles.
+Para las versiones móviles de Renticar, los lineamientos de diseño mantienen una identidad visual entre iOS y Android, conservando la paleta cromática
+principal de las cuales solo se integro un ligero cambios(como el #2E4050 y #52B6F2). Asismismo, se sigue manteniendo la misma tipografía, la iconografía y los 
+componentes principales de la plataforma. La interfaz se adapta a las características de cada sistema operativo mediante ajustes en la distribución, las 
+dimensiones y los elementos de navegación, garantizando una experiencia consistente, intuitiva y accesible en dispositivos móviles.Todo ello con el objetivo 
+de facilitar la navegación y el uso de las funcionalidades tanto para arrendadores como para arrendatarios.
 
 #### 4.1.3.1. iOS Mobile Style Guidelines
 - **Layout y Retícula Base:**
   La arquitectura visual sigue un flujo vertical continuo sobre una retícula modular de 8pt, complementada con márgenes de seguridad laterales de 16pt
   a 20pt. Soporta de forma nativa los gestos del sistema, permitiendo al usuario deslizar desde el borde izquierdo hacia la derecha .
 - **Navegación e Interfaz Dinámica por Rol:**
-  * **Navigation Bar y Large Titles:** Encabezado superior con títulos principales en tipografía Poppins ExtraBold alineados a la izquierda. El título
-    cambia dinámicamente según la sección seleccionada en la Tab Bar ("Resumen", "Publicados", "Reservas", "Perfil"). 
+  * **Navigation Bar y Large Titles:** El encabezado superior presenta títulos alineados a la izquierda, utilizando la tipografía Poppins ExtraBold para
+     mantener la identidad visual de Renticar. El título cambia dinámicamente según la sección seleccionada en la barra de navegación inferior: Resumen,
+     Publicados o Mis vehículos, Reservas o Solicitudes, y Perfil, de acuerdo con el tipo de usuario.
   * **Adaptabilidad de las 4 Pestañas Principales:**
      **Resumen:** Muestra un panel personalizado según el perfil activo. Para el Arrendador, consolida métricas de ingresos y estado del negocio;
        para el Arrendatario, despliega accesos rápidos a la búsqueda y sugerencias sobre otros vehiculos.
-  * Tab Bar Inferior : Los cuatro accesos incorporan simbología nativa, resaltando la pestaña activa en azul primario (#003F70) .
+  * Tab Bar Inferior : a barra de navegación permanece fija en la parte inferior de la pantalla y contiene cuatro accesos principales. La pestaña seleccionada
+     se distingue mediante el color azul (#52B6F2) aplicado al icono y, cuando corresponda, a sus elementos de texto.
   * **Acción Principal:** La acción prioritaria de publicación (para Arrendador) o reserva (para Arrendatario) se integra como un botón principal fijo en la zona
     inferior sobre el área segura, con bordes redondeados de 12pt y altura de 50pt.
 - **Interacción y Accesibilidad:**
@@ -1905,8 +1909,8 @@ ajustando la distribución y dimensiones de los elementos para facilitar su visu
     
     <div
        style="display: flex; gap: 64px; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
-  <img src="assets/photos/Arrendador iOs.png"  alt="Diseño Móvil iOS - Arrendador" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
-  <img src="assets/photos/Arrendatario iOs.png" alt="Diseño Móvil iOS - Arrendatario" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
+  <img src="assets/photos/Arrendador iOs.png"  alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
+  <img src="assets/photos/Arrendatario iOs.png" alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
 
   Link del Figma: https://www.figma.com/design/ZYZ81d4uAuktz4Xr7l7MVJ/Dise%C3%B1o-Movil-Pantalla?node-id=2-4606&t=O9RoGjXSUGKxsjO3-1
 </div>
@@ -1932,8 +1936,8 @@ ajustando la distribución y dimensiones de los elementos para facilitar su visu
 
     <div
        style="display: flex; gap: 64px; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 20px;">
-  <img src="assets/photos/Arrendador Androi.png"  alt="Diseño Móvil Android - Arrendador" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
-  <img src="assets/photos/Arrendatario Androi.png" alt="Diseño Móvil Android - Arrendatario" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
+  <img src="assets/photos/Arrendador Androi.png"  alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
+  <img src="assets/photos/Arrendatario Androi.png" alt="Diseño Móvil iOS" style="width: 30%; min-width: 200px; max-width: 240px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.12);" />
 
   Link del Figma: https://www.figma.com/design/ZYZ81d4uAuktz4Xr7l7MVJ/Dise%C3%B1o-Movil-Pantalla?node-id=2-4606&t=O9RoGjXSUGKxsjO3-1
 </div>
@@ -2015,13 +2019,15 @@ Link del Figma: https://www.figma.com/design/PChWJ99signLAO8NcRCRrY/Landing-Rent
 Esta sección define la propuesta de diseño para la experiencia móvil de RentiCar, enfocada en simplificar la interacción desde dispositivos de pantalla reducida. La interfaz organiza las funciones de acuerdo con las necesidades de arrendadores 
 o arrendatarios, priorizando accesos rápidos, navegación táctil y una presentación clara de la información para realizar las principales tareas de forma ágil.
 
-### 4.4.1. Mobile Applications Wireframes
+## 4.4.1. Mobile Applications Wireframes
 
 Los wireframes de la versión móvil de RentiCar se plantean como una guía estructural para definir la distribución de contenido, componentes y controles dentro de la interfaz. Se prioriza una navegación sencilla e intuitiva, considerando las 
 dimensiones de la pantalla y la interacción táctil para facilitar acciones como explorar vehículos, gestionar reservas y administrar publicaciones.
 
-**Enlace al proyecto en Figma:**https://www.figma.com/design/m6L2Nz1DxF5Nli3LwRZjiL/Mobile-Designed?node-id=2-4606&t=MqOCDWfq9lZUR8NZ-1
+**Enlace al proyecto en Figma:**[Wireframes](https://www.figma.com/design/m6L2Nz1DxF5Nli3LwRZjiL/Mobile-Designed?node-id=2-4606&t=MqOCDWfq9lZUR8NZ-1
+)
 
+####
 
 ### 1. Iniciar Sesión / Registrarse
 
@@ -2034,21 +2040,21 @@ el proceso de registro.
   <tr>
     <td align="center">
       <strong>1. Inicio de Sesión</strong><br><br>
-      <img src="assets/photos/login.png" width="300">
+      <img src="assets/photos/LOG.png" width="300">
     </td>
     <td align="center">
       <strong>2. Registro de Arrendatario</strong><br><br>
-      <img src="assets/photos/registerT.png" width="300">
+      <img src="assets/photos/RET.png" width="300">
     </td>
   </tr>
   <tr>
     <td align="center">
       <strong>3. Registro de Arrendador</strong><br><br>
-      <img src="assets/photos/registerH.png" width="300">
+      <img src="assets/photos/REH.png" width="300">
     </td>
     <td align="center">
       <strong>4. Recuperación de Contraseña</strong><br><br>
-      <img src="assets/photos/password.png" width="300">
+      <img src="assets/photos/PASS.png" width="300">
     </td>
   </tr>
 </table>
@@ -2135,7 +2141,7 @@ alquiler en curso.
   </tr>
 </table>
 
-## 4.6.2. Mobile Applications Wireflow Diagrams
+## 4.4.2. Mobile Applications Wireflow Diagrams
 
 Los wireflows representan las rutas que siguen los usuarios para completar
 las principales tareas dentro de la aplicación mobile. Aunque los flujos
@@ -2143,7 +2149,7 @@ mantienen la misma lógica funcional, su diseño se adapta a pantallas
 reducidas, navegación táctil y accesos rápidos, buscando que cada proceso
 sea claro, sencillo y fluido.
 
----
+**Enlace al proyecto en Figma:**[Wireflow](https://www.figma.com/design/m6L2Nz1DxF5Nli3LwRZjiL/Mobile-Designed?node-id=36-2&t=M2KzPpcOyy75QRki-1)
 
 ### 1. Segmento 1: Arrendatario
 
@@ -2224,7 +2230,7 @@ actualizado y brindar confianza a los clientes.
 
 ![Wireflow mobile de la edición del perfil del arrendador](assets/chapter04/wireD.png)
 
-### 4.6.3. Mobile Applications Mock-ups
+## 4.4.3. Mobile Applications Mock-ups
 
 En esta sección se presentan los mock-ups de alta fidelidad correspondientes
 a la aplicación mobile de **RentiCar**, diseñados en Figma respetando la guía
@@ -2237,9 +2243,10 @@ Los mock-ups se encuentran agrupados según los principales flujos de
 interacción de los dos segmentos clave: Arrendatarios y Arrendadores, además
 de los módulos transversales de autenticación y gestión de acceso.
 
----
+**Enlace al proyecto en Figma:**[MockUps](https://www.figma.com/design/lhYyfSJ0He31Se5vDVpvvZ/Dise%C3%B1o-Mobil---Mock_Ups-?node-id=2-4606&t=gNlp1qJ0WckeOyAC-1)
 
-#### 4.6.3.1. Módulo de Autenticación y Gestión de Acceso (IAM)
+
+#### 4.4.3.1. Módulo de Autenticación y Gestión de Acceso (IAM)
 
 Este módulo centraliza las interfaces de registro, inicio de sesión seguro y
 recuperación de credenciales para ambos perfiles de usuario. En la versión
@@ -2284,7 +2291,7 @@ la interacción mediante dispositivos táctiles.
 
 ---
 
-#### 4.6.3.2. Módulo de Experiencia del Arrendatario (Resumen, Búsqueda, Reservas y Perfil)
+#### 4.4.3.2. Módulo de Experiencia del Arrendatario (Resumen, Búsqueda, Reservas y Perfil)
 
 Interfaces diseñadas para que el arrendatario pueda gestionar las principales
 funciones de alquiler desde su dispositivo móvil. El módulo permite consultar
@@ -2330,7 +2337,7 @@ alquileres y actualizar la información de su perfil.
 
 ---
 
-#### 4.6.3.3. Módulo de Experiencia del Arrendador (Gestión de Flota y Solicitudes)
+#### 4.4.3.3. Módulo de Experiencia del Arrendador (Gestión de Flota y Solicitudes)
 
 Interfaces especializadas para que los propietarios puedan administrar sus
 vehículos, gestionar solicitudes de alquiler y actualizar su información
@@ -2382,7 +2389,7 @@ personal desde un dispositivo móvil.
   </p>
 
 ---
-### 4.4.4. Mobile Applications User Flow Diagrams
+## 4.4.4. Mobile Applications User Flow Diagrams
 En esta sección se modelan los **diagramas de flujo de usuario (User Flow Diagrams)** que describen las rutas de interacción, puntos de decisión y transiciones de 
 estado de los usuarios dentro de la aplicación mobile RentiCar. Los flujos mantienen la misma lógica funcional, adaptando la interacción a pantallas reducidas, 
 navegación táctil y accesos rápidos.
@@ -2480,6 +2487,45 @@ flowchart TD
 5. **Cierre de Ciclo:** Tras recibir el auto de vuelta, el arrendador evalúa al cliente, fortaleciendo el ecosistema de confianza de RentiCar.
 
 ---
+## 4.5. Mobile Applications Prototyping
+En esta sección se presenta el prototipo interactivo de alta fidelidad de la aplicación móvil Renticar, desarrollado para los sistemas operativos iOS y Android. La propuesta busca ofrecer una experiencia de 
+usuario intuitiva, accesible y consistente, manteniendo una identidad visual común y adaptando determinados elementos de la interfaz a las convenciones de cada plataforma.
+El diseño se fundamenta en los principios del diseño centrado en el usuario (UCD), considerando las necesidades de los arrendatarios, quienes buscan y reservan vehículos, y de los arrendadores, responsables 
+de publicar y administrar sus unidades. Asimismo, se contemplan las características de interacción de cada sistema operativo, procurando mantener una estructura de navegación coherente, componentes reutilizables 
+y dimensiones táctiles adecuadas para facilitar el uso de la aplicación.
+
+
+*Principales aspectos funcionales y de diseño del prototipo*
+
+- **Navegación adaptada a cada plataforma:** La aplicación incorpora cuatro secciones principales: Resumen, Vehículos o Mis vehículos, Reservas o Solicitudes y Perfil. La denominación y el contenido de estas secciones varían según el rol del usuario.
+
+- **Contenido personalizado según el rol del usuario:** La interfaz adapta la información y las acciones disponibles a las necesidades de cada perfil. En el caso de los arrendatarios, la pantalla de resumen prioriza las reservas activas, las recomendaciones de vehículos y los accesos a la búsqueda. Para los arrendadores, presenta información sobre los vehículos publicados, la actividad del negocio y las opciones para administrar sus unidades.
+
+- **Consistencia visual y reutilización de componentes:** Ambas versiones comparten criterios de diseño para la tipografía, la iconografía, las tarjetas, los campos de formulario, los botones y la distribución de los contenidos.
+
+- **Priorización de las acciones principales:** Las acciones destacadas responden a las tareas más importantes de cada perfil. Para los arrendadores, se prioriza la publicación de vehículos mediante un botón visible que incorpora el icono «+» y el texto «Publicar vehículo». Para los arrendatarios, se facilita el acceso a la consulta y reserva de vehículos mediante botones integrados en las tarjetas y en las pantallas correspondientes. La ubicación de estos elementos considera la navegación y las áreas seguras de cada plataforma.
+
+- **Interacción y accesibilidad táctil:** El prototipo contempla áreas táctiles mínimas de 44 × 44 pt para iOS y 48 × 48 dp para Android, con el propósito de facilitar la selección de los elementos interactivos.
+  
+### 4.5.1. Android Mobile Applications Prototyping
+El prototipo para iOS presenta una interfaz limpia y minimalista, orientada a facilitar la navegación y el acceso a las funcionalidades principales de Renticar. La estructura incorpora una barra de navegación inferior 
+fija con cuatro pestañas, cuyo estado activo se distingue mediante el color del icono (#52B6F2) y sus elementos asociados.
+Respecto a la interacción, se consideran áreas táctiles mínimas de 44 × 44 pt, cambios de opacidad como respuesta a las pulsaciones y retroalimentación háptica cuando resulte apropiado. Estas decisiones buscan 
+proporcionar una experiencia de uso clara y familiar para los usuarios de dispositivos Apple, sin comprometer la consistencia visual de la aplicación.
+
+🎥 **Demostración en Video del Prototipo Web:**  
+[Ver demostración en video del prototipo interactivo Androi ](https://1drv.ms/v/c/de25b6e902a88828/IQDKQxIbBfEBQ5Jya1Ih05OmAdHX48bCQRz-Ydb59GKWU7I)
+
+
+### 4.5.2. iOS Mobile Applications Prototyping
+El prototipo para Android conserva la estructura funcional, la paleta cromática y los componentes principales de Renticar, adaptando su presentación a los patrones de interacción de esta plataforma. La barra de
+navegación inferior dispone de cuatro destinos principales sobre un fondo blanco y una altura aproximada de 80 dp. Para comunicar el estado seleccionado, se incorpora una cápsula de color azul claro (#52B6F2) detrás 
+del icono activo, mientras que el icono utiliza el azul oscuro (#003F70), reforzando el contraste y la continuidad con la identidad de la marca.
+La distribución de los elementos sigue una retícula de 8 dp, con márgenes laterales de 16 dp y espaciados internos de 8, 16 y 24 dp. Esta organización favorece la alineación de los componentes y mantiene una distribución visual ordenada.
+
+🎥 **Demostración en Video del Prototipo Web:**  
+[Ver demostración en video del prototipo interactivo iOs ](https://1drv.ms/v/c/de25b6e902a88828/IQAnt8j2ygYoSq1T_nEB0x6XAbTFaS8HeRS5xrOHCq49TRI?e=jWkD0M)
+
 
 ## 4.6. Web Applications UX/UI Design
 
@@ -3951,6 +3997,62 @@ Aqui se ubican los archivos .feature que sirven para el funcionamiento de las pr
 # Capítulo VII: DevOps Practices
 
 
+
+# Capítulo VII: DevOps Practices
+
+## 7.1. Continuous Integration
+
+La Integración Continua (CI) es una práctica que consiste en unir automáticamente los cambios de código a una rama común de forma frecuente. Busca encontrar y resolver problemas de integración lo antes posible, para que el proyecto se mantenga estable y con buena calidad.
+
+### 7.1.1. Tools and Practices.
+
+Dentro de nuestro proceso, la Integración Continua se apoya en dos metodologías clave, BDD y TDD, que nos ayudan a asegurar que el código no solo cumpla con lo que el negocio necesita, sino también con los estándares técnicos exigidos.
+
+| Herramienta | Tipo | Descripción | Propósito en el Proceso |
+|---|---|---|---|
+| **JUnit 5** | Pruebas Unitarias (TDD) | *Framework* estándar de Java para escribir y ejecutar pruebas que validan el comportamiento de pequeñas unidades de código (métodos, clases). | Asegurar la **calidad interna y funcional** de los componentes del *backend* Java. |
+| **Mockito** | Simulaciones (TDD) | Librería de *mocking* que permite crear *mocks* de dependencias externas (bases de datos, servicios, etc.). | Facilitar las pruebas unitarias aislando la lógica de negocio para ejecutarlas de forma rápida y confiable. |
+| **Karate** | Pruebas de Integración y E2E (BDD) | *Framework* que combina la sintaxis BDD (Gherkin) con pruebas API/Web. Se usa en archivos .feature para validar la integración de *endpoints* y flujos de negocio. | Validar el comportamiento del **API REST** contra casos de uso definidos en lenguaje Gherkin. |
+| **Gherkin** | Metodología BDD | Lenguaje estructurado para describir el comportamiento del *software* en términos de negocio (utilizado a través de Karate). | Garantizar que el desarrollo esté **alineado con las necesidades del negocio** al escribir los escenarios de aceptación. |
+| **IntelliJ IDEA** | IDEs principales | Entornos de Desarrollo Integrado que, junto a *plugins* de BDD y Java, facilitan la escritura, depuración y ejecución local de las pruebas. | Aumentar la **productividad del desarrollador** y la ejecución inmediata de pruebas TDD/BDD. |
+
+### 7.1.2. Build & Test Suite Pipeline Components.
+
+Aqui definimos y documentamos la arquitectura técnica, los componentes y la especificación del pipeline de Integración Continua (CI) implementado mediante el servidor de automatización Jenkins para 
+nuestro proyecto Renticar. La automatización de este pipeline garantiza que cada incremento de código fuente enviado al repositorio central (Backend) sea sometido a un proceso riguroso de 
+compilación, verificación estática y ejecución de suites de prueba automatizadas antes de su eventual integración en las ramas de despliegue.
+
+####  Arquitectura y Fases del Pipeline de CI en Jenkins.
+
+El pipeline de compilación y pruebas está configurado como un **Jenkins Pipeline** integrado en la raíz del repositorio. Las etapas (*stages*) que componen el flujo de CI en Jenkins se detallan a continuación:
+
+1. **Disparador del Pipeline (Pipeline Trigger):**
+   El job en Jenkins se activa automáticamente mediante un *GitHub Webhook* configurado ante eventos de tipo `push` o `pull_request` sobre las ramas.
+
+2. **Aprovisionamiento del Entorno (Checkout & Environment Setup):**
+   Jenkins descarga el código fuente del repositorio y prepara el entorno de ejecución dentro del agente (*node/runner*) configurando el JDK en su versión **Java 17 (Eclipse Temurin)** y mapeando el directorio de
+   caché local de **Apache Maven**, optimizando los tiempos de construcción.
+
+3. **Compilación y Verificación Sintáctica (Stage: Build):**
+   Se ejecuta la fase de compilación del proyecto Spring Boot. Este paso valida que la sintaxis, las importaciones entre los Bounded Contexts y el tipado
+   estático del código no presenten errores.
+
+4. **Ejecución de Pruebas Unitarias (Unit Tests - TDD):**
+   Se ejecutan los tests unitarios diseñados bajo el enfoque **Test-Driven Development (TDD)**. Esto aísla la lógica de negocio de las entidades de dominio y servicios de aplicación simulando sus dependencias mediante
+   **Mockito**.
+
+5. **Ejecución de Pruebas de Integración y BDD (Stage: Integration & BDD Tests):**
+   Se procesan los escenarios de prueba escritos en lenguaje natural **Gherkin** mediante **Karate**. Esta suite evalúa el comportamiento real de las interfaces RESTful, validando las respuestas HTTP  y las estructuras
+   JSON retornadas por los endpoints de la API.
+
+6. **Generación e Inspección de Cobertura (Stage: Code Coverage & Artifacts):**
+    Aqui se calcula la métrica de cobertura de código alcanzada por las suites de prueba. Jenkins procesa los reportes con el plugin de JaCoCo/JUnit para publicar los resultados en el tablero del job y archiva los
+    reportes HTML resultantes como **artefactos de la ejecución**.
+   
+####  Evidencias de Ejecución del Pipeline en Jenkins
+Para constatar la operatividad del pipeline de CI, se documentan las evidencias de compilación exitosa y el reporte consolidado de pruebas obtenido directamente desde la interfaz web de Jenkins para 
+el proyecto RentiCar:
+   
 
 # Conclusiones
 
