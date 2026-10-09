@@ -2066,6 +2066,7 @@ mantienen la misma lógica funcional, su diseño se adapta a pantallas
 reducidas, navegación táctil y accesos rápidos, buscando que cada proceso
 sea claro, sencillo y fluido.
 
+**Enlace al proyecto en Figma:**https://www.figma.com/design/m6L2Nz1DxF5Nli3LwRZjiL/Mobile-Designed?node-id=2-4606&t=MqOCDWfq9lZUR8NZ-1
 ---
 
 ### 1. Segmento 1: Arrendatario
@@ -2160,6 +2161,7 @@ Los mock-ups se encuentran agrupados según los principales flujos de
 interacción de los dos segmentos clave: Arrendatarios y Arrendadores, además
 de los módulos transversales de autenticación y gestión de acceso.
 
+**Enlace al proyecto en Figma:**https://www.figma.com/design/lhYyfSJ0He31Se5vDVpvvZ/Dise%C3%B1o-Mobil---Mock_Ups-?node-id=2-4606&t=gNlp1qJ0WckeOyAC-1
 ---
 
 #### 4.6.3.1. Módulo de Autenticación y Gestión de Acceso (IAM)
@@ -2430,7 +2432,7 @@ Respecto a la interacción, se consideran áreas táctiles mínimas de 44 × 44 
 proporcionar una experiencia de uso clara y familiar para los usuarios de dispositivos Apple, sin comprometer la consistencia visual de la aplicación.
 
 🎥 **Demostración en Video del Prototipo Web:**  
-[Ver demostración en video del prototipo interactivo en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202314354_upc_edu_pe/ETjEvnFfTMVGg504DkKQo9cBVH1Coad3hieTwbFWm9x8gQ?e=t2sINN&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+[Ver demostración en video del prototipo interactivo Androi ](https://1drv.ms/v/c/de25b6e902a88828/IQDKQxIbBfEBQ5Jya1Ih05OmAdHX48bCQRz-Ydb59GKWU7I)
 
 
 ### 4.5.2. iOS Mobile Applications Prototyping
@@ -2440,7 +2442,7 @@ del icono activo, mientras que el icono utiliza el azul oscuro (#003F70), reforz
 La distribución de los elementos sigue una retícula de 8 dp, con márgenes laterales de 16 dp y espaciados internos de 8, 16 y 24 dp. Esta organización favorece la alineación de los componentes y mantiene una distribución visual ordenada.
 
 🎥 **Demostración en Video del Prototipo Web:**  
-[Ver demostración en video del prototipo interactivo en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202314354_upc_edu_pe/ETjEvnFfTMVGg504DkKQo9cBVH1Coad3hieTwbFWm9x8gQ?e=t2sINN&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+[Ver demostración en video del prototipo interactivo iOs ](https://1drv.ms/v/c/de25b6e902a88828/IQAnt8j2ygYoSq1T_nEB0x6XAbTFaS8HeRS5xrOHCq49TRI?e=jWkD0M)
 
 
 ## 4.6. Web Applications UX/UI Design
