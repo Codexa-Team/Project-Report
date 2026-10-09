@@ -212,31 +212,36 @@ software.</td>
             <td>
             Estefano Solis:
             <br>
-            TB1: Documenté en el informe la gestión y seguridad de cuentas en RentiCar (diferenciación de roles entre arrendador y arrendatario, autenticación y contraseñas protegidas), redacté el Acuerdo de Servicio SaaS sobre la privacidad y uso responsable de la información de los usuarios, y aseguré el citado correcto de las herramientas, imágenes y recursos externos documentados.
+            AV1: Documenté en el informe la gestión y seguridad de cuentas en RentiCar (diferenciación de roles entre arrendador y arrendatario, autenticación y contraseñas protegidas), redacté el Acuerdo de Servicio SaaS sobre la privacidad y uso responsable de la información de los usuarios, y aseguré el citado correcto de las herramientas, imágenes y recursos externos documentados.
             </br>
             <br></br>
-                        Bruce Via:
+            Bruce Via:
             <br>
-            TB1: Analice e identifique los usuarios objetivos para proporcionarles una solucion basada en la ingenieria de software, redacte y registre entrevistas con ellos para identificar sus necesidades.
+            AV1: Analice e identifique los usuarios objetivos para proporcionarles una solucion basada en la ingenieria de software, redacte y registre entrevistas con ellos para identificar sus necesidades.</br>
+            TB1: Realice en colaboracion con mis compañeros las diferentes pruebas unitarias y de integraciion, ademas de la declaracion de pruebas del tipo .feature y organice y designe las actividades de mi compañeros
             </br>
              <br></br>
-                        Sheyla Rojas:
+            Sheyla Rojas:
             <br>
-            TB1: Durante el desarrollo del proyecto, participé en la realización de la entrevista y en el análisis de la información obtenida, considerando las necesidades y características de los usuarios. Por otro lado, apoyé  en el diseño de la versión móvil de la aplicación, procurando que la información presentada fuera clara, accesible y adecuada para los usuarios.
+            AV1: Durante el desarrollo del proyecto, participé en la realización de la entrevista y en el análisis de la información obtenida, considerando las necesidades y características de los usuarios. Por otro lado, apoyé  en el diseño de la versión móvil de la aplicación, procurando que la información presentada fuera clara, accesible y adecuada para los usuarios.
+            </br>
+            TB1: Realice el Mobile Applications UX/UI Design, mobile Applications Prototyping, donde aseguramos los estandares de accesibilidad y la inclusion de usuarios. Asimismo definimos la arquitectura, los componentes y la especificación del pipeline de Integración Continua (CI), el cual demostraron la responsabilidad profesional necesaria para la correcta ejecución y el alcance de las exigencias de los estandares de calidad
             </br>
             <br></br>
-                        Cesar Linares:
+            Cesar Linares:
             <br>
-            TB1: Realizar entrevistas a usuarios reales para identificar problemas antes de definir funcionalidades.
+            AV1: Realizar entrevistas a usuarios reales para identificar problemas antes de definir funcionalidades.</br>
+            TB1: Identificó, definió y documentó las herramientas, tecnologías y prácticas empleadas en la implementación de la Integración Continua (CI), abarcando desde frameworks de pruebas unitarias y de integración hasta metodologías como TDD y BDD. Asimismo, determinó el propósito de cada una dentro del proceso de desarrollo, asegurando su alineación con los requisitos funcionales del negocio y con los criterios técnicos de calidad establecidos para el proyecto.
             </br>
             <br></br>
                         Sergio Landa:
             <br>
-            TB1: Participe activamente en el proyecto, realizando entrevistas y los analisis de las entrevistas a nuestros usuarios, y recaudando la informacion necesaria en necesidades y caracteristicas para optar por mejoras considerables en el proyecto.
+            AV1: Participe activamente en el proyecto, realizando entrevistas y los analisis de las entrevistas a nuestros usuarios, y recaudando la informacion necesaria en necesidades y caracteristicas para optar por mejoras considerables en el proyecto.</br>
+            TB1: Diseñe, desarrolló y documente en su totalidad la aplicación móvil del proyecto, definiendo las herramientas, tecnologías y prácticas empleadas para su implementación, abarcando desde el diseño de la interfaz y experiencia de usuario (UI/UX) hasta la arquitectura móvil y la integración con servicios backend. Asimismo, determinó el propósito de cada componente dentro del proceso de desarrollo, asegurando su alineación con los requisitos funcionales del negocio y con los criterios técnicos de calidad, rendimiento y usabilidad establecidos
             </br>
             </td>
             <td>
-            TB1:El equipo se centró en la investigación de usuarios mediante múltiples entrevistas para identificar problemas y necesidades antes de definir las funcionalidades clave. Con esta base, propusieron soluciones de software y diseñaron una interfaz móvil accesible y clara. Paralelamente, aseguraron los aspectos técnicos y legales del proyecto documentando la gestión y seguridad de cuentas, redactando el Acuerdo de Servicio SaaS para la privacidad de datos y garantizando la correcta citación de todos los recursos utilizados.
+            AV1:El equipo se centró en la investigación de usuarios mediante múltiples entrevistas para identificar problemas y necesidades antes de definir las funcionalidades clave. Con esta base, propusieron soluciones de software y diseñaron una interfaz móvil accesible y clara. Paralelamente, aseguraron los aspectos técnicos y legales del proyecto documentando la gestión y seguridad de cuentas, redactando el Acuerdo de Servicio SaaS para la privacidad de datos y garantizando la correcta citación de todos los recursos utilizados.
             </td>
         </tr>
         <tr>
@@ -248,31 +253,35 @@ ambientales y sociales.
             <td>
             Estefano Solis:
             <br>
-            TB1: Analicé y documenté en el informe el impacto de RentiCar: en lo económico (permitir ingresos a propietarios con autos poco usados y precios justos a arrendatarios), en lo social (fomentar la confianza mutua con calificaciones y reseñas para evitar tratos informales en redes sociales), en lo ambiental (promover la movilidad compartida aprovechando autos ya existentes) y en lo global (plantear un modelo digital escalable a otras ciudades).
+            AV1: Analicé y documenté en el informe el impacto de RentiCar: en lo económico (permitir ingresos a propietarios con autos poco usados y precios justos a arrendatarios), en lo social (fomentar la confianza mutua con calificaciones y reseñas para evitar tratos informales en redes sociales), en lo ambiental (promover la movilidad compartida aprovechando autos ya existentes) y en lo global (plantear un modelo digital escalable a otras ciudades).
             </br>
             <br></br>
             Bruce Via:
             <br>
-            TB1: Realice las entrevistas identificando necesidades y situaciones para el planteamiento de una solucion tomando en cuenta aspectos globales y economicos de ambos espectros.
+            AV1: Realice las entrevistas identificando necesidades y situaciones para el planteamiento de una solucion tomando en cuenta aspectos globales y economicos de ambos espectros.</br>
+            TB1: Evalue las capacidades del backend para definir las diferentes pruebas basadas en sus funcionalidades, utilidad y aporte al proyecto dentro de su desarrollo como desarrollador DevOps
             </br>
             <br></br>
                         Sheyla Rojas:
             <br>
-            TB1: Durante las entrevistas, identifiqué que la falta de una aplicación centralizada para reservar y publicar vehículos genera pérdida de tiempo y mayores costos para los usuarios. Para mitigar este impacto social y económico, adapté el diseño web a dispositivos móviles (iOS y Android). Basándome en la información recopilada, diseñé una interfaz sencilla y accesible que facilita el acceso al servicio, garantizando una experiencia eficiente que resuelve las necesidades detectadas.
+            AV1: Durante las entrevistas, identifiqué que la falta de una aplicación centralizada para reservar y publicar vehículos genera pérdida de tiempo y mayores costos para los usuarios. Para mitigar este impacto social y económico, adapté el diseño web a dispositivos móviles (iOS y Android). Basándome en la información recopilada, diseñé una interfaz sencilla y accesible que facilita el acceso al servicio, garantizando una experiencia eficiente que resuelve las necesidades detectadas.</br>
+            TB1: Analize y diseñe una interfaz movil que cumpla con toda la infraestructura necesaria para que tenga un impacto socioeconomico positivo en los usuarios al momento de rentar o alquilar un carro. Por otro lado la definición  de la arquitectura del pipeline de CI demostró la eficiencia tècnica del proyecto
             </br>
             <br></br>
                         Cesar Linares:
             <br>
-            TB1: Realizó una entrevista del segmento 2 (arrendatario de vehículo) y añadió más información para el análisis de las entrevistas.
+            AV1: Realizó una entrevista del segmento 2 (arrendatario de vehículo) y añadió más información para el análisis de las entrevistas.</br>
+            TB1: Evalué cómo prácticas como la Integración Contínua, TDD y BDD generan impactos en distintos contextos: económicamente, al reducir costos de mantenimiento y aumentar la competitividad mediante entregas más rápidas; socialmente, al producir software más confiable, accesible y alineado con las necesidades del negocio; ambientalmente, al optimizar el uso de recursos computacionales y evitar reprocesos; y globalmente, al adoptar estándares internacionales que facilitan la colaboración distribuida y el cumplimiento normativo.
             </br>
             <br></br>
                         Sergio Landa:
             <br>
-            TB1: Realice una entrevista para ofrecer mayor cobertura de informacion al proyecto, realice cambios importantes para darle un nuevo enfoque a nuestra landing page, y el as is- to be, que nos ayudara a tomar escenarios posibles para tener mas en claro nuestra proyeccion de proyecto.
+            AV1: Realice una entrevista para ofrecer mayor cobertura de informacion al proyecto, realice cambios importantes para darle un nuevo enfoque a nuestra landing page, y el as is- to be, que nos ayudara a tomar escenarios posibles para tener mas en claro nuestra proyeccion de proyecto.</br>
+            TB1: Evalué cómo el desarrollo integral de la aplicación móvil genera impactos en distintos contextos: económicamente, al abrir un canal directo y eficiente que aumenta la competitividad y el alcance del negocio; socialmente, al proveer una solución tecnológica intuitiva, accesible y alineada con la necesidad de movilidad de los usuarios; ambientalmente, al fomentar la digitalización de servicios que reduce el uso de recursos físicos y papel; y globalmente, al adoptar estándares internacionales de diseño móvil (UI/UX) y desarrollo que facilitan su escalabilidad y futura distribución en tiendas de aplicaciones.
             </br>
             </td>
             <td>
-            TB1:A partir de las entrevistas, el equipo identificó la necesidad de una plataforma centralizada de alquiler de vehículos y documentó el impacto socioeconómico y ambiental del proyecto. Con esta base estratégica, diseñaron una solución digital accesible y escalable —optimizando la landing page y la interfaz móvil— para garantizar transacciones seguras, fomentar la confianza y mejorar la experiencia de los usuarios.
+            AV1:A partir de las entrevistas, el equipo identificó la necesidad de una plataforma centralizada de alquiler de vehículos y documentó el impacto socioeconómico y ambiental del proyecto. Con esta base estratégica, diseñaron una solución digital accesible y escalable —optimizando la landing page y la interfaz móvil— para garantizar transacciones seguras, fomentar la confianza y mejorar la experiencia de los usuarios.
             </td>
         </tr>
     </tbody>
@@ -3619,6 +3628,13 @@ La plataforma **RentiCar** se distribuye bajo el modelo de **Software as a Servi
 ---
 ### 5.2.5. Implemented Native-Mobile Application Evidence
 
+Gracias a los diseños desarrollados en las secciones anteriores tenemos evidencia del desarrollo de la aplicacion movil nativa para el proyecto
+
+Renticar es una plataforma móvil y backend para el alquiler colaborativo de vehículos que conecta a arrendadores (propietarios que publican sus autos, fijan tarifas y gestionan solicitudes de alquiler) con arrendatarios (clientes que exploran el catálogo y reservan vehículos en tiempo real); está desarrollada con una aplicación nativa en Android (Kotlin) utilizando Jetpack Compose y arquitectura MVVM, respaldada por un backend robusto en Java con Spring Boot protegido mediante autenticación JWT, y una base de datos relacional en MySQL para la gestión persistente y segura de usuarios, vehículos y reservas.
+
+<img src="assets/sprint2/renticar(1).jpeg" alt="Despliegue Backend en Render" width="48%"/>
+<img src="assets/sprint2/renticar(2).jpeg" alt="Despliegue Backend en Render" width="48%"/>
+<img src="assets/sprint2/renticar(3).jpeg" alt="Despliegue Backend en Render" width="48%"/>
 
 ### 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
 
@@ -3729,10 +3745,32 @@ Bounded Context el servicio de identificacion y registro e usuarios
 
 Durante todo el ciclo de desarrollo, **Codexa-Team** mantuvo una disciplina estricta de colaboración ágil y control de versiones utilizando **GitHub**:
 
+**Sprint 1**
+
 **Collaboration Landing Page:**
 
 <img src="assets/sprint1/commits-landing.png" alt="Historial de Commits en Landing Page" /><br>
 ---
+
+**Sprint 2**
+
+**Collaboration App Mobile:**
+
+<img src="assets/sprint2/mobile_commits_1.png" alt="Historial de Commits en Landing Page" /><br>
+
+<img src="assets/sprint2/mobile_commits_2.png" alt="Historial de Commits en Landing Page" /><br>
+
+**Collaboration Backend:**
+
+<img src="assets/sprint2/Backen_commits_1.jpeg" alt="Historial de Commits en Landing Page" /><br>
+
+<img src="assets/sprint2/Backen_commits_2.jpeg" alt="Historial de Commits en Landing Page" /><br>
+
+**Collaboration Test Karate:**
+
+<img src="assets/sprint2/commits_karate_1.png" alt="Historial de Commits en Landing Page" /><br>
+
+<img src="assets/sprint2/commits_karate_2.png" alt="Historial de Commits en Landing Page" /><br>
 
 ## 5.3. Video About-the-Product
 
@@ -3769,9 +3807,146 @@ En este apartado se documenta el video promocional y técnico elaborado por **Co
 
 ### 6.1.1. Core Entities Unit Tests.
 
+**Unit Test en IAM Bounded Context**
+
+Dentro del Bounded Context de IAM se realizaron un total de XX pruebas unitarias en base a las funciones establecidas dentro del bounded context
+
+<img src="assets/unit_test/Pruebas_IAM.png" alt="Carátula Video About the Product"/><br>
+
+Asi tambien se puede evidenciar como tiene pruebas del tipo Command y Query Service 
+
+**Evidencia de archivo UserCommandService**
+<img src="assets/unit_test/IAM_command.png" alt="Carátula Video About the Product"/><br>
+
+**Evidencia de archivo UserQueryService**
+<img src="assets/unit_test/IAM_query_service.png" alt="Carátula Video About the Product"/><br>
+
+**Unit Test en Listings & Fleet Management Bounded Context**
+
+Dentro del Bounded Context de Listing se realizaron un total de XX pruebas unitarias en base a las funciones establecidas dentro del bounded context
+
+<img src="assets/unit_test/Pruebas_Listing.png" alt="Carátula Video About the Product"/><br>
+
+**Evidencia de archivo VehicleCommandService**
+<img src="assets/unit_test/Vehicle_Command_Service.png" alt="Carátula Video About the Product"/><br>
+
+**Evidencia de archivo VehicleQueryService**
+<img src="assets/unit_test/Vehicle_Query_Service.png" alt="Carátula Video About the Product"/><br>
+
+**Unit Test en Booking & Digital Contract Bounded Context**
+
+Dentro del Bounded Context de Booking se realizaron un total de XX pruebas unitarias en base a las funciones establecidas dentro del bounded context
+
+<img src="assets/unit_test/Pruebas_Booking.png" alt="Carátula Video About the Product"/><br>
+
+**Evidencia de archivo CreateBookingCommandFromResourceAssembler**
+<img src="assets/unit_test/Create_Booking_Command.png" alt="Carátula Video About the Product"/><br>
+
+**Evidencia de archivo BookingQueryService**
+<img src="assets/unit_test/Booking_Query.png" alt="Carátula Video About the Product"/><br>
+
+**Unit Test en IoT Monitoring & Route Simulation Bounded Context**
+
+Dentro del Bounded Context de IoT Monitoring se realizaron un total de XX pruebas unitarias en base a las funciones establecidas dentro del bounded context
+
+<img src="assets/unit_test/Pruebas_IOT.png" alt="Carátula Video About the Product"/><br>
+
+**Evidencia de archivo SimulationCommandService**
+<img src="assets/unit_test/Simulation_Command_Service.png" alt="Carátula Video About the Product"/><br>
+
+**Evidencia de archivo RouteQueryService**
+<img src="assets/unit_test/Route_Query_Service.png" alt="Carátula Video About the Product"/><br>
+
+**Unit Test en Reviews & Reputation Bounded Context**
+
+Dentro del Bounded Context de Reviews se realizaron un total de XX pruebas unitarias en base a las funciones establecidas dentro del bounded context
+
+<img src="assets/unit_test/Pruebas_Review.png" alt="Carátula Video About the Product"/><br>
+
+**Evidencia de archivo ReviewCommandService**
+<img src="assets/unit_test/Review_Command.png" alt="Carátula Video About the Product"/><br>
+
+**Evidencia de archivo ReviewQueryService**
+<img src="assets/unit_test/Review_Query.png" alt="Carátula Video About the Product"/><br>
+
 ### 6.1.2. Core Integration Tests.
 
+En esta seccion podemos evidenciar las pruebas de intregacion hechas en Karate para los diferentes bounded context del proyecto
+
+**Integration Test en IAM Bounded Context**
+
+<img src="assets/integration_test/Ejecucion_IAM.png" alt="Carátula Video About the Product"/><br>
+
+<img src="assets/integration_test/IAM_karate(1).png" alt="Carátula Video About the Product"/><br>
+<img src="assets/integration_test/IAM_karate(2).png" alt="Carátula Video About the Product"/><br>
+<img src="assets/integration_test/IAM_karate(3).png" alt="Carátula Video About the Product"/><br>
+<img src="assets/integration_test/IAM_karate(4).png" alt="Carátula Video About the Product"/><br>
+<img src="assets/integration_test/IAM_karate(5).png" alt="Carátula Video About the Product"/><br>
+<img src="assets/integration_test/IAM_karate(6).png" alt="Carátula Video About the Product"/><br>
+<img src="assets/integration_test/IAM_karate(7).png" alt="Carátula Video About the Product"/><br>
+<img src="assets/integration_test/IAM_karate(8).png" alt="Carátula Video About the Product"/><br>
+**Integration Test en Listings & Fleet Management Bounded Context**
+
+<img src="assets/integration_test/ejecucion_listing.png" alt="Carátula Video About the Product"/><br>
+
+<img src="assets/integration_test/listing_karate(1).png" alt="Carátula Video About the Product"/><br>
+<img src="assets/integration_test/listing_karate(2).png" alt="Carátula Video About the Product"/><br>
+<img src="assets/integration_test/listing_karate(3).png" alt="Carátula Video About the Product"/><br>
+
+**Integration Test en Booking & Digital Contract Bounded Context**
+
+<img src="assets/integration_test/ejecucion_booking.png" alt="Carátula Video About the Product"/><br>
+<img src="assets/integration_test/booking_karate(1).png" alt="Carátula Video About the Product"/><br>
+<img src="assets/integration_test/booking_karate(2).png" alt="Carátula Video About the Product"/><br>
+<img src="assets/integration_test/booking_karate(3).png" alt="Carátula Video About the Product"/><br>
+**Integration Test en IoT Monitoring & Route Simulation Bounded Context**
+
+<img src="assets/integration_test/ejecucion_iot.png" alt="Carátula Video About the Product"/><br>
+
+<img src="assets/integration_test/iot_karate(1).png" alt="Carátula Video About the Product"/><br>
+
+<img src="assets/integration_test/iot_karate(2).png" alt="Carátula Video About the Product"/><br>
+**Integration Test en Reviews & Reputation Bounded Context**
+
+<img src="assets/integration_test/ejecucion_reviews.png" alt="Carátula Video About the Product"/><br>
+
+<img src="assets/integration_test/reviews_karate.png" alt="Carátula Video About the Product"/><br>
+
 ### 6.1.3. Core Behavior-Driven Development
+
+Aqui se ubican los archivos .feature que sirven para el funcionamiento de las pruebas de integracion, se inicio definiendo un archivo tipo karate.js para configurar las variables globlales dentro del proyecto
+
+<img src="assets/features/configuracion_karate.png" alt="Carátula Video About the Product"/><br>
+
+**Behavior-Driven Development para IAM Bounded Context**
+
+- Validacion de token
+
+<img src="assets/features/validacion_feature.png" alt="Carátula Video About the Product"/><br>
+
+- Pruebas de registro de usuario
+
+<img src="assets/features/sign_up.png" alt="Carátula Video About the Product"/><br>
+
+- Pruebas de inicio de sesion
+
+<img src="assets/features/sing_in.png" alt="Carátula Video About the Product"/><br>
+
+**Behavior-Driven Development para Listings & Fleet Management Bounded Context**
+
+<img src="assets/features/listing.png" alt="Carátula Video About the Product"/><br>
+
+**Behavior-Driven Development para Booking & Digital Contract Bounded Context**
+
+<img src="assets/features/booking.png" alt="Carátula Video About the Product"/><br>
+
+**Behavior-Driven Development para IoT Monitoring & Route Simulation Bounded Context**
+
+<img src="assets/features/iot.png" alt="Carátula Video About the Product"/><br>
+
+**Behavior-Driven Development para Reviews & Reputation Bounded Context**
+
+<img src="assets/features/review.png" alt="Carátula Video About the Product"/><br>
 
 # Capítulo VII: DevOps Practices
 
