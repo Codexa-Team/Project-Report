@@ -2411,18 +2411,18 @@ El diseño se fundamenta en los principios del diseño centrado en el usuario (U
 de publicar y administrar sus unidades. Asimismo, se contemplan las características de interacción de cada sistema operativo, procurando mantener una estructura de navegación coherente, componentes reutilizables 
 y dimensiones táctiles adecuadas para facilitar el uso de la aplicación.
 
-* Principales aspectos funcionales y de diseño del prototipo* 
-**avegación adaptada a cada plataforma:** La aplicación incorpora cuatro secciones principales: Resumen, Vehículos o Mis vehículos, Reservas o Solicitudes y Perfil. La denominación y el contenido de estas
-  secciones varían según el rol del usuario.
-**Contenido personalizado según el rol del usuario:** La interfaz adapta la información y las acciones disponibles a las necesidades de cada perfil. En el caso de los arrendatarios, la pantalla de resumen prioriza
-  las reservas activas, las recomendaciones de vehículos y los accesos a la búsqueda. Para los arrendadores, presenta información sobre los vehículos publicados, la actividad del negocio y las opciones para
-  administrar sus unidades.
-**Consistencia visual y reutilización de componentes:** Ambas versiones comparten criterios de diseño para la tipografía, la iconografía, las tarjetas, los campos de formulario, los botones y la distribución de los
-  contenidos.
-**Priorización de las acciones principales:** Las acciones destacadas responden a las tareas más importantes de cada perfil. Para los arrendadores, se prioriza la publicación de vehículos mediante un botón visible que
-  incorpora el icono «+» y el texto «Publicar vehículo». Para los arrendatarios, se facilita el acceso a la consulta y reserva de vehículos mediante botones integrados en las tarjetas y en las pantallas correspondientes.
-   La ubicación de estos elementos considera la navegación y las áreas seguras de cada plataforma.
-**Interacción y accesibilidad táctil:** El prototipo contempla áreas táctiles mínimas de 44 × 44 pt para iOS y 48 × 48 dp para Android, con el propósito de facilitar la selección de los elementos interactivos.
+
+Principales aspectos funcionales y de diseño del prototipo*
+
+- **Navegación adaptada a cada plataforma:** La aplicación incorpora cuatro secciones principales: Resumen, Vehículos o Mis vehículos, Reservas o Solicitudes y Perfil. La denominación y el contenido de estas secciones varían según el rol del usuario.
+
+- **Contenido personalizado según el rol del usuario:** La interfaz adapta la información y las acciones disponibles a las necesidades de cada perfil. En el caso de los arrendatarios, la pantalla de resumen prioriza las reservas activas, las recomendaciones de vehículos y los accesos a la búsqueda. Para los arrendadores, presenta información sobre los vehículos publicados, la actividad del negocio y las opciones para administrar sus unidades.
+
+- **Consistencia visual y reutilización de componentes:** Ambas versiones comparten criterios de diseño para la tipografía, la iconografía, las tarjetas, los campos de formulario, los botones y la distribución de los contenidos.
+
+- **Priorización de las acciones principales:** Las acciones destacadas responden a las tareas más importantes de cada perfil. Para los arrendadores, se prioriza la publicación de vehículos mediante un botón visible que incorpora el icono «+» y el texto «Publicar vehículo». Para los arrendatarios, se facilita el acceso a la consulta y reserva de vehículos mediante botones integrados en las tarjetas y en las pantallas correspondientes. La ubicación de estos elementos considera la navegación y las áreas seguras de cada plataforma.
+
+- **Interacción y accesibilidad táctil:** El prototipo contempla áreas táctiles mínimas de 44 × 44 pt para iOS y 48 × 48 dp para Android, con el propósito de facilitar la selección de los elementos interactivos.
   
 ### 4.5.1. Android Mobile Applications Prototyping
 El prototipo para iOS presenta una interfaz limpia y minimalista, orientada a facilitar la navegación y el acceso a las funcionalidades principales de Renticar. La estructura incorpora una barra de navegación inferior 
