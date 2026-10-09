@@ -3743,6 +3743,40 @@ Dentro de nuestro proceso, la Integración Continua se apoya en dos metodología
 | **Gherkin** | Metodología BDD | Lenguaje estructurado para describir el comportamiento del *software* en términos de negocio (utilizado a través de Karate). | Garantizar que el desarrollo esté **alineado con las necesidades del negocio** al escribir los escenarios de aceptación. |
 | **IntelliJ IDEA** | IDEs principales | Entornos de Desarrollo Integrado que, junto a *plugins* de BDD y Java, facilitan la escritura, depuración y ejecución local de las pruebas. | Aumentar la **productividad del desarrollador** y la ejecución inmediata de pruebas TDD/BDD. |
 
+### 7.1.2. Build & Test Suite Pipeline Components.
+
+Para definir y documentar la arquitectura técnica, los componentes y la especificación del pipeline de Integración Continua (CI) implementado mediante el servidor de automatización Jenkins para 
+nuestro proyecto Renticar. La automatización de este pipeline garantiza que cada incremento de código fuente enviado al repositorio central (Backend) sea sometido a un proceso riguroso de 
+compilación, verificación estática y ejecución de suites de prueba automatizadas antes de su eventual integración en las ramas de despliegue.
+
+#### 1. Arquitectura y Fases del Pipeline de CI en Jenkins
+
+El pipeline de compilación y pruebas está configurado como un **Jenkins Pipeline** integrado en la raíz del repositorio. Las etapas (*stages*) que componen el flujo de CI en Jenkins se detallan a continuación:
+
+1. **Disparador del Pipeline (Pipeline Trigger):**
+   El job en Jenkins se activa automáticamente mediante un *GitHub Webhook* configurado ante eventos de tipo `push` o `pull_request` sobre las ramas.
+
+3. **Aprovisionamiento del Entorno (Checkout & Environment Setup):**
+   Jenkins descarga el código fuente del repositorio y prepara el entorno de ejecución dentro del agente (*node/runner*) configurando el JDK en su versión **Java 17 (Eclipse Temurin)** y mapeando el directorio de
+   caché local de **Apache Maven**, optimizando los tiempos de construcción.
+
+5. **Compilación y Verificación Sintáctica (Stage: Build):**
+   Se ejecuta la fase de compilación del proyecto Spring Boot. Este paso valida que la sintaxis, las importaciones entre los Bounded Contexts y el tipado
+   estático del código no presenten errores.
+
+7. **Ejecución de Pruebas Unitarias (Stage: Unit Tests - TDD):**
+   Se ejecutan los tests unitarios diseñados bajo el enfoque **Test-Driven Development (TDD)**. Esto aísla la lógica de negocio de las entidades de dominio y servicios de aplicación simulando sus dependencias mediante
+   **Mockito**.
+
+9. **Ejecución de Pruebas de Integración y BDD (Stage: Integration & BDD Tests):**
+   Se procesan los escenarios de prueba escritos en lenguaje natural **Gherkin** mediante **Karate**. Esta suite evalúa el comportamiento real de las interfaces RESTful, validando las respuestas HTTP  y las estructuras
+   JSON retornadas por los endpoints de la API.
+
+11. **Generación e Inspección de Cobertura (Stage: Code Coverage & Artifacts):**
+    Aqui se calcula la métrica de cobertura de código alcanzada por las suites de prueba. Jenkins procesa los reportes con el plugin de JaCoCo/JUnit para publicar los resultados en el tablero del job y archiva los
+    reportes HTML resultantes como **artefactos de la ejecución**.
+   
+
 # Conclusiones
 
 El desarrollo del proyecto Renticar permitió aplicar de manera integral los conceptos de ingeniería de software y las metodologías orientadas al diseño centrado en el usuario, integrando prácticas modernas como Event Storming, Impact Mapping y User Personas. A través del análisis de entrevistas se identificaron claramente las necesidades de los dos segmentos objetivos, arrendadores y arrendatarios, evidenciando que ambos valoran la seguridad, la transparencia y la confianza como elementos determinantes en la experiencia de alquiler de vehículos.
