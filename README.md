@@ -73,6 +73,7 @@ U202313403 - Via Luna, Bruce
 
 <img src="assets/Commits/av1-2.png" alt="Commits AV1" width="500">
 
+**TB1:**
 
 ## Contenido
 
@@ -171,7 +172,15 @@ U202313403 - Via Luna, Bruce
         - [5.2.7. RESTful API documentation](#527-restful-api-documentation)
         - [5.2.8. Team Collaboration Insights](#528-team-collaboration-insights)
     - [5.3. Video About-the-Product.](#53-video-about-the-product)
-
+- [Capítulo VI: Product Verification & Validation](#capítulo-vi-product-verification--validation)
+    - [6.1. Testing Suites & Validation](#61-testing-suites--validation)
+        - [6.1.1. Core Entities Unit Tests.](#611-core-entities-unit-tests)
+        - [6.1.2. Core Integration Tests.](#612-core-integration-tests)
+        - [6.1.3. Core Behavior-Driven Development](#613-core-behavior-driven-development)
+- [Capítulo VII: DevOps Practices](#capítulo-vii-devops-practices)
+    - [7.1. Continuous Integration](#71-continuous-integration)
+        - [7.1.1. Tools and Practices.](#711-tools-and-practices)
+        - [7.1.2. Build & Test Suite Pipeline Components.](#712-build--test-suite-pipeline-components)
 - [Conclusiones](#conclusiones)
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
@@ -3495,9 +3504,9 @@ En este apartado se documenta la ejecución del ciclo de vida del desarrollo ág
 
 ### 5.2.1. Sprint Backlogs
 
-A continuación, se presentan las tablas de ejecución de los cuatro sprints desarrollados para la construcción de la plataforma **RentiCar**, detallando las User Stories asignadas, el desglose de tareas técnicas (work-items), estimación en horas-hombre, responsables individuales (distribuidos equitativamente entre los 5 miembros del equipo: Bruce Vía, César Linares, Sergio Landa, Estefano Solís y Sheila Angeles) y estado final:
+A continuación, se presentan las tablas de ejecución de los dos sprints desarrollados para la construcción de la plataforma **RentiCar**, detallando las User Stories asignadas, el desglose de tareas técnicas (work-items), estimación en horas-hombre, responsables individuales (distribuidos equitativamente entre los 5 miembros del equipo: Bruce Vía, César Linares, Sergio Landa, Estefano Solís y Sheila Angeles) y estado final:
 
-| Sprint # | Sprint1 |||||||
+| Sprint # | Sprint 1 |||||||
 |----------|---------|-|-|-|-|-|-|
 | **User Story** | | **Work-Item/task** |  |  | |   |  |
 | **ID** | **Title** | **Id** | **Title** | **Description** | **Estimation(Hrs)** | **Assigned To**   | **Status** |
@@ -3509,9 +3518,36 @@ A continuación, se presentan las tablas de ejecución de los cuatro sprints des
 | **US-20** | Confirmar Solicitud de Reserva | T011 | Reservar correctamente un vehiculo | Al momento de realizar la rerva y se cumplan los requisitos se confirma y se inicia el proceso | 7 | Estefano Solis | Done |
 | **US-26** | Iniciar Simulación Telemática en Ruta | T021 | Visualizar la simulacion | Ver la ubicacion de auto en un mapa| 8 | Sheila Angeles | Done |
 |   | | T022 | Visualizar simulacion   | Muestra al auto moviendose por el mapa de Lima | 8 | Bruce Via | Done |
-| **TS-01**      | Conectar con Base de Datos | T1 | Conectar y sincronizar tablas  | Vincular el backend a una base de datos en la nuve  | 4 | Sergio Landa | Done  |
-| **TS-02**      | Configuración del Pipeline de Seguridad | T11 | Creacion de Token JWT  | Crear un token JWT al inciar sesion  | 1 | Cesar Linares | Done  |
-|   | | T12 | Validacion de Token   | Bloquear acceso a funcionales de saltar el token JWT | 4 | Bruce Via | Done |
+| **TS-01** | Pruebas de API - Registro de Usuarios (`sign-up.feature`) | T1 | Automatización de registro por roles | Pruebas Karate para registro de Arrendatario y Arrendador con asignación de roles | 4 | Bruce Via | Done |
+|   | | T2 | Pruebas de validación y duplicidad | Pruebas Karate para rechazo por correo duplicado (409) y sintaxis inválida (400) | 4 | Cesar Linares | Done |
+| **TS-02** | Pruebas de API - Autenticación e Inicio de Sesión (`sign-in.feature`) | T3 | Automatización de inicio de sesión | Pruebas Karate para login exitoso y verificación de Bearer Token JWT | 4 | Sergio Landa | Done |
+|   | | T4 | Pruebas negativas de credenciales | Pruebas Karate para contraseña errónea (401) y usuario no existente (404/401) | 3 | Estefano Solis | Done |
+| **TS-03** | Pruebas de API - Gestión de Roles (`roles.feature`) | T5 | Verificación de catálogo de roles | Pruebas Karate para consultar roles y validar ROLE_ARRENDADOR y ROLE_ARRENDATARIO | 3 | Sheila Angeles | Done |
+| **TS-04** | Pruebas de API - Catálogo de Vehículos (`vehicles.feature`) | T6 | Pruebas de consulta de catálogo | Pruebas Karate para listado general de vehículos y validación de estructura de datos | 4 | Sergio Landa | Done |
+|   | | T7 | Validación de vehículo inexistente y seguridad | Pruebas Karate para vehículo 404 y restricción de creación sin cabecera de autenticación | 4 | Sheila Angeles | Done |
+
+<br>
+
+| Sprint # | Sprint 2 |||||||
+|----------|---------|-|-|-|-|-|-|
+| **User Story** | | **Work-Item/task** |  |  | |   |  |
+| **ID** | **Title** | **Id** | **Title** | **Description** | **Estimation(Hrs)** | **Assigned To**   | **Status** |
+| **US-01** | Registro de Usuario | T001 | Creacion de usuario | Crea un perfil para el registro del usuario| 4 | Bruce Via | Done |
+|   | | T002 | Seleccion de rol | Al crear el usuario este tiene la capacidad de elegir el rol que desea y acceder a las funcionalidades adecuadas | 5 | Estefano Solis | Done |
+| **US-07** | Publicaciones en el Dashboard | T0011 | Ver Publicaciones disponibles | Toda publicacion publicada se mostrara en el dashboard correspondiendte con acceso a dicha publciacion | 4 | Sergio Landa | Done |
+|   | | T0012 | Separar publicaciones por roles   | Separa las secciones exclusivas para los roles especificos | 5 | Cesar Linares | Done |
+|   | | T0013 | Separacion de dashboard   | Muestra un dashboard diferente para cada rol con sus publciaciones respectivas | 4 | Sheila Angeles | Done |
+| **US-20** | Confirmar Solicitud de Reserva | T011 | Reservar correctamente un vehiculo | Al momento de realizar la rerva y se cumplan los requisitos se confirma y se inicia el proceso | 7 | Estefano Solis | Done |
+| **US-26** | Iniciar Simulación Telemática en Ruta | T021 | Visualizar la simulacion | Ver la ubicacion de auto en un mapa| 8 | Sheila Angeles | Done |
+|   | | T022 | Visualizar simulacion   | Muestra al auto moviendose por el mapa de Lima | 8 | Bruce Via | Done |
+| **TS-05** | Pruebas de API - Gestión de Usuarios (`users.feature`) | T8 | Automatización de catálogo de usuarios | Pruebas Karate para GET /api/v1/users y validación de respuesta | 4 | Sergio Landa | Done |
+|   | | T9 | Pruebas de consulta de usuario por ID | Pruebas Karate para registro dinámico y consulta de usuario por ID propio | 4 | Bruce Via | Done |
+| **TS-06** | Pruebas de API - Gestión de Reservas (`bookings.feature`) | T10 | Pruebas de seguridad en reservas | Pruebas Karate para validar rechazo 401/403 en /my-bookings y /my-requests sin auth | 4 | Estefano Solis | Done |
+|   | | T11 | Pruebas de creación y búsqueda de reservas | Pruebas Karate para POST reserva no autenticada y consulta por ID inexistente (404) | 4 | Cesar Linares | Done |
+| **TS-07** | Pruebas de API - Telemetría y Rutas IoT (`telemetry.feature`) | T12 | Automatización de ruta GPS simulada | Pruebas Karate para consulta y verificación de /api/v1/simulation/route | 4 | Sheila Angeles | Done |
+|   | | T13 | Pruebas de seguridad en telemetría | Pruebas Karate para restringir POST /telemetry y consulta de posición sin token | 4 | Bruce Via | Done |
+| **TS-08** | Pruebas de API - Calificaciones y Reseñas (`reviews.feature`) | T14 | Pruebas de consulta de opiniones | Pruebas Karate para GET reseñas por vehículo y cálculo de valoraciones | 4 | Sergio Landa | Done |
+|   | | T15 | Pruebas de seguridad en publicación | Pruebas Karate para restricción de creación de reseña sin credenciales autorizadas | 3 | Sheila Angeles | Done |
 
 ### 5.2.2. Implemented Landing Page Evidence
 
@@ -3581,8 +3617,10 @@ La plataforma **RentiCar** se distribuye bajo el modelo de **Software as a Servi
 
 
 ---
+### 5.2.5. Implemented Native-Mobile Application Evidence
 
-### 5.2.5. Implemented RESTful API and/or Serverless Backend Evidence
+
+### 5.2.6. Implemented RESTful API and/or Serverless Backend Evidence
 
 El backend fue desplegado en la plataforma cloud **Render**, conectado de forma persistente a una instancia gestionada de **TiDB Cloud**:
 
@@ -3723,11 +3761,25 @@ En este apartado se documenta el video promocional y técnico elaborado por **Co
 4. Exponer la funcionalidad de **Monitoreo IoT**: visualización de coordenadas GPS en tiempo real sobre mapa Leaflet y lectura de telemetría de velocidad y combustible.
 5. Evidenciar el proceso de **Calificación y Reseñas** que consolida la confianza comunitaria en la plataforma.
 
----
+## Part II: Verification, Validation & Pipeline
+
+# Capítulo VI: Product Verification & Validation
+
+## 6.1. Testing Suites & Validation
+
+### 6.1.1. Core Entities Unit Tests.
+
+### 6.1.2. Core Integration Tests.
+
+### 6.1.3. Core Behavior-Driven Development
+
+# Capítulo VII: DevOps Practices
+
+
 
 # Conclusiones
 
-aaaaa
+
 
 El desarrollo del proyecto Renticar permitió aplicar de manera integral los conceptos de ingeniería de software y las metodologías orientadas al diseño centrado en el usuario, integrando prácticas modernas como Event Storming, Impact Mapping y User Personas. A través del análisis de entrevistas se identificaron claramente las necesidades de los dos segmentos objetivos, arrendadores y arrendatarios, evidenciando que ambos valoran la seguridad, la transparencia y la confianza como elementos determinantes en la experiencia de alquiler de vehículos.
 
