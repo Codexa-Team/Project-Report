@@ -2001,13 +2001,15 @@ Link del Figma: https://www.figma.com/design/PChWJ99signLAO8NcRCRrY/Landing-Rent
 Esta sección define la propuesta de diseño para la experiencia móvil de RentiCar, enfocada en simplificar la interacción desde dispositivos de pantalla reducida. La interfaz organiza las funciones de acuerdo con las necesidades de arrendadores 
 o arrendatarios, priorizando accesos rápidos, navegación táctil y una presentación clara de la información para realizar las principales tareas de forma ágil.
 
-### 4.4.1. Mobile Applications Wireframes
+## 4.4.1. Mobile Applications Wireframes
 
 Los wireframes de la versión móvil de RentiCar se plantean como una guía estructural para definir la distribución de contenido, componentes y controles dentro de la interfaz. Se prioriza una navegación sencilla e intuitiva, considerando las 
 dimensiones de la pantalla y la interacción táctil para facilitar acciones como explorar vehículos, gestionar reservas y administrar publicaciones.
 
 **Enlace al proyecto en Figma:**[Wireframes](https://www.figma.com/design/m6L2Nz1DxF5Nli3LwRZjiL/Mobile-Designed?node-id=2-4606&t=MqOCDWfq9lZUR8NZ-1
 )
+
+####
 
 ### 1. Iniciar Sesión / Registrarse
 
@@ -2121,7 +2123,7 @@ alquiler en curso.
   </tr>
 </table>
 
-## 4.6.2. Mobile Applications Wireflow Diagrams
+## 4.4.2. Mobile Applications Wireflow Diagrams
 
 Los wireflows representan las rutas que siguen los usuarios para completar
 las principales tareas dentro de la aplicación mobile. Aunque los flujos
@@ -2210,7 +2212,7 @@ actualizado y brindar confianza a los clientes.
 
 ![Wireflow mobile de la edición del perfil del arrendador](assets/chapter04/wireD.png)
 
-### 4.6.3. Mobile Applications Mock-ups
+## 4.4.3. Mobile Applications Mock-ups
 
 En esta sección se presentan los mock-ups de alta fidelidad correspondientes
 a la aplicación mobile de **RentiCar**, diseñados en Figma respetando la guía
@@ -2226,7 +2228,7 @@ de los módulos transversales de autenticación y gestión de acceso.
 **Enlace al proyecto en Figma:**[MockUps](https://www.figma.com/design/lhYyfSJ0He31Se5vDVpvvZ/Dise%C3%B1o-Mobil---Mock_Ups-?node-id=2-4606&t=gNlp1qJ0WckeOyAC-1)
 
 
-#### 4.6.3.1. Módulo de Autenticación y Gestión de Acceso (IAM)
+#### 4.4.3.1. Módulo de Autenticación y Gestión de Acceso (IAM)
 
 Este módulo centraliza las interfaces de registro, inicio de sesión seguro y
 recuperación de credenciales para ambos perfiles de usuario. En la versión
@@ -2271,7 +2273,7 @@ la interacción mediante dispositivos táctiles.
 
 ---
 
-#### 4.6.3.2. Módulo de Experiencia del Arrendatario (Resumen, Búsqueda, Reservas y Perfil)
+#### 4.4.3.2. Módulo de Experiencia del Arrendatario (Resumen, Búsqueda, Reservas y Perfil)
 
 Interfaces diseñadas para que el arrendatario pueda gestionar las principales
 funciones de alquiler desde su dispositivo móvil. El módulo permite consultar
@@ -2317,7 +2319,7 @@ alquileres y actualizar la información de su perfil.
 
 ---
 
-#### 4.6.3.3. Módulo de Experiencia del Arrendador (Gestión de Flota y Solicitudes)
+#### 4.4.3.3. Módulo de Experiencia del Arrendador (Gestión de Flota y Solicitudes)
 
 Interfaces especializadas para que los propietarios puedan administrar sus
 vehículos, gestionar solicitudes de alquiler y actualizar su información
@@ -2369,7 +2371,7 @@ personal desde un dispositivo móvil.
   </p>
 
 ---
-### 4.4.4. Mobile Applications User Flow Diagrams
+## 4.4.4. Mobile Applications User Flow Diagrams
 En esta sección se modelan los **diagramas de flujo de usuario (User Flow Diagrams)** que describen las rutas de interacción, puntos de decisión y transiciones de 
 estado de los usuarios dentro de la aplicación mobile RentiCar. Los flujos mantienen la misma lógica funcional, adaptando la interacción a pantallas reducidas, 
 navegación táctil y accesos rápidos.
