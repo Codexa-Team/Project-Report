@@ -4004,8 +4004,6 @@ Aqui se ubican los archivos .feature que sirven para el funcionamiento de las pr
 
 # Capítulo VII: DevOps Practices
 
-
-
 # Capítulo VII: DevOps Practices
 
 ## 7.1. Continuous Integration
@@ -4057,18 +4055,28 @@ El pipeline de compilación y pruebas está configurado como un **Jenkins Pipeli
     Aqui se calcula la métrica de cobertura de código alcanzada por las suites de prueba. Jenkins procesa los reportes con el plugin de JaCoCo/JUnit para publicar los resultados en el tablero del job y archiva los
     reportes HTML resultantes como **artefactos de la ejecución**.
    
-####  Evidencias de Ejecución del Pipeline en Jenkins
+**Evidencias de Ejecución del Pipeline en Jenkins**
+
 Para constatar la operatividad del pipeline de CI, se documentan las evidencias de compilación exitosa y el reporte consolidado de pruebas obtenido directamente desde la interfaz web de Jenkins para 
 el proyecto RentiCar:
    
+   <img src="assets/jenkins/jenkins(1).png" alt="Carátula Video About the Product"/><br>
+   <img src="assets/jenkins/jenkins(2).png" alt="Carátula Video About the Product"/><br>
+
 
 # Conclusiones
 
-
+AV1:
 
 El desarrollo del proyecto Renticar permitió aplicar de manera integral los conceptos de ingeniería de software y las metodologías orientadas al diseño centrado en el usuario, integrando prácticas modernas como Event Storming, Impact Mapping y User Personas. A través del análisis de entrevistas se identificaron claramente las necesidades de los dos segmentos objetivos, arrendadores y arrendatarios, evidenciando que ambos valoran la seguridad, la transparencia y la confianza como elementos determinantes en la experiencia de alquiler de vehículos.
 
 La incorporación de un componente IoT ligero representa un diferenciador importante frente a soluciones tradicionales, al brindar información básica sobre el estado y ubicación de los vehículos durante la reserva. De esta forma, se refuerza la confiabilidad del sistema y se atienden los puntos de dolor detectados en el análisis de los flujos actuales. Asimismo, la definición de una arquitectura basada en dominios bajo el modelo C4 (Context, Container, Component) asegura la escalabilidad y mantenibilidad del sistema, alineando la solución tecnológica con los objetivos de negocio.
+
+TB1:
+
+Durante la segunda etapa del proyecto se fortaleció la calidad y confiabilidad de RentiCar mediante la implementación de pruebas unitarias, pruebas de integración y prácticas de Behavior-Driven Development. Las pruebas unitarias con JUnit 5 y Mockito permitieron validar de manera aislada la lógica de los principales bounded contexts, como IAM, Listings, Booking, IoT y Reviews. Asimismo, las pruebas de integración desarrolladas con Karate y Gherkin verificaron el comportamiento de los endpoints REST, la autenticación JWT, la gestión de vehículos, las reservas, la telemetría y las reseñas, incluyendo escenarios exitosos y casos de error relacionados con permisos, datos inválidos y recursos inexistentes.
+
+La configuración del pipeline de Integración Continua en Jenkins permitió automatizar la compilación, ejecución de pruebas, generación de reportes y validación de cada cambio incorporado al backend. Esto contribuyó a detectar errores de forma temprana, reducir riesgos durante el despliegue y mantener una mayor estabilidad del producto. La integración de prácticas TDD y BDD también permitió relacionar la implementación técnica con los criterios de aceptación definidos para las user stories y con las necesidades reales de los usuarios.
 
 # Bibliografía
 
