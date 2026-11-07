@@ -4074,6 +4074,38 @@ Aqui se ubican los archivos .feature que sirven para el funcionamiento de las pr
 
 ### 6.3.1. Diseño de Entrevistas
 
+## Entrevistas por Segmento
+
+### Segmento 1: Dueño del Automovil
+
+1. ¿Qué tan fácil te resultó registrarte y entender para qué servía RentiCar como cliente?
+2. ¿Cómo fue tu experiencia al navegar desde el Home hasta subir su automovil?
+3. ¿Te sirvió el módulo de solicitudes para saber cuándo ocuparan el automovil?
+4. ¿Te parecio util la opcion de editar los datos y precios de tu automovil?
+5. ¿Pudiste identificar sin problemas las diferentes secciones y sus funcionalidades dentro de la pagina?
+6. ¿Sentiste que el diseño de la app era confiable y profesional desde el primer momento?
+7. ¿Qué tan intuitiva le parecio la distribucion de botones? ¿Qué funcion añadiria?
+8. ¿La función de geolocalización y mapa te ayudó verificar mejor el estado de tu automovil?
+9. ¿Te sentiste cómodo aceptando a alguien por internet directamente desde la plataforma?
+10. ¿Te fue util el como se comunican las solicitudes entres los dos usuarios para el manejo de la reserva?
+11. ¿Después de recibir el servicio, sentiste necesaria una opcion de calificar al arrendador?
+12. ¿Qué cambiarías en la experiencia visual o funcional para que RentiCar sea aún más clara o rápida de usar?
+
+### Segmento 2: Usuario que busca alquilar un vehiculo
+
+1. ¿Qué tan fácil te resultó registrarte y entender para qué servía RentiCar como cliente?
+2. ¿Cómo fue tu experiencia al navegar de navegacion entre las secciones?
+3. ¿Te sirvió el módulo automoviles disponibles para seleccionar el que mas se acomode a tus necesidades?
+4. ¿Te parecio util la opcion de ver a mas detalles los automoviles de su interes?
+5. ¿Pudiste identificar sin problemas las diferentes secciones y sus funcionalidades dentro de la pagina?
+6. ¿Sentiste que el diseño de la app era confiable y profesional desde el primer momento?
+7. ¿Qué tan intuitiva le parecio la distribucion de botones? ¿Qué funcion añadiria?
+8. ¿La función de actualziar el estado de la reserva le parecio util?
+9. ¿Te sentiste cómodo aceptando el automovil de alguien por internet a travez de la plataforma?
+10. ¿Te sirvió la opcion para la renovacion de la reserva?
+11. ¿Después de recibir el servicio, sentiste util la opcion de calificar al arrendador?
+12. ¿Qué cambiarías en la experiencia visual o funcional para que RentiCar sea aún más clara o rápida de usar?
+
 ### 6.3.2. Registro de Entrevistas
 
 ### 6.3.3. Evaluaciones según heurísticas. 
