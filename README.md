@@ -4225,6 +4225,16 @@ A partir del Lean UX Process (sección 1.2.2), se identificaron los siguientes e
 
 ### 8.1.3. Experiment-Ready Questions
 
+De las brechas de conocimiento, se formularon las siguientes preguntas listas para experimentación:
+
+- Q1 (Confianza/Cliente): ¿Aumentará la tasa de conversión de reservas la implementación de un sistema de reseñas verificadas y perfiles de usuario detallados?
+
+- Q2 (Valor/Propietario): ¿Qué valor relativo otorgan los propietarios a las funcionalidades de monitoreo IoT frente a una reducción en la comisión por servicio?
+
+- Q3 (Retención/Propietario): ¿Estarán los propietarios dispuestos a mantener sus vehículos publicados en la plataforma tras la primera experiencia de alquiler si se les ofrece un seguro de daños?
+
+- Q4 (Adopción/Cliente): ¿Incrementará la implementación de filtros de búsqueda por marca, precio y fechas la tasa de solicitudes de reserva en comparación con una búsqueda simple por lista?
+
 ### 8.1.4. Question Backlog
 
 ### 8.1.5. Experiment Cards
