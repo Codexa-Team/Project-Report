@@ -4187,6 +4187,8 @@ Esta sección detalla la planificación de los experimentos diseñados para vali
 
 ### 8.1.1. As-Is Summary
 
+El estado actual del mercado de alquiler de vehículos en el Perú se caracteriza por una alta informalidad y una marcada desconfianza entre los actores. Los propietarios de vehículos que buscan generar ingresos adicionales se ven obligados a utilizar canales poco seguros como redes sociales y contactos directos, sin garantías contractuales ni herramientas para verificar la identidad de los arrendatarios. Por su parte, los arrendatarios enfrentan procesos engorrosos, falta de transparencia en los precios y un alto riesgo al entregar depósitos a desconocidos. Esta situación, descrita en el análisis de entrevistas del Capítulo II, genera una fricción constante que limita el crecimiento del mercado y expone a ambas partes a riesgos financieros y de seguridad.
+
 ### 8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims
 
 ### 8.1.3. Experiment-Ready Questions
