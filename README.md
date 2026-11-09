@@ -4183,6 +4183,8 @@ el proyecto RentiCar:
 
 ## 8.1. Experiment Planning 
 
+Esta sección detalla la planificación de los experimentos diseñados para validar las hipótesis del proyecto RentiCar. El objetivo es transformar los supuestos de negocio y las suposiciones de los usuarios en conocimiento validado, permitiendo un desarrollo guiado por datos.
+
 ### 8.1.1. As-Is Summary
 
 ### 8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims
