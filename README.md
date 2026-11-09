@@ -4191,6 +4191,38 @@ El estado actual del mercado de alquiler de vehículos en el Perú se caracteriz
 
 ### 8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims
 
+A partir del Lean UX Process (sección 1.2.2), se identificaron los siguientes elementos como material base para la experimentación:
+
+**1. Assumptions (Suposiciones):**
+
+ - Confianza: Los arrendatarios valoran más un sistema de reputación y perfiles verificados que un precio ligeramente inferior ofrecido en canales informales.
+
+ - Seguridad del Propietario: Los propietarios estarán dispuestos a listar sus vehículos si cuentan con herramientas de monitoreo (IoT) y un sistema de contratos digitales que les brinde respaldo legal.
+
+ - Adopción: La interfaz de la plataforma será lo suficientemente intuitiva como para que los usuarios migren desde sus métodos tradicionales (Facebook Marketplace, WhatsApp) a RentiCar.
+
+**2. Knowledge Gaps (Brechas de Conocimiento):**
+
+ - No se conoce el grado de influencia que tiene la presencia de telemetría IoT en la decisión final del propietario para alquilar su auto.
+
+ - Se desconoce la tarifa mínima (comisión) que los propietarios están dispuestos a pagar por la seguridad y visibilidad que ofrece la plataforma.
+
+ - No está claro qué tan dispuestos están los arrendatarios a pagar una tarifa premium por un seguro de cobertura total ofrecido dentro de la plataforma.
+
+**3. Ideas:**
+
+ - Implementar un sistema de calificaciones bidireccional (propietario a arrendatario y viceversa) para fomentar la responsabilidad.
+
+ - Ofrecer un panel de control con telemetría en tiempo real (ubicación GPS, nivel de combustible) como diferenciador clave.
+
+ - Integrar contratos digitales automáticos al confirmar una reserva.
+
+**4. Claims (Declaraciones):**
+
+ - RentiCar formalizará el mercado de alquiler de vehículos en Perú, reduciendo el fraude y aumentando la confianza.
+
+ - La digitalización del proceso de reserva y contrato reducirá significativamente el tiempo de gestión para ambas partes. 
+
 ### 8.1.3. Experiment-Ready Questions
 
 ### 8.1.4. Question Backlog
