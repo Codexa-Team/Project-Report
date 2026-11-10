@@ -4237,6 +4237,15 @@ De las brechas de conocimiento, se formularon las siguientes preguntas listas pa
 
 ### 8.1.4. Question Backlog
 
+Priorizando las preguntas según su impacto en el modelo de negocio, se estableció el siguiente backlog:
+
+| Prioridad | ID | Pregunta(Experiment-Ready Question) |
+| --------- | -- | ----------------------------------- |
+| **Alta** | *Q1* | ¿Aumentará la tasa de conversión de reservas la implementación de un sistema de reseñas verificadas y perfiles de usuario detallados? |
+| **Alta** | *Q4* | ¿Incrementará la implementación de filtros de búsqueda (marca, precio, fechas) la tasa de solicitudes de reserva en comparación con una búsqueda simple por lista? | 
+| **Media** | *Q2* | ¿Qué valor relativo otorgan los propietarios a las funcionalidades de monitoreo IoT frente a una reducción en la comisión por servicio? |
+| **Baja** | *Q3* | ¿Estarán los propietarios dispuestos a mantener sus vehículos publicados en la plataforma tras la primera experiencia de alquiler si se les ofrece un seguro de daños? |
+
 ### 8.1.5. Experiment Cards
 
 ## 8.2. Experiment Design
