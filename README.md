@@ -4080,23 +4080,127 @@ Aqui se ubican los archivos .feature que sirven para el funcionamiento de las pr
 
 ## 6.4. Auditoría de Experiencias de Usuario 
 
+La Auditoría de Experiencias de Usuario (UX Audit) permite evaluar de manera rigurosa, cuantitativa y cualitativa la usabilidad, arquitectura de información y accesibilidad de la plataforma **RentiCar**, contrastando su interfaz frente a estándares reconocidos de la industria para asegurar una experiencia fluida, intuitiva y segura para arrendatarios y arrendadores.
+
 ### 6.4.1. Auditoría realizada
+
+En el marco de la colaboración inter-equipos de la carrera, el equipo de **Codexa-Team** llevó a cabo una auditoría heurística completa sobre el producto digital desarrollado por el grupo homólogo asignado.
 
 #### 6.4.1.1. Información del grupo auditado
 
+| Campo | Detalle de la Startup Auditada |
+| :--- | :--- |
+| **Nombre de la Startup / Proyecto:** | AutoConnect / MoveIt |
+| **Solución Digital:** | Plataforma web de gestión de carpooling y movilidad corporativa |
+| **Repositorio / Despliegue Evaluado:** | Entorno de staging web y aplicación SPA |
+| **Integrantes del Grupo Auditado:** | Equipo estudiantil del curso de Diseño de Experimentos |
+| **Objetivo de la Auditoría:** | Identificar fricciones de navegación, brechas de retroalimentación en formularios y problemas de contraste y consistencia en los flujos principales de reserva y publicación |
+
 #### 6.4.1.2. Cronograma de auditoría realizada 
+
+| Fase / Actividad | Fecha | Responsables | Entregable / Resultado |
+| :--- | :---: | :--- | :--- |
+| **1. Planificación y Definición de Alcance** | 15/10/2026 | Estefano Solís, Sergio Landa | Definición de tareas críticas (Registro, Búsqueda, Solicitud) y exclusiones |
+| **2. Inspección Heurística Individual** | 18/10/2026 | Estefano Solís | Mapeo de heurísticas de Nielsen y principios de Arquitectura de Información |
+| **3. Consolidación de Severidades y Hallazgos** | 21/10/2026 | Equipo Codexa-Team | Matriz unificada de problemas y priorización según impacto |
+| **4. Redacción de Recomendaciones y Entrega** | 24/10/2026 | Estefano Solís | Informe técnico entregado formalmente al equipo auditado |
 
 #### 6.4.1.3. Contenido de auditoría realizada
 
+La evaluación se estructuró a partir de las **10 Heurísticas de Usabilidad de Jakob Nielsen** y los principios fundamentales de **Arquitectura de Información (IA)**:
+
+##### Escala de Severidad Empleada:
+
+| Nivel | Clasificación | Criterio de Impacto |
+| :---: | :--- | :--- |
+| **1** | **Problema Superficial** | Afecta mínimamente la experiencia estética; el usuario lo supera de forma inmediata. |
+| **2** | **Problema Menor** | Genera confusión leve o retardo temporal; requiere esfuerzo adicional pero no bloquea el flujo. |
+| **3** | **Problema Mayor** | Dificulta seriamente el objetivo; los usuarios no pueden resolverlo fácilmente por sí mismos. |
+| **4** | **Problema Crítico / Catastrófico** | Impide la culminación de la tarea; ocasiona bloqueo total o abandono inmediato del sistema. |
+
+##### Matriz de Hallazgos Principales en la Solución Auditada:
+
+| # | Componente / Flujo | Heurística / Principio Violado | Severidad | Descripción del Hallazgo | Recomendación Técnica |
+| :-: | :--- | :--- | :-: | :--- | :--- |
+| **1** | Formulario de Registro | Visibilidad del estado del sistema | 2 | No indica los requisitos de complejidad de contraseña hasta después del fallo de envío. | Añadir validación visual y en tiempo real (inline validation) con lista de requisitos dinámicos. |
+| **2** | Búsqueda de Rutas | Flexibilidad y eficiencia de uso | 3 | No permite autocompletar direcciones ni filtrar por horario de llegada, solo de salida. | Integrar API de geocodificación y selector bidireccional de franjas horarias. |
+| **3** | Confirmación de Viaje | Prevención de errores | 3 | El botón de cancelación no solicita confirmación en un modal, cancelando al primer clic accidental. | Implementar diálogo modal de confirmación con énfasis visual en la acción irreversible. |
+| **4** | Panel de Pasajeros | Reconocimiento antes que recuerdo | 2 | La lista de viajes históricos no muestra el precio pagado a menos que se abra el detalle individual. | Incorporar el monto final visible directamente en la card de resumen del viaje. |
+
+---
+
 ### 6.4.2. Auditoría recibida
+
+A continuación, se documenta la auditoría heurística recibida por **Codexa-Team** respecto a nuestra plataforma **RentiCar**, evaluando tanto la Landing Page como la Aplicación Web (SPA).
 
 #### 6.4.2.1. Información del grupo auditor
 
+| Campo | Detalle Informativo |
+| :--- | :--- |
+| **Grupo Evaluador:** | Equipo Evaluador Par - Curso 1ASI0729 |
+| **Producto Evaluado:** | **RentiCar** (Landing Page Desktop y Aplicación Web Angular) |
+| **Cliente / Startup:** | Codexa-Team |
+| **Evaluadores:** | Estudiantes asignados para la auditoría cruzada |
+| **Alcance:** | Usabilidad, consistencia de interfaz, claridad en la propuesta de valor y flujos de reserva |
+
 #### 6.4.2.2. Cronograma de auditoría recibida 
+
+| Hito / Sesión | Fecha | Participantes | Objetivo |
+| :--- | :---: | :--- | :--- |
+| **Sesión de Demostración** | 16/10/2026 | Codexa-Team y Grupo Auditor | Presentación guiada de los flujos principales de arrendatario y arrendador |
+| **Recepción del Informe Heurístico** | 22/10/2026 | Estefano Solís, Sergio Landa | Recepción del reporte con los 8 problemas identificados y su severidad |
+| **Reunión de Análisis y Plan de Subsanación** | 25/10/2026 | Equipo Codexa-Team | Evaluación técnica de factibilidad e incorporación al backlog de desarrollo |
 
 #### 6.4.2.3. Contenido de auditoría recibida
 
+##### 1. Evaluación de la Landing Page
+
+| # | Problema Identificado | Severidad | Heurística / Principio Violado |
+| :-: | :--- | :-: | :--- |
+| **1** | El texto descriptivo sobre la plataforma no tiene suficiente claridad, dificultando la comprensión rápida de la propuesta de valor. | 1 | IA - ¿Es claro? |
+| **2** | Los botones de *call to action* no comunican claramente la acción esperada, generando dudas sobre la interacción. | 2 | IA - ¿Es usable? |
+| **3** | Las cards de los vehículos en la vista previa no incluyen información completa, como el número de placa y transmisión. | 2 | Usabilidad - Consistencia y estándares |
+| **4** | El diseño visual no tiene una jerarquía clara, dificultando la navegación de los usuarios hacia los planes de alquiler. | 3 | IA - ¿Es encontrable? |
+
+##### 2. Evaluación de la Aplicación Web
+
+| # | Problema Identificado | Severidad | Heurística / Principio Violado |
+| :-: | :--- | :-: | :--- |
+| **1** | Los filtros de búsqueda disponibles son limitados y no permiten una búsqueda avanzada por características específicas del vehículo. | 2 | Usabilidad - Flexibilidad y eficiencia de uso |
+| **2** | La visualización de la disponibilidad de los vehículos no es clara ni en tiempo real, lo que causa incertidumbre en los arrendatarios. | 3 | Usabilidad - Retroalimentación y estado del sistema |
+| **3** | Los arrendadores tienen dificultades para modificar los detalles de sus vehículos debido a la falta de consistencia en los formularios. | 2 | Usabilidad - Consistencia y estándares |
+| **4** | La falta de un mapa interactivo impide a los arrendatarios localizar los vehículos disponibles en su área geográfica. | 3 | IA - ¿Es encontrable? |
+
+##### Descripción Detallada de Problemas y Recomendaciones Recibidas:
+
+###### Landing Page:
+- **Problema 1 (Severidad 1 - IA: ¿Es claro?):** El texto descriptivo inicial resulta genérico, sin enfatizar el valor diferencial de la telemetría IoT y los contratos seguros.
+  - *Recomendación:* Mejorar la estructura y claridad del texto, utilizando titulares orientados al beneficio y listas de viñetas claras.
+- **Problema 2 (Severidad 2 - IA: ¿Es usable?):** El botón de llamada a la acción tenía un texto genérico ("Entrar") que no motivaba la conversión.
+  - *Recomendación:* Rediseñar los botones CTA con microcopia directa y atractiva, como "Reserva tu vehículo ahora".
+- **Problema 3 (Severidad 2 - Usabilidad: Consistencia y estándares):** Las tarjetas de exhibición omitían metadatos relevantes como año del modelo y placa.
+  - *Recomendación:* Estandarizar las cards vehiculares asegurando que contengan marca, modelo, año, precio por día y placa.
+- **Problema 4 (Severidad 3 - IA: ¿Es encontrable?):** La jerarquía visual carecía de separación evidente entre beneficios para arrendadores y para arrendatarios.
+  - *Recomendación:* Segmentar la página en dos bloques visualmente diferenciados con llamadas a la acción personalizadas por rol.
+
+###### Aplicación Web:
+- **Problema 1 (Severidad 2 - Usabilidad: Flexibilidad y eficiencia de uso):** El buscador solo permitía filtrar por marca.
+  - *Recomendación:* Expandir el panel de filtros para permitir selección de rango de precios, tipo de transmisión, combustible y número de asientos.
+- **Problema 2 (Severidad 3 - Usabilidad: Retroalimentación y estado del sistema):** Los vehículos alquilados seguían mostrándose disponibles hasta que el usuario intentaba seleccionarlos.
+  - *Recomendación:* Actualizar el estado visual del vehículo de inmediato a "ALQUILADO" con indicador de color y deshabilitar el botón de reserva.
+- **Problema 3 (Severidad 2 - Usabilidad: Consistencia y estándares):** Los formularios de creación y edición de flota utilizaban componentes visuales distintos.
+  - *Recomendación:* Unificar el diseño utilizando componentes consistentes de Angular Material (`mat-form-field`, `mat-select`).
+- **Problema 4 (Severidad 3 - IA: ¿Es encontrable?):** Los arrendatarios no podían visualizar la cercanía geográfica de los vehículos para la recogida.
+  - *Recomendación:* Implementar un mapa interactivo con Leaflet que renderice pines de ubicación precisa de cada unidad disponible.
+
 #### 6.4.2.4. Resumen de modificaciones para subsanar hallazgos
+
+A partir de los hallazgos recibidos en la auditoría, **Codexa-Team** priorizó e implementó las siguientes mejoras en la plataforma **RentiCar**:
+
+1. **Incorporación de Mapa Interactivo con Leaflet:** Se integró un mapa interactivo sobre OpenStreetMap tanto en el catálogo de búsqueda como en el panel de telemetría IoT, permitiendo a los arrendatarios ubicar de inmediato las unidades vehiculares más cercanas a su ubicación actual.
+2. **Sistema Avanzado de Filtros Multi-Criterio:** Se enriqueció la barra de búsqueda en Angular con filtros dinámicos por rango de tarifa diaria, tipo de transmisión, modelo y estado de disponibilidad en tiempo real.
+3. **Estandarización UI en Flujos de Gestión de Flota:** Se rediseñaron los formularios de publicación y edición de vehículos bajo la directiva de Angular Material, garantizando consistencia en etiquetas, botones de guardado y mensajes de confirmación.
+4. **Optimización de Microcopia y Jerarquía Visual:** En la Landing Page y en la aplicación, se actualizaron los botones principales hacia textos de acción claros ("Reserva tu vehículo ahora", "Publicar mi automóvil"), y se añadieron insignias visuales de placa y disponibilidad en cada tarjeta vehicular.
 
 # Capítulo VII: DevOps Practices
 
