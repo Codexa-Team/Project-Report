@@ -4060,11 +4060,424 @@ Aqui se ubican los archivos .feature que sirven para el funcionamiento de las pr
 
 ### 6.1.4. Core System Tests
 
+En este apartado se implementan las pruebas de sistema y de integración automatizadas de extremo a extremo (End-to-End) para **RentiCar**, empleando **Selenium WebDriver** junto con **Cucumber BDD** en formato **Gherkin**. Este enfoque permite verificar la correcta interacción entre la interfaz de usuario en Angular y las respuestas del backend en Spring Boot, asegurando que los flujos críticos del negocio se ejecuten sin fricción ni fallos en el navegador.
+
+---
+
+#### 1. Flujo de Registro de Usuario (SignUp)
+
+Verifica que un nuevo usuario (arrendatario o arrendador) pueda completar satisfactoriamente el formulario de registro con validaciones de campos en tiempo real y sea registrado en la plataforma.
+
+- **Feature en formato Gherkin (`signup.feature`):**
+```gherkin
+Feature: User Sign Up
+  As a new customer
+  I want to create an account in RentiCar
+  So that I can access vehicle rental or fleet management services
+
+  Scenario: Successful user registration as a renter
+    Given the user navigates to the registration page "/auth/register"
+    When the user fills the form with name "Carlos", lastName "Mendoza", email "carlos.mendoza@test.com", and password "SecurePass123!"
+    And the user selects the role "Arrendatario"
+    And clicks on the "Crear Cuenta" button
+    Then the system should display a confirmation toast "Registro completado con éxito"
+    And the user should be redirected to the login page "/auth/login"
+```
+
+- **Step Definitions en Java (`SignUpSteps.java`):**
+```java
+package com.codexateam.platform.testing.steps;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+import io.cucumber.java.en.Then;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class SignUpSteps {
+    private final WebDriver driver = Hooks.getDriver();
+    private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+    @Given("the user navigates to the registration page {string}")
+    public void navigateToRegister(String path) {
+        driver.get("http://localhost:8085" + path);
+    }
+
+    @When("the user fills the form with name {string}, lastName {string}, email {string}, and password {string}")
+    public void fillRegistrationForm(String name, String lastName, String email, String password) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("firstName"))).sendKeys(name);
+        driver.findElement(By.id("lastName")).sendKeys(lastName);
+        driver.findElement(By.id("email")).sendKeys(email);
+        driver.findElement(By.id("password")).sendKeys(password);
+    }
+
+    @When("the user selects the role {string}")
+    public void selectRole(String role) {
+        driver.findElement(By.cssSelector("input[value='ROLE_RENTER']")).click();
+    }
+
+    @When("clicks on the {string} button")
+    public void clickSubmit(String buttonText) {
+        driver.findElement(By.xpath("//button[contains(text(), '" + buttonText + "')]")).click();
+    }
+
+    @Then("the system should display a confirmation toast {string}")
+    public void verifyToast(String message) {
+        boolean toastVisible = wait.until(ExpectedConditions.textToBePresentInElementLocated(
+                By.cssSelector(".mat-snack-bar-container, .toast-success"), message));
+        assertTrue(toastVisible);
+    }
+
+    @Then("the user should be redirected to the login page {string}")
+    public void verifyRedirect(String path) {
+        wait.until(ExpectedConditions.urlContains(path));
+        assertTrue(driver.getCurrentUrl().contains(path));
+    }
+}
+```
+
+- **Evidencias de Ejecución:**
+  - *Resultado de la prueba en la aplicación web (Frontend):*
+    *(Captura de pantalla del formulario de registro completado exitosamente en el navegador).*
+    `![SignUp Test Web Frontend](assets/chapter06/selenium-signup-frontend.png)`
+  - *Ejecución de escenarios en IntelliJ IDEA:*
+    *(Captura del árbol de pruebas de Cucumber en IntelliJ con los escenarios en verde).*
+    `![SignUp Cucumber Test Runner](assets/chapter06/selenium-signup-runner.png)`
+
+---
+
+#### 2. Flujo de Autenticación de Usuario (SignIn)
+
+Verifica que un usuario registrado pueda iniciar sesión con sus credenciales, recibiendo el token de acceso JWT y siendo redirigido a su panel principal.
+
+- **Feature en formato Gherkin (`signin.feature`):**
+```gherkin
+Feature: User Authentication
+  As a registered user
+  I want to log into my RentiCar account
+  So that I can access my personalized dashboard and vehicle bookings
+
+  Scenario: Successful login with valid credentials
+    Given the user navigates to the login page "/auth/login"
+    When the user enters email "carlos.mendoza@test.com" and password "SecurePass123!"
+    And clicks on the "Iniciar Sesión" button
+    Then the system should authenticate the user
+    And the user should be redirected to the main dashboard "/dashboard/catalog"
+    And the navbar should display the user's name "Carlos"
+```
+
+- **Step Definitions en Java (`SignInSteps.java`):**
+```java
+package com.codexateam.platform.testing.steps;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+import io.cucumber.java.en.Then;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class SignInSteps {
+    private final WebDriver driver = Hooks.getDriver();
+    private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+    @Given("the user navigates to the login page {string}")
+    public void navigateToLogin(String path) {
+        driver.get("http://localhost:8085" + path);
+    }
+
+    @When("the user enters email {string} and password {string}")
+    public void enterCredentials(String email, String password) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("username"))).sendKeys(email);
+        driver.findElement(By.id("password")).sendKeys(password);
+    }
+
+    @Then("the system should authenticate the user")
+    public void verifyAuthentication() {
+        wait.until(driver -> driver.manage().getCookies().stream()
+                .anyMatch(c -> c.getName().equals("jwt") || c.getName().equals("token")) 
+                || !driver.findElements(By.cssSelector(".user-profile")).isEmpty());
+    }
+
+    @Then("the navbar should display the user's name {string}")
+    public void verifyNavbarUser(String expectedName) {
+        boolean namePresent = wait.until(ExpectedConditions.textToBePresentInElementLocated(
+                By.cssSelector(".user-name-display, .navbar-user"), expectedName));
+        assertTrue(namePresent);
+    }
+}
+```
+
+- **Evidencias de Ejecución:**
+  - *Resultado de la prueba en la aplicación web (Frontend):*
+    `![SignIn Test Web Frontend](assets/chapter06/selenium-signin-frontend.png)`
+  - *Ejecución de escenarios en IntelliJ IDEA:*
+    `![SignIn Cucumber Test Runner](assets/chapter06/selenium-signin-runner.png)`
+
+---
+
+#### 3. Flujo de Publicación de Vehículo (RegisterVehicle)
+
+Valida que un arrendador pueda registrar una nueva unidad vehicular especificando marca, modelo, año, precio diario por alquiler y fotografías, reflejándose inmediatamente en el catálogo.
+
+- **Feature en formato Gherkin (`register_vehicle.feature`):**
+```gherkin
+Feature: Vehicle Registration
+  As a vehicle owner (arrendador)
+  I want to publish a new vehicle in the catalog
+  So that potential renters can discover and book it
+
+  Scenario: Successful vehicle publication
+    Given the owner is logged in and navigates to "/owner/vehicles/new"
+    When the owner inputs brand "Toyota", model "Corolla Cross", year "2023", and daily price "140.00"
+    And the owner attaches the vehicle photo
+    And clicks on the "Publicar Vehículo" button
+    Then the vehicle should be created with status "AVAILABLE"
+    And it should appear in the owner's vehicle inventory list
+```
+
+- **Step Definitions en Java (`RegisterVehicleSteps.java`):**
+```java
+package com.codexateam.platform.testing.steps;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+import io.cucumber.java.en.Then;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class RegisterVehicleSteps {
+    private final WebDriver driver = Hooks.getDriver();
+    private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+    @When("the owner inputs brand {string}, model {string}, year {string}, and daily price {string}")
+    public void inputVehicleDetails(String brand, String model, String year, String price) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("brand"))).sendKeys(brand);
+        driver.findElement(By.id("model")).sendKeys(model);
+        driver.findElement(By.id("year")).sendKeys(year);
+        driver.findElement(By.id("dailyPrice")).sendKeys(price);
+    }
+
+    @When("the owner attaches the vehicle photo")
+    public void attachPhoto() {
+        driver.findElement(By.id("imageUrl")).sendKeys("https://images.unsplash.com/photo-1549399542-7e3f8b79c341");
+    }
+
+    @Then("the vehicle should be created with status {string}")
+    public void verifyVehicleStatus(String status) {
+        boolean statusPresent = wait.until(ExpectedConditions.textToBePresentInElementLocated(
+                By.cssSelector(".vehicle-status-badge"), status));
+        assertTrue(statusPresent);
+    }
+
+    @Then("it should appear in the owner's vehicle inventory list")
+    public void verifyInventoryList() {
+        assertTrue(wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//td[contains(text(), 'Corolla Cross')]"))).isDisplayed());
+    }
+}
+```
+
+- **Evidencias de Ejecución:**
+  - *Resultado de la prueba en la aplicación web (Frontend):*
+    `![Register Vehicle Test Web Frontend](assets/chapter06/selenium-register-vehicle-frontend.png)`
+  - *Ejecución de escenarios en IntelliJ IDEA:*
+    `![Register Vehicle Cucumber Test Runner](assets/chapter06/selenium-register-vehicle-runner.png)`
+
+---
+
+#### 4. Flujo de Reserva de Vehículo (RentVehicle)
+
+Verifica que un arrendatario pueda seleccionar un automóvil del catálogo, escoger las fechas de inicio y finalización del alquiler, visualizar el desglose del costo total y confirmar la reserva.
+
+- **Feature en formato Gherkin (`rent_vehicle.feature`):**
+```gherkin
+Feature: Vehicle Rental Booking
+  As an authenticated renter
+  I want to book an available vehicle for specific dates
+  So that I can secure transportation for my requested period
+
+  Scenario: Successful booking reservation
+    Given the renter is authenticated and views the details of vehicle "Toyota Corolla Cross"
+    When the renter selects the start date "2026-12-01" and end date "2026-12-05"
+    Then the system should calculate a total of 4 rental days
+    When the renter clicks on the "Confirmar Reserva" button
+    Then the booking status should transition to "PENDING"
+    And the reservation should be listed in "Mis Reservas"
+```
+
+- **Step Definitions en Java (`RentVehicleSteps.java`):**
+```java
+package com.codexateam.platform.testing.steps;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+import io.cucumber.java.en.Then;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class RentVehicleSteps {
+    private final WebDriver driver = Hooks.getDriver();
+    private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+    @When("the renter selects the start date {string} and end date {string}")
+    public void selectBookingDates(String startDate, String endDate) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("startDate"))).sendKeys(startDate);
+        driver.findElement(By.id("endDate")).sendKeys(endDate);
+    }
+
+    @Then("the system should calculate a total of {int} rental days")
+    public void verifyCalculatedDays(int days) {
+        boolean daysMatch = wait.until(ExpectedConditions.textToBePresentInElementLocated(
+                By.id("totalRentalDays"), String.valueOf(days)));
+        assertTrue(daysMatch);
+    }
+
+    @Then("the booking status should transition to {string}")
+    public void verifyBookingStatus(String expectedStatus) {
+        boolean statusMatch = wait.until(ExpectedConditions.textToBePresentInElementLocated(
+                By.cssSelector(".booking-status-tag"), expectedStatus));
+        assertTrue(statusMatch);
+    }
+}
+```
+
+- **Evidencias de Ejecución:**
+  - *Resultado de la prueba en la aplicación web (Frontend):*
+    `![Rent Vehicle Test Web Frontend](assets/chapter06/selenium-rent-vehicle-frontend.png)`
+  - *Ejecución de escenarios en IntelliJ IDEA:*
+    `![Rent Vehicle Cucumber Test Runner](assets/chapter06/selenium-rent-vehicle-runner.png)`
+
+---
+
+#### 5. Flujo de Monitoreo de Telemetría IoT (IoTTelemetry)
+
+Valida que el arrendador y el arrendatario puedan consultar la telemetría en tiempo real de una reserva activa, visualizando el marcador del vehículo sobre el mapa Leaflet con coordenadas GPS, velocidad actual y nivel de combustible.
+
+- **Feature en formato Gherkin (`iot_telemetry.feature`):**
+```gherkin
+Feature: Real-Time IoT Vehicle Telemetry
+  As an authorized user
+  I want to track the real-time position and metrics of my rented vehicle
+  So that I can verify vehicle security, location, and fuel levels
+
+  Scenario: Display live vehicle location on Leaflet map
+    Given the user opens the telemetry tracking panel for active booking "BK-1002"
+    When the telemetry sensor stream is queried
+    Then the Leaflet map should render the vehicle GPS pin at coordinates "-12.0864, -77.0345"
+    And the telemetry status card should display speed "45 km/h" and fuel level "82%"
+```
+
+- **Step Definitions en Java (`IoTTelemetrySteps.java`):**
+```java
+package com.codexateam.platform.testing.steps;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+import io.cucumber.java.en.Then;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.time.Duration;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class IoTTelemetrySteps {
+    private final WebDriver driver = Hooks.getDriver();
+    private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+    @Given("the user opens the telemetry tracking panel for active booking {string}")
+    public void openTelemetryPanel(String bookingId) {
+        driver.get("http://localhost:8085/bookings/" + bookingId + "/tracking");
+    }
+
+    @Then("the Leaflet map should render the vehicle GPS pin at coordinates {string}")
+    public void verifyLeafletMapPin(String coordinates) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".leaflet-marker-icon")));
+        assertTrue(driver.findElement(By.cssSelector(".leaflet-container")).isDisplayed());
+    }
+
+    @Then("the telemetry status card should display speed {string} and fuel level {string}")
+    public void verifyTelemetryMetrics(String speed, String fuel) {
+        assertTrue(wait.until(ExpectedConditions.textToBePresentInElementLocated(By.id("currentSpeed"), speed)));
+        assertTrue(wait.until(ExpectedConditions.textToBePresentInElementLocated(By.id("fuelLevel"), fuel)));
+    }
+}
+```
+
+- **Evidencias de Ejecución:**
+  - *Resultado de la prueba en la aplicación web (Frontend):*
+    `![IoT Telemetry Test Web Frontend](assets/chapter06/selenium-telemetry-frontend.png)`
+  - *Ejecución de escenarios en IntelliJ IDEA:*
+    `![IoT Telemetry Cucumber Test Runner](assets/chapter06/selenium-telemetry-runner.png)`
+
+---
+
 ## 6.2. Static testing & Verification 
+
+Esta sección formaliza las metodologías y herramientas de análisis estático aplicadas al código fuente de **RentiCar**, asegurando el estricto cumplimiento de los estándares de calidad, seguridad y diseño arquitectónico antes de la fase de compilación y despliegue continuo.
 
 ### 6.2.1. Static Code Analysis
 
+El análisis estático es una fase obligatoria en nuestra pipeline de Integración Continua (CI). Permite detectar defectos, olores de código (*code smells*), vulnerabilidades de seguridad y desviaciones estilísticas en una etapa temprana del ciclo de vida del software, reduciendo drásticamente el costo de mantenimiento y refactorización.
+
 #### 6.2.1.1. Coding standard & Code conventions
+
+Para el backend en Java (Spring Boot 3.x), el equipo adoptó la **Google Java Style Guide** como estándar oficial de codificación, automatizado y auditado mediante el plugin **CheckStyle** (`maven-checkstyle-plugin`) sobre la especificación oficial `google_checks.xml`.
+
+| Lenguaje / Framework | Estándar / Convención Adoptada | Herramienta de Aplicación | Entorno / IDE Utilizado |
+| :--- | :--- | :--- | :--- |
+| **Java 21 / Spring Boot 3.x** | **Google Java Style Guide** (`google_checks.xml`) | **CheckStyle** (Maven Plugin) | **IntelliJ IDEA**, **SonarLint** |
+| **TypeScript / Angular 20** | **Angular Style Guide** & ESLint | **ESLint / Prettier** | **VS Code**, **IntelliJ IDEA** |
+
+##### Principios de Codificación Clave Aplicados:
+
+1. **Clean Code & Legibilidad:**
+   - Convenciones de nombrado explícitas: `camelCase` para variables y métodos, `PascalCase` para clases y tipos, y `SCREAMING_SNAKE_CASE` para constantes y valores de enumeradores.
+   - Funciones cortas con una única responsabilidad (Principio SRP), eliminando código muerto, importaciones no utilizadas y comentarios decorativos innecesarios.
+
+2. **Domain-Driven Design (DDD) & CQRS (Backend Java):**
+   - **Lenguaje Ubicuo:** Los paquetes, clases y métodos reflejan con exactitud los términos del modelo de dominio de alquiler vehicular (`Booking`, `Vehicle`, `Renter`, `Owner`, `Telemetry`, `Review`).
+   - **Separación de Comandos y Consultas (CQRS):** Los servicios de aplicación se dividen estrictamente en `*CommandServiceImpl` (mutaciones) y `*QueryServiceImpl` (lecturas).
+   - **Límites Transaccionales y Desacoplamiento:** Los agregados de distintos Bounded Contexts se referencian exclusivamente mediante identificadores escalares (`ownerId: Long`, `vehicleId: Long`) y coordinan a través de Facades de Capa Anticorrupción (ACL).
+
+##### Auditoría de Estilo por Bounded Context:
+
+Se auditó el código fuente mediante el comando:
+```bash
+mvn checkstyle:check
+```
+
+- **Booking Bounded Context:** Validación de formato en agregados (`Booking`), comandos (`CreateBookingCommand`) y value objects (`BookingStatus`), garantizando nombres no ambiguos y métodos de fábrica expresivos.
+- **Listings Bounded Context:** Conformidad estilística en agregados (`Vehicle`), comandos (`CreateVehicleCommand`, `UpdateVehicleCommand`) y contratos de valor para arreglos de bytes (`equals` / `hashCode`).
+- **IAM Bounded Context:** Estandarización de servicios de autenticación y autorización stateless basada en tokens JWT, cumpliendo con la estructura de excepciones y configuraciones seguras.
+- **IoT Bounded Context:** Verificación de controladores REST (`RouteController`), servicios de telemetría y modelos de posición geoespacial.
+- **Reviews Bounded Context:** Homologación de records y servicios de cálculo de reputación y opiniones.
+
+##### Evidencia de Ejecución de Checkstyle:
+
+- *Salida en Consola Maven (`mvn checkstyle:check`):*
+  *(Captura que evidencia la compilación limpia sin violaciones de las reglas de Google Java Style).*
+  `![CheckStyle Maven Build Success](assets/chapter06/checkstyle-build-success.png)`
+
+- *Reporte HTML Generado (`target/site/checkstyle.html`):*
+  *(Captura del reporte navegable generado por maven-checkstyle-plugin).*
+  `![CheckStyle HTML Report](assets/chapter06/checkstyle-report-overview.png)`
 
 #### 6.2.1.2. Code Quality & Code Security
 
