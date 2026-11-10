@@ -4181,25 +4181,92 @@ El pipeline de compilación y pruebas está configurado como un **Jenkins Pipeli
     Aqui se calcula la métrica de cobertura de código alcanzada por las suites de prueba. Jenkins procesa los reportes con el plugin de JaCoCo/JUnit para publicar los resultados en el tablero del job y archiva los
     reportes HTML resultantes como **artefactos de la ejecución**.
    
+
+
+## 7.2. Continuous Delivery
+
+El objetivo de la Entrega Continua (CD) es automatizar la integración y pruebas del código, manteniendo la aplicación lista para un despliegue manual a producción en cualquier momento. A diferencia del Despliegue Continuo (Deployment), esta práctica introduce una aprobación final.
+
+### 7.2.1. Tools and Practices
+
+|Herramienta|Tipo|Propósito en Continuous Delivery|
+|-|-|-|
+|Github Actions|Automatizacion CI/CD|Se usa para ejecutar el pipeline completo de build, test y staging. Se configura una etapa donde el despliegue final a producción es manual ademas de server junta a configuraciones y mejoras en la comunicacion y compartimiento de codigo o procesos durante el CI/CD|
+|Render|Plataforam de despliegue Backend y Frontend|Se utiliza para el despliegue del backend RESTful API y el frontend. Garantizando un entorno de producción estable y fácil de gestionar.
+|Docker|Contenerizacion| Aseguramiento de consistencia del entorno durante las fases del desarrollo|
+|Trello|Gestion de desarrollo individual del proyecto|Se usa para gestionar el proceso de aprobación. Después de la validación del pipeline en staging, un Product Owner debe revisar el build y autorizar manualmente el movimiento del ticket a la columna de Despliegue a Producción|
+
+**Practicas Clave:**
+
+- Feature Branching y Merge Requests: Los cambios se desarrollan en ramas separadas (feature/login-ui) y se integran a una rama estable (main o feature) solo después de pasar todas las pruebas de CI.
+- Pipeline de Validación en Staging: Tras la CI exitosa, los artefactos se despliegan automáticamente a un entorno de Staging. Aquí, el equipo puede ejecutar pruebas exploratorias y los interesados pueden validar la funcionalidad, replicando las condiciones de producción (Render).
+- Despliegue Semiautomático: El pipeline prepara la aplicación y las imágenes de Docker/artefactos para el despliegue final, pero no lo ejecuta. La acción de desplegar a producción se dispara únicamente cuando un desarrollador o administrador aprueba la build validada en el entorno de staging.
+- Aprobación Manual: Antes del despliegue en producción, el pipeline requiere una aprobación explícita (Merge Request a main) para reducir el riesgo de lanzar código no deseado.
+- Rollback Manual: Aunque la infraestructura de Render puede facilitar rollbacks rápidos, la decisión y ejecución de un rollback en producción son manuales y controladas por el equipo, garantizando la supervisión total ante una incidencia.
+
+### 7.2.2. Stages Deployment Pipeline Components
+
+El pipeline de Continuous Delivery está dividido en etapas claras para garantizar la calidad antes de la aprobación final. Utilizamos Jenkins para la orquestación de la fase de Integración Continua (CI), que es el pilar de este flujo.
+
+**Flujo de Integración (Jenkins)**
+
+|Etapa del Pipeline|Objetivo |
+|------------------|---------|
+|Checkout SCM      |Obtener la version del codigo mas reciente|
+|Compile Stage     |Construir la aplicación Java/Spring Boot|
+|Testing Stage     |Ejecutar la suite de pruebas (JUnit, Mockito, Karate, Selenium)|
+|Package Stage     |Generar el artefacto final (Imagen de Docker) para el despliegue|
+
+**Componentes de Entrega Continua (Post-CI)**
+
+Una vez que el build es exitoso en Jenkins, el pipeline avanza a las siguientes etapas, orquestadas por GitHub Actions en conjunto con las plataformas de despliegue:
+
+|Componente|Descripcion|
+|----------|-----------|
+|Despliegue a Staging|El backend y el front-end  se despliegan automáticamente al entorno de Staging para la validación de pre-producción|
+|Validacion en Staging|Se realizan pruebas de sistema y validaciones manuales/exploratorias para verificar el comportamiento de extremo a extremo|
+|Aprobación Manual de Despliegue| Se deben revisar los resultados de las pruebas en Staging y dar la aprobación explícita para avanzar a produccion|  
+|Despliegue Controlado a Producción|Solo tras la aprobación manual, se ejecuta la acción para desplegar la build validada a los entornos de producción|
+
 **Evidencias de Ejecución del Pipeline en Jenkins**
 
 Para constatar la operatividad del pipeline de CI, se documentan las evidencias de compilación exitosa y el reporte consolidado de pruebas obtenido directamente desde la interfaz web de Jenkins para 
 el proyecto RentiCar:
-   
-   <img src="assets/jenkins/jenkins(1).png" alt="Carátula Video About the Product"/><br>
-   <img src="assets/jenkins/jenkins(2).png" alt="Carátula Video About the Product"/><br>
 
-## 7.2. Continuous Delivery
-
-### 7.2.1. Tools and Practices
-
-### 7.2.2. Stages Deployment Pipeline Components
+  <img src="assets/jenkins/jenkins(1).png" alt="Carátula Video About the Product"/><br>
+  <img src="assets/jenkins/jenkins(2).png" alt="Carátula Video About the Product"/><br>
 
 ## 7.3. Continuous deployment 
 
+El Despliegue Continuo (CD) se enfoca en que los cambios aprobados en el código pasen automáticamente desde el desarrollo hasta la producción, garantizando que cada nueva versión sea entregada sin intervención manual, siempre y cuando pase todas las pruebas
+
 ### 7.3.1. Tools and Practices
 
+|Herramienta|Propósito en el Despliegue automatico|
+|-----------|-------------------------------------|
+|Github Actions|Para automatizar el pipeline de CI/CD. Permite configurar workflows que incluyen la ejecución de pruebas y el despliegue automático a entornos |
+|Render|Se utiliza para la automatizacion del backend RESTful API y el frontend|
+|TiDB|Plataforma para la base de datos MySQL. Permite gestionar el despliegue de forma automatizada, con soporte para migraciones y backups|
+|Docker|Para contenerizar la aplicación backend (Spring Boot), asegura consistencia en los entornos de desarrollo y producción|
+
+**Practicas Clave:**
+
+- Feature Branching: Utilizamos ramas separadas para el desarrollo. Una vez completadas y probadas, se fusionan a la rama feature y luego main.
+
+- Commit-based Deployment: Cada vez que se realiza un commit en la rama feat/ (o rama de integración), el pipeline de CI/CD se activa automáticamente para el despliegue a Staging.
+
+- Rollback Automático: En caso de detectar fallos post-despliegue en entornos automáticos, el pipeline está configurado para realizar un rollback automático, restaurando la versión anterior.
+
 ### 7.3.2. Production Deployment Pipeline Components
+
+Estos componentes detallan cómo se automatiza el despliegue, incluyendo la Base de Datos, el Backend y el Frontend.
+
+|Herramienta|Flujo de automatizacion|
+|-----------|-------------------------------------|
+|Base de Datos (TiDB)|**Gestion de migraciones:** Al modificar, agregar o hacer consultas aplica los cambios automaticamente y los guarda <br> **Backup Automatico:** Se crean copias de seguridad antes de migraciones criticas|
+|Front-end (Render)|**Compilacion:** Construye y compila la aplicacion en la fase o seccion de produccion solicitada <br> **Pruebas automatizadas:** Ejecuta pruebas unitarias, E2E y Selenium <br> **Despliegue:** Implementa la version mas reciente del codigo|
+|Backend (Render)|**Integracion continua:** Render toma la rama a eleccion (main) y la compila <br> **Construccion de versiones:** Crea la imagen en docker y selenium para las pruebas <br> **Despliegue:** Implementa la version mas reciente del codigo|
+
 
 ## 7.4. Continuous Monitoring
 
