@@ -4171,13 +4171,173 @@ el proyecto RentiCar:
 
 ## 7.4. Continuous Monitoring
 
+El monitoreo continuo (Continuous Monitoring) en **RentiCar** constituye la última fase del ciclo de vida DevOps, orientada a supervisar de manera ininterrumpida la salud operativa, rendimiento de infraestructura y comportamiento del usuario final en los entornos de producción y puesta en escena (staging). Esta práctica garantiza una alta observabilidad, permitiendo anticipar incidentes técnicos y tomar decisiones basadas en datos empíricos.
+
 ### 7.4.1. Tools and Practices
+
+Para articular una estrategia de observabilidad integral, el equipo seleccionó e integró un conjunto de herramientas complementarias que cubren tanto el comportamiento de usuario a nivel de frontend como la telemetría interna del backend y la infraestructura de contenedores.
+
+#### Catálogo de Herramientas de Monitoreo:
+
+| Herramienta | Capa de Monitoreo | Propósito en Continuous Delivery |
+| :--- | :--- | :--- |
+| **Google Analytics 4 (GA4)** | Frontend / Comportamiento Web | Registra navegación en tiempo real, embudos de conversión en reservas y eventos clave de interacción de arrendatarios y arrendadores. |
+| **Spring Boot Actuator & Micrometer** | Backend / Aplicación Java | Expone métricas internas de la JVM, tiempos de respuesta HTTP, saturación del pool de conexiones HikariCP y estado de salud (`/actuator/health`). |
+| **Prometheus** | Métricas de Infraestructura | Motor de recolección (*scraping*) y almacenamiento en series temporales para telemetría de contenedores Docker y servicios REST. |
+| **Grafana** | Visualización Unificada | Dashboards interactivos para la visualización consolidada de latencia, tasa de errores y consumo de CPU/memoria. |
+| **Alertmanager** | Gestión de Alertas | Despacha y agrupa notificaciones inmediatas ante superación de umbrales críticos hacia canales de mensajería del equipo. |
+
+#### Prácticas Clave de Monitoreo Continuo:
+
+1. **Supervisión Post-Despliegue Inmediata (48 Horas):**
+   Tras cada liberación o merge en producción, se ejecuta una ventana de supervisión intensiva durante las primeras 48 horas, contrastando la tasa de conversión y la frecuencia de errores contra la línea base previa.
+2. **Monitoreo Proactivo Basado en SLOs/SLAs:**
+   Se definen Objetivos de Nivel de Servicio (SLO) centrados en el usuario: 99.5% de disponibilidad mensual y tiempos de respuesta p95 inferiores a 800 ms para búsquedas en el catálogo.
+3. **Análisis de Embudos de Conversión y Fricción:**
+   Evaluación semanal de la tasa de abandono entre la selección de un vehículo y la confirmación de la reserva para detectar bloqueos de usabilidad o fallas en pasarelas de pago.
+4. **Validación con Datos Empíricos para Nuevas Releases:**
+   Las decisiones de desarrollo del siguiente sprint se priorizan a partir de métricas reales de adopción de funcionalidades y no de supuestos teóricos.
+
+---
 
 ### 7.4.2. Monitoring Pipeline Components 
 
+El pipeline de recolección de estadísticas del frontend se implementó integrando el script de **Google Analytics 4 (GTAG)** en la cabecera (`<head>`) de la aplicación web Angular (`Front-End/src/index.html`).
+
+#### Script de Tracking en el Header del Proyecto (`index.html`):
+
+```html
+<!-- Google tag (gtag.js) - RentiCar Continuous Monitoring -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RENTICAR2026"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RENTICAR2026', {
+    send_page_view: true,
+    custom_map: {
+      'dimension1': 'user_role',
+      'dimension2': 'vehicle_id'
+    }
+  });
+</script>
+```
+
+#### Eventos Personalizados de Negocio Configurados en Angular:
+
+Para auditar el recorrido del usuario, el servicio de analítica del frontend emite eventos personalizados ante interacciones clave:
+
+```typescript
+// Telemetry & Booking Tracking Service (Angular)
+export class AnalyticsService {
+  trackVehicleView(vehicleId: number, brand: string, dailyPrice: number): void {
+    if (typeof gtag === 'function') {
+      gtag('event', 'view_vehicle_details', {
+        vehicle_id: vehicleId,
+        vehicle_brand: brand,
+        value: dailyPrice,
+        currency: 'PEN'
+      });
+    }
+  }
+
+  trackBookingInitiated(bookingId: string, days: number, totalAmount: number): void {
+    if (typeof gtag === 'function') {
+      gtag('event', 'booking_checkout_start', {
+        booking_id: bookingId,
+        rental_days: days,
+        value: totalAmount,
+        currency: 'PEN'
+      });
+    }
+  }
+}
+```
+
+#### Evidencias de Monitoreo:
+
+- *Inserción del Script en el Header del Código Fuente:*
+  *(Captura del archivo `index.html` en el IDE mostrando el tag de Google Analytics).*
+  `![Google Analytics Header Script](assets/chapter07/monitoring-header-script.png)`
+
+- *Panel en Tiempo Real de Google Analytics 4:*
+  *(Captura del panel de GA4 evidenciando usuarios concurrentes, eventos registrados y páginas activas).*
+  `![Google Analytics Real-Time Dashboard](assets/chapter07/monitoring-ga4-dashboard.png)`
+
+---
+
 ### 7.4.3. Alerting Pipeline Components 
 
+El componente de alertas detecta automáticamente cualquier degradación en el servicio antes de que impacte negativamente a los usuarios. Se configuró **Prometheus** con un conjunto de reglas de alerta declarativas (`alert.rules.yml`) evaluadas cada 15 segundos:
+
+#### Reglas de Alerta Críticas de RentiCar (`alert.rules.yml`):
+
+```yaml
+groups:
+  - name: renticar-backend-alerts
+    rules:
+      - alert: HighHttp5xxErrorRate
+        expr: rate(http_server_requests_seconds_count{status=~"5.."}[2m]) / rate(http_server_requests_seconds_count[2m]) * 100 > 2
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Alta tasa de errores HTTP 5xx en RentiCar Backend (> 2%)"
+          description: "La tasa de errores HTTP 5xx es del {{ $value }}% en los últimos 2 minutos en la instancia {{ $labels.instance }}."
+
+      - alert: HighLatencyP95
+        expr: histogram_quantile(0.95, sum(rate(http_server_requests_seconds_bucket[5m])) by (le)) > 1.2
+        for: 3m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Latencia p95 degradada en API REST (> 1200ms)"
+          description: "El percentil 95 de tiempo de respuesta excede 1.2 segundos durante más de 3 minutos consecutivos."
+
+      - alert: DatabaseConnectionPoolHighSaturation
+        expr: hikaricp_connections_active / hikaricp_connections_max * 100 > 85
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Pool de conexiones HikariCP saturado (> 85%)"
+          description: "El pool de conexiones a la base de datos MySQL/TiDB supera el 85% de capacidad activa."
+```
+
+---
+
 ### 7.4.4. Notification Pipeline Components
+
+El pipeline de notificaciones distribuye las alertas generadas por Alertmanager y los reportes de build de CI/CD hacia los canales de comunicación oficiales del equipo de ingeniería.
+
+#### Canales de Notificación Integrados:
+
+1. **Canal de Discord / Slack (`#devops-alerts`):**
+   - Alertmanager se comunica mediante un webhook entrante con payload formateado en JSON:
+   ```json
+   {
+     "username": "RentiCar DevOps Bot",
+     "avatar_url": "https://i.postimg.cc/alert-bot.png",
+     "embeds": [
+       {
+         "title": "🚨 ALERTA CRÍTICA: HighHttp5xxErrorRate",
+         "description": "Se detectó una tasa de errores 5xx de 4.2% en el endpoint `/api/v1/bookings`.",
+         "color": 15158332,
+         "fields": [
+           { "name": "Entorno", "value": "Producción / Render", "inline": true },
+           { "name": "Severidad", "value": "CRITICAL", "inline": true },
+           { "name": "Enlace al Dashboard", "value": "[Ver en Grafana](http://localhost:3000)", "inline": false }
+         ],
+         "timestamp": "2026-11-10T20:30:00Z"
+       }
+     ]
+   }
+   ```
+2. **Notificaciones de CI/CD (GitHub Actions / Jenkins):**
+   - Cada build y suite de pruebas finalizada dispara una notificación automática con el estado de compilación, porcentaje de cobertura de código y resultado de la auditoría de SonarQube.
+3. **Notificaciones por Correo Electrónico (SMTP):**
+   - Reservadas para alertas de severidad crítica (`severity: critical`) enviadas a los correos institucionales de los ingenieros líderes de infraestructura.
 
 # Capítulo VIII: Experiment-Driven Development 
 
