@@ -4248,6 +4248,36 @@ Priorizando las preguntas según su impacto en el modelo de negocio, se establec
 
 ### 8.1.5. Experiment Cards
 
+Basados en las preguntas establecidas y ordenadas por orden de importancia, diseñamos los siguientes experimentos:
+
+| Elemento | Experiment Card #1: Validación de Confianza del Arrendatario | 
+| -------- | ---------------------------------------------- |
+| **Hypothesis** | *(Basándonos en Q1)* |
+| **Experiment** | Creemos que los arrendatarios (Clientes) se sentirán más seguros y aumentarán su intención de reserva si la plataforma muestra perfiles de propietarios con reseñas verificadas, en lugar de solo información básica. <br><br> Para verificar esto, realizaremos una prueba A/B con un prototipo funcional del catálogo de vehículos. <br><br> Les mostraremos al Grupo A (control) una tarjeta con la información del vehículo y el precio. Les mostraremos al Grupo B (experimental) la misma tarjeta, pero con la adición de una insignia de "Propietario Verificado" y su calificación promedio en estrellas. |
+| **Metrics** | Mediremos la Tasa de Clics (CTR) en el botón "Reservar" y la Tasa de Conversión (solicitud de reserva completada) por cada variante. También se realizarán encuestas de salida para medir la confianza percibida (escala 1-5). |
+| **Success Criteria** | Sabremos que la hipótesis es válida si el Grupo B registra una tasa de conversión al menos un 20% superior a la del Grupo A y si la puntuación de confianza promedio reportada es de 4 o superior. | 
+
+| Elemento | Experiment Card #2: Validación de la Usabilidad del Catálogo (Arrendatario) | 
+| -------- | ---------------------------------------------- |
+| **Hypothesis** | *(Basándonos en Q4)* |
+| **Experiment** | Creemos que los arrendatarios completarán el proceso de reserva más rápidamente si el catálogo incluye filtros por marca, precio y fechas, en lugar de una lista simple. <br><br> Para verificar esto, realizaremos una prueba de usabilidad con 10 participantes del segmento de arrendatarios, divididos en dos grupos. <br><br> Les pediremos que encuentren un vehículo de una marca específica para un rango de fechas determinado. El Grupo de Control usará una versión del catálogo con una barra de búsqueda simple; el Grupo Experimental usará la versión con filtros dinámicos. |
+| **Metrics** | Mediremos el Tiempo Promedio para completar la tarea (en segundos) y la Tasa de Éxito (porcentaje de usuarios que completan la reserva correctamente). Se recopilarán comentarios cualitativos sobre la facilidad de uso. |
+| **Success Criteria** | Sabremos que la hipótesis es válida si el tiempo promedio de la tarea se reduce en un 30% en comparación con el grupo de control y si la tasa de éxito es superior al 80%. | 
+
+| Elemento | Experiment Card #3: Validación del Valor del Monitoreo IoT (Propietario) | 
+| -------- | ---------------------------------------------- |
+| **Hypothesis** | *(Basándonos en Q2)* |
+| **Experiment** | 	Creemos que los propietarios de vehículos (Arrendadores) se sentirán más seguros y dispuestos a publicar sus autos si la plataforma les ofrece funcionalidades de monitoreo telemático IoT en tiempo real, en lugar de solo un contrato digital. <br><br> Para verificar esto, realizaremos una prueba de concepto con dos grupos de propietarios. <br><br> Les presentaremos al Grupo A (control) la plataforma con las funcionalidades básicas de publicación y contrato digital. Les presentaremos al Grupo B (experimental) la misma plataforma, pero con una demostración interactiva del panel de monitoreo IoT (visualización de GPS, odómetro y nivel de combustible en un mapa). Tras la demostración, les pediremos que completen el proceso de publicación de un vehículo ficticio. |
+| **Metrics** | Mediremos la Tasa de Publicación (porcentaje de usuarios que completan el formulario de publicación) en cada grupo. Adicionalmente, se realizará una encuesta para medir la "percepción de seguridad" (escala 1-5) y la "intención de listar un vehículo real" en los próximos 30 días. |
+| **Success Criteria** | Sabremos que la hipótesis es válida si el Grupo B presenta una Tasa de Publicación al menos un 25% superior a la del Grupo A, y si la percepción de seguridad promedio es de 4 o superior, demostrando que el IoT es un diferenciador clave para la captación de oferta. | 
+
+| Elemento | Experiment Card #4: Validación de la Retención de Propietarios (Propietario) | 
+| -------- | ---------------------------------------------- |
+| **Hypothesis** | *(Basándonos en Q3)* |
+| **Experiment** | 	Creemos que los propietarios que han completado su primer alquiler en RentiCar mantendrán sus vehículos publicados si la plataforma les ofrece un seguro de daños integrado y una gestión de disputas simplificada, en lugar de solo el sistema de reseñas. <br><br> Para verificar esto, realizaremos una prueba de concepto con dos grupos de propietarios. <br><br> Les presentaremos al Grupo A (control) la plataforma con las funcionalidades básicas de publicación y contrato digital. Les presentaremos al Grupo B (experimental) la misma plataforma, pero con una demostración interactiva del panel de monitoreo IoT (visualización de GPS, odómetro y nivel de combustible en un mapa). Tras la demostración, se les pedirá que completen el proceso de publicación de un vehículo ficticio. |
+| **Metrics** | Mediremos la Tasa de Retención (porcentaje de propietarios que reactivan su publicación en los 3 meses siguientes) para cada grupo. También registraremos el NPS (Net Promoter Score) y el número de tickets de soporte relacionados con daños o disputas. |
+| **Success Criteria** | Sabremos que la hipótesis es válida si el Grupo B muestra una Tasa de Retención al menos un 15% superior a la del Grupo A y si el NPS del Grupo B es significativamente mayor, confirmando que un ecosistema de seguridad post-alquiler es un factor decisivo para la fidelización de los propietarios. | 
+
 ## 8.2. Experiment Design
 
 ### 8.2.1. Hypotheses
