@@ -4386,6 +4386,15 @@ Estas son las métricas de datos crudos (cuantitativas y cualitativas) que recop
 
 ### 8.2.4. Conditions
 
+Definimos las condiciones del experimento (grupos de control y variantes) para aislar el impacto de los cambios introducidos en cada hipótesis, asegurando la validez de los resultados.
+
+| Experimento | Condición Experimental (Variante B) | Condición de Control (Grupo A) |
+| --- | --- | --- |
+| Experimento 1 (Confianza en Reservas - H1) | 50% de los arrendatarios visualizan el diseño To-Be: la tarjeta del vehículo incluye una insignia de "Propietario Verificado" y la calificación promedio en estrellas, con acceso directo a las reseñas destacadas. | 50% de los arrendatarios visualizan el diseño As-Is: la tarjeta del vehículo muestra únicamente la información técnica básica y el precio, sin insignias de verificación ni reseñas visibles. |
+| Experimento 2 (Eficiencia del Catálogo - H2) | 50% de los arrendatarios utilizan la versión To-Be del catálogo: una interfaz con filtros dinámicos por marca, rango de precio y fechas de disponibilidad. | 50% de los arrendatarios utilizan la versión As-Is del catálogo: una lista simple de vehículos con una barra de búsqueda de texto libre. |
+| Experimento 3 (Captación del Propietario - H3) | 50% de los propietarios son expuestos a la demostración interactiva del panel de monitoreo IoT (GPS, odómetro, combustible) antes de completar el formulario de publicación. | 50% de los propietarios completan el formulario de publicación sin la demostración interactiva del panel de monitoreo IoT, recibiendo solo información textual sobre la funcionalidad. |
+| Experimento 4 (Retención del Propietario - H4) | 50% de los propietarios que han completado un alquiler reciben el paquete "Protección RentiCar", que incluye un seguro de cobertura de daños y un canal de soporte prioritario para disputas. | 50% de los propietarios que han completado un alquiler reciben únicamente el sistema de reseñas estándar, sin acceso al paquete de protección adicional. |
+
 ### 8.2.5. Scale Calculations and Decisions
 
 ### 8.2.6. Methods Selection
