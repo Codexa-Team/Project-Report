@@ -4325,7 +4325,17 @@ A continuación, se formalizan las hipótesis nulas (H0) y alternativas (H1) par
 | H3 (Captación del Propietario - Valor del IoT) | Q2 | Los propietarios valoran las funcionalidades de monitoreo IoT como un factor clave para sentirse seguros al alquilar su vehículo. | Los propietarios expuestos a la funcionalidad de monitoreo IoT mostrarán una tasa de publicación de vehículos al menos un 25% superior que aquellos que no la conocen. | La exposición a la funcionalidad de monitoreo IoT no aumentará la tasa de publicación de vehículos en un 25% (o más). |
 | H4 (Retención del Propietario - Ecosistema de Seguridad) | Q3 | Un ecosistema de seguridad post-alquiler (seguro de daños y gestión de disputas) fidelizará a los propietarios, incentivando la republicación de sus vehículos. | Los propietarios que reciben el paquete "Protección RentiCar" presentarán una Tasa de Retención (reactivación de publicación) al menos un 15% superior a la del grupo de control en los 3 meses posteriores al primer alquiler. | La incorporación del paquete "Protección RentiCar" no incrementará la Tasa de Retención de los propietarios en un 15% (o más) durante los 3 meses posteriores al primer alquiler. |
 
-### 8.2.2. Domain Business Metrics 
+### 8.2.2. Domain Business Metrics
+
+Las métricas de negocio a nivel de dominio que se verán impactadas por los experimentos son:
+
+*   **Tasa de Conversión de Reservas (TCR):** (Número de reservas confirmadas / Número de visitas al catálogo) * 100. Es un indicador directo de la efectividad del catálogo y la confianza que genera.
+
+*   **Tasa de Publicación de Vehículos (TPV):** (Número de vehículos publicados / Número de propietarios registrados) * 100. Mide la capacidad de la plataforma para atraer y retener la oferta.
+
+*   **Tiempo Medio de Alquiler (TMA):** Tiempo promedio desde que un usuario inicia una búsqueda hasta que confirma una reserva. Un TMA menor indica una plataforma más eficiente.
+
+*   **Tasa de Retención de Propietarios:** Porcentaje de propietarios que, tras completar su primer alquiler, publican de nuevo en la plataforma en los siguientes 3 meses.
 
 ### 8.2.3. Measures
 
