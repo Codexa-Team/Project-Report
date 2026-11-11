@@ -184,9 +184,10 @@ U202313403 - Via Luna, Bruce
         - [6.1.2. Core Integration Tests.](#612-core-integration-tests)
         - [6.1.3. Core Behavior-Driven Development](#613-core-behavior-driven-development)
       - [6.1.4. Core System Tests](#614-core-system-tests)
-    - [6.2. Static testing & Verification](#62-static-testing-verification)
+    - [6.2. Static testing & Verification](#62-static-testing--verification)
         - [6.2.1. Static Code Analysis](#621-static-code-analysis)
-            - [6.2.1.1. Coding standard & Code conventions](#6211-coding-standard-code-conventions)
+            - [6.2.1.1. Coding standard & Code conventions](#6211-coding-standard--code-conventions)
+            - [6.2.1.2. Code Quality & Code Security](#6212-code-quality--code-security)
         - [6.2.2. Reviews](#622-reviews)
     - [6.3. Validation Interviews](#63-validation-interviews)
         - [6.3.1. Diseño de Entrevistas](#631-diseño-de-entrevistas)
@@ -4165,6 +4166,14 @@ En la siguiente captura se observa la configuración de `maven-checkstyle-plugin
 
 ![Configuración y ejecución limpia de Checkstyle en IntelliJ IDEA](assets/chapter06/checkstyle-execution.jpg)
 
+#### 6.2.1.2. Code Quality & Code Security
+
+El equipo evalúa la calidad y seguridad estática del backend (`codexateam-backend`) en **SonarQube Community Build** (`http://localhost:9000`) con `sonar-maven-plugin` (`5.2.0.4988`) y reportes de cobertura de `jacoco-maven-plugin` (`0.8.13`), configurados en `Backend/pom.xml`.
+
+Estado actual del Quality Gate y métricas del proyecto en SonarQube:
+
+`[CAPTURA OFICIAL DE SONARQUBE PENDIENTE]`
+
 ### 6.2.2. Reviews
 
 Las revisiones de código de Codexa-Team se realizan en GitHub sobre el flujo GitFlow definido en la sección 5.1.2, validando los cambios de ramas `feat/*` y `fix/*` antes de integrarlos en `develop` y `main`.
@@ -4455,34 +4464,24 @@ el proyecto RentiCar:
 
 ## 7.4. Continuous Monitoring
 
-El monitoreo continuo (Continuous Monitoring) en **RentiCar** constituye la última fase del ciclo de vida DevOps, orientada a supervisar de manera ininterrumpida la salud operativa, rendimiento de infraestructura y comportamiento del usuario final en los entornos de producción y puesta en escena (staging). Esta práctica garantiza una alta observabilidad, permitiendo anticipar incidentes técnicos y tomar decisiones basadas en datos empíricos.
+El monitoreo continuo en RentiCar supervisa la actividad del sitio web publicado en producción y define la base técnica de observabilidad y alertas del proyecto.
 
 ### 7.4.1. Tools and Practices
 
-Para articular una estrategia de observabilidad integral, el equipo seleccionó e integró un conjunto de herramientas complementarias que cubren tanto el comportamiento de usuario a nivel de frontend como la telemetría interna del backend y la infraestructura de contenedores.
+La estrategia actual combina analítica web activa en el frontend con herramientas de telemetría backend contempladas para futuras iteraciones:
 
-#### Catálogo de Herramientas de Monitoreo:
-
-| Herramienta | Capa de Monitoreo | Propósito en Continuous Delivery |
+| Herramienta | Capa y Estado | Propósito en el Proyecto |
 | :--- | :--- | :--- |
-| **Google Analytics 4 (GA4)** | Frontend / Comportamiento Web | Registra navegación en tiempo real, embudos de conversión en reservas y eventos clave de interacción de arrendatarios y arrendadores. |
-| **Spring Boot Actuator & Micrometer** | Backend / Aplicación Java | Expone métricas internas de la JVM, tiempos de respuesta HTTP, saturación del pool de conexiones HikariCP y estado de salud (`/actuator/health`). |
-| **Prometheus** | Métricas de Infraestructura | Motor de recolección (*scraping*) y almacenamiento en series temporales para telemetría de contenedores Docker y servicios REST. |
-| **Grafana** | Visualización Unificada | Dashboards interactivos para la visualización consolidada de latencia, tasa de errores y consumo de CPU/memoria. |
-| **Alertmanager** | Gestión de Alertas | Despacha y agrupa notificaciones inmediatas ante superación de umbrales críticos hacia canales de mensajería del equipo. |
+| **Google Tag Manager & Google Analytics 4 (GA4)** | Frontend Web (Activo) | Registra visitas y eventos base (`page_view`, `first_visit`, `scroll`, `session_start`) en el flujo `RentiCar Web` (`G-7T0SJBF5L2`) mediante `GTM-5P5DVR9F`. |
+| **Spring Boot Actuator** | Backend Java (Dependencia base) | Incluido mediante `spring-boot-starter-actuator` en `Backend/pom.xml` para soporte de estado y métricas internas de la aplicación (aún sin exposición pública ni reglas conectadas). |
+| **Prometheus, Alertmanager y Grafana** | Alertas y Visualización (Planteado) | Stack contemplado para recolección de métricas, evaluación de umbrales y paneles operativos del backend (pendiente de configuración y despliegue). |
 
-#### Prácticas Clave de Monitoreo Continuo:
+**Prácticas Clave:**
 
-1. **Supervisión Post-Despliegue Inmediata (48 Horas):**
-   Tras cada liberación o merge en producción, se ejecuta una ventana de supervisión intensiva durante las primeras 48 horas, contrastando la tasa de conversión y la frecuencia de errores contra la línea base previa.
-2. **Monitoreo Proactivo Basado en SLOs/SLAs:**
-   Se definen Objetivos de Nivel de Servicio (SLO) centrados en el usuario: 99.5% de disponibilidad mensual y tiempos de respuesta p95 inferiores a 800 ms para búsquedas en el catálogo.
-3. **Análisis de Embudos de Conversión y Fricción:**
-   Evaluación semanal de la tasa de abandono entre la selección de un vehículo y la confirmación de la reserva para detectar bloqueos de usabilidad o fallas en pasarelas de pago.
-4. **Validación con Datos Empíricos para Nuevas Releases:**
-   Las decisiones de desarrollo del siguiente sprint se priorizan a partir de métricas reales de adopción de funcionalidades y no de supuestos teóricos.
-
----
+* Revisar el panel en tiempo real de Google Analytics 4 y los logs del servicio en Render después de desplegar cambios en `main`.
+* Observar cambios bruscos en visitas o eventos base (`page_view`, `first_visit`, `scroll`, `session_start`) tras una actualización publicada.
+* Contrastar el uso real registrado en GA4 con el plan de experimentación del Capítulo VIII para priorizar mejoras sobre evidencia observada.
+* Mantener `spring-boot-starter-actuator` como base en el backend para acoplar Prometheus, Alertmanager y Grafana en etapas posteriores.
 
 ### 7.4.2. Monitoring Pipeline Components
 
