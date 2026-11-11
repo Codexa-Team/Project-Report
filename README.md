@@ -187,7 +187,6 @@ U202313403 - Via Luna, Bruce
     - [6.2. Static testing & Verification](#62-static-testing-verification)
         - [6.2.1. Static Code Analysis](#621-static-code-analysis)
             - [6.2.1.1. Coding standard & Code conventions](#6211-coding-standard-code-conventions)
-            - [6.2.1.2. Code Quality & Code Security](#6212-code-quality-code-security)
         - [6.2.2. Reviews](#622-reviews)
     - [6.3. Validation Interviews](#63-validation-interviews)
         - [6.3.1. Diseño de Entrevistas](#631-diseño-de-entrevistas)
@@ -4505,36 +4504,6 @@ mvn checkstyle:check
 [INFO] ------------------------------------------------------------------------
 [INFO] Total time:  3.213 s
 ```
-
-- *Reporte HTML Generado (`target/site/checkstyle.html`):*
-![CheckStyle HTML Report](assets/chapter06/checkstyle-report-overview.png)
-
-#### 6.2.1.2. Code Quality & Code Security
-
-Para la evaluación continua de la calidad del código, deuda técnica y seguridad de la aplicación, el equipo integró **SonarQube Community Build**. En el análisis exhaustivo del backend de **RentiCar**, se alcanzaron las calificaciones máximas en los tres pilares del paradigma Clean Code:
-
-- **Security Rating: A (0 Vulnerabilidades, 0 Security Hotspots pendientes):** Configuración segura de directivas CORS y protección CSRF conforme a las directrices de seguridad para APIs REST stateless protegidas por JWT.
-- **Reliability Rating: A (0 Bugs):** Resolución de inconsistencias en contratos de identidad `equals` y `hashCode` para arreglos de bytes en records de dominio.
-- **Maintainability Rating: A (0 Code Smells):** Eliminación de ambigüedades en métodos de fábrica de enums y estandarización de nombres en value objects.
-- **Duplicated Lines Density: 0.0%:** Ausencia total de bloques de código redundantes.
-- **Quality Gate: Passed:** Aprobación plena de todas las políticas del proyecto.
-
-##### Evidencias de SonarQube:
-
-- *1. Estado Inicial - Detección de Deuda Técnica e Incidencias:*
-En el escaneo inicial, SonarQube identificó 3 Bugs de confiabilidad (contratos `equals`/`hashCode`), 9 advertencias de seguridad y mantenibilidad (CSRF y CORS permisivos, colisiones de nombres de enum) y 86 Code Smells acumulando 1d 7h de deuda técnica:
-
-![SonarQube Hallazgos Iniciales](assets/chapter06/sonarqube-initial-issues.png)
-![SonarQube Vista General Inicial](assets/chapter06/sonarqube-initial-overview.jpg)
-
-- *2. Estado Final - Resolución y Quality Gate Passed:*
-Tras aplicar las correcciones arquitectónicas en `WebSecurityConfiguration`, `RouteController`, `BookingStatus`, `CreateVehicleCommand` y `UpdateVehicleCommand`, el reanálisis automático verificó la resolución total de las incidencias:
-
-- *Panel General de Métricas y Quality Gate:*
-![SonarQube Code Quality and Security](assets/chapter06/sonarqube-clean-code-overview.png)
-
-- *Dashboard Detallado de Calidad y Confiabilidad:*
-![SonarQube Dashboard Summary](assets/chapter06/sonarqube-dashboard-summary.png)
 
 ### 6.2.2. Reviews
 
