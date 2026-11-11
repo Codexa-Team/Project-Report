@@ -4059,394 +4059,462 @@ Aqui se ubican los archivos .feature que sirven para el funcionamiento de las pr
 
 ### 6.1.4. Core System Tests
 
-En este apartado se implementan las pruebas de sistema y de integración automatizadas de extremo a extremo (End-to-End) para **RentiCar**, empleando **Selenium WebDriver** junto con **Cucumber BDD** en formato **Gherkin**. Este enfoque permite verificar la correcta interacción entre la interfaz de usuario en Angular y las respuestas del backend en Spring Boot, asegurando que los flujos críticos del negocio se ejecuten sin fricción ni fallos en el navegador.
+En este apartado nos encargamos de implementar las pruebas de sistema automatizadas de extremo a extremo (End-to-End) para **RentiCar**, utilizando **Selenium WebDriver** para interactuar con la aplicación web en Angular y **Cucumber BDD** con sintaxis **Gherkin** en inglés para verificar los flujos principales de negocio.
 
 ---
 
 #### 1. Flujo de Registro de Usuario (SignUp)
 
-Verifica que un nuevo usuario (arrendatario o arrendador) pueda completar satisfactoriamente el formulario de registro con validaciones de campos en tiempo real y sea registrado en la plataforma.
+Verifica que un nuevo usuario pueda completar el formulario de registro seleccionando su rol y sea redirigido al inicio de sesión.
 
 - **Feature en formato Gherkin (`signup.feature`):**
 ```gherkin
 Feature: User Sign Up
-  As a new customer
-  I want to create an account in RentiCar
-  So that I can access vehicle rental or fleet management services
+  Background:
+    Given the user opens the RentiCar application
 
-  Scenario: Successful user registration as a renter
-    Given the user navigates to the registration page "/auth/register"
-    When the user fills the form with name "Carlos", lastName "Mendoza", email "carlos.mendoza@test.com", and password "SecurePass123!"
-    And the user selects the role "Arrendatario"
-    And clicks on the "Crear Cuenta" button
-    Then the system should display a confirmation toast "Registro completado con éxito"
-    And the user should be redirected to the login page "/auth/login"
+  Scenario: Successful new user registration
+    Given the user clicks on the Register link
+    When the user fills in valid name, email, password, and role
+    And the user clicks the Register button
+    Then the user is registered successfully in the system
 ```
 
-- **Step Definitions en Java (`SignUpSteps.java`):**
+- **Step Definitions en Java (`SignUpStepdefs.java`):**
 ```java
-package com.codexateam.platform.testing.steps;
+package testingweb.stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import testingweb.selenium.MyWebDriver;
+
 import java.time.Duration;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class SignUpSteps {
-    private final WebDriver driver = Hooks.getDriver();
-    private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+public class SignUpStepdefs {
+    private final WebDriver webDriver = MyWebDriver.getWebDriver();
+    private final WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(20));
 
-    @Given("the user navigates to the registration page {string}")
-    public void navigateToRegister(String path) {
-        driver.get("http://localhost:8085" + path);
+    @Given("the user opens the RentiCar application")
+    public void openApplication() {
+        webDriver.get(MyWebDriver.BASE_URL + "/login");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.auth-card")));
     }
 
-    @When("the user fills the form with name {string}, lastName {string}, email {string}, and password {string}")
-    public void fillRegistrationForm(String name, String lastName, String email, String password) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("firstName"))).sendKeys(name);
-        driver.findElement(By.id("lastName")).sendKeys(lastName);
-        driver.findElement(By.id("email")).sendKeys(email);
-        driver.findElement(By.id("password")).sendKeys(password);
+    @Given("the user clicks on the Register link")
+    public void clickRegisterLink() {
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/register']"))).click();
+        wait.until(ExpectedConditions.urlContains("/register"));
     }
 
-    @When("the user selects the role {string}")
-    public void selectRole(String role) {
-        driver.findElement(By.cssSelector("input[value='ROLE_RENTER']")).click();
+    @When("the user fills in valid name, email, password, and role")
+    public void fillRegistrationForm() {
+        String uniqueEmail = "renter." + System.currentTimeMillis() + "@renticar.test";
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("name"))).sendKeys("Carlos Mendoza");
+        webDriver.findElement(By.id("email")).sendKeys(uniqueEmail);
+        webDriver.findElement(By.id("password")).sendKeys("SecurePass123");
+        webDriver.findElement(By.cssSelector("input[type='radio'][value='arrendatario']")).click();
     }
 
-    @When("clicks on the {string} button")
-    public void clickSubmit(String buttonText) {
-        driver.findElement(By.xpath("//button[contains(text(), '" + buttonText + "')]")).click();
+    @And("the user clicks the Register button")
+    public void clickRegisterButton() {
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.auth-button[type='submit']"))).click();
     }
 
-    @Then("the system should display a confirmation toast {string}")
-    public void verifyToast(String message) {
-        boolean toastVisible = wait.until(ExpectedConditions.textToBePresentInElementLocated(
-                By.cssSelector(".mat-snack-bar-container, .toast-success"), message));
-        assertTrue(toastVisible);
-    }
-
-    @Then("the user should be redirected to the login page {string}")
-    public void verifyRedirect(String path) {
-        wait.until(ExpectedConditions.urlContains(path));
-        assertTrue(driver.getCurrentUrl().contains(path));
+    @Then("the user is registered successfully in the system")
+    public void verifySuccessfulRegistration() {
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        Assertions.assertNotNull(alert.getText());
+        alert.accept();
+        wait.until(ExpectedConditions.urlContains("/login"));
+        Assertions.assertTrue(webDriver.getCurrentUrl().contains("/login"));
     }
 }
 ```
 
 - **Evidencias de Ejecución:**
-
-  - *Resultado de la prueba en el Front:*
-  ![SignUp Test Web Frontend](assets/chapter06/selenium-signup-frontend.png)
-
-  - *Feature en formato Gherkin:*
-  ![SignUp Feature](assets/chapter06/selenium-signup-feature.png)
-
-  - *Ejecución de escenarios en IntelliJ IDEA:*
-  ![SignUp Cucumber Test Runner](assets/chapter06/selenium-signup-runner.png)
+  - *Resultado de la prueba en el Front:* `[PENDIENTE: Captura en navegador tomada por el autor]`
+  - *Feature en formato Gherkin con el resultado:* `[PENDIENTE: Captura de signup.feature y ejecución en IntelliJ IDEA]`
+  - *Step Definitions:* `[PENDIENTE: Captura de SignUpStepdefs.java en IntelliJ IDEA]`
 
 ---
 
 #### 2. Flujo de Autenticación de Usuario (SignIn)
 
-Verifica que un usuario registrado pueda iniciar sesión con sus credenciales, recibiendo el token de acceso JWT y siendo redirigido a su panel principal.
+Verifica que un usuario registrado pueda iniciar sesión con sus credenciales válidas y acceda a su panel principal en RentiCar.
 
 - **Feature en formato Gherkin (`signin.feature`):**
 ```gherkin
-Feature: User Authentication
-  As a registered user
-  I want to log into my RentiCar account
-  So that I can access my personalized dashboard and vehicle bookings
+Feature: User Sign In
+  Background:
+    Given the user opens the login page
 
   Scenario: Successful login with valid credentials
-    Given the user navigates to the login page "/auth/login"
-    When the user enters email "carlos.mendoza@test.com" and password "SecurePass123!"
-    And clicks on the "Iniciar Sesión" button
-    Then the system should authenticate the user
-    And the user should be redirected to the main dashboard "/dashboard/catalog"
-    And the navbar should display the user's name "Carlos"
+    When the user enters email "estefano.solis@codexa.pe" and password "admin123"
+    And the user clicks the Sign In button
+    Then the user is redirected to their RentiCar dashboard
 ```
 
-- **Step Definitions en Java (`SignInSteps.java`):**
+- **Step Definitions en Java (`SignInStepdefs.java`):**
 ```java
-package com.codexateam.platform.testing.steps;
+package testingweb.stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import testingweb.selenium.MyWebDriver;
+
 import java.time.Duration;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class SignInSteps {
-    private final WebDriver driver = Hooks.getDriver();
-    private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+public class SignInStepdefs {
+    private final WebDriver webDriver = MyWebDriver.getWebDriver();
+    private final WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(20));
 
-    @Given("the user navigates to the login page {string}")
-    public void navigateToLogin(String path) {
-        driver.get("http://localhost:8085" + path);
+    @Given("the user opens the login page")
+    public void openLoginPage() {
+        webDriver.get(MyWebDriver.BASE_URL + "/login");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email")));
     }
 
     @When("the user enters email {string} and password {string}")
     public void enterCredentials(String email, String password) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("username"))).sendKeys(email);
-        driver.findElement(By.id("password")).sendKeys(password);
+        webDriver.findElement(By.id("email")).clear();
+        webDriver.findElement(By.id("email")).sendKeys(email);
+        webDriver.findElement(By.id("password")).clear();
+        webDriver.findElement(By.id("password")).sendKeys(password);
     }
 
-    @Then("the system should authenticate the user")
-    public void verifyAuthentication() {
-        wait.until(driver -> driver.manage().getCookies().stream()
-                .anyMatch(c -> c.getName().equals("jwt") || c.getName().equals("token")) 
-                || !driver.findElements(By.cssSelector(".user-profile")).isEmpty());
+    @And("the user clicks the Sign In button")
+    public void clickSignInButton() {
+        webDriver.findElement(By.cssSelector("button.auth-button[type='submit']")).click();
     }
 
-    @Then("the navbar should display the user's name {string}")
-    public void verifyNavbarUser(String expectedName) {
-        boolean namePresent = wait.until(ExpectedConditions.textToBePresentInElementLocated(
-                By.cssSelector(".user-name-display, .navbar-user"), expectedName));
-        assertTrue(namePresent);
+    @Then("the user is redirected to their RentiCar dashboard")
+    public void verifyDashboardRedirect() {
+        wait.until(ExpectedConditions.or(
+                ExpectedConditions.urlContains("/my-vehicles"),
+                ExpectedConditions.urlContains("/dashboard")
+        ));
+        String currentUrl = webDriver.getCurrentUrl();
+        Assertions.assertTrue(currentUrl.contains("/my-vehicles") || currentUrl.contains("/dashboard"));
     }
 }
 ```
 
 - **Evidencias de Ejecución:**
-
-  - *Resultado de la prueba en el Front:*
-  ![SignIn Test Web Frontend](assets/chapter06/selenium-signin-frontend.png)
-
-  - *Feature en formato Gherkin:*
-  ![SignIn Feature](assets/chapter06/selenium-signin-feature.png)
-
-  - *Ejecución de escenarios en IntelliJ IDEA:*
-  ![SignIn Cucumber Test Runner](assets/chapter06/selenium-signin-runner.png)
+  - *Resultado de la prueba en el Front:* `[PENDIENTE: Captura en navegador tomada por el autor]`
+  - *Feature en formato Gherkin con el resultado:* `[PENDIENTE: Captura de signin.feature y ejecución en IntelliJ IDEA]`
+  - *Step Definitions:* `[PENDIENTE: Captura de SignInStepdefs.java en IntelliJ IDEA]`
 
 ---
 
 #### 3. Flujo de Publicación de Vehículo (RegisterVehicle)
 
-Valida que un arrendador pueda registrar una nueva unidad vehicular especificando marca, modelo, año, precio diario por alquiler y fotografías, reflejándose inmediatamente en el catálogo.
+Valida que un arrendador pueda registrar un nuevo vehículo especificando marca, modelo, año, precio por día y fotografía, visualizándose en su lista de vehículos.
 
 - **Feature en formato Gherkin (`register_vehicle.feature`):**
 ```gherkin
-Feature: Vehicle Registration
-  As a vehicle owner (arrendador)
-  I want to publish a new vehicle in the catalog
-  So that potential renters can discover and book it
+Feature: Vehicle Publication
+  Background:
+    Given the owner signs in and navigates to the publish vehicle form
 
-  Scenario: Successful vehicle publication
-    Given the owner is logged in and navigates to "/owner/vehicles/new"
-    When the owner inputs brand "Toyota", model "Corolla Cross", year "2023", and daily price "140.00"
-    And the owner attaches the vehicle photo
-    And clicks on the "Publicar Vehículo" button
-    Then the vehicle should be created with status "AVAILABLE"
-    And it should appear in the owner's vehicle inventory list
+  Scenario: Successful vehicle publication in the catalog
+    When the owner enters vehicle brand "Kia", model "Sportage", year "2024", and daily price "210"
+    And the owner uploads the vehicle image
+    And the owner clicks the Publish Vehicle button
+    Then the vehicle "Kia Sportage" appears in My Vehicles
 ```
 
-- **Step Definitions en Java (`RegisterVehicleSteps.java`):**
+- **Step Definitions en Java (`RegisterVehicleStepdefs.java`):**
 ```java
-package com.codexateam.platform.testing.steps;
+package testingweb.stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import testingweb.selenium.MyWebDriver;
+
+import java.io.File;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.time.Duration;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class RegisterVehicleSteps {
-    private final WebDriver driver = Hooks.getDriver();
-    private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+public class RegisterVehicleStepdefs {
+    private final WebDriver webDriver = MyWebDriver.getWebDriver();
+    private final WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(20));
 
-    @When("the owner inputs brand {string}, model {string}, year {string}, and daily price {string}")
-    public void inputVehicleDetails(String brand, String model, String year, String price) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("brand"))).sendKeys(brand);
-        driver.findElement(By.id("model")).sendKeys(model);
-        driver.findElement(By.id("year")).sendKeys(year);
-        driver.findElement(By.id("dailyPrice")).sendKeys(price);
+    @Given("the owner signs in and navigates to the publish vehicle form")
+    public void signInAndNavigateToPublishForm() {
+        webDriver.get(MyWebDriver.BASE_URL + "/login");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email"))).sendKeys("estefano.solis@codexa.pe");
+        webDriver.findElement(By.id("password")).sendKeys("admin123");
+        webDriver.findElement(By.cssSelector("button.auth-button[type='submit']")).click();
+        wait.until(ExpectedConditions.urlContains("/my-vehicles"));
+
+        webDriver.get(MyWebDriver.BASE_URL + "/publish-vehicle");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("brand")));
     }
 
-    @When("the owner attaches the vehicle photo")
-    public void attachPhoto() {
-        driver.findElement(By.id("imageUrl")).sendKeys("https://images.unsplash.com/photo-1549399542-7e3f8b79c341");
+    @When("the owner enters vehicle brand {string}, model {string}, year {string}, and daily price {string}")
+    public void enterVehicleDetails(String brand, String model, String year, String price) {
+        webDriver.findElement(By.id("brand")).sendKeys(brand);
+        webDriver.findElement(By.id("model")).sendKeys(model);
+        webDriver.findElement(By.id("year")).sendKeys(year);
+        webDriver.findElement(By.id("pricePerDay")).sendKeys(price);
     }
 
-    @Then("the vehicle should be created with status {string}")
-    public void verifyVehicleStatus(String status) {
-        boolean statusPresent = wait.until(ExpectedConditions.textToBePresentInElementLocated(
-                By.cssSelector(".vehicle-status-badge"), status));
-        assertTrue(statusPresent);
+    @And("the owner uploads the vehicle image")
+    public void uploadVehicleImage() throws URISyntaxException {
+        URL resource = getClass().getClassLoader().getResource("car-sample.jpg");
+        Assertions.assertNotNull(resource, "Sample car image resource not found");
+        String absolutePath = new File(resource.toURI()).getAbsolutePath();
+        webDriver.findElement(By.id("imageFile")).sendKeys(absolutePath);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img.image-preview")));
     }
 
-    @Then("it should appear in the owner's vehicle inventory list")
-    public void verifyInventoryList() {
-        assertTrue(wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//td[contains(text(), 'Corolla Cross')]"))).isDisplayed());
+    @And("the owner clicks the Publish Vehicle button")
+    public void clickPublishVehicleButton() {
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.submit-button"))).click();
+    }
+
+    @Then("the vehicle {string} appears in My Vehicles")
+    public void verifyVehicleInMyVehicles(String expectedVehicleTitle) {
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        Assertions.assertNotNull(alert.getText());
+        alert.accept();
+        wait.until(ExpectedConditions.urlContains("/my-vehicles"));
+        boolean vehicleVisible = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//h3[contains(text(), '" + expectedVehicleTitle + "')]")
+        )).isDisplayed();
+        Assertions.assertTrue(vehicleVisible);
     }
 }
 ```
 
 - **Evidencias de Ejecución:**
-
-  - *Resultado de la prueba en el Front:*
-  ![Register Vehicle Test Web Frontend](assets/chapter06/selenium-register-vehicle-frontend.png)
-
-  - *Feature en formato Gherkin:*
-  ![Register Vehicle Feature](assets/chapter06/selenium-register-vehicle-feature.png)
-
-  - *Ejecución de escenarios en IntelliJ IDEA:*
-  ![Register Vehicle Cucumber Test Runner](assets/chapter06/selenium-register-vehicle-runner.png)
+  - *Resultado de la prueba en el Front:* `[PENDIENTE: Captura en navegador tomada por el autor]`
+  - *Feature en formato Gherkin con el resultado:* `[PENDIENTE: Captura de register_vehicle.feature y ejecución en IntelliJ IDEA]`
+  - *Step Definitions:* `[PENDIENTE: Captura de RegisterVehicleStepdefs.java en IntelliJ IDEA]`
 
 ---
 
 #### 4. Flujo de Reserva de Vehículo (RentVehicle)
 
-Verifica que un arrendatario pueda seleccionar un automóvil del catálogo, escoger las fechas de inicio y finalización del alquiler, visualizar el desglose del costo total y confirmar la reserva.
+Verifica que un arrendatario autenticado pueda abrir el detalle de un vehículo, elegir un rango válido de fechas disponibles, visualizar el costo calculado y confirmar la reserva.
 
 - **Feature en formato Gherkin (`rent_vehicle.feature`):**
 ```gherkin
 Feature: Vehicle Rental Booking
-  As an authenticated renter
-  I want to book an available vehicle for specific dates
-  So that I can secure transportation for my requested period
+  Background:
+    Given the renter signs in and views the details of vehicle "1"
 
-  Scenario: Successful booking reservation
-    Given the renter is authenticated and views the details of vehicle "Toyota Corolla Cross"
-    When the renter selects the start date "2026-12-01" and end date "2026-12-05"
-    Then the system should calculate a total of 4 rental days
-    When the renter clicks on the "Confirmar Reserva" button
-    Then the booking status should transition to "PENDING"
-    And the reservation should be listed in "Mis Reservas"
+  Scenario: Successful vehicle booking with valid dates
+    When the renter clicks the Rent Vehicle button
+    And the renter selects valid available start and end dates
+    And the renter clicks the Confirm Booking button
+    Then the system confirms the booking and redirects to My Bookings
 ```
 
-- **Step Definitions en Java (`RentVehicleSteps.java`):**
+- **Step Definitions en Java (`RentVehicleStepdefs.java`):**
 ```java
-package com.codexateam.platform.testing.steps;
+package testingweb.stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import testingweb.selenium.MyWebDriver;
+
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.time.Duration;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.time.LocalDate;
 
-public class RentVehicleSteps {
-    private final WebDriver driver = Hooks.getDriver();
-    private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+public class RentVehicleStepdefs {
+    private final WebDriver webDriver = MyWebDriver.getWebDriver();
+    private final WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(20));
 
-    @When("the renter selects the start date {string} and end date {string}")
-    public void selectBookingDates(String startDate, String endDate) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("startDate"))).sendKeys(startDate);
-        driver.findElement(By.id("endDate")).sendKeys(endDate);
+    private String registerFreshRenter() throws Exception {
+        String apiBase = MyWebDriver.BASE_URL.contains("localhost")
+                ? "http://localhost:8080/api/v1"
+                : "https://renticar-backend.onrender.com/api/v1";
+        String uniqueEmail = "renter.booking." + System.currentTimeMillis() + "@test.pe";
+        String payload = String.format(
+                "{\"name\":\"Carlos Tester\",\"email\":\"%s\",\"password\":\"Test123456\",\"role\":\"arrendatario\"}",
+                uniqueEmail
+        );
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(apiBase + "/authentication/sign-up"))
+                .header("Content-Type", "application/json")
+                .POST(HttpRequest.BodyPublishers.ofString(payload))
+                .build();
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        Assertions.assertTrue(response.statusCode() == 201 || response.statusCode() == 200,
+                "Failed to register test renter: " + response.statusCode());
+        return uniqueEmail;
     }
 
-    @Then("the system should calculate a total of {int} rental days")
-    public void verifyCalculatedDays(int days) {
-        boolean daysMatch = wait.until(ExpectedConditions.textToBePresentInElementLocated(
-                By.id("totalRentalDays"), String.valueOf(days)));
-        assertTrue(daysMatch);
+    @Given("the renter signs in and views the details of vehicle {string}")
+    public void signInAndOpenVehicleDetails(String vehicleId) throws Exception {
+        String renterEmail = registerFreshRenter();
+
+        webDriver.get(MyWebDriver.BASE_URL + "/login");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email"))).sendKeys(renterEmail);
+        webDriver.findElement(By.id("password")).sendKeys("Test123456");
+        webDriver.findElement(By.cssSelector("button.auth-button[type='submit']")).click();
+        wait.until(ExpectedConditions.urlContains("/dashboard"));
+
+        webDriver.get(MyWebDriver.BASE_URL + "/vehicles/" + vehicleId);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.detail-container")));
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.action-button.primary")));
     }
 
-    @Then("the booking status should transition to {string}")
-    public void verifyBookingStatus(String expectedStatus) {
-        boolean statusMatch = wait.until(ExpectedConditions.textToBePresentInElementLocated(
-                By.cssSelector(".booking-status-tag"), expectedStatus));
-        assertTrue(statusMatch);
+    @When("the renter clicks the Rent Vehicle button")
+    public void clickRentButton() {
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.action-button.primary"))).click();
+        wait.until(ExpectedConditions.urlContains("/booking/"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("startDate")));
+    }
+
+    @And("the renter selects valid available start and end dates")
+    public void selectValidStartAndEndDates() {
+        long dayOffset = ((System.currentTimeMillis() / 1000) % 700) * 4;
+        LocalDate start = LocalDate.of(2027, 1, 1).plusDays(dayOffset);
+        LocalDate end = start.plusDays(3);
+
+        WebElement startInput = webDriver.findElement(By.id("startDate"));
+        WebElement endInput = webDriver.findElement(By.id("endDate"));
+        JavascriptExecutor js = (JavascriptExecutor) webDriver;
+        js.executeScript(
+                "const el = arguments[0]; el.value = arguments[1]; el.dispatchEvent(new Event('input')); el.dispatchEvent(new Event('change'));",
+                startInput, start.toString()
+        );
+        js.executeScript(
+                "const el = arguments[0]; el.value = arguments[1]; el.dispatchEvent(new Event('input')); el.dispatchEvent(new Event('change'));",
+                endInput, end.toString()
+        );
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.total-price")));
+    }
+
+    @And("the renter clicks the Confirm Booking button")
+    public void clickConfirmBookingButton() {
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.action-button.primary[type='submit']"))).click();
+    }
+
+    @Then("the system confirms the booking and redirects to My Bookings")
+    public void verifyBookingConfirmation() {
+        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+        Assertions.assertNotNull(alert.getText());
+        alert.accept();
+        wait.until(ExpectedConditions.urlContains("/my-bookings"));
+        Assertions.assertTrue(wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.booking-card"))).isDisplayed());
     }
 }
 ```
 
 - **Evidencias de Ejecución:**
-
-  - *Resultado de la prueba en el Front:*
-  ![Rent Vehicle Test Web Frontend](assets/chapter06/selenium-rent-vehicle-frontend.png)
-
-  - *Feature en formato Gherkin:*
-  ![Rent Vehicle Feature](assets/chapter06/selenium-rent-vehicle-feature.png)
-
-  - *Ejecución de escenarios en IntelliJ IDEA:*
-  ![Rent Vehicle Cucumber Test Runner](assets/chapter06/selenium-rent-vehicle-runner.png)
+  - *Resultado de la prueba en el Front:* `[PENDIENTE: Captura en navegador tomada por el autor]`
+  - *Feature en formato Gherkin con el resultado:* `[PENDIENTE: Captura de rent_vehicle.feature y ejecución en IntelliJ IDEA]`
+  - *Step Definitions:* `[PENDIENTE: Captura de RentVehicleStepdefs.java en IntelliJ IDEA]`
 
 ---
 
 #### 5. Flujo de Monitoreo de Telemetría IoT (IoTTelemetry)
 
-Valida que el arrendador y el arrendatario puedan consultar la telemetría en tiempo real de una reserva activa, visualizando el marcador del vehículo sobre el mapa Leaflet con coordenadas GPS, velocidad actual y nivel de combustible.
+Valida que el usuario autenticado pueda consultar la telemetría del vehículo en el panel de rastreo, visualizando el mapa Leaflet con su marcador y el panel de estado.
 
 - **Feature en formato Gherkin (`iot_telemetry.feature`):**
 ```gherkin
-Feature: Real-Time IoT Vehicle Telemetry
-  As an authorized user
-  I want to track the real-time position and metrics of my rented vehicle
-  So that I can verify vehicle security, location, and fuel levels
+Feature: IoT Vehicle Telemetry Monitoring
+  Background:
+    Given the authenticated user opens the IoT tracking panel for vehicle "1"
 
-  Scenario: Display live vehicle location on Leaflet map
-    Given the user opens the telemetry tracking panel for active booking "BK-1002"
-    When the telemetry sensor stream is queried
-    Then the Leaflet map should render the vehicle GPS pin at coordinates "-12.0864, -77.0345"
-    And the telemetry status card should display speed "45 km/h" and fuel level "82%"
+  Scenario: Real-time GPS location and telemetry monitoring
+    When the Leaflet map and telemetry sensors finish loading
+    Then the vehicle marker is displayed on the map along with the status panel
 ```
 
-- **Step Definitions en Java (`IoTTelemetrySteps.java`):**
+- **Step Definitions en Java (`IoTTelemetryStepdefs.java`):**
 ```java
-package com.codexateam.platform.testing.steps;
+package testingweb.stepdefinitions;
 
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import testingweb.selenium.MyWebDriver;
+
 import java.time.Duration;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class IoTTelemetrySteps {
-    private final WebDriver driver = Hooks.getDriver();
-    private final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+public class IoTTelemetryStepdefs {
+    private final WebDriver webDriver = MyWebDriver.getWebDriver();
+    private final WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(20));
 
-    @Given("the user opens the telemetry tracking panel for active booking {string}")
-    public void openTelemetryPanel(String bookingId) {
-        driver.get("http://localhost:8085/bookings/" + bookingId + "/tracking");
+    @Given("the authenticated user opens the IoT tracking panel for vehicle {string}")
+    public void openIoTTrackingPanel(String vehicleId) {
+        webDriver.get(MyWebDriver.BASE_URL + "/login");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email"))).sendKeys("estefano.solis@codexa.pe");
+        webDriver.findElement(By.id("password")).sendKeys("admin123");
+        webDriver.findElement(By.cssSelector("button.auth-button[type='submit']")).click();
+        wait.until(ExpectedConditions.urlContains("/my-vehicles"));
+
+        webDriver.get(MyWebDriver.BASE_URL + "/tracking/" + vehicleId);
     }
 
-    @Then("the Leaflet map should render the vehicle GPS pin at coordinates {string}")
-    public void verifyLeafletMapPin(String coordinates) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".leaflet-marker-icon")));
-        assertTrue(driver.findElement(By.cssSelector(".leaflet-container")).isDisplayed());
+    @When("the Leaflet map and telemetry sensors finish loading")
+    public void waitForMapAndTelemetry() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#map.leaflet-container")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.status-panel")));
     }
 
-    @Then("the telemetry status card should display speed {string} and fuel level {string}")
-    public void verifyTelemetryMetrics(String speed, String fuel) {
-        assertTrue(wait.until(ExpectedConditions.textToBePresentInElementLocated(By.id("currentSpeed"), speed)));
-        assertTrue(wait.until(ExpectedConditions.textToBePresentInElementLocated(By.id("fuelLevel"), fuel)));
+    @Then("the vehicle marker is displayed on the map along with the status panel")
+    public void verifyMarkerAndStatusPanel() {
+        Assertions.assertTrue(webDriver.findElement(By.cssSelector("#map.leaflet-container")).isDisplayed());
+        Assertions.assertTrue(wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".leaflet-marker-icon"))).isDisplayed());
+        Assertions.assertTrue(wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".status-panel .status-badge"))).isDisplayed());
     }
 }
 ```
 
 - **Evidencias de Ejecución:**
-
-  - *Resultado de la prueba en el Front:*
-  ![IoT Telemetry Test Web Frontend](assets/chapter06/selenium-telemetry-frontend.png)
-
-  - *Feature en formato Gherkin:*
-  ![IoT Telemetry Feature](assets/chapter06/selenium-telemetry-feature.png)
-
-  - *Ejecución de escenarios en IntelliJ IDEA:*
-  ![IoT Telemetry Cucumber Test Runner](assets/chapter06/selenium-telemetry-runner.png)
+  - *Resultado de la prueba en el Front:* `[PENDIENTE: Captura en navegador tomada por el autor]`
+  - *Feature en formato Gherkin con el resultado:* `[PENDIENTE: Captura de iot_telemetry.feature y ejecución en IntelliJ IDEA]`
+  - *Step Definitions:* `[PENDIENTE: Captura de IoTTelemetryStepdefs.java en IntelliJ IDEA]`
 
 ---
 
@@ -4493,17 +4561,9 @@ mvn checkstyle:check
 
 ##### Evidencia de Ejecución de Checkstyle:
 
-- *Auditoría en Consola Maven (`mvn checkstyle:check`):*
-```text
-[INFO] --- checkstyle:3.6.0:check (default-cli) @ platform ---
-[INFO] Comenzando auditoría con reglas google_checks.xml...
-[WARNING] checkstyle:check violations detected but failOnViolation set to false
-[INFO] You have 2691 Checkstyle violations.
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.213 s
-```
+Para este apartado se evalúa el uso de Checkstyle en el backend aplicando las convenciones de `google_checks.xml` mediante el comando `mvn checkstyle:check`:
+
+- *Resultado de Checkstyle en IntelliJ IDEA:* `[PENDIENTE: Captura tomada por el autor tras ejecutar mvnw checkstyle:check]`
 
 ### 6.2.2. Reviews
 
@@ -4515,105 +4575,73 @@ mvn checkstyle:check
 
 ### 6.3.3. Evaluaciones según heurísticas
 
-Esta sección documenta el proceso sistemático de **Evaluación Heurística de Usabilidad** aplicado a la plataforma **RentiCar**, siguiendo la metodología de inspección experta formulada por **Jakob Nielsen y Rolf Molich**. El propósito es identificar tempranamente problemas en la experiencia del usuario, clasificar su severidad y guiar las refactorizaciones prioritarias antes de las pruebas formales con usuarios finales.
+En esta sección, el equipo presenta la evaluación en base a las heurísticas de diseño y accesibilidad.
+<hr>
+Evaluación Heurística de RentiCar
 
-#### Proceso de Evaluación Heurística
+**Carrera:** Ingeniería de Software  
+**Curso:** Diseño de Experimentos de Ingeniería de Software  
+**Auditor:** Codexa-Team  
+**Plataforma evaluada:** RentiCar - Plataforma Web
 
-1. **Revisión Independiente:** Tres evaluadores del equipo (**Estefano Solís**, **Sergio Landa** y **Bruce Via**) realizaron un recorrido analítico independiente de cada flujo, interactuando con las interfaces como usuarios de los dos segmentos objetivo (arrendadores y arrendatarios).
-2. **Registro de Violaciones Heurísticas:** Cada evaluador registró de forma individual los puntos de fricción, asociándolos a una o más de las 10 heurísticas de usabilidad y asignándoles una calificación de severidad.
-3. **Consolidación y Consenso:** El equipo consolidó las listas individuales en una sesión de consenso, eliminando duplicados, unificando la descripción del problema y acordando la severidad definitiva y la solución técnica.
+---
 
-#### Objetivos de la Evaluación
+## Tareas evaluadas
 
-- Detectar inconsistencias visuales, fallas de navegación y barreras cognitivas en los flujos principales de la solución.
-- Evaluar la claridad de la retroalimentación del sistema frente a errores y operaciones críticas (registro, publicación, reserva y rastreo).
-- Asegurar que la terminología, iconografía y metáforas utilizadas se ajusten al modelo mental de los usuarios peruanos que alquilan o ponen en renta su vehículo.
+- Comprender el propósito de la plataforma al ingresar desde la Landing Page
+- Navegar y distinguir las acciones principales para arrendadores y arrendatarios
+- Registrarse e iniciar sesión según el rol correspondiente
+- Explorar e interactuar con el catálogo de vehículos disponibles
+- Visualizar el detalle técnico, tarifa diaria y reseñas de un vehículo
+- Publicar un vehículo adjuntando datos e imagen desde el perfil de arrendador
+- Seleccionar fechas de alquiler, verificar el costo total y confirmar una reserva
+- Consultar el mapa Leaflet y el estado del vehículo en el panel de telemetría IoT
+- Evaluar accesibilidad visual, etiquetas de formulario e inclusividad
 
-#### Alcance de la Evaluación
+---
 
-##### Inclusiones para esta evaluación:
-- **Landing Page (Desktop y Mobile):** Barra de navegación, propuesta de valor, visualización previa de flota disponible, llamadas a la acción (*Call-to-Action*) y enlaces a perfiles.
-- **Aplicación Web (Desktop):** Flujo de autenticación (Login y Registro), catálogo de búsqueda y filtros de vehículos, vista de detalle de vehículo con opiniones, formulario de publicación de vehículo para arrendadores y panel de telemetría IoT con mapa en vivo.
+## Tabla resumen de problemas detectados
 
-##### Exclusiones para esta evaluación:
-- **Landing Page:** Secciones informativas legales secundarias (políticas de privacidad estáticas y términos de uso en texto plano).
-- **Aplicación Web:** Integración con pasarelas de pago bancarias externas en producción (simuladas en entorno de staging).
+| # | Problema detectado | Severidad | Heurística/Principio violado |
+|---|---|---|---|
+| 1 | Falta de confirmación más clara tras registrar una cuenta o confirmar una reserva | 2 | Visibilidad del estado del sistema |
+| 2 | Íconos de navegación e imágenes de catálogo sin descripciones accesibles completas | 3 | Inclusive Design - Experiencias comparables |
+| 3 | Diferenciación visual limitada entre opciones de arrendador y arrendatario en el menú | 2 | Consistencia y estándares |
+| 4 | Los filtros de búsqueda no muestran de forma visible los criterios activos aplicados | 2 | Reconocer en lugar de recordar |
+| 5 | Falta un indicador persistente de carga mientras se procesa la solicitud de reserva | 3 | Visibilidad del estado del sistema |
+| 6 | Cuando el botón de reserva aparece deshabilitado no se detalla explícitamente el motivo | 3 | Ayuda para reconocer, diagnosticar y recuperarse de errores |
+| 7 | Ausencia de un botón visible de retorno rápido en formularios largos | 2 | Control y libertad del usuario |
+| 8 | El selector de fechas no bloquea visualmente los rangos ya reservados en el calendario | 3 | Prevención de errores |
+| 9 | No hay ayudas contextuales (tooltips o guías breves) en el panel de telemetría IoT | 2 | Ayuda y documentación |
+| 10 | No se ofrecen controles de configuración accesible de contraste o tamaño de texto | 3 | Diseño inclusivo |
 
-#### Escala de Severidad de los Problemas Identificados
+---
 
-Los problemas identificados durante la inspección se clasificaron conforme a la escala estandarizada de Jakob Nielsen:
+## Descripción de problemas clave
 
-| Nivel | Clasificación | Descripción de Impacto |
-| :---: | :--- | :--- |
-| **1** | **Problema Superficial** | Afecta levemente la estética o el acabado visual. El usuario lo supera de inmediato sin esfuerzo. No requiere solución urgente. |
-| **2** | **Problema Menor** | Genera confusión momentánea o demora leve en la tarea. El usuario logra resolverlo por sí mismo. Prioridad baja-media. |
-| **3** | **Problema Mayor** | Dificulta seriamente el avance del flujo principal. Muchos usuarios no pueden resolverlo solos. Prioridad alta. |
-| **4** | **Catástrofe de Usabilidad** | Impide por completo culminar la tarea (bloqueo total o caída del flujo). Debe corregirse obligatoriamente antes del lanzamiento. |
+### Problema #2: Falta de etiquetas accesibles en íconos e imágenes
+**Severidad:** 3  
+**Heurística violada:** Inclusive Design  
+**Descripción:** Algunos íconos del menú lateral y controles visuales en las tarjetas de vehículos carecen de atributos `alt` o `aria-label` descriptivos para lectores de pantalla.  
+**Recomendación:** Añadir `alt` descriptivo en las imágenes de vehículos y `aria-label` o tooltips en cada botón e ícono funcional.
 
-#### Evaluación según las 10 Heurísticas de Usabilidad de Nielsen
+---
 
-A continuación se detalla la matriz de hallazgos organizada según los principios fundamentales de diseño de interacción:
+### Problema #6: Falta de explicación cuando el botón de reserva está deshabilitado
+**Severidad:** 3  
+**Heurística violada:** Ayuda para reconocer, diagnosticar y recuperarse de errores  
+**Descripción:** En la vista de detalle del vehículo, cuando el usuario ya tiene una reserva activa o es el propietario de la unidad, el botón queda deshabilitado sin explicar la causa en pantalla.  
+**Recomendación:** Mostrar un mensaje breve debajo del control indicando la razón del bloqueo y ofrecer un acceso directo a "Mis Reservas" o "Mis Vehículos".
 
-##### 1. Visibilidad del estado del sistema (*Visibility of system status*)
-- **Hallazgo:** Al enviar una solicitud de reserva en `/booking/:id`, el botón permanecía habilitado sin un indicador de carga (*spinner*), permitiendo múltiples clics accidentales.
-- **Severidad:** 3 (Mayor).
-- **Subsanación:** Se implementó un estado de carga (`isLoading = true`) que deshabilita el botón de acción e inserta un spinner visual de progreso hasta recibir la confirmación HTTP 201 del backend.
+---
 
-##### 2. Coincidencia entre el sistema y el mundo real (*Match between system and real world*)
-- **Hallazgo:** La ficha técnica de los vehículos utilizaba términos técnicos en inglés ("*Sedan - 5 seats, automatic transmission, FWD*") que no se alineaban con las preferencias del usuario local.
-- **Severidad:** 2 (Menor).
-- **Subsanación:** Se integró `@ngx-translate/core` con soporte multilingüe completo (español e inglés), utilizando denominaciones locales y directas ("Transmisión Automática", "Capacidad para 5 pasajeros", "Tarifa por Día en Nuevos Soles - S/.").
+### Problema #8: Validación previa de disponibilidad en el selector de fechas
+**Severidad:** 3  
+**Heurística violada:** Prevención de errores  
+**Descripción:** El formulario de reserva permite elegir fechas que pueden cruzarse con reservas previas, notificando el conflicto recién al enviar mediante alerta del navegador.  
+**Recomendación:** Deshabilitar fechas ocupadas en el selector antes del envío y mostrar mensajes de validación inline junto a cada campo de fecha.
 
-##### 3. Control y libertad del usuario (*User control and freedom*)
-- **Hallazgo:** Al ingresar al formulario de publicación de vehículo (`/publish-vehicle`), no existía un botón explícito de "Cancelar" o "Regresar a Mi Flota", forzando al usuario a usar el botón de retroceso del navegador.
-- **Severidad:** 2 (Menor).
-- **Subsanación:** Se agregó un botón secundario "Cancelar" con estilo neutral que redirige de inmediato a `/my-vehicles` descartando los cambios sin confirmaciones innecesarias.
-
-##### 4. Consistencia y estándares (*Consistency and standards*)
-- **Hallazgo:** Los botones de acción principal en el catálogo utilizaban tonalidades distintas de azul (`#003F70` vs `#1976D2`) y tamaños de fuente dispares entre la vista de tarjetas y la vista de detalle.
-- **Severidad:** 2 (Menor).
-- **Subsanación:** Se centralizó la paleta cromática en tokens de CSS globales (`--primary-color: #003F70`, `--secondary-color: #52B6F2`) en `styles.css`, garantizando consistencia estricta en toda la aplicación Angular.
-
-##### 5. Prevención de errores (*Error prevention*)
-- **Hallazgo:** El selector de fechas de reserva permitía seleccionar fechas pasadas o rangos donde la fecha de devolución era anterior a la fecha de inicio.
-- **Severidad:** 3 (Mayor).
-- **Subsanación:** Se añadieron validaciones de fecha mínima (`minDate = new Date()`) en los componentes de formulario y validación cruzada en el servicio de reservas para impedir rangos cronológicamente inválidos.
-
-##### 6. Reconocimiento antes que recuerdo (*Recognition rather than recall*)
-- **Hallazgo:** En el panel de telemetría IoT (`/tracking/:id`), el vehículo solo se identificaba por su ID numérico (`Vehículo #1`), obligando al usuario a recordar qué automóvil correspondía a ese identificador.
-- **Severidad:** 2 (Menor).
-- **Subsanación:** Se enriqueció la card flotante del mapa mostrando siempre el nombre comercial completo (`Toyota Corolla 2022`), la placa del auto y el estado actual ("Vehículo Estacionado" o "En Movimiento").
-
-##### 7. Flexibilidad y eficiencia de uso (*Flexibility and efficiency of use*)
-- **Hallazgo:** Arrendatarios frecuentes debían ingresar manualmente sus datos de contacto en cada nueva reserva solicitada.
-- **Severidad:** 2 (Menor).
-- **Subsanación:** Se implementó el autocompletado inteligente de información del perfil del usuario autenticado a partir de los datos almacenados en el servicio de IAM.
-
-##### 8. Diseño estético y minimalista (*Aesthetic and minimalist design*)
-- **Hallazgo:** Las tarjetas de vehículos en la vista previa de la Landing Page saturaban de información secundaria antes de que el usuario mostrara interés en el detalle.
-- **Severidad:** 1 (Superficial).
-- **Subsanación:** Se rediseñaron las cards bajo el principio minimalista, destacando únicamente imagen, marca, modelo, precio diario e insignia de disponibilidad.
-
-##### 9. Reconocimiento, diagnóstico y recuperación de errores (*Help users recognize, diagnose, and recover from errors*)
-- **Hallazgo:** Si el backend rechazaba un registro por correo duplicado, el frontend mostraba un banner genérico "*Error al registrar*".
-- **Severidad:** 3 (Mayor).
-- **Subsanación:** Se capturan los códigos de error HTTP del backend (409 Conflict, 400 Bad Request) y se despliegan mensajes claros y constructivos: "*Este correo ya se encuentra registrado. ¿Deseas iniciar sesión?*".
-
-##### 10. Ayuda y documentación (*Help and documentation*)
-- **Hallazgo:** Los arrendadores primerizos no tenían una guía sobre qué documentos subir ni cómo funciona la garantía vehicular.
-- **Severidad:** 2 (Menor).
-- **Subsanación:** Se incorporó un panel informativo colapsable con preguntas frecuentes y requisitos claros para la publicación de vehículos.
-
-#### Resumen de Modificaciones para Subsanar los Hallazgos
-
-| # | Módulo Afectado | Hallazgo Heurístico Principal | Solución Implementada | Estado |
-| :-: | :--- | :--- | :--- | :---: |
-| 1 | Búsqueda & Catálogo | Ausencia de ubicación geográfica de unidades | Integración de mapa Leaflet sobre OpenStreetMap en `/vehicles` y `/tracking/:id` | **Subsanado** |
-| 2 | Reserva de Vehículos | Selección permitida de rangos inválidos de fechas | Validación cronológica obligatoria (`minDate`) en Angular y backend | **Subsanado** |
-| 3 | Publicación de Flota | Falta de botón de cancelación y navegación | Incorporación de botón "Cancelar" y retorno seguro a `/my-vehicles` | **Subsanado** |
-| 4 | Identidad & Registro | Mensajes de error poco amigables en conflicto de correo | Manejo de HTTP 409 con sugerencia de inicio de sesión directo | **Subsanado** |
-| 5 | Telemetría IoT | Visualización de vehículos solo por ID numérico | Despliegue de metadatos completos (Marca, Modelo, Año, Placa y Estado) | **Subsanado** |
-| 6 | Interfaz Global | Inconsistencia en tonalidades primarias de botones | Centralización en variables CSS `--primary-color` en `styles.css` | **Subsanado** | 
+<hr>
 
 ## 6.4. Auditoría de Experiencias de Usuario 
 
@@ -5008,83 +5036,24 @@ El pipeline de notificaciones distribuye las alertas generadas por Alertmanager 
 
 ### 8.2.8. Web and Mobile Tracking Plan
 
-El Plan de Seguimiento Web y Móvil (Web and Mobile Tracking Plan) de **RentiCar** establece el marco metodológico y la instrumentación técnica necesaria para capturar, almacenar y procesar analíticamente las interacciones de los usuarios durante la ejecución de los experimentos de **A/B Testing**. Su propósito fundamental es contrastar de manera empírica y con rigor estadístico las hipótesis del negocio formuladas en la sección 8.2.1, aislando el impacto causal de las variantes introducidas.
+Para RentiCar, el objetivo es monitorear la plataforma web y móvil para validar si los cambios introducidos en la ficha de vehículos (H1) y el panel de gestión y telemetría para arrendadores (H2) generan la confianza y el valor percibido necesarios para sostener el modelo de negocio.
 
----
+Estableceremos un plan de seguimiento basado en A/B Testing y analítica con Google Tag Manager (`GTM-5P5DVR9F`) y Google Analytics 4 (`GA4`) para evaluar el impacto causal de las mejoras implementadas.
 
-#### 1. Hipótesis de Negocio Objeto de Seguimiento
+**1. Implementación Inicial**
+Durante esta fase, nos enfocaremos en el lanzamiento de los diseños experimentales y la recolección de datos segmentados para establecer la causalidad de los resultados frente a la Línea Base (Control).
+- **Asignación del Grupo:** Todos los eventos críticos incluirán una propiedad que identifica si el usuario pertenece al grupo Control o Experimental para garantizar que los resultados se analicen dentro de su grupo asignado.
+- **Métricas de Confianza (H1):** Se capturarán las vistas de detalle de vehículo, los clics en iniciar reserva y las confirmaciones de alquiler para medir la Tasa de Conversión a Reserva.
+- **Métricas de Valor/Retención (H2):** Se registrarán la interacción de los arrendadores con el panel de telemetría IoT y las acciones sobre publicaciones activas para medir la adopción de la funcionalidad y el abandono.
+- **Feedback de Usuarios:** Se aplicarán encuestas breves post-interacción para obtener datos cualitativos sobre la confianza percibida tras consultar reseñas y datos del vehículo (H1).
 
-El plan instrumenta el seguimiento de dos hipótesis centrales para la sostenibilidad y escalabilidad del modelo de negocio de RentiCar:
+**2. Seguimiento Continuo**
+Después de la fase inicial de validación, se establecerá un proceso continuo de seguimiento para evaluar el rendimiento a largo plazo.
+- **Métricas en Tiempo Real:** Se empleará Google Analytics 4 en web y analítica de eventos en la aplicación móvil para monitorear el comportamiento de los usuarios en tiempo real.
+- **Segmentación de Usuarios:** Los datos se segmentarán por tipo de usuario (**Arrendatarios** y **Arrendadores**) para entender cómo cada grupo interactúa con las funcionalidades principales.
+- **Tasa de Retención a Largo Plazo:** Se medirá la Tasa de Retención de Arrendadores a lo largo del tiempo para evaluar la efectividad del seguimiento operativo e IoT (H2) en mantener a los propietarios activos en la plataforma.
 
-| ID Hipótesis | Enunciado Técnico de la Hipótesis | Métrica Primaria (KPI) | Métricas Secundarias / Guardarraíl |
-| :--- | :--- | :--- | :--- |
-| **H1: Confianza del Arrendatario** | La inclusión de una insignia visual de "Arrendador Verificado" y reseñas destacadas en la ficha del vehículo (Variante B) incrementará la Tasa de Conversión a Reserva frente al diseño base sin verificación (Control A). | **Tasa de Conversión a Reserva (CCR):** $\frac{\text{Reservas Confirmadas}}{\text{Vistas de Ficha Vehicular}}$ | • Tasa de rebote en la vista de detalle vehicular.<br>• Tiempo promedio de permanencia en la ficha.<br>• Clics en el botón de reserva iniciada. |
-| **H2: Retención del Arrendador** | La provisión de un widget de telemetría IoT con monitoreo satelital en tiempo real de velocidad y combustible (Variante B) reducirá la tasa de abandono de propietarios frente al panel básico (Control A). | **Tasa de Abandono (Owner Churn Rate):** $\frac{\text{Propietarios que despublican flota}}{\text{Total de propietarios activos}}$ | • Tasa de Adopción de Funcionalidad (FAR) de telemetría.<br>• Frecuencia semanal de consulta del panel IoT.<br>• Tasa de aceptación de solicitudes de alquiler. |
-
----
-
-#### 2. Protocolo de Asignación y Persistencia de Grupos
-
-Para garantizar la validez interna del experimento A/B y evitar el sesgo de migración entre versiones, se diseñó un protocolo de asignación balanceada (50% Grupo Control vs. 50% Grupo Experimental):
-
-1. **Asignación Determinista:**
-   Al autenticarse el usuario en la plataforma, el backend calcula el hash numérico del `userId` aplicando el algoritmo modular:
-   $$\text{bucket} = \text{hash}(\text{userId}) \pmod{100}$$
-   - Si $\text{bucket} < 50 \rightarrow$ Asignado al **Grupo Control (Variante A)**.
-   - Si $\text{bucket} \ge 50 \rightarrow$ Asignado al **Grupo Experimental (Variante B)**.
-2. **Persistencia de Estado:**
-   La asignación se almacena en la tabla de sesión del usuario en base de datos y se inyecta en el payload del token JWT como claim `experiment_variants: { "H1": "B", "H2": "B" }`. De este modo, el usuario experimenta consistentemente la misma versión sin importar el navegador o dispositivo utilizado.
-3. **Propagación Telemétrica:**
-   Todos los eventos analíticos disparados desde la aplicación web o móvil incorporan obligatoriamente las dimensiones personalizadas `experiment_id` y `variant_group`.
-
----
-
-#### 3. Matriz y Taxonomía de Eventos de Tracking
-
-A continuación se detalla la especificación de eventos instrumentados en el cliente web (Angular) y móvil mediante el SDK de analítica:
-
-| Event Name | Trigger / Momento de Disparo | Propiedades del Evento (Payload JSON) | Hipótesis Vinculada |
-| :--- | :--- | :--- | :---: |
-| `catalog_page_view` | Carga inicial del catálogo de vehículos disponibles. | `user_id`, `role`, `city`, `total_vehicles_rendered` | General |
-| `vehicle_card_clicked` | Clic del usuario en una tarjeta de vehículo del catálogo. | `vehicle_id`, `brand`, `model`, `daily_price`, `has_badge` | H1 |
-| `vehicle_detail_viewed` | Despliegue completo de la ficha técnica del vehículo. | `vehicle_id`, `owner_id`, `variant_group` (`A` o `B`), `badge_shown` (`true`/`false`) | H1 |
-| `booking_flow_initiated` | Clic en el botón "Reserva tu vehículo ahora". | `vehicle_id`, `renter_id`, `variant_group`, `daily_price` | H1 |
-| `booking_dates_selected` | Selección de fecha de inicio y fin en el calendario. | `vehicle_id`, `start_date`, `end_date`, `total_days`, `calculated_total` | H1 |
-| `booking_completed` | Confirmación satisfactoria del contrato de alquiler. | `booking_id`, `vehicle_id`, `renter_id`, `variant_group`, `total_amount`, `currency: 'PEN'` | **H1 (Primaria)** |
-| `owner_dashboard_viewed` | Carga del panel principal del propietario (arrendador). | `owner_id`, `active_vehicles_count`, `variant_group` (`A` o `B`) | H2 |
-| `iot_widget_rendered` | Despliegue visual del mapa Leaflet y tarjeta de telemetría IoT. | `owner_id`, `vehicle_id`, `has_iot_sensor`, `variant_group` | H2 |
-| `iot_metrics_interacted` | Clic en métricas de velocidad, nivel de combustible o historial GPS. | `owner_id`, `vehicle_id`, `metric_type` (`speed`, `fuel`, `gps_route`), `timestamp` | H2 |
-| `listing_pause_attempt` | Clic en la opción de desactivar o retirar un vehículo de la plataforma. | `owner_id`, `vehicle_id`, `reason_selected`, `days_active`, `variant_group` | **H2 (Primaria)** |
-
----
-
-#### 4. Fases de Ejecución del Experimento
-
-El plan de seguimiento se ejecuta a lo largo de un ciclo controlado de 28 días calendario:
-
-```
-[Día 1 a 7]       --> Fase 1: Instrumentación, validación de eventos y recolección de Línea Base.
-[Día 8 a 21]      --> Fase 2: Lanzamiento del A/B Test balanceado y monitoreo de dispersión.
-[Día 22 a 28]     --> Fase 3: Evaluación de significancia estadística (p-value < 0.05, intervalo al 95%).
-[Post Día 28]     --> Decisión: Rollout al 100% de la variante ganadora o replanteamiento de hipótesis.
-```
-
-1. **Fase 1: Calibración y Línea Base (Días 1-7):**
-   Verificación en staging del correcto despacho de eventos hacia Google Analytics 4 y la base de datos de auditoría. Se registra la tasa de conversión histórica como valor de referencia previo al despliegue.
-2. **Fase 2: Ejecución del A/B Testing (Días 8-21):**
-   Activación de las Variantes B en producción para el 50% de la muestra. Se monitoriza diariamente la tasa de error y la adherencia al flujo de reservas.
-3. **Fase 3: Análisis de Causalidad y Significancia Estadística (Días 22-28):**
-   Aplicación de la prueba estadística Z para dos proporciones independientes y análisis de significancia (nivel de confianza del 95%, $\alpha = 0.05$). Se valida que el incremento en la conversión del grupo experimental B no sea atribuible al azar.
-4. **Fase 4: Decisión de Negocio y Despliegue Permanente:**
-   Si la variante B valida la hipótesis con significancia estadística, se consolida como el diseño definitivo en la rama principal (`main`) para el 100% de los usuarios.
-
----
-
-#### 5. Privacidad y Gobernanza de Datos (Data Governance)
-
-En estricto cumplimiento con la normativa de protección de datos personales y buenas prácticas de ingeniería de software:
-- **Anonimización Estricta:** Ningún evento de tracking transmite datos sensibles de usuarios (nombres completos, contraseñas, documentos de identidad o números de tarjetas bancarias). Los usuarios son identificados exclusivamente mediante tokens y claves subrogadas (`userId` sintético).
-- **Control de Consentimiento (Cookie Consent):** Los scripts de seguimiento analítico se ejecutan únicamente tras la aceptación explícita de cookies analíticas por parte del usuario en el banner de consentimiento de la plataforma.
+Este enfoque asegurará que RentiCar tome decisiones informadas y validadas por datos, centrándose en la viabilidad económica del proyecto.
 
 ## 8.3. Experimentation 
 
