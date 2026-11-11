@@ -4339,6 +4339,51 @@ Las métricas de negocio a nivel de dominio que se verán impactadas por los exp
 
 ### 8.2.3. Measures
 
+Estas son las métricas de datos crudos (cuantitativas y cualitativas) que recopilaremos directamente durante el experimento para evaluar las hipótesis.
+
+*   **Para Hipótesis 1 (Confianza en Reservas - Arrendatario):**
+
+  *   Clics en el botón "Reservar" (por variante A/B).
+
+  *   Número de impresiones (vistas) del perfil del propietario.
+
+  *   Tasa de rebote en la página de la ficha del vehículo.
+
+  *   Cualitativo: Respuestas a encuestas de salida ("¿Qué tan confiable le pareció este propietario y su vehículo?").
+
+*   **Para Hipótesis 2 (Eficiencia del Catálogo - Arrendatario):**
+
+  *   Tiempo promedio (en segundos) para completar la tarea de reserva.
+
+  *   Número de clics realizados en la interfaz de búsqueda (filtros vs. lista).
+
+  *   Tasa de éxito de la tarea (porcentaje de usuarios que completan la reserva correctamente).
+
+  *   Cualitativo: Comentarios en voz alta durante las pruebas de usabilidad sobre la facilidad de uso de los filtros.
+
+*   **Para Hipótesis 3 (Captación del Propietario - Valor del IoT):**
+
+  *   Tasa de Publicación (porcentaje de usuarios que completan el formulario de publicación de un vehículo ficticio).
+
+  *   Número de propietarios que activan la opción de monitoreo IoT tras la demostración.
+
+  *   Cualitativo: Resultados de la encuesta de percepción de seguridad (escala 1-5) y la intención de listar un vehículo real en los próximos 30 días.
+
+*   **Para Hipótesis 4 (Retención del Propietario - Ecosistema de Seguridad):**
+
+  *   Tasa de Retención (porcentaje de propietarios que reactivan su publicación en los 3 meses siguientes).
+
+  *   Número de tickets de soporte relacionados con daños o disputas (por grupo).
+
+  *   Cualitativo: Net Promoter Score (NPS) obtenido tras la experiencia de alquiler y las entrevistas de seguimiento sobre la percepción del paquete "Protección RentiCar".
+
+| Question | Measure |
+| --- | --- |
+| Q1: ¿Aumentará la tasa de conversión de reservas la implementación de un sistema de reseñas verificadas y perfiles de usuario detallados? | Cuantitativo: Clics en el botón "Reservar" por variante. Tasa de Conversión (Visita a Perfil → Solicitud). Tasa de rebote en la página del vehículo. Cualitativo: Respuestas a encuestas de salida ("¿Qué tan confiable le pareció este propietario y su vehículo?"). |
+| Q4: ¿Incrementará la implementación de filtros de búsqueda (marca, precio, fechas) la tasa de solicitudes de reserva en comparación con una búsqueda simple por lista? | Cuantitativo: Tiempo promedio para completar la reserva (en segundos). Número de clics en la interfaz de búsqueda. Tasa de éxito de la tarea. Cualitativo: Comentarios en voz alta durante las pruebas de usabilidad sobre la facilidad de uso de los filtros. |
+| Q2: ¿Qué valor relativo otorgan los propietarios a las funcionalidades de monitoreo IoT frente a una reducción en la comisión por servicio? | Cuantitativo: Tasa de Publicación (porcentaje de formularios completados). Número de activaciones de la opción de monitoreo IoT. Cualitativo: Resultados de la encuesta de percepción de seguridad (escala 1-5) y la intención de listar un vehículo real en los próximos 30 días. |
+| Q3: ¿Estarán los propietarios dispuestos a mantener sus vehículos publicados en la plataforma tras la primera experiencia de alquiler si se les ofrece un seguro de daños? | Cuantitativo: Tasa de Retención (reactivación de publicación en 3 meses). Número de tickets de soporte por daños o disputas. Cualitativo: Net Promoter Score (NPS) y entrevistas de seguimiento sobre la percepción del paquete "Protección RentiCar". |
+
 ### 8.2.4. Conditions
 
 ### 8.2.5. Scale Calculations and Decisions
