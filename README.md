@@ -184,10 +184,10 @@ U202313403 - Via Luna, Bruce
         - [6.1.2. Core Integration Tests.](#612-core-integration-tests)
         - [6.1.3. Core Behavior-Driven Development](#613-core-behavior-driven-development)
       - [6.1.4. Core System Tests](#614-core-system-tests)
-    - [6.2. Static testing & Verification](#62-static-testing-verification)
+    - [6.2. Static testing & Verification](#62-static-testing--verification)
         - [6.2.1. Static Code Analysis](#621-static-code-analysis)
-            - [6.2.1.1. Coding standard & Code conventions](#6211-coding-standard-code-conventions)
-            - [6.2.1.2. Code Quality & Code Security](#6212-code-quality-code-security)
+            - [6.2.1.1. Coding standard & Code conventions](#6211-coding-standard--code-conventions)
+            - [6.2.1.2. Code Quality & Code Security](#6212-code-quality--code-security)
         - [6.2.2. Reviews](#622-reviews)
     - [6.3. Validation Interviews](#63-validation-interviews)
         - [6.3.1. Diseño de Entrevistas](#631-diseño-de-entrevistas)
@@ -4060,15 +4060,119 @@ Aqui se ubican los archivos .feature que sirven para el funcionamiento de las pr
 
 ### 6.1.4. Core System Tests
 
-## 6.2. Static testing & Verification 
+En este apartado nos encargamos de implementar las pruebas de sistema automatizadas de extremo a extremo (End-to-End) para **RentiCar**, utilizando **Selenium WebDriver** para interactuar con la aplicación web en Angular y **Cucumber BDD** con sintaxis **Gherkin** en inglés para verificar los flujos principales de negocio.
+
+- **Ejecución Completa de la Suite (`RunCucumberTest` en IntelliJ IDEA):**
+![Ejecución completa de pruebas de sistema Selenium y Cucumber en IntelliJ IDEA](assets/chapter06/selenium-suite-execution.jpg)
+
+---
+
+#### 1. Flujo de Registro de Usuario (SignUp)
+
+- **Evidencias de Ejecución:**
+  - *Resultado de la prueba en el Front:*
+  ![Resultado de SignUp en RentiCar Frontend](assets/chapter06/selenium-signup-frontend.png)
+
+  - *Feature en formato Gherkin (`signup.feature`):*
+  ![Feature SignUp en formato Gherkin](assets/chapter06/selenium-signup-feature.png)
+
+  - *Ejecución de escenarios en IntelliJ IDEA (`RunCucumberTestSignUp`):*
+  ![Ejecución de RunCucumberTestSignUp en IntelliJ IDEA](assets/chapter06/selenium-signup-runner.jpg)
+
+---
+
+#### 2. Flujo de Autenticación de Usuario (SignIn)
+
+- **Evidencias de Ejecución:**
+  - *Resultado de la prueba en el Front:*
+  ![Resultado de SignIn en RentiCar Frontend](assets/chapter06/selenium-signin-frontend.png)
+
+  - *Feature en formato Gherkin (`signin.feature`):*
+  ![Feature SignIn en formato Gherkin](assets/chapter06/selenium-signin-feature.png)
+
+  - *Ejecución de escenarios en IntelliJ IDEA (`RunCucumberTestSignIn`):*
+  ![Ejecución de RunCucumberTestSignIn en IntelliJ IDEA](assets/chapter06/selenium-signin-runner.jpg)
+
+---
+
+#### 3. Flujo de Publicación de Vehículo (RegisterVehicle)
+
+- **Evidencias de Ejecución:**
+  - *Resultado de la prueba en el Front:*
+  ![Resultado de RegisterVehicle en RentiCar Frontend](assets/chapter06/selenium-register-vehicle-frontend.png)
+
+  - *Feature en formato Gherkin (`register_vehicle.feature`):*
+  ![Feature RegisterVehicle en formato Gherkin](assets/chapter06/selenium-register-vehicle-feature.png)
+
+  - *Ejecución de escenarios en IntelliJ IDEA (`RunCucumberTestRegisterVehicle`):*
+  ![Ejecución de RunCucumberTestRegisterVehicle en IntelliJ IDEA](assets/chapter06/selenium-register-vehicle-runner.jpg)
+
+---
+
+#### 4. Flujo de Reserva de Vehículo (RentVehicle)
+
+- **Evidencias de Ejecución:**
+  - *Resultado de la prueba en el Front:*
+  ![Resultado de RentVehicle en RentiCar Frontend](assets/chapter06/selenium-rent-vehicle-frontend.png)
+
+  - *Feature en formato Gherkin (`rent_vehicle.feature`):*
+  ![Feature RentVehicle en formato Gherkin](assets/chapter06/selenium-rent-vehicle-feature.png)
+
+  - *Ejecución de escenarios en IntelliJ IDEA (`RunCucumberTestRentVehicle`):*
+  ![Ejecución de RunCucumberTestRentVehicle en IntelliJ IDEA](assets/chapter06/selenium-rent-vehicle-runner.jpg)
+
+---
+
+#### 5. Flujo de Monitoreo de Telemetría IoT (IoTTelemetry)
+
+- **Evidencias de Ejecución:**
+  - *Resultado de la prueba en el Front:*
+  ![Resultado de IoTTelemetry en RentiCar Frontend](assets/chapter06/selenium-telemetry-frontend.png)
+
+  - *Feature en formato Gherkin (`iot_telemetry.feature`):*
+  ![Feature IoTTelemetry en formato Gherkin](assets/chapter06/selenium-telemetry-feature.png)
+
+  - *Ejecución de escenarios en IntelliJ IDEA (`RunCucumberTestIoTTelemetry`):*
+  ![Ejecución de RunCucumberTestIoTTelemetry en IntelliJ IDEA](assets/chapter06/selenium-telemetry-runner.jpg)
+
+---
+
+## 6.2. Static testing & Verification
+
+Esta sección reúne las prácticas de verificación estática aplicadas al código fuente de RentiCar para detectar errores de formato, convenciones y diseño antes de compilar o integrar cambios.
 
 ### 6.2.1. Static Code Analysis
 
+El análisis estático en RentiCar se configura directamente en la fase de validación de Maven (`validate`) y en los editores del equipo antes de enviar cambios al repositorio.
+
 #### 6.2.1.1. Coding standard & Code conventions
+
+Las convenciones de código definen reglas uniformes de formato, nomenclatura y estructura entre el backend en Java y el frontend en Angular.
+
+| Lenguaje / Stack | Estándar / Convención Adoptada | Herramienta de Aplicación | IDE / Editores Usados |
+| :--- | :--- | :--- | :--- |
+| **Java 21 (Spring Boot 3.5.7)** | **Google Java Style Guide** (`config/checkstyle/google_checks.xml`, 4 espacios y máx. 120 caracteres) | **CheckStyle** (`maven-checkstyle-plugin:3.6.0`) | **IntelliJ IDEA** |
+| **TypeScript / HTML (Angular 20)** | Convenciones de formato de Angular (`printWidth: 100`, comillas simples en `.ts`) | **EditorConfig** (`.editorconfig`) y **Prettier** (`package.json`) | **IntelliJ IDEA**, **Visual Studio Code** |
+
+**Principios de Codificación Clave:**
+
+* **Clean Code:** Se utilizan nombres descriptivos (`camelCase` en variables y métodos, `PascalCase` en clases, `SCREAMING_SNAKE_CASE` en constantes) y se evita código muerto o importaciones con comodín.
+* **Domain-Driven Design (DDD) (Backend Java):** La lógica sigue el lenguaje ubicuo del negocio en cinco bounded contexts (`iam`, `listings`, `booking`, `iot`, `reviews`), con separación CQRS entre `*CommandServiceImpl` y `*QueryServiceImpl` y comunicación entre contextos mediante fachadas ACL (`ListingsContextFacade`, `BookingContextFacade`).
+* **Convenciones en Archivos:** Las clases Java siguen `PascalCase` (`Vehicle.java`, `Booking.java`, `VehiclesController.java`) y los paquetes siguen `lowercase` bajo `com.codexateam.platform`.
+
+---
+
+En la siguiente captura se observa la configuración de `maven-checkstyle-plugin` (`3.6.0`) en `Backend/pom.xml` apuntando a `config/checkstyle/google_checks.xml` y la ejecución de `checkstyle:check` en IntelliJ IDEA con `0` violaciones (`BUILD SUCCESS`):
+
+![Configuración y ejecución limpia de Checkstyle en IntelliJ IDEA](assets/chapter06/checkstyle-execution.jpg)
 
 #### 6.2.1.2. Code Quality & Code Security
 
+
+
 ### 6.2.2. Reviews
+
+
 
 ## 6.3. Validation Interviews 
 
@@ -4200,25 +4304,227 @@ Aqui se ubican los archivos .feature que sirven para el funcionamiento de las pr
 
 ### 6.3.3. Evaluaciones según heurísticas. 
 
+#### Evaluación de Heurísticas y Principios de UX
+
+*Curso:* 1ASI0729 - Desarrollo de Aplicaciones Open Source  
+*Profesorado:* Bautista Ubillús, Efraín Ricardo; Castro Veramendi, Rafael Oswaldo; Espinoza Bravo, Wilder Julio; Flores Moroco, Juan Antonio; Mori Paiva, Hugo Allan; Robles Fernández, Iván; Velásquez Núñez, Ángel Augusto  
+*Cliente:* RentiCar
+
+##### *Tareas Evaluadas:*
+
+Esta evaluación se enfoca en la usabilidad y experiencia de usuario de las siguientes tareas en la aplicación:
+
+###### *Landing Page (Desktop)*
+- Presentación general de la plataforma y sus funcionalidades.
+- Descripción del equipo de trabajo.
+- Funcionalidad de los elementos de navegación (header y footer).
+- Eficiencia de la llamada a la acción (Call to Action - CTA).
+
+###### *Aplicación Web (Desktop)*
+- Gestión de inventarios: Adición de elementos.
+- Visualización del dashboard de arrendadores y arrendatarios.
+- Agregar y gestionar asistencias de vehículos.
+- Visualización de horarios de los empleados.
+
+###### *Exclusiones para Esta Evaluación:*
+
+*Landing Page (Desktop):*
+- Enlaces a términos y condiciones.
+- Política de privacidad y condiciones de uso.
+
+*Aplicación Web (Desktop):*
+- Visualización del perfil de usuario.
+- Descripción detallada del proceso de creación de asistencias.
+- Gestión del inventario.
+- Registro de nuevos usuarios.
+
+---
+
+#### *Escala de Severidad de los Problemas Identificados:*
+
+Los problemas identificados durante la evaluación de usabilidad se clasificaron de acuerdo con la siguiente escala:
+
+| Nivel | Descripción |
+|-------|-------------|
+| 1     | Problema superficial: puede ser fácilmente superado por el usuario y ocurre raramente. |
+| 2     | Problema menor: ocurre con algo más de frecuencia y es moderadamente difícil de superar. |
+| 3     | Problema mayor: ocurre con frecuencia y los usuarios no pueden resolverlo por sí mismos. |
+| 4     | Problema grave: error de alto impacto que impide el uso de la plataforma. |
+
+---
+
+#### *Tabla Resumen de Problemas y Heurísticas Violadas:*
+
+##### *Aplicación Web*
+
+| #   | Problema                                                                                         | Severidad | Heurística/Principio Violado                                 |
+|-----|--------------------------------------------------------------------------------------------------|-----------|--------------------------------------------------------------|
+| 1   | Los filtros de búsqueda son limitados y no permiten una búsqueda avanzada de vehículos.         | 2         | Usabilidad - Flexibilidad y eficiencia de uso                 |
+| 2   | La visualización de la disponibilidad de los vehículos no es clara ni en tiempo real.            | 3         | Usabilidad - Retroalimentación y estado del sistema           |
+| 3   | Los arrendadores tienen dificultades para modificar los detalles de sus vehículos.               | 2         | Usabilidad - Consistencia y estándares                        |
+| 4   | Falta un mapa interactivo para visualizar la ubicación y disponibilidad de los vehículos.         | 3         | IA - ¿Es encontrable?                                         |
+
+##### *Landing Page*
+
+| #   | Problema                                                                                         | Severidad | Heurística/Principio Violado                                 |
+|-----|--------------------------------------------------------------------------------------------------|-----------|--------------------------------------------------------------|
+| 1   | El texto descriptivo sobre la plataforma no tiene suficiente claridad, dificultando la comprensión. | 1         | IA - ¿Es claro?                                               |
+| 2   | Los botones de call to action no comunican claramente la acción esperada, afectando la interacción.| 2         | IA - ¿Es usable?                                              |
+| 3   | Las cards de los vehículos no incluyen información completa, como el número de placa.            | 2         | Usabilidad - Consistencia y estándares                        |
+| 4   | El diseño visual no tiene una jerarquía clara, dificultando la navegación de los usuarios.        | 3         | IA - ¿Es encontrable?                                         |
+
+---
+
+#### *Descripción de Problemas y Recomendaciones:*
+
+##### *Landing Page*
+
+###### *Problema 1:*
+- *Severidad:* 1
+- *Heurística violada:* IA - ¿Es claro?
+- *Descripción:* El texto de la página de aterrizaje es ambiguo, dificultando que los usuarios comprendan de inmediato la propuesta de valor de la plataforma.
+- *Recomendación:* Mejorar la estructura y claridad del texto, utilizando títulos más claros y descripciones concisas. Usar listas y puntos destacados para facilitar la comprensión rápida.
+
+###### *Problema 2:*
+- *Severidad:* 2
+- *Heurística violada:* IA - ¿Es usable?
+- *Descripción:* Los botones de acción ("Reservar ahora") no son lo suficientemente claros ni atractivos, lo que genera dudas sobre su función.
+- *Recomendación:* Rediseñar los botones de call to action con textos más específicos y visibles, como “Reserva tu vehículo ahora”, para transmitir claramente lo que ocurrirá al hacer clic.
+
+###### *Problema 3:*
+- *Severidad:* 2
+- *Heurística violada:* Usabilidad - Consistencia y estándares
+- *Descripción:* Las cards de los vehículos no contienen todos los detalles relevantes (por ejemplo, el número de placa), lo que puede generar confusión o desconfianza en los usuarios.
+- *Recomendación:* Asegurarse de que cada card incluya toda la información básica, como el número de placa, el modelo del vehículo, y otros datos clave, de manera coherente en todas las opciones.
+
+###### *Problema 4:*
+- *Severidad:* 3
+- *Heurística violada:* IA - ¿Es encontrable?
+- *Descripción:* La jerarquía visual no está bien definida, lo que dificulta la navegación y la identificación rápida de los elementos más importantes.
+- *Recomendación:* Rediseñar la página para establecer una jerarquía visual clara, asegurando que las secciones más importantes, como el call to action, sean fácilmente accesibles.
+
+---
+
+##### *Aplicación Web*
+
+###### *Problema 1:*
+- *Severidad:* 2
+- *Heurística violada:* Usabilidad - Flexibilidad y eficiencia de uso
+- *Descripción:* Los filtros de búsqueda disponibles no permiten una búsqueda avanzada por características específicas del vehículo, lo que dificulta a los usuarios encontrar opciones específicas.
+- *Recomendación:* Mejorar el sistema de búsqueda añadiendo filtros más detallados, como tipo de vehículo, precio, ubicación, y características específicas.
+
+###### *Problema 2:*
+- *Severidad:* 3
+- *Heurística violada:* Usabilidad - Retroalimentación y estado del sistema
+- *Descripción:* La plataforma no muestra la disponibilidad de los vehículos en tiempo real, lo que causa incertidumbre en los arrendatarios.
+- *Recomendación:* Implementar un sistema de retroalimentación en tiempo real que actualice constantemente la disponibilidad de los vehículos y muestre mensajes claros cuando no haya vehículos disponibles.
+
+###### *Problema 3:*
+- *Severidad:* 2
+- *Heurística violada:* Usabilidad - Consistencia y estándares
+- *Descripción:* Los arrendadores tienen dificultades para modificar los detalles de sus vehículos debido a la falta de consistencia en la interfaz.
+- *Recomendación:* Estandarizar los formularios y procesos para la edición de vehículos, asegurándose de que el flujo sea sencillo y consistente con el resto de la plataforma.
+
+###### *Problema 4:*
+- *Severidad:* 3
+- *Heurística violada:* IA - ¿Es encontrable?
+- *Descripción:* La falta de un mapa interactivo impide a los arrendatarios localizar los vehículos disponibles fácilmente.
+- *Recomendación:* Implementar un mapa interactivo para que los arrendatarios puedan visualizar los vehículos disponibles en su área, mejorando así la accesibilidad y la facilidad de uso de la plataforma.
+
+---
+
+Estas mejoras y recomendaciones están diseñadas para optimizar la experiencia del usuario, mejorar la accesibilidad y garantizar la eficiencia de las funcionalidades clave de la plataforma. La implementación de estas sugerencias fortalecerá la plataforma, haciéndola más intuitiva y eficiente para todos los usuarios.
+Con estos cambios, la evaluación de las heurísticas estará más alineada con los estándares profesionales y será clara y efectiva en su presentación. 
+
+---
+
 ## 6.4. Auditoría de Experiencias de Usuario 
 
 ### 6.4.1. Auditoría realizada
 
+En el marco de la colaboración inter-equipos de la carrera, el equipo de **Codexa-Team** llevó a cabo una auditoría heurística completa sobre el producto digital desarrollado por el grupo homólogo asignado.
+
 #### 6.4.1.1. Información del grupo auditado
+
 
 #### 6.4.1.2. Cronograma de auditoría realizada 
 
+
 #### 6.4.1.3. Contenido de auditoría realizada
+
 
 ### 6.4.2. Auditoría recibida
 
+A continuación, se documenta la auditoría heurística recibida por **Codexa-Team** respecto a nuestra plataforma **RentiCar**, evaluando tanto la Landing Page como la Aplicación Web (SPA).
+
 #### 6.4.2.1. Información del grupo auditor
+
+| Campo | Detalle Informativo |
+| :--- | :--- |
+| **Grupo Evaluador:** | Equipo Evaluador Par - Curso 1ASI0729 |
+| **Producto Evaluado:** | **RentiCar** (Landing Page Desktop y Aplicación Web Angular) |
+| **Cliente / Startup:** | Codexa-Team |
+| **Evaluadores:** | Estudiantes asignados para la auditoría cruzada |
+| **Alcance:** | Usabilidad, consistencia de interfaz, claridad en la propuesta de valor y flujos de reserva |
 
 #### 6.4.2.2. Cronograma de auditoría recibida 
 
+| Hito / Sesión | Fecha | Participantes | Objetivo |
+| :--- | :---: | :--- | :--- |
+| **Sesión de Demostración** | 16/10/2026 | Codexa-Team y Grupo Auditor | Presentación guiada de los flujos principales de arrendatario y arrendador |
+| **Recepción del Informe Heurístico** | 22/10/2026 | Estefano Solís, Sergio Landa | Recepción del reporte con los 8 problemas identificados y su severidad |
+| **Reunión de Análisis y Plan de Subsanación** | 25/10/2026 | Equipo Codexa-Team | Evaluación técnica de factibilidad e incorporación al backlog de desarrollo |
+
 #### 6.4.2.3. Contenido de auditoría recibida
 
+##### 1. Evaluación de la Landing Page
+
+| # | Problema Identificado | Severidad | Heurística / Principio Violado |
+| :-: | :--- | :-: | :--- |
+| **1** | El texto descriptivo sobre la plataforma no tiene suficiente claridad, dificultando la comprensión rápida de la propuesta de valor. | 1 | IA - ¿Es claro? |
+| **2** | Los botones de *call to action* no comunican claramente la acción esperada, generando dudas sobre la interacción. | 2 | IA - ¿Es usable? |
+| **3** | Las cards de los vehículos en la vista previa no incluyen información completa, como el número de placa y transmisión. | 2 | Usabilidad - Consistencia y estándares |
+| **4** | El diseño visual no tiene una jerarquía clara, dificultando la navegación de los usuarios hacia los planes de alquiler. | 3 | IA - ¿Es encontrable? |
+
+##### 2. Evaluación de la Aplicación Web
+
+| # | Problema Identificado | Severidad | Heurística / Principio Violado |
+| :-: | :--- | :-: | :--- |
+| **1** | Los filtros de búsqueda disponibles son limitados y no permiten una búsqueda avanzada por características específicas del vehículo. | 2 | Usabilidad - Flexibilidad y eficiencia de uso |
+| **2** | La visualización de la disponibilidad de los vehículos no es clara ni en tiempo real, lo que causa incertidumbre en los arrendatarios. | 3 | Usabilidad - Retroalimentación y estado del sistema |
+| **3** | Los arrendadores tienen dificultades para modificar los detalles de sus vehículos debido a la falta de consistencia en los formularios. | 2 | Usabilidad - Consistencia y estándares |
+| **4** | La falta de un mapa interactivo impide a los arrendatarios localizar los vehículos disponibles en su área geográfica. | 3 | IA - ¿Es encontrable? |
+
+##### Descripción Detallada de Problemas y Recomendaciones Recibidas:
+
+###### Landing Page:
+- **Problema 1 (Severidad 1 - IA: ¿Es claro?):** El texto descriptivo inicial resulta genérico, sin enfatizar el valor diferencial de la telemetría IoT y los contratos seguros.
+  - *Recomendación:* Mejorar la estructura y claridad del texto, utilizando titulares orientados al beneficio y listas de viñetas claras.
+- **Problema 2 (Severidad 2 - IA: ¿Es usable?):** El botón de llamada a la acción tenía un texto genérico ("Entrar") que no motivaba la conversión.
+  - *Recomendación:* Rediseñar los botones CTA con microcopia directa y atractiva, como "Reserva tu vehículo ahora".
+- **Problema 3 (Severidad 2 - Usabilidad: Consistencia y estándares):** Las tarjetas de exhibición omitían metadatos relevantes como año del modelo y placa.
+  - *Recomendación:* Estandarizar las cards vehiculares asegurando que contengan marca, modelo, año, precio por día y placa.
+- **Problema 4 (Severidad 3 - IA: ¿Es encontrable?):** La jerarquía visual carecía de separación evidente entre beneficios para arrendadores y para arrendatarios.
+  - *Recomendación:* Segmentar la página en dos bloques visualmente diferenciados con llamadas a la acción personalizadas por rol.
+
+###### Aplicación Web:
+- **Problema 1 (Severidad 2 - Usabilidad: Flexibilidad y eficiencia de uso):** El buscador solo permitía filtrar por marca.
+  - *Recomendación:* Expandir el panel de filtros para permitir selección de rango de precios, tipo de transmisión, combustible y número de asientos.
+- **Problema 2 (Severidad 3 - Usabilidad: Retroalimentación y estado del sistema):** Los vehículos alquilados seguían mostrándose disponibles hasta que el usuario intentaba seleccionarlos.
+  - *Recomendación:* Actualizar el estado visual del vehículo de inmediato a "ALQUILADO" con indicador de color y deshabilitar el botón de reserva.
+- **Problema 3 (Severidad 2 - Usabilidad: Consistencia y estándares):** Los formularios de creación y edición de flota utilizaban componentes visuales distintos.
+  - *Recomendación:* Unificar el diseño utilizando componentes consistentes de Angular Material (`mat-form-field`, `mat-select`).
+- **Problema 4 (Severidad 3 - IA: ¿Es encontrable?):** Los arrendatarios no podían visualizar la cercanía geográfica de los vehículos para la recogida.
+  - *Recomendación:* Implementar un mapa interactivo con Leaflet que renderice pines de ubicación precisa de cada unidad disponible.
+
 #### 6.4.2.4. Resumen de modificaciones para subsanar hallazgos
+
+A partir de los hallazgos recibidos en la auditoría, **Codexa-Team** priorizó e implementó las siguientes mejoras en la plataforma **RentiCar**:
+
+1. **Incorporación de Mapa Interactivo con Leaflet:** Se integró un mapa interactivo sobre OpenStreetMap tanto en el catálogo de búsqueda como en el panel de telemetría IoT, permitiendo a los arrendatarios ubicar de inmediato las unidades vehiculares más cercanas a su ubicación actual.
+2. **Sistema Avanzado de Filtros Multi-Criterio:** Se enriqueció la barra de búsqueda en Angular con filtros dinámicos por rango de tarifa diaria, tipo de transmisión, modelo y estado de disponibilidad en tiempo real.
+3. **Estandarización UI en Flujos de Gestión de Flota:** Se rediseñaron los formularios de publicación y edición de vehículos bajo la directiva de Angular Material, garantizando consistencia en etiquetas, botones de guardado y mensajes de confirmación.
+4. **Optimización de Microcopia y Jerarquía Visual:** En la Landing Page y en la aplicación, se actualizaron los botones principales hacia textos de acción claros ("Reserva tu vehículo ahora", "Publicar mi automóvil"), y se añadieron insignias visuales de placa y disponibilidad en cada tarjeta vehicular.
 
 # Capítulo VII: DevOps Practices
 
@@ -4360,13 +4666,54 @@ Estos componentes detallan cómo se automatiza el despliegue, incluyendo la Base
 
 ## 7.4. Continuous Monitoring
 
+El monitoreo continuo en RentiCar supervisa la actividad del sitio web publicado en producción y define la base técnica de observabilidad y alertas del proyecto.
+
 ### 7.4.1. Tools and Practices
 
-### 7.4.2. Monitoring Pipeline Components 
+La estrategia actual combina analítica web activa en el frontend con herramientas de telemetría backend contempladas para futuras iteraciones:
 
-### 7.4.3. Alerting Pipeline Components 
+| Herramienta | Capa y Estado | Propósito en el Proyecto |
+| :--- | :--- | :--- |
+| **Google Tag Manager & Google Analytics 4 (GA4)** | Frontend Web (Activo) | Registra visitas y eventos base (`page_view`, `first_visit`, `scroll`, `session_start`) en el flujo `RentiCar Web` (`G-7T0SJBF5L2`) mediante `GTM-5P5DVR9F`. |
+| **Spring Boot Actuator** | Backend Java (Dependencia base) | Incluido mediante `spring-boot-starter-actuator` en `Backend/pom.xml` para soporte de estado y métricas internas de la aplicación (aún sin exposición pública ni reglas conectadas). |
+| **Prometheus, Alertmanager y Grafana** | Alertas y Visualización (Planteado) | Stack contemplado para recolección de métricas, evaluación de umbrales y paneles operativos del backend (pendiente de configuración y despliegue). |
+
+**Prácticas Clave:**
+
+* Revisar el panel en tiempo real de Google Analytics 4 y los logs del servicio en Render después de desplegar cambios en `main`.
+* Observar cambios bruscos en visitas o eventos base (`page_view`, `first_visit`, `scroll`, `session_start`) tras una actualización publicada.
+* Contrastar el uso real registrado en GA4 con el plan de experimentación del Capítulo VIII para priorizar mejoras sobre evidencia observada.
+* Mantener `spring-boot-starter-actuator` como base en el backend para acoplar Prometheus, Alertmanager y Grafana en etapas posteriores.
+
+### 7.4.2. Monitoring Pipeline Components
+
+El monitoreo de uso web en RentiCar se implementa con Google Tag Manager (`GTM-5P5DVR9F`) conectado al flujo **RentiCar Web** en Google Analytics 4 (`G-7T0SJBF5L2`).
+
+Etiqueta de Google generada y verificada para su instalación en el sitio web (`GTM-5P5DVR9F`):
+![Detección Exitosa de Etiqueta de Google](assets/chapter07/monitoring-ga4-tag-detected.png)
+
+Script de seguimiento insertado dentro de `<head>` en `Front-End/src/index.html`:
+![Inserción del Script en el Header](assets/chapter07/monitoring-header-script.png)
+
+Configuración del flujo de datos web `RentiCar Web` (`https://renticar-frontend.onrender.com`, ID de medición `G-7T0SJBF5L2`):
+![Detalles del Flujo Web en Google Analytics](assets/chapter07/monitoring-ga4-stream-details.png)
+
+Panel de resumen en tiempo real de Google Analytics 4 registrando eventos base (`page_view`, `first_visit`, `scroll`, `session_start`):
+![Panel en Tiempo Real de Google Analytics 4](assets/chapter07/monitoring-ga4-dashboard.png)
+
+### 7.4.3. Alerting Pipeline Components
+
+El componente de alertas define la detección de fallos de disponibilidad y rendimiento a partir de las métricas expuestas por el backend (`spring-boot-starter-actuator` en `Backend/pom.xml`), planteado sobre las siguientes herramientas (aún sin archivo de reglas o despliegue en infraestructura):
+
+- **Prometheus con Alertmanager:** Recopila métricas desde los endpoints de Actuator y evalúa umbrales de error o latencia para enrutar alertas según su gravedad hacia los canales del equipo.
+- **Grafana:** Consolida la visualización de series temporales y la definición de alertas visuales sobre paneles operativos del backend Spring Boot.
 
 ### 7.4.4. Notification Pipeline Components
+
+El componente de notificaciones articula la comunicación del estado del pipeline de CI y de los eventos críticos hacia los canales de coordinación del equipo (`Discord` y `WhatsApp`, según la sección 5.1.1):
+
+- **Jenkins (`Backend/Jenkinsfile`):** Ejecuta las etapas de compilación, pruebas y empaquetado (`Compile Stage`, `Testing Stage`, `package Stage`) y permite acoplar notificaciones automáticas ante fallos de build o regresión (webhooks externos pendientes de configuración).
+- **Alertas Operativas en Tiempo Real:** Define el envío de avisos automáticos ante anomalías detectadas en los despliegues de Render o caídas de tráfico observadas en Google Analytics 4.
 
 # Capítulo VIII: Experiment-Driven Development 
 
@@ -4647,6 +4994,25 @@ El objetivo analítico es determinar si las variantes (B) producen un resultado 
 | H4: Retención del Propietario | Determinar si el paquete de protección post-alquiler reduce la incertidumbre y fomenta la fidelización. | Tasa de Retención (reactivación de publicación). | Tasa de tickets de soporte por daños/disputas, NPS. |
 
 ### 8.2.8. Web and Mobile Tracking Plan
+
+Para RentiCar, el objetivo es monitorear la plataforma web y móvil para validar si los cambios introducidos en la ficha de vehículos (H1) y el panel de gestión y telemetría para arrendadores (H2) generan la confianza y el valor percibido necesarios para sostener el modelo de negocio.
+
+Estableceremos un plan de seguimiento basado en A/B Testing y analítica con Google Tag Manager (`GTM-5P5DVR9F`) y Google Analytics 4 (`GA4`) para evaluar el impacto causal de las mejoras implementadas.
+
+**1. Implementación Inicial**
+Durante esta fase, nos enfocaremos en el lanzamiento de los diseños experimentales y la recolección de datos segmentados para establecer la causalidad de los resultados frente a la Línea Base (Control).
+- **Asignación del Grupo:** Todos los eventos críticos incluirán una propiedad que identifica si el usuario pertenece al grupo Control o Experimental para garantizar que los resultados se analicen dentro de su grupo asignado.
+- **Métricas de Confianza (H1):** Se capturarán las vistas de detalle de vehículo, los clics en iniciar reserva y las confirmaciones de alquiler para medir la Tasa de Conversión a Reserva.
+- **Métricas de Valor/Retención (H2):** Se registrarán la interacción de los arrendadores con el panel de telemetría IoT y las acciones sobre publicaciones activas para medir la adopción de la funcionalidad y el abandono.
+- **Feedback de Usuarios:** Se aplicarán encuestas breves post-interacción para obtener datos cualitativos sobre la confianza percibida tras consultar reseñas y datos del vehículo (H1).
+
+**2. Seguimiento Continuo**
+Después de la fase inicial de validación, se establecerá un proceso continuo de seguimiento para evaluar el rendimiento a largo plazo.
+- **Métricas en Tiempo Real:** Se empleará Google Analytics 4 en web y analítica de eventos en la aplicación móvil para monitorear el comportamiento de los usuarios en tiempo real.
+- **Segmentación de Usuarios:** Los datos se segmentarán por tipo de usuario (**Arrendatarios** y **Arrendadores**) para entender cómo cada grupo interactúa con las funcionalidades principales.
+- **Tasa de Retención a Largo Plazo:** Se medirá la Tasa de Retención de Arrendadores a lo largo del tiempo para evaluar la efectividad del seguimiento operativo e IoT (H2) en mantener a los propietarios activos en la plataforma.
+
+Este enfoque asegurará que RentiCar tome decisiones informadas y validadas por datos, centrándose en la viabilidad económica del proyecto.
 
 ## 8.3. Experimentation 
 
