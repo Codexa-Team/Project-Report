@@ -4448,6 +4448,15 @@ Tras evaluar cada una de las opciones, se seleccionaron Google Analytics y Optim
 
 ### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
 
+El objetivo analítico es determinar si las variantes (B) producen un resultado estadísticamente superior al control (A), utilizando los KPIs definidos para cada hipótesis.
+
+| Hipótesis | Objetivo Analítico | KPI Primario (Métrica de Éxito) | Métricas Secundarias (Guardrails) |
+| :--- | :--- | :--- | :--- |
+| H1: Confianza en Reservas | Determinar si la confianza visual (insignia y reseñas) impacta la decisión de reserva del arrendatario. | Tasa de Conversión (Solicitudes de Reserva / Visitas a Perfil). | Tasa de rebote en la página del vehículo, Tiempo en página. |
+| H2: Eficiencia del Catálogo | Determinar si los filtros avanzados reducen el tiempo y el esfuerzo para completar una reserva. | Tiempo Promedio de la Tarea (en segundos). | Tasa de éxito de la tarea, Número de clics en la interfaz. |
+| H3: Captación del Propietario | Determinar si la demostración del IoT influye en la decisión del propietario de publicar su vehículo. | Tasa de Publicación de Vehículos (formularios completados). | Percepción de seguridad (encuesta), Intención de listar un vehículo real. |
+| H4: Retención del Propietario | Determinar si el paquete de protección post-alquiler reduce la incertidumbre y fomenta la fidelización. | Tasa de Retención (reactivación de publicación). | Tasa de tickets de soporte por daños/disputas, NPS. |
+
 ### 8.2.8. Web and Mobile Tracking Plan
 
 ## 8.3. Experimentation 
