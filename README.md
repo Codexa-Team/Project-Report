@@ -4435,6 +4435,17 @@ Para asegurar la validez estadística de los resultados, se calcularon los pará
 
 ### 8.2.6. Methods Selection
 
+Para la ejecución de los experimentos, se evaluaron diversas herramientas de análisis y experimentación, seleccionando las que mejor se adaptan a los objetivos del proyecto RentiCar.
+
+| Herramienta | Precio | Capacidad de Análisis | Ventajas | Documentación | Sencillez |
+| --- | --- | --- | --- | --- | --- |
+| Google Analytics | Plan gratuito/Créditos gratis | Análisis cuantitativo completo y exhaustivo del tráfico y comportamiento del usuario. | Excelente para reportes. Gran capacidad de integración. Medición post-experimento. | Extensa | Aprendizaje sencillo para funciones básicas, complejidad media para análisis avanzados. |
+| Optimizely | Basado en suscripción (Plan Starter gratuito) | Plataforma líder para Test A/B, Multivariante y Feature Flagging (Gestión de liberaciones de funcionalidad). | Ideal para la ejecución de experimentos y garantizar la validez estadística. Analítica de impacto directa. | Extensa y técnica | Requiere configuración técnica inicial, pero la interfaz de diseño de experimentos es intuitiva. |
+| Qualtrics | Plan gratuito básico (Suscripción Enterprise) | Recolección de datos cualitativos/cuantitativos mediante encuestas avanzadas, formularios y análisis de feedback. | Herramienta de nivel empresarial para mediciones de NPS, satisfacción (CSAT) y recolección de feedback específico post-experimento. | Muy Extensa y académica | Interfaz intuitiva para encuestas, requiere curva de aprendizaje para análisis estadístico avanzado. |
+| Hotjar | Plan gratuito con limitaciones | Análisis cualitativo (mapas de calor, grabaciones de sesión, encuestas de feedback visual). | Permite entender el "porqué" detrás del comportamiento del usuario de forma visual, fundamental para la H1 (Confianza). | Buena | Interfaz muy intuitiva y fácil de configurar. |
+
+Tras evaluar cada una de las opciones, se seleccionaron Google Analytics y Optimizely como las herramientas principales. Google Analytics permite obtener datos estadísticos relevantes y sencillos de forma gratuita, con una amplia documentación disponible. Optimizely, por su parte, facilitará la ejecución de los test A/B y la gestión de las variantes, garantizando la validez estadística de los resultados. Para la recolección de datos cualitativos, se utilizará Hotjar por su capacidad para visualizar el comportamiento del usuario y recoger feedback en el momento.
+
 ### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
 
 ### 8.2.8. Web and Mobile Tracking Plan
