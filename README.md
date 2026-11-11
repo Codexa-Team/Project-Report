@@ -4136,55 +4136,51 @@ En este apartado nos encargamos de implementar las pruebas de sistema automatiza
 
 ---
 
-## 6.2. Static testing & Verification 
+## 6.2. Static testing & Verification
 
-Esta sección formaliza las metodologías y herramientas de análisis estático aplicadas al código fuente de **RentiCar**, asegurando el estricto cumplimiento de los estándares de calidad, seguridad y diseño arquitectónico antes de la fase de compilación y despliegue continuo.
+Esta sección reúne las prácticas de verificación estática aplicadas al código fuente de RentiCar para detectar errores de formato, convenciones y diseño antes de compilar o integrar cambios.
 
 ### 6.2.1. Static Code Analysis
 
-El análisis estático es una fase obligatoria en nuestra pipeline de Integración Continua (CI). Permite detectar defectos, olores de código (*code smells*), vulnerabilidades de seguridad y desviaciones estilísticas en una etapa temprana del ciclo de vida del software, reduciendo drásticamente el costo de mantenimiento y refactorización.
+El análisis estático en RentiCar se configura directamente en la fase de validación de Maven (`validate`) y en los editores del equipo antes de enviar cambios al repositorio.
 
 #### 6.2.1.1. Coding standard & Code conventions
 
-Para el backend en Java (Spring Boot 3.x), el equipo adoptó la **Google Java Style Guide** como estándar oficial de codificación, automatizado y auditado mediante el plugin **CheckStyle** (`maven-checkstyle-plugin`) sobre la configuración `config/checkstyle/google_checks.xml` (adaptada a indentación de 4 espacios, longitud máxima de 120 caracteres y severidad `error`).
+Las convenciones de código definen reglas uniformes de formato, nomenclatura y estructura entre el backend en Java y el frontend en Angular.
 
-| Lenguaje / Framework | Estándar / Convención Adoptada | Herramienta de Aplicación | Entorno / IDE Utilizado |
+| Lenguaje / Stack | Estándar / Convención Adoptada | Herramienta de Aplicación | IDE / Editores Usados |
 | :--- | :--- | :--- | :--- |
-| **Java 21 / Spring Boot 3.x** | **Google Java Style Guide** (`config/checkstyle/google_checks.xml`) | **CheckStyle** (Maven Plugin) | **IntelliJ IDEA**, **SonarLint** |
-| **TypeScript / Angular 20** | **Angular Style Guide** & ESLint | **ESLint / Prettier** | **VS Code**, **IntelliJ IDEA** |
+| **Java 21 (Spring Boot 3.5.7)** | **Google Java Style Guide** (`config/checkstyle/google_checks.xml`, 4 espacios y máx. 120 caracteres) | **CheckStyle** (`maven-checkstyle-plugin:3.6.0`) | **IntelliJ IDEA** |
+| **TypeScript / HTML (Angular 20)** | Convenciones de formato de Angular (`printWidth: 100`, comillas simples en `.ts`) | **EditorConfig** (`.editorconfig`) y **Prettier** (`package.json`) | **IntelliJ IDEA**, **Visual Studio Code** |
 
-##### Principios de Codificación Clave Aplicados:
+**Principios de Codificación Clave:**
 
-1. **Clean Code & Legibilidad:**
-   - Convenciones de nombrado explícitas: `camelCase` para variables y métodos, `PascalCase` para clases y tipos, y `SCREAMING_SNAKE_CASE` para constantes y valores de enumeradores.
-   - Funciones cortas con una única responsabilidad (Principio SRP), eliminando código muerto, importaciones no utilizadas y comentarios decorativos innecesarios.
+* **Clean Code:** Se utilizan nombres descriptivos (`camelCase` en variables y métodos, `PascalCase` en clases, `SCREAMING_SNAKE_CASE` en constantes) y se evita código muerto o importaciones con comodín.
+* **Domain-Driven Design (DDD) (Backend Java):** La lógica sigue el lenguaje ubicuo del negocio en cinco bounded contexts (`iam`, `listings`, `booking`, `iot`, `reviews`), con separación CQRS entre `*CommandServiceImpl` y `*QueryServiceImpl` y comunicación entre contextos mediante fachadas ACL (`ListingsContextFacade`, `BookingContextFacade`).
+* **Convenciones en Archivos:** Las clases Java siguen `PascalCase` (`Vehicle.java`, `Booking.java`, `VehiclesController.java`) y los paquetes siguen `lowercase` bajo `com.codexateam.platform`.
 
-2. **Domain-Driven Design (DDD) & CQRS (Backend Java):**
-   - **Lenguaje Ubicuo:** Los paquetes, clases y métodos reflejan con exactitud los términos del modelo de dominio de alquiler vehicular (`Booking`, `Vehicle`, `Renter`, `Owner`, `Telemetry`, `Review`).
-   - **Separación de Comandos y Consultas (CQRS):** Los servicios de aplicación se dividen estrictamente en `*CommandServiceImpl` (mutaciones) y `*QueryServiceImpl` (lecturas).
-   - **Límites Transaccionales y Desacoplamiento:** Los agregados de distintos Bounded Contexts se referencian exclusivamente mediante identificadores escalares (`ownerId: Long`, `vehicleId: Long`) y coordinan a través de Facades de Capa Anticorrupción (ACL).
+---
 
-##### Auditoría de Estilo por Bounded Context:
+En la siguiente captura se observa la configuración de `maven-checkstyle-plugin` (`3.6.0`) en `Backend/pom.xml` apuntando a `config/checkstyle/google_checks.xml` y la ejecución de `checkstyle:check` en IntelliJ IDEA con `0` violaciones (`BUILD SUCCESS`):
 
-Se auditó el código fuente mediante el comando:
-```bash
-.\mvnw.cmd checkstyle:check
-```
-
-- **Booking Bounded Context:** Validación de formato en agregados (`Booking`), comandos (`CreateBookingCommand`) y value objects (`BookingStatus`), garantizando nombres no ambiguos y métodos de fábrica expresivos.
-- **Listings Bounded Context:** Conformidad estilística en agregados (`Vehicle`), comandos (`CreateVehicleCommand`, `UpdateVehicleCommand`) y contratos de valor para arreglos de bytes (`equals` / `hashCode`).
-- **IAM Bounded Context:** Estandarización de servicios de autenticación y autorización stateless basada en tokens JWT, cumpliendo con la estructura de excepciones y configuraciones seguras.
-- **IoT Bounded Context:** Verificación de controladores REST (`RouteController`), servicios de telemetría y modelos de posición geoespacial.
-- **Reviews Bounded Context:** Homologación de records y servicios de cálculo de reputación y opiniones.
-
-##### Evidencia de Ejecución de Checkstyle:
-
-Para este apartado se evalúa el uso de Checkstyle en el backend aplicando las convenciones de `config/checkstyle/google_checks.xml` mediante el comando `.\mvnw.cmd checkstyle:check` (`maven-checkstyle-plugin` 3.6.0), alcanzando **0 violaciones (`BUILD SUCCESS`)**:
-
-- *Configuración en `Backend/pom.xml` y Ejecución en IntelliJ IDEA (`You have 0 Checkstyle violations`, `BUILD SUCCESS`):*
 ![Configuración y ejecución limpia de Checkstyle en IntelliJ IDEA](assets/chapter06/checkstyle-execution.jpg)
 
 ### 6.2.2. Reviews
+
+Las revisiones de código de Codexa-Team se realizan en GitHub sobre el flujo GitFlow definido en la sección 5.1.2, validando los cambios de ramas `feat/*` y `fix/*` antes de integrarlos en `develop` y `main`.
+
+#### Tipos de Revisiones y Herramientas
+
+| Tipo de Revisión | Descripción y Propósito | Herramientas Utilizadas |
+| :--- | :--- | :--- |
+| **Revisión Manual entre Pares** | Un integrante revisa los cambios antes o durante la integración entre ramas (`feat/*` -> `develop` -> `main`), verificando legibilidad, nombres de dominio y separación DDD. | **GitHub** (Pull Requests / commits), **IntelliJ IDEA** |
+| **Verificación Estática Local** | Validación de reglas de estilo Google Java Checks mediante Maven (`.\mvnw.cmd checkstyle:check`) previa al commit o merge. | **CheckStyle** (`maven-checkstyle-plugin:3.6.0`) |
+
+#### Criterios de Aceptación para Integrar Cambios
+
+* **Estilo sin violaciones en Backend:** El comando `.\mvnw.cmd checkstyle:check` debe finalizar en `BUILD SUCCESS` con `0` errores bajo `config/checkstyle/google_checks.xml`.
+* **Compilación y pruebas verdes:** El código integrado no debe romper la compilación en Maven (`Backend`) o Angular (`Front-End`) ni las pruebas asociadas al cambio.
+* **Frecuencia:** La revisión se realiza de forma incremental al concluir cada tarea o historia antes de fusionar cambios hacia `develop` o `main`.
 
 ## 6.3. Validation Interviews 
 
@@ -4488,140 +4484,35 @@ Para articular una estrategia de observabilidad integral, el equipo seleccionó 
 
 ---
 
-### 7.4.2. Monitoring Pipeline Components 
+### 7.4.2. Monitoring Pipeline Components
 
-El pipeline de recolección de estadísticas del frontend se implementó integrando el script de **Google Analytics 4 (GTAG)** en la cabecera (`<head>`) de la aplicación web Angular (`Front-End/src/index.html`).
+El monitoreo de uso web en RentiCar se implementa con Google Tag Manager (`GTM-5P5DVR9F`) conectado al flujo **RentiCar Web** en Google Analytics 4 (`G-7T0SJBF5L2`).
 
-#### Script de Tracking en el Header del Proyecto (`index.html`):
-
-```html
-<!-- Google Tag Manager (GTM-5P5DVR9F) -->
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5P5DVR9F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-</script>
-```
-
-#### Eventos Personalizados de Negocio Configurados en Angular:
-
-Para auditar el recorrido del usuario, el servicio de analítica del frontend emite eventos personalizados ante interacciones clave:
-
-```typescript
-// Telemetry & Booking Tracking Service (Angular)
-export class AnalyticsService {
-  trackVehicleView(vehicleId: number, brand: string, dailyPrice: number): void {
-    if (typeof gtag === 'function') {
-      gtag('event', 'view_vehicle_details', {
-        vehicle_id: vehicleId,
-        vehicle_brand: brand,
-        value: dailyPrice,
-        currency: 'PEN'
-      });
-    }
-  }
-
-  trackBookingInitiated(bookingId: string, days: number, totalAmount: number): void {
-    if (typeof gtag === 'function') {
-      gtag('event', 'booking_checkout_start', {
-        booking_id: bookingId,
-        rental_days: days,
-        value: totalAmount,
-        currency: 'PEN'
-      });
-    }
-  }
-}
-```
-
-#### Evidencias de Monitoreo:
-
-- *Inserción del Script en el Header del Código Fuente (`index.html` en IDE):*
-![Inserción del Script en el Header](assets/chapter07/monitoring-header-script.png)
-
-- *Verificación de Detección Exitosa de Etiqueta de Google en Tag Manager:*
+Etiqueta de Google generada y verificada para su instalación en el sitio web (`GTM-5P5DVR9F`):
 ![Detección Exitosa de Etiqueta de Google](assets/chapter07/monitoring-ga4-tag-detected.png)
 
-- *Detalles del Flujo Web y Configuración de Medición (`RentiCar Web` - G-7T0SJBF5L2):*
+Script de seguimiento insertado dentro de `<head>` en `Front-End/src/index.html`:
+![Inserción del Script en el Header](assets/chapter07/monitoring-header-script.png)
+
+Configuración del flujo de datos web `RentiCar Web` (`https://renticar-frontend.onrender.com`, ID de medición `G-7T0SJBF5L2`):
 ![Detalles del Flujo Web en Google Analytics](assets/chapter07/monitoring-ga4-stream-details.png)
 
-- *Panel de Métricas en Tiempo Real de Google Analytics 4:*
+Panel de resumen en tiempo real de Google Analytics 4 registrando eventos base (`page_view`, `first_visit`, `scroll`, `session_start`):
 ![Panel en Tiempo Real de Google Analytics 4](assets/chapter07/monitoring-ga4-dashboard.png)
 
----
+### 7.4.3. Alerting Pipeline Components
 
-### 7.4.3. Alerting Pipeline Components 
+El componente de alertas define la detección de fallos de disponibilidad y rendimiento a partir de las métricas expuestas por el backend (`spring-boot-starter-actuator` en `Backend/pom.xml`), planteado sobre las siguientes herramientas (aún sin archivo de reglas o despliegue en infraestructura):
 
-El componente de alertas detecta automáticamente cualquier degradación en el servicio antes de que impacte negativamente a los usuarios. Se configuró **Prometheus** con un conjunto de reglas de alerta declarativas (`alert.rules.yml`) evaluadas cada 15 segundos:
-
-#### Reglas de Alerta Críticas de RentiCar (`alert.rules.yml`):
-
-```yaml
-groups:
-  - name: renticar-backend-alerts
-    rules:
-      - alert: HighHttp5xxErrorRate
-        expr: rate(http_server_requests_seconds_count{status=~"5.."}[2m]) / rate(http_server_requests_seconds_count[2m]) * 100 > 2
-        for: 2m
-        labels:
-          severity: critical
-        annotations:
-          summary: "Alta tasa de errores HTTP 5xx en RentiCar Backend (> 2%)"
-          description: "La tasa de errores HTTP 5xx es del {{ $value }}% en los últimos 2 minutos en la instancia {{ $labels.instance }}."
-
-      - alert: HighLatencyP95
-        expr: histogram_quantile(0.95, sum(rate(http_server_requests_seconds_bucket[5m])) by (le)) > 1.2
-        for: 3m
-        labels:
-          severity: warning
-        annotations:
-          summary: "Latencia p95 degradada en API REST (> 1200ms)"
-          description: "El percentil 95 de tiempo de respuesta excede 1.2 segundos durante más de 3 minutos consecutivos."
-
-      - alert: DatabaseConnectionPoolHighSaturation
-        expr: hikaricp_connections_active / hikaricp_connections_max * 100 > 85
-        for: 2m
-        labels:
-          severity: critical
-        annotations:
-          summary: "Pool de conexiones HikariCP saturado (> 85%)"
-          description: "El pool de conexiones a la base de datos MySQL/TiDB supera el 85% de capacidad activa."
-```
-
----
+- **Prometheus con Alertmanager:** Recopila métricas desde los endpoints de Actuator y evalúa umbrales de error o latencia para enrutar alertas según su gravedad hacia los canales del equipo.
+- **Grafana:** Consolida la visualización de series temporales y la definición de alertas visuales sobre paneles operativos del backend Spring Boot.
 
 ### 7.4.4. Notification Pipeline Components
 
-El pipeline de notificaciones distribuye las alertas generadas por Alertmanager y los reportes de build de CI/CD hacia los canales de comunicación oficiales del equipo de ingeniería.
+El componente de notificaciones articula la comunicación del estado del pipeline de CI y de los eventos críticos hacia los canales de coordinación del equipo (`Discord` y `WhatsApp`, según la sección 5.1.1):
 
-#### Canales de Notificación Integrados:
-
-1. **Canal de Discord / Slack (`#devops-alerts`):**
-   - Alertmanager se comunica mediante un webhook entrante con payload formateado en JSON:
-   ```json
-   {
-     "username": "RentiCar DevOps Bot",
-     "avatar_url": "https://i.postimg.cc/alert-bot.png",
-     "embeds": [
-       {
-         "title": "🚨 ALERTA CRÍTICA: HighHttp5xxErrorRate",
-         "description": "Se detectó una tasa de errores 5xx de 4.2% en el endpoint `/api/v1/bookings`.",
-         "color": 15158332,
-         "fields": [
-           { "name": "Entorno", "value": "Producción / Render", "inline": true },
-           { "name": "Severidad", "value": "CRITICAL", "inline": true },
-           { "name": "Enlace al Dashboard", "value": "[Ver en Grafana](http://localhost:3000)", "inline": false }
-         ],
-         "timestamp": "2026-11-10T20:30:00Z"
-       }
-     ]
-   }
-   ```
-2. **Notificaciones de CI/CD (GitHub Actions / Jenkins):**
-   - Cada build y suite de pruebas finalizada dispara una notificación automática con el estado de compilación, porcentaje de cobertura de código y resultado de la auditoría de SonarQube.
-3. **Notificaciones por Correo Electrónico (SMTP):**
-   - Reservadas para alertas de severidad crítica (`severity: critical`) enviadas a los correos institucionales de los ingenieros líderes de infraestructura.
+- **Jenkins (`Backend/Jenkinsfile`):** Ejecuta las etapas de compilación, pruebas y empaquetado (`Compile Stage`, `Testing Stage`, `package Stage`) y permite acoplar notificaciones automáticas ante fallos de build o regresión (webhooks externos pendientes de configuración).
+- **Alertas Operativas en Tiempo Real:** Define el envío de avisos automáticos ante anomalías detectadas en los despliegues de Render o caídas de tráfico observadas en Google Analytics 4.
 
 # Capítulo VIII: Experiment-Driven Development 
 
