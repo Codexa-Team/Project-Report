@@ -4494,8 +4494,17 @@ mvn checkstyle:check
 
 ##### Evidencia de Ejecución de Checkstyle:
 
-- *Salida en Consola Maven (`mvn checkstyle:check`):*
-![CheckStyle Maven Build Success](assets/chapter06/checkstyle-build-success.png)
+- *Auditoría en Consola Maven (`mvn checkstyle:check`):*
+```text
+[INFO] --- checkstyle:3.6.0:check (default-cli) @ platform ---
+[INFO] Comenzando auditoría con reglas google_checks.xml...
+[WARNING] checkstyle:check violations detected but failOnViolation set to false
+[INFO] You have 2691 Checkstyle violations.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.213 s
+```
 
 - *Reporte HTML Generado (`target/site/checkstyle.html`):*
 ![CheckStyle HTML Report](assets/chapter06/checkstyle-report-overview.png)
@@ -4511,6 +4520,15 @@ Para la evaluación continua de la calidad del código, deuda técnica y segurid
 - **Quality Gate: Passed:** Aprobación plena de todas las políticas del proyecto.
 
 ##### Evidencias de SonarQube:
+
+- *1. Estado Inicial - Detección de Deuda Técnica e Incidencias:*
+En el escaneo inicial, SonarQube identificó 3 Bugs de confiabilidad (contratos `equals`/`hashCode`), 9 advertencias de seguridad y mantenibilidad (CSRF y CORS permisivos, colisiones de nombres de enum) y 86 Code Smells acumulando 1d 7h de deuda técnica:
+
+![SonarQube Hallazgos Iniciales](assets/chapter06/sonarqube-initial-issues.png)
+![SonarQube Vista General Inicial](assets/chapter06/sonarqube-initial-overview.jpg)
+
+- *2. Estado Final - Resolución y Quality Gate Passed:*
+Tras aplicar las correcciones arquitectónicas en `WebSecurityConfiguration`, `RouteController`, `BookingStatus`, `CreateVehicleCommand` y `UpdateVehicleCommand`, el reanálisis automático verificó la resolución total de las incidencias:
 
 - *Panel General de Métricas y Quality Gate:*
 ![SonarQube Code Quality and Security](assets/chapter06/sonarqube-clean-code-overview.png)
