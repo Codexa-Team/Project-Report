@@ -4890,11 +4890,17 @@ export class AnalyticsService {
 
 #### Evidencias de Monitoreo:
 
-- *Inserción del Script en el Header del Código Fuente:*
-![Google Analytics Header Script](assets/chapter07/monitoring-header-script.png)
+- *Inserción del Script en el Header del Código Fuente (`index.html` en IDE):*
+![Inserción del Script en el Header](assets/chapter07/monitoring-header-script.png)
 
-- *Panel en Tiempo Real de Google Analytics 4:*
-![Google Analytics Real-Time Dashboard](assets/chapter07/monitoring-ga4-dashboard.png)
+- *Verificación de Detección Exitosa de Etiqueta de Google en Tag Manager:*
+![Detección Exitosa de Etiqueta de Google](assets/chapter07/monitoring-ga4-tag-detected.png)
+
+- *Detalles del Flujo Web y Configuración de Medición (`RentiCar Web` - G-7T0SJBF5L2):*
+![Detalles del Flujo Web en Google Analytics](assets/chapter07/monitoring-ga4-stream-details.png)
+
+- *Panel de Métricas en Tiempo Real de Google Analytics 4:*
+![Panel en Tiempo Real de Google Analytics 4](assets/chapter07/monitoring-ga4-dashboard.png)
 
 ---
 
