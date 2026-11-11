@@ -4141,12 +4141,15 @@ public class SignUpSteps {
 ```
 
 - **Evidencias de Ejecución:**
-  - *Resultado de la prueba en la aplicación web (Frontend):*
-    *(Captura de pantalla del formulario de registro completado exitosamente en el navegador).*
-    `![SignUp Test Web Frontend](assets/chapter06/selenium-signup-frontend.png)`
+
+  - *Resultado de la prueba en el Front:*
+  ![SignUp Test Web Frontend](assets/chapter06/selenium-signup-frontend.png)
+
+  - *Feature en formato Gherkin:*
+  ![SignUp Feature](assets/chapter06/selenium-signup-feature.png)
+
   - *Ejecución de escenarios en IntelliJ IDEA:*
-    *(Captura del árbol de pruebas de Cucumber en IntelliJ con los escenarios en verde).*
-    `![SignUp Cucumber Test Runner](assets/chapter06/selenium-signup-runner.png)`
+  ![SignUp Cucumber Test Runner](assets/chapter06/selenium-signup-runner.png)
 
 ---
 
@@ -4216,10 +4219,15 @@ public class SignInSteps {
 ```
 
 - **Evidencias de Ejecución:**
-  - *Resultado de la prueba en la aplicación web (Frontend):*
-    `![SignIn Test Web Frontend](assets/chapter06/selenium-signin-frontend.png)`
+
+  - *Resultado de la prueba en el Front:*
+  ![SignIn Test Web Frontend](assets/chapter06/selenium-signin-frontend.png)
+
+  - *Feature en formato Gherkin:*
+  ![SignIn Feature](assets/chapter06/selenium-signin-feature.png)
+
   - *Ejecución de escenarios en IntelliJ IDEA:*
-    `![SignIn Cucumber Test Runner](assets/chapter06/selenium-signin-runner.png)`
+  ![SignIn Cucumber Test Runner](assets/chapter06/selenium-signin-runner.png)
 
 ---
 
@@ -4290,10 +4298,15 @@ public class RegisterVehicleSteps {
 ```
 
 - **Evidencias de Ejecución:**
-  - *Resultado de la prueba en la aplicación web (Frontend):*
-    `![Register Vehicle Test Web Frontend](assets/chapter06/selenium-register-vehicle-frontend.png)`
+
+  - *Resultado de la prueba en el Front:*
+  ![Register Vehicle Test Web Frontend](assets/chapter06/selenium-register-vehicle-frontend.png)
+
+  - *Feature en formato Gherkin:*
+  ![Register Vehicle Feature](assets/chapter06/selenium-register-vehicle-feature.png)
+
   - *Ejecución de escenarios en IntelliJ IDEA:*
-    `![Register Vehicle Cucumber Test Runner](assets/chapter06/selenium-register-vehicle-runner.png)`
+  ![Register Vehicle Cucumber Test Runner](assets/chapter06/selenium-register-vehicle-runner.png)
 
 ---
 
@@ -4358,10 +4371,15 @@ public class RentVehicleSteps {
 ```
 
 - **Evidencias de Ejecución:**
-  - *Resultado de la prueba en la aplicación web (Frontend):*
-    `![Rent Vehicle Test Web Frontend](assets/chapter06/selenium-rent-vehicle-frontend.png)`
+
+  - *Resultado de la prueba en el Front:*
+  ![Rent Vehicle Test Web Frontend](assets/chapter06/selenium-rent-vehicle-frontend.png)
+
+  - *Feature en formato Gherkin:*
+  ![Rent Vehicle Feature](assets/chapter06/selenium-rent-vehicle-feature.png)
+
   - *Ejecución de escenarios en IntelliJ IDEA:*
-    `![Rent Vehicle Cucumber Test Runner](assets/chapter06/selenium-rent-vehicle-runner.png)`
+  ![Rent Vehicle Cucumber Test Runner](assets/chapter06/selenium-rent-vehicle-runner.png)
 
 ---
 
@@ -4421,10 +4439,15 @@ public class IoTTelemetrySteps {
 ```
 
 - **Evidencias de Ejecución:**
-  - *Resultado de la prueba en la aplicación web (Frontend):*
-    `![IoT Telemetry Test Web Frontend](assets/chapter06/selenium-telemetry-frontend.png)`
+
+  - *Resultado de la prueba en el Front:*
+  ![IoT Telemetry Test Web Frontend](assets/chapter06/selenium-telemetry-frontend.png)
+
+  - *Feature en formato Gherkin:*
+  ![IoT Telemetry Feature](assets/chapter06/selenium-telemetry-feature.png)
+
   - *Ejecución de escenarios en IntelliJ IDEA:*
-    `![IoT Telemetry Cucumber Test Runner](assets/chapter06/selenium-telemetry-runner.png)`
+  ![IoT Telemetry Cucumber Test Runner](assets/chapter06/selenium-telemetry-runner.png)
 
 ---
 
@@ -4472,14 +4495,28 @@ mvn checkstyle:check
 ##### Evidencia de Ejecución de Checkstyle:
 
 - *Salida en Consola Maven (`mvn checkstyle:check`):*
-  *(Captura que evidencia la compilación limpia sin violaciones de las reglas de Google Java Style).*
-  `![CheckStyle Maven Build Success](assets/chapter06/checkstyle-build-success.png)`
+![CheckStyle Maven Build Success](assets/chapter06/checkstyle-build-success.png)
 
 - *Reporte HTML Generado (`target/site/checkstyle.html`):*
-  *(Captura del reporte navegable generado por maven-checkstyle-plugin).*
-  `![CheckStyle HTML Report](assets/chapter06/checkstyle-report-overview.png)`
+![CheckStyle HTML Report](assets/chapter06/checkstyle-report-overview.png)
 
 #### 6.2.1.2. Code Quality & Code Security
+
+Para la evaluación continua de la calidad del código, deuda técnica y seguridad de la aplicación, el equipo integró **SonarQube Community Build**. En el análisis exhaustivo del backend de **RentiCar**, se alcanzaron las calificaciones máximas en los tres pilares del paradigma Clean Code:
+
+- **Security Rating: A (0 Vulnerabilidades, 0 Security Hotspots pendientes):** Configuración segura de directivas CORS y protección CSRF conforme a las directrices de seguridad para APIs REST stateless protegidas por JWT.
+- **Reliability Rating: A (0 Bugs):** Resolución de inconsistencias en contratos de identidad `equals` y `hashCode` para arreglos de bytes en records de dominio.
+- **Maintainability Rating: A (0 Code Smells):** Eliminación de ambigüedades en métodos de fábrica de enums y estandarización de nombres en value objects.
+- **Duplicated Lines Density: 0.0%:** Ausencia total de bloques de código redundantes.
+- **Quality Gate: Passed:** Aprobación plena de todas las políticas del proyecto.
+
+##### Evidencias de SonarQube:
+
+- *Panel General de Métricas y Quality Gate:*
+![SonarQube Code Quality and Security](assets/chapter06/sonarqube-clean-code-overview.png)
+
+- *Dashboard Detallado de Calidad y Confiabilidad:*
+![SonarQube Dashboard Summary](assets/chapter06/sonarqube-dashboard-summary.png)
 
 ### 6.2.2. Reviews
 
