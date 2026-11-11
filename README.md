@@ -4284,6 +4284,47 @@ Esta fase consiste en detallar el diseño técnico de los experimentos que surge
 
 ### 8.2.1. Hypotheses
 
+A continuación, se formalizan las hipótesis nulas (H0) y alternativas (H1) para las preguntas establecidas, definiendo así la base para la validación estadística.
+
+*   **Hipótesis 1 (Adopción del Cliente - Confianza):**
+    
+    *   **Creemos que** al implementar un sistema de insignias de "Propietario Verificado" (basado en la validación de identidad y documentos) y mostrar las reseñas de forma prominente en el perfil del arrendador, los arrendatarios (Persona: Sebastián Altamirano) experimentarán una mayor confianza en la plataforma.
+        
+    *   **Resultará en** un incremento en la tasa de conversión de visitas a solicitudes de reserva, reduciendo la percepción de riesgo asociada a los canales informales.
+        
+    *   **Sabremos que esto es cierto si** la Variante B (con insignias y reseñas destacadas) logra una tasa de conversión de "visita a perfil" a "solicitud de reserva" al menos un 20% mayor que la Variante A (perfil estándar), en un período de 14 días.
+
+*   **Hipótesis 2 (Eficiencia del Catálogo - Usabilidad):**
+    
+    *   **Creemos que** al implementar un catálogo con filtros avanzados por marca, rango de precio y fechas de disponibilidad, los arrendatarios (Persona: Gino Ábalos) podrán encontrar el vehículo deseado de manera más ágil y eficiente.
+        
+    *   **Resultará en** una reducción significativa del tiempo requerido para completar una reserva, mejorando la experiencia de usuario y disminuyendo la frustración asociada a la búsqueda manual.
+        
+    *   **Sabremos que esto es cierto si** los usuarios expuestos a la Variante B (catálogo con filtros) completan la tarea de reserva en un tiempo promedio al menos un 30% menor que el Grupo A (catálogo con búsqueda simple), durante las pruebas de usabilidad.
+
+*   **Hipótesis 3 (Captación del Propietario - Valor del IoT):**
+    
+    *   **Creemos que** al ofrecer a los propietarios de vehículos (Persona: Oriana Cáceres) una demostración interactiva del panel de monitoreo telemático IoT (visualización de GPS, odómetro y nivel de combustible), percibirán un mayor valor en la plataforma y se sentirán más seguros al momento de listar sus autos.
+        
+    *   **Resultará en** un incremento en la tasa de publicación de vehículos, ya que el IoT mitiga el miedo al mal uso o robo del patrimonio.
+        
+    *   **Sabremos que esto es cierto si** el Grupo B (expuesto a la funcionalidad IoT) presenta una Tasa de Publicación al menos un 25% superior a la del Grupo A (sin la funcionalidad), y si la percepción de seguridad reportada es de 4 o superior en una escala de 1 a 5.
+
+*   **Hipótesis 4 (Retención del Propietario - Ecosistema de Seguridad):**
+    
+    *   **Creemos que** al proporcionar a los propietarios un paquete de "Protección RentiCar" (que incluye un seguro de cobertura de daños y un canal de soporte prioritario para disputas), se reducirá la incertidumbre post-alquiler y se fomentará la fidelización.
+        
+    *   **Resultará en** una mayor disposición a mantener los vehículos publicados y a reactivar las publicaciones tras el primer alquiler, consolidando una oferta estable en la plataforma.
+        
+    *   **Sabremos que esto es cierto si** los propietarios expuestos al paquete de protección (Variante B) muestran una Tasa de Retención (reactivación de publicación) al menos un 15% superior a la del grupo de control (Variante A) en los 3 meses posteriores al primer alquiler.  
+
+| Hipótesis | Pregunta | Belief (Creencia) | Hypothesis (H1) | Null Hypothesis (H0) |
+| --- | --- | --- | --- | --- |
+| H1 (Adopción del Cliente - Confianza) | Q1 | La implementación de insignias de "Propietario Verificado" y reseñas destacadas aumentará la confianza de los arrendatarios. | La Tasa de Conversión (visita a reserva) será al menos un 20% mayor en los perfiles que muestran insignias y reseñas. | La implementación de insignias y reseñas no aumentará la Tasa de Conversión en un 20% o más. |
+| H2 (Eficiencia del Catálogo - Usabilidad) | Q4 | Un catálogo con filtros avanzados (marca, precio, fechas) es más eficiente y mejora la experiencia del usuario que una lista simple. | El Tiempo Promedio para completar una reserva se reducirá en al menos un 30% con el uso de filtros avanzados. | La implementación de filtros avanzados no reducirá el Tiempo Promedio para completar una reserva en un 30% (o más). |
+| H3 (Captación del Propietario - Valor del IoT) | Q2 | Los propietarios valoran las funcionalidades de monitoreo IoT como un factor clave para sentirse seguros al alquilar su vehículo. | Los propietarios expuestos a la funcionalidad de monitoreo IoT mostrarán una tasa de publicación de vehículos al menos un 25% superior que aquellos que no la conocen. | La exposición a la funcionalidad de monitoreo IoT no aumentará la tasa de publicación de vehículos en un 25% (o más). |
+| H4 (Retención del Propietario - Ecosistema de Seguridad) | Q3 | Un ecosistema de seguridad post-alquiler (seguro de daños y gestión de disputas) fidelizará a los propietarios, incentivando la republicación de sus vehículos. | Los propietarios que reciben el paquete "Protección RentiCar" presentarán una Tasa de Retención (reactivación de publicación) al menos un 15% superior a la del grupo de control en los 3 meses posteriores al primer alquiler. | La incorporación del paquete "Protección RentiCar" no incrementará la Tasa de Retención de los propietarios en un 15% (o más) durante los 3 meses posteriores al primer alquiler. |
+
 ### 8.2.2. Domain Business Metrics 
 
 ### 8.2.3. Measures
