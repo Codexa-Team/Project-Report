@@ -4076,7 +4076,107 @@ Aqui se ubican los archivos .feature que sirven para el funcionamiento de las pr
 
 ### 6.3.2. Registro de Entrevistas
 
-### 6.3.3. Evaluaciones según heurísticas. 
+### 6.3.3. Evaluaciones según heurísticas
+
+Esta sección documenta el proceso sistemático de **Evaluación Heurística de Usabilidad** aplicado a la plataforma **RentiCar**, siguiendo la metodología de inspección experta formulada por **Jakob Nielsen y Rolf Molich**. El propósito es identificar tempranamente problemas en la experiencia del usuario, clasificar su severidad y guiar las refactorizaciones prioritarias antes de las pruebas formales con usuarios finales.
+
+#### Proceso de Evaluación Heurística
+
+1. **Revisión Independiente:** Tres evaluadores del equipo (**Estefano Solís**, **Sergio Landa** y **Bruce Via**) realizaron un recorrido analítico independiente de cada flujo, interactuando con las interfaces como usuarios de los dos segmentos objetivo (arrendadores y arrendatarios).
+2. **Registro de Violaciones Heurísticas:** Cada evaluador registró de forma individual los puntos de fricción, asociándolos a una o más de las 10 heurísticas de usabilidad y asignándoles una calificación de severidad.
+3. **Consolidación y Consenso:** El equipo consolidó las listas individuales en una sesión de consenso, eliminando duplicados, unificando la descripción del problema y acordando la severidad definitiva y la solución técnica.
+
+#### Objetivos de la Evaluación
+
+- Detectar inconsistencias visuales, fallas de navegación y barreras cognitivas en los flujos principales de la solución.
+- Evaluar la claridad de la retroalimentación del sistema frente a errores y operaciones críticas (registro, publicación, reserva y rastreo).
+- Asegurar que la terminología, iconografía y metáforas utilizadas se ajusten al modelo mental de los usuarios peruanos que alquilan o ponen en renta su vehículo.
+
+#### Alcance de la Evaluación
+
+##### Inclusiones para esta evaluación:
+- **Landing Page (Desktop y Mobile):** Barra de navegación, propuesta de valor, visualización previa de flota disponible, llamadas a la acción (*Call-to-Action*) y enlaces a perfiles.
+- **Aplicación Web (Desktop):** Flujo de autenticación (Login y Registro), catálogo de búsqueda y filtros de vehículos, vista de detalle de vehículo con opiniones, formulario de publicación de vehículo para arrendadores y panel de telemetría IoT con mapa en vivo.
+
+##### Exclusiones para esta evaluación:
+- **Landing Page:** Secciones informativas legales secundarias (políticas de privacidad estáticas y términos de uso en texto plano).
+- **Aplicación Web:** Integración con pasarelas de pago bancarias externas en producción (simuladas en entorno de staging).
+
+#### Escala de Severidad de los Problemas Identificados
+
+Los problemas identificados durante la inspección se clasificaron conforme a la escala estandarizada de Jakob Nielsen:
+
+| Nivel | Clasificación | Descripción de Impacto |
+| :---: | :--- | :--- |
+| **1** | **Problema Superficial** | Afecta levemente la estética o el acabado visual. El usuario lo supera de inmediato sin esfuerzo. No requiere solución urgente. |
+| **2** | **Problema Menor** | Genera confusión momentánea o demora leve en la tarea. El usuario logra resolverlo por sí mismo. Prioridad baja-media. |
+| **3** | **Problema Mayor** | Dificulta seriamente el avance del flujo principal. Muchos usuarios no pueden resolverlo solos. Prioridad alta. |
+| **4** | **Catástrofe de Usabilidad** | Impide por completo culminar la tarea (bloqueo total o caída del flujo). Debe corregirse obligatoriamente antes del lanzamiento. |
+
+#### Evaluación según las 10 Heurísticas de Usabilidad de Nielsen
+
+A continuación se detalla la matriz de hallazgos organizada según los principios fundamentales de diseño de interacción:
+
+##### 1. Visibilidad del estado del sistema (*Visibility of system status*)
+- **Hallazgo:** Al enviar una solicitud de reserva en `/booking/:id`, el botón permanecía habilitado sin un indicador de carga (*spinner*), permitiendo múltiples clics accidentales.
+- **Severidad:** 3 (Mayor).
+- **Subsanación:** Se implementó un estado de carga (`isLoading = true`) que deshabilita el botón de acción e inserta un spinner visual de progreso hasta recibir la confirmación HTTP 201 del backend.
+
+##### 2. Coincidencia entre el sistema y el mundo real (*Match between system and real world*)
+- **Hallazgo:** La ficha técnica de los vehículos utilizaba términos técnicos en inglés ("*Sedan - 5 seats, automatic transmission, FWD*") que no se alineaban con las preferencias del usuario local.
+- **Severidad:** 2 (Menor).
+- **Subsanación:** Se integró `@ngx-translate/core` con soporte multilingüe completo (español e inglés), utilizando denominaciones locales y directas ("Transmisión Automática", "Capacidad para 5 pasajeros", "Tarifa por Día en Nuevos Soles - S/.").
+
+##### 3. Control y libertad del usuario (*User control and freedom*)
+- **Hallazgo:** Al ingresar al formulario de publicación de vehículo (`/publish-vehicle`), no existía un botón explícito de "Cancelar" o "Regresar a Mi Flota", forzando al usuario a usar el botón de retroceso del navegador.
+- **Severidad:** 2 (Menor).
+- **Subsanación:** Se agregó un botón secundario "Cancelar" con estilo neutral que redirige de inmediato a `/my-vehicles` descartando los cambios sin confirmaciones innecesarias.
+
+##### 4. Consistencia y estándares (*Consistency and standards*)
+- **Hallazgo:** Los botones de acción principal en el catálogo utilizaban tonalidades distintas de azul (`#003F70` vs `#1976D2`) y tamaños de fuente dispares entre la vista de tarjetas y la vista de detalle.
+- **Severidad:** 2 (Menor).
+- **Subsanación:** Se centralizó la paleta cromática en tokens de CSS globales (`--primary-color: #003F70`, `--secondary-color: #52B6F2`) en `styles.css`, garantizando consistencia estricta en toda la aplicación Angular.
+
+##### 5. Prevención de errores (*Error prevention*)
+- **Hallazgo:** El selector de fechas de reserva permitía seleccionar fechas pasadas o rangos donde la fecha de devolución era anterior a la fecha de inicio.
+- **Severidad:** 3 (Mayor).
+- **Subsanación:** Se añadieron validaciones de fecha mínima (`minDate = new Date()`) en los componentes de formulario y validación cruzada en el servicio de reservas para impedir rangos cronológicamente inválidos.
+
+##### 6. Reconocimiento antes que recuerdo (*Recognition rather than recall*)
+- **Hallazgo:** En el panel de telemetría IoT (`/tracking/:id`), el vehículo solo se identificaba por su ID numérico (`Vehículo #1`), obligando al usuario a recordar qué automóvil correspondía a ese identificador.
+- **Severidad:** 2 (Menor).
+- **Subsanación:** Se enriqueció la card flotante del mapa mostrando siempre el nombre comercial completo (`Toyota Corolla 2022`), la placa del auto y el estado actual ("Vehículo Estacionado" o "En Movimiento").
+
+##### 7. Flexibilidad y eficiencia de uso (*Flexibility and efficiency of use*)
+- **Hallazgo:** Arrendatarios frecuentes debían ingresar manualmente sus datos de contacto en cada nueva reserva solicitada.
+- **Severidad:** 2 (Menor).
+- **Subsanación:** Se implementó el autocompletado inteligente de información del perfil del usuario autenticado a partir de los datos almacenados en el servicio de IAM.
+
+##### 8. Diseño estético y minimalista (*Aesthetic and minimalist design*)
+- **Hallazgo:** Las tarjetas de vehículos en la vista previa de la Landing Page saturaban de información secundaria antes de que el usuario mostrara interés en el detalle.
+- **Severidad:** 1 (Superficial).
+- **Subsanación:** Se rediseñaron las cards bajo el principio minimalista, destacando únicamente imagen, marca, modelo, precio diario e insignia de disponibilidad.
+
+##### 9. Reconocimiento, diagnóstico y recuperación de errores (*Help users recognize, diagnose, and recover from errors*)
+- **Hallazgo:** Si el backend rechazaba un registro por correo duplicado, el frontend mostraba un banner genérico "*Error al registrar*".
+- **Severidad:** 3 (Mayor).
+- **Subsanación:** Se capturan los códigos de error HTTP del backend (409 Conflict, 400 Bad Request) y se despliegan mensajes claros y constructivos: "*Este correo ya se encuentra registrado. ¿Deseas iniciar sesión?*".
+
+##### 10. Ayuda y documentación (*Help and documentation*)
+- **Hallazgo:** Los arrendadores primerizos no tenían una guía sobre qué documentos subir ni cómo funciona la garantía vehicular.
+- **Severidad:** 2 (Menor).
+- **Subsanación:** Se incorporó un panel informativo colapsable con preguntas frecuentes y requisitos claros para la publicación de vehículos.
+
+#### Resumen de Modificaciones para Subsanar los Hallazgos
+
+| # | Módulo Afectado | Hallazgo Heurístico Principal | Solución Implementada | Estado |
+| :-: | :--- | :--- | :--- | :---: |
+| 1 | Búsqueda & Catálogo | Ausencia de ubicación geográfica de unidades | Integración de mapa Leaflet sobre OpenStreetMap en `/vehicles` y `/tracking/:id` | **Subsanado** |
+| 2 | Reserva de Vehículos | Selección permitida de rangos inválidos de fechas | Validación cronológica obligatoria (`minDate`) en Angular y backend | **Subsanado** |
+| 3 | Publicación de Flota | Falta de botón de cancelación y navegación | Incorporación de botón "Cancelar" y retorno seguro a `/my-vehicles` | **Subsanado** |
+| 4 | Identidad & Registro | Mensajes de error poco amigables en conflicto de correo | Manejo de HTTP 409 con sugerencia de inicio de sesión directo | **Subsanado** |
+| 5 | Telemetría IoT | Visualización de vehículos solo por ID numérico | Despliegue de metadatos completos (Marca, Modelo, Año, Placa y Estado) | **Subsanado** |
+| 6 | Interfaz Global | Inconsistencia en tonalidades primarias de botones | Centralización en variables CSS `--primary-color` en `styles.css` | **Subsanado** | 
 
 ## 6.4. Auditoría de Experiencias de Usuario 
 
