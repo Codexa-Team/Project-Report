@@ -4372,31 +4372,279 @@ Estos componentes detallan cómo se automatiza el despliegue, incluyendo la Base
 
 ## 8.1. Experiment Planning 
 
+Esta sección detalla la planificación de los experimentos diseñados para validar las hipótesis del proyecto RentiCar. El objetivo es transformar los supuestos de negocio y las suposiciones de los usuarios en conocimiento validado, permitiendo un desarrollo guiado por datos.
+
 ### 8.1.1. As-Is Summary
+
+El estado actual del mercado de alquiler de vehículos en el Perú se caracteriza por una alta informalidad y una marcada desconfianza entre los actores. Los propietarios de vehículos que buscan generar ingresos adicionales se ven obligados a utilizar canales poco seguros como redes sociales y contactos directos, sin garantías contractuales ni herramientas para verificar la identidad de los arrendatarios. Por su parte, los arrendatarios enfrentan procesos engorrosos, falta de transparencia en los precios y un alto riesgo al entregar depósitos a desconocidos. Esta situación, descrita en el análisis de entrevistas del Capítulo II, genera una fricción constante que limita el crecimiento del mercado y expone a ambas partes a riesgos financieros y de seguridad.
 
 ### 8.1.2. Raw Material: Assumptions, Knowledge Gaps, Ideas, Claims
 
+A partir del Lean UX Process (sección 1.2.2), se identificaron los siguientes elementos como material base para la experimentación:
+
+**1. Assumptions (Suposiciones):**
+
+ - Confianza: Los arrendatarios valoran más un sistema de reputación y perfiles verificados que un precio ligeramente inferior ofrecido en canales informales.
+
+ - Seguridad del Propietario: Los propietarios estarán dispuestos a listar sus vehículos si cuentan con herramientas de monitoreo (IoT) y un sistema de contratos digitales que les brinde respaldo legal.
+
+ - Adopción: La interfaz de la plataforma será lo suficientemente intuitiva como para que los usuarios migren desde sus métodos tradicionales (Facebook Marketplace, WhatsApp) a RentiCar.
+
+**2. Knowledge Gaps (Brechas de Conocimiento):**
+
+ - No se conoce el grado de influencia que tiene la presencia de telemetría IoT en la decisión final del propietario para alquilar su auto.
+
+ - Se desconoce la tarifa mínima (comisión) que los propietarios están dispuestos a pagar por la seguridad y visibilidad que ofrece la plataforma.
+
+ - No está claro qué tan dispuestos están los arrendatarios a pagar una tarifa premium por un seguro de cobertura total ofrecido dentro de la plataforma.
+
+**3. Ideas:**
+
+ - Implementar un sistema de calificaciones bidireccional (propietario a arrendatario y viceversa) para fomentar la responsabilidad.
+
+ - Ofrecer un panel de control con telemetría en tiempo real (ubicación GPS, nivel de combustible) como diferenciador clave.
+
+ - Integrar contratos digitales automáticos al confirmar una reserva.
+
+**4. Claims (Declaraciones):**
+
+ - RentiCar formalizará el mercado de alquiler de vehículos en Perú, reduciendo el fraude y aumentando la confianza.
+
+ - La digitalización del proceso de reserva y contrato reducirá significativamente el tiempo de gestión para ambas partes. 
+
 ### 8.1.3. Experiment-Ready Questions
+
+De las brechas de conocimiento, se formularon las siguientes preguntas listas para experimentación:
+
+- Q1 (Confianza/Cliente): ¿Aumentará la tasa de conversión de reservas la implementación de un sistema de reseñas verificadas y perfiles de usuario detallados?
+
+- Q2 (Valor/Propietario): ¿Qué valor relativo otorgan los propietarios a las funcionalidades de monitoreo IoT frente a una reducción en la comisión por servicio?
+
+- Q3 (Retención/Propietario): ¿Estarán los propietarios dispuestos a mantener sus vehículos publicados en la plataforma tras la primera experiencia de alquiler si se les ofrece un seguro de daños?
+
+- Q4 (Adopción/Cliente): ¿Incrementará la implementación de filtros de búsqueda por marca, precio y fechas la tasa de solicitudes de reserva en comparación con una búsqueda simple por lista?
 
 ### 8.1.4. Question Backlog
 
+Priorizando las preguntas según su impacto en el modelo de negocio, se estableció el siguiente backlog:
+
+| Prioridad | ID | Pregunta(Experiment-Ready Question) |
+| --------- | -- | ----------------------------------- |
+| **Alta** | *Q1* | ¿Aumentará la tasa de conversión de reservas la implementación de un sistema de reseñas verificadas y perfiles de usuario detallados? |
+| **Alta** | *Q4* | ¿Incrementará la implementación de filtros de búsqueda (marca, precio, fechas) la tasa de solicitudes de reserva en comparación con una búsqueda simple por lista? | 
+| **Media** | *Q2* | ¿Qué valor relativo otorgan los propietarios a las funcionalidades de monitoreo IoT frente a una reducción en la comisión por servicio? |
+| **Baja** | *Q3* | ¿Estarán los propietarios dispuestos a mantener sus vehículos publicados en la plataforma tras la primera experiencia de alquiler si se les ofrece un seguro de daños? |
+
 ### 8.1.5. Experiment Cards
+
+Basados en las preguntas establecidas y ordenadas por orden de importancia, diseñamos los siguientes experimentos:
+
+| Elemento | Experiment Card #1: Validación de Confianza del Arrendatario | 
+| -------- | ---------------------------------------------- |
+| **Hypothesis** | *(Basándonos en Q1)* |
+| **Experiment** | Creemos que los arrendatarios (Clientes) se sentirán más seguros y aumentarán su intención de reserva si la plataforma muestra perfiles de propietarios con reseñas verificadas, en lugar de solo información básica. <br><br> Para verificar esto, realizaremos una prueba A/B con un prototipo funcional del catálogo de vehículos. <br><br> Les mostraremos al Grupo A (control) una tarjeta con la información del vehículo y el precio. Les mostraremos al Grupo B (experimental) la misma tarjeta, pero con la adición de una insignia de "Propietario Verificado" y su calificación promedio en estrellas. |
+| **Metrics** | Mediremos la Tasa de Clics (CTR) en el botón "Reservar" y la Tasa de Conversión (solicitud de reserva completada) por cada variante. También se realizarán encuestas de salida para medir la confianza percibida (escala 1-5). |
+| **Success Criteria** | Sabremos que la hipótesis es válida si el Grupo B registra una tasa de conversión al menos un 20% superior a la del Grupo A y si la puntuación de confianza promedio reportada es de 4 o superior. | 
+
+| Elemento | Experiment Card #2: Validación de la Usabilidad del Catálogo (Arrendatario) | 
+| -------- | ---------------------------------------------- |
+| **Hypothesis** | *(Basándonos en Q4)* |
+| **Experiment** | Creemos que los arrendatarios completarán el proceso de reserva más rápidamente si el catálogo incluye filtros por marca, precio y fechas, en lugar de una lista simple. <br><br> Para verificar esto, realizaremos una prueba de usabilidad con 10 participantes del segmento de arrendatarios, divididos en dos grupos. <br><br> Les pediremos que encuentren un vehículo de una marca específica para un rango de fechas determinado. El Grupo de Control usará una versión del catálogo con una barra de búsqueda simple; el Grupo Experimental usará la versión con filtros dinámicos. |
+| **Metrics** | Mediremos el Tiempo Promedio para completar la tarea (en segundos) y la Tasa de Éxito (porcentaje de usuarios que completan la reserva correctamente). Se recopilarán comentarios cualitativos sobre la facilidad de uso. |
+| **Success Criteria** | Sabremos que la hipótesis es válida si el tiempo promedio de la tarea se reduce en un 30% en comparación con el grupo de control y si la tasa de éxito es superior al 80%. | 
+
+| Elemento | Experiment Card #3: Validación del Valor del Monitoreo IoT (Propietario) | 
+| -------- | ---------------------------------------------- |
+| **Hypothesis** | *(Basándonos en Q2)* |
+| **Experiment** | 	Creemos que los propietarios de vehículos (Arrendadores) se sentirán más seguros y dispuestos a publicar sus autos si la plataforma les ofrece funcionalidades de monitoreo telemático IoT en tiempo real, en lugar de solo un contrato digital. <br><br> Para verificar esto, realizaremos una prueba de concepto con dos grupos de propietarios. <br><br> Les presentaremos al Grupo A (control) la plataforma con las funcionalidades básicas de publicación y contrato digital. Les presentaremos al Grupo B (experimental) la misma plataforma, pero con una demostración interactiva del panel de monitoreo IoT (visualización de GPS, odómetro y nivel de combustible en un mapa). Tras la demostración, les pediremos que completen el proceso de publicación de un vehículo ficticio. |
+| **Metrics** | Mediremos la Tasa de Publicación (porcentaje de usuarios que completan el formulario de publicación) en cada grupo. Adicionalmente, se realizará una encuesta para medir la "percepción de seguridad" (escala 1-5) y la "intención de listar un vehículo real" en los próximos 30 días. |
+| **Success Criteria** | Sabremos que la hipótesis es válida si el Grupo B presenta una Tasa de Publicación al menos un 25% superior a la del Grupo A, y si la percepción de seguridad promedio es de 4 o superior, demostrando que el IoT es un diferenciador clave para la captación de oferta. | 
+
+| Elemento | Experiment Card #4: Validación de la Retención de Propietarios (Propietario) | 
+| -------- | ---------------------------------------------- |
+| **Hypothesis** | *(Basándonos en Q3)* |
+| **Experiment** | 	Creemos que los propietarios que han completado su primer alquiler en RentiCar mantendrán sus vehículos publicados si la plataforma les ofrece un seguro de daños integrado y una gestión de disputas simplificada, en lugar de solo el sistema de reseñas. <br><br> Para verificar esto, realizaremos una prueba de concepto con dos grupos de propietarios. <br><br> Les presentaremos al Grupo A (control) la plataforma con las funcionalidades básicas de publicación y contrato digital. Les presentaremos al Grupo B (experimental) la misma plataforma, pero con una demostración interactiva del panel de monitoreo IoT (visualización de GPS, odómetro y nivel de combustible en un mapa). Tras la demostración, se les pedirá que completen el proceso de publicación de un vehículo ficticio. |
+| **Metrics** | Mediremos la Tasa de Retención (porcentaje de propietarios que reactivan su publicación en los 3 meses siguientes) para cada grupo. También registraremos el NPS (Net Promoter Score) y el número de tickets de soporte relacionados con daños o disputas. |
+| **Success Criteria** | Sabremos que la hipótesis es válida si el Grupo B muestra una Tasa de Retención al menos un 15% superior a la del Grupo A y si el NPS del Grupo B es significativamente mayor, confirmando que un ecosistema de seguridad post-alquiler es un factor decisivo para la fidelización de los propietarios. | 
 
 ## 8.2. Experiment Design
 
+Esta fase consiste en detallar el diseño técnico de los experimentos que surgen de las Experiment-Ready Questions de la sección anterior. Se busca así construir un marco metodológico sólido que permita confirmar o descartar las hipótesis críticas del negocio con significancia estadística.
+
 ### 8.2.1. Hypotheses
 
-### 8.2.2. Domain Business Metrics 
+A continuación, se formalizan las hipótesis nulas (H0) y alternativas (H1) para las preguntas establecidas, definiendo así la base para la validación estadística.
+
+*   **Hipótesis 1 (Adopción del Cliente - Confianza):**
+    
+    *   **Creemos que** al implementar un sistema de insignias de "Propietario Verificado" (basado en la validación de identidad y documentos) y mostrar las reseñas de forma prominente en el perfil del arrendador, los arrendatarios (Persona: Sebastián Altamirano) experimentarán una mayor confianza en la plataforma.
+        
+    *   **Resultará en** un incremento en la tasa de conversión de visitas a solicitudes de reserva, reduciendo la percepción de riesgo asociada a los canales informales.
+        
+    *   **Sabremos que esto es cierto si** la Variante B (con insignias y reseñas destacadas) logra una tasa de conversión de "visita a perfil" a "solicitud de reserva" al menos un 20% mayor que la Variante A (perfil estándar), en un período de 14 días.
+
+*   **Hipótesis 2 (Eficiencia del Catálogo - Usabilidad):**
+    
+    *   **Creemos que** al implementar un catálogo con filtros avanzados por marca, rango de precio y fechas de disponibilidad, los arrendatarios (Persona: Gino Ábalos) podrán encontrar el vehículo deseado de manera más ágil y eficiente.
+        
+    *   **Resultará en** una reducción significativa del tiempo requerido para completar una reserva, mejorando la experiencia de usuario y disminuyendo la frustración asociada a la búsqueda manual.
+        
+    *   **Sabremos que esto es cierto si** los usuarios expuestos a la Variante B (catálogo con filtros) completan la tarea de reserva en un tiempo promedio al menos un 30% menor que el Grupo A (catálogo con búsqueda simple), durante las pruebas de usabilidad.
+
+*   **Hipótesis 3 (Captación del Propietario - Valor del IoT):**
+    
+    *   **Creemos que** al ofrecer a los propietarios de vehículos (Persona: Oriana Cáceres) una demostración interactiva del panel de monitoreo telemático IoT (visualización de GPS, odómetro y nivel de combustible), percibirán un mayor valor en la plataforma y se sentirán más seguros al momento de listar sus autos.
+        
+    *   **Resultará en** un incremento en la tasa de publicación de vehículos, ya que el IoT mitiga el miedo al mal uso o robo del patrimonio.
+        
+    *   **Sabremos que esto es cierto si** el Grupo B (expuesto a la funcionalidad IoT) presenta una Tasa de Publicación al menos un 25% superior a la del Grupo A (sin la funcionalidad), y si la percepción de seguridad reportada es de 4 o superior en una escala de 1 a 5.
+
+*   **Hipótesis 4 (Retención del Propietario - Ecosistema de Seguridad):**
+    
+    *   **Creemos que** al proporcionar a los propietarios un paquete de "Protección RentiCar" (que incluye un seguro de cobertura de daños y un canal de soporte prioritario para disputas), se reducirá la incertidumbre post-alquiler y se fomentará la fidelización.
+        
+    *   **Resultará en** una mayor disposición a mantener los vehículos publicados y a reactivar las publicaciones tras el primer alquiler, consolidando una oferta estable en la plataforma.
+        
+    *   **Sabremos que esto es cierto si** los propietarios expuestos al paquete de protección (Variante B) muestran una Tasa de Retención (reactivación de publicación) al menos un 15% superior a la del grupo de control (Variante A) en los 3 meses posteriores al primer alquiler.  
+
+| Hipótesis | Pregunta | Belief (Creencia) | Hypothesis (H1) | Null Hypothesis (H0) |
+| --- | --- | --- | --- | --- |
+| H1 (Adopción del Cliente - Confianza) | Q1 | La implementación de insignias de "Propietario Verificado" y reseñas destacadas aumentará la confianza de los arrendatarios. | La Tasa de Conversión (visita a reserva) será al menos un 20% mayor en los perfiles que muestran insignias y reseñas. | La implementación de insignias y reseñas no aumentará la Tasa de Conversión en un 20% o más. |
+| H2 (Eficiencia del Catálogo - Usabilidad) | Q4 | Un catálogo con filtros avanzados (marca, precio, fechas) es más eficiente y mejora la experiencia del usuario que una lista simple. | El Tiempo Promedio para completar una reserva se reducirá en al menos un 30% con el uso de filtros avanzados. | La implementación de filtros avanzados no reducirá el Tiempo Promedio para completar una reserva en un 30% (o más). |
+| H3 (Captación del Propietario - Valor del IoT) | Q2 | Los propietarios valoran las funcionalidades de monitoreo IoT como un factor clave para sentirse seguros al alquilar su vehículo. | Los propietarios expuestos a la funcionalidad de monitoreo IoT mostrarán una tasa de publicación de vehículos al menos un 25% superior que aquellos que no la conocen. | La exposición a la funcionalidad de monitoreo IoT no aumentará la tasa de publicación de vehículos en un 25% (o más). |
+| H4 (Retención del Propietario - Ecosistema de Seguridad) | Q3 | Un ecosistema de seguridad post-alquiler (seguro de daños y gestión de disputas) fidelizará a los propietarios, incentivando la republicación de sus vehículos. | Los propietarios que reciben el paquete "Protección RentiCar" presentarán una Tasa de Retención (reactivación de publicación) al menos un 15% superior a la del grupo de control en los 3 meses posteriores al primer alquiler. | La incorporación del paquete "Protección RentiCar" no incrementará la Tasa de Retención de los propietarios en un 15% (o más) durante los 3 meses posteriores al primer alquiler. |
+
+### 8.2.2. Domain Business Metrics
+
+Las métricas de negocio a nivel de dominio que se verán impactadas por los experimentos son:
+
+*   **Tasa de Conversión de Reservas (TCR):** (Número de reservas confirmadas / Número de visitas al catálogo) * 100. Es un indicador directo de la efectividad del catálogo y la confianza que genera.
+
+*   **Tasa de Publicación de Vehículos (TPV):** (Número de vehículos publicados / Número de propietarios registrados) * 100. Mide la capacidad de la plataforma para atraer y retener la oferta.
+
+*   **Tiempo Medio de Alquiler (TMA):** Tiempo promedio desde que un usuario inicia una búsqueda hasta que confirma una reserva. Un TMA menor indica una plataforma más eficiente.
+
+*   **Tasa de Retención de Propietarios:** Porcentaje de propietarios que, tras completar su primer alquiler, publican de nuevo en la plataforma en los siguientes 3 meses.
 
 ### 8.2.3. Measures
 
+Estas son las métricas de datos crudos (cuantitativas y cualitativas) que recopilaremos directamente durante el experimento para evaluar las hipótesis.
+
+*   **Para Hipótesis 1 (Confianza en Reservas - Arrendatario):**
+
+  *   Clics en el botón "Reservar" (por variante A/B).
+
+  *   Número de impresiones (vistas) del perfil del propietario.
+
+  *   Tasa de rebote en la página de la ficha del vehículo.
+
+  *   Cualitativo: Respuestas a encuestas de salida ("¿Qué tan confiable le pareció este propietario y su vehículo?").
+
+*   **Para Hipótesis 2 (Eficiencia del Catálogo - Arrendatario):**
+
+  *   Tiempo promedio (en segundos) para completar la tarea de reserva.
+
+  *   Número de clics realizados en la interfaz de búsqueda (filtros vs. lista).
+
+  *   Tasa de éxito de la tarea (porcentaje de usuarios que completan la reserva correctamente).
+
+  *   Cualitativo: Comentarios en voz alta durante las pruebas de usabilidad sobre la facilidad de uso de los filtros.
+
+*   **Para Hipótesis 3 (Captación del Propietario - Valor del IoT):**
+
+  *   Tasa de Publicación (porcentaje de usuarios que completan el formulario de publicación de un vehículo ficticio).
+
+  *   Número de propietarios que activan la opción de monitoreo IoT tras la demostración.
+
+  *   Cualitativo: Resultados de la encuesta de percepción de seguridad (escala 1-5) y la intención de listar un vehículo real en los próximos 30 días.
+
+*   **Para Hipótesis 4 (Retención del Propietario - Ecosistema de Seguridad):**
+
+  *   Tasa de Retención (porcentaje de propietarios que reactivan su publicación en los 3 meses siguientes).
+
+  *   Número de tickets de soporte relacionados con daños o disputas (por grupo).
+
+  *   Cualitativo: Net Promoter Score (NPS) obtenido tras la experiencia de alquiler y las entrevistas de seguimiento sobre la percepción del paquete "Protección RentiCar".
+
+| Question | Measure |
+| --- | --- |
+| Q1: ¿Aumentará la tasa de conversión de reservas la implementación de un sistema de reseñas verificadas y perfiles de usuario detallados? | Cuantitativo: Clics en el botón "Reservar" por variante. Tasa de Conversión (Visita a Perfil → Solicitud). Tasa de rebote en la página del vehículo. Cualitativo: Respuestas a encuestas de salida ("¿Qué tan confiable le pareció este propietario y su vehículo?"). |
+| Q4: ¿Incrementará la implementación de filtros de búsqueda (marca, precio, fechas) la tasa de solicitudes de reserva en comparación con una búsqueda simple por lista? | Cuantitativo: Tiempo promedio para completar la reserva (en segundos). Número de clics en la interfaz de búsqueda. Tasa de éxito de la tarea. Cualitativo: Comentarios en voz alta durante las pruebas de usabilidad sobre la facilidad de uso de los filtros. |
+| Q2: ¿Qué valor relativo otorgan los propietarios a las funcionalidades de monitoreo IoT frente a una reducción en la comisión por servicio? | Cuantitativo: Tasa de Publicación (porcentaje de formularios completados). Número de activaciones de la opción de monitoreo IoT. Cualitativo: Resultados de la encuesta de percepción de seguridad (escala 1-5) y la intención de listar un vehículo real en los próximos 30 días. |
+| Q3: ¿Estarán los propietarios dispuestos a mantener sus vehículos publicados en la plataforma tras la primera experiencia de alquiler si se les ofrece un seguro de daños? | Cuantitativo: Tasa de Retención (reactivación de publicación en 3 meses). Número de tickets de soporte por daños o disputas. Cualitativo: Net Promoter Score (NPS) y entrevistas de seguimiento sobre la percepción del paquete "Protección RentiCar". |
+
 ### 8.2.4. Conditions
+
+Definimos las condiciones del experimento (grupos de control y variantes) para aislar el impacto de los cambios introducidos en cada hipótesis, asegurando la validez de los resultados.
+
+| Experimento | Condición Experimental (Variante B) | Condición de Control (Grupo A) |
+| --- | --- | --- |
+| Experimento 1 (Confianza en Reservas - H1) | 50% de los arrendatarios visualizan el diseño To-Be: la tarjeta del vehículo incluye una insignia de "Propietario Verificado" y la calificación promedio en estrellas, con acceso directo a las reseñas destacadas. | 50% de los arrendatarios visualizan el diseño As-Is: la tarjeta del vehículo muestra únicamente la información técnica básica y el precio, sin insignias de verificación ni reseñas visibles. |
+| Experimento 2 (Eficiencia del Catálogo - H2) | 50% de los arrendatarios utilizan la versión To-Be del catálogo: una interfaz con filtros dinámicos por marca, rango de precio y fechas de disponibilidad. | 50% de los arrendatarios utilizan la versión As-Is del catálogo: una lista simple de vehículos con una barra de búsqueda de texto libre. |
+| Experimento 3 (Captación del Propietario - H3) | 50% de los propietarios son expuestos a la demostración interactiva del panel de monitoreo IoT (GPS, odómetro, combustible) antes de completar el formulario de publicación. | 50% de los propietarios completan el formulario de publicación sin la demostración interactiva del panel de monitoreo IoT, recibiendo solo información textual sobre la funcionalidad. |
+| Experimento 4 (Retención del Propietario - H4) | 50% de los propietarios que han completado un alquiler reciben el paquete "Protección RentiCar", que incluye un seguro de cobertura de daños y un canal de soporte prioritario para disputas. | 50% de los propietarios que han completado un alquiler reciben únicamente el sistema de reseñas estándar, sin acceso al paquete de protección adicional. |
 
 ### 8.2.5. Scale Calculations and Decisions
 
+Para asegurar la validez estadística de los resultados, se calcularon los parámetros necesarios para cada experimento.
+
+-   **Decisión de Nivel de Confianza:** 95% (p-value < 0.05).
+
+-   **Decisión de Poder Estadístico:** 80%.
+
+-   **Efecto Mínimo Detectable (MDE):**
+
+  -   Para H1: Se busca detectar un incremento relativo del 20% en la tasa de conversión base, estimada en un 5%.
+
+  -   Para H2: Se busca detectar una reducción relativa del 30% en el tiempo promedio de la tarea, estimado en 120 segundos.
+
+  -   Para H3: Se busca detectar un incremento relativo del 25% en la tasa de publicación base, estimada en un 15%.
+
+  -   Para H4: Se busca detectar una reducción relativa del 15% en la tasa de churn base de propietarios, estimada en un 20%.
+
+-   **Cálculo de Muestra:**
+
+  -   Para H1: Se requiere un mínimo de 3,800 visitantes únicos por variante (Total: 7,600).
+
+  -   Para H2: Se requiere un mínimo de 30 participantes por grupo en las pruebas de usabilidad (Total: 60).
+
+  -   Para H3: Se requiere un mínimo de 400 propietarios por variante (Total: 800).
+
+  -   Para H4: Se requiere un mínimo de 500 propietarios por variante (Total: 1,000).
+
+-   **Duración:** Los experimentos cuantitativos (H1, H3, H4) se ejecutarán durante 21 días para capturar ciclos de comportamiento completos y alcanzar el tamaño de muestra requerido.
+
+| Factor | Valor de Decisión | Justificación y Nivel |
+| --- | --- | --- |
+| Nivel de Confianza (1−α) | 95% | Ideal. Estándar de la industria para asegurar la fiabilidad de los resultados. |
+| Poder Estadístico (1−β) | 80% | Aceptable/Ideal. Mínimo requerido para reducir la posibilidad de un Falso Negativo. |
+| Efecto Mínimo Detectable (MDE) | H1: Lift relativo del 20% en TCR. H2: Reducción del 30% en tiempo. H3: Lift del 25% en TPV. H4: Reducción del 15% en Churn. | Ideal. Define el cambio mínimo que se considera valioso para el negocio. |
+| Tamaño Muestral Calculado | H1: 7,600 visitantes. H2: 60 participantes. H3: 800 propietarios. H4: 1,000 propietarios. | Ideal. Muestra calculada para validar el MDE con 95% de confianza. |
+| Duración | 21 días (H1, H3, H4); 2 semanas (H2). | Ideal. Periodo suficiente para alcanzar el tamaño de muestra y cubrir ciclos de comportamiento. |
+
 ### 8.2.6. Methods Selection
 
+Para la ejecución de los experimentos, se evaluaron diversas herramientas de análisis y experimentación, seleccionando las que mejor se adaptan a los objetivos del proyecto RentiCar.
+
+| Herramienta | Precio | Capacidad de Análisis | Ventajas | Documentación | Sencillez |
+| --- | --- | --- | --- | --- | --- |
+| Google Analytics | Plan gratuito/Créditos gratis | Análisis cuantitativo completo y exhaustivo del tráfico y comportamiento del usuario. | Excelente para reportes. Gran capacidad de integración. Medición post-experimento. | Extensa | Aprendizaje sencillo para funciones básicas, complejidad media para análisis avanzados. |
+| Optimizely | Basado en suscripción (Plan Starter gratuito) | Plataforma líder para Test A/B, Multivariante y Feature Flagging (Gestión de liberaciones de funcionalidad). | Ideal para la ejecución de experimentos y garantizar la validez estadística. Analítica de impacto directa. | Extensa y técnica | Requiere configuración técnica inicial, pero la interfaz de diseño de experimentos es intuitiva. |
+| Qualtrics | Plan gratuito básico (Suscripción Enterprise) | Recolección de datos cualitativos/cuantitativos mediante encuestas avanzadas, formularios y análisis de feedback. | Herramienta de nivel empresarial para mediciones de NPS, satisfacción (CSAT) y recolección de feedback específico post-experimento. | Muy Extensa y académica | Interfaz intuitiva para encuestas, requiere curva de aprendizaje para análisis estadístico avanzado. |
+| Hotjar | Plan gratuito con limitaciones | Análisis cualitativo (mapas de calor, grabaciones de sesión, encuestas de feedback visual). | Permite entender el "porqué" detrás del comportamiento del usuario de forma visual, fundamental para la H1 (Confianza). | Buena | Interfaz muy intuitiva y fácil de configurar. |
+
+Tras evaluar cada una de las opciones, se seleccionaron Google Analytics y Optimizely como las herramientas principales. Google Analytics permite obtener datos estadísticos relevantes y sencillos de forma gratuita, con una amplia documentación disponible. Optimizely, por su parte, facilitará la ejecución de los test A/B y la gestión de las variantes, garantizando la validez estadística de los resultados. Para la recolección de datos cualitativos, se utilizará Hotjar por su capacidad para visualizar el comportamiento del usuario y recoger feedback en el momento.
+
 ### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
+
+El objetivo analítico es determinar si las variantes (B) producen un resultado estadísticamente superior al control (A), utilizando los KPIs definidos para cada hipótesis.
+
+| Hipótesis | Objetivo Analítico | KPI Primario (Métrica de Éxito) | Métricas Secundarias (Guardrails) |
+| :--- | :--- | :--- | :--- |
+| H1: Confianza en Reservas | Determinar si la confianza visual (insignia y reseñas) impacta la decisión de reserva del arrendatario. | Tasa de Conversión (Solicitudes de Reserva / Visitas a Perfil). | Tasa de rebote en la página del vehículo, Tiempo en página. |
+| H2: Eficiencia del Catálogo | Determinar si los filtros avanzados reducen el tiempo y el esfuerzo para completar una reserva. | Tiempo Promedio de la Tarea (en segundos). | Tasa de éxito de la tarea, Número de clics en la interfaz. |
+| H3: Captación del Propietario | Determinar si la demostración del IoT influye en la decisión del propietario de publicar su vehículo. | Tasa de Publicación de Vehículos (formularios completados). | Percepción de seguridad (encuesta), Intención de listar un vehículo real. |
+| H4: Retención del Propietario | Determinar si el paquete de protección post-alquiler reduce la incertidumbre y fomenta la fidelización. | Tasa de Retención (reactivación de publicación). | Tasa de tickets de soporte por daños/disputas, NPS. |
 
 ### 8.2.8. Web and Mobile Tracking Plan
 
