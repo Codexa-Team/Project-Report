@@ -4397,6 +4397,42 @@ Definimos las condiciones del experimento (grupos de control y variantes) para a
 
 ### 8.2.5. Scale Calculations and Decisions
 
+Para asegurar la validez estadística de los resultados, se calcularon los parámetros necesarios para cada experimento.
+
+-   **Decisión de Nivel de Confianza:** 95% (p-value < 0.05).
+
+-   **Decisión de Poder Estadístico:** 80%.
+
+-   **Efecto Mínimo Detectable (MDE):**
+
+  -   Para H1: Se busca detectar un incremento relativo del 20% en la tasa de conversión base, estimada en un 5%.
+
+  -   Para H2: Se busca detectar una reducción relativa del 30% en el tiempo promedio de la tarea, estimado en 120 segundos.
+
+  -   Para H3: Se busca detectar un incremento relativo del 25% en la tasa de publicación base, estimada en un 15%.
+
+  -   Para H4: Se busca detectar una reducción relativa del 15% en la tasa de churn base de propietarios, estimada en un 20%.
+
+-   **Cálculo de Muestra:**
+
+  -   Para H1: Se requiere un mínimo de 3,800 visitantes únicos por variante (Total: 7,600).
+
+  -   Para H2: Se requiere un mínimo de 30 participantes por grupo en las pruebas de usabilidad (Total: 60).
+
+  -   Para H3: Se requiere un mínimo de 400 propietarios por variante (Total: 800).
+
+  -   Para H4: Se requiere un mínimo de 500 propietarios por variante (Total: 1,000).
+
+-   **Duración:** Los experimentos cuantitativos (H1, H3, H4) se ejecutarán durante 21 días para capturar ciclos de comportamiento completos y alcanzar el tamaño de muestra requerido.
+
+| Factor | Valor de Decisión | Justificación y Nivel |
+| --- | --- | --- |
+| Nivel de Confianza (1−α) | 95% | Ideal. Estándar de la industria para asegurar la fiabilidad de los resultados. |
+| Poder Estadístico (1−β) | 80% | Aceptable/Ideal. Mínimo requerido para reducir la posibilidad de un Falso Negativo. |
+| Efecto Mínimo Detectable (MDE) | H1: Lift relativo del 20% en TCR. H2: Reducción del 30% en tiempo. H3: Lift del 25% en TPV. H4: Reducción del 15% en Churn. | Ideal. Define el cambio mínimo que se considera valioso para el negocio. |
+| Tamaño Muestral Calculado | H1: 7,600 visitantes. H2: 60 participantes. H3: 800 propietarios. H4: 1,000 propietarios. | Ideal. Muestra calculada para validar el MDE con 95% de confianza. |
+| Duración | 21 días (H1, H3, H4); 2 semanas (H2). | Ideal. Periodo suficiente para alcanzar el tamaño de muestra y cubrir ciclos de comportamiento. |
+
 ### 8.2.6. Methods Selection
 
 ### 8.2.7. Data Analytics: Goals, KPIs and Metrics Selection
