@@ -4067,6 +4067,18 @@ Aqui se ubican los archivos .feature que sirven para el funcionamiento de las pr
 #### 6.2.1.1. Coding standard & Code conventions
 
 #### 6.2.1.2. Code Quality & Code Security
+Para asegurar la mantenibilidad, seguridad y calidad del código en el proyecto, se integró SonarQube. El proceso se estructuró en dos fases principales: primero, 
+la contenedorización de los servicios mediante Docker, y posteriormente la ejecución del análisis de calidad para validar métricas de código limpio, vulnerabilidades y cobertura.
+<img src="assets/features/docker.png" alt="docker"/><br> 
+Como se muestra en la imagen dockerizamos tanto el backend que sera nuestro codigo a analizar y el SonarQube, para garantizar que funcione exactamente igual en tu máquina de desarrollo local, en un servidor de pruebas o en un pipeline de CI/CD en la nube.
+
+##### Primera ejecuciòn en SonarQube
+<img src="assets/features/sonar1.png" alt="sonar1"/><br> 
+Como se muestra en la imagen el SonarQube analiza el codigo del backend y nos muestra errores encontrados, como es el caso de 3 bugs y 1 Security Hostpost.
+##### Segunda ejecuciòn en SonarQube
+<img src="assets/features/sonar2.png" alt="sonar2"/><br> 
+Como se muestra en la imagen el SonarQube analiza el codigo del backend despues de haber coreegido los errores previamente mostrados, SonarQube analizo el check Style y cumplio con
+cubrir el minimo requerido. Ademas ya no se muestran los errores previamente encontrados, lo cual nos confirma que si cumple con todos los estandares de calidad altamente requeridos.
 
 ### 6.2.2. Reviews
 
