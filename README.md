@@ -4061,6 +4061,9 @@ Aqui se ubican los archivos .feature que sirven para el funcionamiento de las pr
 
 En este apartado nos encargamos de implementar las pruebas de sistema automatizadas de extremo a extremo (End-to-End) para **RentiCar**, utilizando **Selenium WebDriver** para interactuar con la aplicación web en Angular y **Cucumber BDD** con sintaxis **Gherkin** en inglés para verificar los flujos principales de negocio.
 
+- **Ejecución Completa de la Suite (`RunCucumberTest` en IntelliJ IDEA):**
+![Ejecución completa de pruebas de sistema Selenium y Cucumber en IntelliJ IDEA](assets/chapter06/selenium-suite-execution.jpg)
+
 ---
 
 #### 1. Flujo de Registro de Usuario (SignUp)
@@ -4140,9 +4143,17 @@ public class SignUpStepdefs {
 ```
 
 - **Evidencias de Ejecución:**
-  - *Resultado de la prueba en el Front:* `[PENDIENTE: Captura en navegador tomada por el autor]`
-  - *Feature en formato Gherkin con el resultado:* `[PENDIENTE: Captura de signup.feature y ejecución en IntelliJ IDEA]`
-  - *Step Definitions:* `[PENDIENTE: Captura de SignUpStepdefs.java en IntelliJ IDEA]`
+  - *Resultado de la prueba en el Front:*
+  ![Resultado de SignUp en RentiCar Frontend](assets/chapter06/selenium-signup-frontend.png)
+
+  - *Feature en formato Gherkin (`signup.feature`):*
+  ![Feature SignUp en formato Gherkin](assets/chapter06/selenium-signup-feature.png)
+
+  - *Step Definitions (`SignUpStepdefs.java`):*
+  ![Step Definitions SignUp en Java](assets/chapter06/selenium-signup-stepdefs.png)
+
+  - *Ejecución de escenarios en IntelliJ IDEA (`RunCucumberTestSignUp`):*
+  ![Ejecución de RunCucumberTestSignUp en IntelliJ IDEA](assets/chapter06/selenium-signup-runner.jpg)
 
 ---
 
@@ -4215,9 +4226,17 @@ public class SignInStepdefs {
 ```
 
 - **Evidencias de Ejecución:**
-  - *Resultado de la prueba en el Front:* `[PENDIENTE: Captura en navegador tomada por el autor]`
-  - *Feature en formato Gherkin con el resultado:* `[PENDIENTE: Captura de signin.feature y ejecución en IntelliJ IDEA]`
-  - *Step Definitions:* `[PENDIENTE: Captura de SignInStepdefs.java en IntelliJ IDEA]`
+  - *Resultado de la prueba en el Front:*
+  ![Resultado de SignIn en RentiCar Frontend](assets/chapter06/selenium-signin-frontend.png)
+
+  - *Feature en formato Gherkin (`signin.feature`):*
+  ![Feature SignIn en formato Gherkin](assets/chapter06/selenium-signin-feature.png)
+
+  - *Step Definitions (`SignInStepdefs.java`):*
+  ![Step Definitions SignIn en Java](assets/chapter06/selenium-signin-stepdefs.png)
+
+  - *Ejecución de escenarios en IntelliJ IDEA (`RunCucumberTestSignIn`):*
+  ![Ejecución de RunCucumberTestSignIn en IntelliJ IDEA](assets/chapter06/selenium-signin-runner.jpg)
 
 ---
 
@@ -4312,9 +4331,17 @@ public class RegisterVehicleStepdefs {
 ```
 
 - **Evidencias de Ejecución:**
-  - *Resultado de la prueba en el Front:* `[PENDIENTE: Captura en navegador tomada por el autor]`
-  - *Feature en formato Gherkin con el resultado:* `[PENDIENTE: Captura de register_vehicle.feature y ejecución en IntelliJ IDEA]`
-  - *Step Definitions:* `[PENDIENTE: Captura de RegisterVehicleStepdefs.java en IntelliJ IDEA]`
+  - *Resultado de la prueba en el Front:*
+  ![Resultado de RegisterVehicle en RentiCar Frontend](assets/chapter06/selenium-register-vehicle-frontend.png)
+
+  - *Feature en formato Gherkin (`register_vehicle.feature`):*
+  ![Feature RegisterVehicle en formato Gherkin](assets/chapter06/selenium-register-vehicle-feature.png)
+
+  - *Step Definitions (`RegisterVehicleStepdefs.java`):*
+  ![Step Definitions RegisterVehicle en Java](assets/chapter06/selenium-register-vehicle-stepdefs.png)
+
+  - *Ejecución de escenarios en IntelliJ IDEA (`RunCucumberTestRegisterVehicle`):*
+  ![Ejecución de RunCucumberTestRegisterVehicle en IntelliJ IDEA](assets/chapter06/selenium-register-vehicle-runner.jpg)
 
 ---
 
@@ -4444,9 +4471,17 @@ public class RentVehicleStepdefs {
 ```
 
 - **Evidencias de Ejecución:**
-  - *Resultado de la prueba en el Front:* `[PENDIENTE: Captura en navegador tomada por el autor]`
-  - *Feature en formato Gherkin con el resultado:* `[PENDIENTE: Captura de rent_vehicle.feature y ejecución en IntelliJ IDEA]`
-  - *Step Definitions:* `[PENDIENTE: Captura de RentVehicleStepdefs.java en IntelliJ IDEA]`
+  - *Resultado de la prueba en el Front:*
+  ![Resultado de RentVehicle en RentiCar Frontend](assets/chapter06/selenium-rent-vehicle-frontend.png)
+
+  - *Feature en formato Gherkin (`rent_vehicle.feature`):*
+  ![Feature RentVehicle en formato Gherkin](assets/chapter06/selenium-rent-vehicle-feature.png)
+
+  - *Step Definitions (`RentVehicleStepdefs.java`):*
+  ![Step Definitions RentVehicle en Java](assets/chapter06/selenium-rent-vehicle-stepdefs.png)
+
+  - *Ejecución de escenarios en IntelliJ IDEA (`RunCucumberTestRentVehicle`):*
+  ![Ejecución de RunCucumberTestRentVehicle en IntelliJ IDEA](assets/chapter06/selenium-rent-vehicle-runner.jpg)
 
 ---
 
@@ -4512,9 +4547,17 @@ public class IoTTelemetryStepdefs {
 ```
 
 - **Evidencias de Ejecución:**
-  - *Resultado de la prueba en el Front:* `[PENDIENTE: Captura en navegador tomada por el autor]`
-  - *Feature en formato Gherkin con el resultado:* `[PENDIENTE: Captura de iot_telemetry.feature y ejecución en IntelliJ IDEA]`
-  - *Step Definitions:* `[PENDIENTE: Captura de IoTTelemetryStepdefs.java en IntelliJ IDEA]`
+  - *Resultado de la prueba en el Front:*
+  ![Resultado de IoTTelemetry en RentiCar Frontend](assets/chapter06/selenium-telemetry-frontend.png)
+
+  - *Feature en formato Gherkin (`iot_telemetry.feature`):*
+  ![Feature IoTTelemetry en formato Gherkin](assets/chapter06/selenium-telemetry-feature.png)
+
+  - *Step Definitions (`IoTTelemetryStepdefs.java`):*
+  ![Step Definitions IoTTelemetry en Java](assets/chapter06/selenium-telemetry-stepdefs.png)
+
+  - *Ejecución de escenarios en IntelliJ IDEA (`RunCucumberTestIoTTelemetry`):*
+  ![Ejecución de RunCucumberTestIoTTelemetry en IntelliJ IDEA](assets/chapter06/selenium-telemetry-runner.jpg)
 
 ---
 
