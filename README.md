@@ -4068,89 +4068,12 @@ En este apartado nos encargamos de implementar las pruebas de sistema automatiza
 
 #### 1. Flujo de Registro de Usuario (SignUp)
 
-Verifica que un nuevo usuario pueda completar el formulario de registro seleccionando su rol y sea redirigido al inicio de sesión.
-
-- **Feature en formato Gherkin (`signup.feature`):**
-```gherkin
-Feature: User Sign Up
-  Background:
-    Given the user opens the RentiCar application
-
-  Scenario: Successful new user registration
-    Given the user clicks on the Register link
-    When the user fills in valid name, email, password, and role
-    And the user clicks the Register button
-    Then the user is registered successfully in the system
-```
-
-- **Step Definitions en Java (`SignUpStepdefs.java`):**
-```java
-package testingweb.stepdefinitions;
-
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.junit.jupiter.api.Assertions;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import testingweb.selenium.MyWebDriver;
-
-import java.time.Duration;
-
-public class SignUpStepdefs {
-    private final WebDriver webDriver = MyWebDriver.getWebDriver();
-    private final WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(20));
-
-    @Given("the user opens the RentiCar application")
-    public void openApplication() {
-        webDriver.get(MyWebDriver.BASE_URL + "/login");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.auth-card")));
-    }
-
-    @Given("the user clicks on the Register link")
-    public void clickRegisterLink() {
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/register']"))).click();
-        wait.until(ExpectedConditions.urlContains("/register"));
-    }
-
-    @When("the user fills in valid name, email, password, and role")
-    public void fillRegistrationForm() {
-        String uniqueEmail = "renter." + System.currentTimeMillis() + "@renticar.test";
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("name"))).sendKeys("Carlos Mendoza");
-        webDriver.findElement(By.id("email")).sendKeys(uniqueEmail);
-        webDriver.findElement(By.id("password")).sendKeys("SecurePass123");
-        webDriver.findElement(By.cssSelector("input[type='radio'][value='arrendatario']")).click();
-    }
-
-    @And("the user clicks the Register button")
-    public void clickRegisterButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.auth-button[type='submit']"))).click();
-    }
-
-    @Then("the user is registered successfully in the system")
-    public void verifySuccessfulRegistration() {
-        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-        Assertions.assertNotNull(alert.getText());
-        alert.accept();
-        wait.until(ExpectedConditions.urlContains("/login"));
-        Assertions.assertTrue(webDriver.getCurrentUrl().contains("/login"));
-    }
-}
-```
-
 - **Evidencias de Ejecución:**
   - *Resultado de la prueba en el Front:*
   ![Resultado de SignUp en RentiCar Frontend](assets/chapter06/selenium-signup-frontend.png)
 
   - *Feature en formato Gherkin (`signup.feature`):*
   ![Feature SignUp en formato Gherkin](assets/chapter06/selenium-signup-feature.png)
-
-  - *Step Definitions (`SignUpStepdefs.java`):*
-  ![Step Definitions SignUp en Java](assets/chapter06/selenium-signup-stepdefs.png)
 
   - *Ejecución de escenarios en IntelliJ IDEA (`RunCucumberTestSignUp`):*
   ![Ejecución de RunCucumberTestSignUp en IntelliJ IDEA](assets/chapter06/selenium-signup-runner.jpg)
@@ -4159,81 +4082,12 @@ public class SignUpStepdefs {
 
 #### 2. Flujo de Autenticación de Usuario (SignIn)
 
-Verifica que un usuario registrado pueda iniciar sesión con sus credenciales válidas y acceda a su panel principal en RentiCar.
-
-- **Feature en formato Gherkin (`signin.feature`):**
-```gherkin
-Feature: User Sign In
-  Background:
-    Given the user opens the login page
-
-  Scenario: Successful login with valid credentials
-    When the user enters email "estefano.solis@codexa.pe" and password "admin123"
-    And the user clicks the Sign In button
-    Then the user is redirected to their RentiCar dashboard
-```
-
-- **Step Definitions en Java (`SignInStepdefs.java`):**
-```java
-package testingweb.stepdefinitions;
-
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.junit.jupiter.api.Assertions;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import testingweb.selenium.MyWebDriver;
-
-import java.time.Duration;
-
-public class SignInStepdefs {
-    private final WebDriver webDriver = MyWebDriver.getWebDriver();
-    private final WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(20));
-
-    @Given("the user opens the login page")
-    public void openLoginPage() {
-        webDriver.get(MyWebDriver.BASE_URL + "/login");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email")));
-    }
-
-    @When("the user enters email {string} and password {string}")
-    public void enterCredentials(String email, String password) {
-        webDriver.findElement(By.id("email")).clear();
-        webDriver.findElement(By.id("email")).sendKeys(email);
-        webDriver.findElement(By.id("password")).clear();
-        webDriver.findElement(By.id("password")).sendKeys(password);
-    }
-
-    @And("the user clicks the Sign In button")
-    public void clickSignInButton() {
-        webDriver.findElement(By.cssSelector("button.auth-button[type='submit']")).click();
-    }
-
-    @Then("the user is redirected to their RentiCar dashboard")
-    public void verifyDashboardRedirect() {
-        wait.until(ExpectedConditions.or(
-                ExpectedConditions.urlContains("/my-vehicles"),
-                ExpectedConditions.urlContains("/dashboard")
-        ));
-        String currentUrl = webDriver.getCurrentUrl();
-        Assertions.assertTrue(currentUrl.contains("/my-vehicles") || currentUrl.contains("/dashboard"));
-    }
-}
-```
-
 - **Evidencias de Ejecución:**
   - *Resultado de la prueba en el Front:*
   ![Resultado de SignIn en RentiCar Frontend](assets/chapter06/selenium-signin-frontend.png)
 
   - *Feature en formato Gherkin (`signin.feature`):*
   ![Feature SignIn en formato Gherkin](assets/chapter06/selenium-signin-feature.png)
-
-  - *Step Definitions (`SignInStepdefs.java`):*
-  ![Step Definitions SignIn en Java](assets/chapter06/selenium-signin-stepdefs.png)
 
   - *Ejecución de escenarios en IntelliJ IDEA (`RunCucumberTestSignIn`):*
   ![Ejecución de RunCucumberTestSignIn en IntelliJ IDEA](assets/chapter06/selenium-signin-runner.jpg)
@@ -4242,103 +4096,12 @@ public class SignInStepdefs {
 
 #### 3. Flujo de Publicación de Vehículo (RegisterVehicle)
 
-Valida que un arrendador pueda registrar un nuevo vehículo especificando marca, modelo, año, precio por día y fotografía, visualizándose en su lista de vehículos.
-
-- **Feature en formato Gherkin (`register_vehicle.feature`):**
-```gherkin
-Feature: Vehicle Publication
-  Background:
-    Given the owner signs in and navigates to the publish vehicle form
-
-  Scenario: Successful vehicle publication in the catalog
-    When the owner enters vehicle brand "Kia", model "Sportage", year "2024", and daily price "210"
-    And the owner uploads the vehicle image
-    And the owner clicks the Publish Vehicle button
-    Then the vehicle "Kia Sportage" appears in My Vehicles
-```
-
-- **Step Definitions en Java (`RegisterVehicleStepdefs.java`):**
-```java
-package testingweb.stepdefinitions;
-
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.junit.jupiter.api.Assertions;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import testingweb.selenium.MyWebDriver;
-
-import java.io.File;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.time.Duration;
-
-public class RegisterVehicleStepdefs {
-    private final WebDriver webDriver = MyWebDriver.getWebDriver();
-    private final WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(20));
-
-    @Given("the owner signs in and navigates to the publish vehicle form")
-    public void signInAndNavigateToPublishForm() {
-        webDriver.get(MyWebDriver.BASE_URL + "/login");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email"))).sendKeys("estefano.solis@codexa.pe");
-        webDriver.findElement(By.id("password")).sendKeys("admin123");
-        webDriver.findElement(By.cssSelector("button.auth-button[type='submit']")).click();
-        wait.until(ExpectedConditions.urlContains("/my-vehicles"));
-
-        webDriver.get(MyWebDriver.BASE_URL + "/publish-vehicle");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("brand")));
-    }
-
-    @When("the owner enters vehicle brand {string}, model {string}, year {string}, and daily price {string}")
-    public void enterVehicleDetails(String brand, String model, String year, String price) {
-        webDriver.findElement(By.id("brand")).sendKeys(brand);
-        webDriver.findElement(By.id("model")).sendKeys(model);
-        webDriver.findElement(By.id("year")).sendKeys(year);
-        webDriver.findElement(By.id("pricePerDay")).sendKeys(price);
-    }
-
-    @And("the owner uploads the vehicle image")
-    public void uploadVehicleImage() throws URISyntaxException {
-        URL resource = getClass().getClassLoader().getResource("car-sample.jpg");
-        Assertions.assertNotNull(resource, "Sample car image resource not found");
-        String absolutePath = new File(resource.toURI()).getAbsolutePath();
-        webDriver.findElement(By.id("imageFile")).sendKeys(absolutePath);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("img.image-preview")));
-    }
-
-    @And("the owner clicks the Publish Vehicle button")
-    public void clickPublishVehicleButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.submit-button"))).click();
-    }
-
-    @Then("the vehicle {string} appears in My Vehicles")
-    public void verifyVehicleInMyVehicles(String expectedVehicleTitle) {
-        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-        Assertions.assertNotNull(alert.getText());
-        alert.accept();
-        wait.until(ExpectedConditions.urlContains("/my-vehicles"));
-        boolean vehicleVisible = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//h3[contains(text(), '" + expectedVehicleTitle + "')]")
-        )).isDisplayed();
-        Assertions.assertTrue(vehicleVisible);
-    }
-}
-```
-
 - **Evidencias de Ejecución:**
   - *Resultado de la prueba en el Front:*
   ![Resultado de RegisterVehicle en RentiCar Frontend](assets/chapter06/selenium-register-vehicle-frontend.png)
 
   - *Feature en formato Gherkin (`register_vehicle.feature`):*
   ![Feature RegisterVehicle en formato Gherkin](assets/chapter06/selenium-register-vehicle-feature.png)
-
-  - *Step Definitions (`RegisterVehicleStepdefs.java`):*
-  ![Step Definitions RegisterVehicle en Java](assets/chapter06/selenium-register-vehicle-stepdefs.png)
 
   - *Ejecución de escenarios en IntelliJ IDEA (`RunCucumberTestRegisterVehicle`):*
   ![Ejecución de RunCucumberTestRegisterVehicle en IntelliJ IDEA](assets/chapter06/selenium-register-vehicle-runner.jpg)
@@ -4347,138 +4110,12 @@ public class RegisterVehicleStepdefs {
 
 #### 4. Flujo de Reserva de Vehículo (RentVehicle)
 
-Verifica que un arrendatario autenticado pueda abrir el detalle de un vehículo, elegir un rango válido de fechas disponibles, visualizar el costo calculado y confirmar la reserva.
-
-- **Feature en formato Gherkin (`rent_vehicle.feature`):**
-```gherkin
-Feature: Vehicle Rental Booking
-  Background:
-    Given the renter signs in and views the details of vehicle "1"
-
-  Scenario: Successful vehicle booking with valid dates
-    When the renter clicks the Rent Vehicle button
-    And the renter selects valid available start and end dates
-    And the renter clicks the Confirm Booking button
-    Then the system confirms the booking and redirects to My Bookings
-```
-
-- **Step Definitions en Java (`RentVehicleStepdefs.java`):**
-```java
-package testingweb.stepdefinitions;
-
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.junit.jupiter.api.Assertions;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import testingweb.selenium.MyWebDriver;
-
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.time.Duration;
-import java.time.LocalDate;
-
-public class RentVehicleStepdefs {
-    private final WebDriver webDriver = MyWebDriver.getWebDriver();
-    private final WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(20));
-
-    private String registerFreshRenter() throws Exception {
-        String apiBase = MyWebDriver.BASE_URL.contains("localhost")
-                ? "http://localhost:8080/api/v1"
-                : "https://renticar-backend.onrender.com/api/v1";
-        String uniqueEmail = "renter.booking." + System.currentTimeMillis() + "@test.pe";
-        String payload = String.format(
-                "{\"name\":\"Carlos Tester\",\"email\":\"%s\",\"password\":\"Test123456\",\"role\":\"arrendatario\"}",
-                uniqueEmail
-        );
-        HttpClient client = HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(apiBase + "/authentication/sign-up"))
-                .header("Content-Type", "application/json")
-                .POST(HttpRequest.BodyPublishers.ofString(payload))
-                .build();
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        Assertions.assertTrue(response.statusCode() == 201 || response.statusCode() == 200,
-                "Failed to register test renter: " + response.statusCode());
-        return uniqueEmail;
-    }
-
-    @Given("the renter signs in and views the details of vehicle {string}")
-    public void signInAndOpenVehicleDetails(String vehicleId) throws Exception {
-        String renterEmail = registerFreshRenter();
-
-        webDriver.get(MyWebDriver.BASE_URL + "/login");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email"))).sendKeys(renterEmail);
-        webDriver.findElement(By.id("password")).sendKeys("Test123456");
-        webDriver.findElement(By.cssSelector("button.auth-button[type='submit']")).click();
-        wait.until(ExpectedConditions.urlContains("/dashboard"));
-
-        webDriver.get(MyWebDriver.BASE_URL + "/vehicles/" + vehicleId);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.detail-container")));
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.action-button.primary")));
-    }
-
-    @When("the renter clicks the Rent Vehicle button")
-    public void clickRentButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.action-button.primary"))).click();
-        wait.until(ExpectedConditions.urlContains("/booking/"));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("startDate")));
-    }
-
-    @And("the renter selects valid available start and end dates")
-    public void selectValidStartAndEndDates() {
-        long dayOffset = ((System.currentTimeMillis() / 1000) % 700) * 4;
-        LocalDate start = LocalDate.of(2027, 1, 1).plusDays(dayOffset);
-        LocalDate end = start.plusDays(3);
-
-        WebElement startInput = webDriver.findElement(By.id("startDate"));
-        WebElement endInput = webDriver.findElement(By.id("endDate"));
-        JavascriptExecutor js = (JavascriptExecutor) webDriver;
-        js.executeScript(
-                "const el = arguments[0]; el.value = arguments[1]; el.dispatchEvent(new Event('input')); el.dispatchEvent(new Event('change'));",
-                startInput, start.toString()
-        );
-        js.executeScript(
-                "const el = arguments[0]; el.value = arguments[1]; el.dispatchEvent(new Event('input')); el.dispatchEvent(new Event('change'));",
-                endInput, end.toString()
-        );
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.total-price")));
-    }
-
-    @And("the renter clicks the Confirm Booking button")
-    public void clickConfirmBookingButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.action-button.primary[type='submit']"))).click();
-    }
-
-    @Then("the system confirms the booking and redirects to My Bookings")
-    public void verifyBookingConfirmation() {
-        Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-        Assertions.assertNotNull(alert.getText());
-        alert.accept();
-        wait.until(ExpectedConditions.urlContains("/my-bookings"));
-        Assertions.assertTrue(wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.booking-card"))).isDisplayed());
-    }
-}
-```
-
 - **Evidencias de Ejecución:**
   - *Resultado de la prueba en el Front:*
   ![Resultado de RentVehicle en RentiCar Frontend](assets/chapter06/selenium-rent-vehicle-frontend.png)
 
   - *Feature en formato Gherkin (`rent_vehicle.feature`):*
   ![Feature RentVehicle en formato Gherkin](assets/chapter06/selenium-rent-vehicle-feature.png)
-
-  - *Step Definitions (`RentVehicleStepdefs.java`):*
-  ![Step Definitions RentVehicle en Java](assets/chapter06/selenium-rent-vehicle-stepdefs.png)
 
   - *Ejecución de escenarios en IntelliJ IDEA (`RunCucumberTestRentVehicle`):*
   ![Ejecución de RunCucumberTestRentVehicle en IntelliJ IDEA](assets/chapter06/selenium-rent-vehicle-runner.jpg)
@@ -4487,74 +4124,12 @@ public class RentVehicleStepdefs {
 
 #### 5. Flujo de Monitoreo de Telemetría IoT (IoTTelemetry)
 
-Valida que el usuario autenticado pueda consultar la telemetría del vehículo en el panel de rastreo, visualizando el mapa Leaflet con su marcador y el panel de estado.
-
-- **Feature en formato Gherkin (`iot_telemetry.feature`):**
-```gherkin
-Feature: IoT Vehicle Telemetry Monitoring
-  Background:
-    Given the authenticated user opens the IoT tracking panel for vehicle "1"
-
-  Scenario: Real-time GPS location and telemetry monitoring
-    When the Leaflet map and telemetry sensors finish loading
-    Then the vehicle marker is displayed on the map along with the status panel
-```
-
-- **Step Definitions en Java (`IoTTelemetryStepdefs.java`):**
-```java
-package testingweb.stepdefinitions;
-
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.junit.jupiter.api.Assertions;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import testingweb.selenium.MyWebDriver;
-
-import java.time.Duration;
-
-public class IoTTelemetryStepdefs {
-    private final WebDriver webDriver = MyWebDriver.getWebDriver();
-    private final WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(20));
-
-    @Given("the authenticated user opens the IoT tracking panel for vehicle {string}")
-    public void openIoTTrackingPanel(String vehicleId) {
-        webDriver.get(MyWebDriver.BASE_URL + "/login");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("email"))).sendKeys("estefano.solis@codexa.pe");
-        webDriver.findElement(By.id("password")).sendKeys("admin123");
-        webDriver.findElement(By.cssSelector("button.auth-button[type='submit']")).click();
-        wait.until(ExpectedConditions.urlContains("/my-vehicles"));
-
-        webDriver.get(MyWebDriver.BASE_URL + "/tracking/" + vehicleId);
-    }
-
-    @When("the Leaflet map and telemetry sensors finish loading")
-    public void waitForMapAndTelemetry() {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#map.leaflet-container")));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.status-panel")));
-    }
-
-    @Then("the vehicle marker is displayed on the map along with the status panel")
-    public void verifyMarkerAndStatusPanel() {
-        Assertions.assertTrue(webDriver.findElement(By.cssSelector("#map.leaflet-container")).isDisplayed());
-        Assertions.assertTrue(wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".leaflet-marker-icon"))).isDisplayed());
-        Assertions.assertTrue(wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".status-panel .status-badge"))).isDisplayed());
-    }
-}
-```
-
 - **Evidencias de Ejecución:**
   - *Resultado de la prueba en el Front:*
   ![Resultado de IoTTelemetry en RentiCar Frontend](assets/chapter06/selenium-telemetry-frontend.png)
 
   - *Feature en formato Gherkin (`iot_telemetry.feature`):*
   ![Feature IoTTelemetry en formato Gherkin](assets/chapter06/selenium-telemetry-feature.png)
-
-  - *Step Definitions (`IoTTelemetryStepdefs.java`):*
-  ![Step Definitions IoTTelemetry en Java](assets/chapter06/selenium-telemetry-stepdefs.png)
 
   - *Ejecución de escenarios en IntelliJ IDEA (`RunCucumberTestIoTTelemetry`):*
   ![Ejecución de RunCucumberTestIoTTelemetry en IntelliJ IDEA](assets/chapter06/selenium-telemetry-runner.jpg)
@@ -4571,11 +4146,11 @@ El análisis estático es una fase obligatoria en nuestra pipeline de Integraci�
 
 #### 6.2.1.1. Coding standard & Code conventions
 
-Para el backend en Java (Spring Boot 3.x), el equipo adoptó la **Google Java Style Guide** como estándar oficial de codificación, automatizado y auditado mediante el plugin **CheckStyle** (`maven-checkstyle-plugin`) sobre la especificación oficial `google_checks.xml`.
+Para el backend en Java (Spring Boot 3.x), el equipo adoptó la **Google Java Style Guide** como estándar oficial de codificación, automatizado y auditado mediante el plugin **CheckStyle** (`maven-checkstyle-plugin`) sobre la configuración `config/checkstyle/google_checks.xml` (adaptada a indentación de 4 espacios, longitud máxima de 120 caracteres y severidad `error`).
 
 | Lenguaje / Framework | Estándar / Convención Adoptada | Herramienta de Aplicación | Entorno / IDE Utilizado |
 | :--- | :--- | :--- | :--- |
-| **Java 21 / Spring Boot 3.x** | **Google Java Style Guide** (`google_checks.xml`) | **CheckStyle** (Maven Plugin) | **IntelliJ IDEA**, **SonarLint** |
+| **Java 21 / Spring Boot 3.x** | **Google Java Style Guide** (`config/checkstyle/google_checks.xml`) | **CheckStyle** (Maven Plugin) | **IntelliJ IDEA**, **SonarLint** |
 | **TypeScript / Angular 20** | **Angular Style Guide** & ESLint | **ESLint / Prettier** | **VS Code**, **IntelliJ IDEA** |
 
 ##### Principios de Codificación Clave Aplicados:
@@ -4593,7 +4168,7 @@ Para el backend en Java (Spring Boot 3.x), el equipo adoptó la **Google Java St
 
 Se auditó el código fuente mediante el comando:
 ```bash
-mvn checkstyle:check
+.\mvnw.cmd checkstyle:check
 ```
 
 - **Booking Bounded Context:** Validación de formato en agregados (`Booking`), comandos (`CreateBookingCommand`) y value objects (`BookingStatus`), garantizando nombres no ambiguos y métodos de fábrica expresivos.
@@ -4604,13 +4179,10 @@ mvn checkstyle:check
 
 ##### Evidencia de Ejecución de Checkstyle:
 
-Para este apartado se evalúa el uso de Checkstyle en el backend aplicando las convenciones de `google_checks.xml` mediante el comando `.\mvnw.cmd checkstyle:check`:
+Para este apartado se evalúa el uso de Checkstyle en el backend aplicando las convenciones de `config/checkstyle/google_checks.xml` mediante el comando `.\mvnw.cmd checkstyle:check` (`maven-checkstyle-plugin` 3.6.0), alcanzando **0 violaciones (`BUILD SUCCESS`)**:
 
-- *Configuración del Plugin en `Backend/pom.xml` (`maven-checkstyle-plugin` 3.6.0):*
-![Configuración de Checkstyle en Backend pom.xml](assets/chapter06/checkstyle-pom-config.png)
-
-- *Resultado de Ejecución (`mvnw checkstyle:check`, `BUILD SUCCESS`):*
-![Ejecución real de Checkstyle en Backend](assets/chapter06/checkstyle-execution.png)
+- *Configuración en `Backend/pom.xml` y Ejecución en IntelliJ IDEA (`You have 0 Checkstyle violations`, `BUILD SUCCESS`):*
+![Configuración y ejecución limpia de Checkstyle en IntelliJ IDEA](assets/chapter06/checkstyle-execution.jpg)
 
 ### 6.2.2. Reviews
 
