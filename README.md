@@ -4848,20 +4848,12 @@ El pipeline de recolección de estadísticas del frontend se implementó integra
 #### Script de Tracking en el Header del Proyecto (`index.html`):
 
 ```html
-<!-- Google tag (gtag.js) - RentiCar Continuous Monitoring -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RENTICAR2026"></script>
+<!-- Google Tag Manager (GTM-5P5DVR9F) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5P5DVR9F"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
-  gtag('config', 'G-RENTICAR2026', {
-    send_page_view: true,
-    custom_map: {
-      'dimension1': 'user_role',
-      'dimension2': 'vehicle_id'
-    }
-  });
 </script>
 ```
 
