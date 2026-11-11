@@ -4604,9 +4604,13 @@ mvn checkstyle:check
 
 ##### Evidencia de Ejecución de Checkstyle:
 
-Para este apartado se evalúa el uso de Checkstyle en el backend aplicando las convenciones de `google_checks.xml` mediante el comando `mvn checkstyle:check`:
+Para este apartado se evalúa el uso de Checkstyle en el backend aplicando las convenciones de `google_checks.xml` mediante el comando `.\mvnw.cmd checkstyle:check`:
 
-- *Resultado de Checkstyle en IntelliJ IDEA:* `[PENDIENTE: Captura tomada por el autor tras ejecutar mvnw checkstyle:check]`
+- *Configuración del Plugin en `Backend/pom.xml` (`maven-checkstyle-plugin` 3.6.0):*
+![Configuración de Checkstyle en Backend pom.xml](assets/chapter06/checkstyle-pom-config.png)
+
+- *Resultado de Ejecución (`mvnw checkstyle:check`, `BUILD SUCCESS`):*
+![Ejecución real de Checkstyle en Backend](assets/chapter06/checkstyle-execution.png)
 
 ### 6.2.2. Reviews
 
