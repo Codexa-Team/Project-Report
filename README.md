@@ -5010,6 +5010,84 @@ El pipeline de notificaciones distribuye las alertas generadas por Alertmanager 
 
 ### 8.2.8. Web and Mobile Tracking Plan
 
+El Plan de Seguimiento Web y Móvil (Web and Mobile Tracking Plan) de **RentiCar** establece el marco metodológico y la instrumentación técnica necesaria para capturar, almacenar y procesar analíticamente las interacciones de los usuarios durante la ejecución de los experimentos de **A/B Testing**. Su propósito fundamental es contrastar de manera empírica y con rigor estadístico las hipótesis del negocio formuladas en la sección 8.2.1, aislando el impacto causal de las variantes introducidas.
+
+---
+
+#### 1. Hipótesis de Negocio Objeto de Seguimiento
+
+El plan instrumenta el seguimiento de dos hipótesis centrales para la sostenibilidad y escalabilidad del modelo de negocio de RentiCar:
+
+| ID Hipótesis | Enunciado Técnico de la Hipótesis | Métrica Primaria (KPI) | Métricas Secundarias / Guardarraíl |
+| :--- | :--- | :--- | :--- |
+| **H1: Confianza del Arrendatario** | La inclusión de una insignia visual de "Arrendador Verificado" y reseñas destacadas en la ficha del vehículo (Variante B) incrementará la Tasa de Conversión a Reserva frente al diseño base sin verificación (Control A). | **Tasa de Conversión a Reserva (CCR):** $\frac{\text{Reservas Confirmadas}}{\text{Vistas de Ficha Vehicular}}$ | • Tasa de rebote en la vista de detalle vehicular.<br>• Tiempo promedio de permanencia en la ficha.<br>• Clics en el botón de reserva iniciada. |
+| **H2: Retención del Arrendador** | La provisión de un widget de telemetría IoT con monitoreo satelital en tiempo real de velocidad y combustible (Variante B) reducirá la tasa de abandono de propietarios frente al panel básico (Control A). | **Tasa de Abandono (Owner Churn Rate):** $\frac{\text{Propietarios que despublican flota}}{\text{Total de propietarios activos}}$ | • Tasa de Adopción de Funcionalidad (FAR) de telemetría.<br>• Frecuencia semanal de consulta del panel IoT.<br>• Tasa de aceptación de solicitudes de alquiler. |
+
+---
+
+#### 2. Protocolo de Asignación y Persistencia de Grupos
+
+Para garantizar la validez interna del experimento A/B y evitar el sesgo de migración entre versiones, se diseñó un protocolo de asignación balanceada (50% Grupo Control vs. 50% Grupo Experimental):
+
+1. **Asignación Determinista:**
+   Al autenticarse el usuario en la plataforma, el backend calcula el hash numérico del `userId` aplicando el algoritmo modular:
+   $$\text{bucket} = \text{hash}(\text{userId}) \pmod{100}$$
+   - Si $\text{bucket} < 50 \rightarrow$ Asignado al **Grupo Control (Variante A)**.
+   - Si $\text{bucket} \ge 50 \rightarrow$ Asignado al **Grupo Experimental (Variante B)**.
+2. **Persistencia de Estado:**
+   La asignación se almacena en la tabla de sesión del usuario en base de datos y se inyecta en el payload del token JWT como claim `experiment_variants: { "H1": "B", "H2": "B" }`. De este modo, el usuario experimenta consistentemente la misma versión sin importar el navegador o dispositivo utilizado.
+3. **Propagación Telemétrica:**
+   Todos los eventos analíticos disparados desde la aplicación web o móvil incorporan obligatoriamente las dimensiones personalizadas `experiment_id` y `variant_group`.
+
+---
+
+#### 3. Matriz y Taxonomía de Eventos de Tracking
+
+A continuación se detalla la especificación de eventos instrumentados en el cliente web (Angular) y móvil mediante el SDK de analítica:
+
+| Event Name | Trigger / Momento de Disparo | Propiedades del Evento (Payload JSON) | Hipótesis Vinculada |
+| :--- | :--- | :--- | :---: |
+| `catalog_page_view` | Carga inicial del catálogo de vehículos disponibles. | `user_id`, `role`, `city`, `total_vehicles_rendered` | General |
+| `vehicle_card_clicked` | Clic del usuario en una tarjeta de vehículo del catálogo. | `vehicle_id`, `brand`, `model`, `daily_price`, `has_badge` | H1 |
+| `vehicle_detail_viewed` | Despliegue completo de la ficha técnica del vehículo. | `vehicle_id`, `owner_id`, `variant_group` (`A` o `B`), `badge_shown` (`true`/`false`) | H1 |
+| `booking_flow_initiated` | Clic en el botón "Reserva tu vehículo ahora". | `vehicle_id`, `renter_id`, `variant_group`, `daily_price` | H1 |
+| `booking_dates_selected` | Selección de fecha de inicio y fin en el calendario. | `vehicle_id`, `start_date`, `end_date`, `total_days`, `calculated_total` | H1 |
+| `booking_completed` | Confirmación satisfactoria del contrato de alquiler. | `booking_id`, `vehicle_id`, `renter_id`, `variant_group`, `total_amount`, `currency: 'PEN'` | **H1 (Primaria)** |
+| `owner_dashboard_viewed` | Carga del panel principal del propietario (arrendador). | `owner_id`, `active_vehicles_count`, `variant_group` (`A` o `B`) | H2 |
+| `iot_widget_rendered` | Despliegue visual del mapa Leaflet y tarjeta de telemetría IoT. | `owner_id`, `vehicle_id`, `has_iot_sensor`, `variant_group` | H2 |
+| `iot_metrics_interacted` | Clic en métricas de velocidad, nivel de combustible o historial GPS. | `owner_id`, `vehicle_id`, `metric_type` (`speed`, `fuel`, `gps_route`), `timestamp` | H2 |
+| `listing_pause_attempt` | Clic en la opción de desactivar o retirar un vehículo de la plataforma. | `owner_id`, `vehicle_id`, `reason_selected`, `days_active`, `variant_group` | **H2 (Primaria)** |
+
+---
+
+#### 4. Fases de Ejecución del Experimento
+
+El plan de seguimiento se ejecuta a lo largo de un ciclo controlado de 28 días calendario:
+
+```
+[Día 1 a 7]       --> Fase 1: Instrumentación, validación de eventos y recolección de Línea Base.
+[Día 8 a 21]      --> Fase 2: Lanzamiento del A/B Test balanceado y monitoreo de dispersión.
+[Día 22 a 28]     --> Fase 3: Evaluación de significancia estadística (p-value < 0.05, intervalo al 95%).
+[Post Día 28]     --> Decisión: Rollout al 100% de la variante ganadora o replanteamiento de hipótesis.
+```
+
+1. **Fase 1: Calibración y Línea Base (Días 1-7):**
+   Verificación en staging del correcto despacho de eventos hacia Google Analytics 4 y la base de datos de auditoría. Se registra la tasa de conversión histórica como valor de referencia previo al despliegue.
+2. **Fase 2: Ejecución del A/B Testing (Días 8-21):**
+   Activación de las Variantes B en producción para el 50% de la muestra. Se monitoriza diariamente la tasa de error y la adherencia al flujo de reservas.
+3. **Fase 3: Análisis de Causalidad y Significancia Estadística (Días 22-28):**
+   Aplicación de la prueba estadística Z para dos proporciones independientes y análisis de significancia (nivel de confianza del 95%, $\alpha = 0.05$). Se valida que el incremento en la conversión del grupo experimental B no sea atribuible al azar.
+4. **Fase 4: Decisión de Negocio y Despliegue Permanente:**
+   Si la variante B valida la hipótesis con significancia estadística, se consolida como el diseño definitivo en la rama principal (`main`) para el 100% de los usuarios.
+
+---
+
+#### 5. Privacidad y Gobernanza de Datos (Data Governance)
+
+En estricto cumplimiento con la normativa de protección de datos personales y buenas prácticas de ingeniería de software:
+- **Anonimización Estricta:** Ningún evento de tracking transmite datos sensibles de usuarios (nombres completos, contraseñas, documentos de identidad o números de tarjetas bancarias). Los usuarios son identificados exclusivamente mediante tokens y claves subrogadas (`userId` sintético).
+- **Control de Consentimiento (Cookie Consent):** Los scripts de seguimiento analítico se ejecutan únicamente tras la aceptación explícita de cookies analíticas por parte del usuario en el banner de consentimiento de la plataforma.
+
 ## 8.3. Experimentation 
 
 ### 8.3.1. To-Be User Stories
