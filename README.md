@@ -4280,6 +4280,8 @@ Basados en las preguntas establecidas y ordenadas por orden de importancia, dise
 
 ## 8.2. Experiment Design
 
+Esta fase consiste en detallar el diseño técnico de los experimentos que surgen de las Experiment-Ready Questions de la sección anterior. Se busca así construir un marco metodológico sólido que permita confirmar o descartar las hipótesis críticas del negocio con significancia estadística.
+
 ### 8.2.1. Hypotheses
 
 ### 8.2.2. Domain Business Metrics 
