@@ -4258,12 +4258,10 @@ export class AnalyticsService {
 #### Evidencias de Monitoreo:
 
 - *Inserción del Script en el Header del Código Fuente:*
-  *(Captura del archivo `index.html` en el IDE mostrando el tag de Google Analytics).*
-  `![Google Analytics Header Script](assets/chapter07/monitoring-header-script.png)`
+![Google Analytics Header Script](assets/chapter07/monitoring-header-script.png)
 
 - *Panel en Tiempo Real de Google Analytics 4:*
-  *(Captura del panel de GA4 evidenciando usuarios concurrentes, eventos registrados y páginas activas).*
-  `![Google Analytics Real-Time Dashboard](assets/chapter07/monitoring-ga4-dashboard.png)`
+![Google Analytics Real-Time Dashboard](assets/chapter07/monitoring-ga4-dashboard.png)
 
 ---
 
