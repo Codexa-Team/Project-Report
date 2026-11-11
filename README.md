@@ -4108,6 +4108,96 @@ Aqui se ubican los archivos .feature que sirven para el funcionamiento de las pr
 
 ### 6.3.2. Registro de Entrevistas
 
+*Entrevista a arrendador de vehiculos*
+---
+<br>
+
+<table align="center">
+  <tr>
+    <th colspan="2" style="text-align:center">Entrevista 1</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Fabian Ortiz</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>22 años</td>
+  </tr>
+  <tr>
+    <td><strong>Distrito</strong></td>
+    <td>San Miguel</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>0:00-6:16</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+      
+  <a href="https://youtu.be/0rgB42iOyd0" target="_blank">https://youtu.be/0rgB42iOyd0</a>
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+      Resumen: <br>
+      El entrevistado destacó que el proceso de registro y la validación de identidad generan un entorno seguro y de confianza. En términos de usabilidad, resaltó la fluidez de la navegación móvil, la eficacia de los filtros de búsqueda y el diseño limpio de la interfaz, elementos que transmiten profesionalismo al momento de gestionar métodos de pago. Además, valoró positivamente la autonomía para monitorear o extender reservas directamente desde la aplicación y el sistema de calificaciones mutuas que fortalece a la comunidad. Finalmente, como oportunidades de mejora para optimizar la herramienta, sugirió implementar una función de favoritos, permitir la comparación de vehículos y visualizar las tarifas diarias directamente en los pines del mapa interactivo.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:center"><br>
+      <img src="assets/interviews/Entrevista EXP seg1 .png" alt="Segmento 1 entrevista 1 - Fabian Ortiz" width="1000"><br>
+    </td>
+  </tr>
+</table>
+
+*Entrevista a arrendatario de vehiculo*
+---
+<br>
+
+<table align="center">
+  <tr>
+    <th colspan="2" style="text-align:center">Entrevista 1</th>
+  </tr>
+  <tr>
+    <td><strong>Entrevistado</strong></td>
+    <td>Marcelo Candia</td>
+  </tr>
+  <tr>
+    <td><strong>Edad</strong></td>
+    <td>25 años</td>
+  </tr>
+  <tr>
+    <td><strong>Distrito</strong></td>
+    <td>Pueblo Libre</td>
+  </tr>
+  <tr>
+    <td><strong>Timing</strong></td>
+    <td>0:00-6:58</td>
+  </tr>
+  <tr>
+    <td><strong>URL</strong></td>
+    <td>
+      
+  <a href="https://youtu.be/_PdoxDvojJM" target="_blank">https://youtu.be/_PdoxDvojJM</a>
+
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:justify">
+      Resumen: <br>
+      Marcelo Candia, un arrendador de 25 años e ingeniero de sistemas, validó la plataforma "RentiCar" destacando la fluidez de su interfaz y el registro en pasos cortos para publicar vehículos, así como la utilidad del calendario gráfico para organizar sus reservas. En términos de seguridad y confianza, resaltó la tranquilidad que le brinda la geolocalización en tiempo real, la validación de identidad de los conductores, las reseñas previas y la necesidad del sistema de calificación al arrendatario para constatar las condiciones de devolución, además de valorar el chat interno para coordinar las entregas. Como oportunidades de mejora, sugirió habilitar la carga múltiple de fotos, incorporar un botón rápido para pausar temporalmente la publicación de un auto por mantenimiento y añadir un panel que muestre los ingresos mensuales acumulados de un solo vistazo.
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align:center"><br>
+      <img src="assets/interviews/Entrevista EXP seg2.png" alt="Segmento 2 entrevista 2 - Marcelo Candia" width="1000"><br>
+    </td>
+  </tr>
+</table>
+
 ### 6.3.3. Evaluaciones según heurísticas. 
 
 ## 6.4. Auditoría de Experiencias de Usuario 
