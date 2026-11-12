@@ -83,6 +83,9 @@ U202313403 - Via Luna, Bruce
 
 **AV2:**
 
+<img src="assets/av2/cap_1.png" alt="Commits AV1" width="500">
+<img src="assets/av2/cap_2.png" alt="Commits AV1" width="500">
+
 ## Contenido
 
 - [Student Outcome](#student-outcome)
