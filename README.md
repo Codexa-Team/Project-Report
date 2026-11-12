@@ -4077,8 +4077,8 @@ Como se muestra en la imagen dockerizamos tanto el backend que sera nuestro codi
 Como se muestra en la imagen el SonarQube analiza el codigo del backend y nos muestra errores encontrados, como es el caso de 3 bugs y 1 Security Hostpost.
 ##### Segunda ejecuciòn en SonarQube
 <img src="assets/features/sonar2.png" alt="sonar2"/><br> 
-Como se muestra en la imagen el SonarQube analiza el codigo del backend despues de haber coreegido los errores previamente mostrados, SonarQube analizo el check Style y cumplio con
-cubrir el minimo requerido. Ademas ya no se muestran los errores previamente encontrados, lo cual nos confirma que si cumple con todos los estandares de calidad altamente requeridos.
+Como se muestra en la imagen el SonarQube analiza el codigo del backend despues de haber corregido los errores previamente mostrados, SonarQube analizo el check Style y cumplio con
+cubrir el minimo requerido del còdigo. Ademas ya no se muestran los errores previamente encontrados, lo cual nos confirma que si cumple con todos los estandares de calidad altamente requeridos.
 
 ### 6.2.2. Reviews
 
