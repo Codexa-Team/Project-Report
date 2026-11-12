@@ -4865,6 +4865,17 @@ Priorizando las preguntas según su impacto en el modelo de negocio, se establec
 | **Media** | *Q2* | ¿Qué valor relativo otorgan los propietarios a las funcionalidades de monitoreo IoT frente a una reducción en la comisión por servicio? |
 | **Baja** | *Q3* | ¿Estarán los propietarios dispuestos a mantener sus vehículos publicados en la plataforma tras la primera experiencia de alquiler si se les ofrece un seguro de daños? |
 
+Para priorizar las preguntas de experimentación, se utilizó un enfoque de scoring basado en cuatro criterios: Confianza (C), Riesgo (R), Impacto (I) e Interés (IN). Cada criterio se evaluó en una escala del 1 al 5, donde 5 representa el valor más alto. El puntaje total se calculó como la suma de los cuatro criterios, y la prioridad se asignó en orden descendente. Adicionalmente, se definió un criterio de desempate en caso de puntajes iguales.
+
+Tabla de Priorización del Backlog de Preguntas
+
+| ID | Pregunta Corta | Confianza (C) | Riesgo (R) | Impacto (I) | Interés (IN) | Total (S_total) | Prioridad | Criterio de Orden / Desempate |
+| -- | -------------- | ------------- | ---------- | ----------- | ------------ | --------------- | --------- | ----------------- |
+| Q1 | ¿Aumentará la tasa de conversión de reservas la implementación de un sistema de reseñas verificadas y perfiles de usuario detallados? | 3 | 5 | 5 | 5 | 18 | 1 | Mayor puntaje total absoluto. |
+| Q4 | ¿Incrementará la implementación de filtros de búsqueda (marca, precio, fechas) la tasa de solicitudes de reserva en comparación con una búsqueda simple por lista? | 3 | 4 | 5 | 5 | 17 | 2 | Empate a 17. Mayor R = 4. |
+| Q2 | ¿Qué valor relativo otorgan los propietarios a las funcionalidades de monitoreo IoT frente a una reducción en la comisión por servicio? | 2 | 5 | 5 | 4 | 16 | 3 | Empate a 16. Mayor R = 5. |
+| Q3 | ¿Estarán los propietarios dispuestos a mantener sus vehículos publicados en la plataforma tras la primera experiencia de alquiler si se les ofrece un seguro de daños? | 3 | 4 | 4 | 4 | 15 | 4 | Empate a 15. Mayor R = 4. |
+
 ### 8.1.5. Experiment Cards
 
 Basados en las preguntas establecidas y ordenadas por orden de importancia, diseñamos los siguientes experimentos:
