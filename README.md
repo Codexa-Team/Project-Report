@@ -4167,12 +4167,47 @@ En la siguiente captura se observa la configuración de `maven-checkstyle-plugin
 ![Configuración y ejecución limpia de Checkstyle en IntelliJ IDEA](assets/chapter06/checkstyle-execution.jpg)
 
 #### 6.2.1.2. Code Quality & Code Security
+Para asegurar la mantenibilidad, seguridad y calidad del código en el proyecto, se integró SonarQube. El proceso se estructuró en dos fases principales: primero, 
+la contenedorización de los servicios mediante Docker, y posteriormente la ejecución del análisis de calidad para validar métricas de código limpio, vulnerabilidades y cobertura.
+<img src="assets/features/docker.png" alt="docker"/><br> 
+Como se muestra en la imagen dockerizamos tanto el backend que sera nuestro codigo a analizar y el SonarQube, para garantizar que funcione exactamente igual en tu máquina de desarrollo local, en un servidor de pruebas o en un pipeline de CI/CD en la nube.
+
+##### Primera ejecuciòn en SonarQube
+<img src="assets/features/sonar1.png" alt="sonar1"/><br> 
+Como se muestra en la imagen el SonarQube analiza el codigo del backend y nos muestra errores encontrados, como es el caso de 3 bugs y 1 Security Hostpost.
+##### Segunda ejecuciòn en SonarQube
+<img src="assets/features/sonar2.png" alt="sonar2"/><br> 
+Como se muestra en la imagen el SonarQube analiza el codigo del backend despues de haber corregido los errores previamente mostrados, SonarQube analizo el check Style y cumplio con
+cubrir el minimo requerido del còdigo. Ademas ya no se muestran los errores previamente encontrados, lo cual nos confirma que si cumple con todos los estandares de calidad altamente requeridos.
 
 
 
 ### 6.2.2. Reviews
 
+Las revisiones de código de Codexa-Team se realizan en GitHub sobre el flujo GitFlow definido en la sección 5.1.2, validando los cambios de las ramas `feat/*` y `fix/*` antes de integrarlos en `develop` y `main`. Para garantizar que ninguna integración degrade la calidad del software, el equipo combina **revisiones manuales entre pares** con **verificación estática automatizada** mediante **CheckStyle** y **SonarQube**.
 
+#### Tipos de Revisiones y Herramientas
+
+| Tipo de Revisión | Descripción y Propósito | Herramientas Utilizadas |
+| :--- | :--- | :--- |
+| **Verificación Estática Local (Estilo)** | Validación de reglas de estilo Google Java Checks mediante Maven (`.\mvnw.cmd checkstyle:check`) previa al commit o apertura del Pull Request. | CheckStyle (`maven-checkstyle-plugin:3.6.0`), IntelliJ IDEA |
+| **Inspección de Calidad y Seguridad** | Análisis estático profundo ejecutado en contenedores Docker para detectar *bugs*, *code smells*, vulnerabilidades, *Security Hotspots* y validar cobertura de pruebas antes del merge. | SonarQube Community Build (Docker), `sonar-maven-plugin`, JaCoCo |
+| **Revisión Manual entre Pares (Peer Review)** | Un integrante revisa el *diff* en GitHub durante la integración entre ramas (`feat/* -> develop -> main`), verificando legibilidad, lenguaje ubicuo del dominio y separación DDD/CQRS. | GitHub (Pull Requests / Commits) |
+
+#### Criterios de Aceptación para Integrar Cambios
+Para que un *Pull Request* sea aprobado y fusionado hacia `develop` o `main`, debe cumplir obligatoriamente con las siguientes condiciones:
+
+- **Estilo sin violaciones en Backend (CheckStyle):** El comando `.\mvnw.cmd checkstyle:check` debe finalizar en `BUILD SUCCESS` con 0 errores bajo `config/checkstyle/google_checks.xml` (sin importaciones con comodín `*`, indentación de 4 espacios y longitud máxima de 120 caracteres).
+- **Quality Gate Aprobado en SonarQube:** El escaneo estático (`.\mvnw.cmd sonar:sonar`) debe reportar estado **Passed**, con **0 Bugs**, **0 Vulnerabilidades**, **0 Security Hotspots** sin revisar y cumpliendo el umbral mínimo de cobertura de código generado por JaCoCo.
+- **Compilación y pruebas en verde:** El código integrado no debe romper la compilación en Maven (Backend) o Angular (Front-End) ni las pruebas unitarias/integración asociadas al cambio.
+- **Frecuencia:** La revisión se ejecuta de forma incremental al concluir cada historia de usuario o tarea técnica antes de realizar el *merge*.
+
+#### Flujo de Revisión Aplicado (Caso de Corrección e Integración)
+Durante el ciclo de desarrollo, este proceso permitió detectar y corregir incidencias antes de consolidar los cambios en la rama principal:
+
+1. **Detección en revisión previa al merge:** Al analizar una rama de funcionalidad, CheckStyle validó el formato del código, mientras que SonarQube identificó **3 bugs** y **1 Security Hotspot** en el backend.
+2. **Subsanación y re-validación:** El autor corrigió las observaciones en su rama de trabajo y volvió a ejecutar el análisis estático, logrando **0 violaciones de CheckStyle** y el estado **Passed en SonarQube**.
+3. **Aprobación en GitHub:** Con las métricas limpias verificadas, el revisor aprobó e integró el Pull Request hacia `develop`.
 
 ## 6.3. Validation Interviews 
 
