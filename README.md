@@ -273,6 +273,8 @@ software.</td>
             AV1: Documenté en el informe la gestión y seguridad de cuentas en RentiCar (diferenciación de roles entre arrendador y arrendatario, autenticación y contraseñas protegidas), redacté el Acuerdo de Servicio SaaS sobre la privacidad y uso responsable de la información de los usuarios, y aseguré el citado correcto de las herramientas, imágenes y recursos externos documentados.
             <br>
             TB1: Desarrollé e implementé pruebas unitarias (unit tests) para los servicios y componentes clave del backend, garantizando la fiabilidad de la lógica de negocio y estándares de calidad de software. Asimismo, apoyé en la verificación del pipeline de Integración Continua (CI) para asegurar ejecuciones automáticas correctas, y colaboré en la estructuración, redacción y consolidación técnica del informe del proyecto.
+            <br>
+            AV2: Configuré Checkstyle en el backend y corregí el código Java hasta dejarlo sin violaciones ni fallos en las pruebas, además de corregir hallazgos previos en SonarQube y ordenar en inglés la suite E2E con Selenium y Cucumber. También integré Google Analytics 4 en el frontend y audité el informe para usar solo capturas reales, quitar métricas sin respaldo y aclarar lo pendiente.
             </br>
             <br></br>
             Bruce Via:
@@ -322,6 +324,8 @@ ambientales y sociales.
             AV1: Analicé y documenté en el informe el impacto de RentiCar: en lo económico (permitir ingresos a propietarios con autos poco usados y precios justos a arrendatarios), en lo social (fomentar la confianza mutua con calificaciones y reseñas para evitar tratos informales en redes sociales), en lo ambiental (promover la movilidad compartida aprovechando autos ya existentes) y en lo global (plantear un modelo digital escalable a otras ciudades).
             <br>
             TB1: Evalué el impacto de la implementación de pruebas unitarias y el soporte en el pipeline de CI: en lo económico, reduciendo costos de mantenimiento mediante la detección temprana de incidencias; en lo social, garantizando una solución robusta y confiable para los usuarios; en lo ambiental, optimizando los recursos computacionales durante la integración; y en lo global, adhiriéndose a estándares de la industria del software. Además, documenté y sustenté estas consideraciones dentro del informe del proyecto.
+            <br>
+            AV2: Evalué el impacto de la verificación estática, las pruebas E2E y el monitoreo en esta entrega: en lo económico, automatizar el estilo y los flujos críticos reduce el trabajo y errores tardíos; en lo social, probar reservas, vehículos y telemetría entrega una aplicación más clara y confiable; en lo ambiental, usar analítica ligera sin desplegar servidores extra evita consumo innecesario; y en lo global, adoptar Google Java Style, Cucumber y GA4 facilita el mantenimiento del sistema.
             </br>
             <br></br>
             Bruce Via:
