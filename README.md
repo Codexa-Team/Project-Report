@@ -81,6 +81,8 @@ U202313403 - Via Luna, Bruce
 
 <img src="assets/Commits/commits_tb1(3).png" alt="Commits AV1" width="500">
 
+**AV2:**
+
 ## Contenido
 
 - [Student Outcome](#student-outcome)
@@ -277,6 +279,8 @@ software.</td>
             <br>
             AV1: Analice e identifique los usuarios objetivos para proporcionarles una solucion basada en la ingenieria de software, redacte y registre entrevistas con ellos para identificar sus necesidades.</br>
             TB1: Realice en colaboracion con mis compañeros las diferentes pruebas unitarias y de integracion, ademas de la declaracion de pruebas del tipo .feature y organice y designe las actividades de mi compañeros
+            <br>
+            AV2: Analice e identifique los procesos, herramientas y necesidades para los desarrollos continuo y la entrega continua del proyecto junto con sus funciones.
             </br>
              <br></br>
             Sheyla Rojas:
@@ -284,6 +288,8 @@ software.</td>
             AV1: Durante el desarrollo del proyecto, participé en la realización de la entrevista y en el análisis de la información obtenida, considerando las necesidades y características de los usuarios. Por otro lado, apoyé  en el diseño de la versión móvil de la aplicación, procurando que la información presentada fuera clara, accesible y adecuada para los usuarios.
             </br>
             TB1: Realice el Mobile Applications UX/UI Design, mobile Applications Prototyping, donde aseguramos los estandares de accesibilidad y la inclusion de usuarios. Asimismo definimos la arquitectura, los componentes y la especificación del pipeline de Integración Continua (CI), el cual demostraron la responsabilidad profesional necesaria para la correcta ejecución y el alcance de las exigencias de los estandares de calidad
+            <br>
+            AV2: Asegure la responsabilidad profesional y el compromiso con los estándares de calidad mediante la dockerización del entorno y la implementación de SonarQube para el análisis estático, la seguridad y la mantenibilidad del código fuente. Asimismo, se aportaron criterios técnicos y puntos clave en las fases de preview, demostrando las buenas prácticas de desarrollo y la responsabilidad necesaria para garantizar la correcta ejecución del proyecto.
             </br>
             <br></br>
             Cesar Linares:
@@ -321,13 +327,16 @@ ambientales y sociales.
             Bruce Via:
             <br>
             AV1: Realice las entrevistas identificando necesidades y situaciones para el planteamiento de una solucion tomando en cuenta aspectos globales y economicos de ambos espectros.</br>
-            TB1: Evalue las capacidades del backend para definir las diferentes pruebas basadas en sus funcionalidades, utilidad y aporte al proyecto dentro de su desarrollo como desarrollador DevOps
+            TB1: Evalue las capacidades del backend para definir las diferentes pruebas basadas en sus funcionalidades, utilidad y aporte al proyecto dentro de su desarrollo como desarrollador DevOps<br>
+            AV2: Identifique y documente la arquitectura tecnica de los diferentes procesos ademas de comunicar con otros grupos sobre la auditoria dada a nuestros proyectos de forma mutua
             </br>
             <br></br>
             Sheyla Rojas:
             <br>
             AV1: Durante las entrevistas, identifiqué que la falta de una aplicación centralizada para reservar y publicar vehículos genera pérdida de tiempo y mayores costos para los usuarios. Para mitigar este impacto social y económico, adapté el diseño web a dispositivos móviles (iOS y Android). Basándome en la información recopilada, diseñé una interfaz sencilla y accesible que facilita el acceso al servicio, garantizando una experiencia eficiente que resuelve las necesidades detectadas.</br>
-            TB1: Analize y diseñe una interfaz movil que cumpla con toda la infraestructura necesaria para que tenga un impacto socioeconomico positivo en los usuarios al momento de rentar o alquilar un carro. Por otro lado la definición  de la arquitectura del pipeline de CI demostró la eficiencia tècnica del proyecto
+            TB1: Analize y diseñe una interfaz movil que cumpla con toda la infraestructura necesaria para que tenga un impacto socioeconomico positivo en los usuarios al momento de rentar o alquilar un carro. Por otro lado la definición  de la arquitectura del pipeline de CI demostró la eficiencia tecnica del proyecto
+            <br>
+            AV2: Participe en el análisis y soporte de la interfaz de Renticar para que el usuario pueda tener una experiencia de alta calidad y le genere un impacto economicamente y socialmente positiva. La incorporación de prácticas de containerización con Docker y la validación continua de la calidad técnica mediante SonarQube, complementadas con revisiones y aportes en preview, evidenciaron la escalabilidad y la robustez de la solución frente a requerimientos de alto estándar.
             </br>
             <br></br>
             Cesar Linares:
@@ -4481,11 +4490,46 @@ En el marco de la colaboración inter-equipos de la carrera, el equipo de **Code
 
 #### 6.4.1.1. Información del grupo auditado
 
+A continuación se documenta la revisión interna de la aplicación web de ElectroLink.
+
+| Campo | Detalle informativo |
+| :--- | :--- |
+| *Grupo evaluador* | G2 ElectroLink (autoauditoría). |
+| *Producto evaluado* | ElectroLink Web, aplicación Angular ejecutada localmente en http://127.0.0.1:4200/. |
+| *Grupo auditado* | G2 ElectroLink. |
+| *Alcance* | Navegación entre ingreso y registro, identificación de campos y control de visibilidad de contraseña. |
+| *Método* | Inspección heurística de las plantillas y rutas, más comprobación del enlace de registro en el DOM renderizado. |
 
 #### 6.4.1.2. Cronograma de auditoría realizada 
 
+| Hito | Fecha | Participantes | Objetivo y resultado |
+| :--- | :---: | :--- | :--- |
+| Revisión de navegación | 11/11/2026 | Equipo G2 | Comparar los enlaces visibles con las rutas declaradas en app.routes.ts; se detectaron dos destinos inexistentes. |
+| Inspección de formularios | 11/11/2026 | Equipo G2 | Revisar etiquetas y controles de ingreso y registro; se identificaron problemas de accesibilidad y un botón sin acción. |
+| Subsanación y verificación técnica | 11/11/2026 | Equipo G2 | Corregir los tres hallazgos y ejecutar npm run build, que terminó sin errores. |
 
 #### 6.4.1.3. Contenido de auditoría realizada
+
+La severidad se expresa en una escala de 1 a 3: *1* corresponde a una molestia menor, *2* a una dificultad que afecta la tarea y *3* a un obstáculo importante para completarla. La revisión se limitó a la aplicación web y a las pantallas indicadas en el alcance.
+
+##### 1. Evaluación de la navegación entre ingreso y registro
+
+| # | Problema identificado | Severidad | Heurística o principio afectado |
+| :-: | :--- | :-: | :--- |
+| *AU-01* | “Regístrate” llevaba a /register e “Inicia sesión” a /login; ninguna de esas rutas existe. La redirección general devolvía al usuario al inicio. | 3 | Consistencia y estándares; control y libertad del usuario. |
+
+##### 2. Evaluación de los formularios de la aplicación web
+
+| # | Problema identificado | Severidad | Heurística o principio afectado |
+| :-: | :--- | :-: | :--- |
+| *AU-02* | Las etiquetas visibles no estaban asociadas a los campos mediante for e id, lo que dificultaba identificar los controles con tecnologías de asistencia. | 2 | Accesibilidad; reconocimiento de la información. |
+| *AU-03* | El botón con icono de visibilidad de contraseña no cambiaba el estado del campo. | 2 | Consistencia y estándares; correspondencia entre control y resultado. |
+
+##### Descripción de problemas y recomendaciones
+
+- *AU-01 — Navegación (severidad 3):* app.routes.ts define /sign-up y /sign-in, mientras que las plantillas enlazaban a /register y /login. El enlace de registro se confirmó también en el DOM de la aplicación local. *Recomendación:* enlazar cada acción con su ruta existente.
+- *AU-02 — Etiquetas de campos (severidad 2):* los nombres de los campos aparecían como etiquetas visuales sin asociación explícita con el control correspondiente. *Recomendación:* usar for e id en los campos de texto y un nombre accesible para el selector de rol.
+- *AU-03 — Visibilidad de contraseña (severidad 2):* el botón mostraba un icono de ojo, pero carecía de una acción que alternara el tipo del campo. *Recomendación:* permitir mostrar y ocultar la contraseña y comunicar el estado del botón con una etiqueta accesible.
 
 
 ### 6.4.2. Auditoría recibida
@@ -5051,9 +5095,29 @@ Este enfoque asegurará que RentiCar tome decisiones informadas y validadas por 
 
 ## 8.3. Experimentation 
 
+Esta sección traduce el diseño del experimento en los artefactos de desarrollo (Historias de Usuario y Backlog) necesarios para construir, ejecutar y medir las variantes del experimento
+
 ### 8.3.1. To-Be User Stories
 
+Estas historias de usuario describen las funcionalidades específicas requeridas para implementar las variantes de nuestros experimentos
+
+|ID|Titulo|Descripcion|Criterios de aceptacion|Relacionado con (Experimento)|
+|--|------|----------|--------------|---------|
+|HU-EXP-01|Validación de confianza del propietario del vehiculo|Como propietario del vehiculo, quiero visualizar un promedio calificativo, para saber mi calificacion general como arrendador|Escenario 1: Visualización de información de confianza <br> <br> Given el arrendador accede a su perfil <br> When el arrendador tenga reseñas previas de sus vehiculos alquilados <br> Then el sistema mostrara un promedio de sus calificaciones |H1 (Confianza en Reservas)|
+|HU-EXP-02|Validación de usabilidad del catálogo|Como arrendatario, quiero filtrar los vehículos por marca, precio y fechas disponibles, para encontrar y reservar rápidamente un vehículo adecuado|Escenario 1: Aplicación de filtros <br><br> Given que el arrendatario se encuentra en el catálogo <br> When selecciona rango de precio <br>And aplica los filtros <br> Then el sistema debe mostrar únicamente los vehículos disponibles que cumplan las condiciones <br> <br> Escenario 2: Búsqueda sin resultados <br> <br> Given que no existen vehículos disponibles <br> When el arrendatario ejecuta la búsqueda <br> Then el sistema debe mostrar un mensaje informativo|H2 (Eficiencia del Catálogo)|
+|HU-EXP-03|Validación del valor del monitoreo IoT|Como propietario de un vehículo, quiero visualizar una demostración del monitoreo IoT con GPS y nivel de combustible, para sentir mayor seguridad|Escenario 1: Visualización de la demostración IoT <br> <br> Given el automovil esta en uso <br> When el sistema detecte algun cambio en sus parametros internos (Gasolina) <br> Then el sistema registrara el cambio y lo mostrara|H3 (Captación del Propietario)|
+|HU-EXP-04|Widget sobre uso y beneficios| Como usuario de Renticar, quiero una seccion que me explique el uso de la aplciacion para encontrar formas de usar la aplicacion|Escenario 1: Seccion de "Como usar" en Landing Page <br> <br> Given el usuario accede a la Landing Page <br> When el usuario acceda a la seccion "Como usar" <br> Then se mostrara como se usa la aplicacion a detalle|H4 (Retención del Propietario)|
+
 ### 8.3.2. To-Be Product Backlog
+
+Este es el backlog de las historias de usuario (priorizado) requerido para implementar los experimentos diseñados
+
+|Orden|User Story ID|Titulo|Story Points 1/2/3/5/8|
+|-----|-------------|------|----------------------|
+|1|HU-EXP-01|Validación de confianza del propietario del vehiculo|5|
+|2|HU-EXP-02|Validación de usabilidad del catálogo|8|
+|3|HU-EXP-03|Validación del valor del monitoreo IoT|8|
+|4|HU-EXP-04|Widget sobre uso y beneficios|3|
 
 # Conclusiones
 
@@ -5068,6 +5132,12 @@ TB1:
 Durante la segunda etapa del proyecto se fortaleció la calidad y confiabilidad de RentiCar mediante la implementación de pruebas unitarias, pruebas de integración y prácticas de Behavior-Driven Development. Las pruebas unitarias con JUnit 5 y Mockito permitieron validar de manera aislada la lógica de los principales bounded contexts, como IAM, Listings, Booking, IoT y Reviews. Asimismo, las pruebas de integración desarrolladas con Karate y Gherkin verificaron el comportamiento de los endpoints REST, la autenticación JWT, la gestión de vehículos, las reservas, la telemetría y las reseñas, incluyendo escenarios exitosos y casos de error relacionados con permisos, datos inválidos y recursos inexistentes.
 
 La configuración del pipeline de Integración Continua en Jenkins permitió automatizar la compilación, ejecución de pruebas, generación de reportes y validación de cada cambio incorporado al backend. Esto contribuyó a detectar errores de forma temprana, reducir riesgos durante el despliegue y mantener una mayor estabilidad del producto. La integración de prácticas TDD y BDD también permitió relacionar la implementación técnica con los criterios de aceptación definidos para las user stories y con las necesidades reales de los usuarios.
+
+AV2:
+
+RentiCar evidencia un proceso progresivo de verificación, automatización y experimentación. La aplicación de pruebas unitarias, de integración, BDD y pruebas de sistema permitió comprobar el funcionamiento de los principales componentes y flujos de la plataforma, mientras que las entrevistas y evaluaciones de experiencia ayudaron a identificar oportunidades de mejora desde la perspectiva de los usuarios.
+
+Además, la incorporación de prácticas DevOps fortaleció la integración, entrega, despliegue y monitoreo del producto. La automatización de pruebas, el análisis de calidad, el uso de pipelines y las herramientas de analítica establecieron una base para mantener la estabilidad del sistema y observar su comportamiento en entornos reales.
 
 # Bibliografía
 
