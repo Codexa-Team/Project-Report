@@ -5187,6 +5187,35 @@ Este es el backlog de las historias de usuario (priorizado) requerido para imple
 
 #### 8.3.4.1. Diseño de Entrevistas.
 
+Para validar la efectividad de la User Story creadas, se diseñó un conjunto de preguntas para los dos segmentos clave
+
+### Entrevistas por Segmento
+
+#### Segmento 1: Dueño del Automovil
+
+1. Al aceptar a un arrendatario de automovil, ¿Te parecio util la calificacion de los usuarios para la seguridad?
+2. ¿Que tan imporante te parece a usted el tener un sistema de calificacion de usuarios?
+3. ¿Te resultó fácil encontrar y entender las reseñas de otros clientes?
+4. ¿Te resulto facil identificar el agregado del estado de gasolina y temperatura del automovil?
+5. ¿La informacion te parece pertinente para la funcion de seguimiento?
+6. ¿Hay alguna otra informacion que te gustaria que apareciera en esa seccion?
+7. En una escala del 1 al 5, ¿Que tanto mejoro tu experiencia con estos nuevos cambios?
+8. ¿Te llamo la atencion nuestro nuevo segmento en nuestra Landing Page?
+9. ¿Que probilidad hay de que uses la aplicacion para rentar tu automovil con estos cambios?
+
+
+#### Segmento 2: Usuario que busca alquilar un vehiculo
+
+1. Al buscar a un arrendador de automovil, ¿Te parecio util la calificacion de los usuarios para la seguridad?
+2. ¿Crees que las reseñas te resultan determinantes para elegir a un arrendador?
+3. ¿Consideras que la distrbucion del catalogo esta ordenada?
+4. ¿Te parecio util la opcion para ordenar el catalogo para una mejor busqueda?
+5. ¿Consideras invasivo la opcion de que el automovil sea observado por gps por el arrendador?
+6. Dentro de la Laning Page ¿Consideras que la nueva seccion es apropiada?
+7. En una escala del 1 al 5, ¿Que tanto mejoro tu experiencia con estos nuevos cambios?
+8. ¿Qué otra información o herramienta te gustaría tener para buscar aun mas vehiculos?
+9. ¿Crees que estos cambios mejoraran la aplicacion a largo plazo?
+
 #### 8.3.4.2. Registro de Entrevistas.
 
 ## 8.4. Experiment Aftermath & Analysis
@@ -5225,9 +5254,37 @@ RentiCar evidencia un proceso progresivo de verificación, automatización y exp
 
 Además, la incorporación de prácticas DevOps fortaleció la integración, entrega, despliegue y monitoreo del producto. La automatización de pruebas, el análisis de calidad, el uso de pipelines y las herramientas de analítica establecieron una base para mantener la estabilidad del sistema y observar su comportamiento en entornos reales.
 
-### Video App Validation
+## Video App Validation
 
-### Video About-The-Team
+### Entrevistas por Segmento
+
+#### Segmento 1: Dueño del Automovil
+
+1. Después de haber navegado y probado la aplicación para poner tu automovil para alquilar, ¿Cómo describirías tu experiencia general con ella?
+2. Luego de completar el proceso de registrar tu automovil, ¿Como describirias tu experiencia haciendolo?
+3. ¿Te sirvió el mapa IoT en vivo sobre la posicion de tu automovil?
+4. De todo lo que navegaste hoy, ¿cuál dirías que fue el paso menos intuitivo o el momento en el que tuviste que pensar más para saber dónde hacer clic?
+5. ¿Pudiste identificar sin problemas las diferentes secciones y sus funcionalidades dentro de la pagina?
+6. ¿Sentiste que el diseño de la pagina era confiable y profesional desde el primer momento?
+7. ¿La función de geolocalización y mapa te ayudó verificar mejor el estado de tu automovil?
+8. Basado en lo que viste hoy, ¿qué información sentiste que te hizo falta para tener tranquilidad total mientras alguien tiene tu automovil?
+9. Si pensaras en poner tu automovil en renta, ¿Optarias por nuestra aplicacion web u otras alternativas?
+
+#### Segmento 2: Usuario que busca alquilar un vehiculo
+
+1. Después de haber navegado y probado la aplicación, ¿cómo describirías tu experiencia general con la aplicacion?
+2. Luego de completar el proceso de alquilar un automovil ¿Cómo sentiste la cantidad de información que te pidió la aplicación y los pasos para el proceso? ¿Hubo algún dato que dudaste en llenar?
+3. ¿Te parecio ordenada la busqueda de automoviles?
+4. Respecto a la devolucion de automoviles, ¿Te parecio sencilla la funcion, o sentiste que deberia ser un poco mas tecnica?
+5. ¿Pudiste identificar sin problemas las diferentes secciones y sus funcionalidades dentro de la pagina?
+6. ¿Sentiste que es mas facil todo el proceso de alquilar automoviles por aqui que en la vida real?
+7. ¿Sentiste util la funcionalidad de calificacion de usuarios para tener confianza o no con los dueños de automoviles?
+8. ¿Usarias principalmente nuestra aplicacion como catalogo principal?
+9. Basado en lo que viste hoy, ¿Que funcionalidad sentiste que hacia falta en el proceso de alquilacion de automoviles?
+
+### Registro de Entrevistas
+
+## Video About-The-Team
 
 # Bibliografía
 
